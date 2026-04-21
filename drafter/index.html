@@ -481,12 +481,14 @@ body {
   </div>
   <div class="header-right">
     <span class="deleted-link" id="deletedLink" style="display:none"></span>
+    <button class="header-btn" id="refreshBtn">Reload latest</button>
     <button class="header-btn" id="editToggle">Edit mode</button>
   </div>
 </div>
 
 <div class="edit-toolbar" id="editToolbar">
   <span>You are editing responses &mdash;</span>
+  <button id="saveWebsiteBtn">Save to website</button>
   <button id="exportBtn">Download backup</button>
   <button id="importBtn">Load from backup</button>
   <button class="reset-btn" id="resetBtn">Restore original responses</button>
@@ -529,6 +531,7 @@ body {
   </div>
 </div>
 
+<script src="save-config.js"></script>
 <script>
 // ── Default responses ──
 const DEFAULT_RESPONSES = [
@@ -590,52 +593,290 @@ const DEFAULT_RESPONSES = [
 ];
 
 // ── Data Service (localStorage) ──
-const STORAGE_KEY = 'drb_responses';
-const DELETED_KEY = 'drb_deleted';
+const EDIT_PASSWORD = 'parsnip';
+const PASSWORD_UNLOCK_KEY = 'emailDrafterEditorUnlocked';
+const GITHUB_TOKEN_KEY = 'emailDrafterGithubToken';
+const WEBSITE_REPO = {
+  owner: 'davidchivers',
+  repo: 'davidchivers.co.uk',
+  branch: 'main',
+  path: 'email_drafter/responses.json'
+};
+const SITE_CONFIG = (window.EMAIL_DRAFTER_CONFIG && typeof window.EMAIL_DRAFTER_CONFIG === 'object')
+  ? window.EMAIL_DRAFTER_CONFIG
+  : {};
 
 const DataService = {
-  load() {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) {
-      try {
-        const saved = JSON.parse(raw);
-        let changed = false;
-        // Build a map of defaults for quick lookup
-        const defaultMap = new Map(DEFAULT_RESPONSES.map(r => [r.id, r]));
-        const savedMap = new Map(saved.map(r => [r.id, r]));
-        // Update existing defaults if the source text has changed
-        for (const r of saved) {
-          const def = defaultMap.get(r.id);
-          if (def && def.replyText !== r.replyText) {
-            r.replyText = def.replyText;
-            r.category = def.category;
-            r.subcategory = def.subcategory;
-            r.title = def.title;
-            r.keywords = def.keywords;
-            changed = true;
-          }
-        }
-        // Add any new defaults not yet in saved
-        for (const r of DEFAULT_RESPONSES) {
-          if (!savedMap.has(r.id)) { saved.push(JSON.parse(JSON.stringify(r))); changed = true; }
-        }
-        if (changed) this.save(saved);
-        return saved;
-      } catch(e) {}
-    }
-    const data = JSON.parse(JSON.stringify(DEFAULT_RESPONSES));
-    this.save(data);
-    return data;
-  },
-  save(responses) { localStorage.setItem(STORAGE_KEY, JSON.stringify(responses)); },
-  loadDeleted() {
-    const raw = localStorage.getItem(DELETED_KEY);
-    if (raw) { try { return JSON.parse(raw); } catch(e) {} }
-    return [];
-  },
-  saveDeleted(d) { localStorage.setItem(DELETED_KEY, JSON.stringify(d)); },
   nextId() { return 'r' + Date.now() + Math.random().toString(36).slice(2,6); }
 };
+
+let sourceResponses = [];
+let websiteFileSha = null;
+let lastLoadedFrom = 'built-in responses';
+let hasUnsavedChanges = false;
+
+function deepClone(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function getGithubContentsUrl() {
+  const { owner, repo, branch, path } = WEBSITE_REPO;
+  return 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path.split('/').map(encodeURIComponent).join('/') + '?ref=' + encodeURIComponent(branch);
+}
+
+function getSaveApiUrl() {
+  return (SITE_CONFIG.saveApiUrl || '').trim();
+}
+
+function hasSaveApiUrl() {
+  return Boolean(getSaveApiUrl());
+}
+
+function decodeBase64Utf8(base64) {
+  const binary = atob((base64 || '').replace(/\s/g, ''));
+  const bytes = Uint8Array.from(binary, char => char.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+
+function encodeBase64Utf8(text) {
+  const bytes = new TextEncoder().encode(text);
+  let binary = '';
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary);
+}
+
+function normalizeResponse(response, index) {
+  const sortOrder = Number(response.sortOrder);
+  const active = response.active !== false;
+  return {
+    id: response.id || DataService.nextId(),
+    category: (response.category || 'Other').trim() || 'Other',
+    subcategory: (response.subcategory || 'General').trim() || 'General',
+    title: (response.title || 'Untitled response').trim() || 'Untitled response',
+    replyText: response.replyText || '',
+    keywords: response.keywords || '',
+    image: response.image || null,
+    sortOrder: Number.isFinite(sortOrder) ? sortOrder : index + 1,
+    active,
+    _deletedAt: active ? null : (response._deletedAt || new Date().toISOString())
+  };
+}
+
+function normalizeResponses(responses) {
+  return (Array.isArray(responses) ? responses : []).map((response, index) => normalizeResponse(response, index));
+}
+
+function splitResponses(responses) {
+  const normalized = normalizeResponses(responses);
+  const activeItems = normalized.filter(response => response.active !== false);
+  const deletedItems = normalized
+    .filter(response => response.active === false)
+    .sort((a, b) => (b._deletedAt || '').localeCompare(a._deletedAt || ''));
+  return { activeItems, deletedItems };
+}
+
+function serializeResponses() {
+  return deepClone([
+    ...allResponses.map(response => ({ ...response, active: true, _deletedAt: null })),
+    ...deleted.map(response => ({ ...response, active: false, _deletedAt: response._deletedAt || new Date().toISOString() }))
+  ]).sort((a, b) =>
+    a.category.localeCompare(b.category) ||
+    a.subcategory.localeCompare(b.subcategory) ||
+    (a.sortOrder || 0) - (b.sortOrder || 0) ||
+    a.title.localeCompare(b.title)
+  );
+}
+
+function applyResponses(responses, { rememberSource = false, clearUnsaved = false } = {}) {
+  const { activeItems, deletedItems } = splitResponses(responses);
+  allResponses = activeItems;
+  deleted = deletedItems;
+  if (rememberSource) sourceResponses = deepClone(serializeResponses());
+  if (clearUnsaved) hasUnsavedChanges = false;
+}
+
+function getSavedGithubToken() {
+  return localStorage.getItem(GITHUB_TOKEN_KEY) || sessionStorage.getItem(GITHUB_TOKEN_KEY) || '';
+}
+
+function clearSavedGithubToken() {
+  localStorage.removeItem(GITHUB_TOKEN_KEY);
+  sessionStorage.removeItem(GITHUB_TOKEN_KEY);
+}
+
+function saveGithubToken(token) {
+  const trimmed = (token || '').trim();
+  if (!trimmed) {
+    clearSavedGithubToken();
+    return '';
+  }
+  localStorage.setItem(GITHUB_TOKEN_KEY, trimmed);
+  sessionStorage.setItem(GITHUB_TOKEN_KEY, trimmed);
+  return trimmed;
+}
+
+function getGithubHeaders(token) {
+  const headers = { 'Accept': 'application/vnd.github+json' };
+  if (token) headers.Authorization = 'Bearer ' + token;
+  return headers;
+}
+
+async function fetchGithubResponses(token = '', options = {}) {
+  const allowMissing = options.allowMissing === true;
+  const response = await fetch(getGithubContentsUrl(), { headers: getGithubHeaders(token), cache: 'no-store' });
+  if (response.status === 404 && allowMissing) {
+    return { responses: [], sha: null, source: 'GitHub (' + WEBSITE_REPO.owner + '/' + WEBSITE_REPO.repo + ')' };
+  }
+  if (!response.ok) {
+    const message = response.status === 404
+      ? 'GitHub could not find ' + WEBSITE_REPO.path + ' in ' + WEBSITE_REPO.owner + '/' + WEBSITE_REPO.repo + '.'
+      : 'GitHub returned ' + response.status + ' while loading the shared responses.';
+    throw new Error(message);
+  }
+  const payload = await response.json();
+  const parsed = JSON.parse(decodeBase64Utf8(payload.content));
+  return { responses: parsed, sha: payload.sha, source: 'GitHub (' + WEBSITE_REPO.owner + '/' + WEBSITE_REPO.repo + ')' };
+}
+
+async function fetchLocalResponses() {
+  const response = await fetch('responses.json?ts=' + Date.now(), { cache: 'no-store' });
+  if (!response.ok) throw new Error('Could not load local responses.json');
+  return { responses: await response.json(), sha: null, source: 'local responses.json' };
+}
+
+async function loadLatestResponses(options = {}) {
+  const silent = options.silent === true;
+  let loaded;
+  try {
+    loaded = await fetchGithubResponses();
+  } catch (githubError) {
+    try {
+      loaded = await fetchLocalResponses();
+    } catch (localError) {
+      loaded = { responses: DEFAULT_RESPONSES, sha: null, source: 'built-in responses' };
+      if (!silent) console.warn(githubError, localError);
+    }
+  }
+  websiteFileSha = loaded.sha;
+  lastLoadedFrom = loaded.source;
+  applyResponses(loaded.responses, { rememberSource: true, clearUnsaved: true });
+  render();
+  updateSaveButton();
+  if (!silent) showToast('Loaded latest from ' + lastLoadedFrom);
+}
+
+function confirmDiscardChanges(actionLabel) {
+  if (!hasUnsavedChanges) return true;
+  return confirm('You have unsaved changes in this browser.\n\nClick Cancel and use "Save to website" or "Download backup" first if you want to keep them.\n\nContinue and ' + actionLabel + '?');
+}
+
+function isEditorUnlocked() {
+  return sessionStorage.getItem(PASSWORD_UNLOCK_KEY) === 'yes';
+}
+
+function requestEditorUnlock() {
+  const entered = prompt('Enter the editor password to turn on edit mode:');
+  if (entered === null) return false;
+  if (entered.trim() === EDIT_PASSWORD) {
+    sessionStorage.setItem(PASSWORD_UNLOCK_KEY, 'yes');
+    return true;
+  }
+  showToast('That password was not right');
+  return false;
+}
+
+function requestGithubToken() {
+  const existing = getSavedGithubToken();
+  if (existing) return existing;
+  const entered = prompt('Enter a GitHub token that can update ' + WEBSITE_REPO.owner + '/' + WEBSITE_REPO.repo + '.\n\nIt will be kept on this browser on this device until GitHub rejects it.');
+  if (!entered) return '';
+  return saveGithubToken(entered);
+}
+
+function extractGithubError(payload, fallback) {
+  if (!payload) return fallback;
+  if (typeof payload === 'string') return payload || fallback;
+  return payload.message || fallback;
+}
+
+async function saveResponsesDirectToGithub() {
+  const token = requestGithubToken();
+  if (!token) {
+    throw new Error('Website save cancelled');
+  }
+
+  const latest = await fetchGithubResponses(token, { allowMissing: true });
+  websiteFileSha = latest.sha;
+
+  const response = await fetch(getGithubContentsUrl(), {
+    method: 'PUT',
+    headers: {
+      ...getGithubHeaders(token),
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      message: 'Update email drafter responses',
+      branch: WEBSITE_REPO.branch,
+      sha: websiteFileSha,
+      content: encodeBase64Utf8(JSON.stringify(serializeResponses(), null, 2) + '\n')
+    })
+  });
+
+  if (!response.ok) {
+    let payload = null;
+    try { payload = await response.json(); } catch (error) {}
+    if (response.status === 401 || response.status === 403) clearSavedGithubToken();
+    throw new Error(extractGithubError(payload, 'GitHub did not accept the save.'));
+  }
+
+  const payload = await response.json();
+  websiteFileSha = payload.content?.sha || websiteFileSha;
+}
+
+async function saveResponsesViaApi(saveApiUrl) {
+  const response = await fetch(saveApiUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      password: EDIT_PASSWORD,
+      responses: serializeResponses()
+    })
+  });
+
+  let payload = null;
+  try { payload = await response.json(); } catch (error) {}
+
+  if (!response.ok || payload?.ok === false) {
+    throw new Error(extractGithubError(payload, 'The save service did not accept the update.'));
+  }
+
+  if (payload?.sha) websiteFileSha = payload.sha;
+  if (payload?.source) lastLoadedFrom = payload.source;
+}
+
+async function saveResponsesToWebsite() {
+  saveWebsiteBtn.disabled = true;
+  saveWebsiteBtn.textContent = 'Saving...';
+
+  try {
+    if (hasSaveApiUrl()) {
+      await saveResponsesViaApi(getSaveApiUrl());
+    } else {
+      await saveResponsesDirectToGithub();
+    }
+
+    sourceResponses = deepClone(serializeResponses());
+    hasUnsavedChanges = false;
+    updateSaveButton();
+    showToast('Saved to website');
+  } catch (error) {
+    console.error(error);
+    showToast(error.message || 'Save failed');
+  } finally {
+    saveWebsiteBtn.disabled = !editMode;
+    updateSaveButton();
+  }
+}
 
 // ── Image compression ──
 function compressImage(file) {
@@ -689,6 +930,8 @@ const searchBox = document.getElementById('searchBox');
 const editToggle = document.getElementById('editToggle');
 const editToolbar = document.getElementById('editToolbar');
 const deletedLink = document.getElementById('deletedLink');
+const refreshBtn = document.getElementById('refreshBtn');
+const saveWebsiteBtn = document.getElementById('saveWebsiteBtn');
 const toastEl = document.getElementById('toast');
 const modalOverlay = document.getElementById('modalOverlay');
 const modalTitle = document.getElementById('modalTitle');
@@ -712,6 +955,18 @@ function showToast(msg) {
   toastEl.classList.add('show');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2000);
+}
+
+function updateSaveButton() {
+  if (!saveWebsiteBtn) return;
+  saveWebsiteBtn.textContent = hasUnsavedChanges ? 'Save to website *' : 'Save to website';
+  saveWebsiteBtn.disabled = !editMode;
+}
+
+function markDirty(message) {
+  hasUnsavedChanges = true;
+  updateSaveButton();
+  if (message) showToast(message);
 }
 
 function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -825,9 +1080,34 @@ function closeModal() { modalOverlay.classList.remove('open'); editingId = null;
 function saveModal() {
   const cat = fCategory.value.trim(), sub = fSubcategory.value.trim(), title = fTitle.value.trim(), text = fReplyText.value.trim(), kw = fKeywords.value.trim();
   if (!cat || !title || !text) { showToast('Please fill in category, title, and reply text'); return; }
-  if (editingId) { const r = allResponses.find(x=>x.id===editingId); if(r){r.category=cat;r.subcategory=sub;r.title=title;r.replyText=text;r.keywords=kw;r.image=pendingImage||null;} showToast('Response updated'); }
-  else { allResponses.push({id:DataService.nextId(),category:cat,subcategory:sub||'General',title,replyText:text,keywords:kw,image:pendingImage||null,sortOrder:allResponses.filter(r=>r.category===cat).reduce((m,r)=>Math.max(m,r.sortOrder||0),0)+1}); showToast('Response added'); }
-  DataService.save(allResponses); closeModal(); render();
+  if (editingId) {
+    const response = allResponses.find(item => item.id === editingId);
+    if (response) {
+      response.category = cat;
+      response.subcategory = sub || 'General';
+      response.title = title;
+      response.replyText = text;
+      response.keywords = kw;
+      response.image = pendingImage || null;
+    }
+    markDirty('Updated locally - click Save to website to share it');
+  }
+  else {
+    allResponses.push({
+      id: DataService.nextId(),
+      category: cat,
+      subcategory: sub || 'General',
+      title,
+      replyText: text,
+      keywords: kw,
+      image: pendingImage || null,
+      active: true,
+      sortOrder: allResponses.filter(r => r.category === cat).reduce((m, r) => Math.max(m, r.sortOrder || 0), 0) + 1
+    });
+    markDirty('Added locally - click Save to website to share it');
+  }
+  closeModal();
+  render();
 }
 
 // ── Events: sidebar ──
@@ -884,17 +1164,52 @@ cardsPanel.addEventListener('click', e => {
   const ed = e.target.closest('.edit-btn');
   if (ed) { const r=allResponses.find(x=>x.id===ed.dataset.id); if(r)openModal(r); return; }
   const del = e.target.closest('.delete-btn');
-  if (del) { const r=allResponses.find(x=>x.id===del.dataset.id); if(r&&confirm('Delete "'+r.title+'"?\n\nYou can restore it from "Recently deleted" if needed.')){allResponses=allResponses.filter(x=>x.id!==r.id);r._deletedAt=new Date().toISOString();deleted.push(r);DataService.save(allResponses);DataService.saveDeleted(deleted);showToast('Deleted \u2014 you can restore it anytime');render();} return; }
+  if (del) {
+    const r = allResponses.find(x => x.id === del.dataset.id);
+    if (r && confirm('Delete "' + r.title + '"?\n\nYou can restore it from "Recently deleted" if needed.')) {
+      allResponses = allResponses.filter(x => x.id !== r.id);
+      r.active = false;
+      r._deletedAt = new Date().toISOString();
+      deleted.push(r);
+      markDirty('Deleted locally - click Save to website to share it');
+      render();
+    }
+    return;
+  }
   const res = e.target.closest('.restore-btn');
-  if (res) { const r=deleted.find(x=>x.id===res.dataset.id); if(r){deleted=deleted.filter(x=>x.id!==r.id);delete r._deletedAt;allResponses.push(r);DataService.save(allResponses);DataService.saveDeleted(deleted);showToast('Restored');render();} return; }
+  if (res) {
+    const r = deleted.find(x => x.id === res.dataset.id);
+    if (r) {
+      deleted = deleted.filter(x => x.id !== r.id);
+      r.active = true;
+      r._deletedAt = null;
+      allResponses.push(r);
+      markDirty('Restored locally - click Save to website to share it');
+      render();
+    }
+    return;
+  }
   if (e.target.id==='addResponseBtn') { openModal(null); return; }
   const tgl = e.target.closest('.card-toggle');
   if (tgl) { const tx=tgl.closest('.card').querySelector('.card-text'); if(tgl.dataset.state==='collapsed'){tx.classList.remove('collapsed');tgl.textContent='Show less';tgl.dataset.state='expanded';}else{tx.classList.add('collapsed');tgl.textContent='Show full text';tgl.dataset.state='collapsed';} }
 });
 
 // ── Events: edit mode ──
-editToggle.addEventListener('click', () => { editMode=!editMode; showDeleted=false; editToggle.classList.toggle('active',editMode); editToolbar.classList.toggle('show',editMode); render(); });
+editToggle.addEventListener('click', () => {
+  if (!editMode && !isEditorUnlocked() && !requestEditorUnlock()) return;
+  editMode = !editMode;
+  showDeleted = false;
+  editToggle.classList.toggle('active', editMode);
+  editToolbar.classList.toggle('show', editMode);
+  updateSaveButton();
+  render();
+});
 deletedLink.addEventListener('click', () => { showDeleted=!showDeleted; filter={type:'all',category:null,subcategory:null}; render(); });
+refreshBtn.addEventListener('click', async () => {
+  if (!confirmDiscardChanges('reload the latest shared version')) return;
+  await loadLatestResponses();
+});
+saveWebsiteBtn.addEventListener('click', saveResponsesToWebsite);
 
 // ── Events: modal ──
 document.getElementById('modalCancel').addEventListener('click', closeModal);
@@ -923,7 +1238,7 @@ modalOverlay.addEventListener('paste', async e => {
 
 // ── Events: export/import/reset ──
 document.getElementById('exportBtn').addEventListener('click', () => {
-  const blob = new Blob([JSON.stringify(allResponses,null,2)], {type:'application/json'});
+  const blob = new Blob([JSON.stringify(serializeResponses(), null, 2)], {type:'application/json'});
   const a = document.createElement('a'); a.href=URL.createObjectURL(blob);
   a.download='email_drafter_backup_'+new Date().toISOString().slice(0,10)+'.json'; a.click();
   showToast('Backup downloaded');
@@ -932,22 +1247,37 @@ document.getElementById('importBtn').addEventListener('click', () => document.ge
 document.getElementById('importFile').addEventListener('change', e => {
   const f=e.target.files[0]; if(!f)return;
   const reader=new FileReader();
-  reader.onload=()=>{try{const d=JSON.parse(reader.result);if(!Array.isArray(d))throw 0;if(!confirm('Load '+d.length+' responses from this file?\n\nThis will replace your current responses. Use "Download backup" first if you want to keep them.'))return;for(const r of d)if(!r.id)r.id=DataService.nextId();allResponses=d;DataService.save(allResponses);render();showToast('Loaded '+d.length+' responses');}catch(err){showToast('Could not read that file \u2014 please check it is a valid backup');}};
+  reader.onload=()=>{try{
+    const d=JSON.parse(reader.result);
+    if(!Array.isArray(d))throw 0;
+    if(!confirm('Load '+d.length+' responses from this file?\n\nThis will replace your current browser copy until you save again. Use "Download backup" first if you want to keep what you have.'))return;
+    applyResponses(d);
+    markDirty('Loaded backup locally - click Save to website to share it');
+    render();
+  }catch(err){showToast('Could not read that file \u2014 please check it is a valid backup');}};
   reader.readAsText(f); e.target.value='';
 });
 document.getElementById('resetBtn').addEventListener('click', () => {
-  if(!confirm('Restore all original responses?\n\nYour current responses will be moved to "Recently deleted" so you can get them back if needed.'))return;
-  for(const r of allResponses){r._deletedAt=new Date().toISOString();deleted.push(r);}
-  DataService.saveDeleted(deleted);
-  allResponses=JSON.parse(JSON.stringify(DEFAULT_RESPONSES));
-  DataService.save(allResponses); render();
-  showToast('Original responses restored');
+  const resetSource = sourceResponses.length ? sourceResponses : DEFAULT_RESPONSES;
+  if(!confirm('Restore the last loaded shared version?\n\nThis will discard any browser-only edits that have not been saved to the website yet.'))return;
+  applyResponses(resetSource, { clearUnsaved: true });
+  render();
+  showToast('Restored ' + lastLoadedFrom);
 });
 
 // ── Init ──
-allResponses = DataService.load();
-deleted = DataService.loadDeleted();
-render();
+window.addEventListener('beforeunload', event => {
+  if (!hasUnsavedChanges) return;
+  event.preventDefault();
+  event.returnValue = '';
+});
+
+(async function init() {
+  applyResponses(DEFAULT_RESPONSES, { rememberSource: true, clearUnsaved: true });
+  render();
+  updateSaveButton();
+  await loadLatestResponses({ silent: true });
+})();
 </script>
 </body>
 </html>
