@@ -1,0 +1,14 @@
+Subject:
+Your enquiry has been received - {{ReferenceNumber}}
+
+Body:
+Dear student,
+
+Thank you for your enquiry. Your message has been received and has been given the reference number {{ReferenceNumber}}.
+
+Please keep this reference number in case you need to follow up.
+
+If your issue is urgent and affects an immediate deadline, please contact the department directly using the usual urgent contact route.
+
+Best wishes,
+Department team

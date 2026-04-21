@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tom, You Need To Write!</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f8fbff;
+      --muted: #7ad9ff;
+      --accent: #ffde59;
+      --accent-2: #ff4fd8;
+      --accent-3: #6dff72;
+      --border-light: #aefcff;
+      --panel-border: #0b3853;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Trebuchet MS", Verdana, sans-serif;
+      background: #000000;
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: none;
+    }
+
+    main {
+      width: min(820px, 100%);
+      background: linear-gradient(180deg, rgba(18, 41, 84, 0.96), rgba(3, 9, 22, 0.98) 18%, rgba(0, 0, 0, 0.98) 100%);
+      border: 4px ridge var(--border-light);
+      box-shadow:
+        inset 0 0 0 3px rgba(174, 252, 255, 0.15),
+        0 0 32px rgba(84, 243, 255, 0.25),
+        0 0 70px rgba(255, 79, 216, 0.14);
+      padding: 24px;
+      position: relative;
+    }
+
+    .masthead {
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-size: clamp(1.35rem, 3.6vw, 2.8rem);
+      line-height: 1.05;
+      letter-spacing: 0.04em;
+      color: #6dff72;
+      white-space: nowrap;
+      text-transform: uppercase;
+      text-shadow:
+        2px 2px 0 #ff4fd8,
+        4px 4px 0 #0e203d;
+      animation: title-flash 1.4s steps(2, start) infinite;
+    }
+
+    .marquee-wrap {
+      margin-bottom: 18px;
+      border: 3px ridge #ffd2f7;
+      background: linear-gradient(180deg, #2d0233, #120014);
+      box-shadow: 0 0 18px rgba(255, 79, 216, 0.2);
+    }
+
+    marquee {
+      display: block;
+      padding: 12px 0;
+      color: #fff59e;
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(255, 222, 89, 0.6);
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(10, 32, 66, 0.98), rgba(1, 8, 17, 0.98));
+      border: 3px ridge var(--border-light);
+      box-shadow:
+        inset 0 0 0 2px rgba(4, 14, 24, 0.9),
+        inset 0 0 18px rgba(84, 243, 255, 0.08),
+        0 0 16px rgba(84, 243, 255, 0.14);
+      padding: 20px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 3px inset #c8faff;
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent-3);
+      background: #00070e;
+      box-shadow: none;
+    }
+
+    input:focus {
+      outline: 2px solid rgba(84, 243, 255, 0.45);
+      border-color: var(--border-light);
+    }
+
+    .deadline {
+      margin: 0;
+      color: #fff3af;
+      font-size: 0.96rem;
+      line-height: 1.5;
+    }
+
+    .pace-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .stat-value {
+      display: block;
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-size: clamp(1.45rem, 2.8vw, 2rem);
+      font-weight: 700;
+      color: var(--accent-3);
+      text-shadow: none;
+    }
+
+    .stat-label {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    @keyframes title-flash {
+      50% {
+        opacity: 0.55;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .pace-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 10px;
+      }
+
+      main {
+        width: 100%;
+        padding: 14px;
+      }
+
+      .masthead,
+      .marquee-wrap,
+      .panel {
+        margin-bottom: 12px;
+      }
+
+      h1 {
+        white-space: normal;
+        font-size: 1.1rem;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+      }
+
+      marquee {
+        font-size: 0.82rem;
+      }
+
+      input {
+        padding: 12px;
+        font-size: 1rem;
+      }
+
+      .deadline {
+        font-size: 0.82rem;
+      }
+
+      .pace-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .stat {
+        padding: 12px 8px;
+      }
+
+      .stat-value {
+        font-size: 1rem;
+      }
+
+      .stat-label {
+        margin-top: 6px;
+        font-size: 0.64rem;
+        letter-spacing: 0.08em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <h1>Tom, You Need To Write!</h1>
+    </header>
+
+    <section class="marquee-wrap" aria-label="Scrolling phrase banner">
+      <marquee id="random-line" scrollamount="10">Loading...</marquee>
+    </section>
+
+    <section class="panel">
+      <div class="field">
+        <label for="words-left">Words Left</label>
+        <input id="words-left" type="number" min="0" step="100" value="40000" inputmode="numeric">
+      </div>
+
+      <p class="deadline" id="deadline-text">Deadline: 6 Jan 2027, 23:59</p>
+    </section>
+
+    <section class="pace-grid" aria-label="Required writing pace">
+      <div class="panel stat">
+        <span class="stat-value" id="per-day">0</span>
+        <span class="stat-label">Words Per Day</span>
+      </div>
+      <div class="panel stat">
+        <span class="stat-value" id="per-hour">0</span>
+        <span class="stat-label">Words Per Hour</span>
+      </div>
+      <div class="panel stat">
+        <span class="stat-value" id="per-minute">0</span>
+        <span class="stat-label">Words Per Minute</span>
+      </div>
+      <div class="panel stat">
+        <span class="stat-value" id="per-second">0</span>
+        <span class="stat-label">Words Per Second</span>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const DEFAULT_WORDS_LEFT = 40000;
+    const DEADLINE = new Date(2027, 0, 6, 23, 59, 59);
+    const PHRASES = [
+      "Stop playing Slay the Spire.",
+      "Put down that paintbrush, nerd.",
+      "If Scott Alexander could write shorter articles then you would have written this by now.",
+      "Warcraft peon voice: work work."
+    ];
+    const PHRASE_SPACER = "\u00A0".repeat(32);
+    const DAY_MS = 1000 * 60 * 60 * 24;
+    const HOUR_MS = 1000 * 60 * 60;
+    const MINUTE_MS = 1000 * 60;
+    const SECOND_MS = 1000;
+
+    const wordsLeftInput = document.getElementById("words-left");
+    const deadlineText = document.getElementById("deadline-text");
+    const randomLine = document.getElementById("random-line");
+
+    const paceEls = {
+      day: document.getElementById("per-day"),
+      hour: document.getElementById("per-hour"),
+      minute: document.getElementById("per-minute"),
+      second: document.getElementById("per-second")
+    };
+
+    function clampWords(value) {
+      if (!Number.isFinite(value)) {
+        return DEFAULT_WORDS_LEFT;
+      }
+
+      return Math.max(0, Math.min(1000000, Math.round(value)));
+    }
+
+    function formatNumber(value, decimals = 0) {
+      return new Intl.NumberFormat("en-GB", {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
+      }).format(value);
+    }
+
+    function formatRate(wordsLeft, periodMs, remainingMs, decimals) {
+      if (wordsLeft <= 0) {
+        return "0";
+      }
+
+      if (remainingMs <= 0) {
+        return "Overdue";
+      }
+
+      return formatNumber(wordsLeft / (remainingMs / periodMs), decimals);
+    }
+
+    function update() {
+      const wordsLeft = clampWords(Number(wordsLeftInput.value));
+      const remainingMs = DEADLINE.getTime() - Date.now();
+
+      wordsLeftInput.value = wordsLeft;
+      paceEls.day.textContent = formatRate(wordsLeft, DAY_MS, remainingMs, 1);
+      paceEls.hour.textContent = formatRate(wordsLeft, HOUR_MS, remainingMs, 2);
+      paceEls.minute.textContent = formatRate(wordsLeft, MINUTE_MS, remainingMs, 3);
+      paceEls.second.textContent = formatRate(wordsLeft, SECOND_MS, remainingMs, 5);
+    }
+
+    function handleInput() {
+      update();
+    }
+
+    wordsLeftInput.value = DEFAULT_WORDS_LEFT;
+    randomLine.textContent = `${PHRASES.join(PHRASE_SPACER)}${PHRASE_SPACER}`;
+
+    deadlineText.textContent = `Deadline: ${DEADLINE.toLocaleString("en-GB", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit"
+    })}`;
+
+    wordsLeftInput.addEventListener("input", handleInput);
+    update();
+    setInterval(update, 1000);
+  </script>
+</body>
+</html>

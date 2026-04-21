@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crush wine map</title>
+  <link rel="stylesheet" href="assets/css/simple.css">
+  <script src="https://cdn.plot.ly/plotly-3.3.1.min.js"></script>
+</head>
+<body data-page="map">
+  <main class="page page--map">
+    <p><a href="index.html">&larr; Back</a></p>
+    <h1>Interactive wine map</h1>
+    <p>
+      Hover over a point to see the wine. Click a point to view the same short information used on the front-facing page.
+    </p>
+
+    <div class="map-layout">
+      <div class="map-panel">
+        <div id="wineMap" class="map-box"></div>
+      </div>
+      <aside class="map-detail" data-map-detail>
+        <div class="empty-note">
+          Click a wine on the map to see its details here.
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="assets/js/simple.js"></script>
+</body>
+</html>

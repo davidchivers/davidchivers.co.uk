@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>simple_setup_steps</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<h1 id="simple-setup-steps">Simple setup steps</h1>
+<p>This is the shortest version of the build. Follow these steps in
+order.</p>
+<h2 id="decide-the-four-basics">1. decide the four basics</h2>
+<p>Before you build anything, decide:</p>
+<ol type="1">
+<li>Which account owns the Microsoft Form</li>
+<li>Which inbox gets the staff emails first</li>
+<li>Which shared mailbox will be used later</li>
+<li>Where the Excel lookup workbook will live</li>
+</ol>
+<h2 id="create-the-microsoft-form">2. create the Microsoft Form</h2>
+<ol type="1">
+<li>Create a form called
+<code>Department student enquiry form</code>.</li>
+<li>Copy the wording from
+<code>templates/microsoft_form_questions.md</code>.</li>
+<li>Add these questions:
+<ul>
+<li>Enquiry type</li>
+<li>Other enquiry type</li>
+<li>Message</li>
+</ul></li>
+<li>Tell students in the introduction that they must be signed in and do
+not need to type username or email.</li>
+<li>Tell students that stable record details such as programme, year,
+and student ID are checked separately.</li>
+<li>Add branching:
+<ul>
+<li>show <code>Other enquiry type</code> only when enquiry type is
+<code>Other</code></li>
+</ul></li>
+<li>Set the form so only people in the organization can respond.</li>
+<li>Turn on recorded responder identity.</li>
+<li>Set the thank-you message to say the student will receive an
+acknowledgement email.</li>
+<li>Do not add stage, year, or programme questions in the preferred
+build.</li>
+<li>Only add one checkpoint question later, such as
+<code>Programme of study</code>, if testing shows the lookup is not
+reliable enough.</li>
+<li>Only add a separate <code>University email address</code> question
+later if testing shows the flow cannot access the responder’s
+email.</li>
+</ol>
+<h2 id="create-the-excel-lookup-file">3. create the Excel lookup
+file</h2>
+<ol type="1">
+<li>Create an Excel workbook in OneDrive or SharePoint.</li>
+<li>Add a table called <code>StudentLookup</code>.</li>
+<li>Use the columns in
+<code>templates/student_lookup_schema.csv</code>.</li>
+<li>Populate it from a Banner export or another trusted student-record
+source if you can.</li>
+<li>Make sure <code>UniversityEmailNormalized</code> is lowercase and
+unique.</li>
+<li>Add a few real or test student rows.</li>
+<li>Make sure the Power Automate account can open the workbook.</li>
+<li>Keep one table for all active department students. Do not split the
+lookup by year or stage in version 1.</li>
+<li>Use this workbook as backend lookup data, not as the main staff
+working screen.</li>
+</ol>
+<h2 id="build-the-power-automate-flow">4. build the Power Automate
+flow</h2>
+<ol type="1">
+<li>Create an automated cloud flow.</li>
+<li>Use the trigger <code>When a new response is submitted</code>.</li>
+<li>Add <code>Get response details</code>.</li>
+<li>Pick the recorded responder email from Forms.</li>
+<li>Normalize that email.</li>
+<li>Derive the CIS username from the email prefix if needed.</li>
+<li>Use the recorded responder email for the acknowledgement.</li>
+<li>Build the reference number in the format
+<code>DEPT-YYYY-######</code>.</li>
+<li>Look up the student in Excel using
+<code>UniversityEmailNormalized</code>.</li>
+<li>If the lookup works, use the Excel data in the staff email.</li>
+<li>If the lookup fails, still continue and use the recorded responder
+email and manual Banner checking.</li>
+<li>Set a <code>Suggested owner</code> based on enquiry type.</li>
+<li>Send the structured staff email to the pilot inbox.</li>
+<li>Send the acknowledgement email to the student when the flow has an
+email address to use.</li>
+</ol>
+<p>Use these helper files while building:</p>
+<ul>
+<li><code>flows/version_1_flow_logic.md</code></li>
+<li><code>flows/power_automate_expressions.md</code></li>
+<li><code>templates/staff_email_template.txt</code></li>
+<li><code>templates/student_acknowledgement_email.txt</code></li>
+</ul>
+<h2 id="keep-routing-simple">5. keep routing simple</h2>
+<p>For version 1:</p>
+<ul>
+<li>send all staff emails to one inbox</li>
+<li>use subject tags like <code>[Module enquiry]</code> and
+<code>[Matched]</code></li>
+<li>include <code>Suggested owner</code> in the body</li>
+</ul>
+<p>Do not auto-assign to named people yet.</p>
+<h2 id="test-the-prototype">6. test the prototype</h2>
+<p>Run five tests:</p>
+<ol type="1">
+<li>A matched undergraduate enquiry</li>
+<li>A matched taught postgraduate enquiry</li>
+<li>An unmatched university email</li>
+<li>An <code>Other</code> enquiry type</li>
+<li>A normal enquiry with no extra checkpoint fields on the form</li>
+</ol>
+<p>Check that:</p>
+<ul>
+<li>the reference number appears</li>
+<li>the staff email is readable</li>
+<li>the acknowledgement email is sent</li>
+<li>the flow still works when lookup fails</li>
+<li>staff can still identify the student without asking for programme or
+year on the form</li>
+</ul>
+<h2 id="move-to-the-shared-mailbox">7. move to the shared mailbox</h2>
+<p>When the pilot works:</p>
+<ol type="1">
+<li>Change the recipient from the pilot inbox to the shared
+mailbox.</li>
+<li>Change the send action if needed to
+<code>Send an email from a shared mailbox</code>.</li>
+<li>Confirm mailbox permissions.</li>
+<li>Re-run the tests.</li>
+</ol>
+<h2 id="stop-here-for-version-1">8. stop here for version 1</h2>
+<p>Version 1 is finished once:</p>
+<ul>
+<li>students can submit the form</li>
+<li>staff get one clear email per enquiry</li>
+<li>students get an acknowledgement with a reference number</li>
+<li>lookup success and failure both behave properly</li>
+</ul>
+<p>Do not add a case-management database, hard routing, or deep Banner
+integration yet.</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">Boundary Line North Fork Riesling 2022</title>
+  <desc id="desc">Illustrated bottle label for a white wine from New York.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2330"/>
+      <stop offset="100%" stop-color="#4b7b97"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="960" fill="url(#bg)"/>
+  <rect x="110" y="110" width="500" height="740" rx="38" fill="#d6e7ef"/>
+  <rect x="138" y="138" width="444" height="684" rx="28" fill="#f6fbfd"/>
+  <text x="360" y="225" text-anchor="middle" fill="#5b7f94" font-family="Georgia, serif" font-size="38">CRUSH</text>
+  <text x="360" y="290" text-anchor="middle" fill="#152833" font-family="Georgia, serif" font-size="50">North Fork</text>
+  <text x="360" y="338" text-anchor="middle" fill="#5b7f94" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">BOUNDARY LINE</text>
+  <path d="M208 525c44-118 104-177 152-177 49 0 103 62 152 177-52-29-105-44-152-44s-100 15-152 44Z" fill="#9fd3eb"/>
+  <path d="M220 584c86-31 170-31 280 0" fill="none" stroke="#2d556b" stroke-width="10" stroke-linecap="round"/>
+  <path d="M250 638c68-18 140-18 220 0" fill="none" stroke="#7ca6bb" stroke-width="8" stroke-linecap="round"/>
+  <text x="360" y="700" text-anchor="middle" fill="#152833" font-family="Arial, sans-serif" font-size="28">Finger Lakes, New York</text>
+  <text x="360" y="748" text-anchor="middle" fill="#5b7f94" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">2022</text>
+</svg>

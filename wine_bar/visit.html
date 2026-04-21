@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visit | Crush prototype</title>
+  <meta name="description" content="Prototype visit page for the Crush wine bar and shop in Durham.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="visit">
+  <div class="topbar">
+    <div class="shell topbar__inner">
+      <span>Visit page gives the venue equal weight with the shop</span>
+      <span>Wednesday to Saturday in Durham</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">Crush</span>
+        <span class="brand__sub">wine bar + shop</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="shop.html">Shop</a>
+        <a href="visit.html" aria-current="page">Visit</a>
+        <a href="gather.html">Gather &amp; gift</a>
+        <a href="admin.html">How it works</a>
+      </nav>
+      <a class="button button--ghost" href="gather.html">Events &amp; hire</a>
+    </div>
+  </header>
+
+  <main class="shell page-main">
+    <section class="page-hero panel panel--dark">
+      <p class="eyebrow eyebrow--light">Visit Crush</p>
+      <h1>A wine bar first, with a shop built around it</h1>
+      <p class="lead">
+        The venue page should carry the in-person identity properly: Durham address, opening rhythm,
+        the broader by-the-glass range, food cues, and a sense of how Crush feels when you arrive.
+      </p>
+    </section>
+
+    <section class="visit-grid">
+      <article class="panel">
+        <p class="eyebrow">Where &amp; when</p>
+        <h2>76 North Road, Durham DH1 4SQ</h2>
+        <ul class="detail-list">
+          <li>Wednesday to Saturday</li>
+          <li>Walk-ins supported with a more flexible digital front door</li>
+          <li>Collection from the bar for online orders</li>
+        </ul>
+      </article>
+      <article class="panel panel--warm">
+        <p class="eyebrow">Atmosphere</p>
+        <h2>Curated rather than intimidating</h2>
+        <p>
+          The tone stays premium but approachable: more thoughtful wine destination than generic bottle
+          shop, and less fussy than a traditional merchant site.
+        </p>
+      </article>
+      <article class="panel">
+        <p class="eyebrow">What to surface</p>
+        <ul class="detail-list">
+          <li>What makes Crush different from a standard bar list</li>
+          <li>How the by-the-glass wall works in practice</li>
+          <li>Food, flights, private hire, and event hooks</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">By-the-glass highlights</p>
+          <h2>Informational bar range in version 1</h2>
+        </div>
+      </div>
+      <div class="product-grid" data-by-glass-products></div>
+    </section>
+
+    <section class="split-section section">
+      <div class="panel panel--warm">
+        <p class="eyebrow">Collection</p>
+        <h2>Reserve online, pick up in person</h2>
+        <p>
+          Collection messaging should feel intentional, with opening-window guidance and clear handoff
+          notes rather than a buried pickup widget.
+        </p>
+      </div>
+      <div class="panel">
+        <p class="eyebrow">Local delivery</p>
+        <h2>Keep the local route as a branded service</h2>
+        <p>
+          Monday and Tuesday delivery rounds become a customer-facing feature, with area rules and
+          lead times written in plain language.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="brand__mark brand__mark--footer">Crush</p>
+        <p>Visit-first storytelling paired with the retail range.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

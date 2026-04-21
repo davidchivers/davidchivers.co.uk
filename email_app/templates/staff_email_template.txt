@@ -1,0 +1,28 @@
+Subject:
+[Enquiry][{{EnquiryType}}][{{StageTag}}]{{YearTagBlock}}[{{LookupTag}}] {{ReferenceNumber}} - {{SelectedUsername}}
+
+Body:
+Reference number: {{ReferenceNumber}}
+Submitted: {{SubmittedTimestamp}}
+Lookup status: {{LookupStatus}}
+Suggested owner: {{SuggestedOwner}}
+
+Recorded responder email: {{StudentEmail}}
+Derived username: {{SelectedUsername}}
+Student name: {{StudentName}}
+Student email: {{StudentEmail}}
+Student ID: {{StudentID}}
+
+Stage of study: {{StageOfStudy}}
+Year of study: {{YearOfStudy}}
+Programme of study: {{ProgrammeOfStudy}}
+
+Enquiry type: {{EnquiryType}}
+Other enquiry type: {{OtherEnquiryType}}
+
+Academic advisor: {{AcademicAdvisor}}
+Banner link: {{BannerLink}}
+Banner code: {{BannerCode}}
+
+Student message:
+{{StudentMessage}}

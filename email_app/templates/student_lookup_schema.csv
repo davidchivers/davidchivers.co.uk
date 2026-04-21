@@ -1,0 +1,3 @@
+UniversityEmail,UniversityEmailNormalized,UniversityUsername,UniversityUsernameNormalized,StudentName,StudentID,Programme,StageOfStudy,YearOfStudy,AcademicAdvisor,BannerLink,BannerCode,RecordStatus,LastVerifiedDate
+hfnt93@university.ac.uk,hfnt93@university.ac.uk,hfnt93,hfnt93,Helen Frost,123456789,BSc Economics,Undergraduate,Year 2,Dr Patel,https://banner.example.edu/student/123456789,BNR-123456789,Active,2026-03-19
+smab14@university.ac.uk,smab14@university.ac.uk,smab14,smab14,Sam Bell,987654321,Masters,Taught postgraduate,,Prof Green,https://banner.example.edu/student/987654321,BNR-987654321,Active,2026-03-19

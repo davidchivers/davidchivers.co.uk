@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">Cloudline Mountain Mist Pet Nat 2024</title>
+  <desc id="desc">Illustrated bottle label for a sparkling wine from Taiwan.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#163130"/>
+      <stop offset="100%" stop-color="#5ea89c"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="960" fill="url(#bg)"/>
+  <rect x="110" y="110" width="500" height="740" rx="38" fill="#d5f0e8"/>
+  <rect x="138" y="138" width="444" height="684" rx="28" fill="#f6fffc"/>
+  <text x="360" y="225" text-anchor="middle" fill="#4e8c84" font-family="Georgia, serif" font-size="38">CRUSH</text>
+  <text x="360" y="290" text-anchor="middle" fill="#1a3432" font-family="Georgia, serif" font-size="50">Mountain Mist</text>
+  <text x="360" y="338" text-anchor="middle" fill="#4e8c84" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">CLOUDLINE PET NAT</text>
+  <path d="M225 590c40-124 92-186 135-186 44 0 95 62 135 186-41-19-88-31-135-31s-94 12-135 31Z" fill="#9bd7c9"/>
+  <path d="M230 600c76 25 170 25 260 0" fill="none" stroke="#4e8c84" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="284" cy="440" r="10" fill="#fefefd"/>
+  <circle cx="430" cy="430" r="14" fill="#fefefd"/>
+  <circle cx="470" cy="500" r="8" fill="#fefefd"/>
+  <text x="360" y="700" text-anchor="middle" fill="#1a3432" font-family="Arial, sans-serif" font-size="28">Nantou, Taiwan</text>
+  <text x="360" y="748" text-anchor="middle" fill="#4e8c84" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">2024</text>
+</svg>

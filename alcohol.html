@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcohol Units Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe3e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        input {
+            font-size: 24px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80px;
+            text-align: center;
+        }
+        select {
+            font-size: 24px;
+            padding: 6px;
+            margin-left: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .submit-btn {
+            background-color: #ff9aa2;
+            opacity: 1;
+            background-color: #ff9aa2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #ff6f7d;
+        }
+        .help-text {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #555;
+        }
+        .help-text a {
+            color: #007BFF;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .error-message {
+            color: red;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        How many units of alcohol do you drink?
+        <input type="number" id="units" min="0" onkeydown="handleEnter(event)" />
+        <select id="period">
+            <option value="weekly">weekly</option>
+            <option value="daily">daily</option>
+        </select>
+    </h1>
+    <!-- New Submit button right below the question -->
+    <button type="button" class="submit-btn" onclick="navigateToResults()">Submit</button>
+
+    <div class="help-text">If you need help working this out, <a href="#">click here.</a></div>
+    <p class="error-message" id="error-message">Navigation to results page failed. This might not work in preview mode.</p>
+    
+    <script>
+        function handleEnter(event) {
+            if (event.key === "Enter") {
+                navigateToResults();
+            }
+        }
+
+        function navigateToResults() {
+            let units = document.getElementById('units').value;
+            let period = document.getElementById('period').value;
+            if (units !== "") {
+                try {
+                    window.location.href = "results.html?units=" + encodeURIComponent(units) + "&period=" + encodeURIComponent(period);
+                } catch (error) {
+                    console.error("Navigation failed:", error);
+                    document.getElementById("error-message").style.display = "block";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

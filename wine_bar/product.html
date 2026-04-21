@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wine detail | Crush prototype</title>
+  <meta name="description" content="Prototype product detail page for the Crush redesign.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="product">
+  <div class="topbar">
+    <div class="shell topbar__inner">
+      <span>Product details distinguish bar availability from take-home eligibility</span>
+      <span>Prototype detail page</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">Crush</span>
+        <span class="brand__sub">wine bar + shop</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="shop.html">Shop</a>
+        <a href="visit.html">Visit</a>
+        <a href="gather.html">Gather &amp; gift</a>
+        <a href="admin.html">How it works</a>
+      </nav>
+      <a class="button button--ghost" href="shop.html">Back to shop</a>
+    </div>
+  </header>
+
+  <main class="shell page-main">
+    <div data-product-detail></div>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Related bottles</p>
+          <h2>More routes into discovery</h2>
+        </div>
+      </div>
+      <div class="product-grid" data-related-products></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="brand__mark brand__mark--footer">Crush</p>
+        <p>Prototype detail page generated from structured product data.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

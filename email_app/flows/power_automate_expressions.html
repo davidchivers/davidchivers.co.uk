@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>power_automate_expressions</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<h1 id="power-automate-expressions">Power Automate expressions</h1>
+<p>These expressions assume you first store important dynamic values in
+short <code>Compose</code> actions so later expressions stay
+readable.</p>
+<h2 id="normalize-the-recorded-responder-email">1. normalize the
+recorded responder email</h2>
+<p>Create <code>Compose_RecordedResponderEmail</code> first using the
+Forms dynamic value for the responder’s email, then use:</p>
+<pre class="text"><code>toLower(trim(outputs(&#39;Compose_RecordedResponderEmail&#39;)))</code></pre>
+<h2 id="derive-the-username">2. derive the username</h2>
+<p>If the responder email is <code>hfnt93@university.ac.uk</code>, keep
+only <code>hfnt93</code>.</p>
+<pre class="text"><code>first(split(outputs(&#39;Compose_NormalizedResponderEmail&#39;),&#39;@&#39;))</code></pre>
+<h2 id="select-the-best-student-email">3. select the best student
+email</h2>
+<p>Recommended priority:</p>
+<ol type="1">
+<li>recorded responder email if available</li>
+<li>otherwise blank</li>
+</ol>
+<pre class="text"><code>if(
+  not(empty(outputs(&#39;Compose_NormalizedResponderEmail&#39;))),
+  outputs(&#39;Compose_NormalizedResponderEmail&#39;),
+  &#39;&#39;
+)</code></pre>
+<h2 id="padded-reference-number">4. padded reference number</h2>
+<p>Create <code>Compose - response id</code> from the Forms
+<code>Response Id</code> dynamic value, then use:</p>
+<pre class="text"><code>concat(
+  &#39;DEPT-&#39;,
+  formatDateTime(utcNow(),&#39;yyyy&#39;),
+  &#39;-&#39;,
+  padLeft(string(outputs(&#39;Compose_ResponseId&#39;)), 6, &#39;0&#39;)
+)</code></pre>
+<h2 id="resolved-enquiry-type">5. resolved enquiry type</h2>
+<p>Use the <code>Other enquiry type</code> value only when needed:</p>
+<pre class="text"><code>if(
+  equals(outputs(&#39;Compose_EnquiryType&#39;),&#39;Other&#39;),
+  outputs(&#39;Compose_OtherEnquiryType&#39;),
+  outputs(&#39;Compose_EnquiryType&#39;)
+)</code></pre>
+<h2 id="stage-tag">6. stage tag</h2>
+<pre class="text"><code>if(
+  equals(variables(&#39;resolved_stage&#39;),&#39;Undergraduate&#39;),
+  &#39;UG&#39;,
+  &#39;PGT&#39;
+)</code></pre>
+<h2 id="year-tag">7. year tag</h2>
+<pre class="text"><code>if(
+  empty(variables(&#39;resolved_year&#39;)),
+  &#39;&#39;,
+  concat(&#39;[&#39;, variables(&#39;resolved_year&#39;), &#39;]&#39;)
+)</code></pre>
+<h2 id="lookup-tag">8. lookup tag</h2>
+<pre class="text"><code>if(
+  variables(&#39;lookup_matched&#39;),
+  &#39;Matched&#39;,
+  &#39;Unmatched&#39;
+)</code></pre>
+<h2 id="staff-email-subject">9. staff email subject</h2>
+<pre class="text"><code>concat(
+  &#39;[Enquiry][&#39;,
+  outputs(&#39;Compose_EnquiryType&#39;),
+  &#39;][&#39;,
+  outputs(&#39;Compose_StageTag&#39;),
+  &#39;]&#39;,
+  outputs(&#39;Compose_YearTag&#39;),
+  &#39;[&#39;,
+  outputs(&#39;Compose_LookupTag&#39;),
+  &#39;] &#39;,
+  outputs(&#39;Compose_ReferenceNumber&#39;),
+  &#39; - &#39;,
+  if(
+    empty(outputs(&#39;Compose_SelectedUsername&#39;)),
+    outputs(&#39;Compose_SelectedStudentEmail&#39;),
+    outputs(&#39;Compose_SelectedUsername&#39;)
+  )
+)</code></pre>
+<h2 id="blank-safe-year-display">10. blank-safe year display</h2>
+<pre class="text"><code>if(
+  empty(variables(&#39;resolved_year&#39;)),
+  &#39;Not applicable&#39;,
+  variables(&#39;resolved_year&#39;)
+)</code></pre>
+<h2 id="blank-safe-other-enquiry-type-display">11. blank-safe other
+enquiry type display</h2>
+<pre class="text"><code>if(
+  empty(outputs(&#39;Compose_OtherEnquiryType&#39;)),
+  &#39;None&#39;,
+  outputs(&#39;Compose_OtherEnquiryType&#39;)
+)</code></pre>
+<h2 id="implementation-note">Implementation note</h2>
+<p>For suggested owner, use a <code>Switch</code> action rather than a
+long nested <code>if()</code> expression. It is easier to maintain and
+safer for non-technical admins to update later.</p>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Department prototype pack" />
+  <title>Student enquiry workflow handover</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Student enquiry workflow handover</h1>
+<p class="author">Department prototype pack</p>
+</header>
+<h1 id="student-enquiry-workflow-handover">Student enquiry workflow
+handover</h1>
+<p>This folder is the handover pack for the first-version student
+enquiry workflow using Microsoft Forms, Power Automate, Excel lookup
+data, and email.</p>
+<h2 id="recommendation">Recommendation</h2>
+<p>Use this folder as the main handover format.</p>
+<ul>
+<li>Best for a quick overview of the process:
+<code>workflow.html</code></li>
+<li>Best for day-to-day use: <code>START_HERE.html</code></li>
+<li>Best for printing or emailing as a summary:
+<code>START_HERE.pdf</code></li>
+<li>Best for detailed build work: the linked Markdown and template files
+in this folder</li>
+</ul>
+<p>For version 1, this should stay as a local or shared folder, not a
+separate website. The workflow itself is already online inside Microsoft
+365. The documentation does not need another platform yet.</p>
+<p>The browser-first version of the pack is:</p>
+<ul>
+<li><code>workflow.html</code></li>
+<li><code>build_new_email_app.html</code></li>
+<li><code>update_email_app.html</code></li>
+<li><code>how_to_use_app.html</code> (<code>Use email app</code>)</li>
+<li><code>START_HERE.html</code></li>
+<li><code>simple_setup_steps.html</code></li>
+<li><code>student_enquiry_workflow_spec.html</code></li>
+<li><code>build_plan.html</code></li>
+<li><code>flows/version_1_flow_logic.html</code></li>
+<li><code>flows/power_automate_expressions.html</code></li>
+<li><code>templates/microsoft_form_questions.html</code></li>
+</ul>
+<h2 id="open-these-in-order">Open these in order</h2>
+<ol type="1">
+<li><a href="workflow.html">Email App Instructions</a></li>
+<li><a href="how_to_use_app.html">Use email app</a></li>
+<li><a href="update_email_app.html">Update email app</a></li>
+<li><a href="build_new_email_app.html">Build new email app</a></li>
+<li><a href="simple_setup_steps.html">Simple setup steps</a></li>
+<li><a href="student_enquiry_workflow_spec.html">Full
+specification</a></li>
+</ol>
+<h2 id="templates">Templates</h2>
+<ul>
+<li><a href="templates/microsoft_form_questions.html">Microsoft Form
+questions</a></li>
+<li><a href="templates/student_enquiry_form_import.docx">Student enquiry
+form import file</a></li>
+<li><a href="templates/staff_email_template.txt">Staff email
+template</a></li>
+<li><a href="templates/student_acknowledgement_email.txt">Student
+acknowledgement email</a></li>
+<li><a href="templates/student_lookup_schema.csv">Student lookup
+schema</a></li>
+</ul>
+<h2 id="what-this-prototype-does">What this prototype does</h2>
+<ul>
+<li>takes a student enquiry through Microsoft Forms</li>
+<li>generates a readable reference number</li>
+<li>looks up student details from Excel using university email</li>
+<li>sends a structured staff email</li>
+<li>sends an acknowledgement email to the student</li>
+</ul>
+<p>Preferred version 1 rule:</p>
+<ul>
+<li>ask students only for the enquiry itself</li>
+<li>pull stable student facts from Banner export or Excel lookup
+data</li>
+<li>keep any extra checkpoint question optional</li>
+</ul>
+<h2 id="what-this-prototype-does-not-do">What this prototype does not
+do</h2>
+<ul>
+<li>full case management</li>
+<li>hard automatic reassignment</li>
+<li>deep Banner integration</li>
+<li>SharePoint-list-based workflow management</li>
+</ul>
+<h2 id="safest-format-choice">Safest format choice</h2>
+<p>For this project, the safest setup is:</p>
+<ol type="1">
+<li>Keep the operational workflow online in Microsoft 365.</li>
+<li>Keep the handover documentation as this standalone folder.</li>
+<li>Keep the files together if you need to send the folder to someone
+else.</li>
+</ol>
+<p>That is simpler than building a separate website, and more usable
+than relying on a PDF alone.</p>
+<h2 id="if-you-later-want-an-online-version">If you later want an online
+version</h2>
+<p>The next step would be a very simple read-only SharePoint or Teams
+page that links to the same files. That should only happen after the
+process is stable and the wording has stopped changing.</p>
+</body>
+</html>

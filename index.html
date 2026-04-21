@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Chivers - Economist</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, p, a {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Helvetica, Arial, sans-serif; /* Primary font: Helvetica */
+            color: #663399;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9; /* Light background */
+            text-align: center;
+            flex-direction: column; /* Stack content vertically */
+        }
+
+        a {
+            text-decoration: none;
+            color: #663399; /* Matches the title color */
+            transition: color 0.3s ease; /* Smooth hover transition */
+        }
+
+        a:hover {
+            color: #33cc99; /* Complementary green color on hover */
+        }
+
+        h1 {
+            font-weight: bolder;
+            font-size: 48px; /* Balanced font size for the title */
+            margin-bottom: 15px; /* Closer to the next section */
+        }
+
+        h2 {
+            font-size: 22px; /* Slightly smaller for better proportions */
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px; /* Larger font for better readability */
+            color: black;
+            margin-top: 10px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px; /* Reduced max width for compactness */
+        }
+
+        .icons {
+            margin-top: 20px; /* Adjusted spacing */
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Even spacing between icons */
+        }
+
+        .icon {
+            display: inline-block;
+            width: 40px; /* Larger for consistency */
+            height: 40px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .icon:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+
+        img {
+            margin-top: 20px; /* Slightly larger spacing */
+            height: 300px; /* Reduced image size for better proportions */
+            border-radius: 10px;
+        }
+
+        .links {
+            font-size: 20px; /* Larger for emphasis */
+            margin-bottom: 15px; /* Better spacing */
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="http://davidchivers.co.uk/index.html">
+            <h1>David Chivers</h1>
+        </a>
+        <div class="links">
+            <h2>
+                <a href="https://sites.google.com/view/howtoreadnumbers/home">Book</a> &nbsp; 
+                <a href="http://davidchivers.blogspot.co.uk/" target="_blank">Blog</a> &nbsp;
+                <a href="https://drive.google.com/file/d/13j0un9yXIiGbyvKIAI4RSTLGCkNRuQwt/view?usp=drive_link">CV</a>
+            </h2>
+        </div>
+                <p><b>Associate Professor - Durham University</b><br>
+           david.chivers@durham.ac.uk</p>
+        <img src="chivers.jpg" alt="David Chivers">
+        <div class="icons">
+            <a href="https://www.durham.ac.uk/business/our-people/david-chivers/" target="_blank">
+                <div class="icon" style="background-image: url('durham.jpg');"></div>
+            </a>
+            <a href="http://twitter.com/dave_chivers" target="_blank">
+                <div class="icon" style="background-image: url('twitter.png');"></div>
+            </a>
+            <a href="spotify:user:dave_chivers:playlist:1PbJ5U6i5Uhe67Prds7RxJ" target="_blank">
+                <div class="icon" style="background-image: url('spotify.png');"></div>
+            </a>
+            <a href="https://bsky.app/profile/davechivers.bsky.social" target="_blank"> <!-- Replace with your BlueSky profile -->
+                <div class="icon" style="background-image: url('bluesky.png');"></div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

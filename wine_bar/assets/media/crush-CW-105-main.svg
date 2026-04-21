@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">Blue House Trousseau 2023</title>
+  <desc id="desc">Illustrated bottle label for a bar-only chilled red from Texas.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#19161b"/>
+      <stop offset="100%" stop-color="#564b5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="960" fill="url(#bg)"/>
+  <rect x="110" y="110" width="500" height="740" rx="38" fill="#d7d4e1"/>
+  <rect x="138" y="138" width="444" height="684" rx="28" fill="#faf9fd"/>
+  <text x="360" y="225" text-anchor="middle" fill="#645a73" font-family="Georgia, serif" font-size="38">CRUSH</text>
+  <text x="360" y="292" text-anchor="middle" fill="#201c25" font-family="Georgia, serif" font-size="54">Blue House</text>
+  <text x="360" y="336" text-anchor="middle" fill="#645a73" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">TROUSSEAU</text>
+  <rect x="245" y="405" width="230" height="180" rx="14" fill="#8d7fa0"/>
+  <path d="M280 565V450l80-60 80 60v115Z" fill="#f1edf7"/>
+  <path d="M333 565v-60h54v60" fill="#8d7fa0"/>
+  <text x="360" y="700" text-anchor="middle" fill="#201c25" font-family="Arial, sans-serif" font-size="28">Texas Hill Country</text>
+  <text x="360" y="748" text-anchor="middle" fill="#645a73" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">2023</text>
+</svg>

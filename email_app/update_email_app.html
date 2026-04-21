@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Email App Instructions - Update email app</title>
+  <link rel="stylesheet" href="instructions.css" />
+</head>
+<body>
+  <main>
+    <a class="toplink" href="workflow.html">Back to Email App Instructions</a>
+    <h1>Update email app</h1>
+    <p>Use these steps when the app already exists and you want to change it safely.</p>
+
+    <section class="step">
+      <h2>Step 1. Decide what is changing</h2>
+      <ol>
+        <li>Decide whether you are changing the form, the flow, the lookup file, the email templates, or the documentation.</li>
+        <li>Try to change one area at a time.</li>
+      </ol>
+    </section>
+
+    <section class="step">
+      <h2>Step 2. Update the Microsoft Form if needed</h2>
+      <ol>
+        <li>Open the existing form.</li>
+        <li>Change the wording or enquiry types if needed.</li>
+        <li>Keep the form short and only add a checkpoint field such as programme if testing shows the lookup is unreliable.</li>
+        <li>Check that the branching still works after the change.</li>
+      </ol>
+      <div class="links">
+        <a href="https://forms.microsoft.com/" target="_blank" rel="noreferrer">Open Forms</a>
+        <a href="templates/microsoft_form_questions.html">Form question guide</a>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Step 3. Update the lookup file if needed</h2>
+      <ol>
+        <li>Open the Excel workbook.</li>
+        <li>Update student rows or columns carefully.</li>
+        <li>Prefer to refresh the workbook from Banner export or another trusted source.</li>
+        <li>Keep <code>UniversityEmailNormalized</code> lowercase and unique.</li>
+        <li>If you change the schema, make sure the flow still reads the same fields.</li>
+      </ol>
+      <div class="links">
+        <a href="https://www.office.com/launch/excel" target="_blank" rel="noreferrer">Open Excel</a>
+        <a href="templates/student_lookup_schema.csv">Lookup schema</a>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Step 4. Update the flow if needed</h2>
+      <ol>
+        <li>Open the existing Power Automate flow.</li>
+        <li>Change the logic, subject tags, suggested owner labels, or email content as needed.</li>
+        <li>Keep the basic pattern the same: read the form, create a reference number, run lookup, send staff email, send acknowledgement.</li>
+      </ol>
+      <div class="links">
+        <a href="https://make.powerautomate.com/" target="_blank" rel="noreferrer">Open Power Automate</a>
+        <a href="flows/version_1_flow_logic.html">Flow logic</a>
+        <a href="flows/power_automate_expressions.html">Expressions</a>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Step 5. Update the email templates if needed</h2>
+      <ol>
+        <li>Update the staff email template if staff need clearer subject tags or body fields.</li>
+        <li>Update the acknowledgement email if student wording needs to change.</li>
+        <li>Keep both templates short and realistic.</li>
+      </ol>
+      <div class="links">
+        <a href="templates/staff_email_template.txt">Staff email template</a>
+        <a href="templates/student_acknowledgement_email.txt">Student acknowledgement email</a>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Step 6. Test after the change</h2>
+      <ol>
+        <li>Run a matched enquiry.</li>
+        <li>Run an unmatched enquiry.</li>
+        <li>Check that the reference number still works.</li>
+        <li>Check that staff and student emails still send correctly.</li>
+      </ol>
+      <div class="links">
+        <a href="build_plan.html">Build plan and test checklist</a>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Step 7. Rebuild the docs if the documentation changed</h2>
+      <ol>
+        <li>If you changed the Markdown docs, run <code>build_docs.ps1</code>.</li>
+        <li>That will refresh the generated HTML and PDF files.</li>
+      </ol>
+      <div class="links">
+        <a href="build_docs.ps1">Build docs script</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

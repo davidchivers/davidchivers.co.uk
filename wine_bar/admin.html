@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crush admin example</title>
+  <link rel="stylesheet" href="assets/css/simple.css">
+</head>
+<body data-page="admin">
+  <main class="page page--wide">
+    <p><a href="index.html">&larr; Back</a></p>
+    <h1>Admin / back-end example</h1>
+
+    <p>
+      This is the simple idea behind the admin side.
+    </p>
+    <p>
+      Staff should not edit the website code to change wines, prices, or stock.
+    </p>
+    <p>
+      Instead, they update a simple admin system such as Airtable or Google Sheets.
+      The website then shows the approved result.
+    </p>
+    <p>
+      So in plain English:
+      Airtable or Google Sheets would be the place where staff edit wines.
+      Shopify would mainly be the customer-facing shop and checkout.
+    </p>
+    <p>
+      The information is split into separate tables so everything is easier to manage:
+    </p>
+
+    <ul>
+      <li>Catalogue = what the wine is</li>
+      <li>Pricing = what it costs / sells for</li>
+      <li>Stock = how many bottles and whether it is active</li>
+      <li>Media = pictures</li>
+      <li>Publishing = what the customer sees</li>
+    </ul>
+
+    <p>
+      Best practical version 1:
+    </p>
+
+    <ul>
+      <li>Airtable or Google Sheets = admin system</li>
+      <li>Shopify = live website and checkout</li>
+      <li>A small sync step = sends approved wines from the admin system to the website</li>
+    </ul>
+
+    <p>
+      Click the buttons below to view the sample tables.
+    </p>
+
+    <div class="button-row" data-admin-buttons></div>
+    <div data-admin-table></div>
+  </main>
+
+  <script src="assets/js/simple.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">Marani No. 8 Kisi Amber 2023</title>
+  <desc id="desc">Illustrated bottle label for an amber wine from Georgia.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2f241d"/>
+      <stop offset="100%" stop-color="#8a5a37"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="960" fill="url(#bg)"/>
+  <rect x="110" y="110" width="500" height="740" rx="38" fill="#f2e2c8"/>
+  <rect x="138" y="138" width="444" height="684" rx="28" fill="#fcf6ed"/>
+  <text x="360" y="225" text-anchor="middle" fill="#6a3d1d" font-family="Georgia, serif" font-size="38">CRUSH</text>
+  <text x="360" y="292" text-anchor="middle" fill="#24160f" font-family="Georgia, serif" font-size="54">Kisi Amber</text>
+  <text x="360" y="336" text-anchor="middle" fill="#6a3d1d" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">MARANI NO. 8</text>
+  <circle cx="360" cy="466" r="110" fill="#d1a15f"/>
+  <circle cx="360" cy="466" r="84" fill="#e8c88b"/>
+  <path d="M360 402c24 31 42 53 42 89 0 29-19 56-42 73-23-17-42-44-42-73 0-36 18-58 42-89Z" fill="#915228"/>
+  <text x="360" y="700" text-anchor="middle" fill="#24160f" font-family="Arial, sans-serif" font-size="28">Tsinandali, Kakheti</text>
+  <text x="360" y="748" text-anchor="middle" fill="#6a3d1d" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">2023</text>
+</svg>

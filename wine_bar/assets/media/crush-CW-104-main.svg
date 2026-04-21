@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">Monsoon Cellars Method Rose 2024</title>
+  <desc id="desc">Illustrated bottle label for a sparkling rose from India.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38180f"/>
+      <stop offset="100%" stop-color="#d86f4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="960" fill="url(#bg)"/>
+  <rect x="110" y="110" width="500" height="740" rx="38" fill="#f7d4bf"/>
+  <rect x="138" y="138" width="444" height="684" rx="28" fill="#fff7f1"/>
+  <text x="360" y="225" text-anchor="middle" fill="#b85d32" font-family="Georgia, serif" font-size="38">CRUSH</text>
+  <text x="360" y="290" text-anchor="middle" fill="#30130c" font-family="Georgia, serif" font-size="50">Method Rose</text>
+  <text x="360" y="338" text-anchor="middle" fill="#b85d32" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">MONSOON CELLARS</text>
+  <circle cx="360" cy="500" r="132" fill="#f4c38f"/>
+  <path d="M360 384c18 46 48 79 89 101-51 6-83 29-89 90-6-61-38-84-89-90 41-22 71-55 89-101Z" fill="#e27d4d"/>
+  <circle cx="308" cy="448" r="10" fill="#fff2dc"/>
+  <circle cx="430" cy="526" r="8" fill="#fff2dc"/>
+  <circle cx="285" cy="560" r="7" fill="#fff2dc"/>
+  <text x="360" y="700" text-anchor="middle" fill="#30130c" font-family="Arial, sans-serif" font-size="28">Nashik, India</text>
+  <text x="360" y="748" text-anchor="middle" fill="#b85d32" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">2024</text>
+</svg>

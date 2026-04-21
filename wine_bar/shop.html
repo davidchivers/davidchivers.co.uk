@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop | Crush prototype</title>
+  <meta name="description" content="Browse the Crush prototype catalogue with filters for style, region, fulfilment, and in-bar availability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="shop">
+  <div class="topbar">
+    <div class="shell topbar__inner">
+      <span>Clear fulfilment messaging: collection only, local delivery, both, or informational</span>
+      <span>Durham-first rather than generic shipping</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">Crush</span>
+        <span class="brand__sub">wine bar + shop</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="shop.html" aria-current="page">Shop</a>
+        <a href="visit.html">Visit</a>
+        <a href="gather.html">Gather &amp; gift</a>
+        <a href="admin.html">How it works</a>
+      </nav>
+      <a class="button button--ghost" href="visit.html">Visit Durham</a>
+    </div>
+  </header>
+
+  <main class="shell page-main">
+    <section class="page-hero panel panel--warm">
+      <p class="eyebrow">Shop prototype</p>
+      <h1>Browse by style, place, and fulfilment</h1>
+      <p class="lead">
+        This page is designed for a curated local range. Wines can be visible without being
+        purchasable, and fulfilment rules are explicit at card level rather than hidden at checkout.
+      </p>
+    </section>
+
+    <section class="filter-panel panel">
+      <div class="filters">
+        <label>
+          <span>Search</span>
+          <input type="search" placeholder="Producer, country, style..." data-filter-search>
+        </label>
+        <label>
+          <span>Style</span>
+          <select data-filter-category>
+            <option value="">All styles</option>
+          </select>
+        </label>
+        <label>
+          <span>Country</span>
+          <select data-filter-country>
+            <option value="">All countries</option>
+          </select>
+        </label>
+        <label>
+          <span>Fulfilment</span>
+          <select data-filter-fulfilment>
+            <option value="">Any fulfilment</option>
+            <option value="collection_and_delivery">Collection + delivery</option>
+            <option value="collection_only">Collection only</option>
+            <option value="delivery_only">Local delivery only</option>
+            <option value="info_only">Informational only</option>
+          </select>
+        </label>
+        <label>
+          <span>Bar service</span>
+          <select data-filter-service>
+            <option value="">Any</option>
+            <option value="by_glass">Available by the glass</option>
+            <option value="bar_active">Active in bar</option>
+          </select>
+        </label>
+      </div>
+      <div class="filter-summary">
+        <p data-results-count>Loading catalogue...</p>
+        <button class="button button--secondary button--small" type="button" data-filter-reset>Reset filters</button>
+      </div>
+    </section>
+
+    <section class="shop-layout">
+      <aside class="legend panel panel--dark">
+        <p class="eyebrow eyebrow--light">Legend</p>
+        <ul class="legend-list">
+          <li><strong>Collection only</strong> means pickup from Durham with no delivery option.</li>
+          <li><strong>Local delivery</strong> means routed delivery in the local zone on set days.</li>
+          <li><strong>Informational</strong> means visible online but not currently purchasable.</li>
+          <li><strong>By the glass</strong> is informational for bar service in version 1.</li>
+        </ul>
+      </aside>
+      <div class="product-grid" data-shop-products></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="brand__mark brand__mark--footer">Crush</p>
+        <p>Hybrid retail browsing with operationally realistic states.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Need help?</p>
+        <p>In the real implementation, this is where delivery-zone and collection instructions would sit.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

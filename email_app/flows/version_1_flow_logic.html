@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>version_1_flow_logic</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<h1 id="version-1-flow-logic">Version 1 flow logic</h1>
+<h2 id="flow-name">Flow name</h2>
+<p><code>Student enquiry intake - v1</code></p>
+<h2 id="connectors">Connectors</h2>
+<ul>
+<li>Microsoft Forms</li>
+<li>Excel Online</li>
+<li>Office 365 Outlook</li>
+</ul>
+<h2 id="recommended-action-sequence">Recommended action sequence</h2>
+<ol type="1">
+<li>Trigger: <code>When a new response is submitted</code></li>
+<li>Action: <code>Get response details</code></li>
+<li>Action: <code>Compose_RecordedResponderEmail</code></li>
+<li>Action: <code>Compose_NormalizedResponderEmail</code></li>
+<li>Action: <code>Compose_SelectedUsername</code></li>
+<li>Action: <code>Compose_SelectedStudentEmail</code></li>
+<li>Action: <code>Compose_ResponseId</code></li>
+<li>Action: <code>Compose_ReferenceNumber</code></li>
+<li>Action: <code>Initialize variable lookup_matched</code> =
+<code>false</code></li>
+<li>Action: <code>Initialize variable student_name</code></li>
+<li>Action: <code>Initialize variable student_id</code></li>
+<li>Action: <code>Initialize variable resolved_programme</code></li>
+<li>Action: <code>Initialize variable resolved_stage</code></li>
+<li>Action: <code>Initialize variable resolved_year</code></li>
+<li>Action: <code>Initialize variable academic_advisor</code></li>
+<li>Action: <code>Initialize variable banner_link</code></li>
+<li>Action: <code>Initialize variable banner_code</code></li>
+<li>Action: <code>Initialize variable lookup_status</code></li>
+<li>Action: <code>Initialize variable suggested_owner</code></li>
+<li>Scope: <code>Lookup student</code></li>
+<li>Scope: <code>On lookup match</code></li>
+<li>Scope: <code>On lookup miss</code></li>
+<li>Action: <code>Compose_EnquiryType</code></li>
+<li>Action: <code>Compose_OtherEnquiryType</code></li>
+<li>Action: <code>Compose_ResolvedEnquiryType</code></li>
+<li>Action: <code>Switch - suggested owner</code></li>
+<li>Action: <code>Compose_StageTag</code></li>
+<li>Action: <code>Compose_YearTag</code></li>
+<li>Action: <code>Compose_LookupTag</code></li>
+<li>Action: <code>Compose_StaffEmailSubject</code></li>
+<li>Action: <code>Send an email (V2)</code> to pilot inbox, or
+<code>Send an email from a shared mailbox (V2)</code> later</li>
+<li>Action: <code>Send acknowledgement email</code></li>
+<li>Scope or branch: <code>Failure notification</code></li>
+</ol>
+<h2 id="email-source-selection">Email source selection</h2>
+<p>Recommended priority:</p>
+<ol type="1">
+<li>Use recorded responder email from Forms if the form is restricted to
+organization users and <code>Record name</code> is enabled</li>
+<li>Normalize that email</li>
+<li>Derive <code>selected_username</code> from the email prefix:
+<ul>
+<li>if the responder email is <code>hfnt93@university.ac.uk</code>, use
+<code>hfnt93</code></li>
+</ul></li>
+<li>Use the recorded responder email as
+<code>selected_student_email</code></li>
+<li>If your tenant exposes CIS username directly, you can use that
+instead of deriving it from email</li>
+<li>If testing shows recorded responder email is unavailable in the
+tenant, add a separate required <code>University email address</code>
+field</li>
+</ol>
+<p>Optional pilot safeguard:</p>
+<ul>
+<li>if both direct username and responder email are available, compare
+them and include an <code>Identity check</code> note in the staff
+email</li>
+</ul>
+<h2 id="lookup-student-scope">Lookup student scope</h2>
+<p>Use Excel <code>Get a row</code> with:</p>
+<ul>
+<li>File: lookup workbook</li>
+<li>Table: <code>StudentLookup</code></li>
+<li>Key column: <code>UniversityEmailNormalized</code></li>
+<li>Key value: normalized responder email</li>
+</ul>
+<p>This is preferable to filtering the whole table in version 1 because
+the design is cleaner and the key is explicit.</p>
+<p>Operational note:</p>
+<ul>
+<li>the flow connection account must have access to the workbook</li>
+<li>avoid having the workbook heavily edited during testing or busy
+periods</li>
+</ul>
+<h2 id="on-lookup-match-scope">On lookup match scope</h2>
+<p>Configure <code>Run after</code> so this scope runs only if
+<code>Lookup student</code> succeeds.</p>
+<p>Set:</p>
+<ul>
+<li><code>lookup_matched = true</code></li>
+<li><code>student_name</code> from Excel</li>
+<li><code>student_id</code> from Excel</li>
+<li><code>resolved_programme</code> from Excel</li>
+<li><code>resolved_stage</code> from Excel</li>
+<li><code>resolved_year</code> from Excel</li>
+<li><code>academic_advisor</code> from Excel</li>
+<li><code>banner_link</code> from Excel</li>
+<li><code>banner_code</code> from Excel</li>
+<li><code>lookup_status = Matched</code></li>
+</ul>
+<h2 id="on-lookup-miss-scope">On lookup miss scope</h2>
+<p>Configure <code>Run after</code> so this scope runs if
+<code>Lookup student</code> fails, times out, or is skipped.</p>
+<p>Set:</p>
+<ul>
+<li><code>lookup_matched = false</code></li>
+<li><code>student_name = Not found</code></li>
+<li><code>student_id = Not found</code></li>
+<li><code>resolved_programme</code> from form answer</li>
+<li><code>resolved_stage</code> from form answer</li>
+<li><code>resolved_year</code> from form answer or blank</li>
+<li><code>academic_advisor = Not found</code></li>
+<li><code>banner_link = Not found</code></li>
+<li><code>banner_code = Not found</code></li>
+<li><code>lookup_status = Not matched</code></li>
+</ul>
+<p>The flow should continue normally.</p>
+<h2 id="suggested-owner-logic">Suggested owner logic</h2>
+<p>Use a <code>Switch</code> on enquiry type, not a complex nested
+expression.</p>
+<p>Recommended role labels:</p>
+<ul>
+<li>Module enquiry -&gt; <code>module support</code></li>
+<li>Academic advisor -&gt; <code>advisor admin</code></li>
+<li>Assessment query -&gt; <code>assessment admin</code></li>
+<li>Extension -&gt; <code>assessment admin</code></li>
+<li>Mitigating circumstances -&gt;
+<code>student support or formal process check</code></li>
+<li>Attendance -&gt; <code>attendance admin</code></li>
+<li>Timetable -&gt; <code>timetable admin</code></li>
+<li>IT / systems access -&gt; <code>department IT</code></li>
+<li>Fees / finance -&gt; <code>student finance liaison</code></li>
+<li>Other -&gt; <code>general triage</code></li>
+</ul>
+<p>Keep the result advisory only.</p>
+<h2 id="staff-email-payload">Staff email payload</h2>
+<p>Include:</p>
+<ul>
+<li>reference number</li>
+<li>submitted timestamp</li>
+<li>lookup status</li>
+<li>suggested owner</li>
+<li>recorded responder email</li>
+<li>derived username</li>
+<li>student name</li>
+<li>student email</li>
+<li>student ID</li>
+<li>stage of study</li>
+<li>year of study</li>
+<li>programme of study</li>
+<li>enquiry type</li>
+<li>other enquiry type</li>
+<li>academic advisor</li>
+<li>banner link</li>
+<li>banner code</li>
+<li>student message</li>
+</ul>
+<h2 id="student-acknowledgement-payload">Student acknowledgement
+payload</h2>
+<p>Include:</p>
+<ul>
+<li>greeting</li>
+<li>confirmation of receipt</li>
+<li>reference number</li>
+<li>brief follow-up note</li>
+<li>department signature</li>
+</ul>
+<h2 id="failure-notification">Failure notification</h2>
+<p>Recommended minimum:</p>
+<ul>
+<li>if the flow fails before the staff email is sent, notify the
+form/flow owner mailbox</li>
+<li>include the Forms response ID and timestamp in the failure
+email</li>
+</ul>
+<h2 id="notes-for-later-upgrades">Notes for later upgrades</h2>
+<ul>
+<li>Replace Excel with another source by swapping only the lookup
+block.</li>
+<li>Move send actions to the shared mailbox after pilot sign-off.</li>
+<li>Add mailbox categories or reporting after the intake flow is
+stable.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>student_enquiry_workflow_spec</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<h1 id="student-enquiry-workflow-specification">Student enquiry workflow
+specification</h1>
+<h2 id="objective">1. objective</h2>
+<p>Create a safe first prototype for departmental student enquiries
+using Microsoft Forms, Power Automate, Excel lookup data, and email.</p>
+<p>The workflow should:</p>
+<ul>
+<li>accept enquiries from students through a Microsoft Form</li>
+<li>generate a clear reference number</li>
+<li>attempt to enrich the submission using the recorded responder
+identity from Forms</li>
+<li>send a structured staff email for handling</li>
+<li>send a simple acknowledgement email to the student</li>
+</ul>
+<p>The workflow should not:</p>
+<ul>
+<li>become a full case-management platform</li>
+<li>depend on SharePoint lists as the main operating tool</li>
+<li>rely on hard automatic routing to named individuals</li>
+<li>build deep live Banner integration in version 1</li>
+</ul>
+<h2 id="version-1-design-principles">2. version 1 design principles</h2>
+<ul>
+<li>Keep the intake form short and professional.</li>
+<li>Do not ask students to re-enter stable record facts that the
+department can pull from Banner export or another lookup source.</li>
+<li>Keep extra checkpoint fields optional and add them only if testing
+shows the lookup is not reliable enough.</li>
+<li>Continue the process even if lookup fails.</li>
+<li>Keep staff work centered on a normal inbox first and a shared
+mailbox later.</li>
+<li>Make the design replaceable: Excel lookup now, stronger
+institutional source later.</li>
+<li>Prefer readable email outputs over complex workflow state
+tracking.</li>
+</ul>
+<h2 id="recommended-architecture">3. recommended architecture</h2>
+<ol type="1">
+<li>A student submits a Microsoft Form.</li>
+<li>Power Automate reads the response.</li>
+<li>The flow generates a reference number.</li>
+<li>The flow reads the recorded responder identity and derives the
+lookup values it needs.</li>
+<li>The flow attempts a lookup in an Excel Online table.</li>
+<li>The flow sends a structured staff email to a pilot inbox or shared
+mailbox.</li>
+<li>The flow sends an acknowledgement email to the student.</li>
+</ol>
+<h2 id="recommended-microsoft-form-design">4. recommended Microsoft Form
+design</h2>
+<h3 id="form-settings">Form settings</h3>
+<ul>
+<li>Form title: <code>Department student enquiry form</code></li>
+<li>Audience setting for preferred mode:
+<code>Only people in my organization can respond</code></li>
+<li>Turn on <code>Record name</code>.</li>
+<li>Do not use <code>One response per person</code>, because students
+may need to submit more than one enquiry over time.</li>
+<li>Add a short form introduction explaining what the form is for and
+when students should use another urgent or formal route.</li>
+</ul>
+<h3 id="identity-handling">Identity handling</h3>
+<p>Use one of these two patterns:</p>
+<ul>
+<li>Preferred pattern: restrict the form to university sign-in, record
+responder identity, and do not ask the student to type username or email
+at all.</li>
+<li>Fallback pattern: if testing shows the flow cannot access recorded
+responder email, add a required <code>University email address</code>
+field.</li>
+</ul>
+<p>For a cautious pilot, use the recorded responder email as the
+acknowledgement address and as the primary lookup key. Derive the CIS
+username from the email prefix if needed.</p>
+<h3 id="questions">Questions</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>Type</th>
+<th>Required</th>
+<th>Branching / notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Enquiry type</td>
+<td>Choice</td>
+<td>Yes</td>
+<td>Controlled list for classification</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Other enquiry type</td>
+<td>Text</td>
+<td>Yes when needed</td>
+<td>Show only if enquiry type = Other</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Message</td>
+<td>Long text</td>
+<td>Yes</td>
+<td>Student describes the issue</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enquiry-type-values">Enquiry type values</h3>
+<ul>
+<li>Module enquiry</li>
+<li>Academic advisor</li>
+<li>Assessment query</li>
+<li>Extension</li>
+<li>Mitigating circumstances</li>
+<li>Attendance</li>
+<li>Timetable</li>
+<li>IT / systems access</li>
+<li>Fees / finance</li>
+<li>Other</li>
+</ul>
+<h3 id="identity-note">Identity note</h3>
+<p>Recommended behavior:</p>
+<ul>
+<li>Do not ask for username or email on the form in the preferred
+build</li>
+<li>Restrict the form to signed-in users and turn on recorded responder
+identity</li>
+<li>Use the recorded responder email as the acknowledgement address</li>
+<li>Derive the CIS username from the recorded email prefix if needed for
+lookup, tags, or staff handling</li>
+<li>Only add a separate <code>University email address</code> field if
+testing shows the flow cannot access the responder email</li>
+</ul>
+<h3 id="stable-student-facts-note">Stable student facts note</h3>
+<p>Preferred version 1 rule:</p>
+<ul>
+<li>Ask students only for the enquiry itself.</li>
+<li>Pull stable student facts such as stage, year, programme, student
+ID, and advisor from Banner export or the lookup workbook.</li>
+<li>Only add one checkpoint field later, such as
+<code>Programme of study</code>, if testing shows matching is
+unreliable.</li>
+</ul>
+<h3 id="submission-behavior">Submission behavior</h3>
+<ul>
+<li>After submission, the student sees a short thank-you message on
+screen.</li>
+<li>The flow sends a separate acknowledgement email that includes the
+reference number.</li>
+<li>The form should not promise a response time until the department has
+measured real handling capacity.</li>
+</ul>
+<h3 id="recommended-form-wording-note">Recommended form wording
+note</h3>
+<p>If the university has a separate formal process for extensions or
+mitigating circumstances, say so in the form introduction and
+acknowledgement email. The form can still collect these enquiries, but
+version 1 should not imply that the form itself replaces a formal
+university process.</p>
+<h2 id="recommended-power-automate-flow-design">5. recommended Power
+Automate flow design</h2>
+<h3 id="trigger-and-read-response">Trigger and read response</h3>
+<ol type="1">
+<li>Trigger: <code>When a new response is submitted</code></li>
+<li>Action: <code>Get response details</code></li>
+</ol>
+<p>Microsoft’s Forms connector currently provides one trigger and one
+main read action, which is sufficient for this prototype flow.</p>
+<h3 id="reference-number-design">Reference number design</h3>
+<p>Recommended version 1 format:</p>
+<p><code>DEPT-2026-000123</code></p>
+<p>Recommended logic:</p>
+<ul>
+<li>Take the Forms <code>Response Id</code></li>
+<li>Pad it to six digits</li>
+<li>Prefix with <code>DEPT-</code> and the current year</li>
+</ul>
+<p>Example result:</p>
+<p><code>DEPT-2026-000123</code></p>
+<p>Why this is the safest version 1 choice:</p>
+<ul>
+<li>no extra counter store is needed</li>
+<li>reference numbers remain readable</li>
+<li>the sequence is increasing within the form</li>
+<li>it avoids Excel write-back or locking risks just to maintain a
+counter</li>
+</ul>
+<p>Important limitation:</p>
+<ul>
+<li>this is a form-scoped sequence, not a department-wide enterprise
+ticket number</li>
+<li>if the live form is replaced or copied later, the sequence may
+restart and should be treated as a new series</li>
+</ul>
+<p>If a stricter cross-form sequence is required later, add a small
+dedicated counter source such as Dataverse or a utility SharePoint list,
+while still keeping email as the main workflow channel.</p>
+<h3 id="lookup-logic">Lookup logic</h3>
+<p>Recommended version 1 lookup source:</p>
+<ul>
+<li>Excel Online workbook in OneDrive or SharePoint</li>
+<li>One table only</li>
+<li>Unique key column: <code>UniversityEmailNormalized</code></li>
+<li>Prefer to populate the workbook from Banner export or another
+trusted student-record extract</li>
+</ul>
+<p>Recommended table shape for this department:</p>
+<ul>
+<li>keep one active-student table for the whole department</li>
+<li>include undergraduate and taught postgraduate students in the same
+table</li>
+<li>do not split the lookup by year, stage, or programme in version
+1</li>
+<li>a department-sized lookup of roughly 1,100 students is still
+reasonable for this exact-match prototype</li>
+</ul>
+<p>Recommended lookup steps:</p>
+<ol type="1">
+<li>Select the recorded responder email from Forms.</li>
+<li>Normalize the responder email to lowercase and trim spaces.</li>
+<li>Derive the CIS username from the email prefix if needed.</li>
+<li>Attempt <code>Get a row</code> from the Excel table using
+<code>UniversityEmailNormalized</code>.</li>
+<li>If the row is found, enrich the output with student details.</li>
+<li>If the row is not found, continue anyway and mark lookup as
+<code>Not matched</code>.</li>
+</ol>
+<p>Preferred resolved fields from lookup:</p>
+<ul>
+<li>StudentName</li>
+<li>StudentID</li>
+<li>Programme</li>
+<li>StageOfStudy</li>
+<li>YearOfStudy</li>
+<li>AcademicAdvisor</li>
+<li>BannerLink</li>
+<li>BannerCode</li>
+</ul>
+<p>Recommended resolved-value rule:</p>
+<ul>
+<li>If lookup succeeds, use Excel values as the main staff-facing
+values.</li>
+<li>If lookup fails, fall back to the recorded responder email and let
+staff check Banner or the student record manually.</li>
+<li>Do not rely on the spreadsheet as the normal staff working
+interface; use it as backend lookup data.</li>
+</ul>
+<h3 id="soft-routing-and-tagging">Soft routing and tagging</h3>
+<p>Do not hard-route to named individuals in version 1.</p>
+<p>Instead:</p>
+<ul>
+<li>add subject-line tags such as <code>[Module enquiry]</code>,
+<code>[UG]</code>, <code>[Year 2]</code>, <code>[Matched]</code></li>
+<li>include <code>Suggested owner</code> in the email body</li>
+<li>optionally map enquiry types to role labels such as
+<code>assessment admin</code> or <code>department IT</code></li>
+</ul>
+<p>This keeps staff control in the mailbox while still making triage
+faster.</p>
+<h3 id="staff-email-output">Staff email output</h3>
+<p>Send one staff email for every submission.</p>
+<p>Version 1 recipient:</p>
+<ul>
+<li>a normal monitored inbox</li>
+</ul>
+<p>Version 1.1 recipient:</p>
+<ul>
+<li>a shared mailbox using Power Automate’s shared mailbox email
+action</li>
+</ul>
+<p>The staff email should include:</p>
+<ul>
+<li>reference number</li>
+<li>lookup status</li>
+<li>suggested owner</li>
+<li>student identity fields</li>
+<li>study context fields</li>
+<li>Banner identifiers or link</li>
+<li>original student message</li>
+</ul>
+<p>If stage, year, or programme are unavailable because lookup fails,
+leave those fields blank or mark them as <code>Not matched</code> rather
+than asking the student to re-enter them in version 1.</p>
+<h3 id="student-acknowledgement-email">Student acknowledgement
+email</h3>
+<p>Send a simple acknowledgement to the student after the staff email
+step.</p>
+<p>The email should:</p>
+<ul>
+<li>confirm receipt</li>
+<li>include the reference number</li>
+<li>avoid promising unrealistic turnaround times</li>
+<li>tell the student to keep the reference number for follow-up</li>
+</ul>
+<h3 id="failure-handling">Failure handling</h3>
+<p>Recommended minimum failure handling:</p>
+<ul>
+<li>if the Excel lookup fails, continue and send the emails</li>
+<li>if the main flow fails before emails are sent, notify the admin
+owner mailbox</li>
+</ul>
+<p>This keeps version 1 robust without adding a case database.</p>
+<h2 id="suggested-excel-lookup-schema">6. suggested Excel lookup
+schema</h2>
+<h3 id="core-columns">Core columns</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Column</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UniversityEmail</td>
+<td>Student university email as provided by source data</td>
+<td>Prefer the official institutional address</td>
+</tr>
+<tr>
+<td>UniversityEmailNormalized</td>
+<td>Main lookup key used by flow</td>
+<td>Lowercase trimmed value; should be unique</td>
+</tr>
+<tr>
+<td>UniversityUsername</td>
+<td>Student username</td>
+<td>Useful for derived tags, staff search, and cross-checking</td>
+</tr>
+<tr>
+<td>UniversityUsernameNormalized</td>
+<td>Secondary helper field</td>
+<td>Lowercase trimmed value</td>
+</tr>
+<tr>
+<td>StudentName</td>
+<td>Display name for staff email</td>
+<td>Prefer official student record value</td>
+</tr>
+<tr>
+<td>StudentID</td>
+<td>Student identifier</td>
+<td>Useful for Banner lookup and staff handling</td>
+</tr>
+<tr>
+<td>Programme</td>
+<td>Programme title</td>
+<td>Used to enrich or cross-check form answer</td>
+</tr>
+<tr>
+<td>StageOfStudy</td>
+<td>Undergraduate or Taught postgraduate</td>
+<td>Used for context</td>
+</tr>
+<tr>
+<td>YearOfStudy</td>
+<td>Year 1 to Year 4, or blank for PGT where appropriate</td>
+<td>Used for context</td>
+</tr>
+<tr>
+<td>AcademicAdvisor</td>
+<td>Advisor or tutor name</td>
+<td>Advisory context for staff</td>
+</tr>
+<tr>
+<td>BannerLink</td>
+<td>Direct link to student record if available</td>
+<td>Keep as a view link only</td>
+</tr>
+<tr>
+<td>BannerCode</td>
+<td>Banner identifier or code</td>
+<td>Alternative when direct links are awkward</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recommended-optional-admin-columns">Recommended optional admin
+columns</h3>
+<ul>
+<li>RecordStatus</li>
+<li>LastVerifiedDate</li>
+</ul>
+<p>These are helpful but not required for the prototype.</p>
+<h3 id="design-note">Design note</h3>
+<p>Excel is only the first lookup layer. The flow should be built so
+that the lookup block can later be replaced by:</p>
+<ul>
+<li>Dataverse</li>
+<li>SQL</li>
+<li>institutional API</li>
+<li>another student-record source</li>
+</ul>
+<p>The rest of the flow should stay unchanged if the same output fields
+are preserved.</p>
+<p>Operational note:</p>
+<ul>
+<li>For this first department build, one active student table is simpler
+and safer than separate year-based tables.</li>
+<li>Splitting the table by year or stage makes maintenance harder and
+adds avoidable lookup logic.</li>
+<li>If the lookup later grows beyond a simple department roster or needs
+frequent automated refresh, replace the lookup block rather than adding
+multiple Excel files.</li>
+<li>Use the spreadsheet to support the flow, not as the normal
+staff-facing screen.</li>
+</ul>
+<h2 id="draft-staff-email-format">7. draft staff email format</h2>
+<h3 id="subject">Subject</h3>
+<p><code>[Enquiry][Module enquiry][UG][Year 2][Matched] DEPT-2026-000123 - hfnt93</code></p>
+<h3 id="body-structure">Body structure</h3>
+<p>Reference number: Recorded responder email: Derived username: Student
+name: Student email: Student ID: Stage of study: Year of study:
+Programme of study: Enquiry type: Other enquiry type: Academic advisor:
+Banner link / code: Lookup status: Suggested owner: Student message:</p>
+<p>This should remain short, plain, and easy to scan on desktop or
+mobile Outlook.</p>
+<h2 id="draft-student-acknowledgement-email">8. draft student
+acknowledgement email</h2>
+<h3 id="subject-1">Subject</h3>
+<p><code>Your enquiry has been received - DEPT-2026-000123</code></p>
+<h3 id="body">Body</h3>
+<p>Dear student,</p>
+<p>Thank you for your enquiry. Your message has been received and has
+been given the reference number <code>DEPT-2026-000123</code>.</p>
+<p>Please keep this reference number in case you need to follow up.</p>
+<p>Best wishes,<br />
+Department team</p>
+<p>If the department has a separate urgent or formal process for some
+enquiry types, add one short line to point the student to that
+route.</p>
+<h2 id="safest-first-prototype">9. safest first prototype</h2>
+<p>The safest first prototype is:</p>
+<ul>
+<li>one Microsoft Form</li>
+<li>one Excel lookup workbook</li>
+<li>one Power Automate cloud flow</li>
+<li>one pilot recipient inbox</li>
+<li>one acknowledgement email</li>
+<li>no automatic reassignment</li>
+<li>no write-back to Excel</li>
+<li>no SharePoint list as the workflow engine</li>
+</ul>
+<p>This version is quick to test and easy to replace later.</p>
+<h2 id="practical-notes-risks-and-assumptions">10. practical notes,
+risks, and assumptions</h2>
+<h3 id="main-assumptions">Main assumptions</h3>
+<ul>
+<li>The form can reliably record responder identity when it is
+restricted to signed-in university users.</li>
+<li>The department can maintain a Banner export or other trusted lookup
+extract with stable student facts.</li>
+<li>Banner access is handled by staff permissions outside the flow.</li>
+</ul>
+<h3 id="main-risks">Main risks</h3>
+<ul>
+<li>Excel is acceptable for lookup in version 1, but it is not a
+high-scale transactional store.</li>
+<li>Email aliases or stale lookup data may cause unmatched or incorrect
+enrichment.</li>
+<li>If lookup fails, the staff email may contain less study-context
+detail because the form is intentionally short.</li>
+<li>Sensitive information may be typed into free-text messages.</li>
+<li>A response-ID-based reference number is simple but only sequential
+within the form.</li>
+<li>If the form is copied or rebuilt, the reference sequence should be
+treated as a new series.</li>
+</ul>
+<h3 id="practical-controls">Practical controls</h3>
+<ul>
+<li>Normalize the recorded responder email before lookup.</li>
+<li>Keep the workbook small and stable.</li>
+<li>Avoid editing the workbook while large tests are running.</li>
+<li>Make the lookup optional, not blocking.</li>
+<li>Keep the staff email structured and consistent.</li>
+<li>Use Outlook categories or mailbox rules later, not hard flow
+reassignment first.</li>
+<li>Add a warning in the form asking students not to include unnecessary
+sensitive personal or medical detail.</li>
+</ul>
+<h2 id="practical-improvements-for-later">11. practical improvements for
+later</h2>
+<ul>
+<li>Move from a pilot inbox to a shared mailbox once the wording and
+field set are stable.</li>
+<li>Replace Excel with Dataverse, SQL, or a student-record source
+without changing the downstream email format.</li>
+<li>Add a tiny counter service only if strict enterprise-wide sequencing
+becomes necessary.</li>
+<li>Add mailbox reporting on volume by enquiry type.</li>
+<li>Add a controlled list of suggested owners maintained outside the
+flow.</li>
+<li>Add a follow-up or closure process only after the intake workflow is
+working reliably.</li>
+</ul>
+<h2 id="microsoft-product-notes-checked-on-2026-03-18">12. Microsoft
+product notes checked on 2026-03-18</h2>
+<ul>
+<li>Microsoft Forms supports branching to later questions and sections:
+<a
+href="https://support.microsoft.com/en-us/office/use-branching-logic-in-microsoft-forms-16634fda-eddb-44da-856d-6a8213f0d8bb"
+class="uri">https://support.microsoft.com/en-us/office/use-branching-logic-in-microsoft-forms-16634fda-eddb-44da-856d-6a8213f0d8bb</a></li>
+<li>Microsoft Forms can restrict responses to people in the organization
+and record respondent name and email: <a
+href="https://support.microsoft.com/en-au/topic/choose-who-can-fill-out-a-form-or-quiz-c90c641e-6f88-45c5-9cb9-aca2b4083949"
+class="uri">https://support.microsoft.com/en-au/topic/choose-who-can-fill-out-a-form-or-quiz-c90c641e-6f88-45c5-9cb9-aca2b4083949</a></li>
+<li>Power Automate’s Forms connector provides the
+<code>When a new response is submitted</code> trigger and
+<code>Get response details</code>: <a
+href="https://learn.microsoft.com/en-us/power-automate/forms/overview"
+class="uri">https://learn.microsoft.com/en-us/power-automate/forms/overview</a></li>
+<li>Excel Online connector supports <code>Get a row</code> and documents
+file-locking and freshness limits to keep in mind for a lookup workbook:
+<a href="https://learn.microsoft.com/en-us/connectors/excelonline/"
+class="uri">https://learn.microsoft.com/en-us/connectors/excelonline/</a></li>
+<li>Microsoft recommends moving to shared senders or shared mailboxes as
+automations become more formalized: <a
+href="https://learn.microsoft.com/en-us/power-automate/guidance/planning/formalizing-messages-alerts"
+class="uri">https://learn.microsoft.com/en-us/power-automate/guidance/planning/formalizing-messages-alerts</a></li>
+</ul>
+</body>
+</html>

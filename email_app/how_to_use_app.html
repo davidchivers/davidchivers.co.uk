@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Email App Instructions - Use email app</title>
+  <link rel="stylesheet" href="instructions.css" />
+</head>
+<body>
+  <main>
+    <a class="toplink" href="workflow.html">Back to Email App Instructions</a>
+    <h1>Use email app</h1>
+    <p>This is the operating view of the app for staff and administrators.</p>
+
+    <section class="step">
+      <h2>Step 1. Student submits the form</h2>
+      <p>The student opens the Microsoft Form, signs in with their university account, completes the enquiry questions, and submits the message. The form records the responder identity automatically, so the student does not need to type programme, year, username, or email.</p>
+      <div class="links">
+        <a href="templates/microsoft_form_questions.html">Form question guide</a>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Step 2. The app creates a reference number</h2>
+      <p>Power Automate creates a readable reference number such as <code>DEPT-2026-000123</code>. This should be used in follow-up communication.</p>
+      <div class="links">
+        <a href="flows/power_automate_expressions.html">Reference expression</a>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Step 3. The app tries to enrich the enquiry</h2>
+      <p>The flow uses the recorded responder email to check the Excel lookup table. That workbook should preferably be populated from Banner export or another trusted student-record source. If a match is found, the staff email includes student details such as student ID, programme, advisor, and Banner context. The app can also derive the CIS username from the email prefix if staff want that in the email.</p>
+      <div class="links">
+        <a href="templates/student_lookup_schema.csv">Lookup schema</a>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Step 4. Staff receive the enquiry by email</h2>
+      <p>The staff inbox or shared mailbox receives one structured email for each enquiry. The subject line contains tags such as enquiry type, stage, year, and lookup status.</p>
+      <div class="links">
+        <a href="templates/staff_email_template.txt">Staff email template</a>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Step 5. Student receives an acknowledgement</h2>
+      <p>The student receives a short acknowledgement email confirming receipt and showing the reference number.</p>
+      <div class="links">
+        <a href="templates/student_acknowledgement_email.txt">Student acknowledgement email</a>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Step 6. Staff triage the enquiry in the mailbox</h2>
+      <p>Version 1 stays email-first. Staff triage from the inbox. The app may suggest an owner, but it should not hard-route the enquiry automatically.</p>
+    </section>
+
+    <section class="step">
+      <h2>Step 7. If lookup fails, staff still work the enquiry</h2>
+      <p>If no lookup match is found, the staff email should still be sent. Staff can use the recorded responder email and check Banner or the student record manually. The spreadsheet supports the flow, but it should not become the main staff working interface.</p>
+    </section>
+
+    <section class="step">
+      <h2>Step 8. Know the limits of version 1</h2>
+      <p>This is not a case-management platform. It is a structured email intake and enrichment workflow. Keep it simple until the department has tested it properly.</p>
+      <div class="links">
+        <a href="student_enquiry_workflow_spec.html">Full specification</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

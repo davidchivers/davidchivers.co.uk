@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Drafter</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  color: #1a1a1a;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #1a365d 0%, #2b4c7e 100%);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.app-title {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.search-box {
+  flex: 1;
+  max-width: 380px;
+  padding: 8px 14px 8px 36px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+.search-box::placeholder { color: rgba(255,255,255,0.6); }
+.search-box:focus { outline: none; background: rgba(255,255,255,0.25); }
+
+.search-wrap {
+  position: relative;
+  flex: 1;
+  max-width: 380px;
+}
+.search-wrap::before {
+  content: '\1F50D';
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.header-btn {
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.header-btn:hover { background: rgba(255,255,255,0.25); }
+.header-btn.active { background: #fff; color: #1a365d; border-color: #fff; }
+
+.deleted-link {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.deleted-link:hover { color: #fff; }
+
+/* ── Toast ── */
+.toast {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  padding: 12px 20px;
+  background: #1a365d;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  z-index: 200;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.toast.show { opacity: 1; }
+
+/* ── Main layout ── */
+.main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  width: 300px;
+  min-width: 300px;
+  background: #fff;
+  border-right: 1px solid #e2e8f0;
+  overflow-y: auto;
+  padding: 12px 0;
+  flex-shrink: 0;
+}
+
+.sidebar-item {
+  padding: 7px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+  color: #4a5568;
+  border-left: 3px solid transparent;
+}
+.sidebar-item:hover { background: #f7fafc; }
+.sidebar-item.active { background: #ebf4ff; color: #1a365d; font-weight: 600; border-left-color: #2b4c7e; }
+
+.sidebar-all {
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 6px;
+  color: #1a365d;
+  border-left: 3px solid transparent;
+}
+.sidebar-all:hover { background: #f7fafc; }
+.sidebar-all.active { background: #ebf4ff; border-left-color: #2b4c7e; }
+
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cat-header .arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  font-size: 9px;
+  color: #667;
+  flex-shrink: 0;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+.cat-header .arrow:not(.no-toggle):hover { background: #e2e8f0; }
+.cat-header .arrow.no-toggle { color: #cbd5e0; font-size: 6px; }
+.cat-header .label { flex: 1; }
+.cat-header .count {
+  font-size: 11px;
+  color: #a0aec0;
+  font-weight: normal;
+  background: #f0f2f5;
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+
+.subcat-list { display: none; }
+.subcat-list.expanded { display: block; }
+
+.subcat-item {
+  padding: 4px 8px 4px 30px;
+  font-size: 12px;
+  color: #718096;
+  cursor: pointer;
+  user-select: none;
+  border-left: 3px solid transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.subcat-item::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #cbd5e0;
+  transform: translateY(-50%);
+}
+.subcat-item:hover { background: #f7fafc; }
+.subcat-item:hover::before { background: #a0aec0; }
+.subcat-item.active { background: #ebf4ff; font-weight: 600; color: #1a365d; border-left-color: #2b4c7e; }
+.subcat-item.active::before { background: #2b4c7e; }
+.leaf-title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.leaf-copy {
+  flex-shrink: 0;
+  padding: 1px 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 3px;
+  color: #2b4c7e;
+  background: #edf2f7;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.leaf-copy:hover { background: #2b4c7e; color: #fff; }
+.leaf-copy.copied { background: #276749; color: #fff; }
+
+/* ── Cards panel ── */
+.cards-panel {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+}
+
+.add-btn-row { margin-bottom: 16px; }
+
+.add-btn {
+  padding: 8px 20px;
+  background: #2b4c7e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.add-btn:hover { background: #1a365d; }
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  transition: box-shadow 0.15s, background 0.5s;
+}
+.card.highlight { background: #fffff0; box-shadow: 0 0 0 2px #ecc94b; }
+.card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+
+.card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a365d;
+}
+
+.card-tag {
+  font-size: 11px;
+  color: #a0aec0;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #4a5568;
+  white-space: pre-wrap;
+}
+.card-text.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-text a {
+  color: #2b4c7e;
+  text-decoration: underline;
+}
+.card-text a:hover { color: #1a365d; }
+
+.card-toggle {
+  font-size: 12px;
+  color: #2b4c7e;
+  cursor: pointer;
+  margin-top: 6px;
+  user-select: none;
+  display: inline-block;
+}
+.card-toggle:hover { text-decoration: underline; }
+
+.copy-btn {
+  padding: 4px 12px;
+  background: #2b4c7e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-family: inherit;
+}
+.copy-btn:hover { background: #1a365d; }
+.copy-btn.copied { background: #276749; }
+
+.edit-btn, .delete-btn, .restore-btn {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+}
+.edit-btn { background: #edf2f7; color: #4a5568; }
+.edit-btn:hover { background: #e2e8f0; }
+.delete-btn { background: #fff; color: #c53030; border: 1px solid #feb2b2; }
+.delete-btn:hover { background: #fff5f5; }
+.restore-btn { background: #276749; color: #fff; }
+.restore-btn:hover { background: #22543d; }
+
+.no-results {
+  text-align: center;
+  color: #a0aec0;
+  padding: 60px 20px;
+  font-size: 14px;
+}
+
+/* ── Modal ── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 150;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  backdrop-filter: blur(2px);
+}
+.modal-overlay.open { display: flex; }
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  width: 520px;
+  max-width: 95vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.modal h2 {
+  font-size: 17px;
+  color: #1a365d;
+  margin-bottom: 20px;
+}
+
+.modal label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 4px;
+  margin-top: 14px;
+}
+.modal label:first-of-type { margin-top: 0; }
+
+.modal input, .modal textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+}
+.modal input:focus, .modal textarea:focus { outline: none; border-color: #2b4c7e; box-shadow: 0 0 0 3px rgba(43,76,126,0.1); }
+.modal textarea { resize: vertical; min-height: 140px; }
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 24px;
+}
+.modal-actions button {
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  border: 1px solid #e2e8f0;
+}
+.img-upload-area {
+  border: 2px dashed #cbd5e0;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  position: relative;
+}
+.img-upload-area:hover, .img-upload-area.dragover { border-color: #2b4c7e; background: #f7fafc; }
+.img-upload-placeholder { color: #a0aec0; font-size: 13px; padding: 12px 0; }
+.img-remove-btn {
+  margin-top: 8px;
+  background: #fff; border: 1px solid #e2e8f0; color: #e53e3e; font-size: 12px;
+  padding: 4px 12px; border-radius: 4px; cursor: pointer;
+}
+.img-remove-btn:hover { background: #fff5f5; }
+.card-img { max-width: 100%; border-radius: 4px; margin-top: 8px; }
+.modal-save { background: #2b4c7e; color: #fff; border-color: #2b4c7e; }
+.modal-save:hover { background: #1a365d; }
+.modal-cancel { background: #fff; color: #4a5568; }
+.modal-cancel:hover { background: #f7fafc; }
+
+/* ── Edit-mode toolbar ── */
+.edit-toolbar {
+  display: none;
+  padding: 8px 24px;
+  background: #fffbeb;
+  border-bottom: 1px solid #fcd34d;
+  font-size: 12px;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  color: #92400e;
+}
+.edit-toolbar.show { display: flex; }
+.edit-toolbar button {
+  padding: 5px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  background: #fff;
+  font-family: inherit;
+  color: #4a5568;
+}
+.edit-toolbar button:hover { background: #f7fafc; }
+.edit-toolbar .reset-btn { color: #c53030; border-color: #feb2b2; }
+.edit-toolbar .reset-btn:hover { background: #fff5f5; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="app-title">Email Drafter</div>
+  <div class="search-wrap">
+    <input type="text" class="search-box" id="searchBox" placeholder="Search responses...">
+  </div>
+  <div class="header-right">
+    <span class="deleted-link" id="deletedLink" style="display:none"></span>
+    <button class="header-btn" id="refreshBtn">Reload latest</button>
+    <button class="header-btn" id="editToggle">Edit mode</button>
+  </div>
+</div>
+
+<div class="edit-toolbar" id="editToolbar">
+  <span>You are editing responses &mdash;</span>
+  <button id="saveWebsiteBtn">Save to website</button>
+  <button id="exportBtn">Download backup</button>
+  <button id="importBtn">Load from backup</button>
+  <button class="reset-btn" id="resetBtn">Restore original responses</button>
+  <input type="file" id="importFile" accept=".json" style="display:none">
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="main">
+  <div class="sidebar" id="sidebar"></div>
+  <div class="cards-panel" id="cardsPanel"></div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <h2 id="modalTitle">Add response</h2>
+    <label>Category</label>
+    <input type="text" id="fCategory" list="catList" placeholder="e.g. Extensions">
+    <datalist id="catList"></datalist>
+    <label>Subcategory</label>
+    <input type="text" id="fSubcategory" list="subcatList" placeholder="e.g. Standard extension">
+    <datalist id="subcatList"></datalist>
+    <label>Title</label>
+    <input type="text" id="fTitle" placeholder="Short descriptive title">
+    <label>Reply text</label>
+    <textarea id="fReplyText" placeholder="Enter the reply text..."></textarea>
+    <label>Screenshot (optional)</label>
+    <div class="img-upload-area" id="imgUploadArea">
+      <div class="img-upload-placeholder" id="imgPlaceholder">Paste, drag or click to add a screenshot</div>
+      <img id="imgPreview" style="display:none; max-width:100%; border-radius:4px;">
+      <input type="file" id="imgFileInput" accept="image/*" style="display:none;">
+      <button type="button" class="img-remove-btn" id="imgRemoveBtn" style="display:none;">Remove</button>
+    </div>
+    <label>Keywords (comma-separated)</label>
+    <input type="text" id="fKeywords" placeholder="extension, deadline, granted">
+    <div class="modal-actions">
+      <button class="modal-cancel" id="modalCancel">Cancel</button>
+      <button class="modal-save" id="modalSave">Save</button>
+    </div>
+  </div>
+</div>
+
+<script src="save-config.js"></script>
+<script>
+// ── Default responses ──
+const DEFAULT_RESPONSES = [
+  {"id":"d01","category":"Module enquiries","subcategory":"Module selection","title":"Module selection guidance","replyText":"Thank you for your enquiry regarding module selection.\n\nPlease refer to your programme handbook for the full list of available modules for your year of study. If you have specific questions about module content, please contact the relevant module leader directly.\n\nTo make changes to your module selection, please complete the Module Change Request form available on the student portal and submit it before the published deadline.","keywords":"module, selection, choice, options, elective","sortOrder":1},
+  {"id":"d02","category":"Module enquiries","subcategory":"Module change","title":"Module change \u2014 after deadline","replyText":"Thank you for your request to change modules.\n\nUnfortunately, the deadline for module changes has now passed. Late changes can only be considered in exceptional circumstances and require approval from your Programme Director.\n\nIf you believe you have exceptional circumstances, please submit a written request to your Programme Director explaining your reasons, and we will advise you of the outcome.","keywords":"module, change, swap, late, deadline","sortOrder":2},
+  {"id":"d03","category":"Module enquiries","subcategory":"Module information","title":"Module reading list request","replyText":"Thank you for your enquiry about reading lists.\n\nReading lists for all modules are available on the university\u2019s online reading list system, accessible via the library website. Your module leader may also share additional recommended readings on the VLE.\n\nIf you are unable to locate the reading list for a specific module, please contact the module leader directly.","keywords":"reading list, books, materials, resources","sortOrder":3},
+  {"id":"d04","category":"Academic advisor","subcategory":"Meeting request","title":"Academic advisor meeting \u2014 how to book","replyText":"Thank you for getting in touch.\n\nTo book a meeting with your academic advisor, please use the online booking system available on the student portal under \u2018Academic Support\u2019. Your advisor\u2019s available slots are updated weekly.\n\nIf no suitable slots are available, please email your advisor directly to arrange an alternative time.","keywords":"advisor, meeting, book, appointment, personal tutor","sortOrder":1},
+  {"id":"d05","category":"Academic advisor","subcategory":"Change advisor","title":"Request to change academic advisor","replyText":"Thank you for your request to change your academic advisor.\n\nWe understand that the advisor relationship is important. Please submit your request in writing to the Programme Director, briefly outlining your reasons. All requests are treated confidentially.\n\nWe will aim to process your request within 10 working days.","keywords":"advisor, change, swap, personal tutor, reassign","sortOrder":2},
+  {"id":"d06","category":"Assessment queries","subcategory":"General","title":"Assessment submission confirmation","replyText":"Thank you for your enquiry about your assessment submission.\n\nYou should have received an automated confirmation email upon successful submission via the VLE. If you did not receive this, please check your spam folder.\n\nIf you are still concerned, please provide the module code and assessment title and we will check with the module team.","keywords":"assessment, submission, confirm, receipt, upload","sortOrder":1},
+  {"id":"d07","category":"Assessment queries","subcategory":"Deferral","title":"Assessment deferral \u2014 approved","replyText":"I am writing to confirm that your request to defer your assessment has been approved.\n\nYour new submission deadline is noted on your student record. Please check the student portal for the updated date. All other assessment requirements remain unchanged.\n\nIf you have any further questions, please do not hesitate to get in touch.","keywords":"deferral, defer, postpone, approved, assessment","sortOrder":2},
+  {"id":"d08","category":"Assessment queries","subcategory":"Resit","title":"Resit assessment \u2014 information","replyText":"Thank you for your enquiry about resit assessments.\n\nResit dates and details are published on the student portal under \u2018Assessment\u2019. Please ensure you are registered for any resit assessments by the published deadline. Resit marks are normally capped at the pass mark unless you have approved mitigating circumstances.\n\nPlease refer to the Assessment Regulations for full details.","keywords":"resit, retake, failed, reassessment, cap","sortOrder":3},
+  {"id":"d09","category":"Assessment queries","subcategory":"Feedback","title":"Assessment feedback \u2014 when available","replyText":"Thank you for your enquiry about assessment feedback.\n\nFeedback is normally returned within 20 working days of the submission deadline. You will be notified via the VLE when your feedback is available.\n\nIf this period has passed and you have not received feedback, please contact the module leader directly.","keywords":"feedback, marks, grade, results, turnaround","sortOrder":4},
+  {"id":"d10","category":"Extensions","subcategory":"Granted","title":"Extension granted \u2014 5 working days","replyText":"I am writing to confirm that your extension request has been approved.\n\nYou have been granted an extension of 5 working days. Your new submission deadline is [INSERT DATE]. Please ensure you submit your work by this date via the VLE.\n\nPlease note that no further extensions can be granted for this assessment without a formal mitigating circumstances application.","keywords":"extension, deadline, granted, approved, extra time","sortOrder":1},
+  {"id":"d11","category":"Extensions","subcategory":"Declined","title":"Extension request \u2014 declined","replyText":"Thank you for your extension request.\n\nUnfortunately, we are unable to approve your request as the grounds provided do not meet the criteria for an extension. The original deadline remains in place.\n\nIf you are experiencing ongoing difficulties, you may wish to consider submitting a mitigating circumstances application. Details are available on the student portal.","keywords":"extension, declined, rejected, denied, deadline","sortOrder":2},
+  {"id":"d12","category":"Mitigating circumstances","subcategory":"How to apply","title":"Mitigating circumstances \u2014 application guidance","replyText":"Thank you for your enquiry about mitigating circumstances.\n\nTo submit a claim, please complete the Mitigating Circumstances Form available on the student portal. You will need to provide:\n- A description of your circumstances\n- The assessments affected\n- Supporting evidence (e.g., medical certificate, bereavement notice)\n\nClaims should normally be submitted within 5 working days of the affected assessment deadline.","keywords":"mitigating, circumstances, extenuating, claim, evidence","sortOrder":1},
+  {"id":"d13","category":"Mitigating circumstances","subcategory":"Outcomes","title":"Mitigating circumstances \u2014 approved","replyText":"I am writing to inform you that your mitigating circumstances claim has been considered and approved.\n\nThe panel has agreed the following outcome: [INSERT OUTCOME \u2014 e.g., deferral to next assessment period / uncapped resit / extension].\n\nPlease check the student portal for any updated deadlines. If you have questions about the outcome, please contact the Mitigating Circumstances team.","keywords":"mitigating, approved, outcome, panel, decision","sortOrder":2},
+  {"id":"d14","category":"Mitigating circumstances","subcategory":"Outcomes","title":"Mitigating circumstances \u2014 not approved","replyText":"I am writing to inform you that your mitigating circumstances claim has been considered but was not approved on this occasion.\n\nThe panel determined that the evidence provided was insufficient to support the claim. You have the right to appeal this decision within 10 working days. Details of the appeals process are available on the student portal.","keywords":"mitigating, rejected, declined, appeal, insufficient","sortOrder":3},
+  {"id":"d15","category":"Attendance","subcategory":"General","title":"Absence recorded \u2014 no action needed","replyText":"Thank you for notifying us of your absence.\n\nYour absence has been recorded. As this is within the permitted threshold, no further action is required at this time. Please ensure you catch up on any missed material via the VLE.\n\nIf your absence is likely to be prolonged, please contact us again so we can provide appropriate support.","keywords":"absence, absent, missed, attendance, notify","sortOrder":1},
+  {"id":"d16","category":"Attendance","subcategory":"Concerns","title":"Attendance concern \u2014 below threshold","replyText":"We are writing to let you know that your attendance has fallen below the expected threshold of 80%.\n\nRegular attendance is important for your academic progress and may affect your eligibility for certain support services. We would like to arrange a meeting to discuss any difficulties you may be experiencing and how we can help.\n\nPlease contact your academic advisor or reply to this email to arrange a convenient time.","keywords":"attendance, low, threshold, warning, concern, engagement","sortOrder":2},
+  {"id":"d17","category":"Timetable","subcategory":"General","title":"Timetable \u2014 where to find","replyText":"Thank you for your timetable enquiry.\n\nYour personalised timetable is available on the student portal under \u2018My Timetable\u2019. Timetables are updated regularly, so please check before each week.\n\nIf you notice any clashes or errors, please report them to the timetabling team via the online form on the student portal.","keywords":"timetable, schedule, classes, times, room","sortOrder":1},
+  {"id":"d18","category":"Timetable","subcategory":"Room changes","title":"Room change notification","replyText":"Please note that the following session has been moved to a different room:\n\n- Module: [MODULE NAME]\n- Date: [DATE]\n- New room: [ROOM]\n\nPlease check your timetable on the student portal for the most up-to-date information. We apologise for any inconvenience.","keywords":"room, change, moved, relocation, venue","sortOrder":2},
+  {"id":"d19","category":"IT / systems access","subcategory":"Password reset","title":"Password reset instructions","replyText":"Thank you for contacting us about your login issue.\n\nYou can reset your password using the self-service portal at [LINK]. You will need your student ID number and registered email address.\n\nIf you continue to experience difficulties after resetting your password, please contact the IT Service Desk directly on [PHONE] or visit them in [LOCATION].","keywords":"password, reset, login, locked, access, account","sortOrder":1},
+  {"id":"d20","category":"IT / systems access","subcategory":"VLE access","title":"VLE access \u2014 module not showing","replyText":"Thank you for reporting that a module is not appearing on your VLE dashboard.\n\nThis is usually due to a delay in enrolment synchronisation. Please allow 24-48 hours for the system to update. If the module still does not appear after this time, please contact the IT Service Desk with your student ID and the module code.","keywords":"VLE, module, missing, access, enrolment, Blackboard, Moodle","sortOrder":2},
+  {"id":"d21","category":"IT / systems access","subcategory":"Email setup","title":"Student email \u2014 setup guide","replyText":"Thank you for your enquiry about setting up your student email.\n\nYour university email can be accessed via Outlook on the web at [LINK]. To set it up on your phone or desktop, use the following settings:\n- Server: outlook.office365.com\n- Username: your full university email address\n- Password: your university password\n\nStep-by-step guides are available on the IT pages of the student portal.","keywords":"email, setup, Outlook, configure, phone, mobile","sortOrder":3},
+  {"id":"d22","category":"Fees / finance","subcategory":"General","title":"Tuition fee balance \u2014 how to check","replyText":"Thank you for your enquiry about your tuition fee balance.\n\nYou can view your current fee balance and any payments received on the student portal under \u2018Finance\u2019. If you have a student loan, payments from the Student Loans Company are typically received in three instalments across the academic year.\n\nFor detailed queries about your account, please contact the Finance Office at [EMAIL].","keywords":"fees, tuition, balance, payment, finance, SLC","sortOrder":1},
+  {"id":"d23","category":"Fees / finance","subcategory":"Payment plans","title":"Fee instalment plan \u2014 request","replyText":"Thank you for your enquiry about paying your fees by instalment.\n\nWe do offer instalment plans for self-funded students. To apply, please complete the Instalment Plan Request form available on the student portal under \u2018Finance\u2019. You will need to set up a direct debit as part of the arrangement.\n\nPlease note that applications must be submitted before the first payment deadline.","keywords":"instalment, payment plan, fees, direct debit, self-funded","sortOrder":2},
+  {"id":"d24","category":"Other","subcategory":"General","title":"General enquiry \u2014 acknowledgement","replyText":"Thank you for your enquiry.\n\nWe have received your message and will respond as soon as possible. Most enquiries are answered within 3-5 working days. If your matter is urgent, please call us on [PHONE] or visit the Student Hub in [LOCATION].","keywords":"general, enquiry, question, other, miscellaneous","sortOrder":1},
+  {"id":"d25","category":"Other","subcategory":"Referrals","title":"Referral to specialist service","replyText":"Thank you for getting in touch.\n\nBased on your enquiry, we think you would benefit from speaking with our [SERVICE NAME] team, who are best placed to assist you.\n\nYou can contact them at [EMAIL/PHONE] or book an appointment via the student portal. We have also forwarded your details to them so they are aware of your enquiry.","keywords":"referral, redirect, specialist, wellbeing, counselling, careers","sortOrder":2},
+  {"id":"faq01","category":"Results & marks","subcategory":"Accessing results","title":"How do I access my results","replyText":"Decisions of the Boards of Examiners about results are available to students from Banner Self Service. You should log into the Banner Self Service login page after the date and time listed on the <a href=\"https://durhamuniversity.sharepoint.com/teams/ExaminationsandAssessment/SitePages/Pass-Lists.aspx\" target=\"_blank\">Pass Lists (sharepoint.com)</a>.","keywords":"marks, banner, results","sortOrder":1},
+  {"id":"faq02","category":"Resits","subcategory":"General","title":"How will I know if I need to take resit examinations","replyText":"Students who are required to take assessments will be able to identify these when viewing results in Banner Self Service. If stated “Resit(s) Required” or “Approved concession to retake assessments as first attempt” then you will be required to take resit assessments. These will usually be sat in the August re-sit examination period.\n\nUndergraduate students’ modules must be passed at 40% to obtain credits, a module mark below this is considered a fail.  Students should check if/how many credits they are permitted to resit. You will be informed if you are required to resit modules, and which component/s, via your pass list, along with any concessions or deferrals noted.\n\nStudents will be issued resit coursework shortly after the release of marks.  Resit examinations take place for most students in August each year.  All students must make themselves available at this time.  If you are required to resit components at a second attempt for modules you failed, the overall module mark will be capped at the pass mark.\n\nI have failed my overall module but passed one of the components.  Will I need to sit all the components?\n\nWhen you log in to Banner Self-Service to view your results and progression outcome, it should tell you which components you need to re-sit. Normally the short answer to your question is no. The general rule is that you resit failed components of failed modules.\n\nIf you are required to resit any assessments, please note that modules are then capped at the overall module mark (not the component mark)","keywords":"retake, fail, resit","sortOrder":2},
+  {"id":"faq03","category":"Progression","subcategory":"Regulations","title":"Progression Regulations","replyText":"For detailed information please see: <a href=\"https://www.dur.ac.uk/resources/faculty.handbook/studentsurvivalguide/2015_Level_1-3_Progression.pdf\" target=\"_blank\">Progression flowchart</a>\n\nIn summary:\n\nLevel 1: A student must achieve a pass of at least 40% in each module taken at Level 1 (to a total of 120 credits) to be allowed to progress to Level 2.\n\nLevel 2: A student must achieve a pass of at least 40% in each module taken at Level 2 (to a total of 120 credits) to be allowed to progress to Level 3 in the programme of study for the Honours degree for which he/she is registered.\n\nLevel 3. To be awarded a Bachelor’s degree with honours, you must pass all 120 credits, getting a mark of 40 or more in each module which you take. At least 90 of these credits must be in Level 3 modules. Modules up to the value of 40 credits taken at Level 3, or modules up to the value of 20 credits at Level 3 and 20 credits at Level 2, may be passed by Compensation\n\nIf you do not meet the requirements to be awarded a Bachelor's degree with honours, you may be eligible for a Bachelor’s degree without honours (an ordinary degree). To be awarded an ordinary degree, you must pass at least 60 credits of Level 3 modules with a mark of 40 or above, and have passed at least 300 credits in total from study at Levels 1, 2 and 3. At Level 3 there is no opportunity to resit failed examinations and/or resubmit failed assignments.\n\nYou can also find more about this in the <a href=\"https://www.dur.ac.uk/resources/university.calendar/volumeii/2021.2022/coreregsug.pdf\" target=\"_blank\">Core Regulations for Undergraduate Programmes</a>.","keywords":"credits, level, progress","sortOrder":3},
+  {"id":"faq04","category":"Resits","subcategory":"General","title":"What are the resit rules for Level 1 students","replyText":"Important, first please, refer to the <a href=\"https://www.dur.ac.uk/resources/faculty.handbook/studentsurvivalguide/2015_Level_1-3_Progression.pdf\" target=\"_blank\">Progression Flowchart</a> for information relating to your own circumstances.\n\nIn summary, at Level 1, you will have the chance to resit failed examinations and/or resubmit failed assignments in modules to the value of 120 credits on one occasion only; normally in the August resit period. The mark for any module which is resat will be capped at 40.\n\nIf, after resitting/resubmitting, you have passed 120 credits with marks of at least 40, you may proceed to Level 2 on an honours degree.\n\nIf, after resitting/resubmitting, you have passed 100 credits with marks of at least 40, you may proceed to Level 2 carrying the failed module, as long as you have not failed a module which is a pre-requisite for Level 2 study (such modules are marked with a # symbol in the regulations), or which is a pre-requisite for a core module at Level 2 specifically (pre-requisites are listed within module descriptions).\n\nIf, after resitting/resubmitting, you have either passed fewer than 100 credits with marks of at least 40, or you have failed a module which is a pre-requisite for Level 2 study (such modules are marked with a # symbol in the regulations), you will be required to leave the University. You may be eligible for an exit qualification.\n\nPlease refer to the  <a href=\"https://www.dur.ac.uk/resources/university.calendar/volumeii/2021.2022/coreregsug.pdf\" target=\"_blank\">Core Regulations for Undergraduate Programmes</a> for further guidance","keywords":"retake, fail, resit","sortOrder":4},
+  {"id":"faq05","category":"Resits","subcategory":"General","title":"What are the resit rules for Level 2 students","replyText":"Important, first please, refer to the <a href=\"https://www.dur.ac.uk/resources/faculty.handbook/studentsurvivalguide/2015_Level_1-3_Progression.pdf\" target=\"_blank\">Progression Flowchart</a> for information relating to your own circumstances.\n\nIn summary, if a student gains an overall mark of less than 40% in any one or more modules to the value of not more than 60 credits, he/she will be required to resit the failed assessment element(s) of any failed assessment component(s) (e.g. where the examinations have been failed overall but the coursework passed, a student must resit the failed examination paper(s) and those only\n\nIf you are on a Bachelor’s degree programme and, after resitting/resubmitting, you pass 120 credits with marks of at least 40, you may proceed to Level 3 on an/a Bachelor’s honours degree.\n\nIf, after resitting/resubmitting, you have passed 100 credits with marks of at least 40, you may proceed to Level 3 on an ordinary degree, as long as you have not failed a module which is a pre-requisite for Level 3 study (such modules are marked with a # symbol in the regulations).\n\nIf, after resitting/resubmitting, you have either passed fewer than 100 credits with marks of at least 40, or as you have failed a module which is a pre-requisite for Level 3 study (such modules are marked with a # symbol in the regulations), you will be required to leave the University. You may be eligible for an exit qualification.\n\nYou can also read the <a href=\"https://www.dur.ac.uk/resources/university.calendar/volumeii/2021.2022/coreregsug.pdf\" target=\"_blank\">Core Regulations for Undergraduate Programmes</a> for detailed information.\n\nThere are no resit opportunities at Level 3. Please, refer to the <a href=\"https://www.dur.ac.uk/resources/faculty.handbook/studentsurvivalguide/2015_Level_1-3_Progression.pdf\" target=\"_blank\">Progression Flowchart</a> for more information.","keywords":"retake, fail, resit","sortOrder":5},
+  {"id":"faq06","category":"Progression","subcategory":"Regulations","title":"What are Exit qualifications","replyText":"Important, please refer to the <a href=\"https://www.dur.ac.uk/resources/faculty.handbook/studentsurvivalguide/2015_Level_1-3_Progression.pdf\" target=\"_blank\">Progression Flowchart</a> for more information on exit qualifications.\n\nIn summary, should you choose, or be required, to leave your degree before completion, or should you fail to gain the credits required for an honours or ordinary degree, you may be eligible for one of the following exit awards:\n\nCertificate of Higher Education: if you have passed 120 credits at Level 1 (including up to 20 credits passed by Compensation)\n\nDiploma of Higher Education: if you have passed 240 credits in total (including at least 90 Level 2 credits; and including up to 40 credits passed by Compensation)","keywords":"","sortOrder":6},
+  {"id":"faq07","category":"Resits","subcategory":"Level 3","title":"I am level 3 student and one or two of my module marks were below the pass mark.  Why I have not been given the opportunity to resit these","replyText":"There are no resit opportunities at Level 3. Please, refer to the <a href=\"https://www.dur.ac.uk/resources/faculty.handbook/studentsurvivalguide/2015_Level_1-3_Progression.pdf\" target=\"_blank\">Progression Flowchart</a> for more information.\n\nThere are no resits at Level 3 (or Level 4). The university regulations allow a certain amount of module failure to be “compensated”. So, even if one or two of your Level 3 module marks are below 40, if they are at least 30 then it is likely that they will have been compensated, and in this case the regulations still allow you to be awarded an Honours degree.","keywords":"retake, fail, resit","sortOrder":7},
+  {"id":"faq08","category":"Classification","subcategory":"Degree classification","title":"What is an ‘Ordinary’ degree","replyText":"All Business School degrees studied at undergraduate level are Honours degrees.  A Bachelor’s degree with Honours (BA/BSc) usually lasts 3 years and is gained by achieving 360 credits.  Therefore, you must pass all modules to be awarded an Honours degree (please note: a limited number of modules may also be passed by compensation within <a href=\"https://www.dur.ac.uk/about-us/governance/governance-documentation/programme-regulations/undergraduate-programmes/\" target=\"_blank\">Core Regulations for Undergraduate Programmes</a>\n\nStudents who have not achieved the required number of credits for an Honours degree may be eligible for the award of an Ordinary degree.  Students will register for the same number of modules per year and take the same curriculum. In some circumstances, students may return to the Honours route in subsequent years.","keywords":"","sortOrder":8},
+  {"id":"faq09","category":"Progression","subcategory":"Withdrawal","title":"I am required to withdraw but why can’t they I do a further resit","replyText":"Unfortunately, this means that you have not met this requirement and so must be withdrawn from the University. I realise that this is disappointing, but the regulations do not permit your request.\n\nThe decision of the Board of Examiners is final and as you have not been granted any further resits, you are required to withdraw from the University. Please refer to the  <a href=\"https://www.dur.ac.uk/resources/university.calendar/volumeii/2021.2022/coreregsug.pdf\" target=\"_blank\">Core Regulations for Undergraduate Programmes</a> for further guidance.","keywords":"withdraw, fail, resit, leave, retake","sortOrder":9},
+  {"id":"faq10","category":"Progression","subcategory":"Withdrawal","title":"I am required to withdraw but can I repeat the year instead","replyText":"Students are only permitted to repeat the year in very exceptional circumstances, typically where students have missed a term or more of study. Students who have completed the year and taken assessments are not permitted to repeat. The regulations do not permit your request. Please refer to the  <a href=\"https://www.dur.ac.uk/resources/university.calendar/volumeii/2021.2022/coreregsug.pdf\" target=\"_blank\">Core Regulations for Undergraduate Programmes</a> for further guidance.","keywords":"withdraw, fail, leave","sortOrder":10},
+  {"id":"faq11","category":"Progression","subcategory":"Withdrawal","title":"I have failed a module with # symbol, why am I required to withdraw","replyText":"In order to proceed to the next year, students need to pass all modules which are pre-requisites for studying core modules in the following years of their programme (such modules are marked with a # symbol in the regulations).  Students who have failed a #module are required to withdraw.","keywords":"withdraw, fail, leave","sortOrder":11},
+  {"id":"faq12","category":"Results & marks","subcategory":"Marks queries","title":"Can I have my exam remarked","replyText":"All summative work is marked in accordance with university guidelines which includes double marking and external moderation as an important means of assuring the quality of the assessment process. Marks are awarded in line with the grade descriptors and results/classifications are confirmed by the Board of Examiners. Summative assignments and examinations go through both internal University and external moderation, in line with standard University regulations with an External Examiner.\n\nDue to this rigorous process, there is no mechanism for students' work to be remarked or looked at again. We also cannot comment on individual scripts but can confirm that the examination passed internal and external inspection and was deemed an appropriate test of the module learning outcomes. The marking has similarly progressed through due process with the marks ratified at the recent examination board. We do not release model answers and/or marking schemes for examinations.\n\nThere is no provision for scripts to be reviewed and marks to be revised, however, you can of course appeal if you consider you have legitimate grounds. You can find information on the appeals process here: <a href=\"https://www.dur.ac.uk/cla/appeals/\" target=\"_blank\">https://www.dur.ac.uk/cla/appeals/</a>.","keywords":"remark, review, mark","sortOrder":12},
+  {"id":"faq13","category":"Appeals","subcategory":"General","title":"The grounds for academic appeal are limited to the following","replyText":"(a) that you were adversely affected by illness or other relevant factors, of which you were previously unaware or which for a good cause you were unable to disclose to the Examiners or other decision-making body or Officer\n\nAND/OR\n\n(b) that you have evidence that parts of the relevant documented procedure were not applied correctly or your marks were not calculated correctly and this procedural defect was significant enough to have materially affected the decision, making it unsound\n\nAND/OR\n\n(c) that the Board of Examiners or other decision making body or Officer took a decision which was not reasonable in all the circumstances.","keywords":"complaint, appeal","sortOrder":13},
+  {"id":"faq14","category":"Appeals","subcategory":"General","title":"What is meant by academic judgement","replyText":"Matters of academic judgement cannot be appealed. The University defines “academic judgement” as the professional and scholarly knowledge and expertise which members of Durham University staff and the external examiners draw upon in reaching an academic decision. Academic judgement therefore includes, but is not restricted to, decisions about the severity of impact of mitigating circumstances on academic performance, decisions about the academic standard attained by students, marks and grades to be awarded for individual pieces of work or modules, and degrees and degree classifications to be awarded, or not.\n\nIf you feel that you have been affected by Serious Adverse Circumstances that you have not declared, please provide further details and clear evidence to explain why you could not bring this matter to the Board’s attention in the required timeframe.\n\nPlease refer to the <a href=\"https://www.dur.ac.uk/university.calendar/volumei/general_regulations/\" target=\"_blank\">University General Regulation VII – Academic Appeal</a>","keywords":"","sortOrder":14},
+  {"id":"faq15","category":"Appeals","subcategory":"General","title":"Can I make an Academic appeal against an exam board decision","replyText":"You can find information on the appeals process here: <a href=\"https://www.dur.ac.uk/cla/appeals/\" target=\"_blank\">https://www.dur.ac.uk/cla/appeals/</a>. Two things to note. Firstly, appeals must be submitted within 21 days. Secondly, note that there is no appeal against academic judgement.  The appeals process flowchart links to the general regulations of the University. Academic appeals are covered by General Regulation V11 - see <a href=\"https://www.dur.ac.uk/university.calendar/volumei/general_regulations/\" target=\"_blank\">https://www.dur.ac.uk/university.calendar/volumei/general_regulations/</a>.\n\nYou are strongly recommended to take advice from your College Student Support Officer.","keywords":"complaint, appeal","sortOrder":15},
+  {"id":"faq16","category":"Results & marks","subcategory":"Rankings & GPA","title":"Overall ranking","replyText":"We do not publish the average marks across programmes or provide students with their individual student ranking within their cohort.","keywords":"","sortOrder":16},
+  {"id":"faq17","category":"Results & marks","subcategory":"Rankings & GPA","title":"Can you convert my Durham mark into a GPA","replyText":"No. The University does not operate a GPA ranking and does not have an agreed GPA scale. The University’s classification arrangements are designed to be consistent with the QAA Framework for Higher Education Qualifications (England, Wales and Northern Ireland). We can provide a letter to confirm that a GPA is not available.","keywords":"GPA, grade, convert","sortOrder":17},
+  {"id":"faq18","category":"Classification","subcategory":"Degree classification","title":"Will One Bad Mark Seriously Affect My Degree Classification","replyText":"It depends very much on the nature of the work. A poor final year Dissertation mark may have a substantial impact, since the Dissertation is a double module and counts as 20% of the total degree marks. However, one essay counting towards the assessment of a single module will have less of an impact.\n\nIf the poor mark has resulted from adverse personal circumstances over the examination period and these have been reported in the correct way via a Serious Adverse Circumstances online form, then the Board of Examiners will consider those according to University procedures. Information can also be found in the <a href=\"https://durhamuniversity.sharepoint.com/teams/BUS-Students/SitePages/Examinations-and-assessment.aspx\" target=\"_blank\">Student Information Hub</a>, including where to find full details of the University’s policy on serious adverse circumstances.\n\nIf the poor mark is for coursework, then the circumstances affecting this should have been reported at the time so that mitigation (e.g., a coursework extension) will already have been given. Where, for good reason, such circumstances were not reported at the time of occurrence they may be reported on the Serious Adverse Circumstances form, but it is expected that very rarely should this be necessary.","keywords":"degree, 2:2, 2:1, class, first","sortOrder":18},
+  {"id":"faq19","category":"Mitigating circumstances","subcategory":"General","title":"I submitted a Serious Adverse Circumstances Form, but it seems to have had no effect. Why","replyText":"You may wish to see the detailed guidance about SACs and the possible outcomes here: <a href=\"https://durhamuniversity.sharepoint.com/teams/ExaminationsandAssessment/SitePages/Serious-Adverse-Circumstances-Online-Process.aspx?xsdata=MDV8MDF8fDVkMGRkNGMxNThkYTQ5ZmNlZGQyMDhkYjRjOWUyMjBjfDcyNTBkODhiNGI2ODQ1MjliZTQ0ZDU5YTJkOGE2Zjk0fDB8MHw2MzgxODgwMTQyNjI4NzM1NTR8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxNVFk0TXpJd05EWXlOVEkxTVRzeE5qZ3pNakEwTmpJMU1qVXhPekU1T20xbFpYUnBibWRmVGxkSmQxbHRUWGROUjBsMFRWUlpNVnBwTURCT1YxWnJURmRLYVUxVVRYUmFWR1J0VDBkV2EwMHlXbWhPUjFGNlFIUm9jbVZoWkM1Mk1nPT18ZThlOGZlNjBlMDk3NGJiMmVkZDIwOGRiNGM5ZTIyMGN8NTVlYWI5NTUxN2ZiNDllMDk4OGJmZmJjMmIwYWY4YmE%3D&sdata=V2VtZitZK3JuOVI2QW5wSlZieGFKU3R4WCtRZDkrZ0tHWnhLam1VcnE2az0%3D&ovuser=7250d88b-4b68-4529-be44-d59a2d8a6f94%2cdbl6nl%40durham.ac.uk&OR=Teams-HL&CT=1683215217545&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMzA0MDIwMjcwNSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D\" target=\"_blank\">Serious Adverse Circumstances Online Process (sharepoint.com)</a>.\n\nThe Scrutiny Sub-Committee considers all serious adverse circumstances evidence submitted by students and, for each submission, grade the impact of the serious adverse circumstances reported on the assessment of the student concerned. in accordance with the following impact scale:\n\nSubmitting a Serious Adverse Circumstances (SAC) form does not allow the Board of Examiners (BoE) to alter your marks nor is it guaranteed to change any outcomes. Guidance on submitting SAC forms, and an indication of the types of 'discretion' that the BoE can exercise, are given in the notes that accompany the SAC form. Information can also be found in the <a href=\"https://durhamuniversity.sharepoint.com/teams/BUS-Students/SitePages/Examinations-and-assessment.aspx\" target=\"_blank\">Student Information Hub</a>, including where to find full details of the University’s policy on serious adverse circumstances.\n\nThere is no process by which departments routinely write to students regarding their SAC submissions. Please be assured that the Board of Examiners carefully consider Serious Adverse Circumstances that students submit and in light of the reason/evidence provided, along with any previous mitigation a decision will be made as to the severity grading.\n\nFurther Information on what a SAC does and does not do.\n\nFinal Year Students (UG)\n\nIf you are a Final Year student and you have received a SAC grade, then this will be taken into account when the Board of Examiners is coming to a decision about your degree classification. Further information about the Board of Examiners’ use of discretion can be found in Section 6 of the L&T Handbook <a href=\"https://www.dur.ac.uk/learningandteaching.handbook/6/3/7/\" target=\"_blank\">here</a>.\n\nNon-Final Year Students\n\nIf you are NOT in your Final Year then SAC grades will be considered in relation to progression or degree classification in later years.\n\nIf you are in your Foundation Year or your First Year of study of an undergraduate degree, and you pass all of your exams, your SAC grade will be recorded by the Board of Examiners but no further action will be taken in relation to your programme of study. This is because Foundation Year/First Year marks do not count towards your degree classification.\n\nIf you are in your Foundation Year or your First Year of study of an undergraduate degree, and you fail one or more of your exams, your SAC grade will be acknowledged by the Board of Examiners and a decision will be made as to whether or not a further first attempt will be offered.\n\nIf you are in your Second Year of study of an undergraduate degree (or third of a four year course), and you pass all of your exams, your SAC grade will be acknowledged by the Board of Examiners this year but no action will be taken at this time. The SAC grade will be carried over and considered at the Board of Examiners of your Final Year when your degree is being classified.\n\nIf you are in your Second Year of study of an undergraduate degree (or third of a four year course), and you have failed an exam and you have received a SAC grade then the Board of Examiners will decide what appropriate action should be taken (if any). A Board could, for example, award a student a further first attempt rather than a re-sit opportunity. If your SAC Form relates to circumstances impacting on exams taken during the August examination period, then you need to be aware that the ‘next available opportunity’ is normally May/June of the following year. Students who are required to take exams (either as first attempts OR resits) in May/June of the following year will be required to take a ‘Year out of Study’.\n\nA SAC grade cannot raise your marks.","keywords":"circumstances, SAC, mitigating","sortOrder":19},
+  {"id":"faq20","category":"Results & marks","subcategory":"Marks queries","title":"What If My Mark Is Much Lower Than Expected","replyText":"Undergraduates understandably are often disappointed or upset when they feel that a mark is lower than they desired or expected. Frequently they may feel that they put a lot of effort into the work, and although such effort may sometimes be reflected in the quality of the work produced, this is unfortunately not always the case. We cannot quantify effort, and this is not directly reflected in the mark given.\n\nMarks are the outcome of markers' academic judgement, and your personal feelings are not a basis for challenging this. In other words, marks are not negotiable just because they are disappointing. We trust the academic judgement of our markers and the robustness of our marking procedures, and hence re-marking of work will not be undertaken except in cases where errors or procedural irregularity are found to have occurred.\n\nWe do, however, want to ensure that you understand the feedback that you are given on your work and can rationalise the mark given with the work in question. There are several things that you should consider (going as far down the list as is needed to gain satisfaction):\n\nLook very carefully at the feedback. Markers should give feedback that explains, in detail if appropriate, why a particular mark was awarded. Usually on reflection, students can see that a low mark does mean that they were seriously wrong in some way, e.g., by misreading a question or omitting an important dimension in their submission\n\nLook carefully at the assignment and the feedback in relation to the assessment criteria and assessment descriptors, as these can often help to explain the positioning of your work on the mark scale\n\nRequest a brief meeting with the module leader seeking any additional advice and feedback they can give you. They might also direct you to the tutor / marker in question, but you should go to them first\n\nIf there is evidence of some procedural irregularity or error, then the matter will be discussed with the Chair of the Board of Examiners and the markers and appropriate action taken","keywords":"","sortOrder":20},
+  {"id":"faq21","category":"Classification","subcategory":"Degree classification","title":"What are discretion decisions","replyText":"Where a student’s arithmetic mean (AMW mark) falls no more than 2% below a classification boundary, the board of examiners must consider whether to award the higher classification by the exercise of discretion. Board of Examiners may only consider exercising discretion to raise a classification for a student whose arithmetic mean falls outside of this 2% range where there are personal mitigating circumstances, or a combination of personal mitigating circumstances and academic factors, that warrant such consideration.\n\nThe Board of Examiners has the power to exercise discretion to take account of particular circumstances if it considers it right to do so in the proper discharge of its duties. Such circumstances shall include, but not be restricted to, personal mitigating circumstances. Boards of Examiners may also take into account academic factors such as the overall pattern of marks gained by a student and the relative significance of various modules, or additional placement years, for the learning outcomes of the programme. The views of an External Examiner must be particularly influential in the case of disagreement within the Board of Examiners on the mark to be awarded for a particular unit of assessment, or on the final level of award to be derived from the array of marks of a particular student.\n\nThere are a number of factors the exam board takes into account when considering whether to classify a degree in a higher classification by using its discretion, such as the performance in the dissertation, the proportion of credits in higher classifications, whether a student improved their performance over the time of their degree, whether a student suffered from serious adverse circumstances.\n\nIf your average was in the 2% discretion range the exam board considered explicitly and carefully whether your degree could be classified.","keywords":"","sortOrder":21},
+  {"id":"faq22","category":"Classification","subcategory":"Degree classification","title":"Undergraduate classification conventions","replyText":"First Class Honours shall be awarded to a student who achieves an arithmetic mean of 70% or greater;\n\nSecond Class Honours (First Division) shall be awarded to a student who achieves an arithmetic mean of at least 60% but less than 70%;\n\nSecond Class Honours (Second Division) shall be awarded to a student who achieves an arithmetic mean of at least 50% but less than 60%;\n\nThird Class Honours shall be awarded to a student who achieves an arithmetic mean of at least 40% but less than 50%.\n\nFor Bachelor’s degrees, only modules taken during Levels 2 and 3 are included in the arithmetic mean calculation. Modules studied in the second and third years are differentially weighted 2:3 (40%/60%).","keywords":"degree, 2:2, 2:1, class, first","sortOrder":22},
+  {"id":"faq23","category":"Classification","subcategory":"Degree classification","title":"How is my final degree classification calculated","replyText":"For detailed information on how degrees are classified please see the Student Information Hub: <a href=\"https://durhamuniversity.sharepoint.com/teams/BUS-Students/SitePages/Examinations-and-assessment.aspx\" target=\"_blank\">Examinations and Assessment (sharepoint.com)</a>\n\nThe University records module marks as integers, but AMW marks are recorded to two decimal places and are not rounded up or down. So, for example, if your final AMW mark works out to be 59.99 then this does not get rounded up to 60.","keywords":"degree, 2:2, 2:1, class, first","sortOrder":23},
+  {"id":"faq24","category":"Classification","subcategory":"Degree classification","title":"I have completed my final year and received my final results.  Does my official degree classification relate just to my final year’s mark or to my overall degree","replyText":"For final year students, the result which you can see when you log into Banner Self-Service is your overall final degree classification (i.e., not just your final year).","keywords":"results, degree, 2:2, 2:1, class, first, marks, banner","sortOrder":24},
+  {"id":"faq25","category":"Other","subcategory":"General","title":"Subject Access Request for exam feedback","replyText":"It is not University policy to supply individual feedback to students for examinations. Generic examination feedback will be made available to all students via the relevant Learn Ultra module site and is the responsibility of Module Leaders to publish. Students should refer to this for an understanding of expectations.\n\nExamination script comments written in Feedback Studio by markers are not intended to be utilised by students, rather this text is concerned with the marking process and written by the markers for quality assurance purposes. As such, it is not specifically directed at students on how they can improve their work. Students who fail a module are permitted a feedback session with the relevant Module Leader to discuss areas for improvement in the failed assessment(s).","keywords":"","sortOrder":25},
+  {"id":"faq26","category":"Assessment queries","subcategory":"Late submission","title":"Late Submissions of Exams","replyText":"As per regulations, exams submitted late are not accepted and are classed as a non-submission.","keywords":"","sortOrder":26},
+  {"id":"faq27","category":"Resits","subcategory":"General","title":"I have some resit exams in August. Will I get a feedback session with the Module leader","replyText":"Students who fail a module are entitled to receive feedback to help them prepare for their resit.  This feedback may be provided in group feedback sessions or in a one-to-one meeting with the student using a medium that will suit i.e. Skype/Teams. Also please remember that if you have to resit an exam this will be in the same format as the exam was in the main exam period.","keywords":"retake, fail, resit","sortOrder":27},
+  {"id":"faq28","category":"Resits","subcategory":"General","title":"What is the deadline for my resit summative assignment(s)","replyText":"Friday 2nd August 2024 12 pm.  You will receive instructions via e-mail at least 4 weeks prior to the deadline.","keywords":"retake, fail, resit","sortOrder":28},
+  {"id":"faq29","category":"Resits","subcategory":"General","title":"What are the dates for resit exams","replyText":"Resit Examination Period: Monday 5th August to Friday 16th August 2024 inclusive. All undergraduate students must keep these times free and consult the final copies of the examination timetables before making any other commitments.","keywords":"retake, fail, resit","sortOrder":29},
+  {"id":"faq30","category":"Resits","subcategory":"General","title":"What is the format of my resit exams in August 2024","replyText":"Examinations for modules in August 2024 will generally be the same format as the May 2024 examination.  Therefore, if the exam in May is on-campus, the August resit will be on-campus.  You should check with your department for the specific arrangements for your resit examinations.","keywords":"retake, fail, resit","sortOrder":30}
+];
+
+// ── Data Service (localStorage) ──
+const EDIT_PASSWORD = 'parsnip';
+const PASSWORD_UNLOCK_KEY = 'emailDrafterEditorUnlocked';
+const GITHUB_TOKEN_KEY = 'emailDrafterGithubToken';
+const WEBSITE_REPO = {
+  owner: 'davidchivers',
+  repo: 'davidchivers.co.uk',
+  branch: 'main',
+  path: 'email_drafter/responses.json'
+};
+const SITE_CONFIG = (window.EMAIL_DRAFTER_CONFIG && typeof window.EMAIL_DRAFTER_CONFIG === 'object')
+  ? window.EMAIL_DRAFTER_CONFIG
+  : {};
+
+const DataService = {
+  nextId() { return 'r' + Date.now() + Math.random().toString(36).slice(2,6); }
+};
+
+let sourceResponses = [];
+let websiteFileSha = null;
+let lastLoadedFrom = 'built-in responses';
+let hasUnsavedChanges = false;
+
+function deepClone(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function getGithubContentsUrl() {
+  const { owner, repo, branch, path } = WEBSITE_REPO;
+  return 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path.split('/').map(encodeURIComponent).join('/') + '?ref=' + encodeURIComponent(branch);
+}
+
+function getSaveApiUrl() {
+  return (SITE_CONFIG.saveApiUrl || '').trim();
+}
+
+function hasSaveApiUrl() {
+  return Boolean(getSaveApiUrl());
+}
+
+function decodeBase64Utf8(base64) {
+  const binary = atob((base64 || '').replace(/\s/g, ''));
+  const bytes = Uint8Array.from(binary, char => char.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+
+function encodeBase64Utf8(text) {
+  const bytes = new TextEncoder().encode(text);
+  let binary = '';
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary);
+}
+
+function normalizeResponse(response, index) {
+  const sortOrder = Number(response.sortOrder);
+  const active = response.active !== false;
+  return {
+    id: response.id || DataService.nextId(),
+    category: (response.category || 'Other').trim() || 'Other',
+    subcategory: (response.subcategory || 'General').trim() || 'General',
+    title: (response.title || 'Untitled response').trim() || 'Untitled response',
+    replyText: response.replyText || '',
+    keywords: response.keywords || '',
+    image: response.image || null,
+    sortOrder: Number.isFinite(sortOrder) ? sortOrder : index + 1,
+    active,
+    _deletedAt: active ? null : (response._deletedAt || new Date().toISOString())
+  };
+}
+
+function normalizeResponses(responses) {
+  return (Array.isArray(responses) ? responses : []).map((response, index) => normalizeResponse(response, index));
+}
+
+function splitResponses(responses) {
+  const normalized = normalizeResponses(responses);
+  const activeItems = normalized.filter(response => response.active !== false);
+  const deletedItems = normalized
+    .filter(response => response.active === false)
+    .sort((a, b) => (b._deletedAt || '').localeCompare(a._deletedAt || ''));
+  return { activeItems, deletedItems };
+}
+
+function serializeResponses() {
+  return deepClone([
+    ...allResponses.map(response => ({ ...response, active: true, _deletedAt: null })),
+    ...deleted.map(response => ({ ...response, active: false, _deletedAt: response._deletedAt || new Date().toISOString() }))
+  ]).sort((a, b) =>
+    a.category.localeCompare(b.category) ||
+    a.subcategory.localeCompare(b.subcategory) ||
+    (a.sortOrder || 0) - (b.sortOrder || 0) ||
+    a.title.localeCompare(b.title)
+  );
+}
+
+function applyResponses(responses, { rememberSource = false, clearUnsaved = false } = {}) {
+  const { activeItems, deletedItems } = splitResponses(responses);
+  allResponses = activeItems;
+  deleted = deletedItems;
+  if (rememberSource) sourceResponses = deepClone(serializeResponses());
+  if (clearUnsaved) hasUnsavedChanges = false;
+}
+
+function getSessionToken() {
+  return sessionStorage.getItem(GITHUB_TOKEN_KEY) || '';
+}
+
+function getGithubHeaders(token) {
+  const headers = { 'Accept': 'application/vnd.github+json' };
+  if (token) headers.Authorization = 'Bearer ' + token;
+  return headers;
+}
+
+async function fetchGithubResponses(token = '', options = {}) {
+  const allowMissing = options.allowMissing === true;
+  const response = await fetch(getGithubContentsUrl(), { headers: getGithubHeaders(token), cache: 'no-store' });
+  if (response.status === 404 && allowMissing) {
+    return { responses: [], sha: null, source: 'GitHub (' + WEBSITE_REPO.owner + '/' + WEBSITE_REPO.repo + ')' };
+  }
+  if (!response.ok) {
+    const message = response.status === 404
+      ? 'GitHub could not find ' + WEBSITE_REPO.path + ' in ' + WEBSITE_REPO.owner + '/' + WEBSITE_REPO.repo + '.'
+      : 'GitHub returned ' + response.status + ' while loading the shared responses.';
+    throw new Error(message);
+  }
+  const payload = await response.json();
+  const parsed = JSON.parse(decodeBase64Utf8(payload.content));
+  return { responses: parsed, sha: payload.sha, source: 'GitHub (' + WEBSITE_REPO.owner + '/' + WEBSITE_REPO.repo + ')' };
+}
+
+async function fetchLocalResponses() {
+  const response = await fetch('responses.json?ts=' + Date.now(), { cache: 'no-store' });
+  if (!response.ok) throw new Error('Could not load local responses.json');
+  return { responses: await response.json(), sha: null, source: 'local responses.json' };
+}
+
+async function loadLatestResponses(options = {}) {
+  const silent = options.silent === true;
+  let loaded;
+  try {
+    loaded = await fetchGithubResponses();
+  } catch (githubError) {
+    try {
+      loaded = await fetchLocalResponses();
+    } catch (localError) {
+      loaded = { responses: DEFAULT_RESPONSES, sha: null, source: 'built-in responses' };
+      if (!silent) console.warn(githubError, localError);
+    }
+  }
+  websiteFileSha = loaded.sha;
+  lastLoadedFrom = loaded.source;
+  applyResponses(loaded.responses, { rememberSource: true, clearUnsaved: true });
+  render();
+  updateSaveButton();
+  if (!silent) showToast('Loaded latest from ' + lastLoadedFrom);
+}
+
+function confirmDiscardChanges(actionLabel) {
+  if (!hasUnsavedChanges) return true;
+  return confirm('You have unsaved changes in this browser.\n\nClick Cancel and use "Save to website" or "Download backup" first if you want to keep them.\n\nContinue and ' + actionLabel + '?');
+}
+
+function isEditorUnlocked() {
+  return sessionStorage.getItem(PASSWORD_UNLOCK_KEY) === 'yes';
+}
+
+function requestEditorUnlock() {
+  const entered = prompt('Enter the editor password to turn on edit mode:');
+  if (entered === null) return false;
+  if (entered.trim() === EDIT_PASSWORD) {
+    sessionStorage.setItem(PASSWORD_UNLOCK_KEY, 'yes');
+    return true;
+  }
+  showToast('That password was not right');
+  return false;
+}
+
+function requestGithubToken() {
+  const existing = getSessionToken();
+  if (existing) return existing;
+  const entered = prompt('Enter a GitHub token that can update ' + WEBSITE_REPO.owner + '/' + WEBSITE_REPO.repo + '.\n\nIt will only be kept in this browser session.');
+  if (!entered) return '';
+  const token = entered.trim();
+  if (!token) return '';
+  sessionStorage.setItem(GITHUB_TOKEN_KEY, token);
+  return token;
+}
+
+function extractGithubError(payload, fallback) {
+  if (!payload) return fallback;
+  if (typeof payload === 'string') return payload || fallback;
+  return payload.message || fallback;
+}
+
+async function saveResponsesDirectToGithub() {
+  const token = requestGithubToken();
+  if (!token) {
+    throw new Error('Website save cancelled');
+  }
+
+  const latest = await fetchGithubResponses(token, { allowMissing: true });
+  websiteFileSha = latest.sha;
+
+  const response = await fetch(getGithubContentsUrl(), {
+    method: 'PUT',
+    headers: {
+      ...getGithubHeaders(token),
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      message: 'Update email drafter responses',
+      branch: WEBSITE_REPO.branch,
+      sha: websiteFileSha,
+      content: encodeBase64Utf8(JSON.stringify(serializeResponses(), null, 2) + '\n')
+    })
+  });
+
+  if (!response.ok) {
+    let payload = null;
+    try { payload = await response.json(); } catch (error) {}
+    if (response.status === 401 || response.status === 403) sessionStorage.removeItem(GITHUB_TOKEN_KEY);
+    throw new Error(extractGithubError(payload, 'GitHub did not accept the save.'));
+  }
+
+  const payload = await response.json();
+  websiteFileSha = payload.content?.sha || websiteFileSha;
+}
+
+async function saveResponsesViaApi(saveApiUrl) {
+  const response = await fetch(saveApiUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      password: EDIT_PASSWORD,
+      responses: serializeResponses()
+    })
+  });
+
+  let payload = null;
+  try { payload = await response.json(); } catch (error) {}
+
+  if (!response.ok || payload?.ok === false) {
+    throw new Error(extractGithubError(payload, 'The save service did not accept the update.'));
+  }
+
+  if (payload?.sha) websiteFileSha = payload.sha;
+  if (payload?.source) lastLoadedFrom = payload.source;
+}
+
+async function saveResponsesToWebsite() {
+  saveWebsiteBtn.disabled = true;
+  saveWebsiteBtn.textContent = 'Saving...';
+
+  try {
+    if (hasSaveApiUrl()) {
+      await saveResponsesViaApi(getSaveApiUrl());
+    } else {
+      const continueDirect = confirm('The password-only save service is not configured yet.\n\nClick OK to use the older GitHub token save for now, or Cancel to stop here.');
+      if (!continueDirect) {
+        showToast('Website save cancelled');
+        return;
+      }
+      await saveResponsesDirectToGithub();
+    }
+
+    sourceResponses = deepClone(serializeResponses());
+    hasUnsavedChanges = false;
+    updateSaveButton();
+    showToast('Saved to website');
+  } catch (error) {
+    console.error(error);
+    showToast(error.message || 'Save failed');
+  } finally {
+    saveWebsiteBtn.disabled = !editMode;
+    updateSaveButton();
+  }
+}
+
+// ── Image compression ──
+function compressImage(file) {
+  return new Promise((resolve) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        const MAX = 400;
+        let w = img.width, h = img.height;
+        if (w > MAX) { h = Math.round(h * MAX / w); w = MAX; }
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', 0.6));
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+function compressDataUrl(dataUrl) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const MAX = 400;
+      let w = img.width, h = img.height;
+      if (w > MAX) { h = Math.round(h * MAX / w); w = MAX; }
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      resolve(canvas.toDataURL('image/jpeg', 0.6));
+    };
+    img.src = dataUrl;
+  });
+}
+
+// ── State ──
+let allResponses = [];
+let deleted = [];
+let filter = { type: 'all', category: null, subcategory: null };
+let searchQuery = '';
+let editMode = false;
+let showDeleted = false;
+let editingId = null;
+
+// ── DOM ──
+const sidebar = document.getElementById('sidebar');
+const cardsPanel = document.getElementById('cardsPanel');
+const searchBox = document.getElementById('searchBox');
+const editToggle = document.getElementById('editToggle');
+const editToolbar = document.getElementById('editToolbar');
+const deletedLink = document.getElementById('deletedLink');
+const refreshBtn = document.getElementById('refreshBtn');
+const saveWebsiteBtn = document.getElementById('saveWebsiteBtn');
+const toastEl = document.getElementById('toast');
+const modalOverlay = document.getElementById('modalOverlay');
+const modalTitle = document.getElementById('modalTitle');
+const fCategory = document.getElementById('fCategory');
+const fSubcategory = document.getElementById('fSubcategory');
+const fTitle = document.getElementById('fTitle');
+const fReplyText = document.getElementById('fReplyText');
+const fKeywords = document.getElementById('fKeywords');
+const catList = document.getElementById('catList');
+const subcatList = document.getElementById('subcatList');
+const imgUploadArea = document.getElementById('imgUploadArea');
+const imgPlaceholder = document.getElementById('imgPlaceholder');
+const imgPreview = document.getElementById('imgPreview');
+const imgFileInput = document.getElementById('imgFileInput');
+const imgRemoveBtn = document.getElementById('imgRemoveBtn');
+let pendingImage = null;
+
+let toastTimer;
+function showToast(msg) {
+  toastEl.textContent = msg;
+  toastEl.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2000);
+}
+
+function updateSaveButton() {
+  if (!saveWebsiteBtn) return;
+  saveWebsiteBtn.textContent = hasUnsavedChanges ? 'Save to website *' : 'Save to website';
+  saveWebsiteBtn.disabled = !editMode;
+}
+
+function markDirty(message) {
+  hasUnsavedChanges = true;
+  updateSaveButton();
+  if (message) showToast(message);
+}
+
+function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function safeHtml(s) {
+  // Preserve <a> tags but escape everything else
+  const parts = s.split(/(<a\s[^>]*>.*?<\/a>)/g);
+  return parts.map(p => p.match(/^<a\s/) ? p : esc(p)).join('');
+}
+
+// ── Grouping ──
+function groupByCategory(responses) {
+  const groups = {}, order = [];
+  for (const r of responses) {
+    if (!groups[r.category]) { groups[r.category] = { subcategories: {}, items: [], subcatOrder: [] }; order.push(r.category); }
+    const g = groups[r.category];
+    g.items.push(r);
+    if (!g.subcategories[r.subcategory]) { g.subcategories[r.subcategory] = []; g.subcatOrder.push(r.subcategory); }
+    g.subcategories[r.subcategory].push(r);
+  }
+  for (const cat of order) {
+    groups[cat].items.sort((a,b) => a.sortOrder - b.sortOrder);
+    for (const sub of groups[cat].subcatOrder) groups[cat].subcategories[sub].sort((a,b) => a.sortOrder - b.sortOrder);
+  }
+  order.sort((a,b) => a.localeCompare(b));
+  for (const cat of order) groups[cat].subcatOrder.sort((a,b) => a.localeCompare(b));
+  return { groups, order };
+}
+
+// ── Sidebar ──
+let expandedCats = new Set();
+function buildSidebar() {
+  if (showDeleted) { sidebar.innerHTML = '<div class="sidebar-all active">Recently deleted (' + deleted.length + ')</div>'; return; }
+  const { groups, order } = groupByCategory(allResponses);
+  let h = '<div class="sidebar-all' + (filter.type==='all'?' active':'') + '" data-filter="all">All (' + allResponses.length + ')</div>';
+  for (const cat of order) {
+    const g = groups[cat], ex = expandedCats.has(cat), ac = filter.type==='category' && filter.category===cat;
+    h += '<div class="sidebar-item' + (ac?' active':'') + '" data-filter="category" data-cat="' + cat + '"><div class="cat-header"><span class="arrow" data-toggle="' + cat + '">' + (ex?'\u25BC':'\u25B6') + '</span><span class="label">' + cat + '</span><span class="count">' + g.items.length + '</span></div></div>';
+    h += '<div class="subcat-list' + (ex?' expanded':'') + '">';
+    for (const item of g.items) {
+      h += '<div class="subcat-item response-leaf" data-id="' + item.id + '" title="' + esc(item.title) + '"><span class="leaf-title">' + esc(item.title) + '</span><span class="leaf-copy" data-copyid="' + item.id + '" title="Copy to clipboard">copy</span></div>';
+    }
+    h += '</div>';
+  }
+  sidebar.innerHTML = h;
+}
+
+// ── Filter ──
+function getFiltered() {
+  let r = allResponses;
+  if (filter.type==='category') r = r.filter(x => x.category===filter.category);
+  else if (filter.type==='subcategory') r = r.filter(x => x.category===filter.category && x.subcategory===filter.subcategory);
+  if (searchQuery) { const q = searchQuery.toLowerCase(); r = r.filter(x => x.title.toLowerCase().includes(q) || x.category.toLowerCase().includes(q) || x.subcategory.toLowerCase().includes(q) || (x.keywords||'').toLowerCase().includes(q) || x.replyText.toLowerCase().includes(q)); }
+  return r;
+}
+
+// ── Cards ──
+function buildCards() {
+  if (showDeleted) { buildDeletedCards(); return; }
+  const results = getFiltered();
+  let h = '';
+  if (editMode) h += '<div class="add-btn-row"><button class="add-btn" id="addResponseBtn">+ Add new response</button></div>';
+  if (!results.length) { h += '<div class="no-results">No matching responses found.</div>'; cardsPanel.innerHTML = h; return; }
+  results.sort((a,b) => a.category.localeCompare(b.category) || a.title.localeCompare(b.title));
+  for (const r of results) {
+    h += '<div class="card" data-cardid="' + r.id + '"><div class="card-title-row"><div class="card-title">' + esc(r.title) + '</div><button class="copy-btn" data-id="' + r.id + '">Copy</button>';
+    if (editMode) h += ' <button class="edit-btn" data-id="' + r.id + '">Edit</button> <button class="delete-btn" data-id="' + r.id + '">Delete</button>';
+    h += '</div><div class="card-tag">' + esc(r.category) + ' \u203A ' + esc(r.subcategory) + '</div><div class="card-text collapsed">' + safeHtml(r.replyText) + '</div>';
+    if (r.image) h += '<img class="card-img" src="' + r.image + '">';
+    h += '<span class="card-toggle" data-state="collapsed">Show full text</span></div>';
+  }
+  cardsPanel.innerHTML = h;
+}
+
+function buildDeletedCards() {
+  if (!deleted.length) { cardsPanel.innerHTML = '<div class="no-results">No recently deleted responses.</div>'; return; }
+  let h = '';
+  for (const r of deleted) {
+    h += '<div class="card"><div class="card-title-row"><div class="card-title">' + esc(r.title) + '</div><button class="restore-btn" data-id="' + r.id + '">Restore</button></div><div class="card-tag">' + esc(r.category) + ' \u203A ' + esc(r.subcategory) + '</div><div class="card-text collapsed">' + safeHtml(r.replyText) + '</div><span class="card-toggle" data-state="collapsed">Show full text</span></div>';
+  }
+  cardsPanel.innerHTML = h;
+}
+
+function render() { buildSidebar(); buildCards(); updateDeletedLink(); }
+
+function updateDeletedLink() {
+  if (editMode) {
+    deletedLink.style.display = '';
+    deletedLink.textContent = showDeleted ? '\u2190 Back' : 'Recently deleted (' + deleted.length + ')';
+  } else { deletedLink.style.display = 'none'; }
+}
+
+// ── Modal ──
+function setModalImage(dataUrl) {
+  pendingImage = dataUrl;
+  imgPreview.src = dataUrl; imgPreview.style.display = 'block';
+  imgPlaceholder.style.display = 'none'; imgRemoveBtn.style.display = '';
+}
+function clearModalImage() {
+  pendingImage = null;
+  imgPreview.src = ''; imgPreview.style.display = 'none';
+  imgPlaceholder.style.display = ''; imgRemoveBtn.style.display = 'none';
+}
+function openModal(response) {
+  if (response) { editingId = response.id; modalTitle.textContent = 'Edit response'; fCategory.value = response.category; fSubcategory.value = response.subcategory; fTitle.value = response.title; fReplyText.value = response.replyText; fKeywords.value = response.keywords||''; if(response.image){setModalImage(response.image);}else{clearModalImage();} }
+  else { editingId = null; modalTitle.textContent = 'Add new response'; fCategory.value = ''; fSubcategory.value = ''; fTitle.value = ''; fReplyText.value = ''; fKeywords.value = ''; clearModalImage(); }
+  catList.innerHTML = [...new Set(allResponses.map(r=>r.category))].map(c=>'<option value="'+esc(c)+'">').join('');
+  subcatList.innerHTML = [...new Set(allResponses.map(r=>r.subcategory))].map(s=>'<option value="'+esc(s)+'">').join('');
+  modalOverlay.classList.add('open'); fCategory.focus();
+}
+function closeModal() { modalOverlay.classList.remove('open'); editingId = null; }
+function saveModal() {
+  const cat = fCategory.value.trim(), sub = fSubcategory.value.trim(), title = fTitle.value.trim(), text = fReplyText.value.trim(), kw = fKeywords.value.trim();
+  if (!cat || !title || !text) { showToast('Please fill in category, title, and reply text'); return; }
+  if (editingId) {
+    const response = allResponses.find(item => item.id === editingId);
+    if (response) {
+      response.category = cat;
+      response.subcategory = sub || 'General';
+      response.title = title;
+      response.replyText = text;
+      response.keywords = kw;
+      response.image = pendingImage || null;
+    }
+    markDirty('Updated locally - click Save to website to share it');
+  }
+  else {
+    allResponses.push({
+      id: DataService.nextId(),
+      category: cat,
+      subcategory: sub || 'General',
+      title,
+      replyText: text,
+      keywords: kw,
+      image: pendingImage || null,
+      active: true,
+      sortOrder: allResponses.filter(r => r.category === cat).reduce((m, r) => Math.max(m, r.sortOrder || 0), 0) + 1
+    });
+    markDirty('Added locally - click Save to website to share it');
+  }
+  closeModal();
+  render();
+}
+
+// ── Events: sidebar ──
+sidebar.addEventListener('click', e => {
+  const t = e.target;
+  // Quick copy from sidebar leaf
+  const lc = t.closest('.leaf-copy');
+  if (lc) {
+    const r = allResponses.find(x=>x.id===lc.dataset.copyid);
+    if (!r) return;
+    const plain = r.replyText.replace(/<a\s[^>]*href="([^"]*)"[^>]*>(.*?)<\/a>/g,'$2 ($1)').replace(/<[^>]+>/g,'');
+    const html = r.replyText.replace(/\n/g,'<br>') + (r.image ? '<br><img src="'+r.image+'">' : '');
+    const onOk = ()=>{lc.classList.add('copied');lc.textContent='\u2713';setTimeout(()=>{lc.classList.remove('copied');lc.textContent='copy';},1200);};
+    try {
+      navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]).then(onOk).catch(()=>navigator.clipboard.writeText(plain).then(onOk));
+    } catch(e) { navigator.clipboard.writeText(plain).then(onOk).catch(()=>showToast('Copy failed')); }
+    return;
+  }
+  // Expand/collapse arrow
+  const tog = t.closest('[data-toggle]');
+  if (tog) { const c=tog.dataset.toggle; expandedCats.has(c)?expandedCats.delete(c):expandedCats.add(c); render(); return; }
+  // All
+  if (t.closest('[data-filter="all"]')) { if(!showDeleted){filter={type:'all',category:null,subcategory:null};render();} return; }
+  // Click on a response leaf — scroll to it in cards
+  const leaf = t.closest('.response-leaf');
+  if (leaf && !t.closest('.leaf-copy')) {
+    const rid = leaf.dataset.id;
+    const r = allResponses.find(x=>x.id===rid);
+    if (r) { filter={type:'category',category:r.category,subcategory:null}; render(); setTimeout(()=>{const card=cardsPanel.querySelector('[data-cardid="'+rid+'"]');if(card){card.scrollIntoView({behavior:'smooth',block:'center'});card.classList.add('highlight');setTimeout(()=>card.classList.remove('highlight'),1500);}},50); }
+    return;
+  }
+  // Category click
+  const cat = t.closest('[data-filter="category"]');
+  if (cat) { const c=cat.dataset.cat; filter={type:'category',category:c,subcategory:null}; if(!expandedCats.has(c))expandedCats.add(c); render(); }
+});
+
+// ── Events: search ──
+searchBox.addEventListener('input', () => { searchQuery = searchBox.value.trim(); buildCards(); });
+
+// ── Events: cards ──
+cardsPanel.addEventListener('click', e => {
+  const cp = e.target.closest('.copy-btn');
+  if (cp) {
+    const r=allResponses.find(x=>x.id===cp.dataset.id); if(!r)return;
+    const plain=r.replyText.replace(/<a\s[^>]*href="([^"]*)"[^>]*>(.*?)<\/a>/g,'$2 ($1)').replace(/<[^>]+>/g,'');
+    const html=r.replyText.replace(/\n/g,'<br>') + (r.image ? '<br><img src="'+r.image+'">' : '');
+    try {
+      const blob = new Blob([html], {type:'text/html'});
+      const plainBlob = new Blob([plain], {type:'text/plain'});
+      navigator.clipboard.write([new ClipboardItem({'text/html':blob,'text/plain':plainBlob})]).then(()=>{cp.textContent='Copied!';cp.classList.add('copied');setTimeout(()=>{cp.textContent='Copy';cp.classList.remove('copied');},1500);}).catch(()=>{navigator.clipboard.writeText(plain).then(()=>{cp.textContent='Copied!';cp.classList.add('copied');setTimeout(()=>{cp.textContent='Copy';cp.classList.remove('copied');},1500);});});
+    } catch(e) { navigator.clipboard.writeText(plain).then(()=>{cp.textContent='Copied!';cp.classList.add('copied');setTimeout(()=>{cp.textContent='Copy';cp.classList.remove('copied');},1500);}).catch(()=>showToast('Copy failed')); }
+    return;
+  }
+  const ed = e.target.closest('.edit-btn');
+  if (ed) { const r=allResponses.find(x=>x.id===ed.dataset.id); if(r)openModal(r); return; }
+  const del = e.target.closest('.delete-btn');
+  if (del) {
+    const r = allResponses.find(x => x.id === del.dataset.id);
+    if (r && confirm('Delete "' + r.title + '"?\n\nYou can restore it from "Recently deleted" if needed.')) {
+      allResponses = allResponses.filter(x => x.id !== r.id);
+      r.active = false;
+      r._deletedAt = new Date().toISOString();
+      deleted.push(r);
+      markDirty('Deleted locally - click Save to website to share it');
+      render();
+    }
+    return;
+  }
+  const res = e.target.closest('.restore-btn');
+  if (res) {
+    const r = deleted.find(x => x.id === res.dataset.id);
+    if (r) {
+      deleted = deleted.filter(x => x.id !== r.id);
+      r.active = true;
+      r._deletedAt = null;
+      allResponses.push(r);
+      markDirty('Restored locally - click Save to website to share it');
+      render();
+    }
+    return;
+  }
+  if (e.target.id==='addResponseBtn') { openModal(null); return; }
+  const tgl = e.target.closest('.card-toggle');
+  if (tgl) { const tx=tgl.closest('.card').querySelector('.card-text'); if(tgl.dataset.state==='collapsed'){tx.classList.remove('collapsed');tgl.textContent='Show less';tgl.dataset.state='expanded';}else{tx.classList.add('collapsed');tgl.textContent='Show full text';tgl.dataset.state='collapsed';} }
+});
+
+// ── Events: edit mode ──
+editToggle.addEventListener('click', () => {
+  if (!editMode && !isEditorUnlocked() && !requestEditorUnlock()) return;
+  editMode = !editMode;
+  showDeleted = false;
+  editToggle.classList.toggle('active', editMode);
+  editToolbar.classList.toggle('show', editMode);
+  updateSaveButton();
+  render();
+});
+deletedLink.addEventListener('click', () => { showDeleted=!showDeleted; filter={type:'all',category:null,subcategory:null}; render(); });
+refreshBtn.addEventListener('click', async () => {
+  if (!confirmDiscardChanges('reload the latest shared version')) return;
+  await loadLatestResponses();
+});
+saveWebsiteBtn.addEventListener('click', saveResponsesToWebsite);
+
+// ── Events: modal ──
+document.getElementById('modalCancel').addEventListener('click', closeModal);
+document.getElementById('modalSave').addEventListener('click', saveModal);
+modalOverlay.addEventListener('click', e => { if(e.target===modalOverlay)closeModal(); });
+
+// ── Events: image upload ──
+imgUploadArea.addEventListener('click', e => { if(!e.target.closest('.img-remove-btn')) imgFileInput.click(); });
+imgFileInput.addEventListener('change', async () => { if(imgFileInput.files[0]){setModalImage(await compressImage(imgFileInput.files[0]));} imgFileInput.value=''; });
+imgRemoveBtn.addEventListener('click', e => { e.stopPropagation(); clearModalImage(); });
+imgUploadArea.addEventListener('dragover', e => { e.preventDefault(); imgUploadArea.classList.add('dragover'); });
+imgUploadArea.addEventListener('dragleave', () => { imgUploadArea.classList.remove('dragover'); });
+imgUploadArea.addEventListener('drop', async e => { e.preventDefault(); imgUploadArea.classList.remove('dragover'); const f=e.dataTransfer.files[0]; if(f&&f.type.startsWith('image/'))setModalImage(await compressImage(f)); });
+// Paste image anywhere in modal
+modalOverlay.addEventListener('paste', async e => {
+  const items = e.clipboardData?.items;
+  if (!items) return;
+  for (const item of items) {
+    if (item.type.startsWith('image/')) {
+      e.preventDefault();
+      setModalImage(await compressImage(item.getAsFile()));
+      return;
+    }
+  }
+});
+
+// ── Events: export/import/reset ──
+document.getElementById('exportBtn').addEventListener('click', () => {
+  const blob = new Blob([JSON.stringify(serializeResponses(), null, 2)], {type:'application/json'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='email_drafter_backup_'+new Date().toISOString().slice(0,10)+'.json'; a.click();
+  showToast('Backup downloaded');
+});
+document.getElementById('importBtn').addEventListener('click', () => document.getElementById('importFile').click());
+document.getElementById('importFile').addEventListener('change', e => {
+  const f=e.target.files[0]; if(!f)return;
+  const reader=new FileReader();
+  reader.onload=()=>{try{
+    const d=JSON.parse(reader.result);
+    if(!Array.isArray(d))throw 0;
+    if(!confirm('Load '+d.length+' responses from this file?\n\nThis will replace your current browser copy until you save again. Use "Download backup" first if you want to keep what you have.'))return;
+    applyResponses(d);
+    markDirty('Loaded backup locally - click Save to website to share it');
+    render();
+  }catch(err){showToast('Could not read that file \u2014 please check it is a valid backup');}};
+  reader.readAsText(f); e.target.value='';
+});
+document.getElementById('resetBtn').addEventListener('click', () => {
+  const resetSource = sourceResponses.length ? sourceResponses : DEFAULT_RESPONSES;
+  if(!confirm('Restore the last loaded shared version?\n\nThis will discard any browser-only edits that have not been saved to the website yet.'))return;
+  applyResponses(resetSource, { clearUnsaved: true });
+  render();
+  showToast('Restored ' + lastLoadedFrom);
+});
+
+// ── Init ──
+window.addEventListener('beforeunload', event => {
+  if (!hasUnsavedChanges) return;
+  event.preventDefault();
+  event.returnValue = '';
+});
+
+(async function init() {
+  applyResponses(DEFAULT_RESPONSES, { rememberSource: true, clearUnsaved: true });
+  render();
+  updateSaveButton();
+  await loadLatestResponses({ silent: true });
+})();
+</script>
+</body>
+</html>

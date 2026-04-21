@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crush front-facing example</title>
+  <link rel="stylesheet" href="assets/css/simple.css">
+</head>
+<body data-page="front">
+  <main class="page page--wide">
+    <p><a href="index.html">&larr; Back</a></p>
+    <h1>Front-facing website example</h1>
+    <p>
+      This page is deliberately simple. A customer sees category buttons first, then the wines underneath.
+    </p>
+    <p>
+      <a href="admin.html">Back-end example</a> |
+      <a href="map.html">Wine map</a>
+    </p>
+
+    <div class="button-row" data-filter-buttons>
+      <button class="filter-button is-active" data-filter="all" type="button">All</button>
+      <button class="filter-button" data-filter="Red" type="button">Red</button>
+      <button class="filter-button" data-filter="White" type="button">White</button>
+      <button class="filter-button" data-filter="Rose" type="button">Rose</button>
+      <button class="filter-button" data-filter="Orange" type="button">Orange</button>
+      <button class="filter-button" data-filter="Sparkling" type="button">Sparkling</button>
+    </div>
+
+    <div class="wine-grid" data-wine-grid></div>
+  </main>
+
+  <script src="assets/js/simple.js"></script>
+</body>
+</html>

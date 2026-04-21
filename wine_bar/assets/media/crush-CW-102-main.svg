@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">Cedars of Bekaa High Plateau Rose 2024</title>
+  <desc id="desc">Illustrated bottle label for a rose wine from Lebanon.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4d1d2f"/>
+      <stop offset="100%" stop-color="#c36f7a"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="960" fill="url(#bg)"/>
+  <rect x="110" y="110" width="500" height="740" rx="38" fill="#f4d7dd"/>
+  <rect x="138" y="138" width="444" height="684" rx="28" fill="#fff7f6"/>
+  <text x="360" y="225" text-anchor="middle" fill="#a14358" font-family="Georgia, serif" font-size="38">CRUSH</text>
+  <text x="360" y="290" text-anchor="middle" fill="#34131f" font-family="Georgia, serif" font-size="50">High Plateau</text>
+  <text x="360" y="338" text-anchor="middle" fill="#a14358" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">CEDARS OF BEKAA</text>
+  <path d="M250 510c41-78 73-120 110-120s69 42 110 120c-30-18-62-27-96-27s-66 9-124 27Z" fill="#e89aa4"/>
+  <path d="M260 520c58 26 109 78 110 152 0-74 56-126 102-152-33-12-66-18-102-18s-73 6-110 18Z" fill="#c15966"/>
+  <text x="360" y="700" text-anchor="middle" fill="#34131f" font-family="Arial, sans-serif" font-size="28">Bekaa Valley, Lebanon</text>
+  <text x="360" y="748" text-anchor="middle" fill="#a14358" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">2024</text>
+</svg>
