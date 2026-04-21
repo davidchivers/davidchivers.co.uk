@@ -1,8 +1,6 @@
 window.EMAIL_DRAFTER_CONFIG = Object.assign(
   {
-    // Fill this with the deployed save endpoint when it exists.
-    // Example: 'https://email-drafter-save.vercel.app/api/save'
-    saveApiUrl: ''
+    saveApiUrl: 'https://email-drafter-save.vercel.app/api/save'
   },
   window.EMAIL_DRAFTER_CONFIG || {}
 );
