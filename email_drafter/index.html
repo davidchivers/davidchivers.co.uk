@@ -695,8 +695,24 @@ function applyResponses(responses, { rememberSource = false, clearUnsaved = fals
   if (clearUnsaved) hasUnsavedChanges = false;
 }
 
-function getSessionToken() {
-  return sessionStorage.getItem(GITHUB_TOKEN_KEY) || '';
+function getSavedGithubToken() {
+  return localStorage.getItem(GITHUB_TOKEN_KEY) || sessionStorage.getItem(GITHUB_TOKEN_KEY) || '';
+}
+
+function clearSavedGithubToken() {
+  localStorage.removeItem(GITHUB_TOKEN_KEY);
+  sessionStorage.removeItem(GITHUB_TOKEN_KEY);
+}
+
+function saveGithubToken(token) {
+  const trimmed = (token || '').trim();
+  if (!trimmed) {
+    clearSavedGithubToken();
+    return '';
+  }
+  localStorage.setItem(GITHUB_TOKEN_KEY, trimmed);
+  sessionStorage.setItem(GITHUB_TOKEN_KEY, trimmed);
+  return trimmed;
 }
 
 function getGithubHeaders(token) {
@@ -770,14 +786,11 @@ function requestEditorUnlock() {
 }
 
 function requestGithubToken() {
-  const existing = getSessionToken();
+  const existing = getSavedGithubToken();
   if (existing) return existing;
-  const entered = prompt('Enter a GitHub token that can update ' + WEBSITE_REPO.owner + '/' + WEBSITE_REPO.repo + '.\n\nIt will only be kept in this browser session.');
+  const entered = prompt('Enter a GitHub token that can update ' + WEBSITE_REPO.owner + '/' + WEBSITE_REPO.repo + '.\n\nIt will be kept on this browser on this device until GitHub rejects it.');
   if (!entered) return '';
-  const token = entered.trim();
-  if (!token) return '';
-  sessionStorage.setItem(GITHUB_TOKEN_KEY, token);
-  return token;
+  return saveGithubToken(entered);
 }
 
 function extractGithubError(payload, fallback) {
@@ -812,7 +825,7 @@ async function saveResponsesDirectToGithub() {
   if (!response.ok) {
     let payload = null;
     try { payload = await response.json(); } catch (error) {}
-    if (response.status === 401 || response.status === 403) sessionStorage.removeItem(GITHUB_TOKEN_KEY);
+    if (response.status === 401 || response.status === 403) clearSavedGithubToken();
     throw new Error(extractGithubError(payload, 'GitHub did not accept the save.'));
   }
 
@@ -849,11 +862,6 @@ async function saveResponsesToWebsite() {
     if (hasSaveApiUrl()) {
       await saveResponsesViaApi(getSaveApiUrl());
     } else {
-      const continueDirect = confirm('The password-only save service is not configured yet.\n\nClick OK to use the older GitHub token save for now, or Cancel to stop here.');
-      if (!continueDirect) {
-        showToast('Website save cancelled');
-        return;
-      }
       await saveResponsesDirectToGithub();
     }
 
