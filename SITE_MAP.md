@@ -27,11 +27,13 @@ This repo is now the intended source for the root `davidchivers.co.uk` site and 
 
 ## Email Drafter
 
-- Intended public route: `/email_drafter/`
-- Public files for that route should live in `email_drafter/`
+- Intended public route: `/drafter/`
+- Public files for that route should live in `drafter/`
+- `/email_drafter/` should only be a compatibility redirect to `/drafter/`
 - Current files:
-  - `email_drafter/index.html`
-  - `email_drafter/responses.json`
+  - `drafter/index.html`
+  - `drafter/responses.json`
+  - `drafter/save-config.js`
 
 ## Canonical Source vs Publish Target
 
@@ -40,7 +42,7 @@ To avoid confusion:
 - Canonical working source for the drafter lives in the AI workspace:
   - `C:\Users\Dave_\AI\other\email_app\email_drafter\`
 - This website repo is the publish target copy for the public site:
-  - `C:\Users\Dave_\OneDrive\Documents\GitHub\davidchivers.co.uk\email_drafter\`
+  - `C:\Users\Dave_\OneDrive\Documents\GitHub\davidchivers.co.uk\drafter\`
 
 Recommended rule:
 
@@ -56,8 +58,9 @@ Recommended rule:
 
 Current rule:
 
-- do not treat the legacy repo as the deployment authority anymore
-- use it only as migration/reference history until cleanup is complete
+- `davidchivers/davidchivers.co.uk` is the canonical website repo
+- `thomshutt/davidchivers` is only a temporary Pages bridge until the custom domain is moved
+- do not treat the legacy repo as the long-run deployment authority
 
 ## Before Pushing New Website Work
 
