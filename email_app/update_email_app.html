@@ -10,12 +10,12 @@
   <main>
     <a class="toplink" href="workflow.html">Back to Email App Instructions</a>
     <h1>Update email app</h1>
-    <p>Use these steps when the app already exists and you want to change it safely.</p>
+    <p>Use these steps when the app already exists and you want to change it safely during testing, or when you want to move it from the pilot inbox to another mailbox.</p>
 
     <section class="step">
       <h2>Step 1. Decide what is changing</h2>
       <ol>
-        <li>Decide whether you are changing the form, the flow, the lookup file, the email templates, or the documentation.</li>
+        <li>Decide whether you are changing the form, the flow, the lookup file, the email templates, the mailbox destination, or the documentation.</li>
         <li>Try to change one area at a time.</li>
       </ol>
     </section>
@@ -54,6 +54,7 @@
       <ol>
         <li>Open the existing Power Automate flow.</li>
         <li>Change the logic, subject tags, suggested owner labels, or email content as needed.</li>
+        <li>If you are moving away from the pilot inbox, update the staff-notification and failure-notification actions first.</li>
         <li>Keep the basic pattern the same: read the form, create a reference number, run lookup, send staff email, send acknowledgement.</li>
       </ol>
       <div class="links">
@@ -64,7 +65,20 @@
     </section>
 
     <section class="step">
-      <h2>Step 5. Update the email templates if needed</h2>
+      <h2>Step 5. Port the mailbox if needed</h2>
+      <ol>
+        <li>Treat <code>david.chivers@durham.ac.uk</code> as the current pilot inbox only.</li>
+        <li>To move to another personal inbox, change the recipient in the staff email and failure-notification actions.</li>
+        <li>To move to shared handling, change the action to <code>Send an email from a shared mailbox</code> where needed and confirm permissions.</li>
+        <li>After any mailbox change, rerun matched and unmatched tests.</li>
+      </ol>
+      <div class="links">
+        <a href="build_plan.html">Build plan and test checklist</a>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Step 6. Update the email templates if needed</h2>
       <ol>
         <li>Update the staff email template if staff need clearer subject tags or body fields.</li>
         <li>Update the acknowledgement email if student wording needs to change.</li>
@@ -77,7 +91,7 @@
     </section>
 
     <section class="step">
-      <h2>Step 6. Test after the change</h2>
+      <h2>Step 7. Test after the change</h2>
       <ol>
         <li>Run a matched enquiry.</li>
         <li>Run an unmatched enquiry.</li>
@@ -90,7 +104,7 @@
     </section>
 
     <section class="step">
-      <h2>Step 7. Rebuild the docs if the documentation changed</h2>
+      <h2>Step 8. Rebuild the docs if the documentation changed</h2>
       <ol>
         <li>If you changed the Markdown docs, run <code>build_docs.ps1</code>.</li>
         <li>That will refresh the generated HTML and PDF files.</li>

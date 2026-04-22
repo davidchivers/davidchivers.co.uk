@@ -38,20 +38,38 @@ handover</h1>
 <p>This folder is the handover pack for the first-version student
 enquiry workflow using Microsoft Forms, Power Automate, Excel lookup
 data, and email.</p>
+<h2 id="current-status">Current status</h2>
+<p>The version 1 pilot now exists and is in testing.</p>
+<ul>
+<li>the Microsoft Form has been created</li>
+<li>the Excel lookup workbook has been created</li>
+<li>the Power Automate flow has been built</li>
+<li>the current pilot staff inbox is
+<code>david.chivers@durham.ac.uk</code></li>
+<li>that pilot inbox is temporary and can be switched to another inbox
+or a shared mailbox after testing passes</li>
+</ul>
 <h2 id="recommendation">Recommendation</h2>
-<p>Use this folder as the main handover format.</p>
+<p>Use this folder as the main editable source pack.</p>
 <ul>
 <li>Best for a quick overview of the process:
 <code>workflow.html</code></li>
 <li>Best for day-to-day use: <code>START_HERE.html</code></li>
+<li>Best for the current live build details:
+<code>how_it_works.md</code> and <code>build_progress.md</code></li>
 <li>Best for printing or emailing as a summary:
 <code>START_HERE.pdf</code></li>
 <li>Best for detailed build work: the linked Markdown and template files
 in this folder</li>
 </ul>
-<p>For version 1, this should stay as a local or shared folder, not a
-separate website. The workflow itself is already online inside Microsoft
-365. The documentation does not need another platform yet.</p>
+<p>For testing, there are now two safe views of the same model:</p>
+<ol type="1">
+<li>the full folder as the editable source pack</li>
+<li>the website copy as a browser-first guide</li>
+</ol>
+<p>The live operational workflow still lives in Microsoft 365. The
+website and the folder are documentation layers around that workflow,
+not replacements for it.</p>
 <p>The browser-first version of the pack is:</p>
 <ul>
 <li><code>workflow.html</code></li>
@@ -112,20 +130,41 @@ do</h2>
 <li>deep Banner integration</li>
 <li>SharePoint-list-based workflow management</li>
 </ul>
+<h2 id="portability">Portability</h2>
+<p>The current pilot routes staff notifications to
+<code>david.chivers@durham.ac.uk</code>, but that is only for
+testing.</p>
+<p>To port this workflow:</p>
+<ol type="1">
+<li>change the recipient inbox in the Outlook actions</li>
+<li>if needed, switch from <code>Send an email (V2)</code> to
+<code>Send an email from a shared mailbox</code></li>
+<li>retest matched and unmatched cases</li>
+</ol>
+<p>The form, lookup workbook, and core flow logic do not need to be
+redesigned just because the destination mailbox changes.</p>
 <h2 id="safest-format-choice">Safest format choice</h2>
 <p>For this project, the safest setup is:</p>
 <ol type="1">
 <li>Keep the operational workflow online in Microsoft 365.</li>
-<li>Keep the handover documentation as this standalone folder.</li>
+<li>Keep the handover documentation in this folder as the editable
+source pack.</li>
+<li>Use the website copy when you want a lighter browser-first route
+through the same material.</li>
 <li>Keep the files together if you need to send the folder to someone
 else.</li>
 </ol>
-<p>That is simpler than building a separate website, and more usable
-than relying on a PDF alone.</p>
-<h2 id="if-you-later-want-an-online-version">If you later want an online
-version</h2>
-<p>The next step would be a very simple read-only SharePoint or Teams
-page that links to the same files. That should only happen after the
-process is stable and the wording has stopped changing.</p>
+<p>That keeps the live system simple while still giving you an easy
+handover layer.</p>
+<h2 id="if-you-later-want-a-department-owned-version">If you later want
+a department-owned version</h2>
+<p>The next step is not a rebuild. It is a handoff:</p>
+<ol type="1">
+<li>finish pilot testing</li>
+<li>move the staff email destination from the pilot inbox to the target
+inbox or shared mailbox</li>
+<li>republish the same guidance with department-owned links if
+needed</li>
+</ol>
 </body>
 </html>
