@@ -46,6 +46,30 @@ a {
   margin-top: 24px;
 }
 
+.lede {
+  font-size: 1.05rem;
+}
+
+.status-panel {
+  margin-top: 20px;
+  margin-bottom: 24px;
+  padding: 18px 20px;
+  background: #fff8e8;
+  border: 1px solid #e7d7a8;
+  border-radius: 12px;
+}
+
+.status-panel h2 {
+  border-top: 0;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  padding-top: 0;
+}
+
+.status-panel ul {
+  margin: 0.5rem 0 0.75rem;
+}
+
 .home-links a {
   display: block;
   padding: 18px 20px;
