@@ -42,9 +42,17 @@ concat(
   'DEPT-',
   formatDateTime(utcNow(),'yyyy'),
   '-',
-  padLeft(string(outputs('Compose_ResponseId')), 6, '0')
+  substring(
+    concat('000000', string(outputs('Compose_ResponseId'))),
+    sub(length(concat('000000', string(outputs('Compose_ResponseId')))), 6),
+    6
+  )
 )
 ```
+
+> **Note:** `padLeft` and `formatNumber` are not valid Power Automate workflow
+> expression functions. Use the `substring`/`concat` approach above, which pads
+> the response ID to six digits using only supported functions.
 
 ## 5. resolved enquiry type
 
@@ -60,11 +68,21 @@ if(
 
 ## 6. stage tag
 
+Use `Unknown` when the stage was not resolved so unmatched enquiries are not mislabeled as `PGT`.
+
 ```text
 if(
-  equals(variables('resolved_stage'),'Undergraduate'),
-  'UG',
-  'PGT'
+  empty(variables('resolved_stage')),
+  'Unknown',
+  if(
+    equals(variables('resolved_stage'),'Undergraduate'),
+    'UG',
+    if(
+      equals(variables('resolved_stage'),'Taught postgraduate'),
+      'PGT',
+      'Unknown'
+    )
+  )
 )
 ```
 
@@ -92,26 +110,33 @@ if(
 
 ```text
 concat(
-  '[Enquiry][',
-  outputs('Compose_EnquiryType'),
-  '][',
-  outputs('Compose_StageTag'),
-  ']',
-  outputs('Compose_YearTag'),
-  '[',
-  outputs('Compose_LookupTag'),
-  '] ',
-  outputs('Compose_ReferenceNumber'),
-  ' - ',
-  if(
-    empty(outputs('Compose_SelectedUsername')),
-    outputs('Compose_SelectedStudentEmail'),
-    outputs('Compose_SelectedUsername')
-  )
+  '[Form submission] ',
+  outputs('Compose_DisplayNameForStaff'),
+  ' | ',
+  outputs('Compose_ResolvedEnquiryType'),
+  ' | Ref: ',
+  outputs('Compose_ReferenceNumber')
 )
 ```
 
-## 10. blank-safe year display
+## 10. drafter link for the staff notification
+
+Add a `Compose_DrafterLink` action before the staff email. Replace the base URL if the drafter is hosted somewhere else.
+
+```text
+concat(
+  'https://davidchivers.co.uk/drafter/?type=',
+  uriComponent(outputs('Compose_ResolvedEnquiryType')),
+  '&student=',
+  uriComponent(outputs('Compose_DisplayNameForStaff')),
+  '&ref=',
+  uriComponent(outputs('Compose_ReferenceNumber'))
+)
+```
+
+Use this only in the first staff notification email. The reply mailto should stay focused on opening a clean Outlook reply to the student.
+
+## 11. blank-safe year display
 
 ```text
 if(
@@ -121,7 +146,7 @@ if(
 )
 ```
 
-## 11. blank-safe other enquiry type display
+## 12. blank-safe other enquiry type display
 
 ```text
 if(
@@ -134,3 +159,5 @@ if(
 ## Implementation note
 
 For suggested owner, use a `Switch` action rather than a long nested `if()` expression. It is easier to maintain and safer for non-technical admins to update later.
+
+If the preferred short form is used, do not backfill programme, stage, or year from unrelated answers when lookup misses. Leave those values blank and let the display logic handle them safely.

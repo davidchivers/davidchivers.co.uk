@@ -16,15 +16,15 @@ Please do not include unnecessary sensitive personal or medical information in t
 
 ## Enquiry type
 
-- Module enquiry
 - Academic advisor
 - Assessment query
-- Extension
-- Mitigating circumstances
 - Attendance
-- Timetable
-- IT / systems access
+- Extension
 - Fees / finance
+- IT / systems access
+- Mitigating circumstances
+- Module enquiry
+- Timetable
 - Other
 
 ## Other enquiry type
@@ -35,7 +35,19 @@ If you selected Other, please describe the enquiry type.
 
 Please describe your enquiry.
 
+## Attach files or screenshots if relevant
+
+Upload screenshots, PDFs, or short supporting documents that help staff understand the issue.
+
+This is optional. Do not upload unnecessary sensitive personal or medical information; use any formal university evidence process where required.
+
 ## Optional note for administrators
+
+Use a file upload question for `Attach files or screenshots if relevant`.
+
+Recommended upload settings: optional, maximum 10 files, 10 MB per file, file types Image/PDF/Word.
+
+For production, make this a group-owned form so uploads live in SharePoint rather than an individual's OneDrive.
 
 If testing later shows that identity matching is unreliable, add one checkpoint question such as `Programme of study`.
 

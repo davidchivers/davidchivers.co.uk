@@ -16,11 +16,14 @@ The version 1 pilot now exists and is in testing.
 
 The current pilot inbox is a testing destination, not a design constraint. The same model should be portable to another personal inbox or a department shared mailbox without rebuilding the form or lookup logic.
 
+The intended production ownership model is shared/group ownership rather than personal ownership. The pilot can be created by David, but the final form, upload storage, lookup workbook, Power Automate flow, and staff inbox should be transferred to the department/shared Microsoft 365 group before David removes himself from day-to-day access.
+
 This project is intentionally lightweight:
 
 - Microsoft Form for intake
 - Power Automate for enrichment and notifications
 - Excel Online as the first lookup source
+- optional Microsoft Forms upload question for screenshots/evidence, stored in shared SharePoint for production
 - staff handling through a normal inbox first, then a shared mailbox
 - no full case-management platform in version 1
 
@@ -32,6 +35,9 @@ This project is intentionally lightweight:
 - Generate the enquiry reference from the Forms response ID so version 1 does not need a separate counter store.
 - Use an Excel table keyed on normalized university email.
 - Send one structured staff email and one student acknowledgement email for every submission.
+- Allow optional uploads for screenshots/evidence: up to 10 files, 10 MB each, Image/PDF/Word.
+- Email links to the stored files rather than attaching files directly.
+- For production, use a group-owned form so upload storage lives in the group's SharePoint site rather than a personal OneDrive.
 - Keep routing advisory only through subject tags and a suggested owner field.
 
 ## What to open first
@@ -67,6 +73,9 @@ This project is intentionally lightweight:
 - `templates/student_enquiry_form_import.docx`: editable Word file to upload into Microsoft Forms by Quick Import
 - `templates/staff_email_template.txt`: staff email subject/body draft
 - `templates/student_acknowledgement_email.txt`: student acknowledgement draft
+- `templates/ai_draft_response_future.md`: future design for AI-generated draft replies with staff review
+- `templates/drafter_reply_workflow_future.md`: design for linking the first staff notification email to the existing Email Drafter copy/paste workflow
+- `templates/power_app_future.md`: future design note for a fully integrated Power Apps staff ticketing screen
 - `templates/student_lookup_schema.csv`: starter Excel lookup schema with sample rows
 - `templates/student_lookup_template.xlsx`: editable Excel workbook template for lookup data
 
@@ -75,6 +84,19 @@ This project is intentionally lightweight:
 1. Run the first clean end-to-end tests, capture the Forms Message field ID, and replace the temporary JSON dump in the staff email with the dedicated message field.
 2. Repoint the pilot inbox from `david.chivers@durham.ac.uk` to the target inbox or shared mailbox once testing passes.
 3. Keep the website and handover pages aligned with the tested pilot model and the mailbox-porting steps.
+
+## Handover and removal from access
+
+Target state:
+
+- Microsoft Form is owned by the department/shared Microsoft 365 group.
+- File uploads are stored in the group's SharePoint, not in an individual's OneDrive.
+- Lookup workbook lives in the group's SharePoint.
+- Staff notifications go to a shared mailbox or department-owned inbox.
+- Power Automate connections are owned by an appropriate service/shared owner or named operational owner, not by the pilot builder.
+- David is removed from form, flow, SharePoint evidence storage, and mailbox access after handover testing passes.
+
+Do not remove the pilot builder until the flow has been reconnected and tested using the production owners/connections. Otherwise the form may be group-owned but the automation may still silently depend on the pilot builder's credentials.
 
 ## Packaging note
 

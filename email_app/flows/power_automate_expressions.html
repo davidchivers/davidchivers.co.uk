@@ -60,8 +60,19 @@ email</h2>
   &#39;DEPT-&#39;,
   formatDateTime(utcNow(),&#39;yyyy&#39;),
   &#39;-&#39;,
-  padLeft(string(outputs(&#39;Compose_ResponseId&#39;)), 6, &#39;0&#39;)
+  substring(
+    concat(&#39;000000&#39;, string(outputs(&#39;Compose_ResponseId&#39;))),
+    sub(length(concat(&#39;000000&#39;, string(outputs(&#39;Compose_ResponseId&#39;)))), 6),
+    6
+  )
 )</code></pre>
+<blockquote>
+<p><strong>Note:</strong> <code>padLeft</code> and
+<code>formatNumber</code> are not valid Power Automate workflow
+expression functions. Use the <code>substring</code>/<code>concat</code>
+approach above, which pads the response ID to six digits using only
+supported functions.</p>
+</blockquote>
 <h2 id="resolved-enquiry-type">5. resolved enquiry type</h2>
 <p>Use the <code>Other enquiry type</code> value only when needed:</p>
 <pre class="text"><code>if(
@@ -70,10 +81,20 @@ email</h2>
   outputs(&#39;Compose_EnquiryType&#39;)
 )</code></pre>
 <h2 id="stage-tag">6. stage tag</h2>
+<p>Use <code>Unknown</code> when the stage was not resolved so unmatched
+enquiries are not mislabeled as <code>PGT</code>.</p>
 <pre class="text"><code>if(
-  equals(variables(&#39;resolved_stage&#39;),&#39;Undergraduate&#39;),
-  &#39;UG&#39;,
-  &#39;PGT&#39;
+  empty(variables(&#39;resolved_stage&#39;)),
+  &#39;Unknown&#39;,
+  if(
+    equals(variables(&#39;resolved_stage&#39;),&#39;Undergraduate&#39;),
+    &#39;UG&#39;,
+    if(
+      equals(variables(&#39;resolved_stage&#39;),&#39;Taught postgraduate&#39;),
+      &#39;PGT&#39;,
+      &#39;Unknown&#39;
+    )
+  )
 )</code></pre>
 <h2 id="year-tag">7. year tag</h2>
 <pre class="text"><code>if(
@@ -89,30 +110,34 @@ email</h2>
 )</code></pre>
 <h2 id="staff-email-subject">9. staff email subject</h2>
 <pre class="text"><code>concat(
-  &#39;[Enquiry][&#39;,
-  outputs(&#39;Compose_EnquiryType&#39;),
-  &#39;][&#39;,
-  outputs(&#39;Compose_StageTag&#39;),
-  &#39;]&#39;,
-  outputs(&#39;Compose_YearTag&#39;),
-  &#39;[&#39;,
-  outputs(&#39;Compose_LookupTag&#39;),
-  &#39;] &#39;,
-  outputs(&#39;Compose_ReferenceNumber&#39;),
-  &#39; - &#39;,
-  if(
-    empty(outputs(&#39;Compose_SelectedUsername&#39;)),
-    outputs(&#39;Compose_SelectedStudentEmail&#39;),
-    outputs(&#39;Compose_SelectedUsername&#39;)
-  )
+  &#39;[Form submission] &#39;,
+  outputs(&#39;Compose_DisplayNameForStaff&#39;),
+  &#39; | &#39;,
+  outputs(&#39;Compose_ResolvedEnquiryType&#39;),
+  &#39; | Ref: &#39;,
+  outputs(&#39;Compose_ReferenceNumber&#39;)
 )</code></pre>
-<h2 id="blank-safe-year-display">10. blank-safe year display</h2>
+<h2 id="drafter-link-for-the-staff-notification">10. drafter link for
+the staff notification</h2>
+<p>Add a <code>Compose_DrafterLink</code> action before the staff email.
+Replace the base URL if the drafter is hosted somewhere else.</p>
+<pre class="text"><code>concat(
+  &#39;https://davidchivers.co.uk/drafter/?type=&#39;,
+  uriComponent(outputs(&#39;Compose_ResolvedEnquiryType&#39;)),
+  &#39;&amp;student=&#39;,
+  uriComponent(outputs(&#39;Compose_DisplayNameForStaff&#39;)),
+  &#39;&amp;ref=&#39;,
+  uriComponent(outputs(&#39;Compose_ReferenceNumber&#39;))
+)</code></pre>
+<p>Use this only in the first staff notification email. The reply mailto
+should stay focused on opening a clean Outlook reply to the student.</p>
+<h2 id="blank-safe-year-display">11. blank-safe year display</h2>
 <pre class="text"><code>if(
   empty(variables(&#39;resolved_year&#39;)),
   &#39;Not applicable&#39;,
   variables(&#39;resolved_year&#39;)
 )</code></pre>
-<h2 id="blank-safe-other-enquiry-type-display">11. blank-safe other
+<h2 id="blank-safe-other-enquiry-type-display">12. blank-safe other
 enquiry type display</h2>
 <pre class="text"><code>if(
   empty(outputs(&#39;Compose_OtherEnquiryType&#39;)),
@@ -123,5 +148,8 @@ enquiry type display</h2>
 <p>For suggested owner, use a <code>Switch</code> action rather than a
 long nested <code>if()</code> expression. It is easier to maintain and
 safer for non-technical admins to update later.</p>
+<p>If the preferred short form is used, do not backfill programme,
+stage, or year from unrelated answers when lookup misses. Leave those
+values blank and let the display logic handle them safely.</p>
 </body>
 </html>

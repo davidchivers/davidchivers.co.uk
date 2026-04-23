@@ -26,15 +26,15 @@ Please do not include unnecessary sensitive personal or medical information in t
 
 - Options:
 
-`Module enquiry`  
 `Academic advisor`  
 `Assessment query`  
-`Extension`  
-`Mitigating circumstances`  
 `Attendance`  
-`Timetable`  
-`IT / systems access`  
+`Extension`  
 `Fees / finance`  
+`IT / systems access`  
+`Mitigating circumstances`  
+`Module enquiry`  
+`Timetable`  
 `Other`
 
 ### 2. Other enquiry type
@@ -61,6 +61,28 @@ Show only if `Enquiry type = Other`.
 
 `Include enough detail for staff to understand the issue and what help you need.`
 
+### 4. Attach files or screenshots
+
+- Type: file upload
+- Required: no
+- Prompt:
+
+`Attach files or screenshots if relevant`
+
+- Help text:
+
+`Upload screenshots, PDFs, or short supporting documents that help staff understand the issue. Do not upload unnecessary sensitive personal or medical information; use any formal university evidence process where required.`
+
+- Recommended settings:
+  - Respondents: only people in the organisation
+  - Maximum number of files: 10
+  - Single file size limit: 10 MB
+  - File types: Image, PDF, Word
+
+- Storage note:
+  - For production, make this a group-owned form so uploads live in the group SharePoint site rather than an individual's OneDrive.
+  - Staff emails should include links to uploaded files or the enquiry evidence folder, not copies of the files as email attachments.
+
 ## Optional checkpoint field
 
 Preferred version 1 build:
@@ -75,8 +97,8 @@ Fallback if matching later proves unreliable:
 
 ## Branching map
 
-- If `Enquiry type = Other`, show `Other enquiry type`, then `Message`.
-- Otherwise, skip `Other enquiry type` and go to `Message`.
+- If `Enquiry type = Other`, show `Other enquiry type`, then `Message`, then `Attach files or screenshots`.
+- Otherwise, skip `Other enquiry type` and go to `Message`, then `Attach files or screenshots`.
 
 ## Thank-you message
 

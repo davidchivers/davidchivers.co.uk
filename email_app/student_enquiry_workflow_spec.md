@@ -68,15 +68,15 @@ For a cautious pilot, use the recorded responder email as the acknowledgement ad
 
 ### Enquiry type values
 
-- Module enquiry
 - Academic advisor
 - Assessment query
-- Extension
-- Mitigating circumstances
 - Attendance
-- Timetable
-- IT / systems access
+- Extension
 - Fees / finance
+- IT / systems access
+- Mitigating circumstances
+- Module enquiry
+- Timetable
 - Other
 
 ### Identity note
@@ -186,6 +186,7 @@ Recommended resolved-value rule:
 
 - If lookup succeeds, use Excel values as the main staff-facing values.
 - If lookup fails, fall back to the recorded responder email and let staff check Banner or the student record manually.
+- If lookup fails in the preferred short-form build, do not populate programme, stage, or year from unrelated form answers such as enquiry type. Leave them blank or mark them as `Not matched`.
 - Do not rely on the spreadsheet as the normal staff working interface; use it as backend lookup data.
 
 ### Soft routing and tagging
@@ -217,6 +218,7 @@ The staff email should include:
 - reference number
 - lookup status
 - suggested owner
+- resolved enquiry type in the subject tags when `Other` was selected
 - student identity fields
 - study context fields
 - Banner identifiers or link
@@ -292,28 +294,29 @@ Operational note:
 
 ### Subject
 
-`[Enquiry][Module enquiry][UG][Year 2][Matched] DEPT-2026-000123 - hfnt93`
+`[Form submission] Jane Smith | Extension | Ref: DEPT-2026-000123`
 
 ### Body structure
 
-Reference number:
-Recorded responder email:
-Derived username:
-Student name:
-Student email:
-Student ID:
-Stage of study:
-Year of study:
-Programme of study:
-Enquiry type:
-Other enquiry type:
-Academic advisor:
-Banner link / code:
-Lookup status:
-Suggested owner:
-Student message:
+The first line should contain the staff actions:
 
-This should remain short, plain, and easy to scan on desktop or mobile Outlook.
+```html
+<p>
+  <strong><a href="{{ReplyLink}}">Reply to {{DisplayNameForStaff}}</a></strong>
+  &nbsp;|&nbsp;
+  <a href="{{DrafterLink}}">Open Email Drafter</a>
+</p>
+```
+
+Then include:
+
+- student message
+- lookup details: email, username, student ID, programme, stage, year, advisor, Banner link/code
+- uploaded file links, if the form has attachments
+
+The subject already contains the form-submission marker, student display name, enquiry type, and reference number. Do not repeat those as a second summary line in the body.
+
+`Open Email Drafter` belongs in this first staff notification email. The Outlook reply link should only open a clean reply draft addressed to the student.
 
 ## 8. draft student acknowledgement email
 

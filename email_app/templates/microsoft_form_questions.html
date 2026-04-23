@@ -58,15 +58,15 @@ information in the message box.</p>
 <ul>
 <li>Options:</li>
 </ul>
-<p><code>Module enquiry</code><br />
-<code>Academic advisor</code><br />
+<p><code>Academic advisor</code><br />
 <code>Assessment query</code><br />
-<code>Extension</code><br />
-<code>Mitigating circumstances</code><br />
 <code>Attendance</code><br />
-<code>Timetable</code><br />
-<code>IT / systems access</code><br />
+<code>Extension</code><br />
 <code>Fees / finance</code><br />
+<code>IT / systems access</code><br />
+<code>Mitigating circumstances</code><br />
+<code>Module enquiry</code><br />
+<code>Timetable</code><br />
 <code>Other</code></p>
 <h3 id="other-enquiry-type">2. Other enquiry type</h3>
 <ul>
@@ -90,6 +90,33 @@ information in the message box.</p>
 <li>Help text:</li>
 </ul>
 <p><code>Include enough detail for staff to understand the issue and what help you need.</code></p>
+<h3 id="attach-files-or-screenshots">4. Attach files or screenshots</h3>
+<ul>
+<li>Type: file upload</li>
+<li>Required: no</li>
+<li>Prompt:</li>
+</ul>
+<p><code>Attach files or screenshots if relevant</code></p>
+<ul>
+<li>Help text:</li>
+</ul>
+<p><code>Upload screenshots, PDFs, or short supporting documents that help staff understand the issue. Do not upload unnecessary sensitive personal or medical information; use any formal university evidence process where required.</code></p>
+<ul>
+<li>Recommended settings:
+<ul>
+<li>Respondents: only people in the organisation</li>
+<li>Maximum number of files: 10</li>
+<li>Single file size limit: 10 MB</li>
+<li>File types: Image, PDF, Word</li>
+</ul></li>
+<li>Storage note:
+<ul>
+<li>For production, make this a group-owned form so uploads live in the
+group SharePoint site rather than an individual’s OneDrive.</li>
+<li>Staff emails should include links to uploaded files or the enquiry
+evidence folder, not copies of the files as email attachments.</li>
+</ul></li>
+</ul>
 <h2 id="optional-checkpoint-field">Optional checkpoint field</h2>
 <p>Preferred version 1 build:</p>
 <ul>
@@ -106,9 +133,11 @@ shows they are needed.</li>
 <h2 id="branching-map">Branching map</h2>
 <ul>
 <li>If <code>Enquiry type = Other</code>, show
-<code>Other enquiry type</code>, then <code>Message</code>.</li>
+<code>Other enquiry type</code>, then <code>Message</code>, then
+<code>Attach files or screenshots</code>.</li>
 <li>Otherwise, skip <code>Other enquiry type</code> and go to
-<code>Message</code>.</li>
+<code>Message</code>, then
+<code>Attach files or screenshots</code>.</li>
 </ul>
 <h2 id="thank-you-message">Thank-you message</h2>
 <p><code>Thank you. Your enquiry has been submitted. You will receive an acknowledgement email with a reference number.</code></p>

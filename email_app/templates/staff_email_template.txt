@@ -1,28 +1,24 @@
 Subject:
-[Enquiry][{{EnquiryType}}][{{StageTag}}]{{YearTagBlock}}[{{LookupTag}}] {{ReferenceNumber}} - {{SelectedUsername}}
+[Form submission] {{DisplayNameForStaff}} | {{ResolvedEnquiryType}} | Ref: {{ReferenceNumber}}
 
-Body:
-Reference number: {{ReferenceNumber}}
-Submitted: {{SubmittedTimestamp}}
-Lookup status: {{LookupStatus}}
-Suggested owner: {{SuggestedOwner}}
+Body (HTML):
+<p>
+  <strong><a href="{{ReplyLink}}" style="color:#0563C1;text-decoration:none;">Reply to {{DisplayNameForStaff}}</a></strong>
+  &nbsp;|&nbsp;
+  <a href="{{DrafterLink}}" style="color:#0563C1;text-decoration:none;">Open Email Drafter</a>
+</p>
 
-Recorded responder email: {{StudentEmail}}
-Derived username: {{SelectedUsername}}
-Student name: {{StudentName}}
-Student email: {{StudentEmail}}
-Student ID: {{StudentID}}
+<hr>
 
-Stage of study: {{StageOfStudy}}
-Year of study: {{YearOfStudy}}
-Programme of study: {{ProgrammeOfStudy}}
+<p><strong>Student message</strong></p>
+<div style="border-left:4px solid #68246D;padding:10px 12px;margin:8px 0 14px 0;background-color:#F7F4F7;">
+{{StudentMessageHtml}}
+</div>
 
-Enquiry type: {{EnquiryType}}
-Other enquiry type: {{OtherEnquiryType}}
+<hr>
 
-Academic advisor: {{AcademicAdvisor}}
-Banner link: {{BannerLink}}
-Banner code: {{BannerCode}}
-
-Student message:
-{{StudentMessage}}
+<p><strong>Lookup details</strong><br>
+Email: {{StudentEmail}} | Username: {{SelectedUsername}} | ID: {{StudentID}}<br>
+Programme: {{ProgrammeOfStudyBlankSafe}} | Stage: {{StageOfStudyBlankSafe}} | Year: {{YearOfStudyBlankSafe}}<br>
+Advisor: {{AcademicAdvisor}}<br>
+Banner: {{BannerLink}} | Banner code: {{BannerCode}}</p>
