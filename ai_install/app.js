@@ -9,9 +9,14 @@
 };
 
 const distribution = {
+  starterZipUrls: {
+    basic: 'downloads/starter_basic.zip',
+    advanced: 'downloads/starter_advanced.zip'
+  },
   github: {
-    owner: 'davidchivers',
-    repo: 'ai_install',
+    // Optional branch-ZIP fallback if a dedicated distribution repo is created later.
+    owner: '',
+    repo: '',
     branchBasic: 'starter_basic',
     branchAdvanced: 'starter_advanced'
   },
@@ -19,6 +24,7 @@ const distribution = {
   oneDriveFolderUrlAdvanced: '',
   vscodeProfileUrl: 'https://vscode.dev/editor/profile/github/0cf6696b0aa251846a9b1ed761267f88',
   cursorProfileUrl: 'cursor://profile/github/0cf6696b0aa251846a9b1ed761267f88',
+  // Public slide assets are expected to be served from the personal-site repo path.
   teachingSlidesUrl: '/ai_install/slides/ai_coding_agents_workshop_slides.pptx',
   githubEducationUrl: 'https://education.github.com/pack'
 };
@@ -126,6 +132,12 @@ function githubZipUrlForPack(pack) {
     return `https://github.com/${owner}/${repo}/archive/refs/heads/${branchAdvanced}.zip`;
   }
   return null;
+}
+
+function starterZipUrlForPack(pack) {
+  const configuredUrl = distribution.starterZipUrls && distribution.starterZipUrls[pack];
+  if (hasConfiguredUrl(configuredUrl)) return configuredUrl;
+  return githubZipUrlForPack(pack);
 }
 
 function hasConfiguredUrl(url) {
@@ -380,8 +392,8 @@ function authStep() {
 
 function templateStep() {
   const editor = editorLabel(state.editor);
-  const basicZipUrl = githubZipUrlForPack('basic');
-  const advancedZipUrl = githubZipUrlForPack('advanced');
+  const basicZipUrl = starterZipUrlForPack('basic');
+  const advancedZipUrl = starterZipUrlForPack('advanced');
   const hasBasicOneDrive = hasConfiguredUrl(distribution.oneDriveFolderUrlBasic);
   const hasAdvancedOneDrive = hasConfiguredUrl(distribution.oneDriveFolderUrlAdvanced);
   const pageNumber = state.route === 'simple' ? 3 : 5;
