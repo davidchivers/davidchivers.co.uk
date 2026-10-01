@@ -1,34 +1,155 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Setup Wizard (Codex, Claude Code, Gemini CLI)</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get ready for the AI for economic research course: GitHub Education, GitHub Copilot, VS Code and a simple research folder.">
+  <meta name="theme-color" content="#f5f3ed">
+  <title>AI for economic research · Before the course</title>
+  <link rel="stylesheet" href="styles.css?v=20261001-1">
+  <script src="app.js?v=20261001-1" defer></script>
 </head>
 <body>
-  <div class="shell">
-    <aside class="sidebar card">
-      <h1>AI Setup Wizard (Codex, Claude Code, Gemini CLI)</h1>
-      <p class="sub">Beginner-friendly step-by-step setup</p>
-      <div class="progress"><div id="progressBar" class="progress__bar"></div></div>
-      <ul id="stepNav" class="step-nav"></ul>
-      <div class="callout callout--tip">
-        <strong>Fast help:</strong> if a command fails, paste the full error into your selected AI tool and ask for the exact next command.
+  <a class="skip-link" href="#setup">Skip to setup steps</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/">David Chivers<span>Economics &amp; research</span></a>
+    <span class="course-label">AI for economic research</span>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow"><span class="small-dot" aria-hidden="true"></span> Before the course · PhD students</p>
+        <h1 id="page-title">Get ready for<br><em>AI research.</em></h1>
+        <p class="intro">Set up a place to work with AI, your code and your research notes. Follow these six steps before we meet.</p>
+        <a class="button primary" href="#github">Start the setup <span aria-hidden="true">↗</span></a>
       </div>
-    </aside>
-
-    <main class="content card">
-      <div id="stepContent"></div>
-      <div class="actions">
-        <button id="backBtn" class="btn">Back</button>
-        <div class="actions__right">
-          <button id="nextBtn" class="btn btn--primary">Next</button>
+      <aside class="before-you-start" aria-label="Before you start">
+        <p class="eyebrow">A little preparation</p>
+        <h2>Start at least<br>a week before.</h2>
+        <p>GitHub needs to verify that you are a student. Approval and activation can take several days.</p>
+        <ul class="quick-facts"><li>Windows or Mac laptop</li><li>Your university email</li><li>Proof of current enrolment</li></ul>
+        <p class="small">VS Code is free. Verified students can activate the free Copilot Student plan.</p>
+      </aside>
+    </section>
+    <div class="setup-layout" id="setup">
+      <aside class="setup-sidebar">
+        <div class="sidebar-inner">
+          <p class="eyebrow">Your setup checklist</p>
+          <p class="progress-label" id="progressText" aria-live="polite">0 of 6 steps checked</p>
+          <progress id="setupProgress" max="6" value="0" aria-label="Setup steps checked">0 of 6</progress>
+          <nav aria-label="Setup steps"><ol class="step-nav">
+            <li><a href="#github" data-step-link="github"><span>01</span> GitHub Education</a></li>
+            <li><a href="#activate" data-step-link="activate"><span>02</span> Activate Copilot</a></li>
+            <li><a href="#vscode" data-step-link="vscode"><span>03</span> Install VS Code</a></li>
+            <li><a href="#connect" data-step-link="connect"><span>04</span> Connect your account</a></li>
+            <li><a href="#folder" data-step-link="folder"><span>05</span> Set up your folder</a></li>
+            <li><a href="#test" data-step-link="test"><span>06</span> Try it out</a></li>
+          </ol></nav>
+          <p class="small" id="saveNote">Tick steps as you finish. Your checklist is saved in this browser.</p>
+          <button class="text-button" type="button" id="resetChecklist">Reset checklist</button>
+          <a class="help-link" href="#help">Need a hand? <span aria-hidden="true">↓</span></a>
         </div>
+      </aside>
+      <div class="steps">
+        <noscript><p class="notice">All setup instructions work without JavaScript. Checklist progress will not be saved and the copy button is unavailable.</p></noscript>
+        <section class="step-card" id="github" aria-labelledby="github-title">
+          <div class="step-heading"><span class="step-number">01</span><div><p class="step-kicker">Your student access</p><h2 id="github-title">Sign up for GitHub Education</h2></div></div>
+          <p>GitHub is where your account lives. GitHub Education verifies your student status so you can claim student benefits.</p>
+          <ol class="instructions">
+            <li><a href="https://github.com/signup" target="_blank" rel="noopener noreferrer">Create a GitHub account</a>, or sign in to the one you already use.</li>
+            <li>Add your university email in <a href="https://github.com/settings/emails" target="_blank" rel="noopener noreferrer">Settings → Emails</a>. Open the verification email and confirm it.</li>
+            <li>Open Education benefits, choose <strong>Start an application</strong>, and apply as a student.</li>
+            <li>Follow the application prompts. If asked, provide proof of current enrolment, such as a dated student card, transcript or enrolment letter.</li>
+          </ol>
+          <a class="button secondary" href="https://github.com/settings/education/benefits" target="_blank" rel="noopener noreferrer">Apply for GitHub Education <span aria-hidden="true">↗</span></a>
+          <p class="notice"><strong>Already applied?</strong> Continue with the VS Code and folder steps while you wait. Come back to step 2 after approval.</p>
+          <label class="done-check"><input type="checkbox" data-step="github"> <span>I have submitted my student application, or I am already verified.</span></label>
+        </section>
+        <section class="step-card" id="activate" aria-labelledby="activate-title">
+          <div class="step-heading"><span class="step-number">02</span><div><p class="step-kicker">After Education approval</p><h2 id="activate-title">Activate GitHub Copilot</h2></div></div>
+          <p>Copilot is the AI assistant we will use inside VS Code. Education approval and Copilot activation are separate steps.</p>
+          <ol class="instructions">
+            <li>Return to your <a href="https://github.com/settings/education/benefits" target="_blank" rel="noopener noreferrer">Education benefits</a>.</li>
+            <li>Find the Copilot benefit. Under <strong>Free GitHub developer resources for students and teachers</strong>, choose <strong>Learn more</strong> and follow the activation prompts.</li>
+            <li>Check your Copilot settings to confirm that the <strong>Copilot Student</strong> plan is active.</li>
+          </ol>
+          <a class="button secondary" href="https://github.com/settings/copilot" target="_blank" rel="noopener noreferrer">Check Copilot access <span aria-hidden="true">↗</span></a>
+          <p class="notice"><strong>Only seeing paid options?</strong> Do not buy a plan for this setup. Student benefits can take several days to appear after verification. Wait and retry; see the help below if the problem continues.</p>
+          <p class="small">The Student plan has usage limits and automatic model selection. You do not need to choose a particular model for the readiness check.</p>
+          <label class="done-check"><input type="checkbox" data-step="activate"> <span>My Copilot Student access is active.</span></label>
+        </section>
+        <section class="step-card" id="vscode" aria-labelledby="vscode-title">
+          <div class="step-heading"><span class="step-number">03</span><div><p class="step-kicker">Your workspace</p><h2 id="vscode-title">Download Visual Studio Code</h2></div></div>
+          <p>VS Code is the app where you will open your project folder, work on files and talk to Copilot.</p>
+          <a class="button secondary" href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">Download VS Code <span aria-hidden="true">↗</span></a>
+          <div class="os-options">
+            <details><summary>On Windows</summary><p>Download the Windows installer. Run it, follow the installation prompts, then open <strong>Visual Studio Code</strong> from the Start menu.</p></details>
+            <details><summary>On Mac</summary><p>Download the Mac version and open the downloaded archive. Move <strong>Visual Studio Code</strong> to Applications, then open it.</p></details>
+          </div>
+          <p class="small">Choose Visual Studio Code. You do not need the separate Visual Studio product, a command-line AI tool or an API key for this setup.</p>
+          <label class="done-check"><input type="checkbox" data-step="vscode"> <span>VS Code is installed and opens on my laptop.</span></label>
+        </section>
+        <section class="step-card" id="connect" aria-labelledby="connect-title">
+          <div class="step-heading"><span class="step-number">04</span><div><p class="step-kicker">Use the same GitHub account</p><h2 id="connect-title">Connect Copilot to VS Code</h2></div></div>
+          <ol class="instructions">
+            <li>Open VS Code and find the <strong>Copilot icon</strong> in the status bar.</li>
+            <li>Choose <strong>Use AI Features</strong> or <strong>Sign in to use Copilot</strong>.</li>
+            <li>Choose GitHub and finish signing in through your browser. Use the <strong>same GitHub account</strong> you used for Education.</li>
+            <li>Allow the browser to return you to VS Code. Open the Copilot chat panel.</li>
+          </ol>
+          <details><summary>Cannot find Copilot?</summary><p>Open the <strong>Accounts</strong> menu in VS Code and look for <strong>Sign in with GitHub to use GitHub Copilot</strong>. Update VS Code if the option is missing, then follow the <a href="https://code.visualstudio.com/docs/setup/copilot" target="_blank" rel="noopener noreferrer">official setup guide</a>.</p></details>
+          <p class="notice"><strong>Education still pending?</strong> An eligible account can use Copilot Free to test the connection. Its allowance is limited. Leave step 2 unticked until Student access is active.</p>
+          <p class="small">University Microsoft Copilot is a separate service. This sign-in connects GitHub Copilot to VS Code.</p>
+          <label class="done-check"><input type="checkbox" data-step="connect"> <span>I am signed in with the correct GitHub account and can open Copilot chat.</span></label>
+        </section>
+        <section class="step-card" id="folder" aria-labelledby="folder-title">
+          <div class="step-heading"><span class="step-number">05</span><div><p class="step-kicker">Keep everything together</p><h2 id="folder-title">Set up a course folder</h2></div></div>
+          <p>Download this small starter folder. It contains a README and places for code, notes and outputs.</p>
+          <a class="button secondary" href="downloads/ai_economics_starter.zip" download>Download the course folder <span aria-hidden="true">↓</span></a>
+          <ol class="instructions">
+            <li><strong>Unzip it.</strong> On Windows, right-click the ZIP and choose <strong>Extract All</strong>. On Mac, double-click it.</li>
+            <li>Move the extracted <code>ai-economics</code> folder somewhere easy to find, such as Documents.</li>
+            <li>In VS Code, choose <strong>File → Open Folder</strong> and select <code>ai-economics</code>. Open the extracted folder, rather than the ZIP.</li>
+            <li>If VS Code asks about workspace trust, you can trust this course folder that you have just downloaded.</li>
+          </ol>
+          <div class="folder-preview" aria-label="Course folder contents"><span class="folder-caption">Your project</span><pre>ai-economics/
+├── README.md        What this project is for
+├── code/            Scripts and analysis
+├── notes/           Questions and research notes
+└── outputs/         Tables, figures and results</pre></div>
+          <details><summary>Prefer to make your own folder?</summary><p>Create a folder called <code>ai-economics</code> in Documents. Inside it, create <code>code</code>, <code>notes</code> and <code>outputs</code> folders. Add a file called <code>README.md</code> with a sentence about the course, then open <code>ai-economics</code> in VS Code.</p></details>
+          <p class="small">Your course folder stays on your laptop. Signing in does not publish it to GitHub. A repository is not needed for this setup.</p>
+          <label class="done-check"><input type="checkbox" data-step="folder"> <span>My course folder is open in VS Code and I can see its files.</span></label>
+        </section>
+        <section class="step-card" id="test" aria-labelledby="test-title">
+          <div class="step-heading"><span class="step-number">06</span><div><p class="step-kicker">A quick readiness check</p><h2 id="test-title">Try your first question</h2></div></div>
+          <ol class="instructions">
+            <li>In VS Code, open <code>README.md</code> from your course folder.</li>
+            <li>Open Copilot chat. If a chat mode selector is shown, choose <strong>Ask</strong> for this explanation.</li>
+            <li>Copy and send the question below.</li>
+          </ol>
+          <div class="prompt-box"><div class="prompt-heading"><span>Your first prompt</span><button class="copy-button" id="copyPrompt" type="button" hidden>Copy prompt</button></div><p id="firstPrompt">I am a PhD economics student learning to use AI for research. Explain omitted-variable bias using an example about education and wages. State the assumptions, distinguish association from causation, and suggest one question I should ask to check your explanation. Keep it under 200 words.</p></div>
+          <p>When you receive a reply, create a file called <code>first-question.md</code> inside <code>notes</code>. Write down one assumption you would challenge, then save the file.</p>
+          <p class="notice"><strong>The check:</strong> you can ask a question, receive an answer and save your own notes in the project. That is enough to get started.</p>
+          <label class="done-check"><input type="checkbox" data-step="test"> <span>Copilot has replied and I have saved my first research note.</span></label>
+        </section>
+        <section class="ready-panel" aria-labelledby="ready-title">
+          <span class="ready-symbol" aria-hidden="true">↗</span>
+          <div><p class="eyebrow">Bring your laptop</p><h2 id="ready-title">Ready for the session.</h2><p id="readyMessage">Once all six checks are ticked, bring your laptop with VS Code and your course folder ready to open.</p><p class="small">VS Code is an editor. Running Python, R or Stata also needs the relevant software. We will give any exercise-specific instructions separately.</p></div>
+        </section>
+        <section class="help-section" id="help" aria-labelledby="help-title">
+          <p class="eyebrow">If you get stuck</p><h2 id="help-title">A few common questions</h2>
+          <details><summary>My student application has not been approved.</summary><p>Complete the VS Code and folder steps while you wait. Check your Education application status and any requests for further evidence. Use <a href="https://docs.github.com/en/education/about-github-education/github-education-for-students/solving-problems-with-your-github-education-access" target="_blank" rel="noopener noreferrer">GitHub's Education troubleshooting guide</a> if the application is rejected or stalled.</p></details>
+          <details><summary>I am verified, but Copilot still says Free.</summary><p>Approval and activation are separate. Return to step 2 and try the activation prompts. Benefits can take several days to apply. If Student access is still unavailable after that, <a href="https://support.github.com/" target="_blank" rel="noopener noreferrer">contact GitHub Support</a>. Do not purchase a subscription to fix this.</p></details>
+          <details><summary>I have signed in with the wrong account.</summary><p>In VS Code, open <strong>Accounts</strong>, sign out of the incorrect GitHub account, and sign in again with your Education account. Check which account your browser is using as well.</p></details>
+          <details><summary>Can I use the university's Microsoft Copilot?</summary><p>Yes, for questions and learning. These instructions set up a separate tool, <strong>GitHub Copilot</strong>, for working with project files in VS Code. Your university Microsoft sign-in does not activate GitHub Copilot.</p></details>
+          <details><summary>My university laptop will not let me install VS Code.</summary><p>Check your university's software portal or ask IT for VS Code. If installation remains blocked, bring your laptop and let the course organiser know before the session so an alternative can be arranged.</p></details>
+          <details><summary>Should I add my own research data?</summary><p>Use public or synthetic material for this setup. Before using real research files with AI, check your university's rules and the data's permissions. Keep personal, confidential and restricted data out of the practice folder.</p></details>
+          <p class="small">If a problem remains, tell the course organiser which step failed, whether you use Windows or Mac, and the error message. Leave passwords and personal documents out of your message.</p>
+        </section>
       </div>
-    </main>
-  </div>
-  <script src="app.js?v=20260430-1"></script>
+    </div>
+  </main>
+  <footer class="site-footer wrap"><span>David Chivers · AI for economic research</span><span>Instructions checked 1 October 2026</span></footer>
 </body>
 </html>
-
