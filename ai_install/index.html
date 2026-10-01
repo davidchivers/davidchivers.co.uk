@@ -104,34 +104,21 @@
         </section>
         <section class="step-card" id="folder" aria-labelledby="folder-title">
           <div class="step-heading"><span class="step-number">05</span><div><p class="step-kicker">Keep everything together</p><h2 id="folder-title">Set up a course folder</h2></div></div>
-          <p>Download this small starter folder. It contains a README and places for code, notes and outputs.</p>
-          <a class="button secondary" href="downloads/ai_economics_starter.zip" download>Download the course folder <span aria-hidden="true">↓</span></a>
+          <p>Create a folder for the course. Leave it empty for now; we will add the materials later.</p>
           <ol class="instructions">
-            <li><strong>Unzip it.</strong> On Windows, right-click the ZIP and choose <strong>Extract All</strong>. On Mac, double-click it.</li>
-            <li>Move the extracted <code>ai-economics</code> folder somewhere easy to find, such as Documents.</li>
-            <li>In VS Code, choose <strong>File → Open Folder</strong> and select <code>ai-economics</code>. Open the extracted folder, rather than the ZIP.</li>
-            <li>If VS Code asks about workspace trust, you can trust this course folder that you have just downloaded.</li>
+            <li>In Documents, create a new folder called <code>ai-economics</code>.</li>
+            <li>In VS Code, choose <strong>File → Open Folder</strong> and select <code>ai-economics</code>.</li>
+            <li>If VS Code asks about workspace trust, you can trust this empty folder you have just created.</li>
           </ol>
-          <div class="folder-preview" aria-label="Course folder contents"><span class="folder-caption">Your project</span><pre>ai-economics/
-├── README.md        What this project is for
-├── code/            Scripts and analysis
-├── notes/           Questions and research notes
-└── outputs/         Tables, figures and results</pre></div>
-          <details><summary>Prefer to make your own folder?</summary><p>Create a folder called <code>ai-economics</code> in Documents. Inside it, create <code>code</code>, <code>notes</code> and <code>outputs</code> folders. Add a file called <code>README.md</code> with a sentence about the course, then open <code>ai-economics</code> in VS Code.</p></details>
-          <p class="small">Your course folder stays on your laptop. Signing in does not publish it to GitHub. A repository is not needed for this setup.</p>
-          <label class="done-check"><input type="checkbox" data-step="folder"> <span>My course folder is open in VS Code and I can see its files.</span></label>
+          <p class="small">Keep this folder on your laptop. You do not need to create a GitHub repository.</p>
+          <label class="done-check"><input type="checkbox" data-step="folder"> <span>I have created and opened my course folder in VS Code.</span></label>
         </section>
         <section class="step-card" id="test" aria-labelledby="test-title">
-          <div class="step-heading"><span class="step-number">06</span><div><p class="step-kicker">A quick readiness check</p><h2 id="test-title">Try your first question</h2></div></div>
-          <ol class="instructions">
-            <li>In VS Code, open <code>README.md</code> from your course folder.</li>
-            <li>Open Copilot chat. If a chat mode selector is shown, choose <strong>Ask</strong> for this explanation.</li>
-            <li>Copy and send the question below.</li>
-          </ol>
-          <div class="prompt-box"><div class="prompt-heading"><span>Your first prompt</span><button class="copy-button" id="copyPrompt" type="button" hidden>Copy prompt</button></div><p id="firstPrompt">I am a PhD economics student learning to use AI for research. Explain omitted-variable bias using an example about education and wages. State the assumptions, distinguish association from causation, and suggest one question I should ask to check your explanation. Keep it under 200 words.</p></div>
-          <p>When you receive a reply, create a file called <code>first-question.md</code> inside <code>notes</code>. Write down one assumption you would challenge, then save the file.</p>
-          <p class="notice"><strong>The check:</strong> you can ask a question, receive an answer and save your own notes in the project. That is enough to get started.</p>
-          <label class="done-check"><input type="checkbox" data-step="test"> <span>Copilot has replied and I have saved my first research note.</span></label>
+          <div class="step-heading"><span class="step-number">06</span><div><p class="step-kicker">A quick readiness check</p><h2 id="test-title">Check Copilot works</h2></div></div>
+          <p>Open Copilot chat in VS Code and send a question. If a chat mode selector is shown, choose <strong>Ask</strong>. You can use this example:</p>
+          <div class="prompt-box"><div class="prompt-heading"><span>A test question</span><button class="copy-button" id="copyPrompt" type="button" hidden>Copy prompt</button></div><p id="firstPrompt">Explain omitted-variable bias in plain English using an example about education and wages.</p></div>
+          <p>If you receive a reply, this step is done.</p>
+          <label class="done-check"><input type="checkbox" data-step="test"> <span>Copilot has replied to a question in VS Code.</span></label>
         </section>
         <section class="ready-panel" aria-labelledby="ready-title">
           <span class="ready-symbol" aria-hidden="true">↗</span>
