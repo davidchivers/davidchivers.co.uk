@@ -20,14 +20,14 @@
       <div>
         <p class="eyebrow"><span class="small-dot" aria-hidden="true"></span> Before the course · PhD students</p>
         <h1 id="page-title">Get ready for<br><em>AI research.</em></h1>
-        <p class="intro">Set up a place to work with AI, your code and your research notes. Follow these six steps before we meet.</p>
+        <p class="intro">Set up a place to work with AI, your code and your research notes. Start these six steps as soon as you have your Durham University email address.</p>
         <a class="button primary" href="#github">Start the setup <span aria-hidden="true">↗</span></a>
       </div>
       <aside class="before-you-start" aria-label="Before you start">
         <p class="eyebrow">A little preparation</p>
-        <h2>Start at least<br>a week before.</h2>
-        <p>GitHub needs to verify that you are a student. Approval and activation can take several days.</p>
-        <ul class="quick-facts"><li>Windows or Mac laptop</li><li>Your university email</li><li>Proof of current enrolment</li></ul>
+        <h2>Start as soon as you have your Durham email.</h2>
+        <p>Apply for GitHub Education straight away. Student verification and Copilot activation can take several days, so start as soon as your Durham University email address is available.</p>
+        <ul class="quick-facts"><li>Windows or Mac laptop</li><li>Your Durham email</li><li>Proof of current enrolment</li></ul>
         <p class="small">VS Code is free. Verified students can activate the free Copilot Student plan.</p>
       </aside>
     </section>
@@ -54,10 +54,10 @@
         <noscript><p class="notice">All setup instructions work without JavaScript. Checklist progress will not be saved and the copy button is unavailable.</p></noscript>
         <section class="step-card" id="github" aria-labelledby="github-title">
           <div class="step-heading"><span class="step-number">01</span><div><p class="step-kicker">Your student access</p><h2 id="github-title">Sign up for GitHub Education</h2></div></div>
-          <p>GitHub is where your account lives. GitHub Education verifies your student status so you can claim student benefits.</p>
+          <p>Apply as soon as you have your Durham University email address. GitHub Education verifies your student status so you can claim student benefits.</p>
           <ol class="instructions">
             <li><a href="https://github.com/signup" target="_blank" rel="noopener noreferrer">Create a GitHub account</a>, or sign in to the one you already use.</li>
-            <li>Add your university email in <a href="https://github.com/settings/emails" target="_blank" rel="noopener noreferrer">Settings → Emails</a>. Open the verification email and confirm it.</li>
+            <li>Add your Durham University email address in <a href="https://github.com/settings/emails" target="_blank" rel="noopener noreferrer">Settings → Emails</a>. Open the verification email and confirm it.</li>
             <li>Open Education benefits, choose <strong>Start an application</strong>, and apply as a student.</li>
             <li>Follow the application prompts. If asked, provide proof of current enrolment, such as a dated student card, transcript or enrolment letter.</li>
           </ol>
@@ -104,34 +104,21 @@
         </section>
         <section class="step-card" id="folder" aria-labelledby="folder-title">
           <div class="step-heading"><span class="step-number">05</span><div><p class="step-kicker">Keep everything together</p><h2 id="folder-title">Set up a course folder</h2></div></div>
-          <p>Download this small starter folder. It contains a README and places for code, notes and outputs.</p>
-          <a class="button secondary" href="downloads/ai_economics_starter.zip" download>Download the course folder <span aria-hidden="true">↓</span></a>
+          <p>Create a folder for the course. Leave it empty for now; we will add the materials later.</p>
           <ol class="instructions">
-            <li><strong>Unzip it.</strong> On Windows, right-click the ZIP and choose <strong>Extract All</strong>. On Mac, double-click it.</li>
-            <li>Move the extracted <code>ai-economics</code> folder somewhere easy to find, such as Documents.</li>
-            <li>In VS Code, choose <strong>File → Open Folder</strong> and select <code>ai-economics</code>. Open the extracted folder, rather than the ZIP.</li>
-            <li>If VS Code asks about workspace trust, you can trust this course folder that you have just downloaded.</li>
+            <li>In Documents, create a new folder called <code>ai-economics</code>.</li>
+            <li>In VS Code, choose <strong>File → Open Folder</strong> and select <code>ai-economics</code>.</li>
+            <li>If VS Code asks about workspace trust, you can trust this empty folder you have just created.</li>
           </ol>
-          <div class="folder-preview" aria-label="Course folder contents"><span class="folder-caption">Your project</span><pre>ai-economics/
-├── README.md        What this project is for
-├── code/            Scripts and analysis
-├── notes/           Questions and research notes
-└── outputs/         Tables, figures and results</pre></div>
-          <details><summary>Prefer to make your own folder?</summary><p>Create a folder called <code>ai-economics</code> in Documents. Inside it, create <code>code</code>, <code>notes</code> and <code>outputs</code> folders. Add a file called <code>README.md</code> with a sentence about the course, then open <code>ai-economics</code> in VS Code.</p></details>
-          <p class="small">Your course folder stays on your laptop. Signing in does not publish it to GitHub. A repository is not needed for this setup.</p>
-          <label class="done-check"><input type="checkbox" data-step="folder"> <span>My course folder is open in VS Code and I can see its files.</span></label>
+          <p class="small">Keep this folder on your laptop. You do not need to create a GitHub repository.</p>
+          <label class="done-check"><input type="checkbox" data-step="folder"> <span>I have created and opened my course folder in VS Code.</span></label>
         </section>
         <section class="step-card" id="test" aria-labelledby="test-title">
-          <div class="step-heading"><span class="step-number">06</span><div><p class="step-kicker">A quick readiness check</p><h2 id="test-title">Try your first question</h2></div></div>
-          <ol class="instructions">
-            <li>In VS Code, open <code>README.md</code> from your course folder.</li>
-            <li>Open Copilot chat. If a chat mode selector is shown, choose <strong>Ask</strong> for this explanation.</li>
-            <li>Copy and send the question below.</li>
-          </ol>
-          <div class="prompt-box"><div class="prompt-heading"><span>Your first prompt</span><button class="copy-button" id="copyPrompt" type="button" hidden>Copy prompt</button></div><p id="firstPrompt">I am a PhD economics student learning to use AI for research. Explain omitted-variable bias using an example about education and wages. State the assumptions, distinguish association from causation, and suggest one question I should ask to check your explanation. Keep it under 200 words.</p></div>
-          <p>When you receive a reply, create a file called <code>first-question.md</code> inside <code>notes</code>. Write down one assumption you would challenge, then save the file.</p>
-          <p class="notice"><strong>The check:</strong> you can ask a question, receive an answer and save your own notes in the project. That is enough to get started.</p>
-          <label class="done-check"><input type="checkbox" data-step="test"> <span>Copilot has replied and I have saved my first research note.</span></label>
+          <div class="step-heading"><span class="step-number">06</span><div><p class="step-kicker">A quick readiness check</p><h2 id="test-title">Check Copilot works</h2></div></div>
+          <p>Open Copilot chat in VS Code and send a question. If a chat mode selector is shown, choose <strong>Ask</strong>. You can use this example:</p>
+          <div class="prompt-box"><div class="prompt-heading"><span>A test question</span><button class="copy-button" id="copyPrompt" type="button" hidden>Copy prompt</button></div><p id="firstPrompt">Explain omitted-variable bias in plain English using an example about education and wages.</p></div>
+          <p>If you receive a reply, this step is done.</p>
+          <label class="done-check"><input type="checkbox" data-step="test"> <span>Copilot has replied to a question in VS Code.</span></label>
         </section>
         <section class="ready-panel" aria-labelledby="ready-title">
           <span class="ready-symbol" aria-hidden="true">↗</span>
