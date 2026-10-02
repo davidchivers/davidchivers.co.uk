@@ -1,0 +1,226 @@
+<style id="durham-staff-editor-style">
+#durham-staff-toolbar[hidden], #durham-staff-link[hidden] { display:none !important; }
+#durham-slide-main { width:100%; height:100%; }
+#durham-staff-toolbar { position:fixed; inset:0 0 auto; z-index:10000; background:#fff; color:#1f2937; border-bottom:3px solid #682046; box-shadow:0 2px 15px #0002; padding:10px 18px; font:15px/1.35 'Segoe UI',Arial,sans-serif; }
+.dse-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.dse-row strong { margin-right:auto; color:#682046; font-size:18px; }
+#durham-staff-toolbar button, #durham-staff-link button { border:1px solid #682046; border-radius:5px; background:white; color:#682046; padding:7px 11px; font:inherit; cursor:pointer; }
+#durham-staff-toolbar .dse-primary { background:#682046; color:white; }
+#durham-staff-toolbar button:disabled { opacity:.45; cursor:default; }
+#durham-staff-toolbar button:focus-visible, #durham-staff-link :focus-visible { outline:3px solid #c28b16; outline-offset:2px; }
+#durham-staff-status { margin:6px 0 0; }
+#durham-staff-warning { color:#8b2e08; font-weight:600; margin:4px 0 0; }
+html.durham-staff-editing .reveal .fragment { opacity:1 !important; visibility:visible !important; transform:none !important; }
+html.durham-staff-editing .reveal * { animation:none !important; transition:none !important; }
+html.durham-staff-editing .reveal [data-staff-key] { outline:1px dashed #98558188; outline-offset:3px; cursor:text; }
+html.durham-staff-editing .reveal [data-staff-key]:focus { outline:3px solid #b48027; background:#f4edf233; }
+html.durham-staff-editing .reveal [data-staff-key] a { cursor:text; }
+html.durham-staff-editing .induction-motion-controls, html.durham-staff-editing .timer-controls { visibility:hidden !important; }
+html.durham-staff-editing .reveal { top:104px; height:calc(100% - 104px); }
+#durham-staff-link { position:fixed; z-index:10001; top:120px; left:50%; transform:translateX(-50%); width:min(520px,90vw); box-sizing:border-box; padding:22px; background:white; color:#1f2937; border:2px solid #682046; border-radius:8px; box-shadow:0 12px 50px #0004; font:16px/1.5 'Segoe UI',Arial,sans-serif; }
+#durham-staff-link label { display:block; margin:8px 0; }
+#durham-staff-link input { box-sizing:border-box; width:100%; padding:8px; font:inherit; }
+@media print { #durham-staff-toolbar, #durham-staff-link { display:none !important; } html.durham-staff-editing .reveal { top:0; height:100%; } .reveal [data-staff-key] { outline:none !important; } }
+</style>
+<script id="durham-staff-edits" type="application/json">{}</script>
+<script id="durham-staff-template" type="application/octet-stream"></script>
+<script id="durham-staff-editor-code">
+(() => {
+  'use strict';
+  const stateNode = document.getElementById('durham-staff-edits');
+  let state;
+  try { state = JSON.parse(stateNode.textContent); } catch { return; }
+  if (state.schema !== 1 || !state.fields || !state.deck_id) return;
+  let savedFields = JSON.stringify(state.fields);
+  const fields = new Map(), originals = new Map(), history = [];
+  const conflicts = [];
+  let editing = false, dirty = false, saving = false, active = null, focusedBefore = null, selectedLink = null;
+  let previousConfig, toolbar, status, warning, undoButton, linkPanel, linkInput, linkText;
+  const allowed = new Set(['STRONG','EM','B','I','U','A','BR','SUB','SUP','CODE']);
+  const safeURL = value => {
+    if(value.startsWith('#'))return value;
+    try { const url = new URL(value, location.href); return ['http:','https:','mailto:','tel:'].includes(url.protocol) || url.protocol==='file:'&&!/^[a-z][a-z0-9+.-]*:/i.test(value) ? value : null; } catch { return null; }
+  };
+  function clean(value, textOnly = false) {
+    const template = document.createElement('template'); template.innerHTML = value;
+    if (textOnly) return template.content.textContent;
+    const walk = node => {
+      for (const child of [...node.childNodes]) {
+        if (child.nodeType === Node.COMMENT_NODE) { child.remove(); continue; }
+        if (child.nodeType !== Node.ELEMENT_NODE) continue;
+        if (['SCRIPT','STYLE','IFRAME','OBJECT','EMBED','SVG','MATH','IMG'].includes(child.tagName)) { child.remove(); continue; }
+        walk(child);
+        if (!allowed.has(child.tagName)) { child.replaceWith(...child.childNodes); continue; }
+        const href = child.tagName === 'A' ? safeURL(child.getAttribute('href') || '') : null;
+        for (const attr of [...child.attributes]) child.removeAttribute(attr.name);
+        if (href) child.setAttribute('href', href);
+      }
+    };
+    walk(template.content); return template.innerHTML;
+  }
+  function value(el) { return el.dataset.staffKind === 'text' ? el.textContent : clean(el.innerHTML); }
+  function setValue(el, text) {
+    if (el.dataset.staffKind === 'text') el.textContent = text;
+    else el.innerHTML = clean(text);
+  }
+  function remember(el) {
+    const key = el.dataset.staffKey, after = value(el), before = originals.get(key);
+    if (after === before) delete state.fields[key];
+    else state.fields[key] = { before, after };
+    stateNode.textContent = JSON.stringify(state).replace(/</g, '\\u003c');
+  }
+  function commit() {
+    if (!active || focusedBefore === null) return;
+    const after = value(active);
+    const linkIndex=[...active.querySelectorAll('a')].indexOf(selectedLink);
+    setValue(active, after);
+    if(linkIndex>=0)selectedLink=active.querySelectorAll('a')[linkIndex];
+    if (after !== focusedBefore) { history.push({key:active.dataset.staffKey, before:focusedBefore}); dirty = true; }
+    remember(active); focusedBefore = null; updateStatus();
+  }
+  function updateStatus(message) {
+    if (!status) return;
+    dirty=JSON.stringify(state.fields)!==savedFields || !!(active&&focusedBefore!==null&&value(active)!==focusedBefore);
+    undoButton.disabled = !history.length && !(active && focusedBefore !== null && value(active) !== focusedBefore);
+    const count = Object.keys(state.fields).length;
+    status.textContent = message || `Click outlined text to edit. ${count} edited item${count===1?'':'s'}. ${dirty?'Changes need saving.':'Save updated slides to keep a copy.'} Alt+Shift+E returns to presenting.`;
+    const slide = window.Reveal.getCurrentSlide(), rect = slide.getBoundingClientRect(), scale = rect.width / window.Reveal.getConfig().width;
+    const crowding = [...fields.values()].filter(el => slide.contains(el)).some(el => {
+      const r=el.getBoundingClientRect();
+      return r.right>rect.right+2 || r.left<rect.left-2 || r.bottom>rect.bottom-65*scale || el.scrollWidth>el.clientWidth+3 && el.clientWidth>0;
+    });
+    warning.textContent = conflicts.length ? `${conflicts.length} saved edit(s) conflict with revised source content. Resolve these before saving.` : crowding ? 'Some text may be crowded or outside the slide. Shorten it and check Preview.' : '';
+  }
+  function discover() {
+    document.querySelectorAll('.reveal .slides section').forEach((slide, slideIndex) => {
+      const id = slide.id || `slide-${slideIndex+1}`;
+      const explicit = [...slide.querySelectorAll('[data-staff-field]')];
+      const generic = [...slide.querySelectorAll('h1,h2,h3,p,li,th,td')].filter(el =>
+        !el.closest('[data-staff-lock],.notes,.speaker-notes,.timer-digits,.timer-status,.induction-motion-controls,.timer-controls,svg,math') &&
+        !el.querySelector('img,svg,math,video,audio,button,input,[data-staff-field],h1,h2,h3,p,li,table') &&
+        !el.closest('[data-staff-field]') && el.textContent.trim());
+      const counts = {};
+      [...explicit,...generic].forEach(el => {
+        const kind=el.tagName.toLowerCase(); counts[kind]=(counts[kind]||0)+1;
+        const key=`${id}/${el.dataset.staffField ? '@'+el.dataset.staffField : kind+'/'+counts[kind]}`;
+        el.dataset.staffKey=key;
+        const original=value(el); originals.set(key,original); fields.set(key,el);
+        const saved=state.fields[key];
+        if (saved) {
+          if (saved.before===original) setValue(el,saved.after);
+          else if (saved.after===original) delete state.fields[key];
+          else conflicts.push(key);
+        }
+        el.addEventListener('focus',()=>{if(!editing)return; active=el; focusedBefore=value(el);});
+        el.addEventListener('blur',commit);
+        el.addEventListener('input',()=>{dirty=true; updateStatus();});
+        el.addEventListener('paste',event=>{
+          if(!editing)return; event.preventDefault();
+          const text=event.clipboardData.getData('text/plain').replace(/\r?\n/g,' ');
+          const selection=window.getSelection();
+          if(!selection.rangeCount)return;
+          const range=selection.getRangeAt(0); if(!el.contains(range.commonAncestorContainer))return;
+          range.deleteContents(); const node=document.createTextNode(text);range.insertNode(node);range.setStartAfter(node);range.collapse(true);selection.removeAllRanges();selection.addRange(range);
+          dirty=true; updateStatus();
+        });
+        el.addEventListener('beforeinput',event=>{if(editing&&['insertParagraph','insertLineBreak'].includes(event.inputType))event.preventDefault();});
+        el.addEventListener('click',event=>{if(editing){selectedLink=event.target.closest('a');event.preventDefault();}});
+      });
+    });
+    for(const key of Object.keys(state.fields)) if(!fields.has(key))conflicts.push(key);
+  }
+  function toggle(force) {
+    const next=typeof force==='boolean'?force:!editing;
+    if(next===editing)return;
+    commit(); editing=next;
+    if(editing) {
+      const config=window.Reveal.getConfig(); previousConfig={keyboard:config.keyboard,touch:config.touch,controls:config.controls};
+      window.Reveal.toggleOverview(false);
+      window.Reveal.configure({keyboard:false,touch:false,controls:false});
+    } else {
+      window.Reveal.configure(previousConfig); linkPanel.hidden=true;
+      document.activeElement?.blur();
+    }
+    document.documentElement.classList.toggle('durham-staff-editing',editing);
+    toolbar.hidden=!editing;
+    for(const el of fields.values()) {
+      if(editing){el.setAttribute('contenteditable',el.dataset.staffKind==='text'?'plaintext-only':'true');el.setAttribute('spellcheck','true');}
+      else {el.removeAttribute('contenteditable');el.removeAttribute('spellcheck');}
+    }
+    document.dispatchEvent(new CustomEvent('durham:staff-edit-mode',{detail:{active:editing}}));
+    window.Reveal.layout(); updateStatus();
+  }
+  function download(content,type,name) {
+    const url=URL.createObjectURL(new Blob([content],{type}));
+    const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
+  }
+  async function save() {
+    if(saving)return;
+    commit();
+    if(conflicts.length){updateStatus('Resolve saved-edit conflicts in the master project before exporting.');return;}
+    saving=true; const saveButton=toolbar.querySelector('[data-dse="save"]');saveButton.disabled=true;
+    const savedState=JSON.stringify(state);
+    try {
+      const compressed=document.getElementById('durham-staff-template').textContent.trim();
+      if(!compressed)throw new Error('The deck must be rendered with the staff-editor packaging step.');
+      if(!window.DecompressionStream)throw new Error('Please use a current version of Edge or Chrome to save the slides.');
+      const bytes=Uint8Array.from(atob(compressed),c=>c.charCodeAt(0));
+      const text=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+      const json=savedState.replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');
+      const replace=(source,id,payload)=>source.replace(new RegExp('(<script\\b[^>]*\\bid="'+id+'"[^>]*>)[\\s\\S]*?(<\\/script>)'),(_,open,close)=>open+payload+close);
+      let output=replace(text,'durham-staff-edits',json);output=replace(output,'durham-staff-template',compressed);
+      download(output,'text/html;charset=utf-8',`${state.deck || 'slides'}-edited.html`);
+      savedFields=JSON.stringify(JSON.parse(savedState).fields);
+      dirty=JSON.stringify(state)!==savedState || !!(active&&focusedBefore!==null&&value(active)!==focusedBefore);
+      updateStatus(dirty?'Copy downloaded; newer changes still need saving.':'Download requested. Keep the downloaded HTML; it contains your slides and saved edits.');
+    } catch(error){updateStatus(error.message);} finally {saving=false;saveButton.disabled=false;}
+  }
+  function buildToolbar() {
+    if(!document.querySelector('main,[role="main"]')) {
+      const reveal=document.querySelector('.reveal'),main=document.createElement('main');
+      main.id='durham-slide-main';main.setAttribute('aria-label','Presentation');reveal.before(main);main.append(reveal);
+    }
+    toolbar=document.createElement('aside');toolbar.id='durham-staff-toolbar';toolbar.hidden=true;toolbar.setAttribute('aria-label','Staff slide editor');
+    toolbar.innerHTML='<div class="dse-row"><strong>Staff edit mode</strong><button data-dse="previous" aria-label="Previous slide in editor">← Previous</button><button data-dse="next" aria-label="Next slide in editor">Next →</button><button data-dse="undo">Undo edit</button><button data-dse="link">Edit link</button><button data-dse="save" class="dse-primary">Save updated slides</button><button data-dse="preview">Preview / present</button></div><p id="durham-staff-status" role="status"></p><p id="durham-staff-warning" role="status"></p>';
+    document.body.append(toolbar);status=toolbar.querySelector('#durham-staff-status');warning=toolbar.querySelector('#durham-staff-warning');undoButton=toolbar.querySelector('[data-dse="undo"]');
+    toolbar.querySelector('[data-dse="save"]').addEventListener('click',save);
+    toolbar.querySelector('[data-dse="preview"]').addEventListener('click',()=>toggle(false));
+    for(const [action,delta] of [['previous',-1],['next',1]])toolbar.querySelector(`[data-dse="${action}"]`).addEventListener('click',()=>{
+      commit(); const slides=window.Reveal.getSlides(),index=slides.indexOf(window.Reveal.getCurrentSlide()),next=slides[index+delta];
+      if(next){const at=window.Reveal.getIndices(next);window.Reveal.slide(at.h,at.v,-1);} updateStatus();
+    });
+    undoButton.addEventListener('click',()=>{commit();const last=history.pop();if(last){const el=fields.get(last.key);setValue(el,last.before);remember(el);dirty=true;}updateStatus();});
+    linkPanel=document.createElement('div');linkPanel.id='durham-staff-link';linkPanel.hidden=true;linkPanel.setAttribute('role','dialog');linkPanel.setAttribute('aria-modal','true');linkPanel.setAttribute('aria-label','Edit slide link');
+    linkPanel.innerHTML='<strong>Edit link</strong><label>Link text<input id="dse-link-text" type="text"></label><label>Web or email address<input id="dse-link-url" type="text"></label><p id="dse-link-error" role="alert"></p><button data-dse="apply-link">Apply link</button> <button data-dse="cancel-link">Cancel</button>';
+    document.body.append(linkPanel);linkInput=linkPanel.querySelector('#dse-link-url');linkText=linkPanel.querySelector('#dse-link-text');
+    toolbar.querySelector('[data-dse="link"]').addEventListener('click',()=>{
+      commit(); if(!active){updateStatus('Click the linked words on a slide, then choose Edit link.');return;}
+      selectedLink=selectedLink&&active.contains(selectedLink)?selectedLink:active.querySelector('a');
+      if(!selectedLink){updateStatus('Click an existing link on the slide first.');return;}
+      linkText.value=selectedLink.textContent;linkInput.value=selectedLink.getAttribute('href');linkPanel.querySelector('#dse-link-error').textContent='';linkPanel.hidden=false;linkText.focus();
+    });
+    linkPanel.querySelector('[data-dse="cancel-link"]').addEventListener('click',()=>{linkPanel.hidden=true;active?.focus();});
+    linkPanel.querySelector('[data-dse="apply-link"]').addEventListener('click',()=>{
+      const href=safeURL(linkInput.value.trim());if(!href){linkPanel.querySelector('#dse-link-error').textContent='Use an https://, http:// or mailto: address.';return;}
+      const before=value(active);selectedLink.textContent=linkText.value;selectedLink.setAttribute('href',href);history.push({key:active.dataset.staffKey,before});remember(active);dirty=true;linkPanel.hidden=true;updateStatus();active.focus();
+    });
+    linkPanel.addEventListener('keydown',event=>{
+      if(event.key==='Escape'){event.preventDefault();linkPanel.hidden=true;active?.focus();}
+      if(event.key==='Tab'){const items=[...linkPanel.querySelectorAll('input,button')],index=items.indexOf(document.activeElement);if(event.shiftKey&&index===0){event.preventDefault();items.at(-1).focus();}else if(!event.shiftKey&&index===items.length-1){event.preventDefault();items[0].focus();}}
+    });
+  }
+  function init() {
+    if(!window.Reveal)return;
+    discover(); buildToolbar();
+    document.addEventListener('keydown',event=>{
+      if(event.altKey&&event.shiftKey&&event.code==='KeyE'){event.preventDefault();event.stopImmediatePropagation();toggle();}
+    },true);
+    window.addEventListener('beforeunload',event=>{if(dirty){event.preventDefault();event.returnValue='';}});
+    window.Reveal.on('slidechanged',()=>{if(editing)updateStatus();});
+    window.addEventListener('resize',()=>{if(editing)updateStatus();});
+    if(new URLSearchParams(location.search).get('edit')==='1')toggle(true);
+    if(conflicts.length)console.warn('Saved staff edits need review:',conflicts);
+  }
+  if(document.readyState==='complete')init();else window.addEventListener('load',init,{once:true});
+})();
+</script>

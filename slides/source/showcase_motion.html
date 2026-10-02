@@ -146,6 +146,9 @@
         button.textContent = paused ? 'Pause' : 'Resume';
       });
     });
+    document.addEventListener('durham:staff-edit-mode', event => {
+      if (event.detail.active) [colleges, champions].forEach(finish);
+    });
     window.Reveal.on('slidechanged', event => finish(event.previousSlide));
     window.Reveal.on('overviewshown', () => [...playing.keys()].forEach(finish));
     document.addEventListener('visibilitychange', () => {
