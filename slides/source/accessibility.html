@@ -1,0 +1,17 @@
+<script>
+// Preserve browser zoom and name the brand and navigation in the rendered deck.
+function setLectureAccessibility() {
+  var viewport = document.querySelector('meta[name="viewport"]');
+  if (viewport) viewport.content = 'width=device-width, initial-scale=1';
+  document.querySelectorAll('img.slide-logo').forEach(function (img) {
+    img.alt = 'Durham University';
+  });
+  document.querySelectorAll('aside.controls').forEach(function (controls) {
+    // Buttons already carry descriptive labels; the wrapper is presentational.
+    controls.setAttribute('role', 'presentation');
+    controls.removeAttribute('aria-label');
+  });
+}
+setLectureAccessibility();
+window.addEventListener('load', setLectureAccessibility);
+</script>

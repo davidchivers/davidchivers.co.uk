@@ -1,0 +1,159 @@
+<script>
+(() => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const playing = new Map();
+  let wired = false;
+
+
+  function finish(slide) {
+    if (!slide) return;
+    const animations = playing.get(slide) || [];
+    animations.forEach(animation => animation.cancel());
+    playing.delete(slide);
+    const pauseButton = slide.querySelector('[data-action="pause-motion"]');
+    if (pauseButton) { pauseButton.disabled = true; pauseButton.textContent = 'Pause'; }
+    slide.querySelector('.champions-fireworks')?.replaceChildren();
+    slide.querySelectorAll('[data-motion-state]').forEach(element => {
+      element.dataset.motionState = 'settled';
+    });
+  }
+
+  function remember(slide, stage, animations) {
+    playing.set(slide, animations);
+    const pauseButton = slide.querySelector('[data-action="pause-motion"]');
+    if (pauseButton) { pauseButton.disabled = false; pauseButton.textContent = 'Pause'; }
+    stage.dataset.motionState = 'playing';
+    Promise.all(animations.map(animation => animation.finished.catch(() => {})))
+      .then(() => {
+        if (playing.get(slide) === animations) {
+          stage.dataset.motionState = 'settled';
+          playing.delete(slide);
+          if (pauseButton) { pauseButton.disabled = true; pauseButton.textContent = 'Pause'; }
+          slide.querySelector('.champions-fireworks')?.replaceChildren();
+        }
+      });
+  }
+
+  function playColleges(slide) {
+    finish(slide);
+    const stage = slide.querySelector('.college-cloud');
+    if (!stage || reducedMotion.matches || document.hidden) return;
+    const names = [...stage.querySelectorAll('.college-name')];
+    // Distinct starting positions keep every college on the slide. Each name
+    // drifts briefly, then arrives at its ordinary readable HTML position.
+    const permutation = [10, 6, 12, 1, 15, 8, 3, 13, 5, 14, 0, 7, 2, 11, 4, 9];
+    const width = stage.clientWidth;
+    const height = stage.clientHeight;
+    const animations = names.map((name, index) => {
+      const destination = index;
+      const origin = permutation[index];
+      const dx = ((origin % 4) - (destination % 4)) * 0.24 * width;
+      const dy = (Math.floor(origin / 4) - Math.floor(destination / 4)) * 0.24 * height;
+      const direction = index % 2 ? -1 : 1;
+      const transform = (x, y, rotation) => `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
+      return name.querySelector('span').animate([
+        { transform: transform(dx, dy, direction * 7), offset: 0 },
+        { transform: transform(dx + direction * 16, dy - 14, direction * -4), offset: 0.24 },
+        { transform: transform(dx - direction * 10, dy + 12, direction * 5), offset: 0.48 },
+        { transform: transform(0, 0, 0), offset: 1 }
+      ], { duration: 3300, delay: index * 30, easing: 'cubic-bezier(.42,0,.22,1)', fill: 'backwards' });
+    });
+    remember(slide, stage, animations);
+  }
+
+  function fireworks(stage) {
+    const layer = stage.querySelector('.champions-fireworks');
+    if (!layer) return [];
+    const animations = [];
+    const width = stage.clientWidth;
+    const height = stage.clientHeight;
+    // A finite sequence of coloured bursts; no screen flashes or looping.
+    const bursts = [
+      [0.17, 0.38, 0, '#b48027'], [0.83, 0.32, 570, '#682046'],
+      [0.28, 0.60, 1180, '#8e579d'], [0.72, 0.62, 1750, '#b48027'],
+      [0.16, 0.32, 2310, '#682046'], [0.84, 0.38, 2720, '#b48027']
+    ];
+    bursts.forEach(([x, y, delay, colour], burst) => {
+      const trail = document.createElement('span');
+      trail.className = 'firework-trail';
+      trail.style.cssText = `left:${x * 100}%;top:${y * 100}%;--spark-color:${colour}`;
+      layer.append(trail);
+      animations.push(trail.animate([
+        { transform: `translateY(${height * (1 - y)}px) scaleY(1.5)`, opacity: 0 },
+        { opacity: .9, offset: .22 },
+        { transform: 'translateY(0) scaleY(.2)', opacity: 0 }
+      ], { duration: 540, delay, easing: 'ease-out', fill: 'backwards' }));
+      for (let index = 0; index < 32; index++) {
+        const spark = document.createElement('span');
+        spark.className = 'firework-spark';
+        spark.style.cssText = `left:${x * 100}%;top:${y * 100}%;--spark-color:${index % 5 === 0 ? '#d7b356' : colour}`;
+        layer.append(spark);
+        const angle = index * Math.PI * 2 / 32 + burst * .17;
+        const radius = Math.min(width * .12, height * .32) * (index % 2 ? .74 : 1);
+        const dx = Math.cos(angle) * radius;
+        const dy = Math.sin(angle) * radius;
+        const rotation = angle * 180 / Math.PI + 90;
+        animations.push(spark.animate([
+          { transform: `translate(-50%, -50%) rotate(${rotation}deg) scale(.15)`, opacity: 0, offset: 0 },
+          { opacity: 1, offset: .12 },
+          { transform: `translate(${dx}px, ${dy}px) rotate(${rotation}deg) scale(.95)`, opacity: 1, offset: .4 },
+          { opacity: .85, offset: .75 },
+          { transform: `translate(${dx * 1.2}px, ${dy * 1.2 + 55}px) rotate(${rotation + 25}deg) scale(.3)`, opacity: 0, offset: 1 }
+        ], { duration: 1800, delay: delay + 440, easing: 'linear', fill: 'backwards' }));
+      }
+    });
+    return animations;
+  }
+
+  function playChampions(slide) {
+    finish(slide);
+    const stage = slide.querySelector('.champions-stage');
+    const logo = slide.querySelector('.champions-logo');
+    const heading = slide.querySelector('h2');
+    if (!stage || !logo || reducedMotion.matches || document.hidden) return;
+    const animations = [
+      logo.animate([
+        { transform: 'translateY(75px) scale(.68) rotate(-9deg)', opacity: 0, offset: 0 },
+        { transform: 'translateY(-10px) scale(1.055) rotate(3deg)', opacity: 1, offset: 0.72 },
+        { transform: 'translateY(0) scale(1) rotate(0)', opacity: 1, offset: 1 }
+      ], { duration: 1450, easing: 'cubic-bezier(.2,.65,.25,1)' }),
+      heading.animate([
+        { transform: 'translateY(22px)', opacity: 0 },
+        { transform: 'translateY(0)', opacity: 1 }
+      ], { duration: 900, delay: 160, easing: 'ease-out', fill: 'backwards' })
+    ];
+    animations.push(...fireworks(stage));
+    remember(slide, stage, animations);
+  }
+
+
+  function setup() {
+    if (wired || !window.Reveal) return;
+    wired = true;
+    const colleges = document.getElementById('find-your-college');
+    const champions = document.getElementById('champions-2026');
+    colleges.querySelector('[data-action="replay-colleges"]').addEventListener('click', () => playColleges(colleges));
+    colleges.querySelector('[data-action="arrange-colleges"]').addEventListener('click', () => finish(colleges));
+    champions.querySelector('[data-action="replay-champions"]').addEventListener('click', () => playChampions(champions));
+    champions.querySelector('[data-action="stop-champions"]').addEventListener('click', () => finish(champions));
+    [colleges, champions].forEach(slide => {
+      const button = slide.querySelector('[data-action="pause-motion"]');
+      button.addEventListener('click', () => {
+        const animations = playing.get(slide) || [];
+        const paused = animations.some(animation => animation.playState === 'paused');
+        animations.forEach(animation => paused ? animation.play() : animation.pause());
+        slide.querySelector('[data-motion-state]').dataset.motionState = paused ? 'playing' : 'paused';
+        button.textContent = paused ? 'Pause' : 'Resume';
+      });
+    });
+    window.Reveal.on('slidechanged', event => finish(event.previousSlide));
+    window.Reveal.on('overviewshown', () => [...playing.keys()].forEach(finish));
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) [...playing.keys()].forEach(finish);
+    });
+    reducedMotion.addEventListener('change', () => [...playing.keys()].forEach(finish));
+  }
+  setup();
+  window.addEventListener('load', setup, {once:true});
+})();
+</script>

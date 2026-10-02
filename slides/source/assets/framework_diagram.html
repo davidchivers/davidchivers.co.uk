@@ -1,0 +1,65 @@
+```{=html}
+<div class="framework-widget">
+  <div class="fw-header">
+    <strong>A simple, symmetric framework</strong>
+    <div class="fw-controls" role="group" aria-label="Trade-flow playback" hidden>
+      <button type="button" data-action="play" aria-label="Play trade flows">▶ Play</button>
+      <button type="button" data-action="step">Next good</button>
+      <button type="button" data-action="all">Show all</button>
+    </div>
+  </div>
+  <svg class="fw-diagram" xmlns="http://www.w3.org/2000/svg" width="1400" height="550" viewBox="0 0 1400 550" role="img" aria-labelledby="fw-title fw-description" data-good="all">
+    <title id="fw-title">A simple, symmetric three-country framework</title>
+    <desc id="fw-description">Home imports good 1 from Partner and the rest of the world. Partner imports good 2 from Home and the rest of the world. The rest of the world imports good 3 from Home and Partner. All six arrows are visible in the static diagram. Play highlights each pair in turn and moves a marker from each exporter towards its importer.</desc>
+    <defs>
+      <marker id="fw-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="15" markerHeight="15" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1 L11 6 L1 11 Z" fill="#262c35"/></marker>
+      <marker id="fw-arrow-active" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1 L11 6 L1 11 Z" fill="#68246d"/></marker>
+    </defs>
+    <g font-family="Aptos, Segoe UI, Arial, sans-serif">
+      <g class="fw-flow" data-good="1" data-from="Partner" data-to="Home">
+        <path class="fw-route" d="M950 95 L450 95" marker-end="url(#fw-arrow)"/>
+        <text class="fw-label" x="700" y="74" text-anchor="middle">Good 1</text>
+        <circle class="fw-particle" r="9" cx="950" cy="95" aria-hidden="true"/>
+      </g>
+      <g class="fw-flow" data-good="1" data-from="RoW" data-to="Home">
+        <path class="fw-route" d="M646 348 L436 165" marker-end="url(#fw-arrow)"/>
+        <text class="fw-label" x="535" y="196" text-anchor="middle">Good 1</text>
+        <circle class="fw-particle" r="9" cx="646" cy="348" aria-hidden="true"/>
+      </g>
+      <g class="fw-flow" data-good="2" data-from="Home" data-to="Partner">
+        <path class="fw-route" d="M450 155 L950 155" marker-end="url(#fw-arrow)"/>
+        <text class="fw-label" x="780" y="140" text-anchor="middle">Good 2</text>
+        <circle class="fw-particle" r="9" cx="450" cy="155" aria-hidden="true"/>
+      </g>
+      <g class="fw-flow" data-good="2" data-from="RoW" data-to="Partner">
+        <path class="fw-route" d="M754 348 L964 165" marker-end="url(#fw-arrow)"/>
+        <text class="fw-label" x="865" y="196" text-anchor="middle">Good 2</text>
+        <circle class="fw-particle" r="9" cx="754" cy="348" aria-hidden="true"/>
+      </g>
+      <g class="fw-flow" data-good="3" data-from="Home" data-to="RoW">
+        <path class="fw-route" d="M386 220 L603 409" marker-end="url(#fw-arrow)"/>
+        <text class="fw-label" x="420" y="354" text-anchor="middle">Good 3</text>
+        <circle class="fw-particle" r="9" cx="386" cy="220" aria-hidden="true"/>
+      </g>
+      <g class="fw-flow" data-good="3" data-from="Partner" data-to="RoW">
+        <path class="fw-route" d="M1014 220 L797 409" marker-end="url(#fw-arrow)"/>
+        <text class="fw-label" x="980" y="354" text-anchor="middle">Good 3</text>
+        <circle class="fw-particle" r="9" cx="1014" cy="220" aria-hidden="true"/>
+      </g>
+      <g class="fw-node" data-country="Home">
+        <circle cx="350" cy="125" r="90"/>
+        <text x="350" y="139" text-anchor="middle">Home</text>
+      </g>
+      <g class="fw-node" data-country="Partner">
+        <circle cx="1050" cy="125" r="90"/>
+        <text x="1050" y="139" text-anchor="middle">Partner</text>
+      </g>
+      <g class="fw-node" data-country="RoW">
+        <circle cx="700" cy="430" r="90"/>
+        <text x="700" y="444" text-anchor="middle">RoW</text>
+      </g>
+    </g>
+  </svg>
+  <p class="fw-status" role="status" aria-live="polite" aria-atomic="true">Home imports good 1; Partner imports good 2; RoW imports good 3.</p>
+</div>
+```
