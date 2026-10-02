@@ -16,7 +16,7 @@
     <h1 id="page-title">Teaching slides,<br><span>in your browser.</span></h1>
     <p class="intro"><a href="https://quarto.org/">Quarto</a> turns a simple text file into slides, with room for equations, code and interactive graphs. These examples use my Durham teaching layout.</p>
     <div class="actions"><a class="button" href="downloads/durham-quarto-slides.zip" download>Download the Durham skill <span aria-hidden="true">↓</span></a><a class="text-link" href="#example">See it in action <span aria-hidden="true">↘</span></a></div>
-    <p class="small">Give your AI assistant the skill and your teaching material. Ask it to create the slides, then talk through any changes. You do not need to write the code yourself.</p>
+    <p class="small">The skill is a pack of instructions and a Durham template for your AI assistant. Give it the pack and your teaching material, then ask for the slides you want. You do not need to write code.</p>
   </section>
 
   <section id="example" class="example-section" aria-labelledby="example-title">
@@ -29,38 +29,39 @@
   <section id="start" class="start-section" aria-labelledby="start-title">
     <p class="eyebrow">MAKE YOUR OWN</p><h2 id="start-title">Three steps to a first draft</h2>
     <ol class="steps">
-      <li><span class="step-number" aria-hidden="true">01</span><div><h3>Put everything in one folder</h3><p>Download and unzip the <a href="downloads/durham-quarto-slides.zip" download>Durham skill</a>. Put it in a folder with your PowerPoint, Beamer file or lecture outline. Open that folder in your AI assistant.</p></div></li>
-      <li><span class="step-number" aria-hidden="true">02</span><div><h3>Ask the assistant to build the slides</h3><p>Use the prompt below. The skill is a set of instructions and a Durham template for the assistant. Ask it to check that <a href="https://quarto.org/docs/get-started/">Quarto</a> and Python 3 are available, then create and open the presentation.</p></div></li>
-      <li><span class="step-number" aria-hidden="true">03</span><div><h3>Look at the slides and ask for changes</h3><p>“Make slide 4 clearer.” “Add a worked example.” “Keep this graph in the same position.” Check the result, then share the finished HTML file. Keep the whole editable project folder for future changes. Students only need a browser.</p></div></li>
+      <li><span class="step-number" aria-hidden="true">01</span><div><h3>Put everything in one folder</h3><p>Download and unzip the <a href="downloads/durham-quarto-slides.zip" download>Durham skill</a>. Put it beside a copy of your PowerPoint, Beamer file or lecture outline. Open that folder in your AI assistant.</p></div></li>
+      <li><span class="step-number" aria-hidden="true">02</span><div><h3>Ask the assistant to build the slides</h3><p>Copy the prompt below and tell it which file to use. It will check the software it needs, create the slides and open them for you.</p></div></li>
+      <li><span class="step-number" aria-hidden="true">03</span><div><h3>Review, then ask for changes</h3><p>“Make slide 4 clearer.” “Add a worked example.” Keep the whole project folder for future edits. Share the finished HTML presentation: students open it in a browser.</p></div></li>
     </ol>
-    <div class="prompt" id="starter-prompt"><div class="prompt-header"><h3>A prompt to get started</h3><button type="button" id="copy-prompt" data-copy-target="prompt-text" data-copy-status="copy-status">Copy prompt</button></div><p id="prompt-text">Read durham-quarto-slides/SKILL.md in this folder and use it to turn my slides or outline into a Quarto presentation. Check that Quarto and Python 3 are available; help me set them up if needed. Use the light-touch conversion: preserve the teaching content and order, apply the Durham template, make equation formatting and spacing consistent, and include the Edit slides button. Check conversion fidelity, layout and saving. Give me the editable project and an HTML presentation, then open the slides for me to review. Leave the full maths and external-link audit as an optional next step.</p><span id="copy-status" role="status" class="small"></span></div>
-    <div class="review-options" aria-labelledby="review-title">
-      <h3 id="review-title">Choose how much checking you want</h3>
+    <div class="prompt" id="starter-prompt"><div class="prompt-header"><h3>A prompt to get started</h3><button type="button" id="copy-prompt" data-copy-target="prompt-text" data-copy-status="copy-status">Copy prompt</button></div><p id="prompt-text">Read durham-quarto-slides/SKILL.md and use it to turn my slides or outline into a Quarto presentation. Help me set up Quarto and Python 3 if needed. Use the light-touch conversion: keep my content and order, apply the Durham design and include the Edit slides button. Check that nothing was lost, the layout works and edits save. Give me the editable project and HTML presentation, then open it for review.</p><span id="copy-status" role="status" class="small"></span></div>
+    <details class="setup-details review-options">
+      <summary>What gets checked? Can I ask for a fuller review?</summary>
       <div class="review-grid">
         <article><p class="review-label">DEFAULT</p><h4>Light-touch conversion</h4><p>Preserve the content, use the Durham layout and tidy equation styling, spacing and obvious typos. Check that the slides render, retain their content and save correctly.</p></article>
         <article><p class="review-label">OPTIONAL</p><h4>Full check</h4><p>Ask for independent calculation and derivation checks, all links, every-slide visual review and deeper accessibility checks. This takes extra time; request it for the whole deck or just a particular issue.</p></article>
       </div>
       <p class="small">Any maths introduced or materially changed is checked in either mode. A light-touch conversion does not independently verify every result in the original slides. Teaching and animation suggestions are also available when requested.</p>
-    </div>
+    </details>
 
     <div class="assistant-guide">
       <h3>Which AI assistant?</h3>
-      <p>Use an assistant that can read and change files in your folder and run Quarto. These are the relevant options:</p>
+      <p>Choose one of these. It needs access to your course folder so it can change files and build the slides.</p>
       <div class="assistant-grid">
-        <article><h4>Codex</h4><p>Open your course folder in Codex, then use the prompt above. It can read the unpacked skill, edit your project and build the HTML.</p><a href="https://developers.openai.com/codex/skills/">Codex skills guide →</a></article>
-        <article><h4>Claude Code</h4><p>Start Claude Code in your course folder and use the same prompt. Give it access to the skill, your slides and the Quarto tools.</p><a href="https://code.claude.com/docs/en/skills">Claude Code skills guide →</a></article>
-        <article><h4>GitHub Copilot</h4><p>Yes: open the folder in VS Code and choose <strong>Agent</strong> in Copilot Chat. Ask it to read the skill and build the slides. This is GitHub Copilot, rather than the university's Microsoft Copilot chat.</p><a href="https://code.visualstudio.com/docs/agent-customization/agent-skills">Copilot skills guide →</a></article>
+        <article><h4>Codex</h4><p>Open your course folder in the Codex app and paste the starter prompt.</p><a href="https://developers.openai.com/codex/skills/">Codex skills guide →</a></article>
+        <article><h4>Claude Code</h4><p>Start Claude Code in your course folder and paste the same prompt.</p><a href="https://code.claude.com/docs/en/skills">Claude Code skills guide →</a></article>
+        <article><h4>GitHub Copilot</h4><p>Open the folder in VS Code, choose <strong>Agent</strong> in Copilot Chat and paste the prompt. Use GitHub Copilot here, not the university's Microsoft Copilot chat.</p><a href="https://code.visualstudio.com/docs/agent-customization/agent-skills">Copilot skills guide →</a></article>
       </div>
+      <aside class="access-note" aria-labelledby="access-title"><h4 id="access-title">Need an AI assistant?</h4><p>Verified university students can get <strong>GitHub Copilot Student for free</strong>, with usage limits. <a href="/ai_install/">My AI setup guide</a> walks you through GitHub Education, VS Code and connecting the two.</p><p class="small">Teaching staff can also <a href="https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers">apply for free Copilot access</a>. GitHub must verify your eligibility.</p></aside>
       <details class="setup-details"><summary>Optional: install the skill so the assistant can find it again</summary><p>Ask your assistant to put the unpacked <code>durham-quarto-slides</code> folder in the project's skill location. Keep all its files together.</p><ul><li>Codex: <code>.agents/skills/</code></li><li>Claude Code: <code>.claude/skills/</code></li><li>GitHub Copilot in VS Code: <code>.github/skills/</code></li></ul><p>Then ask it to use the <code>durham-quarto-slides</code> skill. For a first try, simply asking it to read the unpacked <code>SKILL.md</code> is enough.</p></details>
-      <p class="small">The example was built and checked using Codex. Claude Code and GitHub Copilot support this skill format; this particular package has not been tested in every assistant. A normal chat with an uploaded file may help with wording, but needs a suitable working environment to build and check the slides.</p>
+      <p class="small">This example was tested with Codex. Claude Code and GitHub Copilot support skills too, though this pack has not been tested in every assistant. If you are unsure, ask your assistant whether it can access the folder and run Quarto.</p>
     </div>
   </section>
 
   <section id="edit" class="edit-section" aria-labelledby="edit-title">
     <p class="eyebrow">WHEN YOU WANT TO CHANGE SOMETHING</p><h2 id="edit-title">How do I edit my slides?</h2>
     <div class="edit-grid">
-      <article><h3>Usually, just ask the AI</h3><p>Give the assistant your <strong>editable project folder</strong> and describe the change. It can rewrite a slide, add an example, update a graph or change the layout.</p><blockquote>“Use the Durham slide skill. In this deck, shorten slide 3 and add a simple example after it. Keep the rest of the wording and design. Rebuild the slides and show me.”</blockquote><p>Keep the source file, images and companion files together. If you only have the finished HTML, give it to the assistant and explain what you want changed.</p></article>
-      <article><h3>For a quick text correction</h3><p>Click <strong>Edit slides</strong> in the top-right corner of the presentation, or <a class="text-link" href="example.html?edit=1" target="_blank" rel="noopener">try the editor here ↗</a>. Click outlined text, make your change, then choose <strong>Save updated slides</strong>. <strong>Preview / present</strong> returns to the normal view.</p><p>This downloads a complete edited HTML copy. <strong>Keep the download:</strong> typing in the browser alone does not save your changes. Anyone with the file can edit their own copy; they cannot change this website or your master project through that button.</p><p>The small button is visible in the normal browser view. It disappears in presentation fullscreen (press <strong>F</strong>) and when printing. Exit fullscreen to edit again; <strong>Alt+Shift+E</strong> remains an alternative shortcut.</p><p>Use AI for changes to maths, graphs and layout. To keep a browser correction in your master project, give the edited HTML back to the assistant and say: “Import these staff edits into my project, then rebuild.”</p></article>
+      <article><h3>Usually, just ask the AI</h3><p>Open your <strong>course project folder</strong> in the assistant and describe the change. Use this for wording, maths, graphs and layout.</p><blockquote>“Shorten slide 3 and add a simple example after it. Keep the rest of the wording and design. Rebuild the slides and show me.”</blockquote><p>If you only have the finished HTML, give it to the assistant and explain what you want changed.</p></article>
+      <article><h3>For a quick text correction</h3><ol class="edit-steps"><li>Click <strong>Edit slides</strong> at the top-right of the presentation.</li><li>Click the outlined text and make your change.</li><li>Click <strong>Save updated slides</strong> and keep the downloaded HTML.</li></ol><p>Typing alone does not save your changes. The download is your edited copy; the website and original project stay as they were.</p><p><a class="text-link" href="example.html?edit=1" target="_blank" rel="noopener">Try editing the example ↗</a></p><details class="setup-details"><summary>Presenting and keeping edits for next time</summary><p><strong>Preview / present</strong> returns to the normal view. The edit button hides in fullscreen (press <strong>F</strong>) and when printing. Exit fullscreen to edit, or use <strong>Alt+Shift+E</strong>.</p><p>Before asking AI to rebuild the deck, give it your edited HTML and project folder. Say: “Import these staff edits into my project, then rebuild.”</p></details></article>
     </div>
   </section>
 
@@ -82,7 +83,7 @@ $$</code></pre></section>
   </section>
   <section id="walkthrough" class="walkthrough-section" aria-labelledby="walkthrough-title">
     <p class="eyebrow">FIRST TIME USING A SKILL?</p><h2 id="walkthrough-title">A little help getting started</h2>
-    <p>A skill is a folder of instructions and reusable files for your AI assistant. You describe what you want; the assistant uses the skill to build the slides.</p>
+    <p>Open the detailed instructions below for help with folders, downloads and saving edits.</p>
     <details class="walkthrough-details">
       <summary>Show the step-by-step guide</summary>
       <div class="walkthrough-content">
