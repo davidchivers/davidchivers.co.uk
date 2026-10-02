@@ -1,6 +1,11 @@
 <style id="durham-staff-editor-style">
-#durham-staff-toolbar[hidden], #durham-staff-link[hidden] { display:none !important; }
+#durham-staff-toolbar[hidden], #durham-staff-link[hidden], #durham-staff-open[hidden] { display:none !important; }
 #durham-slide-main { width:100%; height:100%; }
+#durham-staff-open { position:fixed; top:10px; right:12px; z-index:9999; min-height:36px; padding:7px 12px; border:1px solid #d5c5d0; border-radius:6px; background:#fff; color:#682046; box-shadow:0 2px 8px #0001; font:600 13px/1.4 'Segoe UI',Arial,sans-serif; cursor:pointer; }
+#durham-staff-open:hover { background:#f4edf2; border-color:#682046; }
+#durham-staff-open:focus-visible { outline:3px solid #c28b16; outline-offset:3px; }
+:fullscreen #durham-staff-open, html.durham-staff-editing #durham-staff-open { display:none !important; }
+@media (pointer:coarse) { #durham-staff-open { min-height:44px; } }
 #durham-staff-toolbar { position:fixed; inset:0 0 auto; z-index:10000; background:#fff; color:#1f2937; border-bottom:3px solid #682046; box-shadow:0 2px 15px #0002; padding:10px 18px; font:15px/1.35 'Segoe UI',Arial,sans-serif; }
 .dse-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
 .dse-row strong { margin-right:auto; color:#682046; font-size:18px; }
@@ -20,7 +25,7 @@ html.durham-staff-editing .reveal { top:104px; height:calc(100% - 104px); }
 #durham-staff-link { position:fixed; z-index:10001; top:120px; left:50%; transform:translateX(-50%); width:min(520px,90vw); box-sizing:border-box; padding:22px; background:white; color:#1f2937; border:2px solid #682046; border-radius:8px; box-shadow:0 12px 50px #0004; font:16px/1.5 'Segoe UI',Arial,sans-serif; }
 #durham-staff-link label { display:block; margin:8px 0; }
 #durham-staff-link input { box-sizing:border-box; width:100%; padding:8px; font:inherit; }
-@media print { #durham-staff-toolbar, #durham-staff-link { display:none !important; } html.durham-staff-editing .reveal { top:0; height:100%; } .reveal [data-staff-key] { outline:none !important; } }
+@media print { #durham-staff-open, #durham-staff-toolbar, #durham-staff-link { display:none !important; } html.durham-staff-editing .reveal { top:0; height:100%; } .reveal [data-staff-key] { outline:none !important; } }
 </style>
 <script id="durham-staff-edits" type="application/json">{}</script>
 <script id="durham-staff-template" type="application/octet-stream"></script>
@@ -35,7 +40,7 @@ html.durham-staff-editing .reveal { top:104px; height:calc(100% - 104px); }
   const fields = new Map(), originals = new Map(), history = [];
   const conflicts = [];
   let editing = false, dirty = false, saving = false, active = null, focusedBefore = null, selectedLink = null;
-  let previousConfig, toolbar, status, warning, undoButton, linkPanel, linkInput, linkText;
+  let previousConfig, toolbar, status, warning, undoButton, linkPanel, linkInput, linkText, entryButton;
   const allowed = new Set(['STRONG','EM','B','I','U','A','BR','SUB','SUP','CODE']);
   const safeURL = value => {
     if(value.startsWith('#'))return value;
@@ -131,6 +136,7 @@ html.durham-staff-editing .reveal { top:104px; height:calc(100% - 104px); }
   }
   function toggle(force) {
     const next=typeof force==='boolean'?force:!editing;
+    if(next && document.fullscreenElement)return;
     if(next===editing)return;
     commit(); editing=next;
     if(editing) {
@@ -143,12 +149,16 @@ html.durham-staff-editing .reveal { top:104px; height:calc(100% - 104px); }
     }
     document.documentElement.classList.toggle('durham-staff-editing',editing);
     toolbar.hidden=!editing;
+    entryButton.hidden=editing||!!document.fullscreenElement;
+    entryButton.setAttribute('aria-expanded',String(editing));
     for(const el of fields.values()) {
       if(editing){el.setAttribute('contenteditable',el.dataset.staffKind==='text'?'plaintext-only':'true');el.setAttribute('spellcheck','true');}
       else {el.removeAttribute('contenteditable');el.removeAttribute('spellcheck');}
     }
     document.dispatchEvent(new CustomEvent('durham:staff-edit-mode',{detail:{active:editing}}));
     window.Reveal.layout(); updateStatus();
+    if(editing)toolbar.querySelector('[data-dse="preview"]').focus();
+    else if(!document.fullscreenElement)entryButton.focus();
   }
   function download(content,type,name) {
     const url=URL.createObjectURL(new Blob([content],{type}));
@@ -183,6 +193,12 @@ html.durham-staff-editing .reveal { top:104px; height:calc(100% - 104px); }
     toolbar=document.createElement('aside');toolbar.id='durham-staff-toolbar';toolbar.hidden=true;toolbar.setAttribute('aria-label','Staff slide editor');
     toolbar.innerHTML='<div class="dse-row"><strong>Staff edit mode</strong><button data-dse="previous" aria-label="Previous slide in editor">← Previous</button><button data-dse="next" aria-label="Next slide in editor">Next →</button><button data-dse="undo">Undo edit</button><button data-dse="link">Edit link</button><button data-dse="save" class="dse-primary">Save updated slides</button><button data-dse="preview">Preview / present</button></div><p id="durham-staff-status" role="status"></p><p id="durham-staff-warning" role="status"></p>';
     document.body.append(toolbar);status=toolbar.querySelector('#durham-staff-status');warning=toolbar.querySelector('#durham-staff-warning');undoButton=toolbar.querySelector('[data-dse="undo"]');
+    entryButton=document.createElement('button');entryButton.id='durham-staff-open';entryButton.type='button';entryButton.textContent='Edit slides';
+    entryButton.title='Edit text and links (Alt+Shift+E)';entryButton.setAttribute('aria-controls',toolbar.id);entryButton.setAttribute('aria-expanded','false');
+    entryButton.hidden=!!document.fullscreenElement;
+    (document.querySelector('main,[role="main"]')||document.body).append(entryButton);
+    entryButton.addEventListener('click',()=>toggle(true));
+    document.addEventListener('fullscreenchange',()=>{if(document.fullscreenElement&&editing)toggle(false);entryButton.hidden=editing||!!document.fullscreenElement;});
     toolbar.querySelector('[data-dse="save"]').addEventListener('click',save);
     toolbar.querySelector('[data-dse="preview"]').addEventListener('click',()=>toggle(false));
     for(const [action,delta] of [['previous',-1],['next',1]])toolbar.querySelector(`[data-dse="${action}"]`).addEventListener('click',()=>{

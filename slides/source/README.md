@@ -30,11 +30,14 @@ by the example. It does not install an AI assistant or Quarto itself.
 
 ## Quick text corrections in the browser
 
-Press Alt+Shift+E, or open the presentation with `?edit=1` before its slide hash.
+Click **Edit slides** in the top-right corner. Alt+Shift+E also works, or open
+the presentation with `?edit=1` before its slide hash. The button disappears in
+presentation fullscreen (F) and print; exit fullscreen to edit again.
 Edit outlined text, use Undo if needed, and choose Save updated slides. Keep the
 downloaded `*-edited.html`: typing alone does not save to disk or change the website.
 The whole presentation is saved, including its figures and interactive examples.
-Maths, images, layout and functional controls stay protected; use your assistant
+Anyone with the HTML can edit their own copy; this gives no access to update
+the website or master project. Maths, images, layout and functional controls stay protected; use your assistant
 for those changes. Preview / present hides the editing controls again.
 
 To preserve a browser correction in your master project, give the edited HTML to
