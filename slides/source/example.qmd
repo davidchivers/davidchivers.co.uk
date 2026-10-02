@@ -189,7 +189,7 @@ Give the assistant your editable project. It updates the source and rebuilds the
 :::
 
 ::: {.takeaway}
-For a quick text correction, press Alt+Shift+E, edit the outlined text, then choose Save updated slides. Keep the downloaded copy.
+For a quick text correction, click Edit slides in the top-right corner, edit the outlined text, then choose Save updated slides. Keep the downloaded copy.
 :::
 
 ::: {.source}
