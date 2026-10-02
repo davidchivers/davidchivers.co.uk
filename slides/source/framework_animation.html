@@ -106,6 +106,9 @@ function initialiseFrameworkAnimation() {
     if (window.Reveal) Reveal.on('slidechanged', function (event) {
       if (event.previousSlide && event.previousSlide.contains(widget)) showAll(false);
     });
+    document.addEventListener('durham:staff-edit-mode', function (event) {
+      if (event.detail.active) showAll(false);
+    });
     document.addEventListener('visibilitychange', function () {
       if (document.hidden && playing) pause();
     });

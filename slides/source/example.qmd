@@ -1,6 +1,6 @@
 ---
 title: "Example course"
-subtitle: "Clear slides. Code. A little interaction."
+subtitle: "Teaching slides with Quarto"
 author: "Dr David Chivers"
 institute: "Department of Economics"
 date: ""
@@ -9,11 +9,13 @@ format:
   revealjs:
     theme: [default, durham.scss]
     css: showcase.css
-    template-partials: [title-slide.html]
+    title-slide-attributes:
+      class: title-slide
     width: 1600
     height: 900
     margin: 0.04
     center: false
+    auto-stretch: false
     slide-number: c/t
     show-slide-number: all
     controls: true
@@ -35,6 +37,7 @@ format:
       - solow.js.html
       - framework_animation.html
       - showcase_motion.html
+      - staff-editor.html
 ---
 
 ## A slide can still be simple {#simple .teaching-slide}
@@ -85,10 +88,18 @@ At the positive steady state, investment exactly covers break-even investment.
 Illustrative continuous-time Solow model; productivity is normalised to one and there is no technological progress.
 :::
 
-## Put code beside its result {#code .code-slide}
+## Start with the graph {#graph .graph-slide}
+
+![](assets/solow-code.svg){fig-alt="Investment rises at a diminishing rate. The straight break-even line crosses it at approximately 8.51 units of capital per worker."}
+
+::: {.source}
+The intersection is the positive steady state. The next slide shows the Python code behind this graph.
+:::
+
+## Then show the code {#code .code-slide}
 
 ::: {.columns}
-::: {.column width="48%"}
+::: {.column width="60%"}
 
 ```python
 import numpy as np
@@ -98,23 +109,29 @@ k = np.linspace(0, 30, 301)
 investment = 0.25 * np.cbrt(k)
 break_even = 0.06 * k
 
-plt.plot(k, investment,
-         label="Investment")
-plt.plot(k, break_even,
-         label="Break-even")
+plt.plot(k, investment, label="Investment",
+         color="#682046", linewidth=3)
+plt.plot(k, break_even, label="Break-even",
+         color="#196d78", linestyle="--", linewidth=3)
 plt.xlabel("Capital per worker")
+plt.ylabel("Investment per worker")
+plt.xlim(0, 30); plt.ylim(0, 2)
 plt.legend()
 plt.show()
 ```
 
 :::
-::: {.column width="52%"}
-![Investment rises at a diminishing rate. The straight break-even line crosses it at approximately 8.51 units of capital per worker.](assets/solow-code.svg)
+::: {.column width="40%"}
+### Keep the explanation first
+
+Students see the economic relationship before the implementation.
+
+Ask your AI assistant to explain or adapt the code, then check the result.
 :::
 :::
 
 ::: {.source}
-A Python example using Quarto's [code-and-output layout](https://quarto.org/docs/presentations/revealjs/#code). The figure is included in the download; rebuilding the slides does not require Python.
+Quarto supports [code and its output](https://quarto.org/docs/presentations/revealjs/#code). This download includes the figure; running the plotting example separately needs Python, NumPy and Matplotlib.
 :::
 
 ## What happens if we save more? {#solow .solow-slide}
@@ -145,7 +162,7 @@ Does a higher saving rate mean a permanently higher growth rate?
 This answer stays available for revision. Use the button with a mouse, or focus it and press Enter.
 :::
 
-## This is what you edit {#source .teaching-slide}
+## Ask your assistant to make changes {#source .teaching-slide}
 
 ::: {.columns}
 ::: {.column width="52%"}
@@ -163,23 +180,23 @@ $$
 
 :::
 ::: {.column width="48%"}
-### A small text file
+### Describe the change
 
-`##` starts a new slide. Write your text, add figures and include equations.
+“Shorten this slide, explain the equation and add a worked example.”
 
-Quarto turns the `.qmd` source into a presentation that opens in a browser.
+Give the assistant your editable project. It updates the source and rebuilds the presentation.
 :::
 :::
 
 ::: {.takeaway}
-Want to start with existing slides? Give the Durham slide skill your PowerPoint or Beamer file and ask for a first conversion.
+For a quick text correction, press Alt+Shift+E, edit the outlined text, then choose Save updated slides. Keep the downloaded copy.
 :::
 
 ::: {.source}
 See [Quarto's slide guide](https://quarto.org/docs/presentations/revealjs/) and [interactive examples](https://quarto.org/docs/interactive/ojs/). The next three slides reuse animations from my teaching.
 :::
 
-## Three countries, three goods {#three-goods .framework-slide}
+## Example animation: three goods {#three-goods .framework-slide}
 
 {{< include assets/framework_diagram.html >}}
 
@@ -187,31 +204,31 @@ See [Quarto's slide guide](https://quarto.org/docs/presentations/revealjs/) and 
 From Macro Applications. Home imports good 1; Partner imports good 2; the rest of the world imports good 3. Play highlights each good; Next good advances manually; Show all restores the full static diagram.
 :::
 
-## Find your college {#find-your-college .college-slide}
+## Example animation: colleges {#find-your-college .college-slide}
 
 ```{=html}
 <ul class="college-cloud" aria-label="Durham colleges" data-motion-state="settled">
-<li class="college-name" style="--x:14%;--y:14%"><span>Collingwood</span></li>
-<li class="college-name" style="--x:38%;--y:14%"><span>Grey</span></li>
-<li class="college-name" style="--x:62%;--y:14%"><span>Hatfield</span></li>
-<li class="college-name" style="--x:86%;--y:14%"><span>John Snow</span></li>
-<li class="college-name" style="--x:14%;--y:38%"><span>Josephine Butler</span></li>
-<li class="college-name" style="--x:38%;--y:38%"><span>South</span></li>
-<li class="college-name" style="--x:62%;--y:38%"><span>St Aidan's</span></li>
-<li class="college-name" style="--x:86%;--y:38%"><span>St Chad's</span></li>
-<li class="college-name" style="--x:14%;--y:62%"><span>St Cuthbert</span></li>
-<li class="college-name" style="--x:38%;--y:62%"><span>St Hild &amp; St Bede</span></li>
-<li class="college-name" style="--x:62%;--y:62%"><span>St John's</span></li>
-<li class="college-name" style="--x:86%;--y:62%"><span>St Mary's</span></li>
-<li class="college-name" style="--x:14%;--y:86%"><span>Stephenson</span></li>
-<li class="college-name" style="--x:38%;--y:86%"><span>Trevelyan</span></li>
-<li class="college-name" style="--x:62%;--y:86%"><span>University</span></li>
-<li class="college-name" style="--x:86%;--y:86%"><span>Van Mildert</span></li>
+<li class="college-name" style="--x:14%;--y:14%"><span data-staff-field="college-1" data-staff-kind="text">Collingwood</span></li>
+<li class="college-name" style="--x:38%;--y:14%"><span data-staff-field="college-2" data-staff-kind="text">Grey</span></li>
+<li class="college-name" style="--x:62%;--y:14%"><span data-staff-field="college-3" data-staff-kind="text">Hatfield</span></li>
+<li class="college-name" style="--x:86%;--y:14%"><span data-staff-field="college-4" data-staff-kind="text">John Snow</span></li>
+<li class="college-name" style="--x:14%;--y:38%"><span data-staff-field="college-5" data-staff-kind="text">Josephine Butler</span></li>
+<li class="college-name" style="--x:38%;--y:38%"><span data-staff-field="college-6" data-staff-kind="text">South</span></li>
+<li class="college-name" style="--x:62%;--y:38%"><span data-staff-field="college-7" data-staff-kind="text">St Aidan's</span></li>
+<li class="college-name" style="--x:86%;--y:38%"><span data-staff-field="college-8" data-staff-kind="text">St Chad's</span></li>
+<li class="college-name" style="--x:14%;--y:62%"><span data-staff-field="college-9" data-staff-kind="text">St Cuthbert</span></li>
+<li class="college-name" style="--x:38%;--y:62%"><span data-staff-field="college-10" data-staff-kind="text">St Hild &amp; St Bede</span></li>
+<li class="college-name" style="--x:62%;--y:62%"><span data-staff-field="college-11" data-staff-kind="text">St John's</span></li>
+<li class="college-name" style="--x:86%;--y:62%"><span data-staff-field="college-12" data-staff-kind="text">St Mary's</span></li>
+<li class="college-name" style="--x:14%;--y:86%"><span data-staff-field="college-13" data-staff-kind="text">Stephenson</span></li>
+<li class="college-name" style="--x:38%;--y:86%"><span data-staff-field="college-14" data-staff-kind="text">Trevelyan</span></li>
+<li class="college-name" style="--x:62%;--y:86%"><span data-staff-field="college-15" data-staff-kind="text">University</span></li>
+<li class="college-name" style="--x:86%;--y:86%"><span data-staff-field="college-16" data-staff-kind="text">Van Mildert</span></li>
 </ul>
 <div class="induction-motion-controls"><button type="button" data-action="replay-colleges">Play / replay</button><button type="button" data-action="pause-motion" disabled>Pause</button><button type="button" data-action="arrange-colleges">Arrange now</button></div>
 ```
 
-## Durham Intercollegiate Champions! {#champions-2026 .champions-slide}
+## Example animation: champions {#champions-2026 .champions-slide}
 
 ```{=html}
 <div class="champions-stage" data-motion-state="settled"><div class="champions-fireworks" aria-hidden="true"></div><img class="champions-logo" src="assets/durham_shield.svg" alt="Durham University shield" /></div>
