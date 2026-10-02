@@ -1,0 +1,129 @@
+/* A bespoke induction cover, scoped so the teaching slides keep their theme. */
+/* Keep the cover absolute: a relative, always-displayed title pushes Reveal's later slides below the viewport. */
+.reveal .slides section#title-slide.induction-cover { display: block !important; position: absolute; padding: 0; border-top: 9px solid #d8b567; overflow: hidden; background: linear-gradient(120deg, #32163d 0%, #4f204b 70%, #682046 100%); color: #fff; }
+.reveal #title-slide .cover-copy { position: absolute; left: 100px; top: 73px; width: 950px; z-index: 2; }
+.reveal #title-slide .cover-university { margin: 0; font-size: 29px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: #f4edf2; }
+.reveal #title-slide .cover-accent { width: 82px; height: 6px; margin: 100px 0 30px; background: #d8b567; }
+.reveal #title-slide h1.title { color: #fff; max-width: none; margin: 0; font-size: 144px; line-height: 1.04; letter-spacing: -.045em; }
+.reveal #title-slide .cover-welcome { display: block; font-size: 73px; font-weight: 400; line-height: 1.3; letter-spacing: -.035em; }
+.reveal #title-slide .cover-subject { display: block; }
+.reveal #title-slide .cover-full-stop { color: #d8b567; }
+.reveal #title-slide .cover-subtitle { margin: 33px 0 0; color: #f4edf2; font-size: 38px; }
+.reveal #title-slide .cover-emblem { position: absolute; box-sizing: border-box; right: -90px; top: 83px; width: 650px; height: 650px; padding-right: 90px; border-radius: 50%; background: #f4edf2; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1; }
+.reveal #title-slide .cover-shield { position: static; display: block; width: 250px; height: 283px; max-width: none; max-height: none; margin: 0 0 29px; border-radius: 0; object-fit: contain; }
+.reveal #title-slide .cover-year { margin: 0; color: #3e1a47; font-size: 61px; font-weight: 700; line-height: 1.1; letter-spacing: -.025em; font-variant-numeric: tabular-nums; }
+.reveal #title-slide .cover-year-label { margin: 14px 0 0; color: #682046; font-size: 23px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; }
+.reveal #title-slide .cover-presenter { position: absolute; left: 100px; bottom: 69px; width: 620px; padding-top: 23px; border-top: 1px solid rgba(244,237,242,.35); z-index: 2; }
+.reveal #title-slide .cover-author { margin: 0; font-size: 29px; line-height: 1.48; color: #fff; }
+.reveal #title-slide .cover-department { margin: 11px 0 0; font-size: 24px; color: #e5d3e3; }
+.reveal #title-slide .cover-orbit { position: absolute; box-sizing: border-box; border: 1px solid rgba(244,237,242,.2); border-radius: 50%; pointer-events: none; }
+.reveal #title-slide .cover-orbit-outer { width: 940px; height: 940px; top: -64px; right: -235px; }
+.reveal #title-slide .cover-orbit-inner { width: 790px; height: 790px; top: 11px; right: -160px; }
+.reveal #title-slide .cover-flight { position: absolute; width: 510px; height: 198px; right: 158px; bottom: 24px; color: #d8b567; z-index: 2; overflow: visible; }
+
+
+
+@keyframes induction-cover-enter { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes induction-cover-emblem { from { opacity: 0; transform: translateX(55px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes induction-cover-plane { from { opacity: 0; transform: translate(-55px,38px) rotate(-8deg); } to { opacity: 1; transform: translate(0,0) rotate(0); } }
+.reveal .college-cloud { position: relative; width: 100%; height: 520px; padding: 0; margin: 24px 0 0; list-style: none; }
+.reveal .college-cloud .college-name { position: absolute; left: var(--x); top: var(--y); width: 315px; margin: 0; padding: 0; transform: translate(-50%, -50%); text-align: center; color: #3e1a47; font-size: 34px; line-height: 1.25; }
+.reveal .college-name span { display: block; }
+.reveal .college-name:nth-child(3n+1) { font-weight: 700; }
+.reveal .college-name:nth-child(3n+2) { color: #682046; }
+.reveal .induction-motion-controls { display: flex; justify-content: center; gap: 30px; margin-top: 18px; }
+.reveal .induction-motion-controls button { font: inherit; font-size: 23px; color: #682046; background: none; border: 0; border-bottom: 1px solid #b698af; padding: 5px 3px; cursor: pointer; }
+.reveal .induction-motion-controls button:hover { color: #3e1a47; border-bottom-color: #3e1a47; }
+.reveal .champions-slide { background: radial-gradient(ellipse at 50% 53%, #f4edf2 0%, #fff 64%) !important; }
+.reveal .champions-slide h2 { text-align: center; }
+.reveal .champions-stage { position: relative; display: grid; place-items: center; width: 100%; height: 510px; margin: 0; isolation: isolate; }
+.reveal .champions-fireworks { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: -1; }
+.reveal .firework-spark { position: absolute; width: 8px; height: 25px; border-radius: 50%; background: var(--spark-color); opacity: 0; }
+.reveal .firework-trail { position: absolute; width: 4px; height: 42px; border-radius: 50%; background: var(--spark-color); opacity: 0; }
+.reveal .champions-slide .champions-logo { display: block; width: auto; height: 400px; max-height: none; max-width: 100%; margin: 0; border-radius: 0; filter: drop-shadow(0 15px 18px rgba(62,26,71,0.12)); }
+.reveal .champions-controls { margin-top: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal *, .reveal *::before, .reveal *::after { animation: none !important; transition: none !important; }
+  .reveal .fragment.fade-up, .reveal .slides li.fragment { transform: none !important; }
+}
+@media print {
+  .reveal #title-slide .cover-copy, .reveal #title-slide .cover-emblem, .reveal #title-slide .cover-plane { animation: none !important; }
+  .reveal .induction-motion-controls, .reveal .timer-controls, .reveal .champions-fireworks { display: none !important; }
+  .reveal .fragment { opacity: 1 !important; visibility: visible !important; transform: none !important; }
+}
+/* Slide 7: complete static diagram, with optional controlled trade-flow playback. */
+.reveal .framework-widget { position: absolute; top: 153px; left: 88px; width: 1424px; }
+.reveal .fw-header { display: flex; justify-content: space-between; align-items: center; min-height: 44px; font-size: 31px; }
+.reveal .fw-controls { display: flex; gap: 12px; }
+.reveal .fw-controls[hidden] { display: none !important; }
+.reveal .fw-controls button { font: inherit; font-size: 25px; color: #682046; background: transparent; border: 1.5px solid #682046; border-radius: 4px; padding: 6px 14px; cursor: pointer; }
+.reveal .fw-controls button:hover { background: #f4edf2; }
+.reveal .fw-diagram { display: block; width: 1400px; height: 550px; margin-top: 16px; overflow: visible; }
+.reveal .fw-route { fill: none; stroke: #262c35; stroke-width: 3; }
+.reveal .fw-label { fill: #262c35; font-size: 32px; }
+.reveal .fw-node circle { fill: #36a2da; stroke: #262c35; stroke-width: 3; }
+.reveal .fw-node text { fill: #101820; font-size: 38px; }
+.reveal .fw-diagram.has-focus .fw-flow { opacity: 0.24; }
+.reveal .fw-diagram.has-focus .fw-flow.is-active { opacity: 1; }
+.reveal .fw-flow.is-active .fw-route { stroke: #682046; stroke-width: 5; marker-end: url(#fw-arrow-active); }
+.reveal .fw-flow.is-active .fw-label { fill: #682046; font-weight: 600; }
+.reveal .fw-node.is-active circle { stroke: #682046; stroke-width: 6; }
+.reveal .fw-particle { display: none; fill: #682046; stroke: #fff; stroke-width: 2; }
+.reveal .fw-diagram.has-motion .fw-flow.is-active .fw-particle { display: inline; }
+.reveal .fw-status { font-size: 27px; line-height: 1.3; margin: 20px 0 0; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal .fw-particle { display: none !important; }
+}
+@media print {
+  .reveal .slides section { box-shadow: none !important; }
+  .reveal .fw-controls, .reveal .fw-particle { display: none !important; }
+  .reveal .fw-diagram.has-focus .fw-flow { opacity: 1 !important; }
+  .reveal .fw-flow.is-active .fw-route { stroke: #262c35; stroke-width: 3; marker-end: url(#fw-arrow); }
+  .reveal .fw-flow.is-active .fw-label { fill: #262c35; font-weight: normal; }
+  .reveal .fw-node.is-active circle { stroke: #262c35; stroke-width: 3; }
+}
+
+
+/* Local additions for the public example. */
+.reveal #title-slide .cover-copy { width: 880px; top: 94px; }
+.reveal #title-slide h1.title { font-size: 117px; max-width: 900px; line-height: 1.08; }
+.reveal #title-slide .cover-accent { margin: 100px 0 38px; }
+.reveal #title-slide .cover-subtitle { font-size: 35px; width: 750px; }
+.reveal #title-slide .cover-emblem { right: -110px; width: 620px; height: 620px; top: 92px; }
+.reveal #title-slide .cover-year { font-size: 55px; }
+.reveal:has(#title-slide.present) .slide-logo { display: none; }
+.reveal:has(#title-slide.present) .footer,
+.reveal:has(#title-slide.present) .slide-number { color: #eee2eb; }
+.reveal:has(#title-slide.present) .controls { color: #d8b567; }
+.reveal .eyebrow { font-size: 23px; letter-spacing: .12em; color: #682046; font-weight: 700; margin-top: 25px; }
+.reveal .big-question { max-width: 1270px; font-size: 52px; line-height: 1.25; color: #3e1a47; margin: 20px 0 35px; }
+.reveal .takeaway { border-left: 5px solid #682046; padding: 16px 26px; background: #f4edf2; margin-top: 36px; font-size: 31px; }
+.reveal .columns { gap: 38px; }
+.reveal .code-slide pre { width: 100%; font-size: 25px; box-shadow: none; }
+.reveal .code-slide img { width: 100%; max-width: 100%; max-height: 530px; margin: 0; }
+.reveal .code-slide figcaption { display: none; }
+.reveal #source pre { font-size: 28px; box-shadow: none; }
+.reveal .answer { border: 2px solid #d9c7d4; background: #f8f4f7; border-radius: 10px; padding: 25px 32px; margin: 40px 0; }
+.reveal .answer summary { color: #682046; font-weight: 650; cursor: pointer; font-size: 31px; }
+.reveal .answer p { font-size: 32px; margin: 24px 0 0; }
+.reveal :is(button, summary, input, a):focus-visible { outline: 4px solid #c39026; outline-offset: 5px; }
+.reveal button:disabled { opacity: .5; cursor: default; }
+.reveal .solow-slide > p { font-size: 30px; margin: 0 0 14px; }
+.reveal .solow-widget { display: grid; grid-template-columns: 1000px 350px; gap: 30px; margin-top: 10px; }
+.reveal .solow-plot { min-width: 0; }
+.reveal #solow-chart { display: block; width: 1000px; height: 500px; }
+.reveal .chart-key { display: flex; gap: 30px; font-size: 23px; margin: 0 0 8px 90px; }
+.reveal .chart-key span { display: inline-flex; gap: 10px; align-items: center; }
+.reveal .chart-key i { display: inline-block; width: 40px; border-top: 4px solid #682046; }
+.reveal .chart-key .break-even-key { border-color: #196d78; border-top-style: dashed; }
+.reveal .solow-panel { background: #f4edf2; border-radius: 12px; padding: 24px; box-sizing: border-box; }
+.reveal .solow-panel label { display: block; font-size: 27px; }
+.reveal .solow-panel label strong { display: block; color: #682046; font-size: 47px; margin: 3px 0 13px; }
+.reveal .solow-panel input { width: 100%; height: 26px; accent-color: #682046; }
+.reveal .solow-panel #saving-help { font-size: 20px; margin: 7px 0 25px; line-height: 1.35; }
+.reveal .solow-panel .steady-label { font-size: 23px; line-height: 1.25; margin: 10px 0; }
+.reveal .solow-panel .steady-value { display: block; font-size: 49px; font-weight: 650; color: #3e1a47; font-variant-numeric: tabular-nums; }
+.reveal .solow-panel .solow-reading { font-size: 22px; line-height: 1.35; margin: 18px 0; }
+.reveal .solow-panel button { font: inherit; font-size: 22px; background: white; border: 1px solid #682046; border-radius: 5px; color: #682046; padding: 7px 13px; cursor: pointer; }
+.reveal .solow-slide .source { margin-top: 18px; }
+@media print { .reveal .answer > * { display: block; } .reveal .answer summary { display: none; } }

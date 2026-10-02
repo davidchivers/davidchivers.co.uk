@@ -1,0 +1,33 @@
+<script>
+window.addEventListener('load', () => {
+  const slider = document.getElementById('saving-rate');
+  const reset = document.getElementById('solow-reset');
+  if (!slider || !reset) return;
+  const x = k => 92 + k / 30 * 880;
+  const y = amount => 405 - amount / 2 * 380;
+  function update() {
+    const s = Number(slider.value) / 100;
+    const steady = Math.pow(s / .06, 1.5);
+    const curve = Array.from({length: 301}, (_, index) => {
+      const k = index / 10;
+      return `${index ? 'L' : 'M'}${x(k).toFixed(2)},${y(s * Math.cbrt(k)).toFixed(2)}`;
+    }).join(' ');
+    document.getElementById('investment-curve').setAttribute('d', curve);
+    const line = document.getElementById('steady-line');
+    line.setAttribute('x1', x(steady)); line.setAttribute('x2', x(steady));
+    line.setAttribute('y1', y(.06 * steady));
+    const dot = document.getElementById('steady-dot');
+    dot.setAttribute('cx', x(steady)); dot.setAttribute('cy', y(.06 * steady));
+    document.getElementById('saving-value').textContent = slider.value + '%';
+    slider.setAttribute('aria-valuetext', slider.value + ' percent');
+    document.getElementById('capital-value').textContent = steady.toFixed(2);
+    document.getElementById('solow-desc').textContent = `With a saving rate of ${slider.value} percent, the positive steady state is ${steady.toFixed(2)} units of capital per worker. Investment exceeds break-even investment below this point and falls short above it.`;
+  }
+  slider.disabled = false; reset.disabled = false;
+  slider.addEventListener('input', update);
+  // The slider owns arrow keys while focused; they must not advance the deck.
+  slider.addEventListener('keydown', event => event.stopPropagation());
+  reset.addEventListener('click', () => { slider.value = 25; update(); });
+  update();
+});
+</script>

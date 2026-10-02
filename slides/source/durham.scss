@@ -1,0 +1,341 @@
+/*-- scss:rules --*/
+
+$body-bg: #f5f7fa;
+$body-color: #1f2937;
+$link-color: #682046;
+$durham-purple: #682046;
+$durham-deep-purple: #3e1a47;
+$durham-pale-purple: #f4edf2;
+
+.reveal {
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  font-size: 1.85rem;
+  color: $body-color;
+  background: $body-bg;
+}
+
+.reveal .slides section {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 1.15rem 3.8rem 2.7rem;
+  text-align: left;
+  border-top: 0.45rem solid $durham-purple;
+  background: #ffffff;
+  box-shadow: 0 0.35rem 1.25rem rgba(15, 23, 42, 0.08);
+}
+
+.reveal .slide-logo {
+  width: 200px !important;
+  max-height: none !important;
+  height: auto !important;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: $durham-deep-purple;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.reveal h2 {
+  margin: 0 0 1.4rem;
+  font-size: 1.82em;
+}
+
+.reveal p,
+.reveal li {
+  line-height: 1.4;
+}
+
+.reveal ul {
+  margin-top: 0.5rem;
+}
+
+.reveal li {
+  margin: 0.35em 0;
+}
+
+.reveal li::marker {
+  color: $durham-purple;
+}
+
+.reveal .math.display {
+  display: block;
+  margin: 1.15rem 0;
+  padding: 0;
+  color: $durham-deep-purple;
+}
+
+.reveal .math.display .katex-display {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-left: 0.3rem solid $durham-purple;
+  background: $durham-pale-purple;
+  font-size: 1.18em;
+}
+
+.reveal .math.display mjx-container,
+.reveal .math.display .katex-display {
+  margin: 0 !important;
+}
+
+.reveal img {
+  max-width: 92%;
+  max-height: 58vh;
+  object-fit: contain;
+  border-radius: 0.35rem;
+}
+
+.reveal .title-slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 5.5rem;
+  border-top: 0.8rem solid $durham-purple;
+  background: linear-gradient(135deg, #ffffff 0%, $durham-pale-purple 100%);
+}
+
+.reveal .title-slide h1 {
+  max-width: 78%;
+  margin-bottom: 0.6rem;
+  font-size: 2.35em;
+}
+
+.reveal .title-slide .subtitle {
+  color: #475569;
+  font-size: 1.15em;
+}
+
+.reveal .title-slide .author {
+  margin-top: 1.4rem;
+  color: #334155;
+}
+
+.reveal .title-slide img {
+  position: absolute;
+  right: 3.5rem;
+  bottom: 4.5rem;
+  width: 25%;
+  max-height: 32vh;
+}
+
+.reveal .cover-slide {
+  display: grid !important;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 2rem;
+  align-items: center;
+  padding-top: 2rem !important;
+  background: linear-gradient(135deg, #ffffff 0%, $durham-pale-purple 100%) !important;
+}
+
+.reveal .cover-slide h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0.25rem;
+  font-size: 2.05em;
+}
+
+.reveal .cover-slide ul {
+  align-self: start;
+  margin-top: 1rem;
+}
+
+.reveal .cover-slide img {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+  max-width: 100%;
+  max-height: 44vh;
+}
+
+.reveal .cover-slide figcaption {
+  display: none;
+}
+
+.reveal .cover-slide p {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.reveal .slides section:has(> h2:only-child) {
+  display: flex !important;
+  align-items: center;
+  padding-left: 5.5rem;
+  background: linear-gradient(135deg, $durham-deep-purple 0%, $durham-purple 100%);
+}
+
+.reveal .slides section:has(> h2:only-child) h2 {
+  max-width: 75%;
+  color: #ffffff;
+  font-size: 2.35em;
+}
+
+.reveal .slides section.poll-slide > p {
+  margin-top: 18vh;
+  text-align: center;
+}
+
+.reveal .controls button {
+  color: $durham-purple;
+}
+
+.reveal .progress {
+  height: 0.25rem;
+  color: $durham-purple;
+}
+
+.reveal a:focus-visible,
+.reveal button:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  .reveal {
+    font-size: 1.4rem;
+  }
+
+  .reveal .slides section,
+  .reveal .title-slide {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+/* Durham base theme: the selected palette, type family, purple rule,
+   white slides and supplied logo, sized for a 1600x900 deck. */
+.reveal {
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  font-size: 36px;
+}
+.reveal .slides section {
+  padding: 54px 88px 104px;
+  border-top: 9px solid $durham-purple;
+  box-shadow: none;
+}
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  text-transform: none;
+  letter-spacing: -0.015em;
+}
+.reveal h2 { font-size: 56px; margin-bottom: 34px; line-height: 1.12; }
+.reveal h3 { font-size: 38px; margin: 28px 0 14px; }
+.reveal p, .reveal li { line-height: 1.32; }
+.reveal li { margin: 0.42em 0; }
+.reveal ul, .reveal ol { margin-left: 1.05em; }
+.reveal strong { color: $durham-deep-purple; }
+.reveal a { color: $link-color; text-decoration: underline; text-underline-offset: 4px; }
+.reveal .columns { gap: 4%; }
+.reveal .columns > .column { padding: 0; }
+.reveal .column > :first-child { margin-top: 0; }
+.reveal .slide-logo {
+  width: 172px !important;
+  max-width: none !important;
+  max-height: 86px !important;
+  height: auto !important;
+  right: 36px !important;
+  bottom: 16px !important;
+  border-radius: 0;
+  /* Let the slide's pale background show through the supplied logo's white. */
+  mix-blend-mode: multiply;
+  /* Display the university mark; omit the Business School descriptor. */
+  clip-path: inset(0 0 30% 0);
+  bottom: 0 !important;
+}
+.reveal .footer {
+  bottom: 20px;
+  color: #59616c;
+  font-size: 17px;
+  left: 6%;
+  text-align: left;
+  width: 60%;
+}
+.reveal .slide-number { right: 235px; bottom: 29px; font-size: 20px; color: #59616c; }
+.reveal .slide-number a { text-decoration: none; }
+.reveal .progress { height: 4px; }
+.reveal .slides section#title-slide {
+  padding: 150px 110px 130px;
+  text-align: left;
+  background: linear-gradient(120deg, #fff 38%, $durham-pale-purple);
+  align-items: flex-start;
+}
+.reveal #title-slide h1 { font-size: 88px; max-width: 1250px; margin: 0 0 34px; }
+.reveal #title-slide .subtitle { font-size: 43px; color: $durham-deep-purple; max-width: 1180px; }
+.reveal #title-slide .quarto-title-authors { justify-content: flex-start; margin-top: 60px; }
+.reveal #title-slide .quarto-title-author { padding: 0; text-align: left; }
+.reveal #title-slide .quarto-title-author-name { font-size: 34px; }
+.reveal #title-slide .quarto-title-affiliation {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.18;
+  color: $durham-deep-purple;
+  margin-top: 26px;
+}
+.reveal .emphasis {
+  border-left: 6px solid $durham-purple;
+  background: $durham-pale-purple;
+  padding: 16px 24px;
+  margin-top: 28px;
+}
+.reveal .emphasis p { margin: 0; }
+.reveal .quote-slide img { height: 550px; max-height: 550px; width: auto; max-width: 100%; }
+.reveal blockquote { box-shadow: none; background: none; border: 0; padding: 0; margin: 0 0 26px; width: 100%; font-size: 37px; font-style: normal; }
+.reveal blockquote p { margin: 0; }
+.reveal .image-slide figure, .reveal .image-slide p { margin: 0; }
+.reveal .image-slide img { max-height: 605px; max-width: 100%; margin: 0 auto; border-radius: 0; }
+.reveal .image-slide figure { text-align: center; }
+.reveal .image-slide figcaption { font-size: 23px; color: #59616c; margin-top: 10px; }
+.reveal table { width: 100%; margin: 24px 0; border-collapse: collapse; font-size: 31px; }
+.reveal th { color: $durham-deep-purple; font-weight: 700; }
+.reveal thead th { border-bottom: 3px solid $durham-purple; background: $durham-pale-purple; }
+.reveal td, .reveal th { padding: 12px 20px; text-align: left; vertical-align: top; border-bottom: 1px solid #c9cbd0; }
+.reveal tbody th { font-weight: 400; }
+.reveal tbody tr:nth-child(even) { background: #f8f6f8; }
+.reveal caption { text-align: left; font-size: 25px; color: #59616c; margin-bottom: 10px; }
+.reveal .source { font-size: 20px; color: #59616c; line-height: 1.3; }
+.reveal .source p { margin: 10px 0 0; }
+.reveal .controls { color: $durham-purple; }
+.reveal .slide-background.title-slide { border: 0; padding: 0; background: transparent; display: block !important; }
+.reveal .slide-number { top: auto !important; bottom: 28px !important; right: 225px !important; }
+/* Quarto includes the menu plugin even with its menu button disabled.
+   Hide its unused panel from both layout and the accessibility tree. */
+.slide-menu-wrapper { display: none !important; }
+.reveal .teaching-slide { font-size: 34px; }
+.reveal .teaching-slide h3 { font-size: 35px; margin-top: 22px; }
+.reveal .teaching-slide p { margin: 18px 0; }
+.reveal .teaching-slide li { margin: 0.36em 0; }
+.reveal .teaching-slide li li { margin: 0.22em 0; }
+.reveal .compact { font-size: 30px; }
+.reveal .compact h3 { font-size: 33px; }
+.reveal .references-slide { font-size: 28px; }
+.reveal .references-slide h3 { font-size: 33px; margin: 20px 0 10px; }
+.reveal .references-slide li { margin: 0.55em 0; }
+.reveal .equation-slide { font-size: 32px; }
+.reveal .equation-slide .math.display { display: block; margin: 20px 0; }
+.reveal .equation-slide math { font-size: 1.03em; }
+.reveal .equation-slide.compact { font-size: 29px; }
+.reveal .equation-slide.compact p { margin: 11px 0; }
+.reveal .equation-slide.compact .math.display { margin: 10px 0; }
+.reveal .figure-slide { font-size: 31px; }
+.reveal .figure-slide > p { text-align: center; margin: 12px 0; }
+.reveal .figure-slide img { display: block; width: 100%; height: 520px; max-width: 100%; max-height: 520px; object-fit: contain; margin: 0 auto; border-radius: 0; }
+.reveal .figure-slide .source { margin-top: 12px; font-size: 21px; }
+.reveal .formula-figure img { max-height: 470px; }
+.reveal .figure-columns img { display: block; width: 100%; height: auto; max-height: 555px; object-fit: contain; margin: 0 auto; border-radius: 0; }
+.reveal .portrait-figure img { height: 565px; width: auto; max-width: 100%; }
+.reveal .discussion-slide { font-size: 48px; }
+.reveal .discussion-slide > p { margin: 140px auto 0; max-width: 1150px; text-align: center; }
+@media print {
+  .reveal .slides section { box-shadow: none !important; }
+}
