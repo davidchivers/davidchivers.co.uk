@@ -26,6 +26,28 @@ html.durham-staff-editing .reveal { top:104px; height:calc(100% - 104px); }
 #durham-staff-link label { display:block; margin:8px 0; }
 #durham-staff-link input { box-sizing:border-box; width:100%; padding:8px; font:inherit; }
 @media print { #durham-staff-open, #durham-staff-toolbar, #durham-staff-link { display:none !important; } html.durham-staff-editing .reveal { top:0; height:100%; } .reveal [data-staff-key] { outline:none !important; } }
+
+/* Reserve a mobile toolbar strip so the edit entry never covers slide text. */
+@media screen and (max-width: 600px) {
+  html:not(.durham-staff-editing):not(:fullscreen):not(:has(:fullscreen)) .reveal {
+    top: 48px;
+    height: calc(100% - 48px);
+  }
+  #durham-staff-open { top: 2px; right: 6px; min-height: 44px; padding: 6px 10px; }
+  html:not(:fullscreen):not(:has(:fullscreen)) .reveal .controls {
+    position: fixed; top: 2px; left: 4px; right: auto; bottom: auto;
+    width: 184px; height: 44px; font-size: 6px;
+  }
+  html:not(:fullscreen):not(:has(:fullscreen)) .reveal .controls button {
+    top: 0 !important; bottom: auto !important; right: auto !important;
+    margin: 0 !important; width: 44px; height: 44px; padding: 0;
+    display: flex; align-items: center; justify-content: center; transform: none;
+  }
+  html:not(:fullscreen):not(:has(:fullscreen)) .reveal .controls .navigate-left { left: 0 !important; }
+  html:not(:fullscreen):not(:has(:fullscreen)) .reveal .controls .navigate-right { left: 44px !important; }
+  html:not(:fullscreen):not(:has(:fullscreen)) .reveal .controls .navigate-up { left: 88px !important; }
+  html:not(:fullscreen):not(:has(:fullscreen)) .reveal .controls .navigate-down { left: 132px !important; }
+}
 </style>
 <script id="durham-staff-edits" type="application/json">{}</script>
 <script id="durham-staff-template" type="application/octet-stream"></script>

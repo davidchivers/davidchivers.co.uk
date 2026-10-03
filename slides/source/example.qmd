@@ -14,6 +14,10 @@ format:
     width: 1600
     height: 900
     margin: 0.04
+    min-scale: 0.1
+    view: slide
+    scroll-view:
+      activation-width: 0
     center: false
     auto-stretch: false
     slide-number: c/t
