@@ -16,3 +16,25 @@ document.querySelectorAll('[data-copy-target]').forEach(button => {
     }
   });
 });
+
+// Keep shared links useful when their destination is inside closed help.
+function revealHelpTarget(hash, scroll = false) {
+  let id;
+  try {
+    id = decodeURIComponent(hash.slice(1));
+  } catch {
+    return;
+  }
+  const target = document.getElementById(id);
+  if (!target) return;
+  for (let element = target; element; element = element.parentElement) {
+    if (element.tagName === 'DETAILS') element.open = true;
+  }
+  if (scroll) target.scrollIntoView({block: 'start'});
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', () => revealHelpTarget(link.getAttribute('href')));
+});
+window.addEventListener('hashchange', () => revealHelpTarget(location.hash, true));
+if (location.hash) revealHelpTarget(location.hash, true);
