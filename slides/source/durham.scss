@@ -339,3 +339,45 @@ $durham-pale-purple: #f4edf2;
 @media print {
   .reveal .slides section { box-shadow: none !important; }
 }
+
+/* Match fixed Quarto branding to Reveal's scaled canvas, including phone embeds. */
+@media screen {
+  .reveal .slide-logo {
+    width: calc(172px * var(--slide-scale, 1)) !important;
+    max-height: calc(86px * var(--slide-scale, 1)) !important;
+    right: calc(36px * var(--slide-scale, 1)) !important;
+    bottom: 0 !important;
+  }
+  .reveal .footer {
+    font-size: calc(17px * var(--slide-scale, 1)) !important;
+    bottom: calc(20px * var(--slide-scale, 1)) !important;
+    left: 6% !important;
+    width: 60% !important;
+    text-align: left !important;
+  }
+  .reveal .slide-number {
+    font-size: calc(20px * var(--slide-scale, 1)) !important;
+    right: calc(225px * var(--slide-scale, 1)) !important;
+    bottom: calc(28px * var(--slide-scale, 1)) !important;
+  }
+}
+
+/* Keep branding with the canvas when a portrait screen letterboxes the slide. */
+@media screen {
+  body:not(.reveal-scroll) .reveal .slide-logo {
+    position: absolute !important;
+    right: calc((100% - var(--slide-width) * var(--slide-scale)) / 2 + 36px * var(--slide-scale)) !important;
+    bottom: calc((100% - var(--slide-height) * var(--slide-scale)) / 2) !important;
+  }
+  body:not(.reveal-scroll) .reveal .footer {
+    position: absolute !important;
+    left: calc((100% - var(--slide-width) * var(--slide-scale)) / 2 + 96px * var(--slide-scale)) !important;
+    bottom: calc((100% - var(--slide-height) * var(--slide-scale)) / 2 + 20px * var(--slide-scale)) !important;
+    width: calc(960px * var(--slide-scale)) !important;
+  }
+  body:not(.reveal-scroll) .reveal .slide-number {
+    position: absolute !important;
+    right: calc((100% - var(--slide-width) * var(--slide-scale)) / 2 + 225px * var(--slide-scale)) !important;
+    bottom: calc((100% - var(--slide-height) * var(--slide-scale)) / 2 + 28px * var(--slide-scale)) !important;
+  }
+}
