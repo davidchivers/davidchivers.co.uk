@@ -32,6 +32,9 @@ point to the published HTML, not a GitHub file preview or commit-specific URL.
    `python teaching/sync_slides.py E:/AI`. This copies only selected rendered
    files, adds `noindex`, and records both source and published SHA-256 hashes
    in `manifest.json`. It also preserves `noindex` on the collection index.
+   For Macro Applications, regenerate the matching PowerPoint and PDF downloads
+   first, following the canonical project's README. The sync script verifies
+   their source-HTML and file hashes and rejects stale exports.
 4. Check the changed presentation and scoped Git diff. Commit only intended
    changes and publish through a feature branch and pull request to `main`.
    The existing GitHub Pages deployment publishes the merged files.
@@ -47,6 +50,11 @@ with the visible title **Induction slides**.
 
 The published collection contains seven current presentations. The separate
 staff slide-creation guide remains at `/slides/` and is not part of this collection.
+Each Macro lecture has a small Download menu available throughout the deck.
+Its stable targets are `macro-applications/downloads/lecture_N.pptx` and
+`macro-applications/downloads/lecture_N.pdf`. Both preserve the current slide
+appearance as static artwork. PowerPoint users can add notes; the editable
+master and interactive version remain the Quarto source and HTML respectively.
 Earlier source
 PowerPoints, development previews, QA files and build folders remain outside
 this public collection. The sync step adds search metadata without altering slide content. Keep existing Blackboard URLs unchanged when replacing a deck.

@@ -2753,6 +2753,47 @@ window.QuartoSupport = function () {
     setLectureAccessibility();
     window.addEventListener('load', setLectureAccessibility);
     </script>
+    <style>
+.lecture-downloads { position:fixed; z-index:30; left:36px; bottom:12px; color:#682046; font:500 14px/1.35 'Segoe UI',Arial,sans-serif; }
+.lecture-downloads summary { list-style:none; cursor:pointer; padding:7px 12px; border:1px solid #d5c5d0; border-radius:5px; background:#fff; box-shadow:0 2px 8px #0001; }
+.lecture-downloads summary::-webkit-details-marker { display:none; }
+.lecture-downloads summary::after { content:' ▾'; }
+.lecture-downloads[open] summary::after { content:' ▴'; }
+.lecture-downloads summary:hover, .lecture-downloads a:hover { background:#f4edf2; }
+.lecture-downloads summary:focus-visible, .lecture-downloads a:focus-visible { outline:3px solid #b48027; outline-offset:2px; }
+.lecture-download-options { position:absolute; bottom:calc(100% + 7px); left:0; min-width:184px; padding:5px; border:1px solid #d5c5d0; border-radius:6px; background:white; box-shadow:0 5px 20px #0002; }
+.lecture-downloads a { display:block; padding:10px 12px; color:#682046; text-decoration:none; white-space:nowrap; border-radius:3px; }
+@media(max-width:700px) { .lecture-downloads { bottom:75px; left:auto; right:10px; transform:none; } .lecture-download-options { left:auto; right:0; transform:none; } .lecture-downloads summary { min-height:28px; display:flex; align-items:center; font-size:13px; } }
+@media print { .lecture-downloads { display:none !important; } }
+</style>
+    <script>
+    (() => {
+      const match = location.pathname.match(/lecture_([1-5])\.html$/);
+      if (!match) return;
+      const base = location.protocol === 'file:'
+        ? 'https://davidchivers.co.uk/teaching/macro-applications/'
+        : new URL('.', location.href).href;
+      const menu = document.createElement('details');
+      menu.className = 'lecture-downloads';
+      menu.innerHTML = '<summary aria-label="Download this lecture">Download</summary><div class="lecture-download-options"><a data-format="pptx">PowerPoint (.pptx)</a><a data-format="pdf">PDF (.pdf)</a></div>';
+      menu.querySelectorAll('a').forEach(link => {
+        const filename = `lecture_${match[1]}.${link.dataset.format}`;
+        link.href = `${base}downloads/${filename}`;
+        link.download = filename;
+      });
+      menu.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+          menu.open = false;
+          menu.querySelector('summary').focus();
+          event.stopPropagation();
+        }
+      });
+      document.addEventListener('click', event => { if (!menu.contains(event.target)) menu.open = false; });
+      menu.addEventListener('focusout', event => { if (event.relatedTarget && !menu.contains(event.relatedTarget)) menu.open = false; });
+      document.body.append(menu);
+      if (window.Reveal) window.Reveal.on('slidechanged', () => { menu.open = false; });
+    })();
+    </script>
     <script>
     // Load YouTube only when requested. Removing its source stops hidden playback.
     function initialiseLectureMedia() {
