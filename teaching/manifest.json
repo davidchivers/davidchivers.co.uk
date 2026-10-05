@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "path": "induction.html",
+      "bytes": 6308417,
+      "sha256": "d27f93ad9915b2ec4ccaa1ea1baf199bb798c6dd60476dabda599886ec31d4ed"
+    },
+    {
+      "path": "ai-course.html",
+      "bytes": 3600035,
+      "sha256": "0c8375140148e4986eaee3b16ccc11dab66439e6cf90549dd9e664b4b693d930"
+    },
+    {
+      "path": "macro-applications/index.html",
+      "bytes": 1898630,
+      "sha256": "0758fb5ff190b6cc69beeb3655abf489ed271074fab26ef612d1380cae9e238e"
+    },
+    {
+      "path": "macro-applications/lecture_1.html",
+      "bytes": 8381327,
+      "sha256": "0b9e460bf8e845087938fb81305bcf18b1a51b33ec4c3f9f9fb6159f0e9ab661"
+    },
+    {
+      "path": "macro-applications/lecture_2.html",
+      "bytes": 3721383,
+      "sha256": "c9acddfbeca232a1d2933ab1a2e4a747757aa5605225ba2000453c4da227b5f4"
+    },
+    {
+      "path": "macro-applications/lecture_3.html",
+      "bytes": 3924472,
+      "sha256": "5bd0dec3995b340b539606280e1236e9d3213b9e73e1ec1b733e004f210fc27c"
+    },
+    {
+      "path": "macro-applications/lecture_4.html",
+      "bytes": 4146043,
+      "sha256": "8dac76023054e705824a4ac8728cc252a616326445c8c0decd38fef1843554c9"
+    },
+    {
+      "path": "macro-applications/lecture_5.html",
+      "bytes": 4182396,
+      "sha256": "4660bb1cfffe829567092fb69639e3112eaed9185ac08e74d7307ecd2bfb2b2e"
+    },
+    {
+      "path": "example.html",
+      "bytes": 6157178,
+      "sha256": "98e739f2ae20a29f8ed495c1aeedc2df38b04eed2b25066cbbfea0db040c396a"
+    }
+  ]
+}
