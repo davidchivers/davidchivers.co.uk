@@ -16,6 +16,10 @@ DECKS = {
     "macro-applications/index.html": "macro_applications_quarto/output/index.html",
     **{f"macro-applications/lecture_{i}.html": f"macro_applications_quarto/output/lecture_{i}.html" for i in range(1, 6)},
 }
+DOWNLOADS = {
+    f"macro-applications/downloads/lecture_{i}.{ext}": f"macro_applications_quarto/output/downloads/lecture_{i}.{ext}"
+    for i in range(1, 6) for ext in ("pptx", "pdf")
+}
 
 
 def digest(path):
@@ -46,12 +50,25 @@ def main():
     parser.add_argument("workspace", type=Path, help="Canonical AI workspace containing teaching/")
     args = parser.parse_args()
     destination = Path(__file__).resolve().parent
-    sources = {name: args.workspace.resolve() / "teaching" / source for name, source in DECKS.items()}
+    workspace = args.workspace.resolve() / "teaching"
+    sources = {name: workspace / source for name, source in {**DECKS, **DOWNLOADS}.items()}
+    export_manifest = json.loads((workspace / "macro_applications_quarto/output/downloads/manifest.json").read_text(encoding="utf-8"))
+    export_records = {r["path"]: r for r in export_manifest["files"]}
     prepared = {}
     for source in sources.values():
         if not source.is_file():
             raise SystemExit(f"Missing rendered presentation: {source}")
         content = source.read_bytes()
+        if source.suffix in (".pdf", ".pptx"):
+            record = export_records[source.name]
+            lecture = workspace / f'macro_applications_quarto/output/lecture_{record["lecture"]}.html'
+            if digest(lecture) != record["source_sha256"] or digest(source) != record["sha256"]:
+                raise SystemExit(f"Stale or changed download: {source}. Rebuild downloads from the current HTML.")
+            signature = b"%PDF-" if source.suffix == ".pdf" else b"PK"
+            if not content.startswith(signature):
+                raise SystemExit(f"Invalid download: {source}")
+            prepared[source] = content
+            continue
         if b"</html>" not in content.lower():
             raise SystemExit(f"Incomplete HTML: {source}")
         if b'id="durham-staff-editor-code"' in content:
@@ -69,7 +86,7 @@ def main():
     index = destination / "index.html"
     index.write_bytes(unlisted_html(index.read_bytes()))
     (destination / "manifest.json").write_text(json.dumps({"files": records}, indent=2) + "\n", encoding="utf-8")
-    print(f"Published and verified {len(records)} HTML files with noindex; collection index also unlisted.")
+    print(f"Published and verified {len(DECKS)} HTML files with noindex and {len(DOWNLOADS)} current downloads; collection index also unlisted.")
 
 
 if __name__ == "__main__":
