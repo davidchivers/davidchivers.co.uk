@@ -1,0 +1,2 @@
+# Preserve standalone Quarto deliverables byte-for-byte on Windows and Pages.
+*.html -text
