@@ -54,6 +54,8 @@ def main():
         content = source.read_bytes()
         if b"</html>" not in content.lower():
             raise SystemExit(f"Incomplete HTML: {source}")
+        if b'id="durham-staff-editor-code"' in content:
+            raise SystemExit(f"Browser editor is enabled in student slides: {source}. Rebuild without it before publishing.")
         prepared[source] = unlisted_html(content)
     records = []
     for name, source in sources.items():

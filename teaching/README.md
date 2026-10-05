@@ -24,7 +24,7 @@ point to the published HTML, not a GitHub file preview or commit-specific URL.
 ## Update and publish
 
 1. Edit the canonical Quarto project under `E:/AI/teaching/`. Import any saved
-   staff edits using that project's instructions before rendering.
+   staff edits using that project's instructions and reconcile them into the QMD before rendering without the optional editor. Student releases omit browser editing controls; the sync script rejects editor-enabled output.
 2. Render the affected project with Quarto. For example, from
    `E:/AI/teaching/induction_quarto`, run
    `& 'E:/AI_tools/quarto-1.10.18/bin/quarto.cmd' render induction.qmd`.
@@ -49,5 +49,4 @@ The published collection contains seven current presentations. The separate
 staff slide-creation guide remains at `/slides/` and is not part of this collection.
 Earlier source
 PowerPoints, development previews, QA files and build folders remain outside
-this public collection. Publishing changes only search metadata; slide content
-and existing Blackboard URLs stay unchanged.
+this public collection. The sync step adds search metadata without altering slide content. Keep existing Blackboard URLs unchanged when replacing a deck.

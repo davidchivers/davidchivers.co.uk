@@ -7,8 +7,7 @@ can work with local project files; their skill instructions are linked on the we
 
 To edit directly, change `example.qmd`, then run `quarto render` in this folder.
 The finished presentation is `output/example.html`. Building needs Quarto
-(https://quarto.org/docs/get-started/) and Python 3 on PATH for the staff-editor
-packaging step. No extra Python packages are needed to render the supplied source:
+(https://quarto.org/docs/get-started/) alone for the default build. No Python packages are needed to render the supplied source:
 the code slide uses an included figure. Ask your assistant to check the setup.
 
 The page at https://davidchivers.co.uk/slides/ explains the template and provides
@@ -26,33 +25,26 @@ by the example. It does not install an AI assistant or Quarto itself.
   user-initiated playback, pause/resume and a static reduced-motion fallback.
 - `accessibility.html`: accessible logo name and browser-zoom helper.
 - `staff-editor.html`, `scripts/staff_edits.py`, `staff-edits/example.json`:
-  the text editor, packaging/import helper and this deck's persistent edit record.
+  optional local-copy editor resources, disabled in the default build.
 
-## Quick text corrections in the browser
+## Editing and sharing
 
-Click **Edit slides** in the top-right corner. Alt+Shift+E also works, or open
-the presentation with `?edit=1` before its slide hash. The button disappears in
-presentation fullscreen (F) and print; exit fullscreen to edit again.
-Edit outlined text, use Undo if needed, and choose Save updated slides. Keep the
-downloaded `*-edited.html`: typing alone does not save to disk or change the website.
-The whole presentation is saved, including its figures and interactive examples.
-Anyone with the HTML can edit their own copy; this gives no access to update
-the website or master project. Maths, images, layout and functional controls stay protected; use your assistant
-for those changes. Preview / present hides the editing controls again.
+Ask your assistant to change the editable project, rebuild and open the result.
+For an online deck, ask it to publish the update at the same URL. No browser edit
+button is included in the default presentation. Keep this source folder for
+future changes.
 
-To preserve a browser correction in your master project, give the edited HTML to
-your assistant along with this source folder and ask it to import the staff edits.
-It should run:
+The skill's `references/staff-editing.md` explains how to enable the optional
+local-copy editor when explicitly requested. It downloads an edited HTML file;
+it does not update GitHub or the shared website. Preserve any older saved edits
+in the QMD before rebuilding without the editor.
 
-```text
-python scripts/staff_edits.py import path/to/example-edited.html
-quarto render
-```
-
-Keep `staff-edits/example.json` with the project; it records imported changes.
-The importer rejects another deck's identity or conflicting stale copies. Resolve
-any reported source conflicts before rebuilding. For a new, unrelated course,
-start from the skill's starter rather than copying this example's deck identity.
+For Blackboard, follow https://davidchivers.co.uk/slides/#blackboard. Publish
+interactive HTML to an approved web host such as GitHub Pages, then ask the AI
+to add its permanent URL as a Web Link in the selected course and location.
+OneDrive is an alternative for shared files such as PowerPoint or PDF; verify
+the actual sharing permissions and opening behaviour. Keep updates at the same
+destination and retain the requested Blackboard visibility.
 
 The illustrative Solow model uses output per worker y = k^(1/3), saving rate s,
 depreciation 0.05 and workforce growth 0.01, with no technological progress.

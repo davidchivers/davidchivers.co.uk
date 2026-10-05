@@ -110,7 +110,7 @@ html.durham-staff-editing .reveal { top:104px; height:calc(100% - 104px); }
     dirty=JSON.stringify(state.fields)!==savedFields || !!(active&&focusedBefore!==null&&value(active)!==focusedBefore);
     undoButton.disabled = !history.length && !(active && focusedBefore !== null && value(active) !== focusedBefore);
     const count = Object.keys(state.fields).length;
-    status.textContent = message || `Click outlined text to edit. ${count} edited item${count===1?'':'s'}. ${dirty?'Changes need saving.':'Save updated slides to keep a copy.'} Alt+Shift+E returns to presenting.`;
+    status.textContent = message || `Edits affect this copy only. Click outlined text to edit. ${count} edited item${count===1?'':'s'}. ${dirty?'Changes need saving.':'Download edited copy to keep a copy.'} Alt+Shift+E returns to presenting.`;
     const slide = window.Reveal.getCurrentSlide(), rect = slide.getBoundingClientRect(), scale = rect.width / window.Reveal.getConfig().width;
     const crowding = [...fields.values()].filter(el => slide.contains(el)).some(el => {
       const r=el.getBoundingClientRect();
@@ -212,10 +212,10 @@ html.durham-staff-editing .reveal { top:104px; height:calc(100% - 104px); }
       const reveal=document.querySelector('.reveal'),main=document.createElement('main');
       main.id='durham-slide-main';main.setAttribute('aria-label','Presentation');reveal.before(main);main.append(reveal);
     }
-    toolbar=document.createElement('aside');toolbar.id='durham-staff-toolbar';toolbar.hidden=true;toolbar.setAttribute('aria-label','Staff slide editor');
-    toolbar.innerHTML='<div class="dse-row"><strong>Staff edit mode</strong><button data-dse="previous" aria-label="Previous slide in editor">← Previous</button><button data-dse="next" aria-label="Next slide in editor">Next →</button><button data-dse="undo">Undo edit</button><button data-dse="link">Edit link</button><button data-dse="save" class="dse-primary">Save updated slides</button><button data-dse="preview">Preview / present</button></div><p id="durham-staff-status" role="status"></p><p id="durham-staff-warning" role="status"></p>';
+    toolbar=document.createElement('aside');toolbar.id='durham-staff-toolbar';toolbar.hidden=true;toolbar.setAttribute('aria-label','Local copy editor');
+    toolbar.innerHTML='<div class="dse-row"><strong>Editing your local copy</strong><button data-dse="previous" aria-label="Previous slide in editor">← Previous</button><button data-dse="next" aria-label="Next slide in editor">Next →</button><button data-dse="undo">Undo edit</button><button data-dse="link">Edit link</button><button data-dse="save" class="dse-primary">Download edited copy</button><button data-dse="preview">Preview / present</button></div><p id="durham-staff-status" role="status"></p><p id="durham-staff-warning" role="status"></p>';
     document.body.append(toolbar);status=toolbar.querySelector('#durham-staff-status');warning=toolbar.querySelector('#durham-staff-warning');undoButton=toolbar.querySelector('[data-dse="undo"]');
-    entryButton=document.createElement('button');entryButton.id='durham-staff-open';entryButton.type='button';entryButton.textContent='Edit slides';
+    entryButton=document.createElement('button');entryButton.id='durham-staff-open';entryButton.type='button';entryButton.textContent='Edit local copy';
     entryButton.title='Edit text and links (Alt+Shift+E)';entryButton.setAttribute('aria-controls',toolbar.id);entryButton.setAttribute('aria-expanded','false');
     entryButton.hidden=!!document.fullscreenElement;
     (document.querySelector('main,[role="main"]')||document.body).append(entryButton);
