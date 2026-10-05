@@ -32,8 +32,6 @@ p{margin:0 0 18px}
 .example-section{padding:30px 0 40px;border-top:1px solid var(--line);container-type:inline-size}
 .deck-frame{width:100%;aspect-ratio:16/9;border:1px solid #d8ccd5;border-radius:10px;overflow:hidden;box-shadow:0 12px 36px #3e1a4710;background:white}
 .deck-frame iframe{display:block;width:100%;height:100%;border:0}
-/* Allow the small-screen editor bar without reducing the slide preview. */
-@container(max-width:602px){.deck-frame{aspect-ratio:auto;height:calc((100cqw - 2px) * 9 / 16 + 50px)}}
 .preview-caption{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--muted);margin:12px 0 18px}
 .preview-caption p{margin:0}
 .jump-links{flex-wrap:wrap;gap:9px}
