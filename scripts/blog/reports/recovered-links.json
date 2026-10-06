@@ -1,0 +1,16 @@
+[
+  {
+    "original": "https://www.youtube.com/watch?v=h5SKpItRY9k",
+    "original_oembed_status": 404,
+    "replacement": "https://www.nasa.gov/wp-content/uploads/2015/01/590331main_ringtone_smallStep.mp3",
+    "status": 200,
+    "content_type": "audio/mpeg",
+    "source": "https://www.nasa.gov/historical-sounds/"
+  },
+  {
+    "original": "https://pubs.asahq.org/anesthesiology/article/100/5/1271/6428/Queuing-Theory-Accurately-Models-the-Need-for",
+    "replacement": "https://www.dcscience.net/mcmanus-stochastic-beds-2004.pdf",
+    "status": 200,
+    "bibliography": "https://ihoptimize.org/knowledge-center/publications/"
+  }
+]

@@ -1,0 +1,6 @@
+source/[0-9][0-9].txt
+source/posts.json
+reports/*.jpg
+reports/*.png
+reports/browser-*.json
+__pycache__/

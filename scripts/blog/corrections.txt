@@ -1,0 +1,349 @@
+# Post number | exact original text (whitespace flexible) | correction
+# T prefix denotes a title correction. Substantive claims and quotations are preserved.
+1|why playing with plug sockets are bad|why playing with plug sockets is bad
+1|UKs impenetrable|UK's impenetrable
+1|all its cracked up|all it's cracked up
+1|a kin to|akin to
+1|doit|do it
+1|figures you see about how much smoking "costs" society doesn't|figures you see about how much smoking "costs" society don't
+1|So lets say|So let's say
+1|If were to ban|If we were to ban
+1|the the right|the right
+1|find out out|find out
+1|The debate then become|The debate then becomes
+1|effects such a fuelling|effects such as fuelling
+2|alternatively know as|alternatively known as
+2|talk about it is why|talk about is why
+2|an off-peak train tickets|an off-peak train ticket
+2|on assumption of|on the assumption of
+2|preferences are what determines|preferences are what determine
+3|think to hard|think too hard
+3|colonised mars|colonised Mars
+3|Students loans|Student loans
+3|if don't pay it back|if you don't pay it back
+3|put off put off|put off
+3|find away to reassure|find a way to reassure
+3|eventually come round to|eventually people will come round to
+3|is this is that|is that
+3|make-up of parish councillors look like|make-up of parish councillors looks like
+3|how fix this|how to fix this
+3|Grandparents near by|grandparents nearby
+3|Lot's of graduates|Lots of graduates
+3|an hours commute|an hour's commute
+3|your missing out|you're missing out
+3|go to British Museum|go to the British Museum
+3|ride in to Newcastle|ride into Newcastle
+3|clamouring come|clamouring to come
+3|9. Compulsory Voting|8. Compulsory Voting
+4|things you learn how|things you learn is how
+4|equate to their marginal cost|equate it to their marginal cost
+4|you would selling 100 cups|selling 100 cups
+4|spun a yawn|spun a yarn
+4|further an so on|further and so on
+5|and are more open to changing their mind|and is more open to changing their mind
+5|a good idea in what|a good idea of what
+5|This is certainty not|This is certainly not
+5|changing ones mind|changing their mind
+5|doesn't in fact make cool you down|doesn't in fact cool you down
+6|I could quite seem|I couldn't quite seem
+6|your edging closer|you're edging closer
+6|You stand their tutting|You stand there tutting
+6|there are number of|there are a number of
+6|not improbably that|not improbable that
+6|that queue continues|that the queue continues
+6|This can be the hard round.|This can be hard to get your head round.
+6|efficient use taxpayer money|efficient use of taxpayer money
+7|The conservative party|The Conservative Party
+7|as a result to a|as a result of a
+7|"The spent too much"|"They spent too much"
+7|debateable|debatable
+7|previous conservative government|the previous Conservative government
+7|There was a view at time|There was a view at the time
+7|The problem thought was|The problem though was
+7|So at time when|So at a time when
+7|levels of government debt is a concern|levels of government debt are a concern
+7|repay back the debt|repay the debt
+7|a bit more steps in logic from voter|a few more steps in logic from the voter
+7|The difficult here|The difficulty here
+7|if you an ardent|if you are an ardent
+8|simple "good" thing or bad" thing|simple "good" things or "bad" things
+8|We all doit|We all do it
+8|you already categories|you already categorise
+8|to make decision|to make decisions
+8|use a lot energy|use a lot of energy
+8|if people make decision|if people make decisions
+8|concerned with establish|concerned with establishing
+8|for health reason|for health reasons
+9|at it's lowest|at its lowest
+9|would at point get|would at one point get
+9|What effects exchange rates|What affects exchange rates
+9|Lets say|Let's say
+9|I buy then if I waited|I buy than if I waited
+9|the way, things work|the way things work
+9|for various reason|for various reasons
+9|"price in"|"priced in"
+9|we should be not overly confident|we should not be overly confident
+9|The first thing to note, that|The first thing to note is that
+9|governments derision|government's derision
+9|This why the government|This is why the government
+9|or doing for their mates|or doing it for their mates
+9|pension markets was|pension markets were
+10|Lets say|Let's say
+10|I gave it to my you|I gave it to you
+10|make good on promise|make good on my promise
+10|sets it's interest rate|sets its interest rate
+10|it would takes time|it would take time
+10|This commercial bank an incentive|This gave commercial banks an incentive
+10|this is lot to|this is a lot to
+10|controlling interests rates|controlling interest rates
+10|central banks aim|central banks' aim
+11|an increase need|an increased need
+11|getting in red in the face|getting red in the face
+11|an umpires decision|an umpire's decision
+11|person who throw a monopoly board|person who would throw a Monopoly board
+11|I do think this another|I do think this is another
+11|lower wages then|lower wages than
+11|It is why public sectors has many unions for teachers, nurses and rail workers have unions.|It is why the public sector has many unions for teachers, nurses and rail workers.
+11|doit|do it
+11|it isn't the only.|it isn't the only one.
+11|certainty helpful in rebalances|certainly helpful in rebalancing
+12|go on to to read|go on to read
+12|raising interest rates make|raising interest rates makes
+12|your saving into a bond|your savings into a bond
+12|gold increases with value|gold increases in value
+12|Fan of Bitcoin's say|Fans of Bitcoin say
+12|a a 1 in 1000|a 1 in 1000
+12|the return on safe assets, such as savings bonds, are rising|the return on safe assets, such as savings bonds, is rising
+12|part of of what|part of what
+13|(the US they are explicit|(in the US they are explicit
+13|where unemployment is high that there is|where unemployment is high and there is
+13|or ask people to work|or asking people to work
+13|discourage saving and increasing spending|discourage saving and increase spending
+13|have have very little savings or assets which is aversely affected|have very little savings or assets which are adversely affected
+13|Capitalist get|Capitalists get
+13|affectively lose|effectively lose
+13|There are number of|There are a number of
+13|selfish point of you|selfish point of view
+13|so much in your monthly mortgage|so much in their monthly mortgage
+13|don't ask for raise|don't ask for a raise
+13|a rare rise|a rate rise
+13|But by explicitly arguing|But explicitly arguing
+13|the governors remit|the governor's remit
+13|When Mark Carne talked about Brexit uncertainty and was also accused of political intervening.|When Mark Carney talked about Brexit uncertainty, he was also accused of politically intervening.
+14|panels assess research papers submitted and are awarded|panels assess research papers submitted and award them
+14|mean average you get usually sit|mean average you get usually sits
+14|everyone average|everyone's average
+14|due to shear amount|due to the sheer amount
+14|variation in these rankings are random|variation in these rankings is random
+14|as highest REF score|as high a REF score
+14|the oppositions net|the opposition's net
+14|the goal keepers view|the goalkeeper's view
+14|if we incentives|if we incentivise
+14|If university increased|If a university increased
+14|time and recourses|time and resources
+15|put them on a hardhat|put on a hard hat
+15|there will inevitable be|there will inevitably be
+15|examples regulations|examples of regulations
+15|no one else blame|no one else to blame
+15|management invariable needs|management invariably needs
+15|fill out a detailed forms|fill out detailed forms
+15|chugging a long|chugging along
+16|family as lived here generations|family has lived here for generations
+16|Rajnessh|Rajneesh
+16|its certainly worth|it's certainly worth
+16|right to have say|right to have a say
+17|with deep sense|with a deep sense
+17|throw a way|throw away
+17|with a bit of olive oil and they make|with a bit of olive oil they make
+17|an useable by-product|a useable by-product
+17|This notorious example|A notorious example
+17|You brings|You bring
+17|doctors, doctor’s salaries|doctors, doctors’ salaries
+17|quality of care is lot harder|quality of care is a lot harder
+17|If at work you are constantly putting out fires at work|If you are constantly putting out fires at work
+18|For utilitarian’s|For utilitarians
+18|by pulling the lever entails|pulling the lever entails
+18|In practise|In practice
+18|view harmful actions worse|view harmful actions as worse
+18|peoples responses|people's responses
+18|from decision to not vaccinate|from decisions to not vaccinate
+18|Jeremy Drivers|Jeremy Driver
+19|As oa consequence|As a consequence
+19|Why it is you get|Why is it you get
+19|the borrowers and lenders incentives|the borrower's and lender's incentives
+20|“hold on for dear life (|“hold on for dear life” (
+20|but on average has had|but on average have had
+20|The problem, like all problems in life, are worse|The problem, like all problems in life, is worse
+21|pay MP’s more|pay MPs more
+21|peoples ordinary lives|people's ordinary lives
+21|increase MP’s pay|increase MPs' pay
+21|going to costs me|going to cost me
+21|if I vote the way I think I should?|if I vote the way I think I should?”
+21|many peoples minds|many people's minds
+21|If yes, then by paying MPs more would|If yes, then paying MPs more would
+21|equalise ministers pay|equalise ministers' pay
+22|physical recourses|physical resources
+22|it is sort of feels|it sort of feels
+22|C02 emission|CO2 emissions
+22|negative consequence for|negative consequences for
+22|in order to decreases|in order to decrease
+22|this will causes|this will cause
+22|then who I am|then who am I
+22|an end to itself|an end in itself
+T23|hard understand|hard to understand
+23|Dominic Cummings recent|Dominic Cummings' recent
+23|anyone saying the sky is going to fall pretty soon are|anyone saying the sky is going to fall pretty soon is
+23|it is only 5 times more than we originally started with|it is about 10.6 times the number we originally started with
+23|increased by 222 times its original size|grown to about 2,223 times its original size
+23|not the rate of growth per|not the rate of growth per se.
+24|coincidently|coincidentally
+24|Baye's theorem|Bayes' theorem
+24|was catholic|was Catholic
+24|mistakingly|mistakenly
+24|Another way of looking at is|Another way of looking at it is
+25|mistakingly|mistakenly
+25|as I am this writing this|as I am writing this
+25|decreasing the chances of false positives increase|decreasing the chances of false positives increases
+25|is there annoyance|is their annoyance
+25|should really know the answer what|should really know the answer
+25|fewer false-positive|fewer false positives
+26|Noel Edmond's version|Noel Edmonds' version
+26|Noel Edmond's may|Noel Edmonds may
+26|but have you learned this|but you have learned this
+26|finding out how exactly how|finding out exactly how
+26|not enough understanding|not enough on understanding
+27|Many Bitcoins proponents|Many Bitcoin proponents
+27|"Well, you will quite rightly say|"Well," you will quite rightly say
+27|failed to oblige by|failed to abide by
+27|of central banks are able|of central banks being able
+27|I think this another|I think this is another
+27|which is that is inherently|which is that it is inherently
+27|under nefarious government|under a nefarious government
+27|from all computational power|from all the computational power
+27|they don't fulfil your promise|they don't fulfil their promise
+27|Winnie the pooh|Winnie the Pooh
+27|if they didn't fulfil their contract).|if they didn't fulfil their contract.
+28|spiders, horse and hippotamus|spiders, horses and hippopotamuses
+28|horses, respectfully|horses, respectively
+28|Inbesondere|Insbesondere
+29|Issac Newton|Isaac Newton
+29|ones in use has been around since the 1980s is called|ones in use has been around since the 1980s and is called
+29|Mecklenbuger Punsch|Mecklenburger Punsch
+29|in 50 years time|in 50 years' time
+29|Remember its not|Remember it's not
+29|he replies to that benefits|he replies to that benefit
+29|Noble prizes|Nobel prizes
+29|the best way to win matches|the best way to win matches.
+29|more than just end process|more than just the end process
+30|as it takes away from their individual liberties|as they take away from their individual liberties
+30|But this something|But this is something
+30|peoples decisions|people's decisions
+31|duck’a l'orange|duck à l'orange
+31|By playing around with different variations and noting what happens when she tries means|Playing around with different variations and noting what happens when she tries them means
+31|It is equivalent of|It is the equivalent of
+31|the way I earned was|the way I learned was
+31|before I attempted it|before I attempted them
+31|Also, am happy|Also, I am happy
+T32|“easiest in human history"|“easiest in human history”
+32|does actually allows|does actually allow
+33|if were they to buy|if they were to buy
+33|Christmases amounts|Christmases amount
+33|if do want|if you do want
+34|rounds of black sambuca adds|rounds of black sambuca add
+34|Inevitable you get|Inevitably you get
+34|think of complex mathematical equation|think of a complex mathematical equation
+34|not correct all|not correct at all
+34|because haven’t really|because we haven’t really
+34|Writing laws are|Writing laws is
+34|pressure on teaches|pressure on teachers
+34|not inflating grades would put their students at an unfair advantage|not inflating grades would put their students at an unfair disadvantage
+35|any of my publication|any of my publications
+35|process all much|process all that much
+35|this if of X quality|this is of X quality
+35|exactly what replace journals with|exactly what to replace journals with
+36|what is the probably|what is the probability
+36|Those what went|Those that went
+36|is because that it acts|is because it acts
+36|pick a Nazi then someone|pick a Nazi than someone
+36|it still pretty unlikely|it is still pretty unlikely
+36|these sorts of situation|these sorts of situations
+36|This is because as I was told|This is because I was told
+36|Beysian inference|Bayesian inference
+36|university then just employability|university than just employability
+36|the case the owning|the case that owning
+36|many Nazi’s|many Nazis
+37|pleasure seeing them|pleasure in seeing them
+37|but I do I write|but I do write
+37|applying to post grad applications|applying to postgraduate programmes
+37|these sort of applications|these sorts of applications
+37|hardly idea for them|hardly ideal for them
+37|A monopsony like a|A monopsony is like a
+37|these firms practises|these firms' practices
+37|student applications the UK|student applications in the UK
+37|End practise of offer subject to references|End the practice of offers subject to references
+37|an offer being rescinded|an offer been rescinded
+37|Tripadviser|Tripadvisor
+37|just be absence|just be the absence
+T38|economist's Frankenstein|economists' Frankenstein
+38|Neil Armstong’s|Neil Armstrong’s
+38|misquotes exists|misquotes exist
+38|by Robert Shiller’s|by Robert Shiller,
+38|Econ101ism is economics very own|Econ101ism is economics' very own
+38|that overtime many|that over time many
+38|an awful long time|an awfully long time
+38|The weird thing about is|The weird thing about it is
+39|governments warning|government's warning
+39|there has never an event|there has never been an event
+39|my life time|my lifetime
+39|at this at this point|at this point
+39|Over whatsapp|Over WhatsApp
+39|announced people to avoid|told people to avoid
+39|across to people don't follow|across to people who don't follow
+40|before understand ideas|before understanding ideas
+40|these sort of thing|these sorts of things
+40|you can a model|you can model
+41|The basics of social distancing is|The basics of social distancing are
+41|stay with within|stay within
+42|full shelf shelf|full shelf
+42|not the soup the total amount of soup the super markets have|not the total amount of soup the supermarkets have
+42|better so show|better to show
+42|Amazingly, by the government SIMPLY announcing this decision solves this problem|Amazingly, the government SIMPLY announcing this decision solves this problem
+43|enough economist|enough economists
+T44|Larry Elliot's|Larry Elliott's
+44|Larry Elliot's|Larry Elliott's
+44|Larry Elliot’s|Larry Elliott’s
+44|Mr Elliot|Mr Elliott
+44|less of criticism|less of a criticism
+44|the reformers 33 points|the reformers' 33 points
+44|in support for|in support of
+44|a noble-prize winning economist|a Nobel Prize-winning economist
+44|goes to suggest|goes on to suggest
+44|non-other than|none other than
+45|There a pros|There are pros
+45|Econ101ism’s|Econ101isms
+45|Noble prize winning|Nobel Prize-winning
+45|Robert Sheller|Robert Shiller
+45|view of the mainstream consists of|view of what the mainstream consists of
+45|This brings to me|This brings me
+45|For economic students|For economics students
+46|economists views|economists' views
+46|individuals journalists|individual journalists
+46|headlines for new pieces|headlines for news pieces
+46|My arguments foundations|My argument's foundations
+47|But for use we|But for us we
+47|That is 1,700,000,000.|That is 1,700,000,000,000.
+47|is a silly as|is as silly as
+47|any defect adds|any deficit adds
+47|“calming the markets” arguments is|“calming the markets” argument is
+47|too early than I|too early then I
+47|mention what the cut in government spending would have on|mention what effect the cut in government spending would have on
+47|pay back the debt back|pay back the debt
+47|the Conservatives plans|the Conservatives' plans
+48|can only be good thing|can only be a good thing
+48|inflation is minus 50,|inflation is minus 50%,
+48|a lot of business throughout|a lot of businesses throughout
+48|air condition on full blast|air conditioning on full blast
+48|The worse case scenario|The worst case scenario
+48|if controlled properly it unlikely|if controlled properly it is unlikely
+48|some peoples worries|some people's worries
+48|current conditions means|current conditions mean

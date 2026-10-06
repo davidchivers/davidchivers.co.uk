@@ -1,0 +1,544 @@
+[
+  {
+    "url": "http://kill-or-cure.herokuapp.com/",
+    "status": 404,
+    "final_url": "http://kill-or-cure.herokuapp.com/",
+    "content_type": "text/html; charset=utf-8",
+    "title": "No such app"
+  },
+  {
+    "url": "http://krugman.blogs.nytimes.com/2012/02/18/austerity-and-growth/",
+    "status": 200,
+    "final_url": "https://archive.nytimes.com/krugman.blogs.nytimes.com/2012/02/18/austerity-and-growth/",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Austerity and Growth - The New York Times"
+  },
+  {
+    "url": "http://oro.open.ac.uk/47598/",
+    "status": 403,
+    "final_url": "https://oro.open.ac.uk/47598/",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Just a moment..."
+  },
+  {
+    "url": "http://www.cityam.com/212589/we-can-live-zero-inflation-two-cent-target-must-not-be-set-stone",
+    "status": 200,
+    "final_url": "https://www.cityam.com/we-can-live-zero-inflation-two-cent-target-must-not-be-set-stone/",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "We can live with zero inflation: The two per cent target must not be set in stone"
+  },
+  {
+    "url": "http://www.ft.com/cms/s/0/7af4252c-ab03-11e4-91d2-00144feab7de.html#axzz3Xl578T8r",
+    "status": 200,
+    "final_url": "https://www.ft.com/content/7af4252c-ab03-11e4-91d2-00144feab7de#axzz3Xl578T8r",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Subscribe to read"
+  },
+  {
+    "url": "http://www.independent.co.uk/news/business/news/two-thirds-of-economists-say-coalition-austerity-harmed-the-economy-10149410.html",
+    "status": 200,
+    "final_url": "https://www.independent.co.uk/news/business/news/two-thirds-of-economists-say-coalition-austerity-harmed-the-economy-10149410.html",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Two thirds of economists say Coalition austerity harmed the economy | The Independent | The Independent"
+  },
+  {
+    "url": "http://www.lrb.co.uk/v37/n04/simon-wren-lewis/the-austerity-con",
+    "status": 200,
+    "final_url": "https://www.lrb.co.uk/the-paper/v37/n04/simon-wren-lewis/the-austerity-con",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Simon Wren-Lewis · The Austerity Con"
+  },
+  {
+    "url": "http://www.newweather.org/2017/12/12/the-new-reformation-33-theses-for-an-economics-reformation/",
+    "status": 200,
+    "final_url": "https://www.newweather.org/2017/12/12/the-new-reformation-33-theses-for-an-economics-reformation/",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "The new reformation: 33 theses for an economics reformation - New Weather Institute"
+  },
+  {
+    "url": "http://www.nytimes.com/2015/03/23/opinion/paul-krugman-britains-terrible-no-good-economic-discourse.html",
+    "status": 403,
+    "final_url": "http://www.nytimes.com/2015/03/23/opinion/paul-krugman-britains-terrible-no-good-economic-discourse.html",
+    "content_type": "text/html;charset=utf-8",
+    "title": "nytimes.com"
+  },
+  {
+    "url": "http://www.telegraph.co.uk/finance/comment/jeremy-warner/11450276/Bank-of-England-urged-to-let-rip-on-inflation.html",
+    "status": 402,
+    "final_url": "https://www.telegraph.co.uk/finance/comment/jeremy-warner/11450276/Bank-of-England-urged-to-let-rip-on-inflation.html",
+    "content_type": "text/html; charset=utf-8",
+    "title": ""
+  },
+  {
+    "url": "http://www.telegraph.co.uk/finance/economics/11491395/Inflation-falls-to-zero-in-February-as-Britain-heads-to-deflation.html",
+    "status": 402,
+    "final_url": "https://www.telegraph.co.uk/finance/economics/11491395/Inflation-falls-to-zero-in-February-as-Britain-heads-to-deflation.html",
+    "content_type": "text/html; charset=utf-8",
+    "title": ""
+  },
+  {
+    "url": "http://www.telegraph.co.uk/science/2016/11/16/kids-better-off-at-nursery-rather-than-staying-at-home-with-mum/",
+    "status": 402,
+    "final_url": "https://www.telegraph.co.uk/science/2016/11/16/kids-better-off-at-nursery-rather-than-staying-at-home-with-mum/",
+    "content_type": "text/html; charset=utf-8",
+    "title": ""
+  },
+  {
+    "url": "http://www.thisismoney.co.uk/money/smallbusiness/article-2809685/Top-25-self-entrepreneurs-started-small-sums-money.html",
+    "status": 200,
+    "final_url": "http://www.thisismoney.co.uk/money/smallbusiness/article-2809685/Top-25-self-entrepreneurs-started-small-sums-money.html",
+    "content_type": "text/html",
+    "title": ""
+  },
+  {
+    "url": "https://analytics.ofqual.gov.uk/apps/GCSE/Outcomes/",
+    "status": 200,
+    "final_url": "https://analytics.ofqual.gov.uk/apps/GCSE/Outcomes/",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "GCSE outcomes in England"
+  },
+  {
+    "url": "https://arxiv.org/",
+    "status": 200,
+    "final_url": "https://arxiv.org/",
+    "content_type": "text/html; charset=utf-8",
+    "title": "arXiv.org e-Print archive"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Degrowth",
+    "status": 403,
+    "final_url": "https://en.wikipedia.org/wiki/Degrowth",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Wikimedia Error"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/The_Plutonium_Files",
+    "status": 403,
+    "final_url": "https://en.wikipedia.org/wiki/The_Plutonium_Files",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Wikimedia Error"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/The_dress",
+    "status": 200,
+    "final_url": "https://en.wikipedia.org/wiki/The_dress",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "The dress - Wikipedia"
+  },
+  {
+    "url": "https://ideas.repec.org/top/top.person.all.html",
+    "status": 200,
+    "final_url": "https://ideas.repec.org/top/top.person.all.html",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Top Economists, as of August 2026 | IDEAS/RePEc"
+  },
+  {
+    "url": "https://knowablemagazine.org/content/article/society/2022/the-obscure-calculation-transforming-climate-policy",
+    "status": 403,
+    "final_url": "https://knowablemagazine.org/content/article/society/2022/the-obscure-calculation-transforming-climate-policy",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Just a moment..."
+  },
+  {
+    "url": "https://longandvariable.wordpress.com/",
+    "status": 200,
+    "final_url": "https://longandvariable.wordpress.com/",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "longandvariable | A blog on macroeconomics and public policy by Tony Yates."
+  },
+  {
+    "url": "https://longandvariable.wordpress.com/2015/03/26/ruling-out-ruling-out-changes-in-taxes-and-spending/",
+    "status": 200,
+    "final_url": "https://longandvariable.wordpress.com/2015/03/26/ruling-out-ruling-out-changes-in-taxes-and-spending/",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Ruling out ruling out [changes in taxes and spending] | longandvariable"
+  },
+  {
+    "url": "https://marginalrevolution.com/marginalrevolution/2018/12/economics-gift-giving.html",
+    "status": 200,
+    "final_url": "https://marginalrevolution.com/marginalrevolution/2018/12/economics-gift-giving.html",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "The Economics of Gift Giving - Marginal REVOLUTION"
+  },
+  {
+    "url": "https://medium.datadriveninvestor.com/deal-or-no-deal-and-monty-hall-6db67570352a",
+    "status": 403,
+    "final_url": "https://medium.datadriveninvestor.com/deal-or-no-deal-and-monty-hall-6db67570352a",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Just a moment..."
+  },
+  {
+    "url": "https://normielisation.substack.com/p/personal-cheems-mindset?s=r",
+    "status": 200,
+    "final_url": "https://normielisation.substack.com/p/personal-cheems-mindset?s=r",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Personal Cheems Mindset - by Jeremy Driver - Normielisation"
+  },
+  {
+    "url": "https://ourworldindata.org/food-choice-vs-eating-local",
+    "status": 200,
+    "final_url": "https://ourworldindata.org/food-choice-vs-eating-local",
+    "content_type": "text/html; charset=utf-8",
+    "title": "You want to reduce the carbon footprint of your food? Focus on what you eat, not whether your food is local | Our World in Data"
+  },
+  {
+    "url": "https://pediaa.com/what-is-the-difference-between-kantianism-and-utilitarianism/#:~:text=The%20main%20difference%20between%20Kantianism,ethical%20standard%20of%20an%20action.",
+    "status": 200,
+    "final_url": "https://pediaa.com/what-is-the-difference-between-kantianism-and-utilitarianism/#:~:text=The%20main%20difference%20between%20Kantianism,ethical%20standard%20of%20an%20action.",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "What is the Difference Between Kantianism and Utilitarianism - Pediaa.Com"
+  },
+  {
+    "url": "https://pubs.asahq.org/anesthesiology/article/100/5/1271/6428/Queuing-Theory-Accurately-Models-the-Need-for",
+    "status": 403,
+    "final_url": "https://journals.lww.com/anesthesiology",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Just a moment..."
+  },
+  {
+    "url": "https://researchbriefings.files.parliament.uk/documents/SN03653/SN03653.pdf",
+    "status": 200,
+    "final_url": "https://researchbriefings.files.parliament.uk/documents/SN03653/SN03653.pdf",
+    "content_type": "application/pdf",
+    "title": ""
+  },
+  {
+    "url": "https://theconversation.com/fact-check-did-labour-overspend-and-leave-a-deficit-that-was-out-of-control-41118",
+    "status": 200,
+    "final_url": "https://theconversation.com/fact-check-did-labour-overspend-and-leave-a-deficit-that-was-out-of-control-41118",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Fact Check: did Labour overspend and leave a deficit that was out of control?"
+  },
+  {
+    "url": "https://twitter.com/Birdyword/status/1397913029384151048",
+    "status": 200,
+    "final_url": "https://x.com/Birdyword/status/1397913029384151048",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Mike Bird on X: \"I remember when I was about seven I asked my parents if I could have a penny in pocket money a week instead of the pound I got, but for it to double every week. That's the level of maths you needed to understand what was happening here.\" / X"
+  },
+  {
+    "url": "https://twitter.com/ClarkeMicah/status/1339896201844563971",
+    "status": 200,
+    "final_url": "https://x.com/ClarkeMicah/status/1339896201844563971",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Peter Hitchens on X: \"@whippletom. @hugorifkind  You might benefit from this;\" / X"
+  },
+  {
+    "url": "https://twitter.com/JohnBarrdear/status/1546816283420794880",
+    "status": 200,
+    "final_url": "https://x.com/JohnBarrdear/status/1546816283420794880",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "John Barrdear on X: \"@dave_chivers For the benefit of your followers: standard thinking these days is, instead, that all monetary policy (incl QE) alters the set of interest rates facing the economy and people then respond to those. Broad money balances may move as a byproduct of that, but it is no… / X"
+  },
+  {
+    "url": "https://twitter.com/MarcusFysh/status/962488066131849217",
+    "status": 200,
+    "final_url": "https://x.com/MarcusFysh/status/962488066131849217",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Marcus Fysh on X: \"@SamuelMarcLowe Ya da ya da gravity ya da ya da meaningless graphs, supposition and cod economics ya da ya da ya\" / X"
+  },
+  {
+    "url": "https://twitter.com/StevenSalzberg1/status/1383861088706461701",
+    "status": 200,
+    "final_url": "https://x.com/StevenSalzberg1/status/1383861088706461701",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Steven Salzberg 💙💛 on X: \"OMG this quote: \"Bayes’s theorem is written, in mathematical notation, as P(A|B) = (P(B|A)P(A))/P(B). It looks complicated.\" Wow, multiplication and division in the same equation, that sure is complicated. And \"obscure\"? Geez https://t.co/6dXxIZM1Bi\" / X"
+  },
+  {
+    "url": "https://twitter.com/TomChivers/status/1578303265095225346",
+    "status": 200,
+    "final_url": "https://x.com/TomChivers/status/1578303265095225346",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Tom Chivers on X: \"FIFTEEN *MILLION* POUNDS? Why, that's nearly … erm … hang on … 0.025% of the cost of the energy bills bailout! I can see why you'd be worried about it\" / X"
+  },
+  {
+    "url": "https://twitter.com/dave_chivers/status/1539165347684974593",
+    "status": 200,
+    "final_url": "https://x.com/dave_chivers/status/1539165347684974593",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "X on X / X"
+  },
+  {
+    "url": "https://twitter.com/dave_chivers/status/1575006639924527104",
+    "status": 200,
+    "final_url": "https://x.com/dave_chivers/status/1575006639924527104",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "X on X / X"
+  },
+  {
+    "url": "https://twitter.com/dave_chivers/status/1576128405296533504",
+    "status": 200,
+    "final_url": "https://x.com/dave_chivers/status/1576128405296533504",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "X on X / X"
+  },
+  {
+    "url": "https://twitter.com/dave_chivers/status/1581566716446126081",
+    "status": 200,
+    "final_url": "https://x.com/dave_chivers/status/1581566716446126081",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "X on X / X"
+  },
+  {
+    "url": "https://twitter.com/dave_chivers/status/1641353625426354177",
+    "status": 200,
+    "final_url": "https://x.com/dave_chivers/status/1641353625426354177",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "X on X / X"
+  },
+  {
+    "url": "https://twitter.com/hertzpodcast/status/1361209629095714817",
+    "status": 200,
+    "final_url": "https://x.com/hertzpodcast/status/1361209629095714817",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Everything Hertz on X: \"126: The division of scientific labor (with Saloni Dattani) https://t.co/Peer4GjPNS \n\nWe chat with @salonium about the benefits of dividing scientific labor, the magazine she co-founded (@WorksInProgMag), writing about science for the public, and fighting online misinformati… / X"
+  },
+  {
+    "url": "https://twitter.com/kareem_carr/status/1383925269132582912",
+    "status": 200,
+    "final_url": "https://x.com/kareem_carr/status/1383925269132582912",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Kareem Carr, Ph.D. on X: \"check out this obscure math theorem. only a few know about this.\" / X"
+  },
+  {
+    "url": "https://twitter.com/thomasforth/status/1578792513464590337",
+    "status": 200,
+    "final_url": "https://x.com/thomasforth/status/1578792513464590337",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Tom Forth on X: \"Top rule for guessing if something electrical powered uses a lot of electricity is if it gets hot. Gets hot? Uses lots of electricity. Doesn't get hot? Probably doesn't.\" / X"
+  },
+  {
+    "url": "https://unherd.com/2021/10/the-men-who-failed-britain/",
+    "status": 200,
+    "final_url": "https://unherd.com/2021/10/the-men-who-failed-britain/",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "The men who failed Britain - UnHerd"
+  },
+  {
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0074rxx/horizon-19951996-fermats-last-theorem",
+    "status": 200,
+    "final_url": "https://www.bbc.co.uk/iplayer/episode/b0074rxx/horizon-19951996-fermats-last-theorem",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Horizon - 1995-1996: Fermat's Last Theorem - BBC iPlayer"
+  },
+  {
+    "url": "https://www.bloomberg.com/opinion/articles/2021-01-26/is-bitcoin-mining-worth-the-environmental-cost",
+    "status": 403,
+    "final_url": "https://www.bloomberg.com/opinion/articles/2021-01-26/is-bitcoin-mining-worth-the-environmental-cost",
+    "content_type": "text/html",
+    "title": "Bloomberg - Are you a robot?"
+  },
+  {
+    "url": "https://www.build-review.com/very-stupid-stitous-12-million-brits-have-let-superstitions-block-major-life-decisions/",
+    "status": 403,
+    "final_url": "https://www.build-review.com/very-stupid-stitous-12-million-brits-have-let-superstitions-block-major-life-decisions/",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Just a moment..."
+  },
+  {
+    "url": "https://www.ecb.europa.eu/press/blog/date/2023/html/ecb.blog.230330~00e522ecb5.en.html",
+    "status": 200,
+    "final_url": "https://www.ecb.europa.eu/press/blog/date/2023/html/ecb.blog.230330~00e522ecb5.en.html",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "How tit-for-tat inflation can make everyone poorer"
+  },
+  {
+    "url": "https://www.economicforces.xyz/p/should-wendys-introduce-surge-pricing?r=4d1ki&utm_campaign=post&utm_medium=email&triedRedirect=true",
+    "status": 200,
+    "final_url": "https://www.economicforces.xyz/p/should-wendys-introduce-surge-pricing?r=4d1ki&utm_campaign=post&utm_medium=email&triedRedirect=true",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Should Wendy's Introduce Surge Pricing? - by Brian Albrecht"
+  },
+  {
+    "url": "https://www.economicshelp.org/blog/3201/economics/profit-maximisation/",
+    "status": 403,
+    "final_url": "https://www.economicshelp.org/blog/3201/economics/profit-maximisation/",
+    "content_type": "text/html",
+    "title": "403 - Forbidden"
+  },
+  {
+    "url": "https://www.ft.com/content/14f797c3-910d-4af6-a5e3-49706067d41d",
+    "status": 200,
+    "final_url": "https://www.ft.com/content/14f797c3-910d-4af6-a5e3-49706067d41d",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Subscribe to read"
+  },
+  {
+    "url": "https://www.goodreads.com/work/quotes/3349450",
+    "status": 200,
+    "final_url": "https://www.goodreads.com/work/quotes/3349450-romeo-and-juliet",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Romeo and Juliet Quotes by William Shakespeare"
+  },
+  {
+    "url": "https://www.howtoreadnumbers.com/",
+    "status": 200,
+    "final_url": "https://sites.google.com/view/howtoreadnumbers/home",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Home"
+  },
+  {
+    "url": "https://www.imf.org/external/pubs/ft/fandd/2010/12/basics.htm",
+    "status": 403,
+    "final_url": "https://www.imf.org/external/pubs/ft/fandd/2010/12/basics.htm",
+    "content_type": "text/html",
+    "title": "Access Denied"
+  },
+  {
+    "url": "https://www.lrb.co.uk/v37/n04/simon-wren-lewis/the-austerity-con",
+    "status": 200,
+    "final_url": "https://www.lrb.co.uk/the-paper/v37/n04/simon-wren-lewis/the-austerity-con",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Simon Wren-Lewis · The Austerity Con"
+  },
+  {
+    "url": "https://www.mentalfloss.com/article/68007/50-famous-misquotations-and-what-was-really-said",
+    "status": 200,
+    "final_url": "https://www.mentalfloss.com/culture/50-famous-misquotations-and-what-was-really-said",
+    "content_type": "text/html",
+    "title": "50 Famous Misquotations (and What Was Really Said)"
+  },
+  {
+    "url": "https://www.nutracheck.co.uk/CaloriesIn/Product/64/Domino%27s+Garlic+&+Herb+Dip#url",
+    "status": 200,
+    "final_url": "https://www.nutracheck.co.uk/CaloriesIn/Product/64/Domino%27s+Garlic+&+Herb+Dip#url",
+    "content_type": "text/html;charset=UTF-8",
+    "title": "Calories in Domino's Garlic & Herb Dip, Nutrition Information | Nutracheck"
+  },
+  {
+    "url": "https://www.theguardian.com/business/2017/dec/17/heretics-welcome-economics-needs-a-new-reformation",
+    "status": 200,
+    "final_url": "https://www.theguardian.com/business/2017/dec/17/heretics-welcome-economics-needs-a-new-reformation",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Heretics welcome! Economics needs a new Reformation | Larry Elliott | The Guardian"
+  },
+  {
+    "url": "https://www.theguardian.com/commentisfree/2017/nov/30/fixation-economic-growth-gdp-pollution-gambling",
+    "status": 200,
+    "final_url": "https://www.theguardian.com/commentisfree/2017/nov/30/fixation-economic-growth-gdp-pollution-gambling",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "We’re being hurt by the fixation on economic growth at all costs | Larry Elliott | The Guardian"
+  },
+  {
+    "url": "https://www.theguardian.com/food/series/how-to-cook-the-perfect----",
+    "status": 200,
+    "final_url": "https://www.theguardian.com/food/series/how-to-cook-the-perfect----",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "How to cook the perfect ... | The Guardian"
+  },
+  {
+    "url": "https://www.theguardian.com/inequality/2017/dec/03/income-inequality-is-getting-wider-if-the-stats-count-what-counts",
+    "status": 200,
+    "final_url": "https://www.theguardian.com/inequality/2017/dec/03/income-inequality-is-getting-wider-if-the-stats-count-what-counts",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Income inequality is getting wider. If the stats count what counts | Larry Elliott | The Guardian"
+  },
+  {
+    "url": "https://www.theguardian.com/politics/2015/aug/23/jeremy-corbyns-opposition-to-austerity-is-actually-mainstream-economics",
+    "status": 200,
+    "final_url": "https://www.theguardian.com/politics/2015/aug/23/jeremy-corbyns-opposition-to-austerity-is-actually-mainstream-economics",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Jeremy Corbyn's opposition to austerity is actually mainstream economics | Jeremy Corbyn | The Guardian"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2021/apr/18/obscure-maths-bayes-theorem-reliability-covid-lateral-flow-tests-probability",
+    "status": 200,
+    "final_url": "https://www.theguardian.com/world/2021/apr/18/obscure-maths-bayes-theorem-reliability-covid-lateral-flow-tests-probability",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "The obscure maths theorem that governs the reliability of Covid testing | Coronavirus | The Guardian"
+  },
+  {
+    "url": "https://www.theverge.com/2020/12/22/22195834/cryptocurrency-fincen-regulations-private-wallets",
+    "status": 200,
+    "final_url": "https://www.theverge.com/2020/12/22/22195834/cryptocurrency-fincen-regulations-private-wallets",
+    "content_type": "text/html; charset=utf-8",
+    "title": "Congratulations, the US got you cryptocurrency regulation for Christmas | The Verge"
+  },
+  {
+    "url": "https://www.tutor2u.net/economics/reference/ultimatum-game",
+    "status": 200,
+    "final_url": "https://www.tutor2u.net/economics/reference/ultimatum-game",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Ultimatum game | Reference Library | Economics | tutor2u"
+  },
+  {
+    "url": "https://www.waterstones.com/book/how-to-read-numbers/tom-chivers//9781474619967",
+    "status": 200,
+    "final_url": "https://www.waterstones.com/book/how-to-read-numbers/tom-chivers/david-chivers/9781474619974",
+    "content_type": "text/html; charset=UTF-8",
+    "title": "How to Read Numbers by Tom Chivers, David Chivers | Waterstones"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=BtMmymOxdjc",
+    "status": 200,
+    "final_url": "https://www.youtube.com/watch?v=BtMmymOxdjc",
+    "content_type": "text/html; charset=utf-8",
+    "title": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=QIKqw-pTiJ0",
+    "status": 200,
+    "final_url": "https://www.youtube.com/watch?v=QIKqw-pTiJ0",
+    "content_type": "text/html; charset=utf-8",
+    "title": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=UEfP1OKKz_Q",
+    "status": 200,
+    "final_url": "https://www.youtube.com/watch?v=UEfP1OKKz_Q",
+    "content_type": "text/html; charset=utf-8",
+    "title": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Uar2IvyLxLI&feature=emb_title",
+    "status": 200,
+    "final_url": "https://www.youtube.com/watch?v=Uar2IvyLxLI&feature=emb_title",
+    "content_type": "text/html; charset=utf-8",
+    "title": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "status": 200,
+    "final_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "content_type": "text/html; charset=utf-8",
+    "title": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=h5SKpItRY9k",
+    "status": 200,
+    "final_url": "https://www.youtube.com/watch?v=h5SKpItRY9k",
+    "content_type": "text/html; charset=utf-8",
+    "title": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=jbWHZwD5rGQ",
+    "status": 200,
+    "final_url": "https://www.youtube.com/watch?v=jbWHZwD5rGQ",
+    "content_type": "text/html; charset=utf-8",
+    "title": ""
+  },
+  {
+    "url": "http://mainlymacro.blogspot.co.uk/",
+    "status": 200,
+    "final_url": "https://mainlymacro.blogspot.com/",
+    "title": "mainly macro"
+  },
+  {
+    "url": "http://mainlymacro.blogspot.co.uk/2013/01/the-long-run-government-debt-target.html",
+    "status": 200,
+    "final_url": "https://mainlymacro.blogspot.com/2013/01/the-long-run-government-debt-target.html",
+    "title": "mainly macro: The long run government debt target"
+  },
+  {
+    "url": "http://mainlymacro.blogspot.co.uk/2014/12/deficits-mediamacro-and-popular-opinion.html",
+    "status": 200,
+    "final_url": "https://mainlymacro.blogspot.com/2014/12/deficits-mediamacro-and-popular-opinion.html",
+    "title": "mainly macro: Deficits, Mediamacro and Popular Opinion"
+  },
+  {
+    "url": "https://mainlymacro.blogspot.co.uk/2015/05/on-mediamacro.html",
+    "status": 200,
+    "final_url": "https://mainlymacro.blogspot.com/2015/05/on-mediamacro.html",
+    "title": "mainly macro: On mediamacro"
+  }
+]
