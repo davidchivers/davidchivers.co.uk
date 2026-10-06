@@ -110,9 +110,9 @@
     },
     {
       "path": "macro-applications/seminars/index.html",
-      "bytes": 1189679,
-      "source_sha256": "399d9ebb7de6861276db8369ba12b918aa694a046954f0c3132b665246546930",
-      "sha256": "dd96c309ad85658b7679cdf492bc739d03b0770fe325dd7ffd60a8eb3cce5f4c"
+      "bytes": 1189677,
+      "source_sha256": "d50c7625863918b9b7ef762668e23b8b8491fb9326019daeae1b916aa47a48b3",
+      "sha256": "b82828a0253a9186715b8b0de16f5ee1e12e0d89d8ad5acf6710020ae35271e0"
     },
     {
       "path": "macro-applications/seminars/seminar_1.html",
