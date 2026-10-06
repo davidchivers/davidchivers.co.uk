@@ -26,65 +26,76 @@
   const input = document.getElementById('search');
   if (!input) return;
   document.querySelector('.tools').hidden = false;
-  const list = document.querySelector('.post-list');
-  const posts = [...list.children];
+  const posts = [...document.querySelectorAll('.post-card')];
+  const groups = [...document.querySelectorAll('.year-group')];
+  const groupContainer = document.querySelector('.year-groups');
+  const alphabetical = document.querySelector('.alphabetical-results');
+  const alphabeticalList = document.getElementById('alphabetical-list');
   const count = document.querySelector('.post-count');
   const empty = document.querySelector('.empty-state');
   const sort = document.getElementById('sort');
-  const year = document.getElementById('year');
-  const topics = [...document.querySelectorAll('input[name="topic"]')];
+  const yearLinks = [...document.querySelectorAll('.year-links a')];
   const clear = document.querySelector('.clear-filters');
-  const more = document.querySelector('.show-more');
   const browse = document.querySelector('.browse-panel');
   const narrow = window.matchMedia('(max-width: 800px)');
   const syncBrowse = () => { browse.open = !narrow.matches; };
-  browse.hidden = false;
   syncBrowse();
   narrow.addEventListener('change', syncBrowse);
-  let limit = 12;
+  let selectedYear = location.hash.match(/^#year-(\d{4})$/)?.[1] || '';
+  if (!groups.some(group => group.dataset.year === selectedYear)) selectedYear = '';
   const normalise = text => text.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[‘’]/g, "'").toLocaleLowerCase('en-GB');
   const render = () => {
     const words = normalise(input.value).trim().split(/\s+/).filter(Boolean);
-    const topic = topics.find(option => option.checked).value;
     const ordered = [...posts].sort((a, b) => {
       if (sort.value === 'az') return normalise(a.dataset.title).localeCompare(normalise(b.dataset.title), 'en-GB');
       const difference = a.dataset.date.localeCompare(b.dataset.date);
       return sort.value === 'oldest' ? difference : -difference;
     });
     const matching = ordered.filter(post =>
-      (!topic || post.dataset.topic === topic) &&
-      (!year.value || post.dataset.year === year.value) &&
+      (!selectedYear || post.dataset.year === selectedYear) &&
       words.every(word => normalise(post.textContent).includes(word))
     );
-    const visible = new Set(matching.slice(0, limit));
+    const visible = new Set(matching);
     posts.forEach(post => {
       post.hidden = !visible.has(post);
     });
-    ordered.forEach(post => list.append(post));
-    count.textContent = visible.size < matching.length ? `Showing ${visible.size} of ${matching.length} articles` : `${matching.length} ${matching.length === 1 ? 'article' : 'articles'}`;
-    document.getElementById('results-heading').textContent = topic || 'All articles';
+    const isAlphabetical = sort.value === 'az';
+    ordered.forEach(post => {
+      const target = isAlphabetical ? alphabeticalList : groups.find(group => group.dataset.year === post.dataset.year).querySelector('.post-list');
+      target.append(post);
+    });
+    [...groups].sort((a, b) => sort.value === 'oldest' ? Number(a.dataset.year) - Number(b.dataset.year) : Number(b.dataset.year) - Number(a.dataset.year)).forEach(group => {
+      group.hidden = !matching.some(post => post.dataset.year === group.dataset.year);
+      groupContainer.append(group);
+    });
+    groupContainer.hidden = isAlphabetical;
+    alphabetical.hidden = !isAlphabetical || matching.length === 0;
+    count.textContent = `${matching.length} ${matching.length === 1 ? 'article' : 'articles'}${selectedYear ? ` from ${selectedYear}` : ''}`;
+    yearLinks.forEach(link => {
+      if (link.dataset.year === selectedYear) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
     empty.hidden = matching.length !== 0;
-    more.hidden = visible.size >= matching.length;
-    clear.hidden = !words.length && !topic && !year.value;
+    clear.hidden = !words.length && !selectedYear;
   };
-  const resetAndRender = () => { limit = 12; render(); };
-  input.addEventListener('input', resetAndRender);
-  sort.addEventListener('change', resetAndRender);
-  year.addEventListener('change', resetAndRender);
-  topics.forEach(option => option.addEventListener('change', resetAndRender));
+  input.addEventListener('input', render);
+  sort.addEventListener('change', render);
+  yearLinks.forEach(link => link.addEventListener('click', event => {
+    event.preventDefault();
+    selectedYear = link.dataset.year;
+    history.replaceState(null, '', link.getAttribute('href'));
+    render();
+    if (narrow.matches) {
+      browse.open = false;
+      input.focus();
+    }
+  }));
   clear.addEventListener('click', () => {
     input.value = '';
-    year.value = '';
-    topics[0].checked = true;
-    resetAndRender();
-    input.focus();
-  });
-  more.addEventListener('click', () => {
-    const previous = new Set(posts.filter(post => !post.hidden));
-    limit += 12;
+    selectedYear = '';
+    history.replaceState(null, '', '#articles');
     render();
-    // Move focus into the newly revealed results instead of leaving it below them.
-    [...list.children].find(post => !post.hidden && !previous.has(post))?.querySelector('a').focus();
+    input.focus();
   });
   render();
 })();
