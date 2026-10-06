@@ -554,6 +554,8 @@ Numerical corrections: in the exponential-growth post, 1,063/100 is 10.63 (not 5
 - Grouped previews under year headings with a simple Years archive. All articles remain available without JavaScript; year links jump to their sections. With JavaScript, year links select that year. Search, oldest-first and A–Z sorting are retained; A–Z shows one alphabetical list.
 - Kept the compact layout, three selected starting points, RSS and dark mode. The year list folds away on phones. Original article text is unchanged.
 
+- Replaced the queuing-theory article in “A few to start with” with “The problem with being anti-waste”, at the author’s request.
+
 ## Unresolved or access-limited references
 
 - “Kill or Cure” returns 404. No replacement was verified. Its link text is preserved with “original site unavailable”; the original URL remains in the source and audit.
