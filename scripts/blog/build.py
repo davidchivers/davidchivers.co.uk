@@ -19,10 +19,6 @@ for entry in feed['entry']:
                       original_url=url, slug=url.rsplit('/', 1)[-1][:-5], html=entry['content']['$t']))
 assert len(posts) == int(feed['openSearch$totalResults']['$t']), 'Incomplete Blogger export'
 assert len({p['slug'] for p in posts}) == len(posts), 'Duplicate post slugs'
-topics = json.loads((HERE / 'topics.json').read_text(encoding='utf-8'))
-topic_for = {slug: topic for topic, slugs in topics.items() for slug in slugs}
-assert len(topic_for) == sum(len(slugs) for slugs in topics.values()) == len(posts)
-assert set(topic_for) == {p['slug'] for p in posts}, 'Every post needs one reviewed topic'
 media = json.loads((HERE / 'reports/media.json').read_text(encoding='utf-8'))
 links = json.loads((HERE / 'reports/links.json').read_text(encoding='utf-8'))
 edits = []
@@ -199,10 +195,10 @@ def page(title, path, description, main, extra=''):
 <meta property="og:description" content="{escape(description, quote=True)}">
 <meta property="og:url" content="{BASE}{path}">
 <link rel="icon" href="/favicon.ico">
-<link rel="alternate" type="application/rss+xml" title="David Chivers · Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="Economy Class · David Chivers" href="/blog/feed.xml">
 <script src="/blog/assets/theme.js"></script>
-<link rel="stylesheet" href="/blog/assets/blog.css?v=2">
-<script defer src="/blog/assets/blog.js?v=2"></script>
+<link rel="stylesheet" href="/blog/assets/blog.css?v=3">
+<script defer src="/blog/assets/blog.js?v=3"></script>
 {extra}
 </head>
 <body>
@@ -215,7 +211,7 @@ def page(title, path, description, main, extra=''):
 <span class="theme-label">Dark mode</span></button></nav>
 </header>
 {main}
-<footer class="site-footer"><span>David Chivers · Economics &amp; other things</span><span><a href="/">Website</a> &nbsp; / &nbsp; <a href="/blog/feed.xml">RSS</a></span></footer>
+<footer class="site-footer"><span>Economy Class · David Chivers</span><span><a href="/">Website</a> &nbsp; / &nbsp; <a href="/blog/feed.xml">RSS</a></span></footer>
 </body>
 </html>
 '''
@@ -309,7 +305,7 @@ excerpt_starts = {
     'whats-in-name-importance-of-names-in': 'The reason why names are important',
     'journalism-which-misrepresents-academic': 'Although the study reports positive effects of attending nursery',
 }
-cards = []
+cards_by_year = {}
 for p in ordered:
     body = BeautifulSoup(p['body'], 'html.parser')
     # Keep the author's own opening words, without introducing new claims.
@@ -329,49 +325,46 @@ for p in ordered:
     if len(excerpt) > 280:
         excerpt = excerpt[:260].rsplit(' ', 1)[0].rstrip(' ,;:') + '…'
     p['excerpt'] = excerpt
-    p['topic'] = topic_for[p['slug']]
     date = datetime.fromisoformat(p['published'])
     minutes = max(1, (len(opening.split()) + 224) // 225)
     first_image = body.find('img')
     thumbnail = (f'<img class="post-thumbnail" src="{first_image["src"]}" alt="" loading="lazy" decoding="async" width="144" height="112">' if first_image else '')
-    cards.append(f'''<li class="post-card" data-title="{escape(p['title'], quote=True)}" data-date="{date.isoformat()}" data-year="{date.year}" data-topic="{escape(p['topic'], quote=True)}">
-<article><div class="post-meta"><time datetime="{date.date()}">{date.day} {date.strftime('%B %Y')}</time><span class="meta-dot" aria-hidden="true">·</span><span>{escape(p['topic'])}</span><span class="reading-time">{minutes} min read</span></div>
-<div class="post-preview"><div><h2><a href="{p['path']}">{escape(p['title'])}</a></h2><p class="post-excerpt">{escape(excerpt)}</p></div>{thumbnail}</div></article></li>''')
-topic_controls = '\n'.join(f'<label class="topic-option"><input type="radio" name="topic" value="{escape(topic, quote=True)}"><span>{escape(topic)}</span><span class="topic-count">{len(slugs)}</span></label>' for topic, slugs in topics.items())
+    cards_by_year.setdefault(date.year, []).append(f'''<li class="post-card" data-title="{escape(p['title'], quote=True)}" data-date="{date.isoformat()}" data-year="{date.year}">
+<article><div class="post-meta"><time datetime="{date.date()}">{date.day} {date.strftime('%B %Y')}</time><span class="reading-time">{minutes} min read</span></div>
+<div class="post-preview"><div><h3><a href="{p['path']}">{escape(p['title'])}</a></h3><p class="post-excerpt">{escape(excerpt)}</p></div>{thumbnail}</div></article></li>''')
 years = sorted(Counter(datetime.fromisoformat(p['published']).year for p in posts).items(), reverse=True)
-year_options = ''.join(f'<option value="{year}">{year} ({count})</option>' for year, count in years)
+year_sections = ''.join(f'<section class="year-group" id="year-{year}" data-year="{year}" aria-labelledby="heading-{year}"><h2 class="year-heading" id="heading-{year}">{year}</h2><ul class="post-list">{"".join(cards_by_year[year])}</ul></section>' for year, _ in years)
+year_links = ''.join(f'<li><a href="#year-{year}" data-year="{year}">{year}</a></li>' for year, _ in years)
 selected_slugs = ['infinite-growth-on-finite-planet', 'can-queuing-theory-explain-nhs-crisis', 'misleading-words']
 selected = ''.join(f'<li><a href="{p["path"]}">{escape(p["title"])}</a></li>' for slug in selected_slugs for p in posts if p['slug'] == slug)
 main = f'''<main id="main" class="index-main">
-<header class="blog-heading"><div><h1>Blog</h1><p class="intro">Economics, statistics and the things we take for granted.</p></div><span class="archive-range">{len(posts)} essays &amp; explainers<br>{years[-1][0]}–{years[0][0]}</span></header>
+<header class="blog-heading"><h1>Economy Class</h1></header>
 <div class="blog-layout">
-<section class="article-feed" aria-label="Articles">
+<section class="article-feed" id="articles" aria-label="Articles">
 <div class="tools" hidden><div class="search-wrap"><label class="visually-hidden" for="search">Search articles</label><input id="search" type="search" placeholder="Search the blog…" autocomplete="off"></div>
 <div class="sort-wrap"><label for="sort">Sort by</label><select id="sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="az">Title A–Z</option></select></div></div>
-<div class="feed-heading"><h2 id="results-heading">All articles</h2><p class="post-count" role="status" aria-live="polite">{len(posts)} articles · Newest first</p></div>
-<ul class="post-list">{''.join(cards)}</ul>
-<div class="empty-state" hidden><h3>No articles found</h3><p>Try a different search, topic or year.</p></div>
-<button class="show-more" type="button" hidden>Show more articles <span aria-hidden="true">↓</span></button>
+<p class="post-count visually-hidden" role="status" aria-live="polite">{len(posts)} articles, grouped by year</p>
+<button class="clear-filters" type="button" hidden>Show all articles</button>
+<div class="year-groups">{year_sections}</div>
+<section class="alphabetical-results" hidden><h2 class="year-heading">A–Z</h2><ul class="post-list" id="alphabetical-list"></ul></section>
+<div class="empty-state" hidden><h3>No articles found</h3><p>Try a different search or year.</p></div>
 </section>
 <aside class="blog-sidebar" aria-label="Explore the blog">
-<details class="browse-panel" open hidden><summary>Browse the archive</summary><div class="browse-content"><fieldset class="topic-filters"><legend>Topics</legend>
-<label class="topic-option"><input type="radio" name="topic" value="" checked><span>All topics</span><span class="topic-count">{len(posts)}</span></label>{topic_controls}</fieldset>
-<div class="year-filter"><label for="year">Publication year</label><select id="year"><option value="">All years</option>{year_options}</select></div>
-<button class="clear-filters" type="button" hidden>Clear filters</button></div></details>
+<details class="browse-panel" open><summary>Years</summary><nav class="browse-content" aria-label="Years"><ul class="year-links"><li><a href="#articles" data-year="" aria-current="true">All years</a></li>{year_links}</ul></nav></details>
 <section class="selected-posts"><h2>A few to start with</h2><ul>{selected}</ul></section>
 <section class="rss-note"><h2>Follow along</h2><p>New writing, delivered to your feed reader.</p><a href="/blog/feed.xml">Subscribe via RSS <span aria-hidden="true">↗</span></a></section>
 </aside></div></main>'''
-(ROOT / 'blog/index.html').write_text(page('Blog', '/blog/', 'Essays and explainers on economics, statistics and public policy by David Chivers. Browse by date, topic or title.', main, '<meta property="og:type" content="website">'), encoding='utf-8')
+(ROOT / 'blog/index.html').write_text(page('Economy Class', '/blog/', 'Economy Class, the blog by David Chivers. Browse the archive by year.', main, '<meta property="og:type" content="website">'), encoding='utf-8')
 rss_items = []
 for p in posts:
     date = datetime.fromisoformat(p['published']).strftime('%a, %d %b %Y %H:%M:%S %z')
     rss_items.append(f'<item><title>{escape(p["title"])}</title><link>{BASE}{p["path"]}</link><guid>{BASE}{p["path"]}</guid><pubDate>{date}</pubDate><description>{escape(p["description"])}</description></item>')
-(ROOT / 'blog/feed.xml').write_text('<?xml version="1.0" encoding="utf-8"?>\n<rss version="2.0"><channel><title>David Chivers · Blog</title><link>' + BASE + '/blog/</link><description>Economics, statistics and public policy.</description><language>en-GB</language>' + ''.join(rss_items) + '</channel></rss>\n', encoding='utf-8')
+(ROOT / 'blog/feed.xml').write_text('<?xml version="1.0" encoding="utf-8"?>\n<rss version="2.0"><channel><title>Economy Class · David Chivers</title><link>' + BASE + '/blog/</link><description>Economy Class, the blog by David Chivers.</description><language>en-GB</language>' + ''.join(rss_items) + '</channel></rss>\n', encoding='utf-8')
 (ROOT / 'blog/sitemap.xml').write_text('<?xml version="1.0" encoding="utf-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{path}</loc></url>' for path in ['/blog/'] + [p['path'] for p in posts]) + '</urlset>\n', encoding='utf-8')
 for name, data in [('corrections', fixes), ('link-fixes', link_fixes), ('unresolved', issues), ('preservation', preservation)]:
     (HERE / 'reports' / (name + '.json')).write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 lines = ['# Blog migration: fixes and checks', '', 'Source: https://davidchivers.blogspot.com/', '',
-         'Migrated 48 of 48 published posts to `/blog/`. The index shows dated article previews, newest first, with title sorting, search, topic and year filters, and selected reading. Light/dark mode follows the device initially and remembers a manual choice.', '',
+         'Migrated 48 of 48 published posts to `/blog/`. Economy Class shows dated article previews grouped by year, newest first, with search, optional title sorting and a year archive. Light/dark mode follows the device initially and remembers a manual choice.', '',
          f'## Text corrections ({sum(x["occurrences"] for x in fixes)} occurrences)', '',
          'Edits correct clear errors while retaining the arguments, jokes, original dates, quotations and historical context. This is a migration and copy-edit, not a substantive fact-check or an update of old policy, health or financial claims. Original source is preserved in `source/blogger-feed.json`.', '',
          'Numerical corrections: in the exponential-growth post, 1,063/100 is 10.63 (not 5) and 222,345/100 is 2,223.45 (not 222); in the debt post, £1.7 trillion is 1,700,000,000,000. The worked tables themselves are preserved. The inflation post was missing the percent sign after “minus 50”.', '']
@@ -392,9 +385,9 @@ for x in link_fixes:
         lines.append(f'- Post {x["post"]}: {x["before"]} → {x["after"]}')
 lines.extend(['', '## Blog layout', '',
               '- Replaced the sparse title index with newest-first dated previews, estimated reading times and existing article thumbnails. Preview text is taken from the articles; selected excerpts avoid introductory quotations that need additional context.',
-              '- Added oldest-first and A–Z sorting, search over titles and previews, six reviewed topic groups, publication-year filters, clear filters, and 12-at-a-time browsing. Without JavaScript all 48 previews remain available.',
-              '- Added a compact heading and a desktop sidebar with browsing controls, three selected starting points and RSS. On phones the archive controls collapse above the feed. Dark mode and the original article text are retained.',
-              '- Checked sorting, search, empty results, combined filters, clearing filters, all 48 results via Show more, theme persistence, and layouts at 320, 390, 768, 1024 and 1280 pixels without horizontal overflow.', '',
+              '- Restored the Economy Class name in the title, footer and RSS. Removed the introductory tagline, essay-count/date-range badge, all topic labels and the publication-year dropdown.',
+              '- Grouped previews under year headings with a simple Years archive. All articles remain available without JavaScript; year links jump to their sections. With JavaScript, year links select that year. Search, oldest-first and A–Z sorting are retained; A–Z shows one alphabetical list.',
+              '- Kept the compact layout, three selected starting points, RSS and dark mode. The year list folds away on phones. Original article text is unchanged.', '',
               '## Unresolved or access-limited references', '',
               '- “Kill or Cure” returns 404. No replacement was verified. Its link text is preserved with “original site unavailable”; the original URL remains in the source and audit.',
               '- A successful HTTP response is not a guarantee that a video or social post is available without sign-in. Paywalls and bot blocks are recorded below, not labelled as dead links.', ''])

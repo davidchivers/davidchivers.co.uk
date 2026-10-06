@@ -33,12 +33,14 @@ overwrite the source feed with a new export as part of an ordinary rebuild.
 ## Design
 
 - Static HTML: every article and index link works without JavaScript.
-- Newest-first article previews with original dates and excerpts from the posts.
+- Economy Class is grouped by year, newest first, with dated article previews.
   Search covers titles and previews; readers can sort newest/oldest/A–Z and
-  filter by topic or year. JavaScript reveals 12 results at a time; all 48 are
-  available without JavaScript. Reviewed topic assignments live in `topics.json`.
-- The desktop sidebar includes topic/year controls, selected reading and RSS.
-  On small screens the filters collapse above the feed. Article text is unchanged.
+  select a year. All articles are available without JavaScript, with year links
+  jumping to their sections. A–Z uses a single alphabetical list.
+- The desktop sidebar includes a simple year list, selected reading and RSS.
+  On small screens the year list folds away above the feed. Article text is unchanged.
+- The title, footer and RSS use Economy Class. There are no taglines, topic
+  labels or introductory article-count/date-range badges.
 - Device colour preference by default; a manual light/dark choice is saved
   locally, with a storage-disabled fallback. No trackers or external fonts.
 - Images served locally; tables scroll within the article on narrow screens.
