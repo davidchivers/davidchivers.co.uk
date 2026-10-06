@@ -4332,16 +4332,26 @@ deviation</th>
 <p>We have seen that removing non-tariff barriers produces unambiguously positive welfare effects in this framework. This is not the case for tariff barriers.</p>
 <h3 id="question">Question</h3>
 <p>Why join a customs union? Would <strong>unilateral liberalisation</strong> towards the potential Partner be better?</p>
+<div class="answer-reveal">
+<button class="answer-reveal-button" type="button" aria-expanded="false" aria-controls="l2-join-answer" hidden>
+Reveal answer
+</button>
+<div id="l2-join-answer" class="answer-reveal-content">
 <h3 id="answer">Answer</h3>
 <p>Not necessarily: a country would not benefit from Partner’s tariff reduction within the customs union (<strong>area D</strong>).</p>
+</div>
+</div>
 </section>
-<section id="l2-s24" class="slide level2 teaching-slide compact">
-<h2>Empirical evidence</h2>
+<section id="l2-s24" class="slide level2 teaching-slide compact historical-evidence">
+<h2>What did the early studies find?</h2>
 <!-- Source PowerPoint slide 24 -->
+<div class="emphasis evidence-takeaway">
+<p><strong>Trade creation exceeded trade diversion in Europe, but the estimated gains were small.</strong></p>
+<p><span class="evidence-reference">Baldwin and Venables (1995).</span></p>
+</div>
 <div class="columns">
 <div class="column" style="width:48%;">
-<h3 id="findings">Findings</h3>
-<p>Trade creation exceeded trade diversion in Europe, but the gains were small (Baldwin and Venables, 1995).</p>
+<h3 id="findings-in-context">Findings in context</h3>
 <ul>
 <li>Little diversion: much of Europe’s trade was already intra-European.</li>
 <li>Limited creation: initial trade barriers were low.</li>
@@ -5932,6 +5942,228 @@ stroke-dasharray: none;
 }
 </style>
 
+    <style>
+.reveal button.lecture-abbreviation {
+display: inline; padding: 0; margin: 0; border: 0; border-radius: 0;
+background: none; box-shadow: none; color: inherit; font: inherit;
+letter-spacing: inherit; text-transform: inherit; line-height: inherit;
+vertical-align: baseline; cursor: help;
+text-decoration: underline dotted; text-decoration-thickness: 1px;
+text-underline-offset: 0.16em;
+}
+.reveal button.lecture-abbreviation:focus-visible {
+outline: 2px solid #682046; outline-offset: 4px;
+}
+#lecture-abbreviation-tooltip {
+position: fixed; z-index: 1000; box-sizing: border-box;
+max-width: min(410px, calc(100vw - 24px)); padding: 12px 16px;
+border: 1px solid #682046; border-radius: 5px;
+background: #fff; color: #3e1a47;
+box-shadow: 0 3px 12px #0002;
+font: 20px/1.35 Aptos, 'Segoe UI', Arial, sans-serif;
+text-align: left; overflow-wrap: break-word;
+}
+#lecture-abbreviation-tooltip[hidden] { display: none; }
+@media print {
+#lecture-abbreviation-tooltip { display: none !important; }
+.reveal button.lecture-abbreviation { text-decoration: none; }
+}
+</style>
+    <script>
+    (function () {
+      // Full names only: retain the historical wording and teaching text on each slide.
+      const names = {
+        OEEC: 'Organisation for European Economic Co-operation',
+        OECD: 'Organisation for Economic Co-operation and Development',
+        EPU: 'European Payments Union',
+        ECSC: 'European Coal and Steel Community',
+        EEC: 'European Economic Community',
+        EFTA: 'European Free Trade Association',
+        EU12: 'European Union of twelve member states',
+        EU: 'European Union',
+        NATO: 'North Atlantic Treaty Organization',
+        GDP: 'Gross domestic product',
+        VAT: 'Value added tax',
+        CU: 'Customs union',
+        MFN: 'Most-favoured-nation',
+        RoW: 'Rest of the world',
+        GATT: 'General Agreement on Tariffs and Trade',
+        WTO: 'World Trade Organization'
+      };
+      function initialise() {
+        const slides = document.querySelector('.reveal .slides');
+        if (!slides) return;
+        const pattern = new RegExp('\\b(' + Object.keys(names).join('|') + ')\\b', 'g');
+        const walker = document.createTreeWalker(slides, NodeFilter.SHOW_TEXT);
+        const nodes = [];
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (!node.parentElement.closest('a,button,abbr,script,style,code,pre,svg,math,aside,.source,.history-map-source,.cu-tooltip,.trade-blocs-widget,[aria-live]')) nodes.push(node);
+        }
+        for (const node of nodes) {
+          const matches = [...node.textContent.matchAll(pattern)];
+          if (!matches.length) continue;
+          const fragment = document.createDocumentFragment();
+          let offset = 0;
+          for (const match of matches) {
+            fragment.append(document.createTextNode(node.textContent.slice(offset, match.index)));
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'lecture-abbreviation';
+            button.textContent = match[0];
+            button.dataset.fullName = names[match[0]];
+            button.setAttribute('aria-label', match[0] + ': ' + names[match[0]]);
+            button.setAttribute('aria-expanded', 'false');
+            button.setAttribute('aria-controls', 'lecture-abbreviation-tooltip');
+            fragment.append(button);
+            offset = match.index + match[0].length;
+          }
+          fragment.append(document.createTextNode(node.textContent.slice(offset)));
+          node.replaceWith(fragment);
+        }
+        const tooltip = document.createElement('div');
+        tooltip.id = 'lecture-abbreviation-tooltip';
+        tooltip.setAttribute('role', 'tooltip');
+        tooltip.hidden = true;
+        document.body.append(tooltip);
+        let active = null;
+        let pinned = false;
+        let closeTimer;
+        function close() {
+          clearTimeout(closeTimer);
+          if (active) active.setAttribute('aria-expanded', 'false');
+          active = null;
+          pinned = false;
+          tooltip.hidden = true;
+        }
+        function position() {
+          if (!active) return;
+          const anchor = active.getBoundingClientRect();
+          const box = tooltip.getBoundingClientRect();
+          const left = Math.max(12, Math.min(anchor.left, innerWidth - box.width - 12));
+          const below = anchor.bottom + 8;
+          const top = below + box.height <= innerHeight - 12 ? below : Math.max(12, anchor.top - box.height - 8);
+          tooltip.style.left = left + 'px';
+          tooltip.style.top = top + 'px';
+        }
+        function show(button) {
+          clearTimeout(closeTimer);
+          if (active !== button) {
+            close();
+            active = button;
+            tooltip.textContent = button.dataset.fullName;
+            tooltip.hidden = false;
+            button.setAttribute('aria-expanded', 'true');
+          }
+          position();
+        }
+        function scheduleClose() {
+          clearTimeout(closeTimer);
+          closeTimer = setTimeout(() => {
+            if (!pinned && active && document.activeElement !== active && !active.matches(':hover') && !tooltip.matches(':hover')) close();
+          }, 140);
+        }
+        for (const button of slides.querySelectorAll('.lecture-abbreviation')) {
+          button.addEventListener('pointerenter', event => { if (event.pointerType === 'mouse') show(button); });
+          button.addEventListener('pointerleave', scheduleClose);
+          button.addEventListener('focus', () => show(button));
+          button.addEventListener('blur', () => { if (active === button) close(); });
+          button.addEventListener('click', event => {
+            event.stopPropagation();
+            if (active === button && pinned) close();
+            else { show(button); pinned = true; }
+          });
+          button.addEventListener('keydown', event => {
+            if (['Enter', ' ', 'Escape'].includes(event.key)) event.stopPropagation();
+            if (window.Reveal && ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) {
+              event.preventDefault(); event.stopPropagation();
+              if (['ArrowRight', 'ArrowDown'].includes(event.key)) Reveal.next();
+              else Reveal.prev();
+            }
+          });
+        }
+        tooltip.addEventListener('pointerenter', () => clearTimeout(closeTimer));
+        tooltip.addEventListener('pointerleave', scheduleClose);
+        document.addEventListener('pointerdown', event => {
+          if (active && !active.contains(event.target) && !tooltip.contains(event.target)) close();
+        });
+        document.addEventListener('keydown', event => {
+          if (event.key === 'Escape' && active) {
+            event.preventDefault(); event.stopPropagation(); close();
+          }
+        }, true);
+        window.addEventListener('resize', position);
+        document.addEventListener('scroll', close, true);
+        const connectReveal = () => Reveal.on('slidechanged', () => {
+          if (document.activeElement.matches('.lecture-abbreviation')) document.activeElement.blur();
+          close();
+        });
+        if (window.Reveal) connectReveal();
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initialise);
+      else initialise();
+    })();
+    </script>
+    <style>
+.reveal .answer-reveal-button {
+margin: 16px 0 0; padding: 10px 18px; border: 1px solid #682046;
+border-radius: 4px; background: #fff; color: #682046;
+font: inherit; font-size: 26px; cursor: pointer;
+}
+.reveal .answer-reveal-button:focus-visible { outline: 3px solid #682046; outline-offset: 4px; }
+.reveal .answer-reveal-button[hidden], .reveal .answer-reveal-content[hidden] { display: none; }
+.reveal .historical-evidence .evidence-takeaway { margin: 0 0 20px; font-size: 33px; line-height: 1.3; }
+.reveal .historical-evidence .evidence-takeaway p { margin: 0; }
+.reveal .historical-evidence .evidence-reference { display: block; margin-top: 10px; font-size: 23px; font-weight: normal; }
+@media print {
+.reveal .answer-reveal-button { display: none !important; }
+.reveal .answer-reveal-content[hidden] { display: block !important; }
+}
+</style>
+    <script>
+    (function () {
+      function initialise() {
+        const staticView = document.getElementById('download-static-view') || new URLSearchParams(location.search).has('print-pdf');
+        document.querySelectorAll('.answer-reveal').forEach(widget => {
+          const button = widget.querySelector('.answer-reveal-button');
+          const answer = widget.querySelector('.answer-reveal-content');
+          if (!button || !answer || staticView) return;
+          const slide = widget.closest('section');
+          function setOpen(open) {
+            answer.hidden = !open;
+            answer.setAttribute('aria-hidden', String(!open));
+            button.setAttribute('aria-expanded', String(open));
+            button.textContent = open ? 'Hide answer' : 'Reveal answer';
+            const status = document.querySelector('.reveal .aria-status');
+            if (status && slide.classList.contains('present')) status.textContent = slide.innerText;
+          }
+          button.hidden = false;
+          setOpen(false);
+          button.addEventListener('click', event => {
+            event.stopPropagation();
+            setOpen(answer.hidden);
+          });
+          button.addEventListener('keydown', event => {
+            if (['Enter', ' '].includes(event.key)) event.stopPropagation();
+            if (event.key === 'Escape' && !answer.hidden) {
+              event.preventDefault(); event.stopPropagation(); setOpen(false);
+            }
+            if (window.Reveal && ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) {
+              event.preventDefault(); event.stopPropagation();
+              if (['ArrowRight', 'ArrowDown'].includes(event.key)) Reveal.next();
+              else Reveal.prev();
+            }
+          });
+          if (window.Reveal) Reveal.on('slidechanged', () => {
+            if (document.activeElement === button) button.blur();
+            setOpen(false);
+          });
+        });
+      }
+      // This include follows the slide markup; hide answers before Reveal announces it.
+      initialise();
+    })();
+    </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
