@@ -5,8 +5,8 @@ See [SITE_MAP.md](SITE_MAP.md) for the current route/repo map and publishing not
 ## Homepage and HTML CV
 
 The homepage is `index.html`; the HTML CV is `cv/index.html` at `/cv/`.
-Both use `assets/personal.css`. The CV works without JavaScript; `assets/cv.js`
-adds the optional print button. Print styles are included in the shared CSS.
+Both use `assets/personal.css`. The CV requires no JavaScript and includes a PDF
+download. Print styles are included in the shared CSS for browser printing.
 
 The HTML CV was converted on 6 October 2026 from the PDF linked by the existing
 homepage: [DavidChiversCV.pdf on Google Drive](https://drive.google.com/file/d/13j0un9yXIiGbyvKIAI4RSTLGCkNRuQwt/view).
