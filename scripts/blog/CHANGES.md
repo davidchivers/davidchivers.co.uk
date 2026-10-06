@@ -552,9 +552,9 @@ Numerical corrections: in the exponential-growth post, 1,063/100 is 10.63 (not 5
 
 - HTTP 403: http://oro.open.ac.uk/47598/ — Just a moment...
 - HTTP 403: http://www.nytimes.com/2015/03/23/opinion/paul-krugman-britains-terrible-no-good-economic-discourse.html — nytimes.com
-- HTTP 402: http://www.telegraph.co.uk/finance/comment/jeremy-warner/11450276/Bank-of-England-urged-to-let-rip-on-inflation.html — 
-- HTTP 402: http://www.telegraph.co.uk/finance/economics/11491395/Inflation-falls-to-zero-in-February-as-Britain-heads-to-deflation.html — 
-- HTTP 402: http://www.telegraph.co.uk/science/2016/11/16/kids-better-off-at-nursery-rather-than-staying-at-home-with-mum/ — 
+- HTTP 402: http://www.telegraph.co.uk/finance/comment/jeremy-warner/11450276/Bank-of-England-urged-to-let-rip-on-inflation.html — Access requires a subscription or manual verification.
+- HTTP 402: http://www.telegraph.co.uk/finance/economics/11491395/Inflation-falls-to-zero-in-February-as-Britain-heads-to-deflation.html — Access requires a subscription or manual verification.
+- HTTP 402: http://www.telegraph.co.uk/science/2016/11/16/kids-better-off-at-nursery-rather-than-staying-at-home-with-mum/ — Access requires a subscription or manual verification.
 - HTTP 403: https://en.wikipedia.org/wiki/Degrowth — Wikimedia Error
 - HTTP 403: https://en.wikipedia.org/wiki/The_Plutonium_Files — Wikimedia Error
 - HTTP 403: https://knowablemagazine.org/content/article/society/2022/the-obscure-calculation-transforming-climate-policy — Just a moment...

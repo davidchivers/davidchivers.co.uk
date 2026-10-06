@@ -337,7 +337,8 @@ lines.extend(['', '## Unresolved or access-limited references', '',
               '- A successful HTTP response is not a guarantee that a video or social post is available without sign-in. Paywalls and bot blocks are recorded below, not labelled as dead links.', ''])
 for x in links:
     if x['status'] != 200 and x['url'] not in (DEAD, PAPER_OLD):
-        lines.append(f'- HTTP {x["status"]}: {x["url"]} — {x.get("title", x.get("error", ""))}')
+        detail = x.get('title') or x.get('error') or 'Access requires a subscription or manual verification.'
+        lines.append(f'- HTTP {x["status"]}: {x["url"]} — {detail}')
 lines.extend(['', '## Author review, left unchanged', '',
               '- “The curse of knowledge”: the sentence “What we are accusing them of, is thinking it is highly likely we will know” appears to reverse the intended meaning. Confirm before changing “likely” to “unlikely”.',
               '- The exponential-growth post uses R as a daily multiplier. The epidemiological definition and interpretation would need a separate substantive review; only the clear arithmetic typos were corrected.',
