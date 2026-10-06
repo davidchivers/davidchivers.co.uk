@@ -25,20 +25,66 @@
   });
   const input = document.getElementById('search');
   if (!input) return;
-  document.querySelector('.search-wrap').hidden = false;
-  const posts = [...document.querySelectorAll('.post-list li')];
+  document.querySelector('.tools').hidden = false;
+  const list = document.querySelector('.post-list');
+  const posts = [...list.children];
   const count = document.querySelector('.post-count');
   const empty = document.querySelector('.empty-state');
+  const sort = document.getElementById('sort');
+  const year = document.getElementById('year');
+  const topics = [...document.querySelectorAll('input[name="topic"]')];
+  const clear = document.querySelector('.clear-filters');
+  const more = document.querySelector('.show-more');
+  const browse = document.querySelector('.browse-panel');
+  const narrow = window.matchMedia('(max-width: 800px)');
+  const syncBrowse = () => { browse.open = !narrow.matches; };
+  browse.hidden = false;
+  syncBrowse();
+  narrow.addEventListener('change', syncBrowse);
+  let limit = 12;
   const normalise = text => text.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[‘’]/g, "'").toLocaleLowerCase('en-GB');
-  input.addEventListener('input', () => {
+  const render = () => {
     const words = normalise(input.value).trim().split(/\s+/).filter(Boolean);
-    let visible = 0;
-    posts.forEach(post => {
-      const match = words.every(word => normalise(post.dataset.title).includes(word));
-      post.hidden = !match;
-      if (match) visible++;
+    const topic = topics.find(option => option.checked).value;
+    const ordered = [...posts].sort((a, b) => {
+      if (sort.value === 'az') return normalise(a.dataset.title).localeCompare(normalise(b.dataset.title), 'en-GB');
+      const difference = a.dataset.date.localeCompare(b.dataset.date);
+      return sort.value === 'oldest' ? difference : -difference;
     });
-    count.textContent = words.length ? `${visible} of ${posts.length} articles` : `${posts.length} articles · A–Z`;
-    empty.hidden = visible !== 0;
+    const matching = ordered.filter(post =>
+      (!topic || post.dataset.topic === topic) &&
+      (!year.value || post.dataset.year === year.value) &&
+      words.every(word => normalise(post.textContent).includes(word))
+    );
+    const visible = new Set(matching.slice(0, limit));
+    posts.forEach(post => {
+      post.hidden = !visible.has(post);
+    });
+    ordered.forEach(post => list.append(post));
+    count.textContent = visible.size < matching.length ? `Showing ${visible.size} of ${matching.length} articles` : `${matching.length} ${matching.length === 1 ? 'article' : 'articles'}`;
+    document.getElementById('results-heading').textContent = topic || 'All articles';
+    empty.hidden = matching.length !== 0;
+    more.hidden = visible.size >= matching.length;
+    clear.hidden = !words.length && !topic && !year.value;
+  };
+  const resetAndRender = () => { limit = 12; render(); };
+  input.addEventListener('input', resetAndRender);
+  sort.addEventListener('change', resetAndRender);
+  year.addEventListener('change', resetAndRender);
+  topics.forEach(option => option.addEventListener('change', resetAndRender));
+  clear.addEventListener('click', () => {
+    input.value = '';
+    year.value = '';
+    topics[0].checked = true;
+    resetAndRender();
+    input.focus();
   });
+  more.addEventListener('click', () => {
+    const previous = new Set(posts.filter(post => !post.hidden));
+    limit += 12;
+    render();
+    // Move focus into the newly revealed results instead of leaving it below them.
+    [...list.children].find(post => !post.hidden && !previous.has(post))?.querySelector('a').focus();
+  });
+  render();
 })();

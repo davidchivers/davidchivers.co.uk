@@ -19,6 +19,10 @@ for entry in feed['entry']:
                       original_url=url, slug=url.rsplit('/', 1)[-1][:-5], html=entry['content']['$t']))
 assert len(posts) == int(feed['openSearch$totalResults']['$t']), 'Incomplete Blogger export'
 assert len({p['slug'] for p in posts}) == len(posts), 'Duplicate post slugs'
+topics = json.loads((HERE / 'topics.json').read_text(encoding='utf-8'))
+topic_for = {slug: topic for topic, slugs in topics.items() for slug in slugs}
+assert len(topic_for) == sum(len(slugs) for slugs in topics.values()) == len(posts)
+assert set(topic_for) == {p['slug'] for p in posts}, 'Every post needs one reviewed topic'
 media = json.loads((HERE / 'reports/media.json').read_text(encoding='utf-8'))
 links = json.loads((HERE / 'reports/links.json').read_text(encoding='utf-8'))
 edits = []
@@ -197,8 +201,8 @@ def page(title, path, description, main, extra=''):
 <link rel="icon" href="/favicon.ico">
 <link rel="alternate" type="application/rss+xml" title="David Chivers · Blog" href="/blog/feed.xml">
 <script src="/blog/assets/theme.js"></script>
-<link rel="stylesheet" href="/blog/assets/blog.css">
-<script defer src="/blog/assets/blog.js"></script>
+<link rel="stylesheet" href="/blog/assets/blog.css?v=2">
+<script defer src="/blog/assets/blog.js?v=2"></script>
 {extra}
 </head>
 <body>
@@ -295,18 +299,69 @@ for number, post in enumerate(posts, 1):
                              text_preserved_after_reviewed_edits=True, images=len(soup.find_all('img')),
                              tables=len(soup.find_all('table'))))
 
-ordered = sorted(posts, key=lambda p: re.sub(r'^[^\w]+', '', p['title']).casefold())
-listing = '\n'.join(f'<li data-title="{escape(p["title"], quote=True)}"><a href="{p["path"]}"><span>{escape(p["title"])}</span><span class="arrow" aria-hidden="true">↗</span></a></li>' for p in ordered)
+ordered = sorted(posts, key=lambda p: p['published'], reverse=True)
+excerpt_starts = {
+    'no-qe-did-not-lead-to-inflation': 'When QE (Quantitative Easing) was proposed in 2009',
+    'the-ref-perfect-example-of-issues-with': 'I really dislike rankings.',
+    'infinite-growth-on-finite-planet': 'Do you think we can get infinite growth on a finite planet?',
+    'who-is-nick-j-cox-and-why-is-he-most': 'Science is a process of discovery.',
+    'how-ideas-spread-why-econ101ism-is': 'If a significant proportion of people know these misquotes exist',
+    'whats-in-name-importance-of-names-in': 'The reason why names are important',
+    'journalism-which-misrepresents-academic': 'Although the study reports positive effects of attending nursery',
+}
+cards = []
+for p in ordered:
+    body = BeautifulSoup(p['body'], 'html.parser')
+    # Keep the author's own opening words, without introducing new claims.
+    for deleted in body.find_all(['s', 'del']):
+        deleted.decompose()
+    opening = plain(body.get_text(' ', strip=True))
+    opening = re.sub(r'\s+([,.;:!?])', r'\1', opening)
+    excerpt_source = opening
+    if p['slug'] in excerpt_starts:
+        start = excerpt_starts[p['slug']]
+        assert start in opening, ('Excerpt no longer matches article', p['slug'])
+        excerpt_source = opening[opening.index(start):]
+    sentences = re.split(r'(?<=[.!?])\s+', excerpt_source)
+    excerpt = ' '.join(sentences[:2])
+    if len(excerpt) < 90:
+        excerpt = ' '.join(sentences[:3])
+    if len(excerpt) > 280:
+        excerpt = excerpt[:260].rsplit(' ', 1)[0].rstrip(' ,;:') + '…'
+    p['excerpt'] = excerpt
+    p['topic'] = topic_for[p['slug']]
+    date = datetime.fromisoformat(p['published'])
+    minutes = max(1, (len(opening.split()) + 224) // 225)
+    first_image = body.find('img')
+    thumbnail = (f'<img class="post-thumbnail" src="{first_image["src"]}" alt="" loading="lazy" decoding="async" width="144" height="112">' if first_image else '')
+    cards.append(f'''<li class="post-card" data-title="{escape(p['title'], quote=True)}" data-date="{date.isoformat()}" data-year="{date.year}" data-topic="{escape(p['topic'], quote=True)}">
+<article><div class="post-meta"><time datetime="{date.date()}">{date.day} {date.strftime('%B %Y')}</time><span class="meta-dot" aria-hidden="true">·</span><span>{escape(p['topic'])}</span><span class="reading-time">{minutes} min read</span></div>
+<div class="post-preview"><div><h2><a href="{p['path']}">{escape(p['title'])}</a></h2><p class="post-excerpt">{escape(excerpt)}</p></div>{thumbnail}</div></article></li>''')
+topic_controls = '\n'.join(f'<label class="topic-option"><input type="radio" name="topic" value="{escape(topic, quote=True)}"><span>{escape(topic)}</span><span class="topic-count">{len(slugs)}</span></label>' for topic, slugs in topics.items())
+years = sorted(Counter(datetime.fromisoformat(p['published']).year for p in posts).items(), reverse=True)
+year_options = ''.join(f'<option value="{year}">{year} ({count})</option>' for year, count in years)
+selected_slugs = ['infinite-growth-on-finite-planet', 'can-queuing-theory-explain-nhs-crisis', 'misleading-words']
+selected = ''.join(f'<li><a href="{p["path"]}">{escape(p["title"])}</a></li>' for slug in selected_slugs for p in posts if p['slug'] == slug)
 main = f'''<main id="main" class="index-main">
-<p class="eyebrow">David Chivers</p><h1>Blog</h1>
-<p class="intro">Writing on economics, statistics and public policy.</p>
-<div class="tools"><p class="post-count" role="status" aria-live="polite">{len(posts)} articles · A–Z</p>
-<div class="search-wrap" hidden><label class="visually-hidden" for="search">Search article titles</label><input id="search" type="search" placeholder="Search titles…" autocomplete="off"></div></div>
-<ul class="post-list">{listing}</ul>
-<p class="empty-state" hidden>No articles match that search. Try a different word.</p>
-<p class="index-note">Browse by title. Original publication dates appear inside each article.</p>
-</main>'''
-(ROOT / 'blog/index.html').write_text(page('Blog', '/blog/', 'Writing on economics, statistics and public policy by David Chivers. Browse all 48 articles by title.', main, '<meta property="og:type" content="website">'), encoding='utf-8')
+<header class="blog-heading"><div><h1>Blog</h1><p class="intro">Economics, statistics and the things we take for granted.</p></div><span class="archive-range">{len(posts)} essays &amp; explainers<br>{years[-1][0]}–{years[0][0]}</span></header>
+<div class="blog-layout">
+<section class="article-feed" aria-label="Articles">
+<div class="tools" hidden><div class="search-wrap"><label class="visually-hidden" for="search">Search articles</label><input id="search" type="search" placeholder="Search the blog…" autocomplete="off"></div>
+<div class="sort-wrap"><label for="sort">Sort by</label><select id="sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="az">Title A–Z</option></select></div></div>
+<div class="feed-heading"><h2 id="results-heading">All articles</h2><p class="post-count" role="status" aria-live="polite">{len(posts)} articles · Newest first</p></div>
+<ul class="post-list">{''.join(cards)}</ul>
+<div class="empty-state" hidden><h3>No articles found</h3><p>Try a different search, topic or year.</p></div>
+<button class="show-more" type="button" hidden>Show more articles <span aria-hidden="true">↓</span></button>
+</section>
+<aside class="blog-sidebar" aria-label="Explore the blog">
+<details class="browse-panel" open hidden><summary>Browse the archive</summary><div class="browse-content"><fieldset class="topic-filters"><legend>Topics</legend>
+<label class="topic-option"><input type="radio" name="topic" value="" checked><span>All topics</span><span class="topic-count">{len(posts)}</span></label>{topic_controls}</fieldset>
+<div class="year-filter"><label for="year">Publication year</label><select id="year"><option value="">All years</option>{year_options}</select></div>
+<button class="clear-filters" type="button" hidden>Clear filters</button></div></details>
+<section class="selected-posts"><h2>A few to start with</h2><ul>{selected}</ul></section>
+<section class="rss-note"><h2>Follow along</h2><p>New writing, delivered to your feed reader.</p><a href="/blog/feed.xml">Subscribe via RSS <span aria-hidden="true">↗</span></a></section>
+</aside></div></main>'''
+(ROOT / 'blog/index.html').write_text(page('Blog', '/blog/', 'Essays and explainers on economics, statistics and public policy by David Chivers. Browse by date, topic or title.', main, '<meta property="og:type" content="website">'), encoding='utf-8')
 rss_items = []
 for p in posts:
     date = datetime.fromisoformat(p['published']).strftime('%a, %d %b %Y %H:%M:%S %z')
@@ -316,7 +371,7 @@ for p in posts:
 for name, data in [('corrections', fixes), ('link-fixes', link_fixes), ('unresolved', issues), ('preservation', preservation)]:
     (HERE / 'reports' / (name + '.json')).write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 lines = ['# Blog migration: fixes and checks', '', 'Source: https://davidchivers.blogspot.com/', '',
-         'Migrated 48 of 48 published posts to `/blog/`. Original dates are retained inside articles; the index is alphabetical and searchable. Light/dark mode follows the device initially and remembers a manual choice.', '',
+         'Migrated 48 of 48 published posts to `/blog/`. The index shows dated article previews, newest first, with title sorting, search, topic and year filters, and selected reading. Light/dark mode follows the device initially and remembers a manual choice.', '',
          f'## Text corrections ({sum(x["occurrences"] for x in fixes)} occurrences)', '',
          'Edits correct clear errors while retaining the arguments, jokes, original dates, quotations and historical context. This is a migration and copy-edit, not a substantive fact-check or an update of old policy, health or financial claims. Original source is preserved in `source/blogger-feed.json`.', '',
          'Numerical corrections: in the exponential-growth post, 1,063/100 is 10.63 (not 5) and 222,345/100 is 2,223.45 (not 222); in the debt post, £1.7 trillion is 1,700,000,000,000. The worked tables themselves are preserved. The inflation post was missing the percent sign after “minus 50”.', '']
@@ -335,7 +390,12 @@ lines.extend(['## Links and images', '', '- Updated the homepage and research-pa
 for x in link_fixes:
     if x['after'].startswith('http'):
         lines.append(f'- Post {x["post"]}: {x["before"]} → {x["after"]}')
-lines.extend(['', '## Unresolved or access-limited references', '',
+lines.extend(['', '## Blog layout', '',
+              '- Replaced the sparse title index with newest-first dated previews, estimated reading times and existing article thumbnails. Preview text is taken from the articles; selected excerpts avoid introductory quotations that need additional context.',
+              '- Added oldest-first and A–Z sorting, search over titles and previews, six reviewed topic groups, publication-year filters, clear filters, and 12-at-a-time browsing. Without JavaScript all 48 previews remain available.',
+              '- Added a compact heading and a desktop sidebar with browsing controls, three selected starting points and RSS. On phones the archive controls collapse above the feed. Dark mode and the original article text are retained.',
+              '- Checked sorting, search, empty results, combined filters, clearing filters, all 48 results via Show more, theme persistence, and layouts at 320, 390, 768, 1024 and 1280 pixels without horizontal overflow.', '',
+              '## Unresolved or access-limited references', '',
               '- “Kill or Cure” returns 404. No replacement was verified. Its link text is preserved with “original site unavailable”; the original URL remains in the source and audit.',
               '- A successful HTTP response is not a guarantee that a video or social post is available without sign-in. Paywalls and bot blocks are recorded below, not labelled as dead links.', ''])
 for x in links:
