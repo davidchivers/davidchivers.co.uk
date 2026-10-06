@@ -4,7 +4,7 @@ Source: https://davidchivers.blogspot.com/
 
 Migrated 48 of 48 published posts to `/blog/`. Original dates are retained inside articles; the index is alphabetical and searchable. Light/dark mode follows the device initially and remembers a manual choice.
 
-## Text corrections (354 occurrences)
+## Text corrections (355 occurrences)
 
 Edits correct clear errors while retaining the arguments, jokes, original dates, quotations and historical context. This is a migration and copy-edit, not a substantive fact-check or an update of old policy, health or financial claims. Original source is preserved in `source/blogger-feed.json`.
 
@@ -347,8 +347,9 @@ Numerical corrections: in the exponential-growth post, 1,063/100 is 10.63 (not 5
 - Body: “before I attempted it” → “before I attempted them”.
 - Body: “Also, am happy” → “Also, I am happy”.
 
-### Why did some people think the UK/EU deal would be the “easiest in human history"?
+### Why did some people think the UK/EU deal would be the “easiest in human history”?
 
+- Title: ““easiest in human history"” → ““easiest in human history””.
 - Body: “does actually allows” → “does actually allow”.
 
 ### An economist's guide to Christmas (not).
@@ -502,6 +503,7 @@ Numerical corrections: in the exponential-growth post, 1,063/100 is 10.63 (not 5
 
 ## Links and images
 
+- Updated the homepage and research-page Blog navigation links to `/blog/`, correcting malformed markup on the latter.
 - Downloaded and verified all 14 images. Every image now uses a local file, descriptive alternative text and responsive sizing. Larger original image links open the local image.
 - Rewrote 20 cross-links to the migrated posts, including Blogger mobile and `.co.uk` variants.
 - Replaced the queuing-theory journal link, which redirected to a journal homepage, with a verified full-text copy of the same McManus et al. (2004) article. Bibliographic match: https://ihoptimize.org/knowledge-center/publications/ .
@@ -576,4 +578,5 @@ Numerical corrections: in the exponential-growth post, 1,063/100 is 10.63 (not 5
 - After applying only the logged text edits, the non-whitespace article text matches the cleaned HTML for every post. Added table captions and the unavailable-link label are recorded presentation changes.
 - All 14 illustrations and all 3 numeric tables retained; bold, italics, block quotations, lists and strikethrough retained.
 - Removed legacy Blogger/Word font colours and fixed widths so article text is legible in both colour modes and on small screens.
+- Browser checks passed for all 48 articles at phone width without page overflow, title search (including no results), and the light/dark control with persistence after reload. Desktop index and article layouts were visually inspected.
 - Original Blogger comments, profile widgets and share gadgets are not part of this post migration; original post links are retained.

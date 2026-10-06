@@ -1953,7 +1953,15 @@
   },
   {
     "post": 32,
-    "title": "Why did some people think the UK/EU deal would be the “easiest in human history\"?",
+    "title": "Why did some people think the UK/EU deal would be the “easiest in human history”?",
+    "before": "“easiest in human history\"",
+    "after": "“easiest in human history”",
+    "occurrences": 1,
+    "kind": "title"
+  },
+  {
+    "post": 32,
+    "title": "Why did some people think the UK/EU deal would be the “easiest in human history”?",
     "before": "does actually allows",
     "after": "does actually allow",
     "occurrences": 1,

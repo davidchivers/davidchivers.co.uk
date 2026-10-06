@@ -48,7 +48,7 @@ overwrite the source feed with a new export as part of an ordinary rebuild.
 Use a feature branch and pull request. The canonical repository deploys `main`
 with `.github/workflows/static.yml`. At the start of this migration, deployment
 metadata confirmed that `thomshutt/davidchivers` still serves the custom domain
-from `master`. Mirror **only** `blog/` and the homepage Blog-link change to that
+from `master`. Mirror **only** `blog/` and the homepage/research-page Blog-link changes to that
 temporary bridge using its own pull request. Do not copy unrelated site files
 or alter domain settings. Verify `https://davidchivers.co.uk/blog/` after Pages
 reports successful deployment; the canonical workflow alone is not proof.

@@ -244,6 +244,7 @@ T23|hard understand|hard to understand
 31|the way I earned was|the way I learned was
 31|before I attempted it|before I attempted them
 31|Also, am happy|Also, I am happy
+T32|“easiest in human history"|“easiest in human history”
 32|does actually allows|does actually allow
 33|if were they to buy|if they were to buy
 33|Christmases amounts|Christmases amount

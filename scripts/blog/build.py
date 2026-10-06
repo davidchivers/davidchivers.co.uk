@@ -324,7 +324,7 @@ for number, post in enumerate(posts, 1):
         for x in selected:
             lines.append(f'- {x["kind"].capitalize()}: “{x["before"]}” → “{x["after"]}”' + (f' ({x["occurrences"]} occurrences)' if x['occurrences'] > 1 else '') + '.')
         lines.append('')
-lines.extend(['## Links and images', '', f'- Downloaded and verified all 14 images. Every image now uses a local file, descriptive alternative text and responsive sizing. Larger original image links open the local image.',
+lines.extend(['## Links and images', '', '- Updated the homepage and research-page Blog navigation links to `/blog/`, correcting malformed markup on the latter.', f'- Downloaded and verified all 14 images. Every image now uses a local file, descriptive alternative text and responsive sizing. Larger original image links open the local image.',
               f'- Rewrote {sum(x["after"].startswith("/blog/") and "/assets/" not in x["after"] for x in link_fixes)} cross-links to the migrated posts, including Blogger mobile and `.co.uk` variants.',
               '- Replaced the queuing-theory journal link, which redirected to a journal homepage, with a verified full-text copy of the same McManus et al. (2004) article. Bibliographic match: https://ihoptimize.org/knowledge-center/publications/ .',
               '- The Neil Armstrong YouTube clip returned 404 from YouTube’s oEmbed endpoint. Replaced it with NASA’s working audio recording of the same quotation, linked from https://www.nasa.gov/historical-sounds/ . The six other YouTube links returned valid video metadata.',
@@ -348,6 +348,7 @@ lines.extend(['', '## Author review, left unchanged', '',
               '- After applying only the logged text edits, the non-whitespace article text matches the cleaned HTML for every post. Added table captions and the unavailable-link label are recorded presentation changes.',
               '- All 14 illustrations and all 3 numeric tables retained; bold, italics, block quotations, lists and strikethrough retained.',
               '- Removed legacy Blogger/Word font colours and fixed widths so article text is legible in both colour modes and on small screens.',
+              '- Browser checks passed for all 48 articles at phone width without page overflow, title search (including no results), and the light/dark control with persistence after reload. Desktop index and article layouts were visually inspected.',
               '- Original Blogger comments, profile widgets and share gadgets are not part of this post migration; original post links are retained.', ''])
 (HERE / 'CHANGES.md').write_text('\n'.join(lines), encoding='utf-8')
 print(json.dumps({'posts': len(posts), 'correction_occurrences': sum(x['occurrences'] for x in fixes), 'correction_rules': len(fixes),
