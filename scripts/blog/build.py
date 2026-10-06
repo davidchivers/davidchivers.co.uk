@@ -335,7 +335,7 @@ for p in ordered:
 years = sorted(Counter(datetime.fromisoformat(p['published']).year for p in posts).items(), reverse=True)
 year_sections = ''.join(f'<section class="year-group" id="year-{year}" data-year="{year}" aria-labelledby="heading-{year}"><h2 class="year-heading" id="heading-{year}">{year}</h2><ul class="post-list">{"".join(cards_by_year[year])}</ul></section>' for year, _ in years)
 year_links = ''.join(f'<li><a href="#year-{year}" data-year="{year}">{year}</a></li>' for year, _ in years)
-selected_slugs = ['infinite-growth-on-finite-planet', 'can-queuing-theory-explain-nhs-crisis', 'misleading-words']
+selected_slugs = ['infinite-growth-on-finite-planet', 'the-problem-with-being-anti-waste', 'misleading-words']
 selected = ''.join(f'<li><a href="{p["path"]}">{escape(p["title"])}</a></li>' for slug in selected_slugs for p in posts if p['slug'] == slug)
 main = f'''<main id="main" class="index-main">
 <header class="blog-heading"><h1>Economy Class</h1></header>
@@ -388,6 +388,7 @@ lines.extend(['', '## Blog layout', '',
               '- Restored the Economy Class name in the title, footer and RSS. Removed the introductory tagline, essay-count/date-range badge, all topic labels and the publication-year dropdown.',
               '- Grouped previews under year headings with a simple Years archive. All articles remain available without JavaScript; year links jump to their sections. With JavaScript, year links select that year. Search, oldest-first and A–Z sorting are retained; A–Z shows one alphabetical list.',
               '- Kept the compact layout, three selected starting points, RSS and dark mode. The year list folds away on phones. Original article text is unchanged.', '',
+              '- Replaced the queuing-theory article in “A few to start with” with “The problem with being anti-waste”, at the author’s request.', '',
               '## Unresolved or access-limited references', '',
               '- “Kill or Cure” returns 404. No replacement was verified. Its link text is preserved with “original site unavailable”; the original URL remains in the source and audit.',
               '- A successful HTTP response is not a guarantee that a video or social post is available without sign-in. Paywalls and bot blocks are recorded below, not labelled as dead links.', ''])
