@@ -40,8 +40,10 @@ overwrite the source feed with a new export as part of an ordinary rebuild.
 - Images served locally; tables scroll within the article on narrow screens.
 - `/blog/feed.xml` is a conventional chronological RSS feed;
   `/blog/sitemap.xml` lists the index and all 48 articles.
-- Blogger URLs remain available at the original service. The migration does
-  not change Blogger settings, create redirects there, or import comments.
+- The public blog does not link back to the old Blogger site or load assets
+  from it. The preserved source export supports offline rebuilding even if
+  the old blog is deleted. The migration does not change Blogger settings,
+  create redirects there, or import comments.
 
 ## Deployment
 

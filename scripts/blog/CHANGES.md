@@ -579,4 +579,5 @@ Numerical corrections: in the exponential-growth post, 1,063/100 is 10.63 (not 5
 - All 14 illustrations and all 3 numeric tables retained; bold, italics, block quotations, lists and strikethrough retained.
 - Removed legacy Blogger/Word font colours and fixed widths so article text is legible in both colour modes and on small screens.
 - Browser checks passed for all 48 articles at phone width without page overflow, title search (including no results), and the light/dark control with persistence after reload. Desktop index and article layouts were visually inspected.
-- Original Blogger comments, profile widgets and share gadgets are not part of this post migration; original post links are retained.
+- Original Blogger comments, profile widgets and share gadgets are not part of this post migration.
+- Removed all 48 “Original on Blogger” footer links and one empty legacy image anchor. Article dates now say “Published”. The public blog has no links or assets pointing to David’s old Blogger site; the source export remains preserved for offline rebuilding.

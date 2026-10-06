@@ -242,6 +242,9 @@ for number, post in enumerate(posts, 1):
     for a in soup.find_all('a', href=True):
         old = a['href']
         parsed = urlparse(old)
+        if parsed.hostname == 'blogger.googleusercontent.com' and not a.get_text(strip=True) and not a.find(['img', 'svg']):
+            a.decompose()
+            continue
         new = old
         if parsed.hostname and parsed.hostname.startswith('davidchivers.blogspot.'):
             new = post_map.get(parsed.path, '/blog/' if parsed.path in ('', '/') else old)
@@ -279,10 +282,10 @@ for number, post in enumerate(posts, 1):
 <a class="back-link" href="/blog/">← All articles</a>
 <article>
 <header class="article-header"><h1>{escape(post['title'])}</h1>
-<p class="article-meta">David Chivers · Originally published <time datetime="{date.date()}">{display_date}</time></p></header>
+<p class="article-meta">David Chivers · Published <time datetime="{date.date()}">{display_date}</time></p></header>
 <div class="article-body">{post['body']}</div>
 </article>
-<nav class="article-end" aria-label="Article navigation"><a href="/blog/">← All articles</a><a href="{post['original_url']}">Original on Blogger ↗</a></nav>
+<nav class="article-end" aria-label="Article navigation"><a href="/blog/">← All articles</a></nav>
 </main>'''
     target = ROOT / post['path'].lstrip('/') / 'index.html'
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -349,7 +352,8 @@ lines.extend(['', '## Author review, left unchanged', '',
               '- All 14 illustrations and all 3 numeric tables retained; bold, italics, block quotations, lists and strikethrough retained.',
               '- Removed legacy Blogger/Word font colours and fixed widths so article text is legible in both colour modes and on small screens.',
               '- Browser checks passed for all 48 articles at phone width without page overflow, title search (including no results), and the light/dark control with persistence after reload. Desktop index and article layouts were visually inspected.',
-              '- Original Blogger comments, profile widgets and share gadgets are not part of this post migration; original post links are retained.', ''])
+              '- Original Blogger comments, profile widgets and share gadgets are not part of this post migration.',
+              '- Removed all 48 “Original on Blogger” footer links and one empty legacy image anchor. Article dates now say “Published”. The public blog has no links or assets pointing to David’s old Blogger site; the source export remains preserved for offline rebuilding.', ''])
 (HERE / 'CHANGES.md').write_text('\n'.join(lines), encoding='utf-8')
 print(json.dumps({'posts': len(posts), 'correction_occurrences': sum(x['occurrences'] for x in fixes), 'correction_rules': len(fixes),
                   'images': len(media), 'link_changes': len(link_fixes), 'unresolved': issues}, ensure_ascii=False, indent=2))
