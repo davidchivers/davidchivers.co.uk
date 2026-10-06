@@ -48,7 +48,7 @@ The induction link belongs immediately below **Programme Director Welcome
 Video - Start Here** in **Economics Induction (26/27)** on Durham Blackboard,
 with the visible title **Induction slides**.
 
-The published collection contains seven current presentations. The separate
+The published collection contains twelve current presentations and two seminar question sheets. The separate
 staff slide-creation guide remains at `/slides/` and is not part of this collection.
 Each Macro lecture has a small Download menu available throughout the deck.
 Its stable targets are `macro-applications/downloads/lecture_N.pptx` and
@@ -58,3 +58,11 @@ master and interactive version remain the Quarto source and HTML respectively.
 Earlier source
 PowerPoints, development previews, QA files and build folders remain outside
 this public collection. The sync step adds search metadata without altering slide content. Keep existing Blackboard URLs unchanged when replacing a deck.
+
+## Political Economy and seminar handouts
+
+Political Economy has five HTML lectures at `/teaching/political-economy/lecture_N.html`, with its index at `/teaching/political-economy/`. Editable sources are under `teaching/political_economy_quarto` in the AI workspace. All 120 source slides remain in order.
+
+The two Brexit seminar question sheets are scrolling HTML at `/teaching/macro-applications/seminars/seminar_N.html`, from `teaching/macro_seminars_quarto`. Separate answer files remain local and are deliberately excluded from the sync allow-list. Do not copy a whole output directory or add answer links without the user's release instruction.
+
+These new pages are HTML only. No PDF/PowerPoint links have been added for files that have not been created. Existing Brexit lecture downloads remain unchanged. This is a light-touch source conversion; preserved maths and references have not had an independent full audit.

@@ -107,6 +107,60 @@
       "bytes": 2039605,
       "source_sha256": "2222a00abbe3deba70d91bdfdb0bbac0c955a83132206a3c2a17ed62d6172769",
       "sha256": "2222a00abbe3deba70d91bdfdb0bbac0c955a83132206a3c2a17ed62d6172769"
+    },
+    {
+      "path": "macro-applications/seminars/index.html",
+      "bytes": 1189679,
+      "source_sha256": "399d9ebb7de6861276db8369ba12b918aa694a046954f0c3132b665246546930",
+      "sha256": "dd96c309ad85658b7679cdf492bc739d03b0770fe325dd7ffd60a8eb3cce5f4c"
+    },
+    {
+      "path": "macro-applications/seminars/seminar_1.html",
+      "bytes": 1200453,
+      "source_sha256": "a01d76cf5196b29347fdb756b13ca4a400fb18d7dfb48693e7639105b2cfae2c",
+      "sha256": "fb96ae540cb55cc6932fe2bc5628f17bc974d2e5ffb6c8e09dc9248d5a1c5502"
+    },
+    {
+      "path": "macro-applications/seminars/seminar_2.html",
+      "bytes": 1197571,
+      "source_sha256": "bb9485e2f9c6a7c735cb7464dc65ce88a2a9d84e60a7bc0a2228bc0752581f37",
+      "sha256": "28b0de96b38c4260021bdfea7e7cf32f733e21f723970f07e449b9ba6bce7af2"
+    },
+    {
+      "path": "political-economy/index.html",
+      "bytes": 1189904,
+      "source_sha256": "8483dc4623a7f3be7ca3671f3c44f9da45c376376f22e498afda74a010f09943",
+      "sha256": "2eec08c774b1e487633408af0f1d62ebb859c8f2630c6c26d18b10d030e0045d"
+    },
+    {
+      "path": "political-economy/lecture_1.html",
+      "bytes": 3509643,
+      "source_sha256": "0016e7b62de5e154136d00a46a0bba9ecd4276d5aef64701eec195fea157889c",
+      "sha256": "edd1ad7d4985428d20c504c42f4bd46c75a2d870574f7fbf5145f3e0dcff2eb4"
+    },
+    {
+      "path": "political-economy/lecture_2.html",
+      "bytes": 5109032,
+      "source_sha256": "b04723644ea30716d260585a00b163980296645d1654d818d889e4ef0ddcc2d5",
+      "sha256": "4a08dc429a97191d0b8691c653b13b5de140df090c21f0e15ed7ae75d91ac82a"
+    },
+    {
+      "path": "political-economy/lecture_3.html",
+      "bytes": 5063430,
+      "source_sha256": "743dccb573e0179ab4882bfeedc7982f8894f25921299f652e498587c7cb3c11",
+      "sha256": "06498bb5c1ad71417d3a9388bbe0a8b436e424d0efd6e9ddc26e042bee27351b"
+    },
+    {
+      "path": "political-economy/lecture_4.html",
+      "bytes": 4189005,
+      "source_sha256": "c2b6c47a81c5f77cc97251e3f5ab58dea4c92ab1123739ae15f4b3bd6d530c7b",
+      "sha256": "176e3b0eecfdc11849e66db994c65ce6da8f007b56ca6e16b2dd4800b4b43d29"
+    },
+    {
+      "path": "political-economy/lecture_5.html",
+      "bytes": 4901824,
+      "source_sha256": "02acb54c4b4f56d12843ad81a7fbe15a2cb5e4da27428f1d1ed7a5a3ed307787",
+      "sha256": "ebe3da8ec151d6282a65c13d1f880607813c0af2e047e97e0ddb2ac86b04ca6b"
     }
   ]
 }

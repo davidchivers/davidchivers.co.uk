@@ -11,6 +11,11 @@ import json
 import re
 
 DECKS = {
+    "macro-applications/seminars/index.html": "macro_seminars_quarto/output/index.html",
+    **{f"macro-applications/seminars/seminar_{i}.html": f"macro_seminars_quarto/output/seminar_{i}.html" for i in (1, 2)},
+    "political-economy/index.html": "political_economy_quarto/output/index.html",
+    **{f"political-economy/lecture_{i}.html": f"political_economy_quarto/output/lecture_{i}.html" for i in range(1, 6)},
+    # Answer handouts deliberately stay local until their release is selected.
     "induction.html": "induction_quarto/output/induction.html",
     "ai-course.html": "ai_workshop/revealjs/output/ai_course.html",
     "macro-applications/index.html": "macro_applications_quarto/output/index.html",
