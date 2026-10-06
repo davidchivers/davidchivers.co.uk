@@ -13,6 +13,9 @@ This file is the quick orientation note for the public website repo.
 Confirmed from the local repo contents:
 
 - `/` via `index.html`
+- `/book/`, `/book/statistical-style-guide/` and `/book/corrections/`
+- `/cv/`
+- `/blog/`
 - `/papers.html`
 - `/results.html`
 - `/alcohol.html`

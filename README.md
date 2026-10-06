@@ -19,3 +19,23 @@ errors were corrected, and the sections were reorganised for browsing.
 (SHA-256: `00e2b194ba318f43153d0d050fefc0d93e4382e4f5174fa9e37a77cd442ecb7e`).
 The older root-level PDF is retained for existing links. Future CV updates should
 update the HTML and the downloadable PDF together; they do not sync with Drive.
+
+## Book
+
+`book/index.html` is the book landing page at `/book/`. Its companion pages are
+`/book/statistical-style-guide/` and `/book/corrections/`. All three are static
+HTML and share `assets/personal.css` plus the scoped `book/book.css` styles.
+
+Migrated on 6 October 2026 from the author's public
+[Google Sites book website](https://sites.google.com/view/howtoreadnumbers/home),
+including its author biographies, endorsements, complete eleven-point style
+guide and seven correction entries. The old campaign invitation has ended and
+is not reproduced. The correction on page 74 now also acknowledges reports from
+readers of the Polish edition in October 2026; this does not assert that any
+particular printing has been corrected. Page references follow the original
+hardback. Keep the navigation label singular (`Book`) until another book is added.
+
+The local cover image is the publisher's paperback artwork, downloaded from
+[W&N](https://www.weidenfeldandnicolson.co.uk/titles/tom-chivers/how-to-read-numbers/9781474619974/).
+The original `https://geni.us/HowToReadNumbers` purchase link is retained.
+No correspondence or reader contact details belong in the public site source.
