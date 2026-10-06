@@ -2,7 +2,7 @@
 
 Source: https://davidchivers.blogspot.com/
 
-Migrated 48 of 48 published posts to `/blog/`. Original dates are retained inside articles; the index is alphabetical and searchable. Light/dark mode follows the device initially and remembers a manual choice.
+Migrated 48 of 48 published posts to `/blog/`. The index shows dated article previews, newest first, with title sorting, search, topic and year filters, and selected reading. Light/dark mode follows the device initially and remembers a manual choice.
 
 ## Text corrections (355 occurrences)
 
@@ -546,6 +546,13 @@ Numerical corrections: in the exponential-growth post, 1,063/100 is 10.63 (not 5
 - Post 48: http://mainlymacro.blogspot.co.uk/ → https://mainlymacro.blogspot.com/
 - Post 48: http://www.cityam.com/212589/we-can-live-zero-inflation-two-cent-target-must-not-be-set-stone → https://www.cityam.com/we-can-live-zero-inflation-two-cent-target-must-not-be-set-stone/
 - Post 48: http://www.lrb.co.uk/v37/n04/simon-wren-lewis/the-austerity-con → https://www.lrb.co.uk/the-paper/v37/n04/simon-wren-lewis/the-austerity-con
+
+## Blog layout
+
+- Replaced the sparse title index with newest-first dated previews, estimated reading times and existing article thumbnails. Preview text is taken from the articles; selected excerpts avoid introductory quotations that need additional context.
+- Added oldest-first and A–Z sorting, search over titles and previews, six reviewed topic groups, publication-year filters, clear filters, and 12-at-a-time browsing. Without JavaScript all 48 previews remain available.
+- Added a compact heading and a desktop sidebar with browsing controls, three selected starting points and RSS. On phones the archive controls collapse above the feed. Dark mode and the original article text are retained.
+- Checked sorting, search, empty results, combined filters, clearing filters, all 48 results via Show more, theme persistence, and layouts at 320, 390, 768, 1024 and 1280 pixels without horizontal overflow.
 
 ## Unresolved or access-limited references
 

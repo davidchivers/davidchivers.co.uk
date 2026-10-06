@@ -33,8 +33,12 @@ overwrite the source feed with a new export as part of an ordinary rebuild.
 ## Design
 
 - Static HTML: every article and index link works without JavaScript.
-- Alphabetical index and optional title search. Original publication dates are
-  shown inside articles to retain historical context.
+- Newest-first article previews with original dates and excerpts from the posts.
+  Search covers titles and previews; readers can sort newest/oldest/A–Z and
+  filter by topic or year. JavaScript reveals 12 results at a time; all 48 are
+  available without JavaScript. Reviewed topic assignments live in `topics.json`.
+- The desktop sidebar includes topic/year controls, selected reading and RSS.
+  On small screens the filters collapse above the feed. Article text is unchanged.
 - Device colour preference by default; a manual light/dark choice is saved
   locally, with a storage-disabled fallback. No trackers or external fonts.
 - Images served locally; tables scroll within the article on narrow screens.
