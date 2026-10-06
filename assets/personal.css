@@ -30,9 +30,7 @@ h1 { color: var(--purple); letter-spacing: -.045em; line-height: 1.12; }
 .home-role { font-size: 1rem; margin-bottom: .1rem; }
 .home-role > span:not(.home-university) { margin: 0 .35rem; color: var(--purple); }
 .main-nav { display: flex; align-items: center; justify-content: center; gap: 2rem; margin: 1.6rem 0 1.7rem; }
-.main-nav a { padding: .2rem .05rem; font-size: .97rem; font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--rule); }
-.main-nav a:hover { border-color: var(--purple); }
-.main-nav span { font-weight: 400; font-size: .85em; }
+.main-nav a { padding: .2rem .05rem; font-size: .97rem; font-weight: 600; text-decoration: none; }
 .portrait { display: block; width: 316px; max-width: 100%; height: auto; margin: 0 auto; border-radius: 5px; box-shadow: 0 5px 22px #3820400d; }
 .profile-links { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 1.4rem; row-gap: .4rem; margin: 1.5rem auto 0; }
 .profile-links a { padding: .25rem 0; color: var(--muted); font-size: .8rem; text-decoration: none; }
@@ -45,7 +43,7 @@ h1 { color: var(--purple); letter-spacing: -.045em; line-height: 1.12; }
 .site-name { font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; text-decoration: none; }
 .site-header nav { display: flex; gap: 1.7rem; font-size: .88rem; }
 .site-header nav a { text-decoration: none; padding: .3rem 0; }
-.site-header nav a[aria-current="page"] { border-bottom: 1px solid var(--purple); }
+.site-header nav a[aria-current="page"] { font-weight: 700; color: var(--purple-dark); }
 .cv-intro { padding: 3.5rem 0 2.6rem; border-bottom: 1px solid var(--rule); }
 .cv-intro h1 { font-size: clamp(2.6rem, 6vw, 3.8rem); margin: .6rem 0 1rem; }
 .cv-affiliation { color: var(--muted); }
