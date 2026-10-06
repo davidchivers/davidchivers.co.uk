@@ -1,33 +1,35 @@
 .book-page { border-top: 3px solid var(--purple); }
 .book-page .site-header nav a[aria-current] { font-weight: 700; color: var(--purple-dark); }
 .book-main { width: min(1060px, calc(100% - 3rem)); margin-inline: auto; }
-.book-hero { display: grid; grid-template-columns: minmax(0, 1fr) 290px; align-items: center; gap: 5rem; padding: 4rem 0 3.8rem; }
-.book-hero h1 { font-size: clamp(3rem, 6vw, 4.8rem); max-width: 600px; margin: .6rem 0 1.2rem; }
+.book-hero { display: grid; grid-template-columns: minmax(0, 1fr) 290px; align-items: center; gap: 4rem; padding: 3rem 0; }
+.book-hero h1 { font-size: clamp(2.8rem, 5vw, 3.8rem); max-width: 600px; margin: 0 0 1rem; }
 .book-subtitle { font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; line-height: 1.5; max-width: 480px; }
-.book-byline { color: var(--purple); font-size: .9rem; margin: 1.25rem 0; }
-.book-description { max-width: 520px; color: var(--muted); font-size: 1.04rem; }
-.book-buy { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.6rem; }
-.book-buy small { color: var(--muted); font-size: .78rem; }
+.book-byline { color: var(--purple); font-size: 1.15rem; font-weight: 500; margin: 1.25rem 0; }
+.book-description { max-width: 520px; color: var(--muted); font-size: 1.1rem; }
+.book-buy { display: flex; flex-direction: column; align-items: flex-start; gap: .75rem; margin-top: 1.6rem; }
+.book-buy .button { min-height: 58px; min-width: 210px; padding: .85rem 1.8rem; font-size: 1.12rem; font-weight: 600; }
+.book-buy small { color: var(--muted); font-size: .83rem; }
 .book-cover { width: 100%; height: auto; display: block; box-shadow: 0 15px 30px #38204020, 0 2px 5px #38204015; }
-.book-links { display: flex; flex-wrap: wrap; gap: .7rem 2rem; padding: 1.25rem 0; border-block: 1px solid var(--rule); font-size: .88rem; }
+.book-links { display: flex; flex-wrap: wrap; gap: .7rem 2rem; padding: 1.25rem 0; border-top: 1px solid var(--rule); font-size: .95rem; }
+.book-links > span { color: var(--muted); }
+.book-landing .site-footer { border-top: 0; }
 .book-links a { text-decoration: none; }
 .book-links a:hover { text-decoration: underline; }
-.book-section { padding: 3.1rem 0; }
+.book-section { padding: 2.5rem 0; }
 .book-section + .book-section { border-top: 1px solid var(--rule); }
-.book-section h2 { font-size: 2rem; line-height: 1.3; color: var(--purple); margin-bottom: 1.6rem; }
-.quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 3.5rem; }
-blockquote { margin: 0; }
-blockquote p { font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem; line-height: 1.55; }
-blockquote footer { margin-top: .85rem; font-size: .76rem; color: var(--muted); }
-blockquote cite { font-style: normal; color: var(--purple); font-weight: 600; }
+.book-section h2 { font-size: 1.65rem; line-height: 1.3; color: var(--purple); margin-bottom: 1.6rem; }
+.book-praise { border-top: 1px solid var(--rule); padding-block: 2.5rem 3rem; }
+.book-praise h2 { font-family: inherit; font-size: .85rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.75rem; }
+.quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem 3.5rem; }
+.quote-grid blockquote { margin: 0; display: flex; flex-direction: column; }
+.quote-grid blockquote p { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.4rem, 2.4vw, 1.75rem); line-height: 1.45; flex: 1; }
+.quote-grid blockquote footer { margin-top: 1.15rem; color: var(--muted); line-height: 1.5; }
+.quote-grid blockquote cite { display: block; font-size: 1.15rem; font-style: normal; color: var(--purple); font-weight: 650; }
+.quote-grid blockquote footer span { display: block; margin-top: .15rem; font-size: .94rem; }
 .author-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; }
 .author-grid h3 { font-family: Georgia, "Times New Roman", serif; font-size: 1.45rem; font-weight: 400; margin-bottom: .65rem; }
-.author-grid p { color: var(--muted); font-size: .95rem; }
+.author-grid p { color: var(--muted); font-size: 1rem; }
 .author-grid p + p { margin-top: .85rem; }
-.resource-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-.resource { padding: 1.8rem; border: 1px solid var(--rule); border-radius: 4px; }
-.resource h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: .65rem; }
-.resource p { font-size: .92rem; color: var(--muted); }
 .book-intro { padding: 3rem 0 2.6rem; border-bottom: 1px solid var(--rule); }
 .breadcrumb { font-size: .83rem; margin-bottom: 1.2rem; }
 .breadcrumb a { text-decoration: none; }
@@ -57,12 +59,14 @@ blockquote cite { font-style: normal; color: var(--purple); font-weight: 600; }
 }
 @media (max-width: 650px) {
   .book-hero { grid-template-columns: 1fr; padding: 2.5rem 0; gap: 2rem; }
-  .book-hero h1 { font-size: 3.4rem; }
+  .book-hero h1 { font-size: 2.9rem; }
   .book-cover { width: min(240px, 75%); margin-inline: auto; }
   .book-subtitle { font-size: 1.2rem; }
-  .quote-grid, .author-grid, .resource-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+  .quote-grid, .author-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .quote-grid blockquote p { font-size: 1.55rem; }
   .book-section { padding: 2.25rem 0; }
-  .book-section h2 { font-size: 1.8rem; }
+  .book-section h2 { font-size: 1.6rem; }
+  .book-praise h2 { font-size: .85rem; }
   .reading-layout { grid-template-columns: 1fr; padding-top: 1.5rem; }
   .reading-nav { position: static; border-bottom: 1px solid var(--rule); padding-bottom: 1.5rem; }
   .reading-nav ol { display: flex; flex-wrap: wrap; column-gap: 1.2rem; }
@@ -71,7 +75,6 @@ blockquote cite { font-style: normal; color: var(--purple); font-weight: 600; }
 @media (max-width: 420px) {
   .book-main { width: calc(100% - 2.5rem); }
   .book-links { gap: .65rem 1.3rem; }
-  .resource { padding: 1.3rem; }
 }
 @media print {
   .book-page { border: 0; }

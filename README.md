@@ -20,6 +20,13 @@ errors were corrected, and the sections were reorganised for browsing.
 The older root-level PDF is retained for existing links. Future CV updates should
 update the HTML and the downloadable PDF together; they do not sync with Drive.
 
+The HTML publication titles now link to their journal DOIs (verified on 6 October
+2026 against publisher metadata and Durham's research repository). The HTML entry
+for the employment-based health insurance paper uses its journal publication
+year, 2017, as recorded by
+[Durham](https://durham-repository.worktribe.com/output/1390937/employment-based-health-insurance-and-misallocation-implications-for-the-macroeconomy).
+The downloadable PDF remains the original source copy and still lists 2015.
+
 ## Book
 
 `book/index.html` is the book landing page at `/book/`. Its companion pages are
