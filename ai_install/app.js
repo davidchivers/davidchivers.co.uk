@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const storageKey = 'ai-economics-setup-20261001';
+  const storageKey = 'vscode-copilot-setup-20261008';
   const checks = Array.from(document.querySelectorAll('[data-step]'));
   const saveNote = document.getElementById('saveNote');
   let canSave = true;
@@ -24,10 +24,10 @@
       link.classList.toggle('is-done', done);
       link.setAttribute('aria-label', `${done ? 'Checked: ' : ''}${link.textContent.trim()}`);
     });
-    document.getElementById('ready-title').textContent = completed.length === checks.length ? 'You are ready for the session.' : 'Ready for the session.';
+    document.getElementById('ready-title').textContent = completed.length === checks.length ? 'Setup complete.' : 'Your setup';
     document.getElementById('readyMessage').textContent = completed.length === checks.length
-      ? 'You have checked every step. Bring your laptop, open your course folder in VS Code, and we can start with the research.'
-      : 'Once all six checks are ticked, bring your laptop with VS Code and your course folder ready to open.';
+      ? 'Copilot is connected and you have checked its first file. Open a project folder whenever you want to start another task.'
+      : 'Work through the six checks to connect Copilot and try your first task.';
     if (save && canSave) {
       try { localStorage.setItem(storageKey, JSON.stringify(completed)); }
       catch (_) {
