@@ -4,7 +4,7 @@ const promptBox = document.getElementById('prompt');
 const copyButton = document.getElementById('copy');
 const status = document.getElementById('status');
 
-fetch('prompt.txt')
+fetch(document.getElementById('download-prompt').getAttribute('href'), { cache: 'no-cache' })
   .then(response => {
     if (!response.ok) throw new Error('Prompt unavailable');
     return response.text();
