@@ -25,6 +25,7 @@ Confirmed from the local repo contents:
 - `/email_app/`
 - `/metal_map/`
 - `/wine_bar/`
+- `/seminars/` - external seminar programme and separate seminar/coffee calendar subscriptions; internal seminars reserved for later.
 
 This repo is now the intended source for the root `davidchivers.co.uk` site and its project subpaths.
 

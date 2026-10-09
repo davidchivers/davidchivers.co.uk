@@ -1,0 +1,18 @@
+'use strict';
+const $=s=>document.querySelector(s);let events=[],term='Michaelmas',contacts=[];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeURL=s=>{try{const u=new URL(s);return ['https:','http:'].includes(u.protocol)?u.href:''}catch{return ''}};
+const dateParts=d=>{const x=new Date(d+'T12:00:00Z');return {day:x.getUTCDate(),month:x.toLocaleString('en-GB',{month:'short',timeZone:'UTC'}),weekday:x.toLocaleString('en-GB',{weekday:'short',timeZone:'UTC'}),year:x.getUTCFullYear()}};
+const fullRoom=r=>{if(!r)return 'Room to be confirmed';const m=/^MHL\s*(\d+)$/i.exec(r);return m?`Mill Hill Lane · Room ${m[1]}`:r};
+const seminarRoom=r=>{const m=/^MHL\s*(\d+)$/i.exec(r||'');return m?`<span class="building">Mill Hill Lane</span><strong class="room-number">Room ${m[1]}</strong>`:esc(fullRoom(r))};
+function card(e){const d=dateParts(e.date),url=safeURL(e.website),paper=safeURL(e.paper);return `<article class="seminar" data-id="${esc(e.id)}"><div class="date"><b>${d.day}</b><span>${d.month.toUpperCase()} ${d.year}<br>${d.weekday}</span></div><div>${e.status==='Cancelled'?'<span class="cancelled">Cancelled</span>':''}<h3 class="speaker">${esc(e.speaker)}</h3><p class="affiliation">${esc(e.affiliation)}</p><p class="talk ${e.title?'':'tba'}">${esc(e.title||'Talk title to be announced')}</p>${e.area?`<p class="area">Research interests: <strong>${esc(e.area)}</strong></p>`:''}${url?`<a class="profile" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Speaker profile</a>`:''}${paper?` · <a class="profile" href="${esc(paper)}" target="_blank" rel="noopener noreferrer">Paper</a>`:''}${e.abstract?`<details><summary>Abstract</summary><p>${esc(e.abstract)}</p></details>`:''}</div><div class="location"><b>${esc(e.start)}–${esc(e.end)}</b><p class="seminar-room">${seminarRoom(e.room)}</p>${e.coffeeStart?`<p class="coffee">Coffee · ${esc(e.coffeeStart)}–${esc(e.coffeeEnd)}<br>${esc(fullRoom(e.coffeeRoom))}${e.coffeeRoom==='MHL418'?' · Bar Lounge':''}</p>`:''}</div></article>`}
+function render(){const shown=events.filter(e=>term==='All'||e.term===term).sort((a,b)=>(a.date+a.start).localeCompare(b.date+b.start));$('#programme').innerHTML=shown.map(card).join('')||'<p class="empty">No published seminars in this term.</p>';$('#termTitle').textContent=term==='All'?'Full programme':term+' programme';$('#eventCount').textContent=shown.length+' seminars';document.querySelectorAll('[data-term]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.term===term)));}
+document.querySelectorAll('[data-term]').forEach(b=>b.addEventListener('click',()=>{term=b.dataset.term;render()}));
+
+let loading=false;
+async function refreshProgramme(){
+ if(loading)return;loading=true;
+ try{const response=await fetch(location.hostname==='127.0.0.1'?'/api/programme':'https://economics-seminar-demo.silkyangel64.chatgpt.site/api/programme',{cache:'no-store'});if(!response.ok)throw Error('Programme unavailable');const result=await response.json();events=result.events;render();document.getElementById('updated').textContent='Programme checked '+new Date(result.checkedAt).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'});}
+ catch{document.getElementById('updated').textContent=events.length?'Could not refresh. Showing the last loaded programme.':'The programme could not be loaded. Please try again shortly.';if(!events.length)document.getElementById('programme').innerHTML='<p class="empty">Programme temporarily unavailable.</p>';}finally{loading=false;}
+}
+refreshProgramme();setInterval(refreshProgramme,60000);
