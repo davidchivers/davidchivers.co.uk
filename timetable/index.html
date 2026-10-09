@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://davidchivers.co.uk/timetable/">
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/assets/personal.css">
-  <link rel="stylesheet" href="style.css?v=f99904166891">
+  <link rel="stylesheet" href="style.css?v=ce23b1e5eb3c">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -26,29 +26,50 @@
     <ol class="steps">
       <li>
         <h2>Copy your timetable</h2>
-        <p>Open the <a href="https://timetable.dur.ac.uk/staff.htm" target="_blank" rel="noopener">Durham staff timetable</a> and enter <strong>your own CIS username</strong> (your university login code). Set <strong>Report Style → List</strong> and <strong>Week(s) → Teaching year</strong>. Choose the days and time range that cover all your teaching, then click <strong>View Timetable</strong>. Copy the whole report, including the weekday headings.</p>
+        <p>Open the <a href="https://timetable.dur.ac.uk/staff.htm" target="_blank" rel="noopener">Durham staff timetable</a> and enter <strong>your own CIS username</strong> (your university login code). Set <strong>Report Style → List</strong> and <strong>Week(s) → Teaching year</strong>. Choose the days and time range that cover all your teaching, then click <strong>View Timetable</strong>.</p>
         <figure class="timetable-example">
           <a href="assets/staff-timetable-list-teaching-year.png" target="_blank" rel="noopener" aria-label="Open the annotated timetable screenshot at full size">
             <img src="assets/staff-timetable-list-teaching-year.png" width="1630" height="965" alt="Durham staff timetable form. Arrow 1 highlights List under Select Report Style. Arrow 2 highlights Teaching year under Select Week(s). Use your own CIS username, then choose suitable days and hours and click View Timetable.">
           </a>
           <figcaption><strong>1: List.</strong> <strong>2: Teaching year.</strong> Use your own username, not the example shown. Click the image to enlarge.</figcaption>
         </figure>
+        <div class="copy-guide">
+          <p><strong>On the report that opens:</strong> click anywhere in the timetable, press <kbd>Ctrl</kbd> + <kbd>A</kbd> to select the whole page, then <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy it. On a Mac, use <kbd>⌘</kbd> instead of Ctrl.</p>
+          <p>Include the <strong>dates at the top, every weekday heading and all the rows</strong>. Extra text such as “Print Timetable” is fine. Copy the page text, not the web address or a screenshot.</p>
+        </div>
+        <details class="report-example">
+          <summary>See what to copy — an example from my timetable</summary>
+          <figure class="timetable-example">
+            <a href="assets/list-report-example.jpg" target="_blank" rel="noopener" aria-label="Enlarge the example of the whole List report selected">
+              <img src="assets/list-report-example.jpg" width="1366" height="960" loading="lazy" alt="David’s Durham List report with the entire page selected, including the staff name, 2026–27 date range at the top, weekday headings, and every timetable row.">
+            </a>
+            <figcaption>This is what Ctrl+A selects. Copy <strong>your own whole report</strong>, including the dates in the top-right corner. Click the image to enlarge.</figcaption>
+          </figure>
+        </details>
       </li>
-      <li>
-        <h2>Ask Copilot</h2>
-        <p>Copy the prompt below and paste it into <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener">Microsoft Copilot</a>, signed in with your Durham account. Paste your timetable underneath.</p>
+      <li id="prepare-message">
+        <h2>Paste here, then copy for Copilot</h2>
+        <label class="input-label" for="timetable">Your whole List-view report</label>
+        <textarea id="timetable" placeholder="Click here and press Ctrl+V (or ⌘+V on a Mac) to paste your timetable…" aria-describedby="paste-help" spellcheck="false" autocomplete="off"></textarea>
+        <p class="input-help" id="paste-help">It may look untidy when pasted — that is fine. Check that the dates, weekdays and all your teaching are included. Your text stays in this tab; this website does not upload or save it.</p>
+        <p>Click <strong>Copy for Copilot</strong>. This adds the instructions, exact dates and building names to your timetable, ready to paste as <strong>one message</strong> into a new <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener">Copilot chat</a>. Sign in with your Durham account, paste and send.</p>
         <div class="actions">
-          <button class="button button-primary" id="copy" type="button" disabled>Copy prompt</button>
+          <button class="button button-primary" id="copy" type="button" disabled>Copy for Copilot</button>
           <a class="button" href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener">Open Copilot ↗</a>
         </div>
-        <p class="copy-status" id="status" role="status">Includes an explicit week-by-week date table and common building names.</p>
+        <p class="copy-status" id="status" role="status">Paste your timetable above to begin.</p>
         <details id="prompt-details">
-          <summary>View prompt or copy manually</summary>
-          <label class="visually-hidden" for="prompt">Timetable conversion prompt for 2026–27</label>
+          <summary>Copy not working? Copy the full message manually</summary>
+          <p>Click <strong>Select full message</strong>, then press <kbd>Ctrl</kbd> + <kbd>C</kbd> (or <kbd>⌘</kbd> + <kbd>C</kbd>). In Copilot, paste with <kbd>Ctrl</kbd> + <kbd>V</kbd>. The message starts “Create one Outlook-compatible ICS…” and ends with your timetable.</p>
+          <div class="actions">
+            <button class="button" id="select-message" type="button" disabled>Select full message</button>
+            <a id="download-message" download="Durham-timetable-message-2026-27.txt" hidden>Download full message as text</a>
+          </div>
+          <label class="visually-hidden" for="prompt">Complete message for Copilot, including your timetable</label>
           <textarea id="prompt" readonly spellcheck="false"></textarea>
-          <a id="download-prompt" href="prompt.txt?v=f99904166891" download="Durham-timetable-prompt-2026-27.txt">Download prompt as text</a>
+          <a id="download-prompt" href="prompt.txt?v=ce23b1e5eb3c" download="Durham-timetable-prompt-2026-27.txt">Download instructions only</a>
         </details>
-        <noscript><p><a href="prompt.txt?v=f99904166891">Open the prompt</a> and copy its text.</p></noscript>
+        <noscript><p>To combine the text here, enable JavaScript. Alternatively, <a href="prompt.txt?v=ce23b1e5eb3c">open the instructions</a>, copy them into Copilot, then add your whole timetable at the end.</p></noscript>
       </li>
       <li>
         <h2>Check and download</h2>
@@ -131,6 +152,6 @@
       </details>
     </footer>
   </main>
-  <script src="app.js?v=f99904166891"></script>
+  <script src="app.js?v=ce23b1e5eb3c"></script>
 </body>
 </html>

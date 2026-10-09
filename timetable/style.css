@@ -17,7 +17,15 @@ h2 { font-family: inherit; font-size: 1.04rem; font-weight: 650; margin-bottom: 
 .timetable-example figcaption { margin-top: 8px; font-size: .8rem; line-height: 1.6; color: var(--muted); }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
 .button { font-size: .9rem; min-height: 44px; }
-.button:disabled { opacity: .55; cursor: wait; }
+.button:disabled { opacity: .55; cursor: not-allowed; }
+.copy-guide { margin-top: 18px; padding: 14px 16px; border-left: 3px solid var(--purple); background: var(--tint); }
+.copy-guide p + p { margin-top: 8px; }
+kbd { font-family: inherit; font-size: .88em; border: 1px solid var(--rule); border-radius: 3px; padding: 1px 4px; background: #fff; white-space: nowrap; }
+.report-example { margin-top: 14px; }
+.input-label { display: block; margin-top: 14px; font-weight: 600; font-size: .9rem; }
+#timetable { height: 175px; margin-top: 6px; }
+.input-help { margin-bottom: 16px; color: var(--muted); font-size: .8rem !important; }
+#download-message:not([hidden]) { align-self: center; font-size: .85rem; }
 .copy-status { min-height: 1.6em; margin-top: 8px; color: var(--muted); font-size: .8rem !important; }
 details { margin-top: 8px; font-size: .83rem; }
 summary { cursor: pointer; color: var(--purple); width: fit-content; }

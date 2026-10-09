@@ -105,4 +105,4 @@ Include a clear warning with the output: the calendar is a one-off snapshot, and
 Create the file only. Do not read or modify my Outlook calendar, send invitations or import anything automatically.
 
 MY TIMETABLE:
-[I will paste the complete List timetable here, including weekday and column headings.]
+[PASTE YOUR COMPLETE LIST REPORT HERE]
