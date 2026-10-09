@@ -5,6 +5,7 @@ const promptBox = document.getElementById('prompt');
 const copyButton = document.getElementById('copy');
 const selectButton = document.getElementById('select-message');
 const details = document.getElementById('prompt-details');
+const help = document.getElementById('help');
 const downloadMessage = document.getElementById('download-message');
 const status = document.getElementById('status');
 const placeholder = '[PASTE YOUR COMPLETE LIST REPORT HERE]';
@@ -25,15 +26,16 @@ function updateMessage() {
   if (ready) {
     downloadUrl = URL.createObjectURL(new Blob([promptBox.value], { type: 'text/plain;charset=utf-8' }));
     downloadMessage.href = downloadUrl;
-    status.textContent = 'Ready: instructions and your timetable will be copied together.';
+    status.textContent = 'Ready to copy.';
   } else if (loadFailed) {
     status.textContent = 'Instructions could not load. Refresh this page, or download the instructions below and add your timetable at the end.';
   } else {
-    status.textContent = timetable ? 'Loading the instructions…' : 'Paste your timetable above to begin.';
+    status.textContent = timetable ? 'Loading the instructions…' : '';
   }
 }
 
 function selectMessage() {
+  help.open = true;
   details.open = true;
   promptBox.focus();
   promptBox.select();
@@ -54,6 +56,7 @@ fetch(document.getElementById('download-prompt').getAttribute('href'), { cache: 
   })
   .catch(() => {
     loadFailed = true;
+    help.open = true;
     details.open = true;
     updateMessage();
   });
@@ -67,7 +70,7 @@ copyButton.addEventListener('click', async () => {
     // An edit during the clipboard operation invalidates this success message.
     if (message !== promptBox.value) return;
     copyButton.textContent = 'Copied';
-    status.textContent = 'Copied instructions + your timetable. Paste into a new Copilot chat and send.';
+    status.textContent = 'Copied. Paste into Copilot and send.';
   } catch {
     if (message === promptBox.value) selectMessage();
   }

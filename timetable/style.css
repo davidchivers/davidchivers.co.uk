@@ -4,8 +4,8 @@ main { max-width: 720px; margin: 0 auto; padding: 24px 24px 40px; }
 header { margin: 32px 0 26px; }
 h1 { font-size: clamp(2.6rem, 7vw, 3.6rem); margin: 8px 0 12px; }
 .intro { font-size: 1.08rem; color: var(--muted); }
-.warning { border-left: 3px solid #9b6b0d; background: #fff5dc; padding: 14px 16px; margin-bottom: 26px; font-size: .9rem; }
-.warning p { margin-top: 5px; }
+.warning { border-left: 3px solid #9b6b0d; background: #fff5dc; padding: 12px 16px; margin: 14px 0 20px; font-size: .83rem; }
+.warning p { margin: 0; }
 .steps { padding: 0; margin: 0; list-style: none; counter-reset: step; }
 .steps > li { position: relative; counter-increment: step; padding: 20px 0 20px 42px; border-top: 1px solid var(--rule); }
 .steps > li::before { content: counter(step); position: absolute; left: 0; top: 22px; color: var(--purple); font-size: .85rem; font-weight: 650; }
@@ -21,19 +21,20 @@ h2 { font-family: inherit; font-size: 1.04rem; font-weight: 650; margin-bottom: 
 .copy-guide { margin-top: 18px; padding: 14px 16px; border-left: 3px solid var(--purple); background: var(--tint); }
 .copy-guide p + p { margin-top: 8px; }
 kbd { font-family: inherit; font-size: .88em; border: 1px solid var(--rule); border-radius: 3px; padding: 1px 4px; background: #fff; white-space: nowrap; }
-.report-example { margin-top: 14px; }
-.input-label { display: block; margin-top: 14px; font-weight: 600; font-size: .9rem; }
-#timetable { height: 175px; margin-top: 6px; }
-.input-help { margin-bottom: 16px; color: var(--muted); font-size: .8rem !important; }
+#timetable { height: 160px; margin-top: 12px; }
 #download-message:not([hidden]) { align-self: center; font-size: .85rem; }
-.copy-status { min-height: 1.6em; margin-top: 8px; color: var(--muted); font-size: .8rem !important; }
+.copy-status { margin-top: 8px; color: var(--muted); font-size: .8rem !important; }
+.copy-status:empty { display: none; }
 details { margin-top: 8px; font-size: .83rem; }
 summary { cursor: pointer; color: var(--purple); width: fit-content; }
 summary:focus-visible, textarea:focus-visible { outline: 2px solid var(--purple); outline-offset: 4px; }
 textarea { display: block; width: 100%; height: 320px; resize: vertical; padding: 12px; margin: 12px 0 8px; border: 1px solid var(--rule); border-radius: 4px; background: #fff; color: var(--ink); font-size: .9rem; line-height: 1.55; font-family: inherit; }
-.note { padding-top: 18px; border-top: 1px solid var(--rule); font-size: .83rem; color: var(--muted); }
-footer { margin-top: 20px; color: var(--muted); }
-footer p { margin-top: 10px; }
+.help-panel { border-top: 1px solid var(--rule); padding-top: 14px; }
+.help-panel > summary { font-size: .94rem; font-weight: 600; padding: 6px 0; }
+.help-content { padding: 8px 0 0 20px; }
+.help-content > details { padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.help-content > details > summary { font-size: .9rem; }
+.help-content p { margin-top: 12px; }
 .date-grid { overflow-x: auto; max-height: 390px; margin: 14px 0; border: 1px solid var(--rule); border-radius: 4px; }
 .date-grid:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
 .date-grid table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: .76rem; font-variant-numeric: tabular-nums; white-space: nowrap; text-align: left; }

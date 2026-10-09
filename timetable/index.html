@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://davidchivers.co.uk/timetable/">
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/assets/personal.css">
-  <link rel="stylesheet" href="style.css?v=ce23b1e5eb3c">
+  <link rel="stylesheet" href="style.css?v=08be7a27d48f">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -19,26 +19,51 @@
       <h1>Time table</h1>
       <p class="intro">Put your teaching timetable into Outlook in one go.</p>
     </header>
-    <aside class="warning" aria-labelledby="timetable-warning">
-      <strong id="timetable-warning">Timetables can change</strong>
-      <p>This calendar is a one-off snapshot. <strong>Do not assume it will remain correct for the whole academic year.</strong> Teaching dates, times and rooms may change. Keep checking the <a href="https://timetable.dur.ac.uk/staff.htm" target="_blank" rel="noopener">official Durham timetable</a>, especially before teaching. Outlook entries will not update automatically; amend or remove affected events yourself.</p>
-    </aside>
     <ol class="steps">
       <li>
-        <h2>Copy your timetable</h2>
-        <p>Open the <a href="https://timetable.dur.ac.uk/staff.htm" target="_blank" rel="noopener">Durham staff timetable</a> and enter <strong>your own CIS username</strong> (your university login code). Set <strong>Report Style → List</strong> and <strong>Week(s) → Teaching year</strong>. Choose the days and time range that cover all your teaching, then click <strong>View Timetable</strong>.</p>
+        <h2>Get your timetable</h2>
+        <p>Open the <a href="https://timetable.dur.ac.uk/staff.htm" target="_blank" rel="noopener">Durham staff timetable</a>. Enter your username, choose <strong>List</strong> and <strong>Teaching year</strong>, then view and copy the whole report.</p>
         <figure class="timetable-example">
           <a href="assets/staff-timetable-list-teaching-year.png" target="_blank" rel="noopener" aria-label="Open the annotated timetable screenshot at full size">
-            <img src="assets/staff-timetable-list-teaching-year.png" width="1630" height="965" alt="Durham staff timetable form. Arrow 1 highlights List under Select Report Style. Arrow 2 highlights Teaching year under Select Week(s). Use your own CIS username, then choose suitable days and hours and click View Timetable.">
+            <img src="assets/staff-timetable-list-teaching-year.png" width="1630" height="965" loading="lazy" alt="Durham staff timetable form. Arrow 1 highlights List under Select Report Style. Arrow 2 highlights Teaching year under Select Week(s). Use your own CIS username, then choose suitable days and hours and click View Timetable.">
           </a>
           <figcaption><strong>1: List.</strong> <strong>2: Teaching year.</strong> Use your own username, not the example shown. Click the image to enlarge.</figcaption>
         </figure>
+      </li>
+      <li id="prepare-message">
+        <h2>Paste here</h2>
+        <label class="visually-hidden" for="timetable">Your whole List-view report</label>
+        <textarea id="timetable" placeholder="Paste your timetable here…" spellcheck="false" autocomplete="off"></textarea>
+        <p>Copy below, then paste and send in Copilot using your Durham account.</p>
+        <div class="actions">
+          <button class="button button-primary" id="copy" type="button" disabled>Copy for Copilot</button>
+          <a class="button" href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener">Open Copilot ↗</a>
+        </div>
+        <p class="copy-status" id="status" role="status"></p>
+        <noscript><p><a href="prompt.txt?v=08be7a27d48f">Open the instructions</a>, copy them into Copilot, then add your timetable at the end.</p></noscript>
+      </li>
+      <li>
+        <h2>Check and add to Outlook</h2>
+        <p>Check the dates, times and rooms, then download the <strong>.ics</strong> file. In Outlook: <strong>Calendar → Add calendar → Upload from file</strong>.</p>
+      </li>
+    </ol>
+    <aside class="warning" aria-label="Timetable changes">
+      <p><strong>Timetables can change.</strong> Imported entries won’t update automatically. Keep checking the <a href="https://timetable.dur.ac.uk/staff.htm" target="_blank" rel="noopener">official timetable</a> throughout the year.</p>
+    </aside>
+    <details id="help" class="help-panel">
+      <summary>Need help?</summary>
+      <div class="help-content">
+        <details>
+          <summary>Getting your timetable</summary>
+          <p>Enter your own CIS username (your university login code). Select <strong>Report Style → List</strong> and <strong>Week(s) → Teaching year</strong>. Choose the days and hours that cover all your teaching, then click <strong>View Timetable</strong>.</p>
+        </details>
+        <details>
+          <summary>Copying the whole report</summary>
         <div class="copy-guide">
           <p><strong>On the report that opens:</strong> click anywhere in the timetable, press <kbd>Ctrl</kbd> + <kbd>A</kbd> to select the whole page, then <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy it. On a Mac, use <kbd>⌘</kbd> instead of Ctrl.</p>
           <p>Include the <strong>dates at the top, every weekday heading and all the rows</strong>. Extra text such as “Print Timetable” is fine. Copy the page text, not the web address or a screenshot.</p>
         </div>
-        <details class="report-example">
-          <summary>See what to copy — an example from my timetable</summary>
+          <p>Return here, click the paste box and press <kbd>Ctrl</kbd> + <kbd>V</kbd> (or <kbd>⌘</kbd> + <kbd>V</kbd>). It may look untidy — that is fine.</p>
           <figure class="timetable-example">
             <a href="assets/list-report-example.jpg" target="_blank" rel="noopener" aria-label="Enlarge the example of the whole List report selected">
               <img src="assets/list-report-example.jpg" width="1366" height="960" loading="lazy" alt="David’s Durham List report with the entire page selected, including the staff name, 2026–27 date range at the top, weekday headings, and every timetable row.">
@@ -46,42 +71,24 @@
             <figcaption>This is what Ctrl+A selects. Copy <strong>your own whole report</strong>, including the dates in the top-right corner. Click the image to enlarge.</figcaption>
           </figure>
         </details>
-      </li>
-      <li id="prepare-message">
-        <h2>Paste here, then copy for Copilot</h2>
-        <label class="input-label" for="timetable">Your whole List-view report</label>
-        <textarea id="timetable" placeholder="Click here and press Ctrl+V (or ⌘+V on a Mac) to paste your timetable…" aria-describedby="paste-help" spellcheck="false" autocomplete="off"></textarea>
-        <p class="input-help" id="paste-help">It may look untidy when pasted — that is fine. Check that the dates, weekdays and all your teaching are included. Your text stays in this tab; this website does not upload or save it.</p>
-        <p>Click <strong>Copy for Copilot</strong>. This adds the instructions, exact dates and building names to your timetable, ready to paste as <strong>one message</strong> into a new <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener">Copilot chat</a>. Sign in with your Durham account, paste and send.</p>
-        <div class="actions">
-          <button class="button button-primary" id="copy" type="button" disabled>Copy for Copilot</button>
-          <a class="button" href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener">Open Copilot ↗</a>
-        </div>
-        <p class="copy-status" id="status" role="status">Paste your timetable above to begin.</p>
         <details id="prompt-details">
-          <summary>Copy not working? Copy the full message manually</summary>
-          <p>Click <strong>Select full message</strong>, then press <kbd>Ctrl</kbd> + <kbd>C</kbd> (or <kbd>⌘</kbd> + <kbd>C</kbd>). In Copilot, paste with <kbd>Ctrl</kbd> + <kbd>V</kbd>. The message starts “Create one Outlook-compatible ICS…” and ends with your timetable.</p>
+          <summary>Copying into Copilot</summary>
+          <p><strong>Copy for Copilot</strong> combines the instructions, dates, building names and your timetable into one message. Paste it into a new Copilot chat using your Durham account. Your timetable stays in this tab until you copy it; this website does not upload or save it.</p>
+          <p>If the copy button does not work, click <strong>Select full message</strong>, then press <kbd>Ctrl</kbd> + <kbd>C</kbd> (or <kbd>⌘</kbd> + <kbd>C</kbd>). In Copilot, paste with <kbd>Ctrl</kbd> + <kbd>V</kbd>. The message starts “Create one Outlook-compatible ICS…” and ends with your timetable.</p>
           <div class="actions">
             <button class="button" id="select-message" type="button" disabled>Select full message</button>
             <a id="download-message" download="Durham-timetable-message-2026-27.txt" hidden>Download full message as text</a>
           </div>
           <label class="visually-hidden" for="prompt">Complete message for Copilot, including your timetable</label>
           <textarea id="prompt" readonly spellcheck="false"></textarea>
-          <a id="download-prompt" href="prompt.txt?v=ce23b1e5eb3c" download="Durham-timetable-prompt-2026-27.txt">Download instructions only</a>
+          <a id="download-prompt" href="prompt.txt?v=08be7a27d48f" download="Durham-timetable-prompt-2026-27.txt">Download instructions only</a>
         </details>
-        <noscript><p>To combine the text here, enable JavaScript. Alternatively, <a href="prompt.txt?v=ce23b1e5eb3c">open the instructions</a>, copy them into Copilot, then add your whole timetable at the end.</p></noscript>
-      </li>
-      <li>
-        <h2>Check and download</h2>
-        <p>Check Copilot’s event list against your timetable, especially the <strong>academic year, week numbers, dates, times and rooms</strong>. Download the calendar file (<strong>.ics</strong>) it creates.</p>
-      </li>
-      <li>
-        <h2>Add it to Outlook</h2>
-        <p>In Outlook on the web: <strong>Calendar → Add calendar → Upload from file</strong>. Choose the .ics file and your calendar, import it, then check the events appear correctly.</p>
-      </li>
-    </ol>
-    <p class="note">Import each calendar file only once to avoid duplicate events.</p>
-    <footer>
+        <details>
+          <summary>Checking and importing your calendar</summary>
+          <p>Compare Copilot’s event list with your report, including the <strong>academic year, week numbers, dates, times and rooms</strong>. Then download the calendar file (.ics).</p>
+          <p>In Outlook on the web, open <strong>Calendar → Add calendar → Upload from file</strong>. Select the .ics file and the calendar you want, then import it. Check the entries appear correctly. Import each file only once to avoid duplicates.</p>
+          <p>This is a one-off snapshot. Do not assume it will stay correct for the whole academic year. Teaching dates, times and rooms may change. Check Durham’s timetable, especially before teaching, and amend or remove affected Outlook entries yourself.</p>
+        </details>
       <details id="week-dates">
         <summary>Exact dates for each timetable week · 2026–27</summary>
         <p>Use Durham’s timetable week numbers, not term-week or ISO calendar-week numbers. Every date includes its year. Only include weeks listed for your activity.</p>
@@ -150,8 +157,9 @@
         <summary>Room names</summary>
         <p>The prompt expands common building codes and keeps the original room number. Unknown codes are flagged for checking. Reference: <a href="https://www.durham.ac.uk/media/durham-university/visit-us/Session-Locations-and-Maps.pdf" target="_blank" rel="noopener">Durham building names</a>.</p>
       </details>
-    </footer>
+      </div>
+    </details>
   </main>
-  <script src="app.js?v=ce23b1e5eb3c"></script>
+  <script src="app.js?v=08be7a27d48f"></script>
 </body>
 </html>
