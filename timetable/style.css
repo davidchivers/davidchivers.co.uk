@@ -11,6 +11,10 @@ h1 { font-size: clamp(2.6rem, 7vw, 3.6rem); margin: 8px 0 12px; }
 .steps > li::before { content: counter(step); position: absolute; left: 0; top: 22px; color: var(--purple); font-size: .85rem; font-weight: 650; }
 h2 { font-family: inherit; font-size: 1.04rem; font-weight: 650; margin-bottom: 5px; }
 .steps p { font-size: .94rem; }
+.timetable-example { margin: 18px 0 0; }
+.timetable-example a { display: block; }
+.timetable-example img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.timetable-example figcaption { margin-top: 8px; font-size: .8rem; line-height: 1.6; color: var(--muted); }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
 .button { font-size: .9rem; min-height: 44px; }
 .button:disabled { opacity: .55; cursor: wait; }
