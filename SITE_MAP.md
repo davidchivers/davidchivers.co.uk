@@ -25,7 +25,6 @@ Confirmed from the local repo contents:
 - `/email_app/`
 - `/metal_map/`
 - `/wine_bar/`
-- `/timetable/` — a short Durham timetable-to-Outlook guide and copyable Copilot prompt for 2026–27
 
 This repo is now the intended source for the root `davidchivers.co.uk` site and its project subpaths.
 
