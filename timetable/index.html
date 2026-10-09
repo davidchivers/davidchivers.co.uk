@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://davidchivers.co.uk/timetable/">
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/assets/personal.css">
-  <link rel="stylesheet" href="style.css?v=602abb020431">
+  <link rel="stylesheet" href="style.css?v=7ef0f7d5b45e">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -19,6 +19,10 @@
       <h1>Time table</h1>
       <p class="intro">Put your teaching timetable into Outlook in one go.</p>
     </header>
+    <aside class="warning" aria-labelledby="timetable-warning">
+      <strong id="timetable-warning">Timetables can change</strong>
+      <p>This calendar is a one-off snapshot. <strong>Do not assume it will remain correct for the whole academic year.</strong> Teaching dates, times and rooms may change. Keep checking the <a href="https://timetable.dur.ac.uk/staff.htm" target="_blank" rel="noopener">official Durham timetable</a>, especially before teaching. Outlook entries will not update automatically; amend or remove affected events yourself.</p>
+    </aside>
     <ol class="steps">
       <li>
         <h2>Copy your timetable</h2>
@@ -36,9 +40,9 @@
           <summary>View prompt or copy manually</summary>
           <label class="visually-hidden" for="prompt">Timetable conversion prompt for 2026–27</label>
           <textarea id="prompt" readonly spellcheck="false"></textarea>
-          <a id="download-prompt" href="prompt.txt?v=602abb020431" download="Durham-timetable-prompt-2026-27.txt">Download prompt as text</a>
+          <a id="download-prompt" href="prompt.txt?v=7ef0f7d5b45e" download="Durham-timetable-prompt-2026-27.txt">Download prompt as text</a>
         </details>
-        <noscript><p><a href="prompt.txt?v=602abb020431">Open the prompt</a> and copy its text.</p></noscript>
+        <noscript><p><a href="prompt.txt?v=7ef0f7d5b45e">Open the prompt</a> and copy its text.</p></noscript>
       </li>
       <li>
         <h2>Check and download</h2>
@@ -49,7 +53,7 @@
         <p>In Outlook on the web: <strong>Calendar → Add calendar → Upload from file</strong>. Choose the .ics file and your calendar, import it, then check the events appear correctly.</p>
       </li>
     </ol>
-    <p class="note">Import once to avoid duplicates. This is a one-off copy: later timetable changes won’t update your calendar automatically.</p>
+    <p class="note">Import each calendar file only once to avoid duplicate events.</p>
     <footer>
       <details id="week-dates">
         <summary>Exact dates for each timetable week · 2026–27</summary>
@@ -121,6 +125,6 @@
       </details>
     </footer>
   </main>
-  <script src="app.js?v=602abb020431"></script>
+  <script src="app.js?v=7ef0f7d5b45e"></script>
 </body>
 </html>

@@ -41,6 +41,7 @@ CALENDAR FORMAT
 - Title: teaching type and module name.
 - Location: full building name and original room code.
 - Description: module code, activity identifier, Durham timetable week number and academic year 2026–27.
+- Also include this reminder in each event description: "Imported timetable snapshot. Teaching dates, times and rooms may change. Check the official Durham timetable: https://timetable.dur.ac.uk/staff.htm. This Outlook entry does not update automatically."
 - Use Europe/London time, correctly handling GMT/BST changes across the academic year.
 - Create separate dated events in one valid ICS file with unique event identifiers and correct end times.
 - No attendees, invitations or online meeting links unless I explicitly ask for them.
@@ -48,6 +49,7 @@ CALENDAR FORMAT
 OUTPUT
 Once any year/date ambiguities above are resolved, provide a downloadable ICS file and a readable table of every event's Durham timetable week, date (including year), weekday, start/end time, title and location. State the total event count and list unresolved details. If you cannot provide a downloadable file, give the complete ICS text in one code block.
 Verify every event date against its exact week-and-weekday cell above, and verify that its calendar weekday agrees. Check the event count against all included activity/week combinations. Preserve gaps in week patterns. Do not silently omit activities. Tell me to compare the event list with my Durham report before importing.
+Include a clear warning with the output: the calendar is a one-off snapshot, and I must not assume it will remain correct for the whole academic year. Teaching dates, times and rooms can change. I should keep checking Durham's live timetable, especially before teaching, and amend or remove affected Outlook events myself because imported entries do not update automatically. Import each file only once to avoid duplicates.
 Create the file only. Do not read or modify my Outlook calendar, send invitations or import anything automatically.
 
 MY TIMETABLE AND ANY EXCLUSIONS:
