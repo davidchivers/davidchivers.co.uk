@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time table · David Chivers</title>
+  <meta name="description" content="Turn your Durham teaching timetable into an Outlook calendar using Copilot. A short guide and a copyable prompt for 2026–27.">
+  <link rel="canonical" href="https://davidchivers.co.uk/timetable/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/personal.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main id="main">
+    <a class="home-link" href="/">David Chivers</a>
+    <header>
+      <p class="eyebrow">Durham · 2026–27 · All three terms</p>
+      <h1>Time table</h1>
+      <p class="intro">Put your teaching timetable into Outlook in one go.</p>
+    </header>
+    <ol class="steps">
+      <li>
+        <h2>Copy your timetable</h2>
+        <p>Open the <a href="https://timetable.dur.ac.uk/staff.htm" target="_blank" rel="noopener">Durham staff timetable</a>. Enter your CIS username (your university login code), select your term or weeks, all relevant days and hours, and choose <strong>List</strong> view. Display it and copy the whole report, including the weekday headings.</p>
+      </li>
+      <li>
+        <h2>Ask Copilot</h2>
+        <p>Copy the prompt below and paste it into <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener">Microsoft Copilot</a>, signed in with your Durham account. Paste your timetable underneath. Say if you only teach part of a module.</p>
+        <div class="actions">
+          <button class="button button-primary" id="copy" type="button" disabled>Copy prompt</button>
+          <a class="button" href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener">Open Copilot ↗</a>
+        </div>
+        <p class="copy-status" id="status" role="status">The prompt includes week dates and common building names.</p>
+        <details id="prompt-details">
+          <summary>View prompt or copy manually</summary>
+          <label class="visually-hidden" for="prompt">Timetable conversion prompt for 2026–27</label>
+          <textarea id="prompt" readonly spellcheck="false"></textarea>
+          <a href="prompt.txt" download="Durham-timetable-prompt-2026-27.txt">Download prompt as text</a>
+        </details>
+        <noscript><p><a href="prompt.txt">Open the prompt</a> and copy its text.</p></noscript>
+      </li>
+      <li>
+        <h2>Check and download</h2>
+        <p>Check Copilot’s event list against your timetable, especially the <strong>dates, times and rooms</strong>. Download the calendar file (<strong>.ics</strong>) it creates.</p>
+      </li>
+      <li>
+        <h2>Add it to Outlook</h2>
+        <p>In Outlook on the web: <strong>Calendar → Add calendar → Upload from file</strong>. Choose the .ics file and your calendar, import it, then check the events appear correctly.</p>
+      </li>
+    </ol>
+    <p class="note">Import once to avoid duplicates. This is a one-off copy: later timetable changes won’t update your calendar automatically.</p>
+    <footer>
+      <details>
+        <summary>Dates and room names</summary>
+        <p>For 2026–27, timetable week 12 starts on Monday 5 October 2026. Week numbers continue through the holidays. The prompt uses only each activity’s listed weeks and flags unknown building codes.</p>
+        <p>References: <a href="https://timetable.dur.ac.uk/week_patterns.htm" target="_blank" rel="noopener">Durham week patterns</a> · <a href="https://www.durham.ac.uk/media/durham-university/visit-us/Session-Locations-and-Maps.pdf" target="_blank" rel="noopener">Building names</a></p>
+      </details>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
