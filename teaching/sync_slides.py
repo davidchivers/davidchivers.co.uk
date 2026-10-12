@@ -15,7 +15,10 @@ DECKS = {
     **{f"macro-applications/seminars/seminar_{i}.html": f"macro_seminars_quarto/output/seminar_{i}.html" for i in (1, 2)},
     "political-economy/index.html": "political_economy_quarto/output/index.html",
     **{f"political-economy/lecture_{i}.html": f"political_economy_quarto/output/lecture_{i}.html" for i in range(1, 6)},
-    # Answer handouts deliberately stay local until their release is selected.
+    # Released as unlisted pages on 12 October 2026. Keep these opaque paths
+    # stable so future answer revisions preserve the hidden Blackboard links.
+    "macro-applications/seminars/5ca5efb9377c26c7a6043e1472159f19.html": "macro_seminars_quarto/output/seminar_1_answers.html",
+    "macro-applications/seminars/4f1483980321224743f1f9a8f7d1f393.html": "macro_seminars_quarto/output/seminar_2_answers.html",
     "induction.html": "induction_quarto/output/induction.html",
     "ai-course.html": "ai_workshop/revealjs/output/ai_course.html",
     "macro-applications/index.html": "macro_applications_quarto/output/index.html",
