@@ -116,9 +116,9 @@
     },
     {
       "path": "macro-applications/seminars/seminar_1.html",
-      "bytes": 1200453,
-      "source_sha256": "a01d76cf5196b29347fdb756b13ca4a400fb18d7dfb48693e7639105b2cfae2c",
-      "sha256": "fb96ae540cb55cc6932fe2bc5628f17bc974d2e5ffb6c8e09dc9248d5a1c5502"
+      "bytes": 1201779,
+      "source_sha256": "0a01491e5fdad1045f712dd05d02729fc355f6e978634b6917706a1235757c1f",
+      "sha256": "10de71aa09e6f135298adb9c8138b0b59ed57f3ad3812100c843d0be2933fd1d"
     },
     {
       "path": "macro-applications/seminars/seminar_2.html",
@@ -161,6 +161,24 @@
       "bytes": 4901824,
       "source_sha256": "02acb54c4b4f56d12843ad81a7fbe15a2cb5e4da27428f1d1ed7a5a3ed307787",
       "sha256": "ebe3da8ec151d6282a65c13d1f880607813c0af2e047e97e0ddb2ac86b04ca6b"
+    },
+    {
+      "path": "macro-applications/seminars/readings/model_simulation_vs_econometrics.pdf",
+      "bytes": 362179,
+      "source_sha256": "008b04b73e8dc7b2b5844487a38875e84396bd2e05519e14f17524f8111cff9e",
+      "sha256": "008b04b73e8dc7b2b5844487a38875e84396bd2e05519e14f17524f8111cff9e"
+    },
+    {
+      "path": "macro-applications/seminars/readings/dhingra_2016_policy.pdf",
+      "bytes": 341211,
+      "source_sha256": "9e09bdfa6e3b6cc3890518ee836e4a40f018992914ff35933ba8af47f71deb5a",
+      "sha256": "9e09bdfa6e3b6cc3890518ee836e4a40f018992914ff35933ba8af47f71deb5a"
+    },
+    {
+      "path": "macro-applications/seminars/readings/dhingra_2016_technical.pdf",
+      "bytes": 636718,
+      "source_sha256": "6cdbd19a9fa956ec4570ab61bc481b1d3d054873dad64f9569948becefe01ce4",
+      "sha256": "6cdbd19a9fa956ec4570ab61bc481b1d3d054873dad64f9569948becefe01ce4"
     }
   ]
 }
