@@ -2167,7 +2167,20 @@ vertical-align: -.125em;
 <meta name="robots" content="noindex">
 
 
-<style type="text/css">:root { --bs-body-color:#1f2937; --bs-link-color:#682046; --bs-link-hover-color:#3e1a47; }body { font-family:Aptos,"Segoe UI",Arial,sans-serif; font-size:1.12rem; line-height:1.65; background:#fff; }#quarto-content { padding-top:1.5rem; }main { max-width:58rem; margin:auto; }h1,h2,h3 { color:#3e1a47; }h1 { font-size:2.5rem; line-height:1.16; }h2 { font-size:1.65rem; margin-top:2.2rem; padding-top:.6rem; border-top:3px solid #f4edf2; border-bottom:0; }h3 { font-size:1.18rem; line-height:1.55; margin-top:1.6rem; }.subtitle { font-size:1.7rem; color:#682046; }.university-mark { width:170px; height:52px; overflow:hidden; margin:1rem 0; }.university-mark img { width:170px; max-width:none; height:auto; mix-blend-mode:multiply; }.course-line { color:#51525a; margin-bottom:2rem; }a { text-underline-offset:.18em; }a:focus-visible { outline:3px solid #682046; outline-offset:4px; }.seminar-figure { width:100%; max-height:30rem; object-fit:contain; margin:.75rem auto; }figure { margin:1.4rem 0; }figcaption { font-size:.95rem; color:#51525a; text-align:left; }@media(max-width:600px) { body {font-size:1.05rem;} h1{font-size:2rem;} .subtitle{font-size:1.4rem;} h3{font-size:1.1rem;} }@media print { body{font-size:11pt;} #quarto-margin-sidebar,nav,.anchorjs-link{display:none!important;} main{max-width:none;} h2,h3{break-after:avoid;} figure{break-inside:avoid;} a{color:inherit;} }</style>
+<style type="text/css">:root { --bs-body-color:#1f2937; --bs-link-color:#682046; --bs-link-hover-color:#3e1a47; }body { font-family:Aptos,"Segoe UI",Arial,sans-serif; font-size:1.12rem; line-height:1.65; background:#fff; }#quarto-content { padding-top:1.5rem; }main { max-width:58rem; min-width:0; margin:auto; }
+h1,h2,h3 { color:#3e1a47; }h1 { font-size:2.5rem; line-height:1.16; }h2 { font-size:1.65rem; margin-top:2.2rem; padding-top:.6rem; border-top:3px solid #f4edf2; border-bottom:0; }h3 { font-size:1.18rem; line-height:1.55; margin-top:1.6rem; }.subtitle { font-size:1.7rem; color:#682046; }.university-mark { width:170px; height:52px; overflow:hidden; margin:1rem 0; }.university-mark img { width:170px; max-width:none; height:auto; mix-blend-mode:multiply; }.course-line { color:#51525a; margin-bottom:2rem; }a { text-underline-offset:.18em; }a:focus-visible { outline:3px solid #682046; outline-offset:4px; }.seminar-figure { width:100%; max-height:30rem; object-fit:contain; margin:.75rem auto; }
+.diagram-scroll { width:100%; min-width:0; max-width:100%; overflow-x:auto; }
+.diagram-scroll:focus-visible { outline:3px solid #682046; outline-offset:3px; }
+.diagram-hint { display:none; }
+figure { margin:1.4rem 0; }figcaption { font-size:.95rem; color:#51525a; text-align:left; }@media(max-width:600px) { body {font-size:1.05rem;} h1{font-size:2rem;} .subtitle{font-size:1.4rem;} h3{font-size:1.1rem;} }
+@media(max-width:600px) {
+.diagram-scroll { max-width:calc(100vw - 3.5rem); }
+.diagram-scroll .seminar-figure { width:940px; max-width:none; max-height:none; }
+.diagram-hint { display:block; color:#51525a; font-size:.95rem; margin-top:.2rem; }
+}
+@media print { body{font-size:11pt;} #quarto-margin-sidebar,nav,.anchorjs-link{display:none!important;} main{max-width:none;} h2,h3{break-after:avoid;} figure{break-inside:avoid;} a{color:inherit;} }
+@media print { .diagram-scroll {overflow:visible;} .diagram-scroll .seminar-figure {width:100%;max-width:100%;} .diagram-hint {display:none;} }
+</style>
 </head>
 
 <body class="quarto-light">
@@ -2230,7 +2243,12 @@ vertical-align: -.125em;
 </section>
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<p>First read the notes on model simulation vs. econometrics. Then read Dhingra et al. (2016) policy paper before the technical paper.</p>
+<p>Read these in order. Each PDF opens in a new tab, so you can keep the questions open alongside it.</p>
+<ol type="1">
+<li><a href="readings/model_simulation_vs_econometrics.pdf" target="_blank" rel="noopener">Notes on model simulation vs. econometrics (PDF)</a> — Sara Eugeni’s introductory notes.</li>
+<li><a href="readings/dhingra_2016_policy.pdf" target="_blank" rel="noopener">Dhingra et al. (2016): policy paper (PDF)</a> — <em>The consequences of Brexit for UK trade and living standards</em>.</li>
+<li><a href="readings/dhingra_2016_technical.pdf" target="_blank" rel="noopener">Dhingra et al. (2016): technical paper (PDF)</a> — <em>The Costs and Benefits of Leaving the EU: Trade Effects</em>.</li>
+</ol>
 <section id="a-think-about-the-simple-3x3-model-of-the-customs-union-that-we-saw-in-class.-is-it-important-to-quantify-the-effects-of-changes-in-a-countrys-tariff-and-non-tariff-barriers-to-make-any-policy-evaluation-such-as-for-brexit" class="level3">
 <h3 class="anchored" data-anchor-id="a-think-about-the-simple-3x3-model-of-the-customs-union-that-we-saw-in-class.-is-it-important-to-quantify-the-effects-of-changes-in-a-countrys-tariff-and-non-tariff-barriers-to-make-any-policy-evaluation-such-as-for-brexit">(a) Think about the simple 3x3 model of the customs union that we saw in class. Is it important to quantify the effects of changes in a country’s tariff and non-tariff barriers to make any policy evaluation (such as for Brexit)?</h3>
 </section>
@@ -2246,7 +2264,7 @@ vertical-align: -.125em;
 </section>
 <section id="reading" class="level2">
 <h2 class="anchored" data-anchor-id="reading">Reading</h2>
-<p>Use the <a href="https://durham.rl.talis.com/lists/d85d1ad3-e9ac-4daf-aa66-e3ddfcf902d7.html">ECON2271 Talis reading list</a>, also available through Blackboard.</p>
+<p>The PDFs for Question 2 are linked above. For the wider module reading, use the <a href="https://durham.rl.talis.com/lists/d85d1ad3-e9ac-4daf-aa66-e3ddfcf902d7.html" target="_blank" rel="noopener">ECON2271 Talis reading list</a>, also available through Blackboard (opens in a new tab).</p>
 </section>
 
 </main>

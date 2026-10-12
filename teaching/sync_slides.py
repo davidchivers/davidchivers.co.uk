@@ -27,6 +27,12 @@ DOWNLOADS = {
 }
 
 
+READINGS = {
+    f"macro-applications/seminars/readings/{name}": f"macro_seminars_quarto/output/readings/{name}"
+    for name in ("model_simulation_vs_econometrics.pdf", "dhingra_2016_policy.pdf", "dhingra_2016_technical.pdf")
+}
+
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -56,14 +62,20 @@ def main():
     args = parser.parse_args()
     destination = Path(__file__).resolve().parent
     workspace = args.workspace.resolve() / "teaching"
-    sources = {name: workspace / source for name, source in {**DECKS, **DOWNLOADS}.items()}
+    sources = {name: workspace / source for name, source in {**DECKS, **DOWNLOADS, **READINGS}.items()}
     export_manifest = json.loads((workspace / "macro_applications_quarto/output/downloads/manifest.json").read_text(encoding="utf-8"))
     export_records = {r["path"]: r for r in export_manifest["files"]}
+    reading_sources = {workspace / value for value in READINGS.values()}
     prepared = {}
     for source in sources.values():
         if not source.is_file():
             raise SystemExit(f"Missing rendered presentation: {source}")
         content = source.read_bytes()
+        if source in reading_sources:
+            if not content.startswith(b"%PDF-"):
+                raise SystemExit(f"Invalid reading PDF: {source}")
+            prepared[source] = content
+            continue
         if source.suffix in (".pdf", ".pptx"):
             record = export_records[source.name]
             lecture = workspace / f'macro_applications_quarto/output/lecture_{record["lecture"]}.html'
@@ -91,7 +103,7 @@ def main():
     index = destination / "index.html"
     index.write_bytes(unlisted_html(index.read_bytes()))
     (destination / "manifest.json").write_text(json.dumps({"files": records}, indent=2) + "\n", encoding="utf-8")
-    print(f"Published and verified {len(DECKS)} HTML files with noindex and {len(DOWNLOADS)} current downloads; collection index also unlisted.")
+    print(f"Published and verified {len(DECKS)} HTML files with noindex and {len(DOWNLOADS)} current downloads and {len(READINGS)} reading PDFs; collection index also unlisted.")
 
 
 if __name__ == "__main__":
