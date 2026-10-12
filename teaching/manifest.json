@@ -179,6 +179,18 @@
       "bytes": 636718,
       "source_sha256": "6cdbd19a9fa956ec4570ab61bc481b1d3d054873dad64f9569948becefe01ce4",
       "sha256": "6cdbd19a9fa956ec4570ab61bc481b1d3d054873dad64f9569948becefe01ce4"
+    },
+    {
+      "path": "macro-applications/seminars/5ca5efb9377c26c7a6043e1472159f19.html",
+      "bytes": 1254157,
+      "source_sha256": "5218843e1e4b699220460e6b3f0b43b095871a27425c69fd8363e9aa9eefb446",
+      "sha256": "c87774682e95537957344170604b344cf228ed440ee08ee20f2d3ac92ee62a74"
+    },
+    {
+      "path": "macro-applications/seminars/4f1483980321224743f1f9a8f7d1f393.html",
+      "bytes": 1218560,
+      "source_sha256": "3730c5dfdc32fb8684a0f99300edcf3d72712d86397c2506c0c557e7d15dff75",
+      "sha256": "3f47aa8598985fb8e4552c4f20f2a61a1e36a3cc55ea0a732c651ec992c0d5ec"
     }
   ]
 }

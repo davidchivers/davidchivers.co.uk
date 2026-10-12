@@ -48,7 +48,7 @@ The induction link belongs immediately below **Programme Director Welcome
 Video - Start Here** in **Economics Induction (26/27)** on Durham Blackboard,
 with the visible title **Induction slides**.
 
-The published collection contains twelve current presentations and two seminar question sheets. The separate
+The published collection contains twelve current presentations, two seminar question sheets and two unlisted answer sheets. The separate
 staff slide-creation guide remains at `/slides/` and is not part of this collection.
 Each Macro lecture has a small Download menu available throughout the deck.
 Its stable targets are `macro-applications/downloads/lecture_N.pptx` and
@@ -63,6 +63,6 @@ this public collection. The sync step adds search metadata without altering slid
 
 Political Economy has five HTML lectures at `/teaching/political-economy/lecture_N.html`, with its index at `/teaching/political-economy/`. Editable sources are under `teaching/political_economy_quarto` in the AI workspace. All 120 source slides remain in order.
 
-The two Brexit seminar question sheets are scrolling HTML at `/teaching/macro-applications/seminars/seminar_N.html`, from `teaching/macro_seminars_quarto`. Separate answer files remain local and are deliberately excluded from the sync allow-list. Do not copy a whole output directory or add answer links without the user's release instruction.
+The two Brexit seminar question sheets are scrolling HTML at `/teaching/macro-applications/seminars/seminar_N.html`, from `teaching/macro_seminars_quarto`. On 12 October 2026 the user authorised public, unlisted answer pages with addresses that are difficult to guess. The two answer destinations are fixed opaque filenames in `DECKS` in `sync_slides.py`; preserve these paths on future updates. They carry `noindex` and must stay out of question sheets, collection indexes, website navigation and sitemaps. Their Blackboard entries remain hidden until the user requests release there. The files and their paths are still browsable in the public repository. Copy only explicitly selected outputs.
 
 These seminar question pages are HTML. Seminar 1 links to three original reading PDFs under `macro-applications/seminars/readings/`, opening each in a new tab. The wider module Talis link remains. These are reading papers, not PDF exports of the handout; `READINGS` in the sync script preserves their explicit publication allow-list. Existing Brexit lecture downloads remain unchanged. This is a light-touch source conversion; preserved maths and references have not had an independent full audit.
