@@ -15,8 +15,10 @@ conversion, not a factual update: roles, dates, publication status, teaching
 scores and grant amounts follow that source. Obvious spelling and PDF encoding
 errors were corrected, and the sections were reorganised for browsing.
 
-`cv/DavidChiversCV.pdf` is an exact copy of that source for the download link
-(SHA-256: `00e2b194ba318f43153d0d050fefc0d93e4382e4f5174fa9e37a77cd442ecb7e`).
+`cv/DavidChiversCV.pdf` was copied from that source for the download link.
+On 12 October 2026, the author confirmed 11,000 copies sold for *How to Read
+Numbers* and a £2,000 IAS development grant. Both the HTML CV and its PDF download
+now reflect those two corrections. Other content in the source PDF is unchanged.
 The older root-level PDF is retained for existing links. Future CV updates should
 update the HTML and the downloadable PDF together; they do not sync with Drive.
 
