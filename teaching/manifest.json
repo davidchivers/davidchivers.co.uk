@@ -14,9 +14,9 @@
     },
     {
       "path": "macro-applications/index.html",
-      "bytes": 1898670,
-      "source_sha256": "0758fb5ff190b6cc69beeb3655abf489ed271074fab26ef612d1380cae9e238e",
-      "sha256": "7f7093b245ddd7997f4b212e23b58fb8b7f4c7f512197818695c3e7a5ed5d3c7"
+      "bytes": 1899139,
+      "source_sha256": "4a8f6e7fcd07b5a8ec1b5b4b11d42892edacd074f6ee456cc44c6d0181c4c2c4",
+      "sha256": "2f6efe30c668a923882cba6403713d61cf9215ea7e2fb0de2b5a23702ca4e7c6"
     },
     {
       "path": "macro-applications/lecture_1.html",
@@ -110,9 +110,9 @@
     },
     {
       "path": "macro-applications/seminars/index.html",
-      "bytes": 1189677,
-      "source_sha256": "d50c7625863918b9b7ef762668e23b8b8491fb9326019daeae1b916aa47a48b3",
-      "sha256": "b82828a0253a9186715b8b0de16f5ee1e12e0d89d8ad5acf6710020ae35271e0"
+      "bytes": 1191159,
+      "source_sha256": "44d6250d2816c6dfa2b96a260118e2bbb53b17d2859c059f4bca669894438a1e",
+      "sha256": "79ee0f0b9b5307aa4c83692242039b7db2bd2f9066c8b70a6916630e171afd74"
     },
     {
       "path": "macro-applications/seminars/seminar_1.html",
@@ -128,9 +128,9 @@
     },
     {
       "path": "political-economy/index.html",
-      "bytes": 1189904,
-      "source_sha256": "8483dc4623a7f3be7ca3671f3c44f9da45c376376f22e498afda74a010f09943",
-      "sha256": "2eec08c774b1e487633408af0f1d62ebb859c8f2630c6c26d18b10d030e0045d"
+      "bytes": 1190520,
+      "source_sha256": "0567c0361388d7c0b1a8d0a56cf618b6923ab3bdb31e68f0f970ef641435f147",
+      "sha256": "52255f9fdf7db2f738eaae876cd80964832b4b6f6687925ff97b3723fe8c98a2"
     },
     {
       "path": "political-economy/lecture_1.html",
@@ -197,6 +197,30 @@
       "bytes": 1196846,
       "source_sha256": "828c7a9b4567835f87619ffb9b515d039cb8dacb36ff37af330d714d759d623d",
       "sha256": "828c7a9b4567835f87619ffb9b515d039cb8dacb36ff37af330d714d759d623d"
+    },
+    {
+      "path": "political-economy/seminars/seminar_1.html",
+      "bytes": 1087,
+      "source_sha256": "d6207d391a6d2f077b5e5e46d7f0d7ba0f61b7f862d3c0cb784606231779faf0",
+      "sha256": "d6207d391a6d2f077b5e5e46d7f0d7ba0f61b7f862d3c0cb784606231779faf0"
+    },
+    {
+      "path": "political-economy/seminars/seminar_2.html",
+      "bytes": 1087,
+      "source_sha256": "9879dccf1adc935386d56b3083590f23272a46fbe1a47203d357d5ede18dc706",
+      "sha256": "9879dccf1adc935386d56b3083590f23272a46fbe1a47203d357d5ede18dc706"
+    },
+    {
+      "path": "political-economy/seminars/6cf249b800cb4be993e7ee999334427b.html",
+      "bytes": 1081,
+      "source_sha256": "b06e11f62ca9daa21cecc0e11fda1b0aa04288e2a37a3d672528efbe823cfbb7",
+      "sha256": "b06e11f62ca9daa21cecc0e11fda1b0aa04288e2a37a3d672528efbe823cfbb7"
+    },
+    {
+      "path": "political-economy/seminars/5efa2ccc0e8c4bcdb12e7e0d97159e90.html",
+      "bytes": 1081,
+      "source_sha256": "4aea17602cceecfedf2790e464ae90622cbd48be2335b05d0c5ee3c0f2ddc2aa",
+      "sha256": "4aea17602cceecfedf2790e464ae90622cbd48be2335b05d0c5ee3c0f2ddc2aa"
     }
   ]
 }

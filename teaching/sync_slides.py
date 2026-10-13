@@ -15,6 +15,12 @@ DECKS = {
     **{f"macro-applications/seminars/seminar_{i}.html": f"macro_seminars_quarto/output/seminar_{i}.html" for i in (1, 2)},
     "political-economy/index.html": "political_economy_quarto/output/index.html",
     **{f"political-economy/lecture_{i}.html": f"political_economy_quarto/output/lecture_{i}.html" for i in range(1, 6)},
+    # Only placeholders are released for Political Economy seminars. Keep the
+    # local seminar drafts and tutor notes unpublished until explicitly approved.
+    "political-economy/seminars/seminar_1.html": "political_economy_seminars_quarto/publication_placeholders/seminar_1.html",
+    "political-economy/seminars/seminar_2.html": "political_economy_seminars_quarto/publication_placeholders/seminar_2.html",
+    "political-economy/seminars/6cf249b800cb4be993e7ee999334427b.html": "political_economy_seminars_quarto/publication_placeholders/seminar_1_answers.html",
+    "political-economy/seminars/5efa2ccc0e8c4bcdb12e7e0d97159e90.html": "political_economy_seminars_quarto/publication_placeholders/seminar_2_answers.html",
     # Released as unlisted pages on 12 October 2026. Keep these opaque paths
     # stable so future answer revisions preserve the hidden Blackboard links.
     "macro-applications/seminars/5ca5efb9377c26c7a6043e1472159f19.html": "macro_seminars_quarto/output/seminar_1_answers.html",
