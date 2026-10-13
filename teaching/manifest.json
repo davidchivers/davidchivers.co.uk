@@ -116,9 +116,9 @@
     },
     {
       "path": "macro-applications/seminars/seminar_1.html",
-      "bytes": 1201779,
-      "source_sha256": "0a01491e5fdad1045f712dd05d02729fc355f6e978634b6917706a1235757c1f",
-      "sha256": "10de71aa09e6f135298adb9c8138b0b59ed57f3ad3812100c843d0be2933fd1d"
+      "bytes": 1213716,
+      "source_sha256": "1719c4c327b595903c9243e88ec7fd81f77e3dd48b1dfc2b05a2c4873838f49b",
+      "sha256": "8832b2d874a5a7e1a155dbfce31c5d914d7c54d820b216fac4887925f94cc326"
     },
     {
       "path": "macro-applications/seminars/seminar_2.html",
@@ -182,9 +182,9 @@
     },
     {
       "path": "macro-applications/seminars/5ca5efb9377c26c7a6043e1472159f19.html",
-      "bytes": 1254157,
-      "source_sha256": "5218843e1e4b699220460e6b3f0b43b095871a27425c69fd8363e9aa9eefb446",
-      "sha256": "c87774682e95537957344170604b344cf228ed440ee08ee20f2d3ac92ee62a74"
+      "bytes": 1254144,
+      "source_sha256": "628b2de109c717f13fa590b6d255e482c1b38ced7664c6e9eae4848c66f19546",
+      "sha256": "616873806b3c4701e3e1368cc12ff0d7f68830093b29a0feb9a8f7d361ee1338"
     },
     {
       "path": "macro-applications/seminars/4f1483980321224743f1f9a8f7d1f393.html",
