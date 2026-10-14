@@ -51,10 +51,22 @@ with the visible title **Induction slides**.
 The published collection contains twelve current presentations, two seminar question sheets and two unlisted answer sheets. The separate
 staff slide-creation guide remains at `/slides/` and is not part of this collection.
 Each Macro lecture has a small Download menu available throughout the deck.
-Its stable targets are `macro-applications/downloads/lecture_N.pptx` and
-`macro-applications/downloads/lecture_N.pdf`. Both preserve the current slide
+Its stable download targets are
+`https://github.com/davidchivers/davidchivers.co.uk/releases/download/macro-lecture-downloads/lecture_N.pptx`
+and the equivalent `.pdf` address. GitHub serves these as attachments, avoiding
+the extra Office preview seen with the ordinary website file links. The
+`lecture-downloads.yml` workflow automatically updates them when new exports are
+published, using `teaching/publish_download_assets.py` to verify checksums before
+and after upload. Keep the release tag and filenames unchanged. These links are
+public and require no student GitHub account. A previously downloaded copy does
+not change; students download again to obtain the current version. Existing
+`macro-applications/downloads/lecture_N.pptx` and `.pdf` URLs remain available.
+Both preserve the current slide
 appearance as static artwork. PowerPoint users can add notes; the editable
 master and interactive version remain the Quarto source and HTML respectively.
+Check the **Publish lecture downloads** workflow as well as Pages after each
+update. On 14 October 2026 the release PowerPoint link saved a matching local
+file directly in desktop Edge; the native Blackboard app remains untested.
 Earlier source
 PowerPoints, development previews, QA files and build folders remain outside
 this public collection. The sync step adds search metadata without altering slide content. Keep existing Blackboard URLs unchanged when replacing a deck.
