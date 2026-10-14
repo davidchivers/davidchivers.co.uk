@@ -2895,15 +2895,13 @@ window.QuartoSupport = function () {
     (() => {
       const match = location.pathname.match(/lecture_([1-5])\.html$/);
       if (!match) return;
-      const base = location.protocol === 'file:'
-        ? 'https://davidchivers.co.uk/teaching/macro-applications/'
-        : new URL('.', location.href).href;
+      const base = 'https://github.com/davidchivers/davidchivers.co.uk/releases/download/macro-lecture-downloads/';
       const menu = document.createElement('details');
       menu.className = 'lecture-downloads';
       menu.innerHTML = '<summary aria-label="Download this lecture">Download</summary><div class="lecture-download-options"><a data-format="pptx">PowerPoint (.pptx)</a><a data-format="pdf">PDF (.pdf)</a></div>';
       menu.querySelectorAll('a').forEach(link => {
         const filename = `lecture_${match[1]}.${link.dataset.format}`;
-        link.href = `${base}downloads/${filename}`;
+        link.href = `${base}${filename}`;
         link.download = filename;
       });
       menu.addEventListener('keydown', event => {
