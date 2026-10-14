@@ -1,0 +1,73 @@
+# Making slides with AI: example notes
+
+These are invented teaching examples, not empirical findings. Use them to practise
+making time-series and distribution charts, a worked calculation and a revealable
+answer. Use your own visual design; the example uses cream, teal and orange.
+
+## 1. Compare spending over time
+
+Use invented monthly household spending, in pounds, for one illustrative household:
+
+| Year | Food (£/month) | Energy (£/month) |
+| --- | ---: | ---: |
+| 2020 | 240 | 80 |
+| 2021 | 252 | 84 |
+| 2022 | 264 | 96 |
+| 2023 | 288 | 112 |
+| 2024 | 300 | 120 |
+
+Plot both series as lines with markers, direct labels and distinct line styles.
+Let the reader switch between pounds and percentage growth since 2020.
+Percentage growth = 100 * (current value / 2020 value - 1).
+
+- Food growth: 0%, 5%, 10%, 20%, 25%.
+- Energy growth: 0%, 5%, 20%, 40%, 50%.
+- Food has the larger cash increase: £300 - £240 = £60, versus £120 - £80 = £40.
+- Energy has the larger percentage increase: 50%, versus 25%.
+
+Label the units and update the vertical scale when switching views: £0–£400 in
+pounds, 0–60% for growth. Both growth series start at zero percent. Keep the years
+and data unchanged. Show the complete pounds view initially. Use a short,
+user-triggered transition with an instant alternative for reduced motion.
+These figures are invented spending, not inflation estimates or observed data.
+
+## 2. Reveal what the average hides
+
+Use two groups of ten invented scores, measured out of 100:
+
+- Group A: 40, 42, 44, 46, 48, 52, 54, 56, 58, 60.
+- Group B: 5, 10, 15, 20, 25, 75, 80, 85, 90, 95.
+
+Both sum to 500 and average 50. Group A ranges from 40 to 60; B from 5 to 95.
+These are synthetic examples, not student records. Give each group one row of dots
+on the same 0–100 axis. Let a button collapse the dots to the mean, then reveal the
+individual scores. Keep the axes fixed; start with the complete distributions.
+
+## 3. Show the calculation
+
+Treat the ten scores as the complete population of each illustrative group.
+Mean mu = 500/10 = 50. Define x_i as score i and sigma as population standard deviation.
+Population variance is sigma^2 = (1/10)*sum((x_i - 50)^2).
+
+- Group A: sum of squared deviations=440; variance=44; standard deviation=sqrt(44)=6.63324958.
+- Group B: sum of squared deviations=12750; variance=1275; standard deviation=sqrt(1275)=35.70714214.
+
+Round the standard deviations to 6.63 and 35.71 score points. The mean is the same,
+but the spread differs. If estimating variance from a sample instead, the usual
+unbiased estimator divides by n-1; that is not the quantity illustrated here.
+
+## 4. Predict before revealing
+
+Start with 2, 3, 4, 5, 6. Replace 6 with 46.
+Before: total=20, mean=4, median=4.
+After: total=60, mean=12, median=4.
+The mean responds to the size of the extreme value; the median is still the middle
+ordered value. These are invented data for a small revealable question.
+
+## Checks
+
+Check the spending values, percentage-growth calculations and labelled axes;
+both score means and variances; the mean/median calculation; keyboard controls;
+and transitions that stop when leaving a slide. Keep useful static and
+reduced-motion views. The prepared HTML is an example, not proof that a student's
+assistant generated it correctly. Inspect the output and explain any changes.
