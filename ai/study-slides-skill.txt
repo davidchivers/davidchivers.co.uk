@@ -1,0 +1,35 @@
+---
+name: study-slides
+description: Make or revise a short, unbranded HTML study presentation from notes or an idea, preserving the supplied subject matter and checking the result.
+---
+
+# Study slides
+
+Use the learner's notes, topic and intended audience. An existing presentation
+is not required. Ask about a missing choice only when it affects the result.
+
+- Default to one self-contained HTML file in `outputs/`, with its CSS and any
+  navigation script included. It should open directly in a browser without
+  installing anything. Use an original design without institutional logos or branding.
+  Do not copy the lecturer's Durham template or course examples. The supplied
+  student showcase uses its own cream, teal and orange style.
+- Keep one clear point per slide and enough explanation for revision. Use
+  readable type, semantic headings, visible keyboard focus, meaningful figure
+  descriptions and simple controls. When requested, use sliders, animated
+  diagrams or staged explanations to explain the supplied topic. Keep a
+  useful static version, keyboard controls and reduced-motion support. Avoid
+  autoplay; test the controls and the relationships they display.
+- Preserve assumptions, qualifications and source references. Check arithmetic
+  and define symbols. Do not invent evidence or citations. Identify gaps in the
+  notes; label any illustrative example you add.
+- Keep the editable file. Inspect the actual result for crowded text, missing
+  content and working navigation. Say which checks could not be run.
+- For revisions, edit the source and recheck the changed slides. If Quarto is
+  specifically requested, use a plain Reveal.js theme and save the `.qmd` too.
+  Check that Quarto is available before promising a rendered presentation;
+  otherwise explain the setup needed and offer standalone HTML.
+
+For the course example, `notes/slide-examples.md` supplies the spending series,
+synthetic score distributions, calculations and checked values. `reference/study-slides.html` is a prepared
+interactive showcase, not the student's generated output. Use it for inspiration;
+choose only features that help the explanation and match the learner's request.
