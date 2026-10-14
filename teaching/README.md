@@ -50,10 +50,10 @@ with the visible title **Induction slides**.
 
 The published collection contains twelve current presentations, two seminar question sheets and two unlisted answer sheets. The separate
 staff slide-creation guide remains at `/slides/` and is not part of this collection.
-Each Macro lecture has a small Download menu available throughout the deck.
-Its stable download targets are
+Each Macro lecture has one **Download PowerPoint** link throughout the deck,
+with no format menu or PDF option. Its stable download target is
 `https://github.com/davidchivers/davidchivers.co.uk/releases/download/macro-lecture-downloads/lecture_N.pptx`
-and the equivalent `.pdf` address. GitHub serves these as attachments, avoiding
+for the corresponding lecture. GitHub serves these as attachments, avoiding
 the extra Office preview seen with the ordinary website file links. The
 `lecture-downloads.yml` workflow automatically updates them when new exports are
 published, using `teaching/publish_download_assets.py` to verify checksums before
