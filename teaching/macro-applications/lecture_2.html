@@ -5573,7 +5573,8 @@ window.QuartoSupport = function () {
       const link = document.createElement('a');
       const filename = `lecture_${match[1]}.pptx`;
       link.className = 'lecture-downloads';
-      link.textContent = 'Download PowerPoint';
+      link.textContent = 'Download';
+      link.setAttribute('aria-label', 'Download PowerPoint');
       link.href = `${base}${filename}`;
       link.download = filename;
       document.body.append(link);
