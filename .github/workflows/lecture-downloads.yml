@@ -1,0 +1,30 @@
+name: Publish lecture downloads
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'teaching/macro-applications/downloads/lecture_*.pptx'
+      - 'teaching/macro-applications/downloads/lecture_*.pdf'
+      - 'teaching/manifest.json'
+      - 'teaching/publish_download_assets.py'
+      - '.github/workflows/lecture-downloads.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lecture-downloads
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'davidchivers/davidchivers.co.uk'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish and verify current PDF and PowerPoint downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 teaching/publish_download_assets.py
