@@ -24,10 +24,7 @@
       link.classList.toggle('is-done', done);
       link.setAttribute('aria-label', `${done ? 'Checked: ' : ''}${link.textContent.trim()}`);
     });
-    document.getElementById('ready-title').textContent = completed.length === checks.length ? 'Setup complete.' : 'Your setup';
-    document.getElementById('readyMessage').textContent = completed.length === checks.length
-      ? 'Copilot is connected and you have checked its first file. Open a project folder whenever you want to start another task.'
-      : 'Work through the six checks to connect Copilot and try your first task.';
+    document.querySelector('.ready-panel').hidden = completed.length !== checks.length;
     if (save && canSave) {
       try { localStorage.setItem(storageKey, JSON.stringify(completed)); }
       catch (_) {
