@@ -1,0 +1,128 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Incoming and outgoing exposure</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup { display: none; } th:first-child, td:first-child { min-width: 90px; } .notice { border-left: 4px solid #00686c; padding: 10px 18px; background: #f1f7f6; }
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Incoming and outgoing exposure</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>Review date: 19 October 2026. Status: completed literature assessment; no new empirical analysis. This supplies recommendation implications without changing the main plan. Source IDs and search records are in <code>output/literature_review_20261019/mobility_sources.json</code>.</p>
+<h2 id="question-and-novelty-collision">Question and novelty collision</h2>
+<p>Do residents encounter different venue diversity from the diversity offered by establishments in their own neighbourhood? The question is useful, but the bare matched comparison is already in the literature. Its remaining value depends on explaining local asymmetries, not discovering that incoming and outgoing measures can differ. National flow-weighted directional means cannot constitute two independent findings when they use the same flows and venue measure.</p>
+<p><strong>S12, Renninger, O’Clery and Arcaute (2025).</strong> Published 12 December in Nature Cities, this paper uses 2019-2022 monthly SafeGraph CBG-to-POI flows. Amenity segregation is normalized absolute deviation from equal metropolitan income-quintile shares; resident isolation trip-weights amenity segregation. A matched neighbourhood 3-by-3 classification crosses the two. Main HTML and selected supplement notes were inspected, including amenity counts, income sensitivity and a commuting benchmark. POI-to-neighbourhood aggregation weights remain unresolved. Primary analysis is income; nonwhite-share robustness does not observe individual race. <a href="https://www.nature.com/articles/s44284-025-00350-7">Publisher</a>, <a href="https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs44284-025-00350-7/MediaObjects/44284_2025_350_MOESM1_ESM.pdf">supplement</a>.</p>
+<p>This is a direct collision, not just a related introduction. Uncertainty about its aggregation weight prevents asserting identical estimators, but does not rescue the claim that matching local amenities and residents’ destinations is new. Our use of fractionalization, service categories or another period would require an additional substantive contribution.</p>
+<h2 id="earlier-directional-and-network-predecessors">Earlier directional and network predecessors</h2>
+<p><strong>S04, Phillips and colleagues (2019/2021).</strong> First online in 2019 and issued in 2021, this article constructs equitable and concentrated mobility indices for connectedness across neighbourhoods using geolocated Twitter activity. It separates broad interconnection from concentration on shared destinations. Primary abstract and metadata were inspected, not the complete estimation details. <a href="https://journals.sagepub.com/doi/10.1177/0049124119852386">Publisher</a>.</p>
+<p><strong>S05, Candipan and colleagues (2021).</strong> Its segregated mobility index measures racial patterning in neighbourhood connections. This is everyday Twitter mobility, not a commuting-only study, and neighbourhood racial composition is not observed traveller race. Primary abstract, metadata and references were inspected. <a href="https://journals.sagepub.com/doi/10.1177/0042098020978965">Publisher</a>.</p>
+<p><strong>S06, Levy, Phillips and Sampson (2020).</strong> Triple Disadvantage distinguishes residential, incoming-visitor and outgoing-destination disadvantage in neighbourhood networks and relates them to violence. Thus directional socioeconomic context predates this proposal. Abstract and indexed conclusions were inspected; detailed model specifications remain unchecked. <a href="https://journals.sagepub.com/doi/10.1177/0003122420972323">Publisher</a>.</p>
+<p><strong>S07, Levy and colleagues (2022).</strong> Residential and mobility-linked disadvantage predict cumulative COVID-19 infections in three settings, using neighbourhood mobility connections. This provides another incoming/outgoing application, not identification of interpersonal transmission or venue mixing. Inspection was limited to the primary abstract and metadata. <a href="https://pubmed.ncbi.nlm.nih.gov/35179963/">Primary record</a>.</p>
+<p><strong>S11, Nie and colleagues (2025).</strong> The verified version is arXiv v1, submitted 23 August, not a verified journal publication. NYC tract flows for January 2019-April 2021 generate racial mixing matrices and gravity benchmarks. Majority-group classification excludes mixed tracts. Directional exposure is explicit; a residual labelled preferential segregation need not identify tastes. HTML data, network methods, results and an appendix were inspected. <a href="https://arxiv.org/abs/2508.17072">Version record</a>, <a href="https://arxiv.org/html/2508.17072v1">v1 text</a>.</p>
+<p><strong>S20, Chen, Chuang and Poorthuis (2021).</strong> Singapore Twitter flows are described through incoming/outgoing distance, geographic diversity and direction. This is not necessarily demographic diversity of venue patrons. Primary abstract and author publication metadata were inspected, not full methods. <a href="https://www.sciencedirect.com/science/article/pii/S0198971521001150">Publisher</a>, <a href="https://qingqingchen.info/blog/2021/08/25/entangled-footprints">author record</a>.</p>
+<p>Together these sources rule out a general claim to introduce directional neighbourhood analysis. None by itself establishes that our proposed service-standardized local contrast has already been executed exactly. That narrower uncertainty is an open check, not evidence of novelty.</p>
+<h2 id="the-estimand-and-its-accounting-constraint">The estimand and its accounting constraint</h2>
+<p>Let <code>v_oj</code> be approved, consistently defined origin-to-venue flow, <code>D_j</code> venue diversity, <code>O_o=sum_j v_oj</code> outgoing volume, and <code>I_j=sum_o v_oj</code> incoming volume. For a common neighbourhood partition define:</p>
+<pre><code>R_o = sum_j v_oj D_j / O_o
+I_a = sum_{j in a} I_j
+V_a = sum_{j in a} I_j D_j / I_a</code></pre>
+<p><code>R_o</code> is residents’ exposure to venue diversity; <code>V_a</code> is incoming-flow-weighted diversity of local venues. It is not the diversity of all local visitors pooled together. The latter applies a nonlinear diversity function after aggregation and is another estimand.</p>
+<p>As established in the methodological integration, identical support and <code>D_j</code> imply:</p>
+<pre><code>sum_o O_o R_o = sum_a I_a V_a = sum_oj v_oj D_j</code></pre>
+<p>Total incoming and outgoing volume also match. Consequently, their respective flow-weighted national means must match. A discrepancy diagnoses support, missing origins, boundary handling or inconsistent weights. Equal-neighbourhood or population-weighted means can differ, but answer different distributional questions. Local <code>R_o-V_o</code> can be substantive; it is not a new independent national mean. The full derivation belongs in the methodological integration rather than being presented as this review’s contribution.</p>
+<p>A focal-origin leave-out score becomes <code>D_oj</code>, not <code>D_j</code>. Comparing leave-out outgoing exposure with ordinary incoming diversity breaks this simple identity. Both sides must use the same revised contributions or the failure must be explicitly expected. Similarly, summing monthly unique visitors does not produce unique annual people. Frequency expansion, visits and devices cannot be interchanged without changing the population represented.</p>
+<h2 id="a-stronger-remaining-question">A stronger remaining question</h2>
+<p>The promising version asks whether apparent local asymmetry reflects service roles or differing composition within comparable services. A residential district may export restaurant visits while importing employment-related activity. An unadjusted gap conflates those roles. An explanation based on a changed category mix is economically different from one based on unequal access to establishments providing the same service.</p>
+<p>On a separately renormalized common category support with exposure defined on both sides, write outgoing weights as <code>s_c</code>, incoming weights as <code>t_c</code>, and corresponding exposures as <code>R_c,V_c</code>. Both sets of weights sum to one; <code>R,V</code> below refer to that support. A symmetric accounting decomposition is:</p>
+<pre><code>R - V = sum_c ((s_c+t_c)/2)*(R_c-V_c)
+      + sum_c ((R_c+V_c)/2)*(s_c-t_c)</code></pre>
+<p>The first term compares exposure within services; the second captures service composition. This identity is a diagnostic, not a newly identified mechanism. A zero-flow category has undefined exposure, not zero diversity. Missing categories require a declared common-support comparison and a separate account of excluded mass, not automatic imputation.</p>
+<p>The remaining paper-level claim would need a coherent reason for the standardized local gap: for example, an independently measured mismatch between resident needs and locally supplied services. It must survive boundary changes and plausible weighting choices. A nine-cell map, colour-coded typology or new label for high-low neighbourhoods would not clear the collision with S12.</p>
+<h2 id="data-and-identification-limits">Data and identification limits</h2>
+<p>The current aggregate outputs cannot reconstruct <code>R_o</code>. Annual origin flows are not authorized for inspection in this review. Future requirements include destination membership, common origin geography, category-level flows and retained origins outside the focal area. Incoming activity from excluded origins cannot simply disappear while outgoing activity remains national. Low-resident commercial districts need special denominator reporting, not removal because their gaps look unusual.</p>
+<p>Our home-area demographics cannot identify within-CBG selection, repeated individuals or synchronized encounters. Resident groups can visit different venues even when the annual CBG average looks mixed. Conversely, an apparent low-diversity venue can serve different demographic groups at different times. Neither direction establishes preferences, interactions or attitude change. The aggregation distinction in S02, digested in <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/residential-benchmarks.html">idea 1</a>, further warns against equating average venue diversity with diversity of a resident’s pooled activity space.</p>
+<h2 id="feasibility-and-recommendation">Feasibility and recommendation</h2>
+<p>A minimal future pilot should first verify accounting closure on a declared geography and period, before examining which neighbourhoods have positive gaps. Publish denominator coverage, unsupported categories and an explicit outside-area bucket. Preselect service standardization and boundary sensitivity. Require sign and magnitude stability without tuning categories to obtain the desired narrative. No such pilot was run here.</p>
+<p>Proceed only if that exercise can answer an economically motivated question beyond the existing matched classification. Otherwise fold the directional comparison into a measurement or access paper. The appropriate ranking implication is a substantial standalone-novelty downgrade, not a claim that the underlying descriptive object is useless. Main integration retains responsibility for the actual rank.</p>
+<h2 id="search-and-access-audit">Search and access audit</h2>
+<p>Searches on 19 October 2026 explicitly combined incoming, outgoing, matched, neighbourhood, diversity and segregation; named-author and exact-title searches traced backward predecessors and 2024-2026 follow-ups. Primary reference lists supplemented web discovery. No complete cited-by census was available, so failure to find an exact service-standardized estimator is not proof it is absent. The inventory distinguishes publisher full text, selected supplement inspection, abstract-only records and the arXiv version. No data acquisition or empirical reanalysis occurred.</p>
+</main><footer>Reviewed documentation snapshot. No new licensed-data analysis, empirical replication or adopted research protocol is implied. Earlier results and failed gates remain in force.</footer></body></html>

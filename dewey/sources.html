@@ -40,7 +40,7 @@ footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; 
   a { color: inherit; }
 }
 
-colgroup { display: none; } th:first-child, td:first-child { min-width: 120px; } .notice { border-left: 4px solid #00686c; padding: 10px 18px; background: #f1f7f6; }
+colgroup { display: none; } th:first-child, td:first-child { min-width: 90px; } .notice { border-left: 4px solid #00686c; padding: 10px 18px; background: #f1f7f6; }
 </style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
 :root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
 html, body, header, main, footer { background: var(--page); color: var(--ink); }
@@ -54,6 +54,13 @@ nav, footer, th, td { border-color: var(--line); }
 tr:nth-child(even) td { background: var(--row); }
 pre { background: var(--code); border-color: var(--link); }
 .subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
 .theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
 .theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
 .theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
@@ -80,7 +87,7 @@ pre { background: var(--code); border-color: var(--link); }
     });
   });
 }());
-</script></head><body><header><h1>Dewey: source library and reading status</h1><p class="subtitle">19 October 2026 | Research assessment | Evidence and proposals are distinguished</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Research plan and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/plan.html">Earlier plan and results</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><h2 id="source-library">Source library</h2>
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Dewey: source library and reading status</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><h2 id="source-library">Source library</h2>
 <p>Access labels describe what was actually inspected, not a claim that every paper was read in full. This is a focused critical review, not an exhaustive systematic review.</p>
 <h3 id="understanding-the-bias-of-mobile-location-data-across-spatial-scales-and-over-time-a-comprehensive-analysis-of-safegraph-data-in-the-united-states">Understanding the bias of mobile location data across spatial scales and over time: A comprehensive analysis of SafeGraph data in the United States</h3>
 <p>Zhenlong Li, Huan Ning, Fengrui Jing, M. Naser Lessani (2024). published, PLOS ONE.</p>
@@ -114,4 +121,172 @@ pre { background: var(--code); border-color: var(--link); }
 <p>Raj Chetty et al. (2022). published, Nature.</p>
 <p><a href="https://www.nature.com/articles/s41586-022-04997-3">Primary source</a>. <strong>Read:</strong> selected full HTML sections.</p>
 <p><strong>Limits:</strong> No replication; friendship-setting evidence is not venue-visit evidence.</p>
+<h3 id="estimating-experienced-racial-segregation-in-us-cities-using-large-scale-gps-data">Estimating experienced racial segregation in US cities using large-scale GPS data</h3>
+<p>Susan Athey, Billy Ferguson, Matthew Gentzkow, Tobias Schmidt (2021). Published, PNAS 118(46), e2026160118; online November 2021.</p>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8609621/">Primary source</a>. <strong>Read:</strong> public main text selected sections.</p>
+<p><strong>Limits:</strong> Area-based racial proxy; supplement not audited..</p>
+<h3 id="mobility-patterns-are-associated-with-experienced-income-segregation-in-large-us-cities">Mobility patterns are associated with experienced income segregation in large US cities</h3>
+<p>Esteban Moro, Dan Calacci, Xiaowen Dong, Alex Pentland (2021). Published 2021-07-30, Nature Communications 12, 4633.</p>
+<p><a href="https://www.nature.com/articles/s41467-021-24899-8">Primary source</a>. <strong>Read:</strong> publisher html full main text selected methods.</p>
+<p><strong>Limits:</strong> Observational associations, not identified tastes..</p>
+<h3 id="urban-mobility-and-neighborhood-isolation-in-americas-50-largest-cities">Urban mobility and neighborhood isolation in America’s 50 largest cities</h3>
+<p>Qi Wang, Nolan Edward Phillips, Mario L. Small, Robert J. Sampson (2018). Published, PNAS 115(30), 7735-7740; online 2018-07-09.</p>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/29987019/">Primary source</a>. <strong>Read:</strong> primary abstract first page and indexed results.</p>
+<p><strong>Limits:</strong> Complete methods and supplement not inspected..</p>
+<h3 id="the-social-integration-of-american-cities-network-measures-of-connectedness-based-on-everyday-mobility-across-neighborhoods">The Social Integration of American Cities: Network Measures of Connectedness Based on Everyday Mobility Across Neighborhoods</h3>
+<p>Nolan E. Phillips, Brian L. Levy, Robert J. Sampson, Mario L. Small, Ryan Q. Wang (2021). First online 2019-07-17; Sociological Methods &amp; Research 50(3), 1110-1149 (2021).</p>
+<p><a href="https://journals.sagepub.com/doi/10.1177/0049124119852386">Primary source</a>. <strong>Read:</strong> primary abstract metadata.</p>
+<p><strong>Limits:</strong> Full construction and robustness details unchecked..</p>
+<h3 id="from-residence-to-movement-the-nature-of-racial-segregation-in-everyday-urban-mobility">From residence to movement: The nature of racial segregation in everyday urban mobility</h3>
+<p>Jennifer Candipan, Nolan Edward Phillips, Robert J. Sampson, Mario Small (2021). Online 2021-02-10; Urban Studies 58(15), 3095-3117.</p>
+<p><a href="https://journals.sagepub.com/doi/10.1177/0042098020978965">Primary source</a>. <strong>Read:</strong> primary abstract metadata references.</p>
+<p><strong>Limits:</strong> Full methods inaccessible in this inspection..</p>
+<h3 id="triple-disadvantage-neighborhood-networks-of-everyday-urban-mobility-and-violence-in-u.s.-cities">Triple Disadvantage: Neighborhood Networks of Everyday Urban Mobility and Violence in U.S. Cities</h3>
+<p>Brian L. Levy, Nolan E. Phillips, Robert J. Sampson (2020). Published online 2020-11-30; American Sociological Review 85(6), 925-956.</p>
+<p><a href="https://journals.sagepub.com/doi/10.1177/0003122420972323">Primary source</a>. <strong>Read:</strong> primary abstract indexed conclusions author record.</p>
+<p><strong>Limits:</strong> Exact regression specifications not verified..</p>
+<h3 id="neighborhood-socioeconomic-inequality-based-on-everyday-mobility-predicts-covid-19-infection-in-san-francisco-seattle-and-wisconsin">Neighborhood socioeconomic inequality based on everyday mobility predicts COVID-19 infection in San Francisco, Seattle, and Wisconsin</h3>
+<p>Brian L. Levy, Karl Vachuska, S. V. Subramanian, Robert J. Sampson (2022). Published 2022-02-18, Science Advances 8(7), eabl3825.</p>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/35179963/">Primary source</a>. <strong>Read:</strong> primary abstract metadata.</p>
+<p><strong>Limits:</strong> Detailed flow normalization and models unchecked..</p>
+<h3 id="human-mobility-networks-reveal-increased-segregation-in-large-cities">Human mobility networks reveal increased segregation in large cities</h3>
+<p>Hamed Nilforoshan, Wenli Looi, Emma Pierson, Blanca Villanueva, Nic Fishman, Yiling Chen, John Sholar, Beth Redbird, David Grusky, Jure Leskovec (2023). Published 2023-11-29, Nature 624, 586-592.</p>
+<p><a href="https://www.nature.com/articles/s41586-023-06757-3">Primary source</a>. <strong>Read:</strong> publisher html main text and selected methods.</p>
+<p><strong>Limits:</strong> Not an exogenous establishment-entry design..</p>
+<h3 id="rubbing-shoulders-class-segregation-in-daily-activities">Rubbing shoulders: Class segregation in daily activities</h3>
+<p>Maxim Massenkoff, Nathan Wilmers (2025). Published April 2025, Journal of Public Economics 244, 105335.</p>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0047272725000337">Primary source</a>. <strong>Read:</strong> published abstract metadata plus earlier author draft.</p>
+<p><strong>Limits:</strong> Draft methods not verified against published full text..</p>
+<h3 id="demographic-preferences-and-income-segregation">Demographic Preferences and Income Segregation</h3>
+<p>Victor Couture, Jonathan I. Dingel, Allison Green, Jessie Handbury (2026). January 2026 author working paper; no journal publication verified.</p>
+<p><a href="https://www.jdingel.com/research/CoutureDingelGreenHandbury.pdf">Primary source</a>. <strong>Read:</strong> author pdf selected full text sections.</p>
+<p><strong>Limits:</strong> Identifying attribute restrictions remain substantive assumptions..</p>
+<h3 id="deconstructing-mobility-segregation-a-network-analysis-of-racialized-flows-in-pandemic-era-nyc">Deconstructing Mobility Segregation: A Network Analysis of Racialized Flows in Pandemic-Era NYC</h3>
+<p>Wei-Peng Nie, Tian-Rong Ding, Xiao-Yong Yan, Tao Zhou, Zi-You Gao (2025). arXiv v1 submitted 2025-08-23; journal publication not verified.</p>
+<p><a href="https://arxiv.org/abs/2508.17072">Primary source</a>. <strong>Read:</strong> primary preprint html selected sections.</p>
+<p><strong>Limits:</strong> Mixed-tract exclusion; residuals do not identify tastes..</p>
+<h3 id="us-cities-are-defined-by-rings-and-pockets-with-limited-socioeconomic-mixing">US cities are defined by rings and pockets with limited socioeconomic mixing</h3>
+<p>Andrew Renninger, Neave O’Clery, Elsa Arcaute (2025). Published 2025-12-12, Nature Cities 2, 1172-1182.</p>
+<p><a href="https://www.nature.com/articles/s44284-025-00350-7">Primary source</a>. <strong>Read:</strong> publisher full main html selected supplement.</p>
+<p><strong>Limits:</strong> Incoming aggregation weight remains unresolved..</p>
+<h3 id="economic-inequality-and-the-geography-of-activity-space-segregation-combining-mobile-device-data-and-census-data">Economic Inequality and the Geography of Activity Space Segregation: Combining Mobile Device Data and Census Data</h3>
+<p>Siwei Cheng, Yongjun Zhang, Jenna Shaw (2025). Published January 2025, RSF 11(1), 132-152.</p>
+<p><a href="https://www.rsfjournal.org/content/11/1/132">Primary source</a>. <strong>Read:</strong> publisher html main text and methodological appendix.</p>
+<p><strong>Limits:</strong> Equation images not independently transcribed..</p>
+<h3 id="how-segregated-is-urban-consumption">How Segregated Is Urban Consumption?</h3>
+<p>Donald R. Davis, Jonathan I. Dingel, Joan Monras, Eduardo Morales (2019). Published online 2019-06-11, Journal of Political Economy 127(4), 1684-1738.</p>
+<p><a href="https://doi.org/10.1086/701680">Primary source</a>. <strong>Read:</strong> primary abstract metadata.</p>
+<p><strong>Limits:</strong> Exact instruments and likelihood not inspected..</p>
+<h3 id="the-15-minute-city-quantified-using-human-mobility-data">The 15-minute city quantified using human mobility data</h3>
+<p>Timur Abbiasov, Cate Heine, Sadegh Sabouri, Arianna Salazar-Miranda, Paolo Santi, Edward Glaeser, Carlo Ratti (2024). Published 2024-02-05, Nature Human Behaviour 8, 445-455; author correction 2024-04-02.</p>
+<p><a href="https://www.nature.com/articles/s41562-023-01770-y">Primary source</a>. <strong>Read:</strong> primary abstract author first page correction.</p>
+<p><strong>Limits:</strong> Full zoning design and appendix not audited..</p>
+<h3 id="racial-segregation-in-everyday-mobility-patterns-disentangling-the-effect-of-travel-time">Racial Segregation in Everyday Mobility Patterns: Disentangling the Effect of Travel Time</h3>
+<p>Karl Vachuska (2023). Published 2023-06-08, Socius 9.</p>
+<p><a href="https://journals.sagepub.com/doi/10.1177/23780231231169261">Primary source</a>. <strong>Read:</strong> primary abstract and indexed data description.</p>
+<p><strong>Limits:</strong> Complete specifications not inspected..</p>
+<h3 id="varying-relationships-between-experienced-income-segregation-and-travel-behaviour-across-neighbourhood-social-and-urban-contexts">Varying relationships between experienced income segregation and travel behaviour across neighbourhood social and urban contexts</h3>
+<p>Yuxuan Zhou, Yi Lu (2025). Published 2025-12-18, Nature Communications 16, 11236.</p>
+<p><a href="https://www.nature.com/articles/s41467-025-66585-z">Primary source</a>. <strong>Read:</strong> publisher html main text selected methods.</p>
+<p><strong>Limits:</strong> Not an exogenous access design..</p>
+<h3 id="willingness-to-travel-with-endogenous-distance-evidence-from-the-changing-retail-landscape">Willingness to Travel with Endogenous Distance: Evidence from the Changing Retail Landscape</h3>
+<p>Yue Cao, Judith A. Chevalier, Jessie Handbury, Hayden Parsley, Kevin R. Williams (2024). NBER Working Paper 33307, issued December 2024; revised February 2026.</p>
+<p><a href="https://www.nber.org/papers/w33307">Primary source</a>. <strong>Read:</strong> primary abstract version metadata author title page.</p>
+<p><strong>Limits:</strong> Identification tests not independently audited..</p>
+<h3 id="local-income-inequality-and-product-variety-empirical-evidence">Local income inequality and product variety: empirical evidence</h3>
+<p>Dieter Pennerstorfer, Nora Schindler, Biliana Yontcheva (2025). Published online 2025-01-10, Journal of Economic Geography 25(3), 427-445.</p>
+<p><a href="https://doi.org/10.1093/jeg/lbae050">Primary source</a>. <strong>Read:</strong> publisher indexed full text excerpts author metadata.</p>
+<p><strong>Limits:</strong> Full article not inspected; mechanisms not separated..</p>
+<h3 id="entangled-footprints-understanding-urban-neighbourhoods-by-measuring-distance-diversity-and-direction-of-flows-in-singapore">Entangled footprints: Understanding urban neighbourhoods by measuring distance, diversity, and direction of flows in Singapore</h3>
+<p>Qingqing Chen, I-Ting Chuang, Ate Poorthuis (2021). Published November 2021, Computers, Environment and Urban Systems 90, 101708.</p>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0198971521001150">Primary source</a>. <strong>Read:</strong> primary abstract author publication record.</p>
+<p><strong>Limits:</strong> Geographic diversity differs from patron demographics..</p>
+<h3 id="where-diverse-populations-gather-transit-accessibility-and-the-spatial-structure-of-social-mixing">Where diverse populations gather: transit accessibility and the spatial structure of social mixing</h3>
+<p>Yuan Liao (2026). Published 2026-06-18, Frontiers in Big Data 9.</p>
+<p><a href="https://www.frontiersin.org/journals/big-data/articles/10.3389/fdata.2026.1857064/full">Primary source</a>. <strong>Read:</strong> publisher full html selected results methods.</p>
+<p><strong>Limits:</strong> Observational; cross-national measurement is not identical..</p>
+<h3 id="the-evolution-of-access-to-public-accommodations-in-the-united-states">The Evolution of Access to Public Accommodations in the United States</h3>
+<p>Lisa D. Cook, Maggie E. C. Jones, Trevon D. Logan, David Rose (2023). published.</p>
+<p><a href="https://academic.oup.com/qje/article-abstract/138/1/37/6695011">Primary source</a>. <strong>Read:</strong> author manuscript selected full text.</p>
+<p><strong>Limits:</strong> Final-version specification comparison incomplete..</p>
+<h3 id="black-friendly-businesses-in-cities-during-the-civil-rights-era">Black-Friendly businesses in cities during the Civil Rights Era</h3>
+<p>Maggie E. C. Jones, Trevon D. Logan, David Rose, Lisa D. Cook (2024). published.</p>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S009411902400010X">Primary source</a>. <strong>Read:</strong> publisher abstract and author supplement full text.</p>
+<p><strong>Limits:</strong> Complete main text unavailable..</p>
+<h3 id="competition-and-consumer-discrimination">Competition and Consumer Discrimination</h3>
+<p>Maggie E. C. Jones, Trevon D. Logan, David Rose, Lisa D. Cook (2025). working paper.</p>
+<p><a href="https://www.nber.org/papers/w33547">Primary source</a>. <strong>Read:</strong> author working paper selected full text.</p>
+<p><strong>Limits:</strong> Model-dependent interpretation; journal publication not verified..</p>
+<h3 id="residential-segregation-discrimination-and-african-american-theater-entry-during-jim-crow">Residential segregation, discrimination, and African-American theater entry during Jim Crow</h3>
+<p>Ricard Gil, Justin Marion (2018). published.</p>
+<p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0094119018300743">Primary source</a>. <strong>Read:</strong> publisher abstract and intro.</p>
+<p><strong>Limits:</strong> Full identification restrictions not inspected..</p>
+<h3 id="heat-and-experienced-racial-segregation">Heat and experienced racial segregation</h3>
+<p>Till Baldenius, Hannah Klauber, Nicolas Koch (2025). published.</p>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0095069625000944">Primary source</a>. <strong>Read:</strong> published selected full text.</p>
+<p><strong>Limits:</strong> No observed personal race or interaction..</p>
+<h3 id="day-patterns-in-black-white-segregation-in-49-metropolitan-areas">7-day patterns in Black-White segregation in 49 metropolitan areas</h3>
+<p>Joanna Chae (2024). published.</p>
+<p><a href="https://www.nature.com/articles/s41598-024-56257-1">Primary source</a>. <strong>Read:</strong> published selected full text.</p>
+<p><strong>Limits:</strong> Descriptive; race imputed from home geography..</p>
+<h3 id="intraday-adaptation-to-extreme-temperatures-in-outdoor-activity">Intraday adaptation to extreme temperatures in outdoor activity</h3>
+<p>Yichun Fan, Jianghao Wang, Nick Obradovich, Siqi Zheng (2023). published.</p>
+<p><a href="https://www.nature.com/articles/s41598-022-26928-y">Primary source</a>. <strong>Read:</strong> publisher indexed full text sections.</p>
+<p><strong>Limits:</strong> Park aggregates; no racial mixing measure..</p>
+<h3 id="slum-clearance-and-urban-renewal-in-the-united-states">Slum Clearance and Urban Renewal in the United States</h3>
+<p>William J. Collins, Katharine L. Shester (2013). published.</p>
+<p><a href="https://www.aeaweb.org/articles?id=10.1257/app.5.1.239">Primary source</a>. <strong>Read:</strong> publisher abstract and earlier working paper sections.</p>
+<p><strong>Limits:</strong> 2013 final specification not fully inspected..</p>
+<h3 id="did-highways-cause-suburbanization">Did Highways Cause Suburbanization?</h3>
+<p>Nathaniel Baum-Snow (2007). published.</p>
+<p><a href="https://academic.oup.com/qje/article-abstract/122/2/775/1942140">Primary source</a>. <strong>Read:</strong> abstract metadata only.</p>
+<p><strong>Limits:</strong> Final full methods not retrieved..</p>
+<h3 id="urban-highways-are-barriers-to-social-ties">Urban highways are barriers to social ties</h3>
+<p>Luca Maria Aiello, Anastassia Vybornova, Sandor Juhasz, Michael Szell, Eszter Bokanyi (2025). published.</p>
+<p><a href="https://doi.org/10.1073/pnas.2408937122">Primary source</a>. <strong>Read:</strong> publisher metadata and author preprint full text sections.</p>
+<p><strong>Limits:</strong> Online ties; endogenous infrastructure..</p>
+<h3 id="freeway-revolts-the-quality-of-life-effects-of-highways">Freeway Revolts! The Quality of Life Effects of Highways</h3>
+<p>Jeffrey Brinkman, Jeffrey Lin (2024). published.</p>
+<p><a href="https://doi.org/10.1162/rest_a_01244">Primary source</a>. <strong>Read:</strong> author metadata and 2022 manuscript selected full text.</p>
+<p><strong>Limits:</strong> Final-text equivalence unchecked..</p>
+<h3 id="highways-and-segregation">Highways and segregation</h3>
+<p>Avichal Mahajan (2024). published.</p>
+<p><a href="https://doi.org/10.1016/j.jue.2023.103574">Primary source</a>. <strong>Read:</strong> publisher indexed abstract and selected text.</p>
+<p><strong>Limits:</strong> Complete methods not independently audited..</p>
+<h3 id="the-costs-of-access-freeway-disamenities-across-us-cities">The Costs of Access: Freeway Disamenities Across US Cities</h3>
+<p>Jeffrey Brinkman, Jeffrey Lin (2026). accepted author report.</p>
+<p><a href="https://jlin.org/papers/BL-COA.pdf">Primary source</a>. <strong>Read:</strong> author manuscript selected full text.</p>
+<p><strong>Limits:</strong> Final DOI unverified; model-dependent decomposition..</p>
+<h3 id="zero-sum-thinking-and-the-roots-of-us-political-differences">Zero-Sum Thinking and the Roots of US Political Differences</h3>
+<p>Sahil Chinoy, Nathan Nunn, Sandra Sequeira, Stefanie Stantcheva (2026). published.</p>
+<p><a href="https://www.aeaweb.org/articles?id=10.1257/aer.20240692">Primary source</a>. <strong>Read:</strong> published selected full text.</p>
+<p><strong>Limits:</strong> Associational; no randomized ancestral assignment..</p>
+<h3 id="the-national-rise-in-residential-segregation">The National Rise in Residential Segregation</h3>
+<p>Trevon D. Logan, John M. Parman (2017). published.</p>
+<p><a href="https://www.cambridge.org/core/journals/journal-of-economic-history/article/national-rise-in-residential-segregation/C6CDA8CE8E2A0F2523EAE4C7BACB8E2A">Primary source</a>. <strong>Read:</strong> publisher full text sections.</p>
+<p><strong>Limits:</strong> Not observed contact; historical timing matters..</p>
+<h3 id="culture-context-and-the-taste-for-redistribution">Culture, Context, and the Taste for Redistribution</h3>
+<p>Erzo F. P. Luttmer, Monica Singhal (2011). published.</p>
+<p><a href="https://www.aeaweb.org/articles?id=10.1257/pol.3.1.157">Primary source</a>. <strong>Read:</strong> published selected full text.</p>
+<p><strong>Limits:</strong> Migration not randomized..</p>
+<h3 id="the-slave-trade-and-the-origins-of-mistrust-in-africa">The Slave Trade and the Origins of Mistrust in Africa</h3>
+<p>Nathan Nunn, Leonard Wantchekon (2011). published.</p>
+<p><a href="https://www.aeaweb.org/articles?id=10.1257/aer.101.7.3221">Primary source</a>. <strong>Read:</strong> published selected full text.</p>
+<p><strong>Limits:</strong> Exclusion assumptions; later-wave replication caveat A5..</p>
+<h3 id="the-slave-trade-and-the-origins-of-mistrust-in-africa-a-replication-study-of-nunn-and-wantchekon-2011">The Slave Trade and the Origins of Mistrust in Africa: A Replication Study of Nunn and Wantchekon (2011)</h3>
+<p>Giulio Zanella (2025). published replication.</p>
+<p><a href="https://www.ojs.jcr-econ.org/index.php/jcre/article/view/33">Primary source</a>. <strong>Read:</strong> published selected full text.</p>
+<p><strong>Limits:</strong> Later waves differ in sample and questions..</p>
+<h3 id="building-social-cohesion-between-christians-and-muslims-through-soccer-in-post-isis-iraq">Building social cohesion between Christians and Muslims through soccer in post-ISIS Iraq</h3>
+<p>Salma Mousa (2020). published.</p>
+<p><a href="https://doi.org/10.1126/science.abb3153">Primary source</a>. <strong>Read:</strong> published selected full text.</p>
+<p><strong>Limits:</strong> Specific setting; not ancestral exposure..</p>
+<h3 id="causal-effect-of-intergroup-contact-on-exclusionary-attitudes">Causal effect of intergroup contact on exclusionary attitudes</h3>
+<p>Ryan D. Enos (2014). published.</p>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3956183/">Primary source</a>. <strong>Read:</strong> published indexed full text sections.</p>
+<p><strong>Limits:</strong> Short-run setting; imprecise duration heterogeneity..</p>
+<h3 id="retraction-of-growing-up-in-a-recession">Retraction of: Growing up in a Recession</h3>
+<p>(2023). retraction notice.</p>
+<p><a href="https://academic.oup.com/restud/article/90/2/1009/6982752">Primary source</a>. <strong>Read:</strong> publisher notice full text.</p>
+<p><strong>Limits:</strong> Excluded as affirmative evidence..</p>
 </main><footer>Reviewed documentation snapshot. No new licensed-data analysis, empirical replication or adopted research protocol is implied. Earlier results and failed gates remain in force.</footer></body></html>

@@ -1,4 +1,4 @@
-<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Dewey: research priorities and implementation plan</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Dewey: exposure and mixing</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
 * { box-sizing: border-box; }
 body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
 header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
@@ -39,6 +39,8 @@ footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; 
   tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
   a { color: inherit; }
 }
+
+colgroup { display: none; } th:first-child, td:first-child { min-width: 90px; } .notice { border-left: 4px solid #00686c; padding: 10px 18px; background: #f1f7f6; }
 </style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
 :root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
 html, body, header, main, footer { background: var(--page); color: var(--ink); }
@@ -52,6 +54,13 @@ nav, footer, th, td { border-color: var(--line); }
 tr:nth-child(even) td { background: var(--row); }
 pre { background: var(--code); border-color: var(--link); }
 .subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
 .theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
 .theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
 .theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
@@ -78,286 +87,141 @@ pre { background: var(--code); border-color: var(--link); }
     });
   });
 }());
-</script></head><body><header><h1>Dewey: research priorities and implementation plan</h1><p class="subtitle">19 October 2026 | Coauthor discussion | Ranked options and supporting evidence</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Report sections"><div><a href="#ranking">Ranked ideas</a><a href="#audit">Data confidence</a><a href="#details">Detailed assessments</a><a href="#method">Measures and models</a><a href="#actions">Implementation</a><a href="#evidence">Evidence</a></div></nav><main><section class="notice" id="quality-update"><h2>Expanded data-quality review</h2><p>The completed review now separates passed checks from unresolved construction, coverage and interpretation issues. The eight idea-specific expanded literature reviews are still in preparation; the ranking below is the earlier assessment.</p><p><a href="quality.html">Read the updated quality review</a> | <a href="sources.html">Measurement sources and access levels</a></p></section><h2 id="recommendation">Recommended direction</h2>
-<p><strong>Develop one descriptive paper about where mixing occurs and who experiences it.</strong> The most promising organising question is: <strong>does a neighbourhood that attracts a diverse crowd also give its own residents diverse experiences when they go out?</strong> Establish the venue-level facts first, then compare the destination and resident perspectives on consistent geography and coverage. Access and venue variety would be possible explanations within this paper, not separate searches for significant results.</p>
-<p>The original question remains important: do public-facing activities expose people to different social groups, and does that relate to attitudes? The current data are stronger on the composition of visits than on actual worker-customer interaction or changes in attitudes. The recommendation is therefore to make the descriptive exposure question the main contribution, while retaining the workforce and attitude analyses as qualified secondary evidence. This is a proposed direction for coauthor discussion, not an agreed change of paper or a claim that novelty has been established.</p>
-<p><strong>First, independently validate the remaining upstream data construction.</strong> Several audits and a substantial geography correction have already been completed. The outstanding check is the construction of annual origin flows and inherited weights from the original weekly files. Literature and design work can proceed alongside this audit; new substantive claims should wait for the relevant checks.</p>
-<h2 id="ranking">Ranked research ideas</h2>
-<p>Ranks reflect likely contribution, proximity to usable data and implementation risk, not expected statistical significance. Ideas 1-4 are components of one possible paper; ideas 5-8 are alternatives or later extensions. Each title links to the detailed assessment below.</p>
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Dewey: exposure and mixing</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><h2 id="recommendation">The question</h2>
+<p><strong>Do everyday places bring people from different social backgrounds together?</strong> The original project asks which activities create that exposure, whether public-facing work matters, and whether exposure is associated with attitudes or social connections.</p>
+<p>The present data are strongest on <strong>the composition of recorded visits</strong>. They do not directly observe conversation, friendship, personal income or the employees at each establishment. A credible next paper therefore needs a clear descriptive contribution before making claims about interaction or attitudes.</p>
+<p><strong>Current recommendation:</strong> finish the construction checks, then test whether distinguishing diversity <em>within establishments</em> from diversity <em>across a whole local service sector</em> changes an economically important conclusion. The literature review does not yet establish a publishable new result. It rules out several overly broad novelty claims and identifies smaller tests worth considering.</p>
+<p><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">What we measure</a> | <a href="#evidence">Existing results</a> | <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a> | <a href="#ranking">Ranked next steps</a> | <a href="#details">All eight reviews</a></p>
+<h2 id="review-update">What the expanded review changed</h2>
+<p>All eight individual reviews are complete. Each sets out the closest papers, the remaining contribution, required data, feasibility checks and reasons to stop. The <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">source library</a> records what was actually read. Some sources were inspected in full or in selected methods sections; others were accessible only as abstracts. This is a substantial focused review, <strong>not an exhaustive systematic review or proof of novelty</strong>.</p>
+<ul>
+<li><strong>Incoming versus outgoing is no longer the leading standalone idea.</strong> <a href="https://www.nature.com/articles/s44284-025-00350-7">Renninger, O’Clery and Arcaute (2025)</a> already compare local amenity segregation with residents’ isolation in a matched neighbourhood classification. A differently labelled map would not be enough.</li>
+<li><strong>Access benchmarks also have close predecessors.</strong> Comparing visitors with reachable populations is not itself new; <a href="https://www.frontiersin.org/journals/big-data/articles/10.3389/fdata.2026.1857064/full">Liao (2026)</a> is particularly close. Our historical menu coverage remains a separate obstacle.</li>
+<li><strong>The venue-count pattern needs a measurement check before a behavioural explanation.</strong> More recorded venues can change estimated separation through partitioning and finite information per venue. This is a possible explanation to test, not a finding that explains our actual gradient.</li>
+<li><strong>Green Book is the best separate alternative to screen for feasibility.</strong> The narrower question distinguishes persistence of a firm, its site and its surrounding district. Existing access and urban-renewal research means historical listing alone cannot identify a discrimination effect.</li>
+</ul>
+<p>These conclusions supersede the earlier plan’s ranking and novelty discussion. They do not replace historical estimates or approve new empirical work.</p>
+<h2 id="ranking">Ranked next investigations</h2>
+<p>This order is about <strong>the value of the next bounded investigation</strong>, considering contribution, current inputs and the cost of resolving uncertainty. It is not a ranking of expected significance or a promise of publication. The independent construction audit is a prerequisite, not a ninth paper idea. Original idea numbers are retained in the review links.</p>
 <div class="table-scroll" tabindex="0"><table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
 </colgroup>
 <thead>
 <tr>
-<th>Rank</th>
-<th>Research question</th>
-<th>Feasibility with present evidence</th>
-<th>Recommendation</th>
+<th>Priority</th>
+<th>Question</th>
+<th>Next useful step and decision</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>1</strong></td>
-<td><a href="#idea1">Where does mixing exceed what residential geography would suggest?</a></td>
-<td><strong>Highest readiness.</strong> Venue indices and substantial audits exist; an independent residential benchmark does not yet exist.</td>
-<td>Build the descriptive foundation, with complete category results and coverage checks.</td>
+<td><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/residential-benchmarks.html">Within-place mixing versus residential opportunity</a></td>
+<td>Establish whether coherent measurement changes an important service comparison. High readiness for existing-data description, lower readiness for an independent opportunity benchmark. A catalogue of rankings alone is not enough.</td>
 </tr>
 <tr>
 <td><strong>2</strong></td>
-<td><a href="#idea2">Do diverse destinations also have diverse resident activity spaces?</a></td>
-<td><strong>Promising, conditional.</strong> Both aggregation approaches exist; the matched neighbourhood comparison is new and needs approved origin flows.</td>
-<td>Best substantive extension to assess first, jointly with idea 1.</td>
+<td><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/venue-variety.html">Venue variety and separation</a></td>
+<td>Check whether the count gradient survives credible observation-process and common-support diagnostics. This is a falsification exercise first, not a structural preference estimate.</td>
 </tr>
 <tr>
 <td><strong>3</strong></td>
-<td><a href="#idea3">Is unequal exposure explained by access to mixed places?</a></td>
-<td><strong>Moderate to low.</strong> Distance results exist, but independent historical menus and travel-cost coverage failed earlier checks.</td>
-<td>Add only if a bounded, adequately covered opportunity set can be established.</td>
+<td><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/green-book.html">Green Book legacy</a></td>
+<td>Check historical access, licensing and firm/site/district linkage without looking at modern outcomes. Best separate alternative, but data availability and survivorship are unresolved.</td>
 </tr>
 <tr>
 <td><strong>4</strong></td>
-<td><a href="#idea4">Does variety within a service category enable separation?</a></td>
-<td><strong>Moderate for description; low for structural estimation.</strong> A count diagnostic is complete, but counts do not identify variety or preferences.</td>
-<td>Refine the descriptive comparison before considering a choice model.</td>
+<td><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/access-opportunity.html">Access to mixed places</a></td>
+<td>Test whether one independent historical opportunity set can meet the existing coverage requirements. Do not restart an unsuccessful source merely by relaxing its threshold.</td>
 </tr>
 <tr>
 <td><strong>5</strong></td>
-<td><a href="#idea5">Do Green Book places leave a modern patronage legacy?</a></td>
-<td><strong>Uncertain.</strong> Historical literature is available; data access, licensing and modern linkage remain unverified.</td>
-<td>Best separate alternative for a small feasibility exercise.</td>
+<td><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/incoming-outgoing.html">Incoming versus outgoing exposure</a></td>
+<td>Keep as a descriptive component. Investigate service composition only if it answers a distinct question beyond the close matched-neighbourhood predecessor.</td>
 </tr>
 <tr>
 <td><strong>6</strong></td>
-<td><a href="#idea6">How do weather and seasons change mixing?</a></td>
-<td><strong>Conditional and crowded.</strong> Needs time-varying composition; a close 2025 heat-segregation paper already exists.</td>
-<td>Pursue only with a distinct decomposition and confirmed temporal inputs.</td>
+<td><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/historical-infrastructure.html">Historical infrastructure</a></td>
+<td>Reserve for a tightly bounded historical-linkage design. Modern outcomes alone cannot provide pre-construction trends.</td>
 </tr>
 <tr>
 <td><strong>7</strong></td>
-<td><a href="#idea7">Do urban renewal and historic transport shape present-day mixing?</a></td>
-<td><strong>Low near-term readiness.</strong> Historical boundaries, timing and comparison groups require substantial work.</td>
-<td>Reserve idea, not an immediate national causal design.</td>
+<td><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/weather-mixing.html">Weather and mixing</a></td>
+<td>Defer unless joint time-specific composition and an independently measured adaptation mechanism are available. Heat and segregation already have a direct predecessor.</td>
 </tr>
 <tr>
 <td><strong>8</strong></td>
-<td><a href="#idea8">Does ancestral exposure relate to current attitudes?</a></td>
-<td><strong>Low readiness.</strong> Parental-location regressions were already attempted; historical exposure and released geography are not verified.</td>
-<td>Defer until a genuinely new, cohort-compatible link is possible.</td>
+<td><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/ancestral-attitudes.html">Ancestral exposure and attitudes</a></td>
+<td>Defer until a new, cohort-compatible exposure link is verified. Earlier parental-location analysis and stopped attitude specifications remain part of the record.</td>
 </tr>
 </tbody>
 </table></div>
-<h2 id="audit">Priority zero: establish confidence in the data</h2>
-<h3 id="what-is-already-established">What is already established</h3>
-<p>The 2017-19 files are <strong>not unaudited</strong>. Initial checks examined schemas, missingness and distributions. A major subsequent correction addressed a mismatch between 2020 mobility-origin CBG identifiers and older ACS geography. The direct identifier join had omitted roughly one-third of recorded origin-visit weight from demographic matching. A separate NHGIS-based reconstruction rebuilt demographic indices for all <strong>9,537,963 POI-years</strong>, retaining the originals and recording 109 checks. The October final-file audit then examined keys, support, valid indices, weights and within/between accounting. These are saved completed checks, not tests rerun for this plan.</p>
-<p>However, the corrected index builder starts from <strong>existing annual origin-flow maps</strong> and carries forward fields including weeks observed and annualised matched visits. The remaining assurance gap lies upstream:</p>
-<pre class="text"><code>Original weekly mobility records
-    -&gt; annual origin-to-venue flows and coverage weights [independent replication needed]
-    -&gt; geography-linked demographic indices              [rebuilt and checked]
-    -&gt; resident/destination summaries and models         [audited in specific exercises]</code></pre>
-<p>The project record attributes the original construction pipeline to Tommy. That does not establish the exact code version and parameters of every production run. The Hamilton regression benchmark used processed outputs; it was not an independent raw-data reconstruction. Production code, configuration, source releases and execution receipts need to be pinned before assigning more precise responsibility.</p>
-<h3 id="the-replication-exercise">The replication exercise</h3>
-<ol type="1">
-<li><strong>Freeze the production lineage.</strong> Identify the exact weekly releases, scripts, parameters and annual outputs. Check duplicates, visits versus visitors, week coverage, suppression, category changes and the minimum-weeks setting. A setting in an instruction is not proof it was used.</li>
-<li><strong>Choose a validation sample in advance.</strong> Cover all three years, venue types, geographies, coverage levels and changed census boundaries. For each selected venue-year, include all weeks required by the production definition. One weekly file cannot validate annual aggregation. Confirm exact restricted-input scope before processing; originals remain read-only.</li>
-<li><strong>Write an independent reference calculation.</strong> Reconstruct annual flows from the written rules, then apply the corrected demographic mapping and formulas. Compare the annual-flow stage first and corrected indices second. Expected differences from the geography correction are not replication failures.</li>
-<li><strong>Explain material discrepancies.</strong> Predeclare exact comparisons, numerical tolerances and what would require a larger sample or rebuild. Keep identifiable row-level diagnostics private. Release reviewed aggregate mismatch counts, weight discrepancies, coverage and diagnoses.</li>
-<li><strong>Assess usability.</strong> Examine distributions, extreme weights, missing origins, continuity and common-support sensitivity. Missing venue IDs do not prove closure; appearance does not prove opening. Passing a sample audit does not certify every record or provider representativeness.</li>
-</ol>
-<p><strong>Deliverable:</strong> one audit matrix with stage, source/version, independent check, result, unresolved issue and implications for each analysis. Reproducing a hash or rerunning identical code is not an independent correctness test.</p>
-<p>Two limitations remain consequential. The 933 values labelled <code>MSA_CODE</code> include metropolitan, micropolitan and unmatched areas, with assignment/vintage unresolved. Also, final exports retain the shares needed for the four-group racial decomposition, but not the ten income-bin shares needed for the equivalent income decomposition. Neither gap can be filled by relabelling a column or inferring shares from a scalar index. <a href="#evidence-audit">Audit evidence</a></p>
-<h2 id="details">Detailed assessment</h2>
-<h3 id="idea1">1. Residential geography and everyday mixing</h3>
-<p><strong>Question and economic interest.</strong> Which places bring together visitors from different home areas, beyond the opportunities created by where residents live? A diverse city may contain diverse venues because its population is diverse, or offer many opportunities to sort into different venues. Separating these descriptions is more informative than another national venue ranking.</p>
-<p><strong>What exists.</strong> Category comparisons, resident-weighted exposure, corrected geography and a within/between-venue decomposition. On audited common support, visit-weighted racial fractionalization within venues is 0.4358, versus 0.4811 after pooling visitors within area-subcategory-year cells. The between-venue component is 9.41% of the pooled value. This is accounting, not an effect on attitudes. <a href="#evidence-mixing">Existing findings</a></p>
-<p><strong>What would be new here.</strong> A consistent comparison of venue mixing, resident exposure and an independently constructed residential opportunity benchmark. Comparing experienced and residential segregation is not itself new: <a href="https://www.gsb.stanford.edu/faculty-research/publications/estimating-experienced-racial-segregation-us-cities-using-large-scale">Athey et al. (2021)</a> establish their relationship, and <a href="https://www.sciencedirect.com/science/article/pii/S0047272725000337">Massenkoff and Wilmers (2025)</a> study class encounters, firms and distance. Our precise distinction must survive a methods-level comparison.</p>
-<p><strong>Implementation.</strong> Fix groups and denominators; show annual and common-support distributions, complete subcategory results and a top-category summary. Build a residential benchmark from independently measured population composition and a declared accessibility/allocation rule. Compare observed and benchmarked exposure on identical support, showing raw levels as well as differences. Dividing venue indices by an MSA/subcategory mean is not equivalent to controlling for residential opportunity and can remove the category variation of interest.</p>
-<p><strong>Feasibility and decision.</strong> Descriptive replication is close to existing data; a credible opportunity benchmark requires menu and catchment construction. Deliver three figure families: residential versus activity-space exposure, within/between venue mixing, and venue versus resident perspectives. Continue only if a stable substantive distinction remains beyond existing papers. If it depends on one benchmark or merely reproduces a known fact, narrow the claim rather than searching for a significant category.</p>
-<h3 id="idea2">2. Neighbourhoods as destinations and origins</h3>
-<p><strong>Question and economic interest.</strong> Can a neighbourhood serve a diverse set of visitors while its residents visit relatively homogeneous places? The reverse is also possible. This distinguishes the social role of a location from the activity spaces of its residents, potentially changing how we interpret amenities and segregation without requiring an attitude effect.</p>
-<p><strong>What exists and what is missing.</strong> Resident and destination aggregations exist; a verified matched neighbourhood comparison using the same years, geography, universe and weights does not. The increment is that comparison, not directional flows themselves: <a href="https://arxiv.org/abs/2508.17072">Nie et al. (2025 preprint)</a> already analyse directional racialised mobility in New York City. <a href="#evidence-resident">Prior aggregation work</a></p>
-<p><strong>Implementation.</strong> For each neighbourhood-year, calculate (a) average diversity within its venues, weighted by covered incoming visits, and (b) average diversity of venues visited by residents, weighted by covered outgoing visits. Use the same venue index for both and display both axes before a difference score. Separately show the pooled incoming profile: diverse visitors across separate homogeneous venues need not mix within venues. Fix comparable coverage rules before inspecting results; missing or poorly observed flows are not zeros.</p>
-<p><strong>First outputs.</strong> A weighted scatterplot and distribution of matched differences, with residential composition and support shown; full area/category summaries rather than selected examples; separate 2017, 2018 and 2019 checks. Start with continuous measures. Any high-incoming/low-outgoing labels should use explained, predetermined thresholds. Check dependence on central business districts, tourism and very small resident populations.</p>
-<p><strong>Feasibility and decision.</strong> This requires approved origin-to-venue flows, not only scalar POI indices. Broader neighbourhood aggregation may be more reliable than fine cells. Continue if both sides have substantial comparable coverage and the distinction survives boundary/support sensitivity. Defer if only a heavily selected unmatched comparison is possible. Weekday/weekend composition is a later option: joint fields and entitlement must first be verified, and weekdays do not identify work trips.</p>
-<h3 id="idea3">3. Access to mixed venues</h3>
-<p><strong>Question and economic interest.</strong> Do lower-income home areas have fewer reachable opportunities for mixing, or do visits differ despite similar measured opportunities? This separates constraints from use. An unexplained residual is not automatically a preference for segregation.</p>
-<p><strong>What we already tried.</strong> Nearby shared-grocery comparisons in 11 selected counties found lower exposure to top-fifth-income home areas for visitors from lower-income home areas. About half the gap remained within relative-distance bins. Historical menu and route checks then failed coverage requirements. Another distance-controlled regression is not a new mechanism test. <a href="#evidence-access">Existing results and failed checks</a></p>
-<p><strong>Required data.</strong> A historical venue list independent of observed visits, reliable locations/categories and appropriately dated travel costs. Observed prices, formats, hours and capacity would improve it if available. Present-day listings are not automatically a 2017-19 menu; visited venues are not the full set of alternatives.</p>
-<p><strong>Implementation.</strong> Start with one category and areas selected for source coverage. Construct travel-time/distance bands and the distribution of accessible venue diversity under a declared rule. Compare observed exposure with a transparent allocation benchmark within that menu. Assess menu coverage, boundaries and crowd-measure noise. If defining a mixed venue from its crowd, check stability across time or independent composition samples where possible; do not treat the label as exogenous.</p>
-<p><strong>Contribution and stop rule.</strong> Distance and bridging locations feature in <a href="https://www.sciencedirect.com/science/article/pii/S0047272725000337">Massenkoff and Wilmers</a> and <a href="https://www.nature.com/articles/s41586-023-06757-3">Nilforoshan et al. (Nature, 2023)</a>. The increment would be the matched opportunity-versus-use distinction. Continue only with enough independently measured menu coverage under a declared rule. Retain earlier failed coverage requirements; do not loosen them after viewing effects. Preference or travel-cost parameters require identification beyond this descriptive exercise.</p>
-<h3 id="idea4">4. Variety within a service category</h3>
-<p><strong>Question and economic interest.</strong> Holding the service fixed, does a larger or more differentiated venue set let visitors sort into different establishments? More options could increase diversity inside venues and separation across venues simultaneously.</p>
-<p><strong>Completed pilot.</strong> Within-subcategory correlations between log recorded venue count and the between-venue share of racial diversity are 0.5594, 0.5638 and 0.5676 in 2017-19. In 2019, across count bins from 2-4 to 100+ venues, the mean between fraction rises from 1.11% to 8.34%, while mean within-venue fractionalization rises from 0.2861 to 0.4162. These are different area-category cells, not entry within the same market. <a href="#evidence-count">Pilot table</a></p>
-<p><strong>Next analysis.</strong> Distinguish establishment count, category breadth and within-category format/price variety. Resolve geography and provider coverage first. Show counts alongside population, density, geographical size and residential composition. Examine comparisons within defined areas and services, adjusting both outcomes and regressors when estimating fixed effects. Changes over three years matter only once continuity and genuine count changes can be distinguished from backfill or sampling. Observed count is not automatically the feasible choice-set size.</p>
-<p><strong>Novelty and structural feasibility.</strong> <a href="https://www.nature.com/articles/s41586-023-06757-3">Nilforoshan et al.</a> already discuss differentiated venues. <a href="https://www.jdingel.com/research/CoutureDingelGreenHandbury.pdf">Couture, Dingel, Green and Handbury (January 2026)</a> estimate demographic preferences using individual direct home-based trips and within-chain comparisons. Our annual moments do not reproduce that identification. A model needs credible menus, travel costs, unobserved quality, prices/capacity and an approach to endogenous patron composition and supply.</p>
-<p><strong>Decision.</strong> Keep this as a bounded descriptive mechanism check, with within- and between-venue results side by side. Consider structural estimation only after an explicit identification argument and required variation survive the audit. A count correlation alone is insufficient.</p>
-<h3 id="idea5">5. Historical persistence around Green Book places</h3>
-<p><strong>Question and economic interest.</strong> Do places historically listed as welcoming Black customers retain distinctive patronage today, even after the business disappears? This could examine persistent commercial networks and institutions. Historical access is not the same as an integrated crowd.</p>
-<p><strong>Current position.</strong> Literature/design assessment only: no historical-modern linkage or regression. The authors’ release, licence and usable download remain unverified. Close predecessors include <a href="https://doi.org/10.1093/qje/qjac035">Cook et al. (QJE, 2023)</a>, <a href="https://www.sciencedirect.com/science/article/pii/S009411902400010X">Jones et al. (JUE, 2024)</a> and <a href="https://www.nber.org/papers/w33547">Competition and Consumer Discrimination (2025)</a>. A modern-persistence contribution needs a focused citation check.</p>
-<p><strong>Feasibility exercise.</strong> Verify lawful access and the codebook, then select a few cities by historical address coverage before viewing modern outcomes. Check sources against the <a href="https://digitalcollections.nypl.org/collections/the-green-book">NYPL guides</a>. Separate continuously operating businesses, replacements at the same site, demolished/noncommercial sites and surrounding districts. Retain every nonmatch and disappeared site; selecting survivors would condition on historical development.</p>
-<p><strong>Potential analysis.</strong> Describe modern Black-origin visitation and within-venue diversity separately. Compare listed sites with justified alternatives of similar historical business type and neighbourhood context. An unlisted business is not necessarily discriminatory; a Black-serving venue is not necessarily integrated. Location selection, residential change and redevelopment confound causal interpretations.</p>
-<p><strong>Decision.</strong> Best separate alternative for a small linkage audit, but not currently the most feasible paper. Continue only with reproducible coverage, acceptable linkage and a distinct question. Historical results do not cleanly separate customer prejudice, owner prejudice and changing demand; listing status does not identify those mechanisms for us. <a href="#evidence-alternatives">Feasibility record</a></p>
-<h3 id="idea6">6. Weather, seasonality and composition</h3>
-<p><strong>Question.</strong> When weather changes, do people make fewer trips, switch destinations or encounter different crowds at the same destination? Distinguishing margins could show when constraints alter mixing rather than only activity volume.</p>
-<p><strong>Novelty problem.</strong> <a href="https://publications.pik-potsdam.de/pubman/item/item_32855_1/component/file_32856/1-s2.0-S0095069625000944-main.pdf">Baldenius, Klauber and Koch, Heat and experienced racial segregation (JEEM, 2025)</a> already study weekly mobility in 315 US metropolitan areas in 2018-20, finding increased segregation during heat, particularly for lower-income origins and leisure destinations. A generic temperature/racial-mixing regression would be very close. A volume/destination/composition decomposition or justified income-origin dimension could differ, but novelty is not established.</p>
-<p><strong>Data and implementation.</strong> Verify origin-by-time composition at the intended frequency. Annual indices are insufficient; daily/hourly totals plus weekly origin shares do not identify daily/hourly crowds. With suitable weekly inputs, link dated weather such as <a href="https://prism.oregonstate.edu/data/">PRISM</a>, fix geography/calendar comparisons and distinguish unexpected weather from seasonality and long-run adaptation. Specify which margins the data can identify before choosing a decomposition.</p>
-<p><strong>Decision.</strong> Produce a literature-overlap and schema assessment first. Proceed only with a distinct question and joint temporal composition. Otherwise use weather as context or robustness, not a new paper. No completed weather-mixing estimate is available in this project plan.</p>
-<h3 id="idea7">7. Urban renewal and historical transport</h3>
-<p><strong>Question.</strong> Do historic clearance, highways or transport connections leave persistent differences in access to commercial meeting places and patronage? The channel could be spatial organisation of residents and amenities rather than attitudes.</p>
-<p><strong>Data and overlap.</strong> <a href="https://github.com/americanpanorama/Renewing_Inequality_Data">Renewing Inequality</a> has project/displacement records and partial boundaries, with imputed annual displacement timing. <a href="https://www.usgs.gov/tools/topoview">USGS topoView</a> supplies maps, not a ready-made transport instrument. <a href="https://www.aeaweb.org/articles?id=10.1257/app.5.1.239">Collins and Shester (2013)</a> examine urban-renewal effects; <a href="https://www.pnas.org/doi/10.1073/pnas.2408937122">Aiello et al. (2025)</a> examine highways and online ties. Venue patronage could be an incremental outcome, but infrastructure effects are established territory.</p>
-<p><strong>Feasibility exercise.</strong> Select cities by coverage; verify boundaries/timing and potential comparison corridors or districts. Distinguish destruction of destinations from altered access and residential sorting. Report boundary uncertainty and redevelopment before specifying an event study or instrument.</p>
-<p><strong>Decision.</strong> High cost and identification risk make this a reserve option. Placement is endogenous; effects on income, residence and land use threaten exclusion restrictions. Earlier modern transport pilots had failed or weakened support/mechanism checks. A historical label does not repair those problems. Start only with a specific defensible comparison.</p>
-<h3 id="idea8">8. Ancestral exposure and attitudes</h3>
-<p><strong>Question.</strong> Does parents’ or grandparents’ social environment relate to descendants’ beliefs about competition and redistribution? This is transmission, not exposure on a contemporary visit.</p>
-<p><strong>Prior work and overlap.</strong> Earlier regressions already used parents’ grow-up locations. The saved summary reports a positive luck-versus-effort association but no exposure-segregation association for the incentivised zero-sum question. It does not validate historical exposure timing. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20240692">Chinoy et al. (AER, 2026)</a> already analyse family history and historical roots of zero-sum thinking. <a href="#evidence-outcomes">Earlier attitude work</a></p>
-<p><strong>Required data.</strong> Verify released geography and the earlier regressors’ construction. The <a href="https://www.aeaweb.org/articles/materials/24733">questionnaire</a> asks childhood town/state, not exact ancestral neighbourhoods. Usable geography in the <a href="https://www.openicpsr.org/openicpsr/project/234222/view">replication release</a> remains unverified here. <a href="https://jmparman.people.wm.edu/dataandcode.html">Logan-Parman data</a> offer county context for 1880 and 1940, conditional on compatible cohorts.</p>
-<p><strong>Implementation and decision.</strong> First produce a cohort-place matching and sample-selection audit without outcome regressions. Separate segregation from group shares and already studied historical channels. Do not assign 2017-19 mobility exposure to an ancestor. Continue only with a new, well-timed measure and enough support; otherwise retain the earlier attempt and defer.</p>
+<h2 id="evidence">What we already know</h2>
+<p>These are <strong>selected saved project results</strong>, not new estimates from the literature review. The <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/plan.html#evidence">earlier evidence appendix</a> supplies the result-specific context and source-note names.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Finding</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Within-venue racial diversity: 0.4358; pooled local-service diversity: 0.4811.</strong> The difference is 0.0453, or 9.41% of the pooled value.</td>
+<td>Combining visitors across establishments makes a service market look more mixed than the average visit within an establishment. This is accounting on retained support, not an attitude effect.</td>
+</tr>
+<tr>
+<td><strong>In the 2019 count pilot, within-venue diversity and between-venue separation both rise across venue-count bins.</strong></td>
+<td>More recorded venues do not mean less absolute within-venue mixing. Differences in local population, volume, coverage and supply remain possible explanations.</td>
+</tr>
+<tr>
+<td><strong>The public-facing extension has not passed its inference checks.</strong></td>
+<td>All four prospective industry-concentration screens failed. No corrected public-facing coefficient was estimated. Expected workers are not observed employees.</td>
+</tr>
+<tr>
+<td><strong>The downstream results are mixed.</strong></td>
+<td>Some connectedness associations are positive, but validation is not uniform: the saved equal-county comparison was negative. Current county attitude tests did not survive multiple-testing adjustment; a separate aligned family analysis stopped for insufficient support before estimation.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Income describes home areas, not individual earnings. The racial measure infers composition from home areas and conditions on four retained groups. The earlier correction 70a concerns Atlas child weights, not Facebook-user weights; note 69’s local deviations are not category-fixed-effect coefficients. Those distinctions and the failed designs are retained in the evidence record.</p>
+<h2 id="audit">Data confidence</h2>
+<p>The files are <strong>not unaudited</strong>. The census-geography correction, NHGIS-based index rebuild and full final-file audit are completed. The final audit covered 9,537,963 venue-years; 8,875,712 remained on common race/income support, retaining 94.91% of positive input visit weight. That is retention from the delivered files, not national population coverage.</p>
+<p>What remains is independent verification of the original <strong>weekly-to-annual flow construction</strong>, inherited weights, geographic assignment and representation. Annual diverse patronage is also not evidence of simultaneous contact. The updated <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">quality assessment</a> separates passed checks from each remaining gap.</p>
 <h2 id="method">Measurement and empirical approach</h2>
-<p>Use comparable objects. Let <code>D[j,t]</code> be venue diversity and <code>v[o,j,t]</code> the covered flow from origin neighbourhood <code>o</code> to venue <code>j</code> in year <code>t</code>.</p>
-<pre class="text"><code>Venue diversity D[j,t] = 1 - sum of squared group shares at venue j
-
-Resident exposure R[o,t]
-  = sum over destinations of v[o,j,t] * D[j,t]
-    divided by the origin&#39;s total covered destination flow
-
-Destination exposure V[a,t]
-  = sum over venues in area a of total covered flow to j * D[j,t]
-    divided by total covered flow to venues in area a</code></pre>
-<p><code>R</code> follows residents wherever they travel; <code>V</code> follows visits to venues in an area regardless of visitors’ residence. Neither observes actual conversation. An <code>R - V</code> comparison requires the same index, period, venue support and flow convention. Show both components and coverage separately.</p>
-<p><strong>Keep income and race separate.</strong> Income refers to home-CBG income, not personal earnings. The ten bins use unweighted CBG-income ranks, not equal-population deciles. The racial index uses four groups (non-Hispanic White, non-Hispanic Black, non-Hispanic Asian and Hispanic), conditional on retained group mass. It is not an unconditional index of the entire population. Origin-based allocation is not observed individual identity.</p>
-<p><strong>Weights change the question.</strong> Visit weighting describes recorded activity; equal-venue weighting describes the average recorded establishment. Neither automatically represents the average person or county. Converting origin visitor counts to visits using a venue-wide visits-per-visitor ratio assumes equal frequency across origins within that venue. Exclude missing-income origins from the relevant mean and renormalise over covered origins; report lost weight rather than imputing zero.</p>
-<p><strong>Figures and support first, then regressions.</strong> A possible descriptive specification is:</p>
-<pre class="text"><code>diversity[j,t] = subcategory effects + area-by-year effects
-                + pre-specified accessible-residential composition
-                + observed venue characteristics + residual[j,t]</code></pre>
-<p>This is proposed, not newly estimated. Area-by-year effects do not absorb neighbourhood-specific access. Identify the exact regressor source and residualise both outcomes and regressors for fixed-effects estimation. Venue-invariant category effects cannot also be identified with venue fixed effects. Inference must reflect regressor variation and clustering, not treat millions of rows as independent information.</p>
-<p>An allocation benchmark is different from adding residential controls. Specify its menu/travel rule; do not use the same observed visitor composition as an independent benchmark for itself. For directional comparisons, assess leaving out the focal origin’s contribution and record lost support. Decompositions remain conditional accounting, not causal estimates of tastes or policy effects.</p>
-<h2 id="actions">Implementation and decisions</h2>
-<div class="table-scroll" tabindex="0"><table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Work package</th>
-<th>Concrete output</th>
-<th>Dependence and decision rule</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>A. Independent construction audit</strong></td>
-<td>Production lineage, fixed sample, independently reconstructed flows/indices, mismatch/coverage matrix.</td>
-<td>Fix exact input scope and comparison rules. Repair or quarantine affected layers before substantive use.</td>
-</tr>
-<tr>
-<td><strong>B. Contribution and measurement design</strong></td>
-<td>Close-paper matrix for ideas 1-4; incoming/outgoing definitions; one figure set and benchmark.</td>
-<td>Parallel to A. Identify a specific distinction, not simply a new merge or more categories.</td>
-</tr>
-<tr>
-<td><strong>C. One descriptive pilot</strong></td>
-<td>Ideas 1-2 jointly: matched distributions, three figure families, complete category tables, annual/common-support results.</td>
-<td>After relevant audits and a fixed protocol. Retain null/reversed patterns and exclusions.</td>
-</tr>
-<tr>
-<td><strong>D. Mechanism assessment</strong></td>
-<td>Access/menu feasibility and refined count/variety comparisons.</td>
-<td>Reuse prior attempts; no restart of failed specifications without a documented reason and prospective revised design.</td>
-</tr>
-<tr>
-<td><strong>E. Paper decision</strong></td>
-<td>Evidence memo: main fact, closest-literature difference, interpretation, limits and remaining work.</td>
-<td>Choose focused descriptive paper, narrower contribution, targeted data or stop. Not a significance test.</td>
-</tr>
-<tr>
-<td><strong>F. Optional historical alternative</strong></td>
-<td>Green Book source/licence check and small outcome-blind linkage/attrition report.</td>
-<td>Separate approval/scope; no national linkage or regression before feasibility.</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>Suggested division:</strong> a construction-audit workstream and a literature/measurement workstream, integrated before the descriptive pilot. These are roles, not assignments to coauthors or jobs already running. The first decision is whether to approve A and B, with C specified in advance; Green Book feasibility is a separately bounded option.</p>
-<p>There is no credible full-run time estimate until input inventory and volume are known. The venue-count calculation took 3.47 seconds on previously built private cells; this is not a national-rebuild benchmark. Measure reading, computation and verification time separately.</p>
-<h2 id="evidence">Evidence and prior attempts</h2>
-<p>This appendix makes the plan readable without local-drive access. It summarises selected results, <strong>not the entire empirical record or new estimates</strong>. Filenames identify the saved research record. Earlier material and contrary results remain preserved. Source fingerprints accompany this delivery; the work is exploratory.</p>
-<h3 id="evidence-audit">Construction and audit</h3>
-<ul>
-<li><strong>Completed:</strong> initial distribution audits, CBG-vintage diagnosis, NHGIS index reconstruction and October final-file audit.</li>
-<li><strong>Scale:</strong> 9,537,963 input POI-years; 8,875,712 common-support rows; 94.91% of positive visit weight retained. These are place-years, not people or a census of establishments.</li>
-<li><strong>Gap:</strong> independent weekly-to-annual flow/metadata reconstruction. Area assignment/vintage and omitted demographic-group mass remain limitations.</li>
-<li><strong>Sources:</strong> construction logs <code>01_poi_processed_indices_and_audits.md</code>, <code>18_origin_cbg_geography_vintage_audit.md</code>, <code>20_origin_cbg_nhgis_robustness.md</code>; <code>74_within_venue_empirical_audit.md</code> (18 October 2026); original pipeline workstream records. No raw inputs were accessed for this revision.</li>
-</ul>
-<h3 id="evidence-mixing">Mixing and the count diagnostic</h3>
-<p>Four-group racial accounting gives within-venue diversity 0.4358 and pooled cell diversity 0.4811: difference 0.0453, or 9.41% of pooled diversity. Cells are area-subcategory-year combinations. This is not a regression coefficient or attitude effect. Note 69 also distinguishes descriptive local deviations from full category-FE coefficients.</p>
-<p>Visit-weighted versus equal-venue means are 0.4358 versus 0.3950 for race and 0.7867 versus 0.6820 for income-origin fractionalization on the audited support. This shows why weights matter, not that one estimand is universally correct. Source: note 74.</p>
-<h4 id="evidence-count">Count pilot: 2019</h4>
-<div class="table-scroll" tabindex="0"><table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 26%" />
-<col style="width: 26%" />
-<col style="width: 26%" />
-</colgroup>
-<thead>
-<tr>
-<th>Venues in an area-subcategory cell</th>
-<th style="text-align: right;">Mean within-venue racial diversity</th>
-<th style="text-align: right;">Mean pooled racial diversity</th>
-<th style="text-align: right;">Mean between-venue fraction</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2-4</td>
-<td style="text-align: right;">0.2861</td>
-<td style="text-align: right;">0.2904</td>
-<td style="text-align: right;">1.11%</td>
-</tr>
-<tr>
-<td>5-9</td>
-<td style="text-align: right;">0.2950</td>
-<td style="text-align: right;">0.3020</td>
-<td style="text-align: right;">1.80%</td>
-</tr>
-<tr>
-<td>10-24</td>
-<td style="text-align: right;">0.3109</td>
-<td style="text-align: right;">0.3217</td>
-<td style="text-align: right;">2.64%</td>
-</tr>
-<tr>
-<td>25-99</td>
-<td style="text-align: right;">0.3487</td>
-<td style="text-align: right;">0.3678</td>
-<td style="text-align: right;">4.34%</td>
-</tr>
-<tr>
-<td>100+</td>
-<td style="text-align: right;">0.4162</td>
-<td style="text-align: right;">0.4577</td>
-<td style="text-align: right;">8.34%</td>
-</tr>
-</tbody>
-</table></div>
-<p>Cells are equally weighted within rows. The last column averages cell ratios; it is not computed from the displayed column means. Within-subcategory log-count/sorting correlations are .5594/.5638/.5676 in 2017/18/19, without holding the same area fixed. Geography, supply and coverage can drive them. Source: <code>75_venue_count_pilot.md</code> and saved aggregate results (19 October 2026). Seven artificial-data tests and 84 independent aggregate SQL checks passed; this reused verified cells, not raw records.</p>
-<h3 id="evidence-resident">Resident exposure and access</h3>
-<p>Resident-based exposure and NHGIS robustness are implemented in <code>26_resident_origin_exposure_results.md</code> and <code>28_origin_cbg_nhgis_robustness_results.md</code>. Venue location and visitor residence are different geographic objects. The matched neighbourhood comparison remains proposed.</p>
-<h4 id="evidence-access">Local access attempts</h4>
-<p>In 11 selected counties across 2017-19, nearby shared-grocery comparisons found roughly 1.7-2.3 percentage-point lower exposure to top-fifth-income home areas for the lower-income-origin group. Around half remained within relative-distance bins. This is selected-sample evidence, not personal-income sorting or identified preferences. Historical menu and route coverage checks failed. Sources: notes 57-59, <code>62_local_exposure_replication_results.md</code> and <code>63_local_distance_replication_results.md</code>.</p>
-<h3 id="evidence-outcomes">Outcomes, workforce and contrary evidence</h3>
-<p>Positive conditional economic-connectedness associations exist in note 56; they are not a uniform null or a causal effect. Held-out prediction in note 64 improved by <strong>3.856% with Atlas child-count weights</strong> and <strong>2.262% with equal-state weights</strong>, but <strong>worsened by 2.313% with equal-county scoring</strong>. The all-three validation requirement failed. Correction <strong>70a</strong> specifies Atlas child counts, not Facebook-user weights.</p>
-<p>Current-county attitude exposure coefficients did not survive the recorded multiple-testing adjustment. Calendar-aligned attitude work failed the support requirement before estimating coefficients: a stopped design, not a null estimate. Earlier parental-location findings are in <code>05_stantcheva_regression_summary.md</code>; that workbook was not reopened for this plan.</p>
-<p>Expected workforce data come from industry/occupation-linked population estimates, not observed venue employees. O*NET public-facing importance is not contact frequency; required education is not observed attainment. All four public-facing concentration screens failed the predeclared 10% maximum-information-share rule (maxima 16.31%, 18.17%, 29.03% and 28.52%). No corrected public-facing coefficient was estimated. Sources: notes 73-74. More venues do not create more independently varying industry scores.</p>
-<h3 id="evidence-alternatives">Other designs and alternatives</h3>
-<p>Sports, closures, transit, routes/facilities and strikes were explored. Traffic responses, limited support or suggestive associations did not establish a robust general composition design. Preserve these attempts rather than describe them as untried. Sources: original-objective review (note 69), transit (36), route/facility audit (42) and strikes (54).</p>
-<p><code>76_green_book_feasibility.md</code> (19 October 2026) is a literature/design assessment, including the distinction between customer prejudice, owner prejudice and changing demand. No historical-modern linkage, historical regression or weather-mixing estimate has been completed for this plan.</p>
-<h2 id="version">Scope of this version</h2>
-<p><strong>19 October 2026, revised coauthor plan.</strong> Complete authored plan with selected evidence summaries, not a transcript, full source-note export or adopted protocol. It replaces the earlier same-day meeting-summary page and proposed ranking as a guide to next steps, not original empirical outputs, protocols or corrections. No original regressions were rerun. The literature assessment is a targeted primary-source screen, not proof of novelty.</p>
-<p><a href="#ranking">Return to ranking</a> | <a href="#actions">Implementation</a> | <a href="#evidence">Evidence</a></p>
-</main><footer><p>Research plan, not an adopted protocol. All reported estimates are saved results. This version supersedes the earlier 19 October meeting-summary page, not the underlying research.</p><p><a href="#ranking">Ranked ideas</a> | <a href="#version">Version and scope</a></p></footer></body></html>
+<p>First distinguish three objects: the diversity inside a venue, the diversity experienced by an origin area’s residents across their visits, and the average diversity of venues located in a destination area. They answer different questions. Pooling everyone across separate establishments creates a fourth object and generally gives a different answer.</p>
+<p>The <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">measurement guide</a> explains these objects with a small numerical example, then explains what a proposed regression would compare. Exact formulas and assumptions remain available in the individual technical reviews; they are not a substitute for a clear economic question.</p>
+<h2 id="details">Detailed reviews</h2>
+<h3 id="idea1">Original idea 1: residential benchmarks</h3>
+<p>How would a conclusion about an integrative service change when residential opportunity, pooled visitors and within-establishment diversity are compared on consistent support? <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/residential-benchmarks.html">Read the full assessment</a>.</p>
+<h3 id="idea2">Original idea 2: incoming and outgoing</h3>
+<p>Do service roles explain a neighbourhood’s different incoming and resident exposure? The simple matched comparison has a close predecessor and is downgraded. <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/incoming-outgoing.html">Read the full assessment</a>.</p>
+<h3 id="idea3">Original idea 3: access and opportunity</h3>
+<p>What can be learned about unequal use when available alternatives are independently measured, and what remains unidentified when they are missing? <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/access-opportunity.html">Read the full assessment</a>.</p>
+<h3 id="idea4">Original idea 4: venue variety</h3>
+<p>Does a between-venue pattern exceed what subdivision and finite information could produce, before invoking tastes or supply? <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/venue-variety.html">Read the full assessment</a>.</p>
+<h3 id="idea5">Original idea 5: Green Book</h3>
+<p>Can firm, site and district persistence be distinguished while retaining demolished and unmatched historical places? <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/green-book.html">Read the full assessment</a>.</p>
+<h3 id="idea6">Original idea 6: weather</h3>
+<p>Could a distinct adaptation mechanism add to existing heat-segregation evidence, with genuinely time-specific visitor composition? <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/weather-mixing.html">Read the full assessment</a>.</p>
+<h3 id="idea7">Original idea 7: infrastructure</h3>
+<p>Could a bounded barrier or access comparison separate historical placement from contemporary mobility, without inventing historical pretrends? <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/historical-infrastructure.html">Read the full assessment</a>.</p>
+<h3 id="idea8">Original idea 8: ancestral attitudes</h3>
+<p>Is a new, correctly timed historical exposure available beyond the parental-location regressions already attempted? <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/ancestral-attitudes.html">Read the full assessment</a>.</p>
+<h2 id="actions">Proposed action plan</h2>
+<ol type="1">
+<li><strong>Validate the construction.</strong> Pin source versions and rules, approve an exact input sample, and independently compare complete-week annual flows before corrected indices. Release an aggregate mismatch and coverage matrix.</li>
+<li><strong>Freeze one descriptive question.</strong> Choose the service comparison and interpretation to be tested before selecting attractive categories. Specify the benchmark, coverage rules, weights and a result that would count against the proposed explanation.</li>
+<li><strong>Run the measurement diagnostic first.</strong> Check whether the venue-count pattern is sensitive to observation intensity, duplicate handling, common support and defensible mechanical baselines. Do not apply the illustrative multinomial correction directly to these data.</li>
+<li><strong>Decide whether a paper remains.</strong> Continue only if the resulting fact is economically important, robust enough to describe and clearly distinct from the closest work. Otherwise retain a measurement appendix, narrow the question or stop that route.</li>
+<li><strong>Optionally screen Green Book in parallel.</strong> A separate outcome-blind source and linkage exercise could determine whether the historical alternative merits a proposal. It is not yet an approved data collection or regression.</li>
+</ol>
+<p>The reviews and four artificial-data identity tests are completed. New empirical investigations, restricted-input processing and historical acquisition await a separate decision. No new regression, dataset acquisition or research goal was launched for this update.</p>
+</main><footer>Reviewed documentation snapshot. No new licensed-data analysis, empirical replication or adopted research protocol is implied. Earlier results and failed gates remain in force.</footer></body></html>
