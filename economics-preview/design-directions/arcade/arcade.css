@@ -1,0 +1,187 @@
+/* Arcade: a stone wall with five round-headed openings onto one view of Durham.
+   The piers carry the incised patterns of Durham Cathedral's nave: spiral, chevron,
+   lattice and flutes. Opening a bay widens its window and reveals a little more. */
+@font-face { font-family: "Open Sans"; src: url("../assets/open-sans-regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Open Sans"; src: url("../assets/open-sans-semibold.woff2") format("woff2"); font-weight: 600 800; font-display: swap; }
+
+:root {
+  --wall: #ece3d5;
+  --wall-rgb: 236 227 213;
+  --mould: #dacbb3;
+  --inc: #cbb999;
+  --navy: #002a41;
+  --purple: #68246d;
+  --muted: #565e64;
+  --hair: rgb(0 42 65 / .13);
+  --sans: "Open Sans", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --ease: cubic-bezier(.25, .7, .15, 1);
+  --round: linear-gradient(90deg, rgb(70 50 20 / .17), rgb(255 255 255 / .16) 36%, transparent 62%, rgb(70 50 20 / .2));
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--wall); color: var(--navy); font: 400 15px/1.5 var(--sans); }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, p, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+button { font: inherit; }
+[hidden] { display: none !important; }
+::selection { background: #ffd53a; color: var(--navy); }
+:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 10; background: #ffd53a; padding: 10px 16px; font-weight: 600; text-decoration: none; }
+.skip:focus { top: 12px; }
+
+/* Header: logo at its own proportions, an inscription for a title. */
+.top { max-width: 1440px; margin: 0 auto; padding: 22px 40px 6px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px 28px; }
+.logo { width: 132px; height: auto; }
+.inscription { text-align: center; font-size: 13px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; line-height: 1.5; }
+.inscription span { display: block; font-size: 12px; font-weight: 400; letter-spacing: .02em; text-transform: none; color: var(--muted); }
+.concept { justify-self: end; text-align: right; font-size: 11px; line-height: 1.6; }
+.concept span { display: block; font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--purple); }
+.concept a { margin-left: 8px; text-underline-offset: 3px; }
+.concept a:hover { color: var(--purple); }
+.lede { text-align: center; font-size: 13px; color: var(--muted); padding: 4px 24px 16px; }
+
+/* The arcade grid: pier · bay · pier · bay … with the open bay given more room. */
+.arcade {
+  --pier: 30px;
+  --win: clamp(230px, 38vh, 400px);
+  --rise: clamp(70px, 7.2vw, 112px);
+  --mw: 8px;
+  position: relative; max-width: 1440px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-rows: var(--win) auto;
+  grid-template-columns: var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 2.4fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier);
+  transition: grid-template-columns .85s var(--ease);
+}
+.arcade[data-open="0"] { grid-template-columns: var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier); }
+.arcade[data-open="1"] { grid-template-columns: var(--pier) minmax(0, 2.4fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier); }
+.arcade[data-open="2"] { grid-template-columns: var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 2.4fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier); }
+.arcade[data-open="4"] { grid-template-columns: var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 2.4fr) var(--pier) minmax(0, 1fr) var(--pier); }
+.arcade[data-open="5"] { grid-template-columns: var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 1fr) var(--pier) minmax(0, 2.4fr) var(--pier); }
+
+/* One photograph behind every window, so the city stays continuous as bays open. */
+.view { grid-column: 1 / -1; grid-row: 1; width: 100%; height: 100%; min-width: 0; object-fit: cover; object-position: 50% 16%; }
+
+/* Windows: transparent openings with a round head and a roll moulding. */
+.window {
+  grid-row: 1; position: relative; z-index: 1; min-width: 0;
+  background: radial-gradient(farthest-side at 50% 100%, transparent calc(100% - var(--mw) - 1px), var(--mould) calc(100% - var(--mw)), var(--mould) calc(100% - 1px), var(--wall) 100%) top center / 100% var(--rise) no-repeat;
+  box-shadow: inset 0 0 0 100vmax rgb(var(--wall-rgb) / .38);
+  transition: box-shadow .85s var(--ease);
+}
+.window::before { content: ""; position: absolute; inset: var(--rise) 0 0; border-inline: var(--mw) solid var(--mould); }
+.window.is-open { box-shadow: inset 0 0 0 100vmax rgb(var(--wall-rgb) / 0); }
+.is-live .window { cursor: pointer; }
+.is-live .window:not(.is-open):hover { box-shadow: inset 0 0 0 100vmax rgb(var(--wall-rgb) / .18); }
+.w1 { grid-column: 2; } .w2 { grid-column: 4; } .w3 { grid-column: 6; } .w4 { grid-column: 8; } .w5 { grid-column: 10; }
+
+/* Piers, cushion capitals and incised shafts. */
+.pier { grid-row: 1; position: relative; z-index: 2; background: var(--wall); }
+.pier::before { content: ""; position: absolute; left: -6px; right: -6px; top: calc(var(--rise) - 16px); height: 16px; background: var(--mould); border-radius: 0 0 11px 11px; box-shadow: 0 2px 0 rgb(70 50 20 / .1); }
+.pier::after { content: ""; position: absolute; inset: var(--rise) 0 0; background: var(--round), var(--wall); }
+.p0 { grid-column: 1; } .p1 { grid-column: 3; } .p2 { grid-column: 5; } .p3 { grid-column: 7; } .p4 { grid-column: 9; } .p5 { grid-column: 11; }
+.p0::before { left: 0; border-bottom-left-radius: 0; }
+.p5::before { right: 0; border-bottom-right-radius: 0; }
+.spiral::after { background: var(--round), repeating-linear-gradient(155deg, var(--wall) 0 8px, var(--inc) 8px 12px); }
+.chevron::after {
+  background:
+    var(--round),
+    linear-gradient(135deg, var(--inc) 25%, transparent 25%) -8px 0 / 16px 16px,
+    linear-gradient(225deg, var(--inc) 25%, transparent 25%) -8px 0 / 16px 16px,
+    linear-gradient(315deg, var(--inc) 25%, transparent 25%) 0 0 / 16px 16px,
+    linear-gradient(45deg, var(--inc) 25%, transparent 25%) 0 0 / 16px 16px,
+    var(--wall);
+}
+.lattice::after { background: var(--round), repeating-linear-gradient(45deg, transparent 0 9px, var(--inc) 9px 11px), repeating-linear-gradient(-45deg, transparent 0 9px, var(--inc) 9px 11px), var(--wall); }
+.flutes::after { background: var(--round), repeating-linear-gradient(90deg, var(--wall) 0 4px, var(--inc) 4px 6px); }
+.string-course { grid-column: 1 / -1; grid-row: 1; align-self: end; z-index: 3; height: 12px; background: var(--mould); box-shadow: inset 0 2px 0 rgb(255 255 255 / .45), 0 3px 0 rgb(70 50 20 / .07); }
+
+/* Bay texts sit on the wall beneath their windows. */
+.bay { grid-row: 2; min-width: 0; padding: 22px 6px 34px; }
+.b1 { grid-column: 2; } .b2 { grid-column: 4; } .b3 { grid-column: 6; } .b4 { grid-column: 8; } .b5 { grid-column: 10; }
+.bay h2 { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--purple); line-height: 1.3; }
+.num { flex: none; min-width: 2.3em; font-size: 11px; letter-spacing: .08em; color: var(--muted); }
+.bay-toggle { display: flex; align-items: baseline; gap: 10px; width: 100%; padding: 4px 0; border: 0; background: none; color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; text-align: left; cursor: pointer; }
+.bay-toggle::after { content: "+"; margin-left: auto; font-size: 17px; line-height: 1; letter-spacing: 0; color: var(--navy); transition: transform .4s var(--ease); }
+.bay-toggle[aria-expanded="true"]::after { transform: rotate(45deg); }
+.bay-toggle:hover .name { text-decoration: underline; text-underline-offset: 4px; }
+
+.routes li { border-top: 1px solid var(--hair); }
+.routes a { display: block; padding: 9px 0 10px; text-decoration: none; }
+.r { display: block; font-size: 14px; font-weight: 600; line-height: 1.3; }
+.arw { color: var(--purple); }
+.key { display: inline-block; margin-top: 4px; padding: 1px 6px; background: var(--navy); color: #fff; font-size: 9.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.desc { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.4; color: var(--muted); }
+.routes a:hover .r { color: var(--purple); text-decoration: underline; text-underline-offset: 3px; }
+.minor .r { font-size: 12.5px; font-weight: 400; }
+
+/* Seminars bay */
+.talk { border-top: 1px solid var(--hair); }
+.talk a { display: block; padding: 10px 0 11px; text-decoration: none; }
+.talk time { display: block; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--purple); }
+.talk time span { color: var(--muted); font-weight: 400; }
+.talk strong { display: block; margin: 3px 0 2px; font-size: 22px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; }
+.who { display: block; font-size: 12.5px; line-height: 1.4; color: var(--muted); }
+.who b { color: var(--navy); font-weight: 600; }
+.talk .title { font-style: italic; color: var(--navy); }
+.talk .tbc { color: var(--muted); }
+.talk a:hover strong, .talk a:hover .who b { color: var(--purple); text-decoration: underline; text-underline-offset: 3px; }
+.programme { display: inline-block; margin-top: 10px; padding: 4px 0 3px; border-bottom: 2px solid var(--purple); font-size: 13px; font-weight: 600; text-decoration: none; }
+.programme:hover { color: var(--purple); }
+.snapshot { margin-top: 8px; font-size: 11px; color: var(--muted); }
+
+/* Life bay */
+.insta { display: flex; align-items: flex-start; gap: 9px; padding: 9px 0 6px; border-top: 1px solid var(--hair); text-decoration: none; font-size: 14px; line-height: 1.35; }
+.insta svg { flex: none; width: 24px; height: 24px; color: var(--purple); }
+.insta strong { display: block; font-weight: 600; }
+.insta:hover strong { color: var(--purple); text-decoration: underline; text-underline-offset: 3px; }
+.insta-note { font-size: 12px; line-height: 1.45; color: var(--muted); }
+.b5 .desc { margin-top: 8px; }
+
+/* With JS, closed bays keep every link but fold away their descriptions. */
+.is-live .bay:not(.is-open) .desc { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .is-live .bay.is-open .desc { animation: reveal .55s var(--ease) both; }
+  @keyframes reveal { from { opacity: 0; transform: translateY(-3px); } }
+}
+
+/* Plinth footer */
+.plinth { background: var(--navy); color: #cbd7de; margin-top: 8px; }
+.plinth-inner { max-width: 1440px; margin: 0 auto; padding: 26px 40px 34px; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, .8fr); gap: 18px 40px; font-size: 12px; line-height: 1.6; }
+.plinth nav { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.plinth a { color: #fff; font-weight: 600; text-underline-offset: 3px; padding: 3px 0; }
+.plinth a:hover { color: #ffd53a; }
+.plinth :focus-visible { outline-color: #ffd53a; }
+
+/* Below desktop width the arcade becomes a frieze; the bays stack beneath it. */
+@media (max-width: 1079px) {
+  .top { grid-template-columns: auto 1fr; padding: 18px 28px 6px; }
+  .inscription { grid-column: 1 / -1; grid-row: 2; text-align: left; }
+  .concept { grid-column: 2; grid-row: 1; }
+  .lede { text-align: left; padding: 2px 28px 14px; }
+  .arcade { --pier: 14px; --win: clamp(124px, 24vw, 230px); --rise: clamp(20px, 5.6vw, 56px); --mw: 5px; padding: 0 28px; grid-template-rows: var(--win) repeat(5, auto); }
+  .pier::before { left: -3px; right: -3px; height: 9px; top: calc(var(--rise) - 9px); border-radius: 0 0 6px 6px; }
+  .string-course { height: 8px; }
+  .bay { grid-column: 1 / -1 !important; padding: 16px 0 18px; border-top: 1px solid var(--hair); }
+  .bay:first-of-type { border-top: 0; }
+  .b1 { grid-row: 2; } .b2 { grid-row: 3; } .b3 { grid-row: 4; } .b4 { grid-row: 5; } .b5 { grid-row: 6; }
+  .routes { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(230px, 100%), 1fr)); column-gap: 28px; }
+  .talks { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr)); column-gap: 28px; }
+  .talk strong { font-size: 20px; }
+  .plinth-inner { grid-template-columns: 1fr 1fr; padding: 24px 28px 30px; }
+  .plinth-inner > p { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+  .top { padding: 14px 16px 4px; }
+  .logo { width: 112px; }
+  .inscription { font-size: 12px; letter-spacing: .2em; }
+  .concept a { display: block; margin: 0; }
+  .lede { padding: 2px 16px 12px; font-size: 12.5px; }
+  .arcade { --pier: 10px; padding: 0 16px; }
+  .plinth-inner { grid-template-columns: 1fr; padding: 22px 16px 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation: none !important; }
+}

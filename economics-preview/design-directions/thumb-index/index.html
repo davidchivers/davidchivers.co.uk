@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thumb Index · Economics at Durham · design concept 1</title>
+<meta name="description" content="Design concept: every useful Economics at Durham link, set as an A to Z index.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="index.css">
+<script src="index.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#index">Skip to the index</a>
+
+<div class="leaf">
+  <header class="masthead">
+    <img class="logo" src="../assets/durham-logo.svg" width="240" height="99" alt="Durham University">
+    <div class="title">
+      <h1>Economics at Durham <span>an index</span></h1>
+      <p>Courses, first weeks, sign-ins, seminars and student life, from A to Z.</p>
+    </div>
+    <p class="concept"><span class="concept-tag">Design concept 1</span> <span class="concept-name">Thumb Index</span> <a href="../index.html">All four concepts</a></p>
+  </header>
+
+  <div class="tools">
+    <fieldset class="lens">
+      <legend>Highlight for</legend>
+      <label><input type="radio" name="lens" value="all" checked><span>Everyone</span></label>
+      <label><input type="radio" name="lens" value="apply"><span>Applying</span></label>
+      <label><input type="radio" name="lens" value="arrive"><span>Arriving</span></label>
+      <label><input type="radio" name="lens" value="study"><span>Studying here</span></label>
+    </fieldset>
+    <div class="find" data-find hidden>
+      <label for="find">Find in the index</label>
+      <div class="find-field">
+        <input id="find" type="search" autocomplete="off" spellcheck="false" placeholder="Try sign-in, PhD or seminar" aria-describedby="find-hint">
+        <button type="button" class="find-clear" data-clear hidden>Clear</button>
+      </div>
+      <p class="find-hint" id="find-hint">Down arrow moves to the first match.</p>
+    </div>
+    <p class="status" id="index-status" role="status" aria-live="polite"></p>
+  </div>
+
+  <nav class="thumbs" aria-label="Jump to a letter">
+    <a href="#a" data-for="arrive">A</a>
+    <a href="#b" data-for="apply study">B</a>
+    <a href="#c" data-for="apply study">C</a>
+    <a href="#d" data-for="apply">D</a>
+    <a href="#g" data-for="study">G</a>
+    <a href="#i" data-for="apply arrive study">I</a>
+    <a href="#m" data-for="apply arrive">M</a>
+    <a href="#n" data-for="arrive">N</a>
+    <a href="#o" data-for="apply">O</a>
+    <a href="#p" data-for="apply study">P</a>
+    <a href="#r" data-for="apply">R</a>
+    <a href="#s" data-for="apply arrive study">S</a>
+    <a href="#v" data-for="apply">V</a>
+    <a href="#w" data-for="arrive study">W</a>
+  </nav>
+
+  <main class="index" id="index" tabindex="-1">
+    <h2 class="visually-hidden">Index, A to Z</h2>
+
+    <div class="empty" data-empty hidden>
+      <p>Nothing in the index for <q></q>.</p>
+      <p class="empty-try">Try <button type="button" data-try="seminar">seminar</button> <button type="button" data-try="sign-in">sign-in</button> <button type="button" data-try="PhD">PhD</button> or <button type="button" data-clear>show the whole index</button>.</p>
+    </div>
+
+    <div class="columns">
+      <section class="letter" id="a" aria-labelledby="h-a">
+        <h3 id="h-a">A</h3>
+        <ul>
+          <li class="entry" id="e-arrival" data-for="arrive" data-terms="before you arrive packing new students travel" style="--i:0">
+            <a href="https://www.durham.ac.uk/study/undergraduate/offer/before-you-arrive/checklist-for-new-students/"><span class="text"><span class="hw">Arrival checklist</span> <span class="sub">before you travel</span></span><span class="dots" aria-hidden="true"></span><span class="loc">durham.ac.uk <span aria-hidden="true">↗</span></span></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="b" aria-labelledby="h-b">
+        <h3 id="h-b">B</h3>
+        <ul>
+          <li class="entry" id="e-blackboard" data-for="study" data-terms="sign in login log in vle learn ultra teaching materials lectures modules" style="--i:1">
+            <a href="https://blackboard.durham.ac.uk/"><span class="text"><span class="hw">Blackboard</span> <span class="sub">teaching materials</span></span><span class="dots" aria-hidden="true"></span><span class="loc">sign-in <span aria-hidden="true">↗</span></span></a>
+          </li>
+          <li class="entry" id="e-bsc" data-for="apply" data-terms="undergraduate degree ucas course study" style="--i:2">
+            <a href="https://www.durham.ac.uk/business/courses/economics-l100/"><span class="text"><span class="hw">BSc Economics</span> <span class="sub">undergraduate degree</span></span><span class="dots" aria-hidden="true"></span><span class="loc">durham.ac.uk <span aria-hidden="true">↗</span></span></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="c" aria-labelledby="h-c">
+        <h3 id="h-c">C</h3>
+        <ul>
+          <li class="entry" id="e-careers" data-for="study" data-terms="jobs employability internships placements opportunities" style="--i:3">
+            <a href="https://www.durham.ac.uk/business/programmes/undergraduate/employability-and-career-for-economics-students-/"><span class="text"><span class="hw">Careers and opportunities</span> <span class="sub">for Economics students</span></span><span class="dots" aria-hidden="true"></span><span class="loc">durham.ac.uk <span aria-hidden="true">↗</span></span></a>
+          </li>
+          <li class="entry xref" data-for="apply" data-terms="courses degrees programmes bsc msc masters phd study" style="--i:4">
+            <p><span class="hw">Courses</span>, <i>see</i> <a href="#e-bsc">BSc Economics</a>; <a href="#e-masters">Master’s programmes</a>; <a href="#e-phd">PhD in Economics</a></p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="d" aria-labelledby="h-d">
+        <h3 id="h-d">D</h3>
+        <ul>
+          <li class="entry" id="e-department" data-for="apply" data-terms="official department website economics about" style="--i:5">
+            <a href="https://www.durham.ac.uk/business/about/departments/economics/"><span class="text"><span class="hw">Department website</span> <span class="sub">the official one</span></span><span class="dots" aria-hidden="true"></span><span class="loc">durham.ac.uk <span aria-hidden="true">↗</span></span></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="g" aria-labelledby="h-g">
+        <h3 id="h-g">G</h3>
+        <ul>
+          <li class="entry" id="e-gateway" data-for="study" data-terms="student gateway sharepoint business school sign in login log in" style="--i:6">
+            <a href="https://durhamuniversity.sharepoint.com/teams/BUS-Students"><span class="text"><span class="hw">Gateway, Student</span> <span class="sub">Business School students’ site</span></span><span class="dots" aria-hidden="true"></span><span class="loc">sign-in <span aria-hidden="true">↗</span></span></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="i" aria-labelledby="h-i">
+        <h3 id="h-i">I</h3>
+        <ul>
+          <li class="entry" id="e-induction" data-for="arrive" data-terms="induction calendar welcome events first weeks freshers new students" style="--i:7">
+            <a href="https://apps.dur.ac.uk/induction/calendar"><span class="text"><span class="hw">Induction planner</span> <span class="sub">your first weeks</span></span><span class="dots" aria-hidden="true"></span><span class="loc">dur.ac.uk <span aria-hidden="true">↗</span></span></a>
+          </li>
+          <li class="entry" id="e-instagram" data-for="apply arrive study" data-terms="instagram social media student life photos thedurhamstudent" style="--i:8">
+            <a href="https://www.instagram.com/thedurhamstudent/"><span class="text"><span class="hw">Instagram</span> <span class="sub">@thedurhamstudent</span></span><span class="dots" aria-hidden="true"></span><span class="loc">instagram.com <span aria-hidden="true">↗</span></span></a>
+            <p class="note">The existing Durham Student account, an example until Economics has its own.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="m" aria-labelledby="h-m">
+        <h3 id="h-m">M</h3>
+        <ul>
+          <li class="entry" id="e-masters" data-for="apply" data-terms="masters msc postgraduate taught course" style="--i:9">
+            <a href="https://www.durham.ac.uk/business/programmes/masters/masters-in-economics/"><span class="text"><span class="hw">Master’s programmes</span> <span class="sub">in Economics</span></span><span class="dots" aria-hidden="true"></span><span class="loc">durham.ac.uk <span aria-hidden="true">↗</span></span></a>
+          </li>
+          <li class="entry minor" id="e-prep" data-for="arrive" data-terms="msc preparation introduction to economics course maths" style="--i:10">
+            <a href="https://dubs.awh.durham.ac.uk/econ/msc/"><span class="text"><span class="hw">MSc preparation</span> <span class="sub">the original course</span></span><span class="dots" aria-hidden="true"></span><span class="loc">course site <span aria-hidden="true">↗</span></span></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="n" aria-labelledby="h-n">
+        <h3 id="h-n">N</h3>
+        <ul>
+          <li class="entry" id="e-new" data-for="arrive" data-terms="new students welcome starting joining" style="--i:11">
+            <a href="https://www.durham.ac.uk/business/about/departments/economics/welcome-to-new-students/"><span class="text"><span class="hw">New students</span> <span class="sub">the department welcome</span></span><span class="dots" aria-hidden="true"></span><span class="loc">durham.ac.uk <span aria-hidden="true">↗</span></span></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="o" aria-labelledby="h-o">
+        <h3 id="h-o">O</h3>
+        <ul>
+          <li class="entry" id="e-open" data-for="apply" data-terms="open days visits visit campus tours" style="--i:12">
+            <a href="https://www.durham.ac.uk/visit-us/open-days/"><span class="text"><span class="hw">Open days and visits</span></span><span class="dots" aria-hidden="true"></span><span class="loc">durham.ac.uk <span aria-hidden="true">↗</span></span></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="p" aria-labelledby="h-p">
+        <h3 id="h-p">P</h3>
+        <ul>
+          <li class="entry" id="e-people" data-for="apply study" data-terms="people staff academics lecturers faculty" style="--i:13">
+            <a href="https://www.durham.ac.uk/business/about/departments/economics/our-people/academic-staff/"><span class="text"><span class="hw">People</span> <span class="sub">academic staff</span></span><span class="dots" aria-hidden="true"></span><span class="loc">durham.ac.uk <span aria-hidden="true">↗</span></span></a>
+          </li>
+          <li class="entry" id="e-phd" data-for="apply" data-terms="phd doctorate doctoral research postgraduate" style="--i:14">
+            <a href="https://www.durham.ac.uk/business/about/departments/economics/phd-in-economics/"><span class="text"><span class="hw">PhD in Economics</span></span><span class="dots" aria-hidden="true"></span><span class="loc">durham.ac.uk <span aria-hidden="true">↗</span></span></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="r" aria-labelledby="h-r">
+        <h3 id="h-r">R</h3>
+        <ul>
+          <li class="entry" id="e-research" data-for="apply" data-terms="research groups papers" style="--i:15">
+            <a href="https://www.durham.ac.uk/business/about/departments/economics/research/"><span class="text"><span class="hw">Research</span> <span class="sub">in the department</span></span><span class="dots" aria-hidden="true"></span><span class="loc">durham.ac.uk <span aria-hidden="true">↗</span></span></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="s" aria-labelledby="h-s">
+        <h3 id="h-s">S</h3>
+        <ul>
+          <li class="entry seminars" id="e-seminars" data-for="study" data-terms="seminars talks speakers visiting research calendar programme tvede deshpande sekeris sheffield ashoka toulouse" style="--i:16">
+            <a href="https://davidchivers.co.uk/seminars/"><span class="text"><span class="hw">Seminars</span> <span class="sub">visiting speakers</span></span><span class="dots" aria-hidden="true"></span><span class="loc">programme <span aria-hidden="true">↗</span></span></a>
+            <ul class="subs">
+              <li><a href="https://davidchivers.co.uk/seminars/"><span class="text"><span class="nm">Tvede, Mich</span> <span class="aff">Sheffield</span> <i>Algorithmic equilibria</i></span><span class="dots" aria-hidden="true"></span><span class="loc"><time datetime="2026-10-21">Wed 21 Oct</time></span></a></li>
+              <li><a href="https://davidchivers.co.uk/seminars/"><span class="text"><span class="nm">Deshpande, Ashwini</span> <span class="aff">Ashoka</span> <i>Punishment and crime: Impact of death sentences on local crime rates in India</i></span><span class="dots" aria-hidden="true"></span><span class="loc"><time datetime="2026-11-11">Wed 11 Nov</time></span></a></li>
+              <li><a href="https://davidchivers.co.uk/seminars/"><span class="text"><span class="nm">Sekeris, Petros</span> <span class="aff">Toulouse Business School</span> <span class="tbc">title to follow</span></span><span class="dots" aria-hidden="true"></span><span class="loc"><time datetime="2026-11-18">Wed 18 Nov</time></span></a></li>
+            </ul>
+            <p class="note">Snapshot checked 19 October 2026. Times, rooms and calendars are on the seminar page.</p>
+          </li>
+          <li class="entry xref" data-for="study" data-terms="sign in login log in blackboard gateway" style="--i:17">
+            <p><span class="hw">Sign-in</span>, <i>see</i> <a href="#e-blackboard">Blackboard</a>; <a href="#e-gateway">Gateway, Student</a></p>
+          </li>
+          <li class="entry xref" data-for="apply arrive study" data-terms="student life social instagram" style="--i:18">
+            <p><span class="hw">Student life</span>, <i>see</i> <a href="#e-instagram">Instagram</a></p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="v" aria-labelledby="h-v">
+        <h3 id="h-v">V</h3>
+        <ul>
+          <li class="entry xref" data-for="apply" data-terms="visits visit open days" style="--i:19">
+            <p><span class="hw">Visits</span>, <i>see</i> <a href="#e-open">Open days and visits</a></p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="letter" id="w" aria-labelledby="h-w">
+        <h3 id="h-w">W</h3>
+        <ul>
+          <li class="entry xref" data-for="arrive" data-terms="welcome new students induction" style="--i:20">
+            <p><span class="hw">Welcome</span>, <i>see</i> <a href="#e-new">New students</a>; <a href="#e-induction">Induction planner</a></p>
+          </li>
+          <li class="entry" id="e-workshops" data-for="study" data-terms="workshops conferences events" style="--i:21">
+            <a href="https://www.durham.ac.uk/business/about/departments/economics/news-and-events/workshops-and-conferences/"><span class="text"><span class="hw">Workshops and conferences</span></span><span class="dots" aria-hidden="true"></span><span class="loc">durham.ac.uk <span aria-hidden="true">↗</span></span></a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="colophon">
+    <h2>Colophon</h2>
+    <p>Design concept 1 of 4: a design proposal by David Chivers, October 2026. This is not an official Durham University information service. Current official information is on the linked pages.</p>
+    <nav aria-label="About this concept">
+      <a href="../index.html">Compare all four concepts</a>
+      <a href="../../index.html">Baseline design</a>
+      <a href="../../sources.html">Sources and credits</a>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>
