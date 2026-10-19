@@ -1,0 +1,25 @@
+{
+  "stage": "public_document_consistency_check_not_inventory_validation",
+  "source_url": "https://www.hpo.nc.gov/survey-and-national-register/green-book-mpdf/open",
+  "source_sha256": "c27d3c35b6f368d0623732837819995e0d38f797e8a20ce62c77dd1ece46e303",
+  "source_bytes": 3835007,
+  "source_pages": 139,
+  "parser": "pdfplumber",
+  "parser_version": "0.11.9",
+  "physical_pages_counted": [
+    124,
+    125
+  ],
+  "unknown_table_printed_rows_by_page": {
+    "124": 8,
+    "125": 21
+  },
+  "unknown_table_printed_rows_total": 29,
+  "source_stated_unknown_total": 28,
+  "source_stated_total_location": "PDF pp.101,117,124; visually checked",
+  "not_a_corrected_resource_count": true,
+  "no_inventory_rows_exported": true,
+  "restricted_data_accessed": false,
+  "interpretation": "Printed-row count disagrees with stated total. Identity, duplicates and correct historical denominator are unresolved.",
+  "verifier_sha256": "310f46e305525a01aeee36df10badc06190524a6a030dad9b2cc20e4a77cad28"
+}
