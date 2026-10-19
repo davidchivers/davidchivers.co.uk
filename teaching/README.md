@@ -107,3 +107,24 @@ The two Brexit seminar question sheets are scrolling HTML at `/teaching/macro-ap
 The Political Economy section now lists all five lectures individually and links to four seminar placeholders: questions and answers for each of two seminars. The placeholders are maintained in `political_economy_seminars_quarto/publication_placeholders/`, with stable destinations recorded in that project's `publication.json` and this site's sync script. The local seminar drafts and tutor notes are not published. Replace the placeholders at the same URLs only when their contents are ready and approved. All nine Political Economy Blackboard links are to be placed in the David section and kept hidden.
 
 These seminar question pages are HTML. Seminar 1 links to three original reading PDFs under `macro-applications/seminars/readings/`, opening each in a new tab. The wider module Talis link remains. These are reading papers, not PDF exports of the handout; `READINGS` in the sync script preserves their explicit publication allow-list. Existing Brexit lecture downloads remain unchanged. This is a light-touch source conversion; preserved maths and references have not had an independent full audit.
+
+### Lecture 3 teaching polish and shared previews, 19 October 2026
+
+The welfare and restructuring questions now have explicit click-to-reveal
+buttons. Welfare areas respond to hover, click and keyboard focus. Equations,
+E-prime and A labels are spaced clearly, and the unexplained loss marker has
+been removed. The empirical slide uses the European Commission's 2024 report
+(data for 2000–2019), with its measure and causal limitation stated.
+
+All five lectures share the closing-preview layout and preparation prompts;
+Lecture 5 closes with revision. Chapter references give the chapter title and
+identify the seventh edition for chapter numbers. There are now 24, 26, 32,
+28 and 30 slides respectively. All five PowerPoints were rebuilt and rendered,
+with disclosures open in these static student copies. Existing HTML and
+Download URLs, the old l3-s09 redirect, and Blackboard visibility are preserved.
+
+This selected publication used the canonical project's
+`scripts/publish_teaching_polish.py` after its capture and validation checks.
+It updates only the five HTML/PowerPoint pairs and their manifest records.
+The legacy PDFs were not selected or rebuilt; a full sync requiring current
+PDFs is therefore inappropriate for this revision.
