@@ -47,24 +47,22 @@ html { scroll-padding-top: 92px; }
 .events-section .section-intro p,.events-section .eyebrow,
 .event-date span,.event-main small,.event-speaker span,.event-foot p { color: #fff; }
 .social-section { padding-block: 60px; }
-.instagram-preview { min-width: 0; background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 26px #21252908; }
-.instagram-profile { display: flex; align-items: center; gap: 13px; padding: 20px; }
-.instagram-icon { width: 43px; height: 43px; display: grid; place-items: center; flex: 0 0 auto; background: var(--purple); color: #fff; border-radius: 50%; }
-.instagram-icon svg { width: 25px; height: 25px; }
-.instagram-profile strong { display: block; font-size: 14px; font-weight: 600; }
-.instagram-profile small { display: block; font-size: 11px; color: var(--muted); margin-top: 3px; }
-.instagram-profile > .arrow { margin-left: auto; width: 21px; height: 21px; color: var(--purple); }
-.instagram-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 3px; overflow: hidden; }
-.instagram-grid img { width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; display: block; }
-.instagram-footer { padding: 18px 20px 16px; }
-.instagram-cta { display: flex; align-items: center; justify-content: center; gap: 16px; min-height: 44px; background: var(--purple); color: #fff; font-size: 12px; font-weight: 600; border-radius: 4px; }
-.instagram-cta .arrow { width: 19px; height: 19px; }
-.instagram-footer p { color: var(--muted); font-size: 9px; text-align: center; margin: 11px 0 0; }
-.instagram-footer p a { text-decoration: underline; text-underline-offset: 3px; }
-.instagram-preview a:focus-visible { outline: 3px solid var(--purple); outline-offset: -3px; }
-.instagram-cta:focus-visible { outline-color: #fff; outline-offset: -5px; }
-.instagram-profile:hover strong { text-decoration: underline; text-underline-offset: 4px; }
-.instagram-cta:hover { background: #522056; }
+.instagram-stage { min-width: 0; background: #f7f7f7; display: flex; flex-direction: column; align-items: center; padding: 26px 20px 20px; }
+.instagram-phone { width: 274px; max-width: 100%; background: #fff; border: 7px solid #212529; border-radius: 34px; padding-top: 17px; overflow: hidden; box-shadow: 0 12px 30px #21252917; }
+.phone-speaker { display: block; width: 45px; height: 4px; margin: -7px auto 5px; background: #212529; border-radius: 4px; }
+.instagram-profile { display: flex; align-items: center; gap: 9px; padding: 11px 13px 12px; }
+.instagram-icon { width: 24px; height: 24px; color: var(--purple); flex: 0 0 auto; }
+.instagram-profile strong { display: block; font-size: 11px; font-weight: 600; }
+.instagram-profile small { display: block; font-size: 9px; color: var(--muted); margin-top: 2px; }
+.matriculation-video { width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: contain; display: block; background: #212529; }
+.instagram-post { padding: 13px 14px 12px; }
+.instagram-post > strong { font-size: 12px; display: block; }
+.instagram-post > a { display: flex; align-items: center; justify-content: space-between; min-height: 44px; color: var(--purple); font-size: 11px; font-weight: 600; }
+.instagram-post .arrow { width: 18px; height: 18px; }
+.instagram-credit { font-size: 9px; color: var(--muted); text-align: center; margin: 18px 0 0; }
+.instagram-credit a { text-decoration: underline; text-underline-offset: 3px; }
+.instagram-phone a:focus-visible { outline: 3px solid var(--purple); outline-offset: -3px; }
+.instagram-profile:hover strong,.instagram-post > a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .site-footer { background: #212529; }
 .footer-top p,.footer-bottom { color: #ebebeb; }
 .dialog::backdrop { background: rgba(33,37,41,.7); }
@@ -93,10 +91,7 @@ html { scroll-padding-top: 92px; }
   .path-grid a,.path-grid a:first-child,.path-grid a:last-child { padding-block: 14px; }
   .section { padding-block: 42px; }
   .events-section,.social-section { padding-block: 48px; }
-  .instagram-profile { padding: 16px; gap: 10px; }
-  .instagram-profile strong { font-size: 12px; }
-  .instagram-profile small { font-size: 10px; }
-  .instagram-footer { padding: 15px; }
+  .instagram-stage { padding: 24px 14px 20px; }
 }
 @media (max-width: 360px) {
   .brand { gap: 12px; }
