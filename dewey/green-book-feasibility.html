@@ -1,0 +1,204 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Green Book data: feasibility and remaining gaps</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} figure{margin:28px 0} figure img, main img{max-width:100%;height:auto;display:block} figcaption{font-size:14px} table td:first-child{min-width:130px}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Green Book data: feasibility and remaining gaps</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>Date: 19 October 2026. Bounded sidecar for the first research milestone packet.</p>
+<h2 id="decision">Decision</h2>
+<p><strong>NARROW: a North Carolina historical-site pilot is worth preparing, but historical-to-modern linkage is not ready to run.</strong> Public structured data and useful schemas exist despite the blocked Ohio State project page. None of the sources checked delivers a verified, licensed establishment-edition-to-parcel crosswalk with site/operation states dated to 2017-2019.</p>
+<p>The concrete remaining gap is not another literature search: obtain the NC master inventory and its exact terms, reconcile its resource unit to original listings, and recover dated site histories. National firm-persistence or modern visitor-composition claims should remain on hold. No modern POI file, exposure outcome or restricted provider record was accessed.</p>
+<p>Scope follows the current authorization and notes 83/88. Main retains ranks 1/2, integration and publication; its rank-4 IMLS audit is separate. Earlier notes recording an acquisition hold are historical, not a reason to disregard this authorized source check.</p>
+<h2 id="verified-access-and-files">Verified access and files</h2>
+<h3 id="public-library-route-actual-cc0-files">Public library route: actual CC0 files</h3>
+<p>NYPL’s official repositories provide a working, no-payment route. README/licence, parsing scripts and four substantive JSON files were inspected; data bytes were parsed only in local process memory. No listing records were printed or persisted. Exact commit-pinned download URLs, SHA-256 hashes, byte sizes and schemas are in <span>NYPL inventory</span>. <a href="https://github.com/NYPL-publicdomain/greenbooks">NYPL text/data repository</a>; <a href="https://github.com/NYPL-publicdomain/greenbook-map">NYPL map repository</a>.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Exact file</th>
+<th>Verified unit/count</th>
+<th>Fields and limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>greenbooks/geojson/1947.geojson</code></td>
+<td>1,056 Point features; 929 distinct coordinate pairs</td>
+<td>Name, original/geocoded address, category, city/state/year, confidence, page/image/capture links. Only 23 state labels; NC is absent. Not a verified national frame.</td>
+</tr>
+<tr>
+<td><code>greenbook-map/data/greenbook_1947.json</code></td>
+<td>796 rows; 692 distinct coordinate pairs</td>
+<td>Name/address/type/year, lat-lon pair and scan/image links.</td>
+</tr>
+<tr>
+<td><code>greenbook-map/data/greenbook_1956.json</code></td>
+<td>1,505 rows; 1,468 distinct coordinate pairs</td>
+<td>Name/address/type/year and lat-lon pair; no scan-link columns in this derivative.</td>
+</tr>
+<tr>
+<td><code>greenbook-map/scripts/data/1947.geojson</code></td>
+<td>797 features, one null; 796 non-null</td>
+<td>Coordinate key is literally <code>geomotry</code>, not standard <code>geometry</code>; the supplied parser accommodates it.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The two repositories are CC0; pinned commits are <code>45328936f4984830f6916922238ed5e8c4e024b6</code> and <code>4e5520002ee8ffcf45a1df8d81a0f1c2293ca79d</code>. The 1,056/796 difference is <strong>unreconciled</strong>: no record-level subset/equivalence test was done. Numeric coordinate validity is not parcel accuracy, and confidence calibration is undocumented in the material checked. None supplies verified closure dates or firm continuity. Do not concatenate 1947/1956 as a harmonized panel.</p>
+<p>The text repository covers 21 OCR volumes labelled 1937-1963/64, with gaps. hOCR describes page-image layout, not geographic coordinates. The map is archived/deprecated. Its README attributes 1956 data to University of South Carolina collaborators; the original USC collection endpoint returned 403, so that original release was not independently verified. Repository CC0 is the structured-data basis used here; it does not settle worldwide rights in every linked scan.</p>
+<h3 id="journalauthor-route-wrong-public-unit-for-linkage">Journal/author route: wrong public unit for linkage</h3>
+<p>The QJE replication deposit, DOI <strong>10.7910/DVN/NXFB5R</strong>, exposes version <strong>1.1</strong>, released <strong>16 December 2022</strong>, under <strong>CC0 1.0</strong>. Dataset metadata and all <strong>13 tabular DDI schemas</strong> were read, within a 53-file deposit. Their units are national/state/county/city aggregates; no establishment address-coordinate bridge was found in those schemas. Several year fields span 1939-1955, but min/max statistics do not prove uninterrupted annual coverage. <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/NXFB5R">Harvard deposit</a>.</p>
+<p>Exact further targets are <code>CJLR_Replication_ReadMe.pdf</code> (file ID 6421201) and <code>CJLR_GreenBooks_QJE_Rep.do</code> (6421209). Their metadata/checksums were recorded, but the README download returned 403 and its contents were <strong>not read</strong>. Later metadata refresh attempts also returned 403. This is verified deposit metadata/schema access, <strong>not verified delivery of the complete replication package</strong>. <span>File IDs, endpoints and all tabular schemas</span>.</p>
+<p>The JUE author’s public appendix is accessible. Geocoding-method shares are 79.26% numbered street, 6.32% intersection, 7.40% midpoint, 0.38% descriptive, 1.04% approximate and 5.60% county centroid. The authors’ exact category can include geocoder/manual agreement within one mile; those shares do not certify modern parcel matches. They harmonize addresses across editions, and some temporary listing gaps are filled. A site-history application needs original edition addresses, relocation/gap flags and uncertainty, not just final coordinates. Selected methods and Table A2 were read; PDF pages 3, 4 and 6 were visually checked. The underlying establishment panel and its licence were not obtained. <a href="https://maggiejones.ca/wp-content/uploads/2024/01/jlrc_jue_onlineappendix_01-14-24.pdf">January 2024 appendix</a>.</p>
+<p>Distinct official routes tried were Ohio State (403), author pages/appendix, Harvard replication metadata/DDI, publisher/Crossref metadata, exact-title repository searches, NYPL/USC libraries and IPUMS. Exact-title repository searches found no JUE dataset; this is not proof of absence. NHGIS supplies census tables/boundaries, not a Green Book firm bridge, and has registration/redistribution conditions. No IPUMS extract was requested. <a href="https://www.nhgis.org/ipums-nhgis-terms-use">NHGIS terms</a>.</p>
+<h2 id="strongest-bounded-route-north-carolina">Strongest bounded route: North Carolina</h2>
+<p>The current officially linked report, <em>Historic Green Book Resources in North Carolina, 1938-1967</em>, explicitly identifies a <strong>master resource inventory spreadsheet</strong>. It records <strong>63 extant, 226 demolished and 28 unknown resources</strong>, totaling <strong>317</strong>; intensive survey work occurred in spring/fall 2024. The cover is dated 20 February 2026; the official index labels it 18 May 2026. Methods p.101 and Appendix B introduction p.117 were read and visually checked. The spreadsheet itself was not obtained. <a href="https://www.hpo.nc.gov/survey-and-national-register/green-book-mpdf/open">Current report</a>; <a href="https://www.hpo.nc.gov/survey-and-national-register/architectural-survey/architectural-survey-status-records-reports">official index</a>.</p>
+<p>The report’s 317 resources and the project webpage’s 327 businesses are an <strong>unresolved unit/version difference</strong>, not evidence that exactly ten firms are missing. The older indexed draft’s 61 extant/30 unknown counts are superseded for this audit. Nor does a 2024 survey establish 2017-2019 survival or business operation. <a href="https://aahc.nc.gov/green-book-project">Official project page</a>.</p>
+<p>The official map resolves to this public layer:</p>
+<p><code>https://gis2.ncdcr.gov/dncrgis/rest/services/NCHPO_Public/NCHPO_African_American/MapServer/1</code></p>
+<p>Only metadata/schema/configuration were fetched, <strong>not feature records</strong>. Its 15 fields include <code>KeyID</code>, <code>Spatial_Ac</code>, <code>Status</code>, <code>Map_status</code>, <code>Years_List</code>, city/county/address/category and Sanborn/advertisement references. It also includes <code>Business_C</code>, a proprietor field to exclude from a future analytical extract. Coordinates use WKID 102719/latestWKID 2264, not untransformed latitude/longitude. There is no date field establishing demolition/closure timing. <a href="https://gis2.ncdcr.gov/dncrgis/rest/services/NCHPO_Public/NCHPO_African_American/MapServer/1?f=pjson">Layer schema</a>.</p>
+<p>The renderer distinguishes exact/approximate, extant/gone/unknown and duplicates, and includes a South Carolina class. The <strong>Green Book today</strong> layer filters to Extant or Unknown; it excludes Gone and cannot define the historical denominator. Use the unfiltered frame only after verifying scope and deduplication.</p>
+<p>An older official ArcGIS application has a qualified general statement that nearly all NCHPO geographic datasets are unrestricted. The current web-map licence and layer copyright fields are blank. That does <strong>not</strong> verify the exact current layer’s or spreadsheet’s reuse terms. Request written file-specific permission/terms before feature extraction. Full schema, filters, report hash and access boundaries are in <span>NC source inventory</span>. <a href="https://aahc.nc.gov/green-book-project/green-book-project-map">Official map entry point</a>.</p>
+<h2 id="match-unit-and-outcome-blind-gate">Match unit and outcome-blind gate</h2>
+<p>These are proposed pilot rules, not tests already passed or changes to canonical inference gates.</p>
+<ol type="1">
+<li><strong>Freeze the historical frame first.</strong> Prefer one edition, provisionally 1947, in a predeclared small NC city sample. Reconcile complete source pages to inventory records, retaining illegible, unlocated, demolished and duplicate listings with explicit flags. NYPL’s 1947 coordinate file cannot supply NC’s denominator. Do not select cities/sites because they survive or have attractive modern outcomes.</li>
+<li><strong>Separate IDs and objects.</strong> Preserve edition-listing ID, proposed historical enterprise ID and physical-site ID. Record renumbering, relocation and parcel consolidation explicitly. A repeated name is not firm continuity. A relocated enterprise can survive while its old site changes.</li>
+<li><strong>Use location evidence, not nearest-POI assignment.</strong> Classify verified parcel/building, block/intersection, street segment, or city/county-only locations. Record uncertainty and sources. Only independently adjudicated parcel/building cases can support same-site matches. Coarser cases remain unresolved or enter a separately defined district analysis; never silently broaden a match radius until a venue appears.</li>
+<li><strong>Date each transition.</strong> For each 2017, 2018 and 2019 target year distinguish continuing firm, replacement business, vacancy/noncommercial use, demolition/redevelopment, relocation and unknown. A 2024 extant flag is not continuing operation; a 2024 demolition observation does not prove demolition before 2017. Listing disappearance and modern POI non-observation are not closure.</li>
+<li><strong>Keep outcomes hidden during matching.</strong> Freeze a bounded pilot, proposed at no more than 60 historical sites and 20 reviewer-hours, sampled by historical city/category before consulting survival labels or visitor composition. Two reviewers adjudicate proposed parcel matches without exposure outcomes. Budget, tolerable unresolved share and location-error criteria require coauthor approval before execution; no numerical yield is claimed here.</li>
+<li><strong>Retain the whole denominator.</strong> Report all sampled historical sites in a transition/uncertainty accounting. Demolished or unmatched sites receive no invented zero demographic composition. Any later composition analysis is explicitly conditional on observed surviving destinations.</li>
+<li><strong>Do not run the modern join yet.</strong> Obtain exact modern field definitions, coordinate/identifier lineage, annual observation dates and file-specific local-processing authorization. Resolve multiple POIs per parcel and one POI spanning sites. The main project’s upstream annual-construction gate remains binding.</li>
+</ol>
+<p>The Census geocoder is useful for candidate locations, not historical existence: it interpolates address ranges. Independent dated maps, directories, survey files and parcel histories are needed. No address was submitted to a geocoding service in this pass. <a href="https://cdn.www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/census-geocoder.html">Census documentation</a>.</p>
+<p><strong>Go/narrow/stop:</strong> Go only to a rights-cleared historical frame/location audit. Narrow to site-transition description if enterprise continuity is unavailable; narrow to district description only with explicit uncertainty-aware geography. Stop a representative persistence claim if the frame contains only famous survivors, dates cannot distinguish target-year states, or a comparison-business universe cannot be established. A missing comparison frame need not prevent a clearly labelled within-listed-site feasibility accounting, but it prevents a listed-versus-comparison legacy contrast.</p>
+<h2 id="existing-overlap-not-another-review">Existing overlap, not another review</h2>
+<p>QJE already studies historical accommodation access; JUE already constructs spatial business histories and examines urban renewal. NC and SC preservation work already counts surviving buildings. Simple geocoding, demolition counts or renewal regressions are therefore not an established new contribution. The possible extension remains <strong>firm versus site versus district continuity, with disappearance retained and independently validated modern measures</strong>. This pass does not establish novelty or a causal design. <a href="https://maggiejones.ca/research/">Author research list</a>; <a href="https://scdah.sc.gov/news/2021-06/searching-safe-havens-rediscovering-extant-green-book-sites-south-carolina">SC official survey</a>.</p>
+<h2 id="exact-coauthor-needs">Exact coauthor needs</h2>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Owner/route</th>
+<th>Required before advancing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main/coauthors</td>
+<td>Approve a site-history question, edition/city frame, review budget and outcome-blind acceptance/stop rules. Do not promote to national firm persistence.</td>
+</tr>
+<tr>
+<td>NCHPO/NC AAHC, public institutional contact <code>ncaahc@dncr.nc.gov</code></td>
+<td>Request the master inventory described on report p.101, its dictionary/version and file-specific reuse/linkage/publication terms. Request a non-personal subset with edition/source IDs, original and current site references, uncertainty, duplicate/relocation flags, dated status evidence and the 317-resource/327-business crosswalk. Do not request proprietor/current-owner personal data.</td>
+</tr>
+<tr>
+<td>Green Book paper authors</td>
+<td>Ask whether the establishment-edition geocoded panel is available and under what terms. Request original versus harmonized addresses, persistent IDs, scan references, coordinate-method flags, unresolved/deleted records, gap-filling/relocation rules and release version. QJE aggregate files do not replace this.</td>
+</tr>
+<tr>
+<td>Historical-source lead</td>
+<td>Identify an actually accessible/licensed contemporaneous business-directory frame for comparisons, plus dated location/status evidence. No suitable comparison dataset was verified here; nonlisting must not be coded as discrimination.</td>
+</tr>
+<tr>
+<td>Modern-data lead/main</td>
+<td>Confirm authorized fields and provenance for the existing 2017-2019 sources before any local join. Distinguish absent POI coverage from closure and neighborhood-origin composition from observed customer race or interaction.</td>
+</tr>
+</tbody>
+</table></div>
+<p>These are <strong>unsent requests</strong>, not access agreements. No purchase, login bypass, author contact, external-model submission, restricted acquisition, linkage or regression occurred.</p>
+<h2 id="evidence-and-changed-paths">Evidence and changed paths</h2>
+<p>Read: repository/project instructions, relevant STATUS, DATA_POLICY and notes 83/88; public README/licences; 13 DDI schemas; NYPL parsing scripts and safe file diagnostics; NC map metadata/schema/configuration; selected JUE/NC methods and rendered pages; the official access/terms sources listed in the JSON. Did not read the inaccessible QJE README, obtain either author establishment panel or NC spreadsheet, audit complete source editions, or inspect modern POI records.</p>
+<p>Only this workstream and safe JSON under <code>output/green_book_feasibility_20261019/</code> were written. Source/version/hash details and negative-access results are in <span>source inventory</span>. No canonical STATUS/notes/website/Project edits or publication were made. Public datasets and PDFs were held in process memory only; no raw dataset was persisted inside or outside the repository.</p>
+<p><strong>Milestone sentence:</strong> Green Book feasibility has moved from a blocked website to verified CC0 library files, aggregate replication schemas and a concrete NC master-inventory request. The decision is NARROW; exact rights, historical-unit reconciliation and dated 2017-2019 site histories remain prerequisites to linkage.</p>
+</main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>

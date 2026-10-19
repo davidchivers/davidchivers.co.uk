@@ -40,7 +40,7 @@ footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; 
   a { color: inherit; }
 }
 
-colgroup { display: none; } th:first-child, td:first-child { min-width: 90px; } .notice { border-left: 4px solid #00686c; padding: 10px 18px; background: #f1f7f6; }
+colgroup{display:none} figure{margin:28px 0} figure img, main img{max-width:100%;height:auto;display:block} figcaption{font-size:14px} table td:first-child{min-width:130px}
 </style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
 :root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
 html, body, header, main, footer { background: var(--page); color: var(--ink); }
@@ -87,10 +87,11 @@ table { min-width: 620px; }
     });
   });
 }());
-</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Data quality: what is checked and what remains</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><h2 id="purpose-and-reading-status">Purpose and reading status</h2>
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Data quality: what is checked and what remains</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><h2 id="purpose-and-reading-status">Purpose and reading status</h2>
 <p><strong>Bottom line:</strong> the corrected 2017-19 files have passed substantial downstream checks, but the complete production pipeline and population representativeness have not been independently certified. The next priority is to reproduce the annual origin flows and inherited weights from a preselected sample of original weekly inputs, then assess coverage. More regressions cannot substitute for these checks.</p>
 <h2 id="current-quality-assessment">Current quality assessment</h2>
-<p>This table records saved project evidence checked against the existing audit notes on 19 October 2026. It does not report a new pass through the licensed data.</p>
+<p><strong>Subsequent empirical update, 19 October:</strong> explicitly authorized read-only checks now reproduce the final-file accounting and isolate 2,399,249 stable venue IDs. The equally weighted income-diversity trend changes from -0.66 index points in the changing sample to +1.37 on stable IDs. This is a material composition warning, not a behavioural or causal result. See the <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">new results and four graphs</a> and <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/construction-audit.html">complete independent code audit</a>.</p>
+<p>The table combines the prior audit record with these separately labelled new checks. The literature discussion below remains an assessment of methods, not a claim that every proposed validation was performed.</p>
 <div class="table-scroll" tabindex="0"><table>
 <colgroup>
 <col style="width: 33%" />
@@ -119,6 +120,16 @@ table { min-width: 620px; }
 <td>Common race/income analysis support</td>
 <td>8,875,712 POI-years; 94.91% of positive input visit weight</td>
 <td>This is retention from the delivered files, not coverage of the national population.</td>
+</tr>
+<tr>
+<td>Stable-ID continuity, newly checked</td>
+<td>2,399,249 common-valid IDs in each year; unchanged recorded area/category</td>
+<td>Does not establish physical business continuity. Same-ID income trends differ from changing-sample trends.</td>
+</tr>
+<tr>
+<td>Independent safe-code contracts, newly tested</td>
+<td>29 pass; five expected unresolved failures; no empirical malformed-input prevalence estimate</td>
+<td>Duplicate-key/non-finite parsing, trailing metadata and cached partial-build validation need forward hardening. Do not read a successful test exit as 34 production contracts passed.</td>
 </tr>
 <tr>
 <td>Original weekly-to-annual construction</td>
@@ -152,7 +163,7 @@ table { min-width: 620px; }
 </tr>
 </tbody>
 </table></div>
-<p><strong>What changed in this review:</strong> explicit coverage and temporal-pooling checks, an exact incoming/outgoing accounting check, and a sampling-noise warning for the venue-count result. Four new tests pass on artificial examples only; they validate the stated algebra, not the empirical data. No raw file was reopened and no earlier regression was rerun. The <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/plan.html#evidence">earlier research plan’s evidence record</a> retains the original audit and result summaries.</p>
+<p><strong>What changed at the literature stage:</strong> explicit coverage and temporal-pooling checks, an exact incoming/outgoing accounting check, and a sampling-noise warning for the venue-count result. Four tests passed on artificial examples only; no licensed file was reopened at that stage. The subsequent authorized final-file checks above are distinct, with nine additional measurement-code tests. The <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/plan.html#evidence">earlier research plan’s evidence record</a> retains the original audit and result summaries.</p>
 <h2 id="scope-of-this-review">Scope of this review</h2>
 <p>This cross-cutting review complements the eight idea-specific assessments. It separates three questions: whether the construction code implements its rules; whether the observed sample represents the intended population; and whether the measured object answers the economic question. Passing the first does not establish the other two. This is a literature and design assessment, not a new empirical audit. Existing corrections, failed support screens and contrary results remain in force.</p>
 <p>The source records below distinguish inspected full-text sections from abstracts and repository documentation. The algebra is our own analysis of the proposed definitions. It is not attributed to the empirical papers, and its illustrations are artificial, not observations from the project.</p>
@@ -247,4 +258,4 @@ table { min-width: 620px; }
 <p>Do not waive a failed gate by changing the sample, weights or category list after viewing results. If the proposed substantive distinction disappears under defensible coverage or benchmark choices, that is an informative no-go. An audited descriptive contribution is preferable to an unsupported structural explanation, but an audit alone is not automatically a publishable economics paper.</p>
 <h2 id="search-scope-and-limits">Search scope and limits</h2>
 <p>Searches on 19 October 2026 used Consensus for discovery, followed by required record fetches and primary author/publisher verification, and web searches for sampling bias, segregation measurement and exposure-versus-friendship. Sources include recent 2026 records and older methodological work. This is a focused critical review, not a registered systematic review or an exhaustive claim of coverage. No new proprietary data were retrieved, no historical empirical result was rerun, and no new causal estimate was produced.</p>
-</main><footer>Reviewed documentation snapshot. No new licensed-data analysis, empirical replication or adopted research protocol is implied. Earlier results and failed gates remain in force.</footer></body></html>
+</main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>

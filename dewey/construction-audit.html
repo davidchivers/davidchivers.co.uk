@@ -1,0 +1,254 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Independent construction audit</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} figure{margin:28px 0} figure img, main img{max-width:100%;height:auto;display:block} figcaption{font-size:14px} table td:first-child{min-width:130px}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Independent construction audit</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>19 October 2026. Bounded safe-code/provenance audit; not a licensed-data rerun.</p>
+<h2 id="conclusion-and-evidence-labels">Conclusion and evidence labels</h2>
+<p><strong>The downstream demographic rebuild is inspectable and has substantial saved validation evidence. Independent raw-weekly-to-annual replication is still unverified.</strong> Repeating the NHGIS rebuild or the final-file moment audit would not close that gap: both consume inherited annual flows and metadata. The current safe implementation also has reproducibility/validation weaknesses reproduced below. None establishes that a published empirical number is wrong.</p>
+<p>Evidence labels used here:</p>
+<ul>
+<li><strong>Inspected:</strong> safe repository source or documentation read during this audit.</li>
+<li><strong>Synthetic tested:</strong> actual safe functions exercised with invented in-memory inputs, or explicitly identified independent reference calculations. Build orchestration uses mocked I/O, not real Parquet input/output.</li>
+<li><strong>Prior empirical record:</strong> completed historical work reported in inspected notes/logs. Its data were not reopened or its estimates rerun here.</li>
+<li><strong>Inferred/unverified:</strong> an implication, risk, or missing historical attribution, not an observed frequency or estimated effect in the real data.</li>
+</ul>
+<p>There is <strong>no newly empirically verified result</strong> in this audit. No restricted data, private cells, raw samples, Dropbox data-side scripts, source workbooks, credentials, remote compute or external-model services were accessed. Historical data locations mentioned in notes were not probed. Source references below are project-relative <code>path:line</code> anchors; the report manifest fingerprints inspected safe code/notes. The existing dirty checkout was left intact.</p>
+<h2 id="findings-ordered-by-importance">Findings, ordered by importance</h2>
+<h3 id="production-lineage-stops-at-annual-intermediate-inputs">1. Production lineage stops at annual intermediate inputs</h3>
+<p><strong>Inspected; upstream attribution unverified.</strong> The actual safe POI builder reads <code>poi_annual_cbg_flows_&lt;year&gt;.parquet</code>, an income-gap metadata Parquet, and an ACS lookup; it never reads weekly files. See <code>code/analysis/build_harmonized_poi_indices.py:684</code> and <code>:695</code>. <code>docs/data_construction/01_poi_processed_indices_and_audits.md:9</code> explicitly calls the initial audit staged-input-reproducible, not a raw rebuild.</p>
+<p>The more precise historical production pointer is <strong><code>pipeline_poi_statewise.py</code></strong>, not merely the older <code>pipeline_poi.py</code> name. Log 18 identifies the former and <code>replication_note.md</code> at <code>docs/data_construction/18_origin_cbg_geography_vintage_audit.md:35</code>. Log 17 identifies <code>config.py</code> at <code>docs/data_construction/17_visitor_worker_income_gap.md:31</code>. These are descriptions of prior inspection, not source files inspected here. <code>workstreams/tommy.md:11</code> attributes the pipeline to Tommy and lists the older POI/MSA/CBG run order, but contains no production commit, command, or execution receipt. No file with those pipeline names was found in the safe repository <code>code/</code> inventory. A private or differently named implementation may exist.</p>
+<p><strong>Consequence:</strong> freeze the historical source/config/run identity before implementing an independent weekly reducer. Do not silently substitute a new download, the legacy monthly script, or today’s version of a similarly named pipeline. <code>notes/07_poi_python_spec.md:33</code> already labels that monthly script legacy/partial and warns against running it.</p>
+<h3 id="annual-analysis-weights-are-inherited-not-independently-reconciled">2. Annual analysis weights are inherited, not independently reconciled</h3>
+<p><strong>Inspected and synthetic tested; historical correctness unverified.</strong> <code>build_visitor_worker_income_gap.py:124</code> maps <code>total_annual_visits</code> to <code>matched_visits</code>; lines 143-146 form <code>matched_visits * 52 / weeks_observed</code>. This is a naming/weighting convention in the downstream code, not proof that the upstream source field is matched visits rather than visitors or another expanded quantity. <code>build_harmonized_poi_indices.py:545</code> copies this weight unchanged while line 550 independently records the sum of positive origin-map weights. There is no per-POI reconciliation between them in that builder.</p>
+<p>The final audit uses the annual weight as supplied (<code>run_within_venue_measurement_audit.py:102</code>, <code>:113</code>). Synthetic inputs with <code>weeks_observed=-1</code> and an arbitrary positive annual weight pass its weight screen because it does not inspect weeks or the origin total. This is outside that audit’s documented purpose, not proof of a defect in its moment algebra. Likewise, the earlier flag <code>all_visit_weights_exactly_match</code> compares <strong><code>total_origin_visit_weight</code></strong>, not <code>annualized_matched_visits</code>: <code>compare_nhgis_full_poi.py:165</code>, <code>:192</code>, <code>:230</code> and <code>check_nhgis_origin_cbg.py:169</code>. Do not interpret that flag as independent validation of annualization.</p>
+<p>The saved phase-1 audit reports a minimum of 26 weeks in every year and a maximum of <strong>53 in 2018</strong> (<code>notes/08_poi_indices_phase1_audit.md:8</code>). This is real prior evidence consistent with the intended 26-week filter, not proof that weeks were counted distinctly or assigned to years correctly. The instruction to restore <code>MIN_WEEKS_OBSERVED=26</code> at <code>workstreams/tommy.md:17</code> is weaker evidence than those output checks. A 53-week calendar is not itself a bug; it makes the calendar boundary and fixed-52 interpretation essential.</p>
+<p><strong>Synthetic reference:</strong> two venues with 10 observed flow units each, 26/52 observed weeks and diversity 0/.5 have an observed-flow mean of .25 but a 52-week-expanded mean of 1/6. Expansion changes the estimand and assumes the observed periods represent unobserved periods. Neither figure is empirical.</p>
+<h3 id="existing-output-reuse-does-not-verify-source-identity-or-completeness">3. Existing-output reuse does not verify source identity or completeness</h3>
+<p><strong>Inspected and synthetic tested; reproducibility bug.</strong> At <code>build_harmonized_poi_indices.py:671</code>, any existing output is reused without checking input/config/code hashes, schema or requested row coverage. Even a missing annual build-summary file does not stop reuse. <code>--max-pois</code> uses the same output filename as a full run (<code>:671</code>, <code>:707</code>), so an accidental smoke run in a production root can later be mistaken for a completed cache. The synthetic missing-summary cache test is an expected failure of the desired contract, not a fixed issue.</p>
+<p><strong>Recommended repair, not applied:</strong> require a matching build manifest and explicit complete/smoke status before cache reuse; otherwise refuse or rebuild in a new approved root. Preserve frozen historical outputs. Separate full-run row-count checks mitigate this risk when actually executed. Saved final counts in log 86 provide such historical evidence; this finding does not allege that the 2017-19 final files are truncated.</p>
+<h3 id="full-build-alignment-check-accepts-trailing-metadata">4. Full-build alignment check accepts trailing metadata</h3>
+<p><strong>Inspected and synthetic tested; validation bug.</strong> <code>build_harmonized_poi_indices.py:584</code> sets expected rows from the flow file; line 588 rejects only <strong>shorter</strong> metadata. Extra metadata rows with a matching prefix are silently discarded even when <code>max_pois=None</code>. The ID/order guard at line 621 correctly rejects permutations within the consumed prefix, and the synthetic tests confirm that protection.</p>
+<p><strong>Recommended repair, not applied:</strong> exact length equality for a full build, with a separately declared partial-run contract. The saved equal counts and IDs in log 20 are reassuring historical checks, not justification for accepting a future mismatched source pair. No prevalence in real inputs was measured.</p>
+<h3 id="annual-origin-map-parsing-is-not-fail-closed">5. Annual origin-map parsing is not fail-closed</h3>
+<p><strong>Inspected and synthetic tested; input-validation gaps.</strong> At <code>build_harmonized_poi_indices.py:449</code>, <code>orjson.loads</code> silently retains the last value of a duplicate origin key. At lines 464-469, conversion to float followed only by <code>&lt;=0</code> accepts JSON <strong>strings</strong> <code>"NaN"</code> and <code>"Infinity"</code> as positive-cell inputs; the resulting total is nonfinite. Bare nonstandard JSON numeric constants are a different parser case and are not the demonstrated route.</p>
+<p>The suite verifies the actual behavior and records three desired rejection contracts as expected failures. It supplies an independent strict parser reference that rejects duplicate keys, nonfinite values, booleans and negative weights while retaining positive weights. That is a proposed validation contract, not a replacement production parser or an instruction to alter the historical missing-value rule. Strict JSON syntax alone would not catch the quoted nonfinite strings. No malformed empirical input was inspected or found.</p>
+<h3 id="income-tie-handling-has-a-substantive-measurement-consequence">6. Income tie handling has a substantive measurement consequence</h3>
+<p><strong>Inspected and synthetic tested; documented convention, not a newly found implementation mistake.</strong> <code>build_harmonized_acs_2020_cbg.py:87</code> sorts income and CBG, uses unweighted CBG quantiles, and falls back to ordered ranks when bin edges are not unique. The NHGIS builder calls this exact helper at <code>build_nhgis_acs_2020_cbg.py:304</code>.</p>
+<p>Ten invented CBGs with identical income are assigned ten different bins. A venue receiving equal flow from them has SES fractionalization .9 and normalized entropy 1, but continuous income variance zero. Thus these outputs describe <strong>home-area rank-group composition</strong>, not necessarily variation in income values. A tied-income CBG split can also depend on its identifier. Actual tie mass and empirical sensitivity have not been measured here.</p>
+<p>An additional helper boundary is synthetic-tested: with fewer than ten valid CBGs in a CBSA, <code>assign_msa_deciles</code> uses labels <code>1..q</code> (<code>build_harmonized_acs_2020_cbg.py:146</code>), while the POI code normalizes by <code>log(10)</code> and uses fixed low/middle/high cutpoints (<code>build_harmonized_poi_indices.py:357</code>, <code>:376</code>). In a two-CBG example both incomes become “low” bins. This is an unresolved small-CBSA interpretation contract, not evidence that such a CBSA occurs in the real lookups or that the primary <strong>national</strong> income measure is affected by that particular case.</p>
+<h3 id="four-group-coverage-and-final-audit-scope-need-precise-wording">7. Four-group coverage and final-audit scope need precise wording</h3>
+<p><strong>Inspected and synthetic tested; interpretation/coverage limits.</strong> NHGIS allocates group counts before normalizing within the four retained groups (<code>build_nhgis_acs_2020_cbg.py:191</code>). POI shares average those normalized origin shares with origin-flow weights, then normalize again (<code>build_harmonized_poi_indices.py:475</code>, <code>:238</code>). This is not automatically equivalent to pooling full-population group masses across origins and then conditioning on retained groups. With equal visits to two otherwise homogeneous origins whose retained masses are 60% and 100%, the first convention gives F=.5 and the second F=.46875. This is a synthetic illustration, not an estimated omitted-mass correction. The exported shares alone cannot recover the latter.</p>
+<p>The final audit checks the racial index identity <strong>on common mapped race-and-income support</strong> (<code>run_within_venue_measurement_audit.py:128</code>, <code>:133</code>). The suite confirms it rejects an inconsistent race index on that support but does not test the identity for a row excluded because income is missing. Therefore “all final-file rows were processed” must not become “every index on every excluded row was independently certified”. Missing income-bin shares still prevent an income within/between reconstruction (note 74, lines 88-92).</p>
+<h2 id="what-the-existing-checks-do-establish">What the existing checks do establish</h2>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Inspected safe references</th>
+<th>Evidence boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial processed-file audit</td>
+<td><code>docs/data_construction/01_poi_processed_indices_and_audits.md:9</code>; <code>notes/08_poi_indices_phase1_audit.md:8</code></td>
+<td>Prior empirical counts, unique IDs and observed-week ranges; not weekly construction.</td>
+</tr>
+<tr>
+<td>Geography diagnosis</td>
+<td><code>docs/data_construction/18_origin_cbg_geography_vintage_audit.md:22</code>, <code>:50</code></td>
+<td>Prior deterministic 2% origin-map audit after scanning annual row coverage; 2020-origin versus older-ACS mismatch. Restatement as the cause remains inference.</td>
+</tr>
+<tr>
+<td>Relationship-file correction</td>
+<td><code>docs/data_construction/19_origin_cbg_harmonized_rebuild.md:30</code>, <code>:187</code>, <code>:279</code></td>
+<td>Prior reconstruction from annual maps, smoke agreement and full downstream runs. Explicit inherited metadata/weights and authoritative category source.</td>
+</tr>
+<tr>
+<td>NHGIS correction</td>
+<td><code>docs/data_construction/20_origin_cbg_nhgis_robustness.md:95</code>, <code>:203</code>, <code>:308</code></td>
+<td>Prior 109 recorded checks and 17-file fingerprint verification; this audit separately tests count allocation, missingness and zero-mass behavior on invented inputs.</td>
+</tr>
+<tr>
+<td>Final-file audit</td>
+<td><code>notes/74_within_venue_empirical_audit.md:30</code>; <code>docs/data_construction/86_within_venue_empirical_audit.md:28</code>, <code>:72</code>, <code>:86</code></td>
+<td>Prior 9,537,963 input POI-years, 8,875,712 common-support rows and national moment agreement. Input hashes identify files, not upstream correctness.</td>
+</tr>
+<tr>
+<td>Venue-count pilot</td>
+<td><code>notes/75_venue_count_pilot.md:42</code>, <code>:113</code></td>
+<td>Prior reuse of private moments; not another POI/weekly scan. Measurement/paper work remains with the main agent.</td>
+</tr>
+<tr>
+<td>Worker-source audit</td>
+<td><code>notes/73_public_facing_source_definition_audit.md:64</code>, <code>:90</code></td>
+<td>Prior source-definition corrections and unresolved workbook/flag provenance; no workbook access in this task.</td>
+</tr>
+<tr>
+<td>Quality synthesis</td>
+<td><code>notes/87_literature_measurement_and_validation.md:14</code>, <code>:103</code></td>
+<td>Explicitly distinguishes production lineage, replication, coverage and economic interpretation. No literature review repeated here.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The four failed concentration screens, unresolved area-code vintage, omitted racial mass, missing income shares, stopped attitude family and noncausal interpretation remain unchanged. <code>combined_category</code> is not a substitute for <code>TOP_CATEGORY</code> (<code>docs/data_construction/19_origin_cbg_harmonized_rebuild.md:43</code>). NHGIS income interpolation is a weighted average of source medians, not an exact target median (log 20, lines 124-136); an independent synthetic example also confirms this distinction.</p>
+<h2 id="exact-minimum-handoff-to-unlock-weekly-replication">Exact minimum handoff to unlock weekly replication</h2>
+<p>This is a <strong>request specification</strong>, not new authorization or a new protocol. Do not transmit raw files or raw logs into this repository/chat. Ask the owner to export safe source copies and sanitized receipts; request file-specific local processing approval separately after the private manifest identifies the precise licensed files. Requested receipt filenames below are proposed handoff names, not claims that those files currently exist.</p>
+<h3 id="a.-first-reproduce-the-inherited-annual-flows-and-metadata">A. First reproduce the inherited annual flows and metadata</h3>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Required item</th>
+<th>Exact minimum content and reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Safe code snapshot</td>
+<td><code>pipeline_poi_statewise.py</code>, <code>config.py</code>, <code>replication_note.md</code> named in logs 17/18, plus <strong>only their imported local helpers that parse weekly origin maps, deduplicate, aggregate or assign POI metadata</strong>. Include the launcher if <code>pipeline_poi.py</code> invoked the statewise implementation. Owner supplies actual helper filenames and SHA-256. These helper names are absent from the inspected safe record and must not be invented. <code>pipeline_msa.py</code>/<code>pipeline_cbg.py</code> are unnecessary unless the owner demonstrates they produced one of these annual inputs.</td>
+</tr>
+<tr>
+<td><code>production_execution_2017_2019.json</code> and sanitized run log</td>
+<td>Per year: actual producer/runner, code commit plus dirty-source hashes, command, working directory alias, dependency versions, start/end/exit status, resolved config including <code>MIN_WEEKS_OBSERVED</code>, date/year rule, dedup rule and source field mapped to <code>cbg_visits_json</code>/<code>total_annual_visits</code>. Record any retries, skipped/failed shards and partial-run switches. A current config alone cannot prove what ran. Omit credentials, signed URLs, raw rows and private absolute paths.</td>
+</tr>
+<tr>
+<td><code>weekly_input_manifest_2017.json</code>, <code>weekly_input_manifest_2018.json</code>, <code>weekly_input_manifest_2019.json</code></td>
+<td>Owner-held exact archive/member or shard names, bytes, SHA-256, release/download identity, schema fingerprint, week start/end and timezone, geography-vintage/source dictionary version, and completeness/failed-member status. Keep exact private locations outside Git. The safe record explicitly names <code>foot-traffic-weekly-patterns-2019.tar</code> in log 47, line 25, but does not establish current availability or exact 2017/18 archive/member names. Those names must come from the producer’s manifest, not filename guessing or a recursive data scan.</td>
+</tr>
+<tr>
+<td>Frozen annual comparison targets</td>
+<td>Exactly <code>poi_annual_cbg_flows_2017.parquet</code>, <code>_2018.parquet</code>, <code>_2019.parquet</code>, and <code>poi_indices_2017.csv.gz</code>, <code>_2018.csv.gz</code>, <code>_2019.csv.gz</code>. Need approved local access only to selected venue-years and necessary metadata: <code>ID_STORE</code>, origin map, source visit/visitor totals, <code>weeks_observed</code>, <code>MSA_CODE</code>, <code>POI_CBG</code>, <code>REGION</code>, <code>TOP_CATEGORY</code>, <code>SUB_CATEGORY</code>, and annualization inputs. Obtain hashes/rows/schema from the owner-held input manifest. This audit does not supply or reopen these files.</td>
+</tr>
+<tr>
+<td>Metadata/geography dependencies</td>
+<td>Exact POI-ID continuity/dedup mapping and category/POI-CBG/county-to-area crosswalk <strong>actually used</strong> by that production version, with version and hashes. If metadata came directly from weekly records, provide the precise first/last/modal/change rule and tie policy instead. The 2020 county-CBSA file used for downstream income bins is not proof of the inherited destination <code>MSA_CODE</code> assignment.</td>
+</tr>
+<tr>
+<td><code>independent_weekly_sample_manifest.json</code> and private comparison receipt</td>
+<td>Preselect venue-years across all three years, categories, geographies, low/high week coverage, 26-week boundary and 2018 53-week cases, missing/malformed/suppressed origins and changing metadata. Include every required week for each selected venue-year, including the explicit distinction between an absent row and a reported zero-flow week. Freeze seed/selection before outcomes. IDs and row-level differences remain private; export only reviewed aggregate counts/error summaries and hashes.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The 15-week/five-state 2019 strike acquisition in <code>docs/data_construction/48_stop_shop_2019_real_gates.md:23</code> is a bounded later source, not a complete annual input or demonstrated byte-identical replacement for the historical release. Do not use it to certify 2017-19 production.</p>
+<h3 id="b.-then-propagate-the-checked-sample-to-the-final-nhgis-indices">B. Then propagate the checked sample to the final NHGIS indices</h3>
+<p>This is separable from A. It needs the frozen <code>poi_visitor_worker_income_gap_&lt;year&gt;.parquet</code> metadata, <code>acs&lt;year&gt;_cbg_harmonized_2020.parquet</code> and its <code>acs&lt;year&gt;_cbg_harmonized_2020_summary.json</code> for each year, plus <code>poi_indices_harmonized_&lt;year&gt;.parquet</code> as final comparison targets. Reuse the <strong>full-universe frozen bin assignments and representative incomes</strong>; recomputing deciles on a small validation sample changes the measurement.</p>
+<p>Retrieve sanitized receipts from the existing packages rather than rerunning large jobs just for orientation: the log-19 22-file and log-20 17-file <code>docs/data_fingerprints_sha256.csv</code> manifests; <code>poi_harmonized_build_summary_&lt;year&gt;.json</code>; <code>comparison_full_poi/full_poi_row_alignment_checks.csv</code>; <code>comparison_full_poi/full_poi_comparison_summary.json</code>; and the log-86 <code>output/within_venue_empirical_audit/verification.json</code> source identity record. The manifests are complementary, not interchangeable: the final-output fingerprints do not supply the missing weekly source lineage.</p>
+<p>Only if independently rebuilding the geography stage as well, add <code>acs&lt;year&gt;_cbg_harmonization_input.parquet</code>, <code>nhgis_bg2015_bg2020.zip</code>, <code>cbsa_to_county_2020.csv</code> and the frozen reference lookup carrying the strict columns (log 20, lines 20-67, 153-159). Employee workbooks are <strong>not</strong> required to replicate the annual origin flow or core venue indices; their separate source-resolution task must not broaden this access request.</p>
+<h3 id="questions-for-tommy-and-the-actual-production-runner">Questions for Tommy and the actual production runner</h3>
+<ol type="1">
+<li>Which exact <code>pipeline_poi_statewise.py</code>/launcher/config snapshot produced each of the six annual flow/index targets, who executed it, and which receipt links those bytes to the input-release hashes? Is the historical source still available rather than merely its current replacement?</li>
+<li>Which raw field creates each origin weight: visit count, weekly unique visitor count, or a rescaled value? How does <code>total_annual_visits</code> relate to the map sum and raw visit/visitor totals? Summing weekly unique counts is not annual unique visitors; the synthetic set-union example demonstrates that distinction without assuming which quantity the pipeline used.</li>
+<li>What constitutes an observed week, which timestamp assigns it to the year, how are year-straddling periods handled, and why does 2018 allow 53 while annualization uses 52? Was the 26-week filter applied before or after de-duplication, geography matching and invalid-map exclusion?</li>
+<li>How were repeated venue-week records, overlapping shards, late revisions, reopened/rekeyed establishments and changed category/location records resolved? Supply the precedence rule and aggregate discarded-count receipt, including any sources that were silently skipped or failed.</li>
+<li>What suppression, rounding, missing/foreign-origin and negative-value rules apply to this <strong>specific historical delivery</strong>? Which CBG and CBSA vintages generated origins versus destinations? Do not infer this from current documentation or select whichever crosswalk matches the most codes.</li>
+<li>Are fixed-52 expansion, four-group origin conditioning and tie-split CBG ranks intended estimands? Freeze the answer before any sensitivity run; any change is a separately labelled reconstruction, not a silent repair.</li>
+</ol>
+<h3 id="minimal-acceptance-receipt-after-approval">Minimal acceptance receipt, after approval</h3>
+<p>Compare weekly-to-annual retained IDs, unique weeks, origin-key unions and per-origin accumulated weights, then totals, metadata assignment, annualized weights and the selected POI indices. Exact keys/integer counts must match; declare numeric tolerances and denominator rules before comparison. Report missing/excess rows on <strong>both</strong> sides and per-year maximum absolute/relative discrepancies. Check 25/26-week boundary examples and explicit zero weeks as well as complete cases. Keep category/area/bin definitions fixed. Release only non-reconstructable summaries; detailed mismatches stay private.</p>
+<p>A pass certifies the predeclared sample and transformation, not every raw record, national representation, simultaneous contact or a causal mechanism. An unexplained disagreement stops certification; do not tune the sample or thresholds until it disappears.</p>
+<h2 id="executed-synthetic-suite-and-outputs">Executed synthetic suite and outputs</h2>
+<p>Command, from the named project root:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>python <span class="op">-</span>B code<span class="op">/</span>analysis<span class="op">/</span>test_independent_construction_contracts<span class="op">.</span><span class="fu">py</span></span></code></pre></div>
+<p><strong>34 tests executed: 29 passed; five expected, unresolved contract failures; zero unexpected failures/errors.</strong> Runtime was 0.545 seconds for the first run; the saved transcript records the latest run if repeated. Expected failures are the duplicate-key, NaN-string, Infinity-string, extra-metadata and cache contracts above. An exit code of zero means the suite observed its expected results, <strong>not that production has passed all contracts</strong>. Production code was not repaired. A future unexpected success forces review of the expected-failure marker rather than silently hiding a correction.</p>
+<p>Tested positives include exact independent pairwise MAD/Gini and two-origin index calculations, measure-specific missing denominators, scalar-flow invariance, NHGIS count conservation, duplicate-source rejection, zero-mass behavior, rank ordering, and working row/ID guards. Boundary tests deliberately show what the final audit does not certify. No private-cell, full-file or raw weekly empirical test was run, and the historical 98/109-check suites were not represented as rerun.</p>
+<p>Environment: Python 3.12.10, NumPy 2.3.5, pandas 3.0.0, PyArrow 23.0.1, orjson 3.11.7, DuckDB 1.5.4. No installation. Safe source hashes are checked before and after the tests. The runner writes only:</p>
+<ul>
+<li><code>output/independent_construction_audit_20261019/synthetic_contract_report.json</code></li>
+<li><code>output/independent_construction_audit_20261019/synthetic_test_run.txt</code></li>
+</ul>
+<p>The authored files are this workstream and <code>code/analysis/test_independent_construction_contracts.py</code>. STATUS, DATA_POLICY, notes, original code, protocols, site and shared Project/Space were not edited. This completes the bounded independent audit/test task, not raw-weekly replication, the main agent’s venue-variety work or a publication decision.</p>
+</main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>
