@@ -1,0 +1,118 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Residential benchmarks</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup { display: none; } th:first-child, td:first-child { min-width: 90px; } .notice { border-left: 4px solid #00686c; padding: 10px 18px; background: #f1f7f6; }
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Residential benchmarks</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>Review date: 19 October 2026. Status: completed literature assessment; no new empirical analysis. Recommendations are inputs to integration, not changes to the project ranking. Source IDs resolve in <code>output/literature_review_20261019/mobility_sources.json</code>. Detailed source digests are deliberately distributed across the four reviews.</p>
+<h2 id="question-and-bottom-line">Question and bottom line</h2>
+<p>The useful question is not whether people encounter more demographic variety away from home. It is whether particular services deliver unusually mixed visitor populations relative to a defensible opportunity set, and whether that conclusion survives separating pooled visitors from mixing within establishments. Residential composition is a benchmark, not a treatment or a sufficient description of opportunity.</p>
+<p>The broad proposal faces substantial prior work. A distance-adjusted residential comparison is not an unoccupied contribution. Three especially close sources are S13 below, S12 in <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/incoming-outgoing.html">the incoming/outgoing assessment</a>, and S21 in <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/access-opportunity.html">the access assessment</a>. Their methods make a new benchmark plot insufficient. A credible paper would need a consequential finding about which conclusions change under coherent measurement, with an explanation that survives common-support and alternative-opportunity checks.</p>
+<h2 id="closest-evidence-with-inspection-limits">Closest evidence, with inspection limits</h2>
+<p><strong>S01, Athey, Ferguson, Gentzkow and Schmidt (2021).</strong> The PNAS article uses GPS locations to compare experienced and residential racial isolation. Home geohashes classify devices by white-dominant versus nonwhite-dominant neighbourhoods; this is not observed individual race. Its experienced measure uses location-based exposure, not simply the demographic composition of destination residents. Main-text data and measurement discussion were inspected; supplementary derivations were not audited. Its descriptive comparisons do not identify effects of visiting particular services. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8609621/">Primary archived article</a>.</p>
+<p><strong>S02, Moro, Calacci, Dong and Pentland (2021).</strong> The Nature Communications methods assign home-area income quartiles and measure place segregation from time shares, using normalized absolute deviations from equal quartile shares. Individual segregation is computed after pooling exposure shares across places. That differs from averaging place-level segregation. The exploration model and observational associations do not identify preferences independently of constraints. Main HTML, including measurement methods, was inspected. <a href="https://www.nature.com/articles/s41467-021-24899-8">Publisher article</a>.</p>
+<p><strong>S03, Wang, Phillips, Small and Sampson (2018).</strong> Geolocated Twitter activity across 50 large cities connects travel to destination-neighbourhood composition. Similar travel breadth need not imply similar integration. This is a neighbourhood-destination predecessor, not a venue-crowd estimator. Abstract, first-page material and indexed results were inspected, not the complete methods supplement. <a href="https://pubmed.ncbi.nlm.nih.gov/29987019/">Primary record</a>.</p>
+<p><strong>S13, Cheng, Zhang and Shaw (2025).</strong> The RSF article, published in January, combines 2019 SafeGraph CBG flows and Census demographics. Mobility exposure weights destination residential group proportions by connectedness and population density. Its spatial comparison explicitly uses inverse Euclidean distance and population-density weights. This is not POI-crowd exposure. Full HTML methods, methodological appendix and footnotes were inspected; image-rendered equations were not independently transcribed. Nonselective mobility and nonselective exposure are explicit assumptions. The paper also points to a 2024 Zhang-Cheng measurement comparison requiring follow-up. <a href="https://www.rsfjournal.org/content/11/1/132">Publisher article</a>.</p>
+<p>These precedents establish that residential geography, reachable populations and observed activity describe different objects. They do not license interpreting our residual as a venue effect. Conversely, our distinction between destination residents and actual visitors is meaningful measurement work, but its existence alone does not establish a publishable advance.</p>
+<h2 id="define-the-comparison-before-estimating-it">Define the comparison before estimating it</h2>
+<p>Five objects need separate names: origin residential composition; the population potentially able to reach a venue; pooled actual visitors to a service market; average diversity within its establishments; and residents’ average exposure across establishments. None should silently substitute for another. A neighbourhood containing diverse residents can contain homogeneous establishments, and a neighbourhood with homogeneous residents can host visitors from elsewhere.</p>
+<p>For our fractionalization measure, let <code>p_jg</code> be the inferred share of group <code>g</code> at venue <code>j</code>, and <code>F(p_j)=1-sum_g p_jg^2</code>. The pooled-market statistic applies <code>F</code> after combining visitor shares. The within-venue statistic averages <code>F(p_j)</code>. Their difference records between-establishment composition, not deficient social contact. The algebra and count-related pitfalls are developed in <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/venue-variety.html">the variety assessment</a>. A residential-versus-pooled comparison cannot answer whether people use mixed establishments.</p>
+<p>A proposed geographic benchmark should specify potential origin demand <code>n_o</code>, an independently defined availability set, and a travel-cost rule. For example, hypothetical origin allocations can satisfy <code>q_oj</code> proportional to an availability indicator times a declared travel-cost kernel, normalized over eligible destinations. Expected venue composition then follows from <code>n_o*q_oj</code> and origin group shares. This is a stated allocation scenario, not an estimated causal counterfactual. Population-weighted potential demand and observed traveller-weighted demand answer different questions.</p>
+<p>There are also two different comparisons within that scenario. Holding observed venue weights fixed asks how composition would differ at the establishments people currently use. Reallocating demand changes both compositions and establishment weights. Mixing those conventions can produce a misleading apparent improvement. A paper must display the weighting choice and retain flows crossing the geographic boundary rather than silently deleting them.</p>
+<h2 id="what-is-available-and-what-is-missing">What is available, and what is missing</h2>
+<p>The saved project synthesis reports a historical 2017-2019 comparison of within-venue racial fractionalization, 0.4358, with pooled area-subcategory-year fractionalization, 0.4811. These are saved historical results, not rerun findings or causal estimates. The 0.0453 difference is an accounting gap for the retained support. It does not measure the residential benchmark proposed here. The existing upstream flow construction and geographic interpretation still require independent checks. See <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/plan.html">the saved synthesis</a>.</p>
+<p>Annual origin-to-venue maps infer demographics from home areas. They do not reveal individual itineraries, synchronized encounters, friendship, visit purpose or individual income and race. Expanding origin visitors using a venue-wide visits-per-visitor ratio assumes equal repeat frequency across origins. Four-group racial composition is conditional on included demographic mass. Income ranks based on unweighted CBGs are not population deciles; changing the rank definition changes the reference population.</p>
+<p>Needed inputs include approved origin flows, a documented population denominator, consistent geographic vintages, and independently dated venue availability and travel information. These are requirements, not claims of present permission or readiness. Origin-flow inspection is not authorized in this review. Earlier independent historical menus failed their coverage gates; they cannot be described as usable because a directory or map exists. The 933 <code>MSA_CODE</code> categories include micropolitan areas and are not 933 metropolitan statistical areas.</p>
+<h2 id="a-nontrivial-remaining-contribution">A nontrivial remaining contribution</h2>
+<p>The strongest remaining version would test whether a widely used characterization of a service as integrative reverses when potential visitors, pooled visitors and within-establishment composition are placed on identical support. The substantive payoff must be more than a different ordering of points. For example, does a service systematically connect otherwise separated residential populations while allocating them to different establishments, and is that conclusion robust to realistic access assumptions?</p>
+<p>This requires predeclaring the relevant service comparison and explaining why it matters independently of the sign obtained. A national catalogue of residuals, a different diversity index, or a different map resolution is not sufficient. Nor is the claim that our exact figure has not appeared elsewhere. Benchmark sensitivity can support a useful measurement paper only if it changes an economically important interpretation and diagnoses why.</p>
+<h2 id="outcome-blind-feasibility-and-decision">Outcome-blind feasibility and decision</h2>
+<p>First freeze units, demographic definitions, geographic vintages, origin exclusions and weights. Audit missing mass and cross-boundary flows without inspecting the preferred service ranking. Then assess whether one independently dated opportunity set and two substantively defensible travel specifications can be constructed with adequate support. Any thresholds should follow measurement requirements, not the apparent size of the mixing premium.</p>
+<p>Only after those gates pass should a future authorized pilot compare the full distributions of residential, potential, pooled and within-venue measures, including venues that cannot be classified. A leave-out or independently constructed composition check would help expose own-origin mechanical correlation, but it changes the estimand and must be labelled. Sampling-bias integration is handled separately; this review does not duplicate that work.</p>
+<p>The paper decision should be adverse if the result is merely that destinations look different from residences, or if the conclusion depends on one unsupported catchment. Retain idea 1 as a measurement foundation, with lower standalone novelty expectations than the initial formulation. A credible contribution remains possible, but neither an inverse-distance benchmark nor the move from a published figure to our dataset demonstrates it.</p>
+<h2 id="search-and-evidence-audit">Search and evidence audit</h2>
+<p>On 19 October 2026, web searches used the named authors, exact titles, and residential/experienced-segregation terms, followed backward references and targeted 2024-2026 title searches. Primary publisher and author sources were inspected; public HTTP retrieval recovered RSF and Nature HTML when the browser fetcher failed. The shared inventory records queries, dates, versions and inspection levels. This is a targeted collision review, not proof of novelty or a complete citation census. No paper link establishes data licensing, acquisition permission or downloadable-data availability.</p>
+</main><footer>Reviewed documentation snapshot. No new licensed-data analysis, empirical replication or adopted research protocol is implied. Earlier results and failed gates remain in force.</footer></body></html>

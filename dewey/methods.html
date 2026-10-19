@@ -1,0 +1,202 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>What we measure and how we would test it</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup { display: none; } th:first-child, td:first-child { min-width: 90px; } .notice { border-left: 4px solid #00686c; padding: 10px 18px; background: #f1f7f6; }
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>What we measure and how we would test it</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><h2 id="start-with-the-distinction">Start with the distinction</h2>
+<p><strong>A place can attract a mixed population without people mixing within the same establishment.</strong> Residents can also leave their neighbourhood and experience very different places. These are related questions, but they need different measures.</p>
+<p>The project uses recorded origin-to-venue activity and census characteristics of visitors’ home areas. It does not observe the race or earnings of each visitor, who spoke to whom, or who works at a particular venue. The calculations below describe the recorded, demographically matched activity, not the entire population.</p>
+<h2 id="four-measures-four-questions">Four measures, four questions</h2>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Plain-English calculation</th>
+<th>Question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Diversity within a venue</strong></td>
+<td>Take the estimated group shares among that venue’s patrons. The fractionalization index is one minus the sum of their squared shares.</td>
+<td>How mixed is this venue’s recorded patronage over the period?</td>
+</tr>
+<tr>
+<td><strong>Resident-based exposure</strong></td>
+<td>Multiply the diversity of each destination by visits from the origin area. Add these products, then divide by all covered visits from that origin.</td>
+<td>How diverse are the venues that this area’s residents visit?</td>
+</tr>
+<tr>
+<td><strong>Destination-based exposure</strong></td>
+<td>Average the diversity of venues located in an area, weighting each venue by its covered incoming visits.</td>
+<td>How diverse is the average recorded visit to a venue in this area?</td>
+</tr>
+<tr>
+<td><strong>Pooled local-service diversity</strong></td>
+<td>Combine visitor group shares across all establishments in an area and service category, then calculate diversity.</td>
+<td>How mixed is the service sector’s combined patronage, even if groups use different establishments?</td>
+</tr>
+</tbody>
+</table></div>
+<p>For normalized group shares, fractionalization is the probability that two independent draws from the <strong>inferred composition</strong> belong to different groups. It is not the observed probability of two actual people meeting. Its maximum depends on the number of groups: 0.5 for two equally sized groups, 0.75 for four, and 0.9 for ten.</p>
+<p>The project has other indices, including entropy and related segregation measures. The within/between accounting results discussed here use <strong>fractionalization</strong>. Their exact formulas and numerical scales must not be transferred to other indices without checking.</p>
+<h2 id="a-small-example">A small example</h2>
+<p>These numbers are invented to explain the calculation; they are not project observations.</p>
+<h3 id="following-residents">Following residents</h3>
+<p>Suppose residents of one neighbourhood make 80 covered visits to a venue with diversity 0.2 and 20 visits to a venue with diversity 0.5. Their resident exposure is:</p>
+<blockquote>
+<p><strong>(80 visits x 0.2 + 20 visits x 0.5) / 100 visits = 0.26.</strong></p>
+</blockquote>
+<p>The destination-based measure instead follows venues in the neighbourhood, including visitors who live elsewhere. It could therefore be very different locally. Across the whole system, however, the two flow-weighted averages must agree when they use exactly the same visits and venue scores. A national discrepancy would signal different definitions, support or weights, not a new social effect.</p>
+<h3 id="following-establishments">Following establishments</h3>
+<p>Now imagine two equally visited cafes. Each has patrons exclusively from one of two different groups. Within each cafe, diversity is zero. Pool the cafes and the combined population is half from each group, giving diversity 0.5. The difference is separation <strong>between cafes</strong>.</p>
+<p>If both cafes instead have an equal mix of the two groups, within-cafe and pooled diversity are both 0.5. There is no between-cafe difference. Neither example establishes actual conversation; even a mixed annual visitor pool may use a venue at different times.</p>
+<h2 id="what-the-saved-result-means">What the saved result means</h2>
+<p>The corrected audit reports four-group racial fractionalization of <strong>0.4358 within venues</strong>, compared with <strong>0.4811 after pooling visitors within area-subcategory-year cells</strong>. The gap is 0.0453, or 9.41% of pooled diversity. This is the portion of that accounting measure attributable to differences in establishment composition on the retained support.</p>
+<p>It is <strong>not</strong> a 9.41% effect on attitudes, friendship or discrimination. It also does not mean that 9.41% of people are segregated. These are saved audit results, not a new regression.</p>
+<h2 id="income-and-race-stay-separate">Income and race stay separate</h2>
+<ul>
+<li><strong>Income:</strong> the original groups are based on income characteristics of home census block groups. They are not personal earnings. Ten unweighted block-group income ranks are not ten equally sized groups of people.</li>
+<li><strong>Race:</strong> composition is inferred from home-area census shares. The displayed racial accounting conditions on four retained groups: non-Hispanic White, non-Hispanic Black, non-Hispanic Asian and Hispanic. Omitted group mass needs separate reporting.</li>
+<li><strong>Workers:</strong> expected workforce demographics describe an industry-area proxy, not the people observed working at each venue. A public-facing occupational score does not directly measure the duration or quality of interaction.</li>
+</ul>
+<p>The final exports do not contain the ten income shares needed to repeat the same within/between decomposition for income. A scalar income-diversity index cannot reconstruct those missing shares.</p>
+<h2 id="what-a-regression-would-compare">What a regression would compare</h2>
+<p>The first step is to show distributions, coverage and within-versus-pooled comparisons. A subsequent <strong>proposed descriptive regression</strong> could compare venue diversity across service subcategories, allowing each geographic area to have its own baseline in each year. Accessible residential composition and independently measured venue characteristics could be added only when their definitions and coverage are defensible.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Element</th>
+<th>Proposed specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Observation</strong></td>
+<td>One venue in one year. Retain 2017, 2018 and 2019, with annual and common-support checks.</td>
+</tr>
+<tr>
+<td><strong>Dependent variable</strong></td>
+<td>A named diversity index, with race and home-area income reported separately.</td>
+</tr>
+<tr>
+<td><strong>Main regressors</strong></td>
+<td>Subcategory indicators, with a declared reference category; a top-category version can be shown separately.</td>
+</tr>
+<tr>
+<td><strong>Geographic adjustment</strong></td>
+<td>Area-by-year fixed effects: comparisons within a defined area and year. First resolve the area’s geographic vintage and distinguish metro from micro areas.</td>
+</tr>
+<tr>
+<td><strong>Additional controls</strong></td>
+<td>Predeclared opportunity and venue characteristics, only if measured independently and sufficiently well.</td>
+</tr>
+<tr>
+<td><strong>Weights</strong></td>
+<td>Visit weights for the average recorded visit; equal-venue results for the average recorded establishment. Report both questions explicitly.</td>
+</tr>
+<tr>
+<td><strong>Uncertainty</strong></td>
+<td>A prespecified dependence and clustering strategy appropriate to the regressor’s level. Millions of venue-years are not millions of independent shocks.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The subcategory coefficients would be <strong>conditional associations</strong>, not the causal effect of changing a venue’s type. Area-by-year effects absorb factors common to an area in that year; they do not remove neighbourhood-level access, endogenous venue locations, prices or visitor selection. Venue fixed effects would absorb a category that never changes within a venue.</p>
+<p>This model has <strong>not been estimated in this review</strong>. The historical public-facing extension remains separate: its prospective industry-concentration checks failed and no corrected coefficient was produced. A proposed new model does not override those checks.</p>
+<h2 id="the-next-test-should-have-a-reason-to-fail">The next test should have a reason to fail</h2>
+<p>For the venue-variety question, ask whether the count pattern survives differences in observation intensity and common support before interpreting it as behavioural sorting. For access, require an independent historical menu before interpreting unused opportunities. For incoming/outgoing, show both coordinates and service composition before naming a neighbourhood type.</p>
+<p>More controls cannot repair an incorrectly defined outcome or missing alternatives. The <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">quality review</a> gives the remaining construction checks; the <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/index.html#details">full technical reviews</a> give formulas, assumptions, close predecessors and stop rules.</p>
+</main><footer>Reviewed documentation snapshot. No new licensed-data analysis, empirical replication or adopted research protocol is implied. Earlier results and failed gates remain in force.</footer></body></html>

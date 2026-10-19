@@ -1,0 +1,118 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Weather and mixing</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup { display: none; } th:first-child, td:first-child { min-width: 90px; } .notice { border-left: 4px solid #00686c; padding: 10px 18px; background: #f1f7f6; }
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Weather and mixing</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>Review date: 19 October 2026. Literature and proposed-design assessment only. No weather data were acquired, no mobility records were inspected and no regression was run. Recommendations are inputs to integration, not revisions to the main ranking.</p>
+<h2 id="question-and-closest-work">Question and closest work</h2>
+<p>The relevant question is not simply whether heat changes experienced racial segregation: that question has a very close published predecessor. A potentially useful question is whether unequal access to comfortable destinations changes the <em>opportunities</em> for mixing, separately through total travel, destination choice and the composition encountered at chosen destinations. Identifying those margins requires more than attaching temperatures to annual indices. An alternative framed around weekends or holidays also needs a distinct mechanism, because temporal segregation and within-day travel substitution already have direct empirical predecessors.</p>
+<p><strong>W1. Baldenius, Klauber and Koch, JEEM 2025, “Heat and experienced racial segregation.”</strong> The published paper uses 114 weeks, 2018-March 2020, in 315 metropolitan areas. Equations 1-4 construct exposure and isolation from White/non-White-majority origin CBGs; visitor-to-visit conversion assumes equal group visit frequency within a POI. Weekly temperature-bin regressions include metropolitan, week and state-month fixed effects and Conley inference. Category results and Appendix Figure 13 already examine substitution and group-specific visit totals. Small, insignificant volume estimates are suggestive, not equivalence tests. I inspected these sections and the discussion: no formal additive volume/destination/crowd decomposition was located. Income heterogeneity uses metropolitan income, not observed individual income. <a href="https://publications.pik-potsdam.de/pubman/item/item_32855_1/component/file_32856/1-s2.0-S0095069625000944-main.pdf">Published full text</a>.</p>
+<p><strong>W2. Chae, Scientific Reports 2024, “7-day patterns in Black-White segregation in 49 metropolitan areas.”</strong> The inspected publisher methods use October 2018 device locations, hourly stays, home-CBG-based race imputations and population weights. Black-White dissimilarity across tracts is compared by hour, weekday/weekend and activity sector. This is descriptive temporal sorting, not a calendar experiment or direct observation of individual race. It differs from POI crowd isolation but rules out presenting weekly rhythms themselves as an unexplored phenomenon. The Consensus lead was fetched, then verified against the primary paper. <a href="https://www.nature.com/articles/s41598-024-56257-1">Publisher full text</a>.</p>
+<p><strong>W3. Fan, Wang, Obradovich and Zheng, Scientific Reports 2023, “Intraday adaptation to extreme temperatures in outdoor activity.”</strong> Publisher methods and results describe hourly 2017 location-request activity in Chinese parks, temperature bins, park/hour/weekday/city-month effects and city-clustered uncertainty. The study detects within-day time substitution; park aggregates do not track the same individuals. It establishes a temporal aggregation warning, not interracial mixing or generalization to US destinations. The publication year is 2023 despite the DOI containing 2022. <a href="https://www.nature.com/articles/s41598-022-26928-y">Publisher full text</a>.</p>
+<h2 id="what-remains-beyond-the-overlap">What remains beyond the overlap</h2>
+<p>The W1 digest is deliberately the sole substantive summary of that paper in this review package. Its inspected equations, category analysis and volume diagnostic mean that “we decompose heat into less travel versus different places” is not a sufficient novelty statement. A new accounting identity could still improve transparency, but its incremental contribution must be shown against those existing analyses. Renaming the outcome income segregation, adding rain, or narrowing the sample is not automatically an economics contribution.</p>
+<p>A stronger question would connect a policy-relevant adaptation constraint to group differences in destination choice. Examples include the availability of accessible indoor refuges, genuinely public cooling space, or transport access to comfortable destinations. Such features must be measured independently of the visit outcome. A destination inferred to be a refuge because attendance rises on hot days cannot then supply an independent explanation for that attendance response. Merely interacting heat with current neighborhood income would be suggestive heterogeneity, not identification of constrained adaptation.</p>
+<p>The calendar alternative is best treated as a diagnostic before a standalone paper: do groups’ destination menus converge when work or school schedules relax? Weekend differences cannot identify that mechanism on their own, because opening hours, trip purpose, household responsibilities, religious activity and transport frequency also change. Holiday timing may be predetermined while the treated activities and populations remain highly selected. A predeclared institutional change that shifts scheduling for a defined population would offer a more substantive design, but none has been established here.</p>
+<h2 id="an-explicit-measurement-design">An explicit measurement design</h2>
+<p>For a group of origins g, let N_g,t be total recorded visits, w_g,j,t its share of visits going to destination j, and s_h,j,t the share of destination visits associated with comparison group h. Define E_g,t = sum_j w_g,j,t s_h,j,t. This is an exposure index, not a count of conversations. An optional volume-weighted opportunity index is C_g,t = N_g,t E_g,t; it must not be labeled observed interpersonal encounters.</p>
+<p>On fixed destination support, a symmetric accounting identity is:</p>
+<p><code>change(E_g) = sum_j average(s_h,j) * change(w_g,j) + sum_j average(w_g,j) * change(s_h,j)</code></p>
+<p>Separately, <code>change(C_g) = average(E_g) * change(N_g) + average(N_g) * change(E_g)</code>. A category grouping can divide destination reallocation into between-category and within-category terms. Entry, closure and absent observations need explicit residual or support conventions. These are proposed bookkeeping choices, not newly estimated results or independent causal channels: crowd shares and visit weights are jointly constructed from the same flows.</p>
+<p>This construction forces several useful questions. A reduction in group travel can leave a conditional exposure index unchanged. Equal weekly visit shares can conceal nonoverlapping hours. A rise in minority-origin share does not necessarily increase diversity. Residential composition, visitor-origin composition and the demographic composition of people actually present are separate objects. The proposed paper should report the distinction rather than select the metric giving the strongest temperature response.</p>
+<h2 id="data-requirements-and-availability-boundary">Data requirements and availability boundary</h2>
+<p>Saved project records describe annual 2017-2019 indices, not a currently verified fine-time origin-by-destination-by-group panel ready for this design. Upstream construction and geographic provenance remain unresolved prerequisites. The final exports do not provide the ten income-bin visitor shares needed for the proposed income version. Their absence is a feasibility constraint, not permission to reconstruct or acquire them during this review.</p>
+<p>The minimum future input would be a documented joint visit table at the actual analysis frequency, consistent origin demographics, stable destination identities, opening and observation indicators, weather matched to relevant locations, and a defined population denominator. Daily total visits multiplied by weekly origin shares do not recover daily racial crowds. Marginal hourly popularity and weekly origin distributions likewise do not reveal which groups occupied a venue at the same time. If the needed joint fields do not exist, the question must be weakened or stopped.</p>
+<p>Spatial weather assignment also changes interpretation. Origin temperature may affect the decision to leave home; destination temperature may affect destination choice. Conditioning only on the weather where observed trips end selects on the behavior under study. A metropolitan average is easier to interpret as a common shock but cannot identify neighborhood-specific access to cooler places. Exposure to heat indoors is not observed by outdoor temperature alone.</p>
+<h2 id="identification-and-threats">Identification and threats</h2>
+<p>A defensible weather design would specify a single primary index, treatment frequency and temperature function before estimation, with precipitation, seasonality and local calendar controls chosen on substantive grounds. Anticipation matters: forecasts can move trips between days, so a contemporaneous coefficient is not necessarily the total response to an episode. Cumulative episode windows and displacement into adjacent periods should be fixed in advance.</p>
+<p>Provider coverage, device attrition and suppression could change with travel intensity and geography. A balanced-venue analysis helps comparability but conditions on continued observation; an all-venue analysis changes composition. Both should be distinguished. Shared weather systems require uncertainty reflecting spatial and serial dependence, and heterogeneous effect claims should be evaluated jointly rather than through selected significant subgroups. Nonrejection of a volume effect is not evidence that the volume margin is economically negligible.</p>
+<p>Weather is particularly unsuitable as an automatic instrument for mixing in an attitudes equation. It can affect mood, health, sleep, income and survey participation without operating through social exposure. Even a credible reduced-form heat-to-mobility estimate would not remove those exclusion failures. Nor would accounting for visit reallocation identify the effect of contact on beliefs. The project’s saved attitude multiplicity failures and calendar-support stop must remain intact, not be treated as motivations to search for a favorable weather instrument.</p>
+<h2 id="outcome-blind-feasibility-and-recommendation">Outcome-blind feasibility and recommendation</h2>
+<p>Before any approved data work, compare the proposed table schema against the precise joint frequencies required above and specify a testable contribution beyond W1-W3. A later bounded audit should examine dates, missingness, group denominators, weather overlap and effective independent variation without estimating the substantive response. Write down an economically meaningful equivalence range and precision requirement for the volume diagnostic before seeing its coefficient. Adequate row counts alone are not adequate support.</p>
+<p>Advance only if the needed joint timing exists, an independently measured adaptation constraint can be defended, and the contribution is more than a differently labeled exposure statistic. Otherwise keep the decomposition as a measurement appendix or discard the standalone weather paper. This supports a conditional, lower-priority position relative to the core descriptive audit, not an automatic promotion on grounds of plausibly exogenous temperature.</p>
+<p>Web searches on 19 October 2026 traced the closest paper, its cited intraday work, weekly segregation and 2024-2026 follow-ons. Exact query strings, the fetched Consensus result and inspected sections are indexed in the accompanying JSON. The paper texts were accessible through publisher or institutional copies, but underlying mobility access, joint field availability and reuse rights were not established. The bounded forward search is not an exhaustive citation census or a novelty certificate.</p>
+</main><footer>Reviewed documentation snapshot. No new licensed-data analysis, empirical replication or adopted research protocol is implied. Earlier results and failed gates remain in force.</footer></body></html>
