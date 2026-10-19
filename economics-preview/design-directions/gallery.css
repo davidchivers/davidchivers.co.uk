@@ -1,0 +1,132 @@
+/* Comparison gallery: neutral frame, each poster speaks in its own direction's voice. */
+@font-face { font-family: "Open Sans"; src: url("assets/open-sans-regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Open Sans"; src: url("assets/open-sans-semibold.woff2") format("woff2"); font-weight: 600 800; font-display: swap; }
+
+:root {
+  --ink: #111418;
+  --text: #1b1f24;
+  --grey: #555d66;
+  --hair: #dcdfe3;
+  --bg: #f4f5f7;
+  --purple: #68246d;
+  --navy: #003865;
+  --yellow: #ffd53a;
+  --sans: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --grot: "Helvetica Neue", "Arial Nova", Helvetica, Arial, sans-serif;
+  --din: Bahnschrift, "DIN Alternate", "DIN Condensed", "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", "SF Mono", Menlo, Consolas, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font: 400 1rem/1.6 var(--sans); color: var(--text); background: var(--bg); overflow-x: hidden; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--purple); outline-offset: 3px; }
+img, svg { max-width: 100%; }
+.g-wrap { width: min(100% - 2.5rem, 1280px); margin-inline: auto; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 1rem; top: 1rem; z-index: 10; background: var(--yellow); color: var(--ink); padding: .7rem 1rem; font-weight: 600; }
+
+.g-head { background: var(--ink); color: #fff; padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(2.5rem, 5vw, 3.5rem); }
+.g-flag { font-size: .8rem; color: #c3c8cf; margin: 0 0 1.5rem; display: flex; flex-wrap: wrap; gap: .5rem .75rem; align-items: center; }
+.g-flag span { background: var(--yellow); color: var(--ink); font-weight: 600; padding: .2rem .5rem; }
+.g-head h1 { font: 700 clamp(2.3rem, 6.5vw, 5rem)/.98 var(--grot); letter-spacing: -.035em; margin: 0 0 1.25rem; max-width: 14ch; }
+.g-intro { font-size: clamp(1.05rem, 1.8vw, 1.25rem); color: #dfe3e8; max-width: 52ch; margin: 0; }
+.g-intro strong { color: #fff; }
+
+.directions { display: grid; gap: clamp(2.5rem, 5vw, 3.5rem) 2rem; padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+@media (min-width: 1000px) { .directions { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.dir { display: grid; grid-template-rows: auto 1fr; }
+.poster-link { display: block; text-decoration: none; }
+.poster { position: relative; aspect-ratio: 4 / 5; container-type: inline-size; display: flex; flex-direction: column; padding: 1.4rem; transition: transform .25s ease, box-shadow .25s ease; box-shadow: 0 1px 2px rgba(0, 0, 0, .08); }
+.poster-link:hover .poster { transform: translateY(-4px); box-shadow: 0 14px 30px -12px rgba(0, 0, 0, .35); }
+@media (min-width: 600px) and (max-width: 999px) { .poster { aspect-ratio: 16 / 10; } }
+
+/* Slope poster */
+.p-slope { background: #06152a; color: #fff; }
+.ps-kicker { font: 400 .72rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: #a8b8cb; }
+.ps-title { font: 700 clamp(2.1rem, 4.2vw, 3.1rem)/.92 var(--din); margin-top: 1rem; max-width: 8ch; letter-spacing: -.02em; }
+.ps-title em { font-style: normal; color: var(--yellow); }
+.ps-plot { margin-top: auto; width: 100%; height: auto; }
+.ps-mono { font: 400 .75rem var(--mono); color: var(--yellow); margin-top: .5rem; }
+
+/* Broadsheet poster */
+.p-broad { background: #fff; color: #111; border: 1px solid var(--hair); }
+.pb-top { display: flex; justify-content: space-between; gap: .5rem; font: 600 .62rem/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; border-bottom: 1px solid #111; padding-bottom: .4rem; }
+.pb-name { font: 700 2.6rem/.85 var(--grot); font-size: 19cqi; letter-spacing: -.05em; margin: .5rem 0 .3rem -.04em; white-space: nowrap; }
+.pb-rule { display: block; border-top: 5px solid #111; border-bottom: 1px solid #111; height: 9px; }
+.pb-head { font: 700 clamp(1.7rem, 3vw, 2.3rem)/1 var(--grot); letter-spacing: -.03em; margin: auto 0 1rem; }
+.pb-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; font: 700 .78rem/1.25 var(--grot); }
+.pb-cols span + span { border-left: 1px solid var(--hair); padding-left: .75rem; }
+.pb-cols b { display: block; font: 600 .58rem/1.3 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--purple); margin-bottom: .3rem; }
+
+/* Wayfinder poster */
+.p-way { background: #eef1f5; color: #0d1b2a; padding: 1rem; gap: .75rem; }
+.pw-panel { background: var(--navy); color: #fff; padding: 1rem; display: block; }
+.pw-q { display: block; font: 600 clamp(1.3rem, 2.4vw, 1.7rem)/1.1 var(--sans); margin-bottom: .75rem; }
+.pw-seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3px; }
+.pw-seg i { font: 600 .66rem/1 var(--sans); font-style: normal; padding: .55rem .25rem; border: 1px solid rgba(255, 255, 255, .35); text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pw-seg i.on { background: var(--yellow); color: var(--navy); border-color: var(--yellow); }
+.pw-line { position: relative; display: grid; gap: .35rem; padding-left: 1.9rem; flex: 1; align-content: start; }
+.pw-line::before { content: ""; position: absolute; left: .6rem; top: .3rem; bottom: 0; width: 6px; background: var(--purple); }
+.pw-zone { justify-self: start; margin-left: -1.9rem; background: #fff; border: 2px solid #0d1b2a; font: 600 .78rem/1 var(--sans); padding: .2rem .5rem .2rem .2rem; display: inline-flex; gap: .4rem; align-items: center; position: relative; }
+.pw-zone b { background: var(--yellow); padding: .25rem .4rem; }
+.pw-stop { background: #fff; border: 1px solid #d3dae3; padding: .55rem .6rem; font: 600 .8rem/1.2 var(--sans); position: relative; }
+.pw-stop::before { content: ""; position: absolute; left: calc(-1.9rem + .6rem + 6px); top: 50%; width: 9px; height: 4px; margin-top: -2px; background: var(--purple); }
+.pw-board { background: #0a0e13; color: #fff; font: 400 .74rem/1.3 var(--mono); padding: .65rem .75rem; display: block; }
+.pw-board b { color: var(--yellow); margin-right: .5rem; }
+
+.dir-body { padding-top: 1.4rem; display: flex; flex-direction: column; }
+.dir-num { font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--purple); margin: 0 0 .3rem; }
+.dir h2 { font: 700 clamp(1.9rem, 3vw, 2.4rem)/1 var(--grot); letter-spacing: -.03em; margin: 0 0 .75rem; }
+.dir-idea { font-size: 1.05rem; margin: 0 0 1rem; }
+.dir-idea em { font-style: normal; font-weight: 600; }
+.traits { margin: 0 0 1.25rem; border-top: 1px solid var(--hair); }
+.traits div { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: .75rem; padding: .6rem 0; border-bottom: 1px solid var(--hair); }
+.traits dt { font-size: .75rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--grey); padding-top: .15rem; }
+.traits dd { margin: 0; font-size: .92rem; line-height: 1.5; }
+.links { display: flex; flex-wrap: wrap; gap: .5rem; margin: auto 0 0; }
+.links a { flex: 1 1 9rem; display: flex; justify-content: space-between; gap: .5rem; padding: .85rem 1rem; background: var(--ink); color: #fff; font-weight: 600; text-decoration: none; }
+.links a + a { background: #fff; color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); }
+.links a:hover { background: var(--purple); color: #fff; box-shadow: none; }
+
+.compare { padding-bottom: clamp(2.5rem, 5vw, 4rem); }
+.compare h2, .shared h2, .recommend h2 { font: 700 clamp(1.6rem, 3vw, 2.2rem)/1.05 var(--grot); letter-spacing: -.02em; margin: 0 0 1rem; }
+.table-scroll { overflow-x: auto; background: #fff; border: 1px solid var(--hair); }
+.table-scroll:focus-visible { outline-offset: 2px; }
+.compare table { width: 100%; min-width: 44rem; border-collapse: collapse; font-size: .92rem; }
+.compare th, .compare td { text-align: left; vertical-align: top; padding: .8rem 1rem; border-bottom: 1px solid var(--hair); }
+.compare thead th { font: 700 1.05rem var(--grot); border-bottom: 2px solid var(--ink); }
+.compare tbody th { font-size: .75rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--grey); width: 11rem; }
+.compare tbody tr:last-child > * { border-bottom: 0; }
+
+.recommend { display: grid; gap: 1.5rem 3rem; padding: clamp(1.75rem, 4vw, 2.75rem); background: #fff; border-top: 6px solid var(--yellow); margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+@media (min-width: 900px) { .recommend { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); } }
+.rec-lead { font-size: clamp(1.15rem, 2vw, 1.4rem); line-height: 1.45; margin: 0; }
+.rec-notes p { margin: 0 0 .75rem; }
+
+.shared { padding-bottom: clamp(3rem, 6vw, 5rem); }
+.shared ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .1rem; max-width: 60rem; }
+.shared li { padding: .7rem 0 .7rem 1.6rem; border-bottom: 1px solid var(--hair); position: relative; }
+.shared li::before { content: ""; position: absolute; left: 0; top: 1.15rem; width: .8rem; height: .4rem; background: var(--purple); clip-path: polygon(0 0, 0 100%, 100% 100%); }
+
+.g-foot { background: var(--ink); color: #c3c8cf; padding-block: 2rem 2.5rem; font-size: .88rem; }
+.g-foot .g-wrap { display: grid; gap: 1rem 2.5rem; align-items: start; }
+@media (min-width: 760px) { .g-foot .g-wrap { grid-template-columns: auto minmax(0, 1fr); } }
+.g-foot img { width: 130px; height: auto; display: block; }
+.g-foot p { margin: 0; max-width: 70ch; }
+.g-foot a { color: #fff; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Keep semantic hidden state effective when components use grid or flex. */
+[hidden] { display: none !important; }
+
+/* Bring the three choices into view quickly and allow the title to wrap on phones. */
+.g-head { padding-block:2rem; }
+.g-flag { margin-bottom:1rem; }
+.g-head h1 { max-width:none; font-size:clamp(2rem,4.2vw,3.5rem); line-height:1.05; margin-bottom:1rem; }
+.g-intro { max-width:78ch; font-size:1rem; }
+.directions { padding-block:2.5rem; }
+.links { margin:0 0 1.25rem; }
+@media(min-width:1000px) { .poster { aspect-ratio:4/4.2; } }

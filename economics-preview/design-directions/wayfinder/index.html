@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#003865">
+<title>Wayfinder — Economics at Durham (design concept)</title>
+<meta name="description" content="Design concept: a phone-first route finder for Economics at Durham.">
+<link rel="stylesheet" href="wayfinder.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="hub.js" defer></script>
+</head>
+<body class="hub">
+<a class="skip" href="#main">Skip to content</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-course" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/><path d="M22 9v6"/></symbol>
+  <symbol id="i-research" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l6 6"/></symbol>
+  <symbol id="i-visit" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-welcome" viewBox="0 0 24 24"><path d="M5 21V4h9l-1 3 1 3H5"/><path d="M5 21h4"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M4 20l2-2"/><path d="M12 7h8M12 14h8M12 20h8"/></symbol>
+  <symbol id="i-prep" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M3 7l14 12"/><circle cx="10" cy="13" r="1.6"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11"/><path d="M2 19h20"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18"/><path d="M12 11v6M12 7v.5"/></symbol>
+  <symbol id="i-careers" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13"/><path d="M9 7V4h6v3M3 12h18"/></symbol>
+  <symbol id="i-talk" viewBox="0 0 24 24"><path d="M4 4h16v11H9l-5 4z"/><path d="M8 8h8M8 11h5"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3.6-3.6a4 4 0 0 0-5.7-5.7L12 6.3"/><path d="M14 10a4 4 0 0 0-5.7 0l-3.6 3.6a4 4 0 0 0 5.7 5.7l1.6-1.6"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path d="M6 3v18"/><path d="M6 7h6M6 13h9M6 19h5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></symbol>
+</svg>
+
+<div class="concept-strip">
+  <div class="shell strip-inner">
+    <p><strong>Design concept</strong> · Direction 3 of 3: Wayfinder</p>
+    <nav aria-label="Concept navigation"><a href="../index.html">All directions</a><a href="lesson.html">Paired lesson →</a></nav>
+  </div>
+</div>
+
+<header class="appbar">
+  <div class="shell appbar-inner">
+    <a class="brand" href="index.html" aria-label="Economics at Durham, concept home">
+      <img src="../assets/durham-logo.svg" width="240" height="99" alt="Durham University">
+      <span>Economics</span>
+    </a>
+    <nav class="top-nav" aria-label="Sections">
+      <a href="#route">Routes</a><a href="#seminars">Seminars</a><a href="#prepare">Prepare</a><a href="#pocket">Links</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="shell layout">
+  <div class="col-main">
+    <section id="route" class="where" aria-labelledby="where-title">
+      <p class="eyebrow">Economics at Durham</p>
+      <h1 id="where-title">Where do you need to go?</h1>
+      <p class="where-sub">Every stop below opens an official Durham page, the existing preparation course, or this term’s seminars.</p>
+      <div class="switch js-only" role="group" aria-label="Show stops for">
+        <button type="button" data-zone="all" aria-pressed="true"><b>All stops</b><small>12 stops</small></button>
+        <button type="button" data-zone="apply" aria-pressed="false"><b>Applying</b><small>Before you apply</small></button>
+        <button type="button" data-zone="start" aria-pressed="false"><b>Starting</b><small>Got a place</small></button>
+        <button type="button" data-zone="study" aria-pressed="false"><b>Studying</b><small>Already here</small></button>
+      </div>
+    </section>
+    <p class="switch-note js-only" id="switch-note" aria-live="polite">Showing all 12 stops.</p>
+
+    <div class="line" id="line">
+      <section class="zone" data-zone="apply" aria-labelledby="z-apply">
+        <h2 class="zone-head" id="z-apply"><span class="code" aria-hidden="true">A</span>Before you apply</h2>
+        <p class="here-plate" aria-hidden="true">You are here</p>
+        <ol class="stops">
+          <li><a class="stop" href="https://www.durham.ac.uk/business/courses/economics-l100/"><span class="tile" aria-hidden="true"><svg><use href="#i-course"/></svg></span><span class="stop-text"><b>BSc Economics</b><small>Undergraduate course page</small></span><span class="dest">durham.ac.uk<svg aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+          <li><a class="stop" href="https://www.durham.ac.uk/business/programmes/masters/masters-in-economics/"><span class="tile" aria-hidden="true"><svg><use href="#i-course"/></svg></span><span class="stop-text"><b>Master’s programmes in Economics</b><small>Taught postgraduate routes</small></span><span class="dest">durham.ac.uk<svg aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+          <li><a class="stop" href="https://www.durham.ac.uk/business/about/departments/economics/phd-in-economics/"><span class="tile" aria-hidden="true"><svg><use href="#i-research"/></svg></span><span class="stop-text"><b>PhD in Economics</b><small>Research degrees</small></span><span class="dest">durham.ac.uk<svg aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+          <li><a class="stop" href="https://www.durham.ac.uk/visit-us/open-days/"><span class="tile" aria-hidden="true"><svg><use href="#i-visit"/></svg></span><span class="stop-text"><b>Open days and visits</b><small>Plan a visit to Durham</small></span><span class="dest">durham.ac.uk<svg aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+        </ol>
+      </section>
+
+      <section class="zone" data-zone="start" aria-labelledby="z-start">
+        <h2 class="zone-head" id="z-start"><span class="code" aria-hidden="true">B</span>Got a place: before you arrive</h2>
+        <p class="here-plate" aria-hidden="true">You are here</p>
+        <ol class="stops">
+          <li><a class="stop" href="https://www.durham.ac.uk/business/about/departments/economics/welcome-to-new-students/"><span class="tile" aria-hidden="true"><svg><use href="#i-welcome"/></svg></span><span class="stop-text"><b>Welcome to new Economics students</b><small>Department welcome information</small></span><span class="dest">durham.ac.uk<svg aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+          <li><a class="stop" href="https://apps.dur.ac.uk/induction/calendar"><span class="tile" aria-hidden="true"><svg><use href="#i-calendar"/></svg></span><span class="stop-text"><b>Induction planner</b><small>Build your first-weeks calendar</small></span><span class="dest">apps.dur.ac.uk<svg aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+          <li><a class="stop" href="https://www.durham.ac.uk/study/undergraduate/offer/before-you-arrive/checklist-for-new-students/"><span class="tile" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span class="stop-text"><b>Undergraduate arrival checklist</b><small>What to sort before you travel</small></span><span class="dest">durham.ac.uk<svg aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+          <li><a class="stop" href="#prepare"><span class="tile tile-y" aria-hidden="true"><svg><use href="#i-prep"/></svg></span><span class="stop-text"><b>MSc preparation</b><small>Sample lesson and the existing course</small></span><span class="dest">on this page<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+        </ol>
+      </section>
+
+      <section class="zone" data-zone="study" aria-labelledby="z-study">
+        <h2 class="zone-head" id="z-study"><span class="code" aria-hidden="true">C</span>Studying here</h2>
+        <p class="here-plate" aria-hidden="true">You are here</p>
+        <ol class="stops">
+          <li><a class="stop" href="https://blackboard.durham.ac.uk/"><span class="tile" aria-hidden="true"><svg><use href="#i-laptop"/></svg></span><span class="stop-text"><b>Blackboard</b><small>Modules and teaching materials</small></span><span class="dest">sign-in<svg aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+          <li><a class="stop" href="https://durhamuniversity.sharepoint.com/teams/BUS-Students"><span class="tile" aria-hidden="true"><svg><use href="#i-info"/></svg></span><span class="stop-text"><b>Business School Student Gateway</b><small>Student information</small></span><span class="dest">sign-in<svg aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+          <li><a class="stop" href="https://www.durham.ac.uk/business/programmes/undergraduate/employability-and-career-for-economics-students-/"><span class="tile" aria-hidden="true"><svg><use href="#i-careers"/></svg></span><span class="stop-text"><b>Careers and opportunities</b><small>For Economics students</small></span><span class="dest">durham.ac.uk<svg aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+          <li><a class="stop" href="#seminars"><span class="tile" aria-hidden="true"><svg><use href="#i-talk"/></svg></span><span class="stop-text"><b>Visiting speakers</b><small>This term’s seminars</small></span><span class="dest">on this page<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+        </ol>
+      </section>
+    </div>
+  </div>
+
+  <aside class="col-side" aria-label="Seminars, preparation and links">
+    <section id="seminars" class="board" aria-labelledby="board-title">
+      <div class="board-head">
+        <h2 id="board-title">Next up · Visiting speakers</h2>
+        <p>External seminars</p>
+      </div>
+      <ol class="board-rows">
+        <li data-date="2026-10-21">
+          <time datetime="2026-10-21"><span>Wed</span> 21 Oct</time>
+          <a href="https://www.durham.ac.uk/business/about/departments/economics/news-and-events/external-seminars/"><b>Algorithmic equilibria</b><small>Mich Tvede · University of Sheffield</small></a>
+          <span class="when" aria-live="off"></span>
+        </li>
+        <li data-date="2026-11-11">
+          <time datetime="2026-11-11"><span>Wed</span> 11 Nov</time>
+          <a href="https://www.durham.ac.uk/business/about/departments/economics/news-and-events/external-seminars/"><b>Punishment and crime: impact of death sentences on local crime rates in India</b><small>Ashwini Deshpande · Ashoka University</small></a>
+          <span class="when"></span>
+        </li>
+        <li data-date="2026-11-18">
+          <time datetime="2026-11-18"><span>Wed</span> 18 Nov</time>
+          <a href="https://www.durham.ac.uk/business/about/departments/economics/news-and-events/external-seminars/"><b>Research seminar: title to follow</b><small>Petros Sekeris · Toulouse Business School</small></a>
+          <span class="when"></span>
+        </li>
+      </ol>
+      <div class="board-foot">
+        <p>Checked 19 Oct 2026 against Durham’s published programme. Confirm times and venues before you go.</p>
+        <a href="https://www.durham.ac.uk/business/about/departments/economics/news-and-events/all-seminars/">All seminars<svg aria-hidden="true"><use href="#i-out"/></svg></a>
+      </div>
+    </section>
+
+    <section id="prepare" class="prep-panel" aria-labelledby="prep-title">
+      <p class="eyebrow">Starting an MSc?</p>
+      <h2 id="prep-title">Warm up with a sample lesson: budget sets.</h2>
+      <p>Move a basket, change a price and watch the receipt. Then check yourself with three quick questions.</p>
+      <a class="go-btn" href="lesson.html">Start the sample lesson<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <ul class="prep-links">
+        <li><a href="https://dubs.awh.durham.ac.uk/econ/msc/">Introduction to Economics, the full existing course<svg aria-hidden="true"><use href="#i-out"/></svg></a></li>
+        <li><a href="https://dubs.awh.durham.ac.uk/econ/msc/#/lessons/K24P38c5PfpOdK19Pc8BozcqzxBgBpKP">How to use the course<svg aria-hidden="true"><use href="#i-out"/></svg></a></li>
+      </ul>
+    </section>
+
+    <section id="pocket" class="pocket" aria-labelledby="pocket-title">
+      <h2 id="pocket-title">Pocket links</h2>
+      <p class="pocket-sub">The short list behind a social bio link. Filter it or scroll.</p>
+      <div class="filter js-only">
+        <label for="filter">Filter links</label>
+        <input id="filter" type="search" autocomplete="off" spellcheck="false" placeholder="Try “arrival” or “seminar”">
+      </div>
+      <p class="filter-count js-only" id="filter-count" aria-live="polite">14 links</p>
+      <ul class="pocket-list" id="pocket-list">
+        <li data-tags="course undergraduate apply bsc"><a href="https://www.durham.ac.uk/business/courses/economics-l100/">BSc Economics</a></li>
+        <li data-tags="course postgraduate masters msc apply"><a href="https://www.durham.ac.uk/business/programmes/masters/masters-in-economics/">Master’s in Economics</a></li>
+        <li data-tags="phd research doctoral apply"><a href="https://www.durham.ac.uk/business/about/departments/economics/phd-in-economics/">PhD in Economics</a></li>
+        <li data-tags="visit open day tour"><a href="https://www.durham.ac.uk/visit-us/open-days/">Open days and visits</a></li>
+        <li data-tags="welcome new arrival induction"><a href="https://www.durham.ac.uk/business/about/departments/economics/welcome-to-new-students/">Welcome for new students</a></li>
+        <li data-tags="induction calendar timetable arrival"><a href="https://apps.dur.ac.uk/induction/calendar">Induction planner</a></li>
+        <li data-tags="arrival checklist undergraduate travel"><a href="https://www.durham.ac.uk/study/undergraduate/offer/before-you-arrive/checklist-for-new-students/">Arrival checklist</a></li>
+        <li data-tags="prep preparation msc course maths"><a href="https://dubs.awh.durham.ac.uk/econ/msc/">Introduction to Economics</a></li>
+        <li data-tags="prep preparation lesson budget interactive"><a href="lesson.html">Budget sets: sample lesson</a></li>
+        <li data-tags="modules teaching sign-in materials"><a href="https://blackboard.durham.ac.uk/">Blackboard</a></li>
+        <li data-tags="student gateway sign-in support information"><a href="https://durhamuniversity.sharepoint.com/teams/BUS-Students">Student Gateway</a></li>
+        <li data-tags="careers jobs employability internships"><a href="https://www.durham.ac.uk/business/programmes/undergraduate/employability-and-career-for-economics-students-/">Careers and opportunities</a></li>
+        <li data-tags="seminar seminars events talks speakers"><a href="https://www.durham.ac.uk/business/about/departments/economics/news-and-events/all-seminars/">All seminars</a></li>
+        <li data-tags="department official research staff people"><a href="https://www.durham.ac.uk/business/about/departments/economics/">Department website</a></li>
+      </ul>
+      <p class="no-match" id="no-match" hidden>No links match. Try “course”, “arrival” or “seminar”.</p>
+      <div class="channels">
+        <p><b>Instagram</b> and <b>LinkedIn</b> are proposed channels, not live yet. There’s nothing to follow for now, so there are no buttons.</p>
+      </div>
+    </section>
+  </aside>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <img src="../assets/durham-logo.svg" width="240" height="99" alt="Durham University">
+    <div>
+      <p><strong>Design concept, October 2026.</strong> A proposal for discussion, not an official Durham University website or service, and not endorsed by the University. Use the linked Durham pages for current course, admissions and seminar details. The University logo illustrates the proposal. No tracking, cookies, sign-in or forms; the link filter runs only in your browser.</p>
+      <p class="footer-links"><a href="https://www.durham.ac.uk/business/about/departments/economics/research/">Research</a> · <a href="https://www.durham.ac.uk/business/about/departments/economics/our-people/academic-staff/">Academic staff</a> · <a href="https://www.durham.ac.uk/business/about/departments/economics/news-and-events/workshops-and-conferences/">Workshops and conferences</a></p>
+      <p class="footer-links"><a href="../index.html">All three directions</a> · <a href="lesson.html">Paired lesson</a> · <a href="https://davidchivers.github.io/davidchivers.co.uk/economics-preview/sources.html">Sources and notes ↗</a></p>
+    </div>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="Quick sections">
+  <a href="#route"><svg aria-hidden="true"><use href="#i-route"/></svg>Routes</a>
+  <a href="#seminars"><svg aria-hidden="true"><use href="#i-calendar"/></svg>Seminars</a>
+  <a href="#prepare"><svg aria-hidden="true"><use href="#i-prep"/></svg>Prepare</a>
+  <a href="#pocket"><svg aria-hidden="true"><use href="#i-link"/></svg>Links</a>
+</nav>
+</body>
+</html>
