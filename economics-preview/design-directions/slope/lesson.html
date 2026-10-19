@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#071628">
+<title>Budget sets — Slope lesson (design concept)</title>
+<meta name="description" content="Design concept: an interactive budget-set lesson from MSc Economics preparation.">
+<link rel="stylesheet" href="slope.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="../assets/model.js" defer></script>
+<script src="../assets/budget-core.js" defer></script>
+<script src="lesson.js" defer></script>
+</head>
+<body class="lesson">
+<a class="skip" href="#main">Skip to lesson</a>
+
+<div class="concept-bar">
+  <div class="wrap concept-inner">
+    <p><span class="mark" aria-hidden="true"></span> <strong>Design concept</strong> · Direction 1 of 3: Slope</p>
+    <nav aria-label="Concept navigation"><a href="../index.html">All directions</a><a href="index.html">← Paired hub</a></nav>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="brand" href="index.html" aria-label="Economics at Durham, concept home">
+      <img src="../assets/durham-logo-white.svg" width="240" height="99" alt="Durham University">
+      <span class="brand-name">Economics</span>
+    </a>
+    <nav class="site-nav" aria-label="This lesson">
+      <a href="#instrument">Explore</a><a href="#checks">Check</a><a href="#continue">Continue</a><a href="index.html#prepare">Prepare</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="lesson-head wrap" aria-labelledby="lesson-title">
+    <p class="kicker mono">MSc preparation · Sample lesson · Individual choices</p>
+    <h1 id="lesson-title">Budget <span class="hl">sets.</span></h1>
+    <div class="head-grid">
+      <p class="lede">£24 to spend. Coffee £3, lunch £6. Which baskets can you afford, and what moves when income or a price changes?</p>
+      <div class="rule-box">
+        <p class="mono label">The affordability rule</p>
+        <p class="formula"><span>coffee price × coffees</span> <b>+</b> <span>£6 × lunches</span> <b>≤</b> <span>budget</span></p>
+        <p class="small">Coffee and lunch are treated as divisible, so 4.5 coffees is allowed. The controls move in halves only for convenience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="instrument" class="instrument" aria-labelledby="inst-title">
+    <div class="wrap">
+      <h2 id="inst-title" class="sec-label mono">01 / Explore</h2>
+      <div class="inst-grid">
+        <div class="inst-plot">
+          <svg id="chart" viewBox="0 0 680 400" role="group" aria-labelledby="chart-title" aria-describedby="chart-desc">
+            <title id="chart-title">Budget set for coffees (across) and lunches (up)</title>
+            <desc id="chart-desc">Budget £24, coffee £3, lunch £6. The line joins 4 lunches to 8 coffees; the triangle beneath it is affordable. The basket is 4 coffees and 2 lunches, costing £24: exactly on the line.</desc>
+            <defs>
+              <pattern id="l-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(-26.565)">
+                <line x1="0" y1="0" x2="0" y2="12" stroke="rgba(255,255,255,.14)" stroke-width="2"/>
+              </pattern>
+            </defs>
+            <g id="grid" aria-hidden="true"></g>
+            <polygon id="set" points="60,320 60,126.67 446.67,320" fill="#68246d"/>
+            <polygon id="set-hatch" points="60,320 60,126.67 446.67,320" fill="url(#l-hatch)"/>
+            <line id="ghost" x1="60" y1="126.67" x2="446.67" y2="320" class="ghost" visibility="hidden"/>
+            <path d="M60 18 V320 H652" class="axis" fill="none"/>
+            <line id="line" x1="60" y1="126.67" x2="446.67" y2="320" class="budget"/>
+            <path id="guides" d="M253.33 320 V223.33 H60" class="guide" fill="none"/>
+            <circle id="ya" cx="60" cy="126.67" r="6" class="node"/>
+            <circle id="xa" cx="446.67" cy="320" r="6" class="node"/>
+            <text id="ya-label" x="78" y="128" class="flag">4 lunches</text>
+            <text id="xa-label" x="458" y="308" class="flag">8 coffees</text>
+            <g id="ticks" aria-hidden="true"></g>
+            <text x="20" y="175" class="axis-label" text-anchor="middle" transform="rotate(-90 20 175)">LUNCHES</text>
+            <text x="652" y="392" class="axis-label" text-anchor="end">COFFEES</text>
+            <g id="point" class="point" transform="translate(253.33 223.33)" aria-label="Basket: 4 coffees and 2 lunches" aria-describedby="plot-help">
+              <circle class="hit" r="26"/>
+              <circle class="ring" r="19"/>
+              <circle class="dot" r="11"/>
+              <path class="cross" d="M-6 -6 l12 12 m0 -12 l-12 12"/>
+            </g>
+            <text id="point-label" x="270" y="208" class="pt-label">(4, 2)</text>
+          </svg>
+          <p class="plot-help js-only" id="plot-help">Tap the graph to place the basket, or drag the yellow point. Keyboard: focus the point, then use arrow keys (Shift for steps of 2).</p>
+          <noscript><p class="plot-help">This is the starting example. With JavaScript on, you can move the basket and change income and prices. The <a href="https://davidchivers.github.io/davidchivers.co.uk/economics-preview/preparation-lab/reading.html">reading notes</a> cover the same idea without interaction.</p></noscript>
+        </div>
+
+        <div class="inst-panel">
+          <div class="status" id="status"><span class="status-mark" aria-hidden="true">●</span><span id="status-text">On the line: every pound spent</span></div>
+          <dl class="readout">
+            <div><dt>Spent</dt><dd id="r-spent">£24</dd></div>
+            <div><dt id="r-left-label">Left</dt><dd id="r-left">£0</dd></div>
+            <div><dt>Max coffees</dt><dd id="r-xmax">8</dd></div>
+            <div><dt>Max lunches</dt><dd id="r-ymax">4</dd></div>
+            <div class="wide"><dt>Slope · opportunity cost</dt><dd><span id="r-slope">−0.5</span> <small id="r-oc">1 coffee costs ½ lunch</small></dd></div>
+          </dl>
+          <p class="sum mono" id="sum">£3 × 4 + £6 × 2 = £24 ≤ £24</p>
+
+          <div class="js-only controls">
+            <fieldset class="deck">
+              <legend>Budget</legend>
+              <div class="deck-row" id="deck-m"></div>
+            </fieldset>
+            <fieldset class="deck">
+              <legend>Coffee price <span class="mono">(lunch fixed at £6)</span></legend>
+              <div class="deck-row" id="deck-p"></div>
+            </fieldset>
+            <p class="deck-key mono"><span class="key" aria-hidden="true"></span>marks the starting values</p>
+            <div class="basket">
+              <div class="stepper">
+                <label for="in-x">Coffees</label>
+                <div class="step-row"><button type="button" data-step="x" data-d="-0.5" aria-label="Half a coffee fewer">−</button><input id="in-x" type="number" inputmode="decimal" min="0" max="12" step="0.5" value="4"><button type="button" data-step="x" data-d="0.5" aria-label="Half a coffee more">+</button></div>
+              </div>
+              <div class="stepper">
+                <label for="in-y">Lunches</label>
+                <div class="step-row"><button type="button" data-step="y" data-d="-0.5" aria-label="Half a lunch fewer">−</button><input id="in-y" type="number" inputmode="decimal" min="0" max="6" step="0.5" value="2"><button type="button" data-step="y" data-d="0.5" aria-label="Half a lunch more">+</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="inst-foot js-only">
+        <div class="scenes" role="group" aria-label="Try a change">
+          <span class="mono">Try</span>
+          <button type="button" data-scene="income">Income rises to £36</button>
+          <button type="button" data-scene="price">Coffee rises to £6</button>
+          <button type="button" data-scene="start">↺ Back to the start</button>
+        </div>
+      </div>
+      <p class="insight" id="insight">This is the starting line: £24, coffee £3, lunch £6. Every pound is spent: the basket sits exactly on the line.</p>
+      <p id="sr-status" class="visually-hidden" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="limit wrap" aria-labelledby="limit-title">
+    <h2 id="limit-title">The line shows what’s possible. <span class="hl">Not what’s best.</span></h2>
+    <div class="limit-copy">
+      <p>In the starting example, every basket on the line spends exactly £24: 8 coffees, 4 lunches, or 4 of one and 2 of the other. Affordability alone can’t choose between them.</p>
+      <p>To find a best choice you also need <strong>preferences</strong>: how much this person values coffee against lunch. That is utility maximisation, the next lesson in the course.</p>
+    </div>
+  </section>
+
+  <section id="checks" class="checks" aria-labelledby="checks-title">
+    <div class="wrap">
+      <h2 id="checks-title" class="sec-label mono">02 / Check</h2>
+      <p class="checks-intro"><strong>Three checks, all on the starting set-up:</strong> £24, coffee £3, lunch £6, whatever the graph above shows now. Answers are checked straight away; nothing is recorded.</p>
+
+      <article class="check" id="q1" aria-labelledby="q1-title">
+        <p class="check-num mono">1 / 3</p>
+        <h3 id="q1-title">You buy 2 coffees. What’s the most lunch you can afford?</h3>
+        <div class="choices numbers js-only" role="group" aria-labelledby="q1-title">
+          <button type="button" data-q="1" data-a="0"><b>2</b> lunches</button>
+          <button type="button" data-q="1" data-a="1"><b>3</b> lunches</button>
+          <button type="button" data-q="1" data-a="2"><b>4</b> lunches</button>
+        </div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+        <noscript><p class="feedback">Answer: 3 lunches. Two coffees cost £6, leaving £18, which buys three £6 lunches. Four lunches would bring the total to £30.</p></noscript>
+      </article>
+
+      <article class="check" id="q2" aria-labelledby="q2-title">
+        <p class="check-num mono">2 / 3</p>
+        <h3 id="q2-title">Income rises to £36; prices stay the same. Which picture shows the new line?</h3>
+        <p class="check-hint">Dashed: the starting line. Yellow: the candidate.</p>
+        <div class="choices plots js-only" role="group" aria-labelledby="q2-title">
+          <button type="button" data-q="2" data-a="0" data-line="0,4,12,0"><span class="mono">A</span> Only the coffee end moves: 12 coffees, 4 lunches</button>
+          <button type="button" data-q="2" data-a="1" data-line="0,6,12,0"><span class="mono">B</span> Both ends move out: 12 coffees, 6 lunches</button>
+          <button type="button" data-q="2" data-a="2" data-line="0,6,8,0"><span class="mono">C</span> Only the lunch end moves: 8 coffees, 6 lunches</button>
+        </div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+        <noscript><p class="feedback">Answer: B. Both intercepts rise, to 12 coffees and 6 lunches. Prices have not changed, so the slope stays −0.5 and the line shifts out in parallel.</p></noscript>
+      </article>
+
+      <article class="check" id="q3" aria-labelledby="q3-title">
+        <p class="check-num mono">3 / 3</p>
+        <h3 id="q3-title">Back to £24. Coffee rises to £6. Which picture is right?</h3>
+        <p class="check-hint">Dashed: the starting line. Yellow: the candidate.</p>
+        <div class="choices plots js-only" role="group" aria-labelledby="q3-title">
+          <button type="button" data-q="3" data-a="0" data-line="0,2,4,0"><span class="mono">A</span> Both ends move in: 4 coffees, 2 lunches</button>
+          <button type="button" data-q="3" data-a="1" data-line="0,2,8,0"><span class="mono">B</span> Only the lunch end moves: 8 coffees, 2 lunches</button>
+          <button type="button" data-q="3" data-a="2" data-line="0,4,4,0"><span class="mono">C</span> It pivots in: 4 coffees, still 4 lunches</button>
+        </div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+        <noscript><p class="feedback">Answer: C. The most lunch you can buy is still 4, because lunch still costs £6. The most coffee falls from 8 to 4. The line pivots in and its slope becomes −1.</p></noscript>
+      </article>
+
+      <div class="restart js-only"><button type="button" id="restart" class="btn ghost-btn">↺ Start the checks again</button></div>
+    </div>
+  </section>
+
+  <section id="continue" class="continue" aria-labelledby="continue-title">
+    <div class="wrap">
+      <h2 id="continue-title" class="sec-label mono">03 / Continue</h2>
+      <ul class="next-list">
+        <li><a href="https://dubs.awh.durham.ac.uk/econ/msc/#/lessons/fJrzcqjC1qzyM5WWg9qskHEX5Q5Hu6L4"><small class="mono">Watch</small><b>The budget-set video lesson</b><span>In the existing course</span><i aria-hidden="true">↗</i></a></li>
+        <li><a href="https://davidchivers.github.io/davidchivers.co.uk/economics-preview/preparation-lab/reading.html"><small class="mono">Read</small><b>Reading notes, worked example</b><span>A quieter, printable alternative</span><i aria-hidden="true">↗</i></a></li>
+        <li><a href="https://dubs.awh.durham.ac.uk/econ/msc/#/lessons/nBdoqRNDsEJRzgr3b1QCXaRJa9MkkyzS"><small class="mono">Next</small><b>Utility maximisation</b><span>Adding preferences to the line</span><i aria-hidden="true">↗</i></a></li>
+        <li><a href="https://dubs.awh.durham.ac.uk/econ/msc/"><small class="mono">All</small><b>Introduction to Economics</b><span>The full existing course</span><i aria-hidden="true">↗</i></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <img src="../assets/durham-logo-white.svg" width="240" height="99" alt="Durham University" class="footer-logo">
+      <p>Department of Economics<br>Durham University Business School</p>
+    </div>
+    <div class="footer-note">
+      <p><strong>Design concept, October 2026.</strong> New illustrative teaching content for discussion; it does not replace or change the existing course. Not an official Durham University service. Nothing is submitted, saved or tracked.</p>
+      <p class="mono"><a href="../index.html">All three directions</a> · <a href="index.html">Paired hub</a> · <a href="https://davidchivers.github.io/davidchivers.co.uk/economics-preview/sources.html">Sources and notes ↗</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

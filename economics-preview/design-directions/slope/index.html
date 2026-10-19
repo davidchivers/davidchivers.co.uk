@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#071628">
+<title>Slope — Economics at Durham (design concept)</title>
+<meta name="description" content="Design concept: an Economics at Durham hub built from the geometry of a budget line.">
+<link rel="stylesheet" href="slope.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="hub.js" defer></script>
+</head>
+<body class="hub">
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="concept-bar">
+  <div class="wrap concept-inner">
+    <p><span class="mark" aria-hidden="true"></span> <strong>Design concept</strong> · Direction 1 of 3: Slope</p>
+    <nav aria-label="Concept navigation"><a href="../index.html">All directions</a><a href="lesson.html">Paired lesson →</a></nav>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="brand" href="index.html" aria-label="Economics at Durham, concept home">
+      <img src="../assets/durham-logo-white.svg" width="240" height="99" alt="Durham University">
+      <span class="brand-name">Economics</span>
+    </a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#routes">Routes</a><a href="#seminars">Seminars</a><a href="#prepare">Prepare</a><a href="#links">Links</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="kicker mono">Department of Economics · Durham University Business School</p>
+      <h1 id="hero-title">Every choice has a <span class="hl">slope.</span></h1>
+      <p class="lede">Courses, visiting speakers and a head start for new students: Economics at Durham, on one page.</p>
+      <div class="actions">
+        <a class="btn" href="#routes">Find your route <span aria-hidden="true">↓</span></a>
+        <a class="arrow-link" href="lesson.html">Try the sample lesson <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <figure class="plane" aria-labelledby="plane-caption">
+      <svg id="plane" viewBox="0 0 640 360" role="img" aria-labelledby="plane-title plane-desc">
+        <title id="plane-title">A budget line for coffees and lunches</title>
+        <desc id="plane-desc">With £24, coffee at £3 and lunch at £6, the line runs from 4 lunches to 8 coffees. The shaded triangle beneath it is everything that is affordable.</desc>
+        <defs>
+          <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(-26.565)">
+            <line x1="0" y1="0" x2="0" y2="10" stroke="rgba(255,255,255,.16)" stroke-width="2"/>
+          </pattern>
+        </defs>
+        <g id="plane-dots" aria-hidden="true"></g>
+        <polygon id="plane-set" points="48,300 48,113.33 421.33,300" fill="#68246d"/>
+        <polygon id="plane-hatch" points="48,300 48,113.33 421.33,300" fill="url(#hatch)"/>
+        <line id="plane-ghost" x1="48" y1="113.33" x2="421.33" y2="300" class="ghost" visibility="hidden"/>
+        <path d="M48 12 V300 H620" class="axis" fill="none"/>
+        <line id="plane-line" x1="48" y1="113.33" x2="421.33" y2="300" class="budget"/>
+        <g id="plane-rise" class="rise" aria-hidden="true">
+          <path id="plane-rise-path" d="M141.33 160 H234.67 V206.67" fill="none"/>
+          <text id="plane-rise-label" x="244" y="186">1 coffee = ½ lunch</text>
+        </g>
+        <circle id="plane-ya" cx="48" cy="113.33" r="6" class="node"/>
+        <circle id="plane-xa" cx="421.33" cy="300" r="6" class="node"/>
+        <text id="plane-yl" x="36" y="118" class="tick strong" text-anchor="end">4</text>
+        <text id="plane-xl" x="421.33" y="324" class="tick strong" text-anchor="middle">8</text>
+        <text x="36" y="305" class="tick" text-anchor="end">0</text>
+        <text x="58" y="20" class="axis-label">LUNCHES</text>
+        <text x="620" y="344" class="axis-label" text-anchor="end">COFFEES</text>
+      </svg>
+      <figcaption>
+        <div class="scenes js-only" role="group" aria-label="Change the example">
+          <button type="button" data-scene="start" aria-pressed="true">£24 · coffee £3</button>
+          <button type="button" data-scene="income" aria-pressed="false">Income → £36</button>
+          <button type="button" data-scene="price" aria-pressed="false">Coffee → £6</button>
+        </div>
+        <p id="plane-caption" class="plane-caption" aria-live="polite">£24 to spend, coffee £3, lunch £6: up to 8 coffees or 4 lunches, or any mix on the line.</p>
+        <p class="plane-note mono">This is a budget set: a sample from MSc preparation. <a href="lesson.html">Open it →</a></p>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section id="routes" class="routes" aria-labelledby="routes-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="sec-num mono">01 / Routes</p>
+        <h2 id="routes-title">Where are you on the line?</h2>
+        <p>Three stages, one department. Pick yours.</p>
+      </header>
+
+      <div class="stage-axis js-only" role="tablist" aria-label="Your stage">
+        <button role="tab" id="tab-apply" aria-controls="apply" aria-selected="true"><span class="pt" aria-hidden="true"></span>Thinking<small>of applying</small></button>
+        <button role="tab" id="tab-join" aria-controls="join" aria-selected="false" tabindex="-1"><span class="pt" aria-hidden="true"></span>Joining<small>this year</small></button>
+        <button role="tab" id="tab-here" aria-controls="here" aria-selected="false" tabindex="-1"><span class="pt" aria-hidden="true"></span>Studying<small>here now</small></button>
+        <span class="time mono" aria-hidden="true">time →</span>
+      </div>
+
+      <div class="stage" id="apply" role="tabpanel" aria-labelledby="tab-apply" tabindex="0">
+        <div class="stage-copy">
+          <h3><span class="nojs-label">Thinking of applying · </span>Find the course that fits your questions.</h3>
+          <p>Course details and how to apply are on the official Durham pages. These links go straight there.</p>
+        </div>
+        <ol class="routes-list">
+          <li><a href="https://www.durham.ac.uk/business/courses/economics-l100/"><span class="mono">01</span><b>BSc Economics</b><small>Undergraduate course page</small><i aria-hidden="true">↗</i></a></li>
+          <li><a href="https://www.durham.ac.uk/business/programmes/masters/masters-in-economics/"><span class="mono">02</span><b>Master’s programmes in Economics</b><small>Postgraduate taught routes</small><i aria-hidden="true">↗</i></a></li>
+          <li><a href="https://www.durham.ac.uk/business/about/departments/economics/phd-in-economics/"><span class="mono">03</span><b>PhD in Economics</b><small>Research degrees</small><i aria-hidden="true">↗</i></a></li>
+          <li><a href="https://www.durham.ac.uk/visit-us/open-days/"><span class="mono">04</span><b>Open days and visits</b><small>See Durham for yourself</small><i aria-hidden="true">↗</i></a></li>
+        </ol>
+      </div>
+
+      <div class="stage" id="join" role="tabpanel" aria-labelledby="tab-join" tabindex="0">
+        <div class="stage-copy">
+          <h3><span class="nojs-label">Joining this year · </span>Get the first weeks sorted.</h3>
+          <p>Welcome information, your induction plan and, for MSc students, a run-up to the core ideas.</p>
+        </div>
+        <ol class="routes-list">
+          <li><a href="https://www.durham.ac.uk/business/about/departments/economics/welcome-to-new-students/"><span class="mono">01</span><b>Welcome to new Economics students</b><small>Official department information</small><i aria-hidden="true">↗</i></a></li>
+          <li><a href="https://apps.dur.ac.uk/induction/calendar"><span class="mono">02</span><b>Induction planner</b><small>Build your first-weeks calendar</small><i aria-hidden="true">↗</i></a></li>
+          <li><a href="https://www.durham.ac.uk/study/undergraduate/offer/before-you-arrive/checklist-for-new-students/"><span class="mono">03</span><b>Undergraduate arrival checklist</b><small>Before you travel</small><i aria-hidden="true">↗</i></a></li>
+          <li><a href="#prepare"><span class="mono">04</span><b>MSc preparation</b><small>The existing course, plus sample lesson</small><i aria-hidden="true">↓</i></a></li>
+        </ol>
+      </div>
+
+      <div class="stage" id="here" role="tabpanel" aria-labelledby="tab-here" tabindex="0">
+        <div class="stage-copy">
+          <h3><span class="nojs-label">Studying here now · </span>The everyday things, close at hand.</h3>
+          <p>Blackboard and the Student Gateway ask for your university sign-in.</p>
+        </div>
+        <ol class="routes-list">
+          <li><a href="https://blackboard.durham.ac.uk/"><span class="mono">01</span><b>Blackboard</b><small>Modules and teaching materials</small><i aria-hidden="true">↗</i></a></li>
+          <li><a href="https://durhamuniversity.sharepoint.com/teams/BUS-Students"><span class="mono">02</span><b>Business School Student Gateway</b><small>Student information</small><i aria-hidden="true">↗</i></a></li>
+          <li><a href="https://www.durham.ac.uk/business/programmes/undergraduate/employability-and-career-for-economics-students-/"><span class="mono">03</span><b>Careers and opportunities</b><small>For Economics students</small><i aria-hidden="true">↗</i></a></li>
+          <li><a href="#seminars"><span class="mono">04</span><b>Seminar programme</b><small>Visiting speakers this term</small><i aria-hidden="true">↓</i></a></li>
+        </ol>
+      </div>
+
+      <figure class="cut-photo">
+        <img src="../assets/durham-students.jpg" width="2000" height="1333" loading="lazy" alt="Two students laughing as they walk across Kingsgate Bridge in Durham, autumn trees behind them">
+        <figcaption class="mono">Kingsgate Bridge, Durham</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="seminars" class="seminars" aria-labelledby="seminars-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="sec-num mono">02 / Seminars</p>
+        <h2 id="seminars-title">Visiting speakers.</h2>
+        <p>Research in progress, presented in Durham. From the external seminar programme.</p>
+      </header>
+      <ol class="talks">
+        <li><a href="https://www.durham.ac.uk/business/about/departments/economics/news-and-events/external-seminars/">
+          <time datetime="2026-10-21"><b>21</b><span class="mono">Oct 2026<br>Wed</span></time>
+          <span class="talk-title">Algorithmic equilibria</span>
+          <span class="talk-who">Mich Tvede<small>University of Sheffield</small></span>
+          <i aria-hidden="true">↗</i></a></li>
+        <li><a href="https://www.durham.ac.uk/business/about/departments/economics/news-and-events/external-seminars/">
+          <time datetime="2026-11-11"><b>11</b><span class="mono">Nov 2026<br>Wed</span></time>
+          <span class="talk-title">Punishment and crime: impact of death sentences on local crime rates in India</span>
+          <span class="talk-who">Ashwini Deshpande<small>Ashoka University</small></span>
+          <i aria-hidden="true">↗</i></a></li>
+        <li><a href="https://www.durham.ac.uk/business/about/departments/economics/news-and-events/external-seminars/">
+          <time datetime="2026-11-18"><b>18</b><span class="mono">Nov 2026<br>Wed</span></time>
+          <span class="talk-title">Research seminar <small>Title to follow</small></span>
+          <span class="talk-who">Petros Sekeris<small>Toulouse Business School</small></span>
+          <i aria-hidden="true">↗</i></a></li>
+      </ol>
+      <div class="talks-foot">
+        <p class="mono">Listed from Durham’s published programme, checked 19 Oct 2026. Please confirm times, venues and attendance with the department.</p>
+        <a class="arrow-link" href="https://www.durham.ac.uk/business/about/departments/economics/news-and-events/all-seminars/">All seminars <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="prepare" class="prepare" aria-labelledby="prepare-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="sec-num mono">03 / Prepare</p>
+        <h2 id="prepare-title">Starting an MSc? Begin with one line.</h2>
+        <p>The existing <em>Introduction to Economics</em> course covers six core topics with videos, quizzes and problem sets. Start wherever you need to.</p>
+      </header>
+
+      <a class="lesson-callout" href="lesson.html">
+        <svg viewBox="0 0 120 60" aria-hidden="true" focusable="false"><polygon points="0,60 0,0 120,60" fill="#68246d"/><line x1="0" y1="0" x2="120" y2="60" stroke="#06152a" stroke-width="4"/></svg>
+        <span class="callout-text"><small class="mono">Interactive · sample lesson</small><b>Budget sets</b><span>Move a basket, change a price, then check three answers.</span></span>
+        <i aria-hidden="true">→</i>
+      </a>
+
+      <ol class="stair" aria-label="Topics in the existing Introduction to Economics course">
+        <li><a href="https://dubs.awh.durham.ac.uk/econ/msc/#/lessons/1C-qOhwxlQ38Ep_cbJ64Dxjr29tkPgY1"><span class="mono">01</span><b>Individual choices</b><small>Preferences, budgets, decisions</small></a></li>
+        <li><a href="https://dubs.awh.durham.ac.uk/econ/msc/#/lessons/JnJO1fTAKolVwT01lY-oE5NJCpD-NauA"><span class="mono">02</span><b>Choices under uncertainty</b><small>Risk and expected utility</small></a></li>
+        <li><a href="https://dubs.awh.durham.ac.uk/econ/msc/#/lessons/_QlQgC6lrm4lp9CXvInTdVc8QH8H1VQn"><span class="mono">03</span><b>Work and leisure</b><small>How people use their time</small></a></li>
+        <li><a href="https://dubs.awh.durham.ac.uk/econ/msc/#/lessons/G4UM-oJxbxDE7LAHHP5y9G62MqtK1jkS"><span class="mono">04</span><b>Firms and markets</b><small>Costs, competition, monopoly</small></a></li>
+        <li><a href="https://dubs.awh.durham.ac.uk/econ/msc/#/lessons/0zyece_p_3uUje8vEWukW-nplITtQ3YG"><span class="mono">05</span><b>Growth in the long run</b><small>Capital and the Solow model</small></a></li>
+        <li><a href="https://dubs.awh.durham.ac.uk/econ/msc/"><span class="mono">06</span><b>Saving for the future</b><small>A two-period model</small></a></li>
+      </ol>
+      <p class="prepare-foot"><a class="arrow-link" href="https://dubs.awh.durham.ac.uk/econ/msc/#/lessons/K24P38c5PfpOdK19Pc8BozcqzxBgBpKP">Read the course introduction first <span aria-hidden="true">↗</span></a> <span class="mono">Topics open in the existing course, unchanged.</span></p>
+    </div>
+  </section>
+
+  <section id="links" class="links" aria-labelledby="links-title">
+    <div class="wrap links-grid">
+      <header class="sec-head">
+        <p class="sec-num mono">04 / Links</p>
+        <h2 id="links-title">One link for a bio.</h2>
+        <p>When Economics at Durham opens social accounts, a short list like this could sit behind the bio link. Every route here works today.</p>
+        <dl class="channels">
+          <div><dt>Instagram</dt><dd class="mono">Proposed · not launched</dd></div>
+          <div><dt>LinkedIn</dt><dd class="mono">Proposed · not launched</dd></div>
+        </dl>
+        <p class="small">No accounts, feeds or follow buttons exist yet, so none are shown.</p>
+      </header>
+      <ul class="bio">
+        <li><a href="#routes"><b>Find a course</b><span>BSc, master’s and PhD</span></a></li>
+        <li><a href="#seminars"><b>Visiting speakers</b><span>This term’s seminars</span></a></li>
+        <li><a href="lesson.html"><b>Budget sets: sample lesson</b><span>Interactive preparation</span></a></li>
+        <li><a href="https://dubs.awh.durham.ac.uk/econ/msc/"><b>Introduction to Economics</b><span>The existing MSc course ↗</span></a></li>
+        <li><a href="https://www.durham.ac.uk/business/about/departments/economics/welcome-to-new-students/"><b>New students</b><span>Official welcome information ↗</span></a></li>
+        <li><a href="https://www.durham.ac.uk/business/about/departments/economics/"><b>The department</b><span>Official Durham website ↗</span></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <img src="../assets/durham-logo-white.svg" width="240" height="99" alt="Durham University" class="footer-logo">
+      <p>Department of Economics<br>Durham University Business School</p>
+    </div>
+    <nav aria-label="Official Durham pages">
+      <a href="https://www.durham.ac.uk/business/about/departments/economics/">Department website ↗</a>
+      <a href="https://www.durham.ac.uk/business/about/departments/economics/research/">Research ↗</a>
+      <a href="https://www.durham.ac.uk/business/about/departments/economics/our-people/academic-staff/">Academic staff ↗</a>
+      <a href="https://www.durham.ac.uk/business/about/departments/economics/news-and-events/workshops-and-conferences/">Workshops and conferences ↗</a>
+    </nav>
+    <div class="footer-note">
+      <p><strong>Design concept, October 2026.</strong> A proposal for discussion, not an official Durham University website or service, and not endorsed by the University. Use the linked Durham pages for current course, admissions and seminar details. The University logo and photograph illustrate the proposal. No tracking, cookies, sign-in or forms.</p>
+      <p class="mono"><a href="../index.html">All three directions</a> · <a href="lesson.html">Paired lesson</a> · <a href="https://davidchivers.github.io/davidchivers.co.uk/economics-preview/sources.html">Sources and notes ↗</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
