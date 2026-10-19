@@ -39,7 +39,46 @@ footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; 
   tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
   a { color: inherit; }
 }
-</style></head><body><header><h1>Dewey: research priorities and implementation plan</h1><p class="subtitle">19 October 2026 | Coauthor discussion | Ranked options and supporting evidence</p></header><nav aria-label="Report sections"><div><a href="#ranking">Ranked ideas</a><a href="#audit">Data confidence</a><a href="#details">Detailed assessments</a><a href="#method">Measures and models</a><a href="#actions">Implementation</a><a href="#evidence">Evidence</a></div></nav><main><section class="notice" id="quality-update"><h2>Expanded data-quality review</h2><p>The completed review now separates passed checks from unresolved construction, coverage and interpretation issues. The eight idea-specific expanded literature reviews are still in preparation; the ranking below is the earlier assessment.</p><p><a href="quality.html">Read the updated quality review</a> | <a href="sources.html">Measurement sources and access levels</a></p></section><h2 id="recommendation">Recommended direction</h2>
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><h1>Dewey: research priorities and implementation plan</h1><p class="subtitle">19 October 2026 | Coauthor discussion | Ranked options and supporting evidence</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Report sections"><div><a href="#ranking">Ranked ideas</a><a href="#audit">Data confidence</a><a href="#details">Detailed assessments</a><a href="#method">Measures and models</a><a href="#actions">Implementation</a><a href="#evidence">Evidence</a></div></nav><main><section class="notice" id="quality-update"><h2>Expanded data-quality review</h2><p>The completed review now separates passed checks from unresolved construction, coverage and interpretation issues. The eight idea-specific expanded literature reviews are still in preparation; the ranking below is the earlier assessment.</p><p><a href="quality.html">Read the updated quality review</a> | <a href="sources.html">Measurement sources and access levels</a></p></section><h2 id="recommendation">Recommended direction</h2>
 <p><strong>Develop one descriptive paper about where mixing occurs and who experiences it.</strong> The most promising organising question is: <strong>does a neighbourhood that attracts a diverse crowd also give its own residents diverse experiences when they go out?</strong> Establish the venue-level facts first, then compare the destination and resident perspectives on consistent geography and coverage. Access and venue variety would be possible explanations within this paper, not separate searches for significant results.</p>
 <p>The original question remains important: do public-facing activities expose people to different social groups, and does that relate to attitudes? The current data are stronger on the composition of visits than on actual worker-customer interaction or changes in attitudes. The recommendation is therefore to make the descriptive exposure question the main contribution, while retaining the workforce and attitude analyses as qualified secondary evidence. This is a proposed direction for coauthor discussion, not an agreed change of paper or a claim that novelty has been established.</p>
 <p><strong>First, independently validate the remaining upstream data construction.</strong> Several audits and a substantial geography correction have already been completed. The outstanding check is the construction of annual origin flows and inherited weights from the original weekly files. Literature and design work can proceed alongside this audit; new substantive claims should wait for the relevant checks.</p>
