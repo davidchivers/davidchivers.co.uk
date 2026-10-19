@@ -22,15 +22,15 @@ html { scroll-padding-top: 92px; }
 .header-inner { min-height: 82px; }
 .brand img { width: 145px; height: auto; }
 .nav-links .circle { background: var(--purple); color: #fff; padding: 9px; }
-.hero { min-height: 420px; }
+.hero { min-height: 300px; }
 .hero-image { object-position: center 43%; }
 .hero:before {
   background: linear-gradient(90deg,rgba(104,36,109,.94),rgba(104,36,109,.68) 32%,rgba(33,37,41,.15) 68%,transparent);
 }
 .hero:after { background: linear-gradient(0deg,rgba(33,37,41,.2),transparent 45%); }
-.hero-content { padding-top: 32px; padding-bottom: 36px; }
+.hero-content { padding-top: 28px; padding-bottom: 38px; }
 .hero .eyebrow,.hero h1 em,.hero-copy { color: #fff; }
-.hero h1 { font-size: clamp(62px,5.6vw,78px); margin: 17px 0 18px; }
+.hero h1 { font-size: clamp(52px,4.5vw,64px); margin: 10px 0 18px; }
 .hero-copy { font-size: 14px; line-height: 1.65; }
 .hero-actions { margin-top: 22px; }
 .hero-actions .button { min-height: 46px; padding: 11px 18px; }
@@ -52,7 +52,7 @@ html { scroll-padding-top: 92px; }
 .skip { background: var(--purple); color: #fff; }
 @media (max-width: 880px) {
   .brand img { width: 140px; }
-  .hero h1 { font-size: 66px; }
+  .hero h1 { font-size: 56px; }
 }
 @media (max-width: 700px) {
   html { scroll-padding-top: 82px; }
@@ -61,11 +61,11 @@ html { scroll-padding-top: 92px; }
   .menu-toggle { flex: 0 0 44px; }
   .nav { top: 72px; }
   .nav-links .circle { padding: 5px; }
-  .hero { min-height: 420px; }
-  .hero-content { padding-top: 27px; padding-bottom: 50px; }
+  .hero { min-height: 300px; }
+  .hero-content { padding-top: 24px; padding-bottom: 50px; }
   .hero-image { object-position: 64% center; }
   .hero:before { background: linear-gradient(90deg,rgba(104,36,109,.94),rgba(104,36,109,.68) 70%,rgba(33,37,41,.35)); }
-  .hero h1 { font-size: clamp(52px,14vw,67px); margin: 15px 0 17px; }
+  .hero h1 { font-size: clamp(46px,12vw,56px); margin: 10px 0 17px; }
   .hero-copy { font-size: 13px; line-height: 1.65; }
   .hero-actions { margin-top: 19px; gap: 14px; }
   .hero-actions .button { min-height: 44px; padding: 10px 14px; font-size: 11px; gap: 12px; }
