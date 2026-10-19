@@ -1,0 +1,275 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Which places look mixed?</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} main img{max-width:100%;height:auto;display:block;margin:24px 0}
+    [hidden]{display:none!important}.category-controls{display:flex;flex-wrap:wrap;align-items:end;gap:18px;margin:24px 0}
+    .category-controls label{display:grid;gap:8px}.category-controls input,.category-controls select{font:inherit;padding:8px;max-width:100%;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:4px}
+    .category-panel th[scope=row]{font-weight:500;min-width:220px}.category-panel td{font-variant-numeric:tabular-nums}
+    .category-panel table{font-size:14px}.category-panel caption{text-align:left;padding:10px 0;font-weight:600}
+    @media print{.category-controls{display:none}.category-panel[hidden]{display:block!important}.category-panel tr[hidden]{display:table-row!important}}
+    </style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Which places look mixed?</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><h2 id="findings">Main finding</h2>
+<p><strong>The distinction between a typical venue and a typical recorded visit matters more for service rankings than restricting the data to stable venues.</strong> The income-background difference is mainly a within-area pattern; racial diversity also has an important across-area component. This is new descriptive evidence, not a regression identifying preferences, contact or attitude change.</p>
+<p>The analysis uses the inherited 2017-2019 Advan/SafeGraph-derived POI files obtained through Dewey, with the project’s corrected origin-demographic construction. This step reuses their approved, locally retained continuity summaries; it does not reopen the original final files or reproduce the original weekly construction. Census home-area characteristics are proxies for visitor backgrounds, not observed personal incomes or racial identities.</p>
+<p><a href="#ranks">Rank comparison</a> | <a href="#weighting">Weighting decomposition</a> | <a href="#definitions">Definitions</a> | <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/service-categories.html">All categories</a> | <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/decisions.html">Paper decision and all eight directions</a></p>
+<h2 id="ranks">Rankings are fairly stable to venue coverage</h2>
+<p>The comparisons below use the same 136 service subcategories throughout. Higher correlation means more similar ordering, not equality of levels. No standard errors or significance tests are attached to these descriptive rank diagnostics.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>Change in definition, 2019</th>
+<th style="text-align: right;">Race rank correlation</th>
+<th style="text-align: right;">Income-background rank correlation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All retained venues versus stable venues, visit weights</td>
+<td style="text-align: right;">0.979</td>
+<td style="text-align: right;">0.987</td>
+</tr>
+<tr>
+<td>Stable venues: visit weights versus equal venue weights</td>
+<td style="text-align: right;">0.834</td>
+<td style="text-align: right;">0.713</td>
+</tr>
+<tr>
+<td>Common-cell all venues versus stable venues, fixed 2017 area weights</td>
+<td style="text-align: right;">0.998</td>
+<td style="text-align: right;">0.991</td>
+</tr>
+</tbody>
+</table></div>
+<p>The median absolute rank movement is three places for race and two for income when moving to stable venues. Changing the weighting instead moves the median category by 11.5 and 16 places. The complete 147-comparison family retains all years, support variants and weighting comparisons; these are not selected significant results. Pooling versus within-venue racial ranks are still quite similar: correlation 0.903 on available support and 0.905 on stable support. Thus the data do <strong>not</strong> support a claim that separating establishments overturns most service rankings.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/service_rank_stability.png" alt="Service ranks under support and weighting changes" />
+<figcaption aria-hidden="true">Service ranks under support and weighting changes</figcaption>
+</figure>
+<h2 id="levels">The typical visit is not the typical venue</h2>
+<p>Equal venue weights give a small establishment the same influence as a large one. Annualized matched-visit weights give more influence to establishments with more recorded visit mass. Neither is automatically the correct population weight: they answer different questions and inherit the provider’s coverage and the project’s annualization rules.</p>
+<p>On stable 2019 support, the visit-weighted income-background index exceeds the equal-venue index in all 136 retained categories. The following ordinary service examples were named before inspecting this diagnostic’s category outcomes; they are not a top/bottom selection. All eligible categories are available in the linked table.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>Service subcategory</th>
+<th style="text-align: right;">Race: visit weight</th>
+<th style="text-align: right;">Race: equal venue</th>
+<th style="text-align: right;">Income: visit weight</th>
+<th style="text-align: right;">Income: equal venue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full-Service Restaurants</td>
+<td style="text-align: right;">44.02</td>
+<td style="text-align: right;">41.80</td>
+<td style="text-align: right;">78.19</td>
+<td style="text-align: right;">73.12</td>
+</tr>
+<tr>
+<td>Limited-Service Restaurants</td>
+<td style="text-align: right;">41.80</td>
+<td style="text-align: right;">41.35</td>
+<td style="text-align: right;">79.32</td>
+<td style="text-align: right;">76.52</td>
+</tr>
+<tr>
+<td>Golf Courses and Country Clubs</td>
+<td style="text-align: right;">37.86</td>
+<td style="text-align: right;">30.79</td>
+<td style="text-align: right;">74.42</td>
+<td style="text-align: right;">69.76</td>
+</tr>
+<tr>
+<td>Libraries and Archives</td>
+<td style="text-align: right;">41.85</td>
+<td style="text-align: right;">37.34</td>
+<td style="text-align: right;">72.65</td>
+<td style="text-align: right;">68.73</td>
+</tr>
+</tbody>
+</table></div>
+<p>Values are fractionalization multiplied by 100. Race and income have different group definitions and natural bounds, so their levels are not directly comparable. Libraries here are the recorded POI category, not a census of all public libraries. The literal proposed label “Grocery Stores” was absent; no replacement label was selected after examining its result.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/service_weighting_levels.png" alt="Visit-weighted and equal-venue levels on identical stable support" />
+<figcaption aria-hidden="true">Visit-weighted and equal-venue levels on identical stable support</figcaption>
+</figure>
+<h2 id="weighting">Is it simply geography?</h2>
+<p>A follow-up accounting exercise separates two sources of the weighting gap: giving busier establishments more weight <strong>inside the same recorded area and service</strong>, and giving different weights to areas. This follow-up was specified after the weighting difference was observed; it is not preregistered evidence of a mechanism. The same categories and all three years are retained.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>Dimension and year</th>
+<th style="text-align: right;">Within-area contribution</th>
+<th style="text-align: right;">Across-area contribution</th>
+<th style="text-align: right;">Total visit-minus-equal difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Race, 2017</td>
+<td style="text-align: right;">1.570</td>
+<td style="text-align: right;">1.775</td>
+<td style="text-align: right;">3.345</td>
+</tr>
+<tr>
+<td>Race, 2018</td>
+<td style="text-align: right;">1.644</td>
+<td style="text-align: right;">1.825</td>
+<td style="text-align: right;">3.469</td>
+</tr>
+<tr>
+<td>Race, 2019</td>
+<td style="text-align: right;">1.586</td>
+<td style="text-align: right;">1.696</td>
+<td style="text-align: right;">3.281</td>
+</tr>
+<tr>
+<td>Income background, 2017</td>
+<td style="text-align: right;">6.444</td>
+<td style="text-align: right;">0.354</td>
+<td style="text-align: right;">6.798</td>
+</tr>
+<tr>
+<td>Income background, 2018</td>
+<td style="text-align: right;">6.670</td>
+<td style="text-align: right;">0.278</td>
+<td style="text-align: right;">6.948</td>
+</tr>
+<tr>
+<td>Income background, 2019</td>
+<td style="text-align: right;">6.402</td>
+<td style="text-align: right;">0.303</td>
+<td style="text-align: right;">6.705</td>
+</tr>
+</tbody>
+</table></div>
+<p>Each entry is the <strong>equal-weighted mean across the same 136 categories</strong>, in index points, for stable venues. It is not the mean across all national visits. The two contributions add to the total before rounding. In the income case, most of the difference remains inside recorded areas; race has substantial contributions on both sides. The two ordered decompositions, rather than just their symmetric average, give the same qualitative distinction and are included in the aggregate release.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/service_weighting_components.png" alt="Within-area and across-area weighting contributions" />
+<figcaption aria-hidden="true">Within-area and across-area weighting contributions</figcaption>
+</figure>
+<p><strong>Economic interpretation:</strong> the recorded visits are disproportionately concentrated at venues with more diverse inferred income backgrounds, even within a recorded area and service category. This is compatible with larger catchments or services attracting a broader clientele. It is also compatible with observation intensity, suppressed small origin flows, venue selection or more precise estimated shares at busier places. The calculation does not choose between those explanations. It does not show that increasing venue size creates integration, nor that visitors meet or change their attitudes.</p>
+<h2 id="definitions">Measures and exact calculation</h2>
+<p>For venue j, fractionalization is <code>F_j = 1 - sum_g p_jg^2</code>. The racial measure uses non-Hispanic White, non-Hispanic Black, non-Hispanic Asian and Hispanic shares, conditional on those four groups, and is bounded by 0.75. The income measure uses ten national, unweighted CBG median-household-income rank groups and is bounded by 0.90. They are not ten equal-sized groups of people; the separate per-capita-income measure is not used for these bins. It measures diversity of assigned neighbourhood backgrounds, not the income distance between individual patrons. The final continuity summary lacks the income group-share vectors, so an income pooled/between decomposition is not computed.</p>
+<p>For race, within-venue diversity averages <code>F_j</code> across establishments. Pooled local-service diversity instead applies F to the visit-weighted group shares pooled within each recorded area-service cell. Its excess over within-venue diversity is the between-venue accounting component. The category-level pooled number averages these local quantities; it is not racial diversity after pooling everyone nationally.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/service_pooling_stable.png" alt="Pooled local-service versus within-venue racial diversity" />
+<figcaption aria-hidden="true">Pooled local-service versus within-venue racial diversity</figcaption>
+</figure>
+<p>For the weighting accounting, within category/year let <code>v_m</code> and <code>e_m</code> be the visit-weighted and equal-venue means inside area m. Let <code>q_m</code> be its share of category visit mass and <code>p_m</code> its share of category venues. Then:</p>
+<pre class="text"><code>Visit mean - equal-venue mean
+  = sum_m [(q_m+p_m)/2] (v_m-e_m)       [within-area weighting]
+  + sum_m (q_m-p_m) [(v_m+e_m)/2]       [across-area weighting].</code></pre>
+<p>This exact identity averages the two possible orders of changing within-area and across-area weights. It is not a fixed-effects regression or a causal mediation decomposition. Recorded areas are not verified vintage-consistent MSAs: the inherited field contains metropolitan, micropolitan and unmatched codes. Different categories still cover different sets of areas.</p>
+<h2 id="support">Support and reproducibility</h2>
+<p>The common-cell analysis retains 71,492 area-category cells across 933 recorded area codes and 150 inherited categories. Stable IDs must remain common-valid with unchanged recorded area and category in all three years. Cells require at least two such IDs, yielding 2,376,783 stable venues each year. The earlier continuity analysis retained 2,399,249 IDs because it did not impose this two-stable-venues-per-cell rule. Neither number proves physical business continuity or national representativeness.</p>
+<p>Eight sample/weight settings in each year give 24 settings. All 136 categories passing every original size/concentration screen form the fixed ranking universe; the other 14 labels remain visible. Fixed-market sensitivity uses the common-cell all-venue 2017 visit weights in every year and both samples. It holds geography weights fixed within a category, not its within-cell establishment weights or geography across categories.</p>
+<p>Sixteen service-calculation tests, nine accounting tests and sixteen public-export tests pass on artificial inputs. Independent checks reproduced 8,568 ranks, all 147 comparisons and 16,119 numerical fields; the separate accounting review checked 2,295 artificial component calculations. An all-suppressed support edge case was fixed, then the empirical diagnostic was rerun in 9.57 seconds: all scientific outputs were exactly unchanged. This is a rerun of a small derived summary, not the original 20.57-minute final-file audit or an upstream replication.</p>
+<p><strong>Disclosure correction:</strong> independent review found that nested category means plus counts could reveal small complements by subtraction. The detailed local export was withdrawn into private storage before any publication. The public table therefore contains stable-sample levels, rank-only comparisons and broad component means, not nested category counts or individual components. This changes the release, not the scientific sample or results.</p>
+<p><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/service-categories.html">All categories and downloads</a> include all 147 rank comparisons, all 24 rank settings and the six displayed broad accounting summaries. The full private calculation also retains all 18 sample/year/ dimension summaries; the public accounting excerpt deliberately uses stable support only. Source fingerprints, frozen protocols and the disclosure addendum accompany the sourcebook. No new attitude, worker, preference or causal coefficient has been estimated.</p>
+<h2 id="next">What follows</h2>
+<p>The results narrow the potential paper. Pooling is quantitatively important but does not radically reorder services. Weighting and support can alter interpretation more. A defensible contribution would establish <strong>whose exposure a service ranking represents</strong>, and whether the within-area weighting pattern survives independent construction and observation-process validation. Without that next check, this is a useful measurement result, not yet an identified account of integration or a publication-ready paper.</p>
+</main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>
