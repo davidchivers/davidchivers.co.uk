@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-19T20:36:15.323869+00:00",
+  "elapsed_seconds": 0.5963200999540277,
+  "handling": "Pinned public CC0 derivatives parsed in memory; aggregate-only output; no raw persistence or historical-modern linkage.",
+  "inputs": [
+    {
+      "url": "https://raw.githubusercontent.com/NYPL-publicdomain/greenbooks/45328936f4984830f6916922238ed5e8c4e024b6/geojson/1947.geojson",
+      "resolved_url": "https://raw.githubusercontent.com/NYPL-publicdomain/greenbooks/45328936f4984830f6916922238ed5e8c4e024b6/geojson/1947.geojson",
+      "bytes": 1062068,
+      "sha256": "30a75aef82df2107d9ef1e3518efcaeb281d2b055903b6d58b4df44c2354c804"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NYPL-publicdomain/greenbook-map/4e5520002ee8ffcf45a1df8d81a0f1c2293ca79d/scripts/data/1947.geojson",
+      "resolved_url": "https://raw.githubusercontent.com/NYPL-publicdomain/greenbook-map/4e5520002ee8ffcf45a1df8d81a0f1c2293ca79d/scripts/data/1947.geojson",
+      "bytes": 868063,
+      "sha256": "0bff94b57c3d6fc507b9c9f05d5e7ea75537025713812696641e1d5daf487259"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NYPL-publicdomain/greenbook-map/4e5520002ee8ffcf45a1df8d81a0f1c2293ca79d/data/greenbook_1947.json",
+      "resolved_url": "https://raw.githubusercontent.com/NYPL-publicdomain/greenbook-map/4e5520002ee8ffcf45a1df8d81a0f1c2293ca79d/data/greenbook_1947.json",
+      "bytes": 228504,
+      "sha256": "5094852115717693fd8bab259a18f12f40c0b510505aa88ad8d92940f3f57a34"
+    }
+  ],
+  "supporting_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/NYPL-publicdomain/greenbooks/45328936f4984830f6916922238ed5e8c4e024b6/LICENSE",
+      "resolved_url": "https://raw.githubusercontent.com/NYPL-publicdomain/greenbooks/45328936f4984830f6916922238ed5e8c4e024b6/LICENSE",
+      "bytes": 6556,
+      "sha256": "6a1ee543e5282cd9061881edf462e6fdab181f328da71fc2c9a6950a80e94d01"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NYPL-publicdomain/greenbook-map/4e5520002ee8ffcf45a1df8d81a0f1c2293ca79d/LICENSE",
+      "resolved_url": "https://raw.githubusercontent.com/NYPL-publicdomain/greenbook-map/4e5520002ee8ffcf45a1df8d81a0f1c2293ca79d/LICENSE",
+      "bytes": 6555,
+      "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NYPL-publicdomain/greenbook-map/4e5520002ee8ffcf45a1df8d81a0f1c2293ca79d/scripts/parse_geojson.py",
+      "resolved_url": "https://raw.githubusercontent.com/NYPL-publicdomain/greenbook-map/4e5520002ee8ffcf45a1df8d81a0f1c2293ca79d/scripts/parse_geojson.py",
+      "bytes": 1924,
+      "sha256": "a94dce7126a7b87f3ad717ed348ef95e68e47fc7d86eab939ec38ebd3d16af34"
+    }
+  ],
+  "local_sources": {
+    "prior_inventory_sha256": "d28628c62747309e86e19db37b69865d5a7109f249c06969a137725b4b33ed1b",
+    "code_sha256": "939cd8de35b49beb842c2b3863e86d261b828652d0395bb24640054478941bbd",
+    "protocol_sha256": "c1cc05314aacd1f6f836c87dff11dd4ca5f86292d3921d8c01509acb3fb02d2f"
+  },
+  "results": {
+    "coverage": {
+      "greenbooks": {
+        "rows": 1056,
+        "state_counts": {
+          "AR": 108,
+          "AZ": 27,
+          "CA": 154,
+          "CO": 59,
+          "CT": 32,
+          "DE": 65,
+          "FL": 41,
+          "GA": 101,
+          "IA": 31,
+          "ID": 2,
+          "IN": 38,
+          "KS": 13,
+          "KY": 20,
+          "LA": 39,
+          "MA": 49,
+          "MD": 15,
+          "MI": 43,
+          "MN": 2,
+          "MS": 127,
+          "MT": 1,
+          "NE": 35,
+          "NJ": 34,
+          "TN": 20
+        },
+        "city_state_labels": 173,
+        "valid_coordinates": 1056,
+        "unique_valid_coordinates": 929
+      },
+      "map_source": {
+        "rows": 796,
+        "state_counts": {
+          "AR": 40,
+          "AZ": 13,
+          "CA": 74,
+          "CO": 23,
+          "CT": 21,
+          "DE": 32,
+          "FL": 24,
+          "GA": 69,
+          "IA": 22,
+          "ID": 1,
+          "IN": 27,
+          "KS": 10,
+          "KY": 20,
+          "LA": 39,
+          "MA": 53,
+          "MD": 15,
+          "MI": 81,
+          "MN": 5,
+          "MS": 161,
+          "MT": 1,
+          "NE": 34,
+          "NJ": 22,
+          "TN": 9
+        },
+        "city_state_labels": 169,
+        "valid_coordinates": 796,
+        "unique_valid_coordinates": 692
+      }
+    },
+    "display_reproduction": {
+      "left_rows": 790,
+      "right_rows": 796,
+      "sequence_equal": false,
+      "multiset_equal": false,
+      "multiset_overlap": 790,
+      "left_unmatched": 0,
+      "right_unmatched": 6,
+      "rejected": 1,
+      "ambiguous_category": 6,
+      "columns_equal": true,
+      "declared_count_equal": true,
+      "declared_year_is_1947": true
+    },
+    "display_compatibility": {
+      "same_row_count": true,
+      "noncategory_sequence_mismatch_rows": 0,
+      "category_output_incompatible_rows": 0,
+      "ambiguous_category_rows": 6,
+      "every_row_individually_compatible": true,
+      "original_python2_dictionary_order_verified": false
+    },
+    "literal_original_parser_on_greenbooks": {
+      "rejected": 1056,
+      "ambiguous_category": 0,
+      "rows": 0
+    },
+    "source_region_key": {
+      "left": {
+        "rows": 1056,
+        "missing_key_rows": 0,
+        "distinct_keys": 1056,
+        "duplicate_keys": 0,
+        "rows_in_duplicate_keys": 0
+      },
+      "right": {
+        "rows": 796,
+        "missing_key_rows": 0,
+        "distinct_keys": 796,
+        "duplicate_keys": 0,
+        "rows_in_duplicate_keys": 0
+      },
+      "shared_keys": 672,
+      "multiset_key_overlap": 672,
+      "unique_pairs": 672,
+      "shared_ambiguous_keys": 0,
+      "left_rows_without_unique_pair": 384,
+      "right_rows_without_unique_pair": 124
+    },
+    "normalized_text_key": {
+      "left": {
+        "rows": 1056,
+        "missing_key_rows": 9,
+        "distinct_keys": 1046,
+        "duplicate_keys": 1,
+        "rows_in_duplicate_keys": 2
+      },
+      "right": {
+        "rows": 796,
+        "missing_key_rows": 8,
+        "distinct_keys": 788,
+        "duplicate_keys": 0,
+        "rows_in_duplicate_keys": 0
+      },
+      "shared_keys": 528,
+      "multiset_key_overlap": 528,
+      "unique_pairs": 528,
+      "shared_ambiguous_keys": 0,
+      "left_rows_without_unique_pair": 528,
+      "right_rows_without_unique_pair": 268
+    },
+    "key_agreement": {
+      "pair_intersection": 528,
+      "region_pairs_only": 144,
+      "text_pairs_only": 0,
+      "left_rows_linked_by_both_keys": 528,
+      "different_partners_among_dual_linked": 0
+    },
+    "source_region_pair_diagnostics": {
+      "unique_source_region_pairs": 672,
+      "raw_property_disagreement_counts": {
+        "address": 0,
+        "capture_uuid": 0,
+        "category": 672,
+        "city": 143,
+        "dc_url": 0,
+        "geocoded_address": 78,
+        "geocoded_confidence": 142,
+        "image_id": 0,
+        "image_region": 0,
+        "image_url": 0,
+        "name": 0,
+        "page": 0,
+        "scribe_url": 672,
+        "state": 0,
+        "year": 0
+      },
+      "normalized_text_disagreement_counts": {
+        "name": 0,
+        "address": 0,
+        "city": 143,
+        "state": 0,
+        "category": 651
+      },
+      "parser_category_output_sets_differ": 181,
+      "parser_category_output_sets_disjoint": 179,
+      "coordinate_displacement_bands": {
+        "exact": 594,
+        "0_to_25m": 0,
+        "25_to_100m": 0,
+        "100_to_1000m": 0,
+        "over_1000m": 78,
+        "invalid": 0
+      },
+      "left_without_unique_pair_state_counts": {
+        "AR": 68,
+        "AZ": 14,
+        "CA": 80,
+        "CO": 36,
+        "CT": 11,
+        "DE": 33,
+        "FL": 17,
+        "GA": 32,
+        "IA": 9,
+        "ID": 1,
+        "IN": 11,
+        "KS": 3,
+        "MS": 40,
+        "NE": 1,
+        "NJ": 17,
+        "TN": 11
+      },
+      "right_without_unique_pair_state_counts": {
+        "MA": 4,
+        "MI": 38,
+        "MN": 3,
+        "MS": 74,
+        "NJ": 5
+      }
+    },
+    "full_feature_comparison": {
+      "left_rows": 1056,
+      "right_rows": 796,
+      "sequence_equal": false,
+      "multiset_equal": false,
+      "multiset_overlap": 0,
+      "left_unmatched": 1056,
+      "right_unmatched": 796
+    }
+  }
+}
