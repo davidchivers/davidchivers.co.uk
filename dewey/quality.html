@@ -1,0 +1,204 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Data quality: what is checked and what remains</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup { display: none; } th:first-child, td:first-child { min-width: 120px; } .notice { border-left: 4px solid #00686c; padding: 10px 18px; background: #f1f7f6; }
+</style></head><body><header><h1>Data quality: what is checked and what remains</h1><p class="subtitle">19 October 2026 | Research assessment | Evidence and proposals are distinguished</p></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Research plan and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/plan.html">Earlier plan and results</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><h2 id="purpose-and-reading-status">Purpose and reading status</h2>
+<p><strong>Bottom line:</strong> the corrected 2017-19 files have passed substantial downstream checks, but the complete production pipeline and population representativeness have not been independently certified. The next priority is to reproduce the annual origin flows and inherited weights from a preselected sample of original weekly inputs, then assess coverage. More regressions cannot substitute for these checks.</p>
+<h2 id="current-quality-assessment">Current quality assessment</h2>
+<p>This table records saved project evidence checked against the existing audit notes on 19 October 2026. It does not report a new pass through the licensed data.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Component</th>
+<th>Current status</th>
+<th>What this means for the paper</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Census geography used for origin demographics</td>
+<td>Corrected with an NHGIS-based reconstruction; 109 recorded checks</td>
+<td>A major earlier direct-join problem was addressed. This does not validate the upstream annual flows used as inputs.</td>
+</tr>
+<tr>
+<td>Final annual files, 2017-19</td>
+<td>Full final-file audit completed on 9,537,963 POI-years</td>
+<td>Keys, support, valid indices, weights and within/between identities were checked. These are venue-years, not people or a guaranteed balanced panel.</td>
+</tr>
+<tr>
+<td>Common race/income analysis support</td>
+<td>8,875,712 POI-years; 94.91% of positive input visit weight</td>
+<td>This is retention from the delivered files, not coverage of the national population.</td>
+</tr>
+<tr>
+<td>Original weekly-to-annual construction</td>
+<td>Independent replication still outstanding</td>
+<td>Pin the source releases, exact code/settings, duplicate handling, visits versus visitors and weeks-observed adjustment.</td>
+</tr>
+<tr>
+<td>Area labels and vintage</td>
+<td>Unresolved</td>
+<td>The 933 <code>MSA_CODE</code> values are not 933 metropolitan areas; metropolitan, micropolitan and unmatched codes coexist. Do not label these MSA-only effects.</td>
+</tr>
+<tr>
+<td>Demographic interpretation</td>
+<td>Limited by construction</td>
+<td>Income is a home-area characteristic, not personal earnings. Race is inferred from home-area composition; four retained groups omit some population mass.</td>
+</tr>
+<tr>
+<td>Worker/public-facing extension</td>
+<td>Four prospective concentration screens failed; source-version issue unresolved</td>
+<td>No corrected public-facing coefficient was estimated. Expected workforce profiles are not observed venue employees.</td>
+</tr>
+<tr>
+<td>Population and venue representation</td>
+<td>Not established by the existing checks</td>
+<td>Separate origin-device coverage, venue inclusion, demographic matching and retained visits. Large samples do not eliminate selection bias.</td>
+</tr>
+<tr>
+<td>Actual social contact</td>
+<td>Not observed</td>
+<td>Annual diverse patronage does not establish simultaneous presence, conversation, friendship or attitude change.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>What changed in this review:</strong> explicit coverage and temporal-pooling checks, an exact incoming/outgoing accounting check, and a sampling-noise warning for the venue-count result. Four new tests pass on artificial examples only; they validate the stated algebra, not the empirical data. No raw file was reopened and no earlier regression was rerun. The <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/plan.html#evidence">earlier research plan’s evidence record</a> retains the original audit and result summaries.</p>
+<h2 id="scope-of-this-review">Scope of this review</h2>
+<p>This cross-cutting review complements the eight idea-specific assessments. It separates three questions: whether the construction code implements its rules; whether the observed sample represents the intended population; and whether the measured object answers the economic question. Passing the first does not establish the other two. This is a literature and design assessment, not a new empirical audit. Existing corrections, failed support screens and contrary results remain in force.</p>
+<p>The source records below distinguish inspected full-text sections from abstracts and repository documentation. The algebra is our own analysis of the proposed definitions. It is not attributed to the empirical papers, and its illustrations are artificial, not observations from the project.</p>
+<h2 id="evidence-that-should-change-the-audit">Evidence that should change the audit</h2>
+<h3 id="device-coverage-is-not-visit-coverage">Device coverage is not visit coverage</h3>
+<p><strong>Li, Ning, Jing and Lessani (2024), PLOS ONE.</strong> Their national analysis uses SafeGraph Panel Overview device counts and ACS demographic information across multiple geographic scales and months in 2018-22. Coarse population correlations conceal local and temporal differences. Importantly, their limitations section says the analysis does not fully evaluate POI sampling and visit counts. A reassuring device-population correlation therefore cannot validate a venue-composition estimator. Their documented geography and privacy treatment belong to their release; they must not be assumed to describe our later delivered files. Inspected: full HTML methods sections 2.1-2.3 and limitations section 4. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0294430">Primary article</a>.</p>
+<p><strong>Jardel and Delamater (2024), Geographical Analysis.</strong> Their North Carolina analysis pairs ACS 2019 with SafeGraph and reports differential representation by demographic composition and time, at block-group, tract and county scales. This supports checking local coverage rather than relying solely on a national mean. It does not identify the personal demographics of every device or provide a ready-made correction for our venue sample. Inspected: publisher abstract and bibliographic record; the full-text route returned the abstract, so model details were not independently audited. <a href="https://doi.org/10.1111/gean.12399">Primary record</a>.</p>
+<p><strong>Coston et al. (2021), ACM FAccT.</strong> Their administrative-data approach matches polling-place visits with turnout information to assess differential mobility coverage. This is a stronger validation target than checking two aggregates constructed from the same mobility data. Election-day coverage is nevertheless not general-purpose validation of restaurants or shops. Inspected: author preprint abstract and official replication README, including matching and placebo-analysis steps; no coefficient reproduction. <a href="https://arxiv.org/abs/2011.07194">Author preprint</a>, <a href="https://github.com/mandycoston/covid-mobility-disparate-coverage">official code</a>.</p>
+<p><strong>den Nijs, Omodei and Sekara (2026), EPJ Data Science.</strong> Their accepted early article distinguishes inclusion in a GPS panel from how much information included users produce, and finds location-specific relationships with neighbourhood characteristics across ten cities. This is a warning against treating one national adjustment as sufficient. Inspected: publisher abstract, status, authorship and data-availability statement, not the complete PDF. Consensus omitted the first author in the initial discovery record; the publisher record supplies the corrected citation. <a href="https://doi.org/10.1140/epjds/s13688-026-00685-8">Primary record</a>.</p>
+<p><strong>Embury, Dodge and Nara (2026), Scientific Reports.</strong> Their accepted early article reports scale-dependent demographic coverage patterns and aggregation masking finer-scale underrepresentation. Inspected: publisher abstract and bibliographic/status information only. It is corroborating measurement literature, not an independently checked weighting recipe. <a href="https://doi.org/10.1038/s41598-026-70982-9">Primary record</a>.</p>
+<p><strong>Our design implication.</strong> Build a release-specific coverage ladder: eligible population, observed home devices, recorded origins, recorded venues, demographic matches and retained analysis visits. Tabulate coverage at the unit used in each proposed comparison. An apparent incoming/outgoing difference can arise if visitors from one set of origins are less likely to be observed or matched. Compare common-support results with the broader covered sample, report both denominators, and keep exclusions visible. Post-stratifying on home-area composition cannot repair unknown within-area selection, missing venues or incorrect visit attribution.</p>
+<p>External administrative counts would be useful where dates, venue definitions and denominators genuinely align. The audit should first inventory such possible benchmarks and their licences. This review does not authorise collecting individual voter records, new restricted mobility files or any other sensitive dataset.</p>
+<h3 id="nonlinear-indices-and-pooling-require-their-own-checks">Nonlinear indices and pooling require their own checks</h3>
+<p><strong>Reardon, Bischoff, Owens and Townsend (2018), Demography.</strong> They derive and simulate finite-sample corrections for income-segregation measures. Their substantive result illustrates that changing sample intensity can distort apparent changes, even when the underlying phenomenon remains. Their corrections apply to particular estimators and sampling assumptions; they are not automatically valid for privacy-treated, annually aggregated origin maps. Inspected: the authors’ Stanford record, abstract and replication documentation, with publication metadata verified there; the publisher DOI route was inaccessible. The original Stanford route now redirects, so the link below uses its official archive. <a href="https://storage.googleapis.com/gse-website-archive/cepa/cepa.stanford.edu/content/has-income-segregation-really-increased-bias-and-bias-correction-sample-based-segregation-estimates.html">Author record and replication links</a>.</p>
+<p><strong>Leung-Gagne and Reardon (2023), Demography.</strong> They distinguish finite-sample bias, attenuation from income measurement error and temporal-pooling bias. The directions can oppose one another, so a single generic bias correction is inadequate. Their temporal-pooling problem concerns multi-year residential income measurement; the annual-venue illustration below is our separate application of the pooling logic, not their empirical finding. Inspected: the published article’s abstract, bibliographic details and introductory explanations on pages 1387-1390, via the US Department of Education’s ERIC copy; not the complete manuscript or correction estimator. This corrects the preliminary review’s 2022 working-paper citation. <a href="https://files.eric.ed.gov/fulltext/ED661972.pdf">Published article</a>.</p>
+<p>For our analysis, an annual mixture of visitor origins is neither a same-time crowd nor an individual’s sequence of encounters. The remaining weekly-to-annual replication should establish exactly what is pooled and what weights are inherited. Retaining all three years is useful for reproducibility and stability, but three annual observations do not turn a descriptive comparison into a credible event study.</p>
+<h2 id="three-exact-checks-for-the-proposed-paper">Three exact checks for the proposed paper</h2>
+<h3 id="incoming-and-outgoing-national-means-obey-a-conservation-identity">1. Incoming and outgoing national means obey a conservation identity</h3>
+<p>Let <code>v[o,j]</code> be the same retained origin-to-venue flow in both calculations and <code>D[j]</code> the same venue index. Let <code>O[o]</code> be total outgoing flow from origin <code>o</code>, and <code>I[a]</code> incoming flow to all venues in destination area <code>a</code>. Define resident exposure <code>R[o] = sum_j v[o,j] D[j] / O[o]</code> and destination exposure <code>V[a] = sum_(j in a) sum_o v[o,j] D[j] / I[a]</code>. Then:</p>
+<pre class="text"><code>sum_o O[o] R[o] = sum_a I[a] V[a] = sum_o sum_j v[o,j] D[j].</code></pre>
+<p>Consequently their national flow-weighted means are equal on identical support. This is a bookkeeping identity, not a hypothesis that can be rejected about social behaviour. Different national estimates indicate different populations, support, weights or definitions, or an implementation error. Equal-area means need not match because they answer different questions.</p>
+<p>The local comparison remains meaningful: a neighbourhood may receive visits to diverse venues while its residents use a different set of destinations. Show both coordinates, incoming and outgoing volumes, residential composition, and boundary sensitivity. A difference score alone can hide whether the neighbourhood is an employment centre with few residents, a visitor destination, or a genuinely asymmetric residential area. Population weighting asks a different question and must not be silently substituted for flow weighting.</p>
+<p><strong>Artificial example.</strong> Two origins send <code>(8,2)</code> and <code>(1,9)</code> visits to two venues, whose indices are 0.2 and 0.5. The resident averages are 0.26 and 0.47; the destination averages are 0.2 and 0.5. Incoming totals are 9 and 11, outgoing totals 10 and 10. Both correctly flow-weighted national means are 0.365. The equal-destination mean, 0.35, is different by construction. None of these numbers is an empirical result.</p>
+<h3 id="between-venue-separation-is-a-variance-not-proof-of-preferences">2. Between-venue separation is a variance, not proof of preferences</h3>
+<p>For normalised venue weights <code>w[j]</code> and group shares <code>p[j,g]</code>, let <code>pbar[g] = sum_j w[j] p[j,g]</code>. Fractionalization is <code>F(p) = 1 - sum_g p[g]^2</code>. The accounting identity is:</p>
+<pre class="text"><code>F(pbar) - sum_j w[j] F(p[j])
+    = sum_j w[j] sum_g (p[j,g] - pbar[g])^2 &gt;= 0.</code></pre>
+<p>There is no contradiction if the within-venue level and the between-venue share both rise across market-size bins. The pooled opportunity distribution may also become more diverse. Report all three components and the precise weights; an average of cell ratios is not a ratio of averages. A larger count does not mechanically imply a larger difference for every possible set of venue compositions.</p>
+<p>There is, however, a concrete sampling concern. In an <em>illustrative</em> model where each of <code>K</code> venues independently receives <code>n[j]</code> draws from the same true composition <code>p</code>, with <code>N = sum_j n[j]</code> and weights <code>n[j]/N</code>, expected estimated within diversity is <code>F(p)(1-K/N)</code>. Expected pooled diversity is <code>F(p)(1-1/N)</code>. Thus expected estimated between diversity is <code>F(p)(K-1)/N</code> even without systematic sorting. This formula is an expectation of the difference, not an expectation of the ratio. It must not be plugged into the project as a correction: actual inputs have repeated visits, inferred group masses, unequal detection and possible privacy treatment rather than independent labelled visitors.</p>
+<p>The practical next step is a prospective diagnostic matched to the actual construction. Examine information per venue, coverage and the null distribution generated by the documented observation process. Do not call a model-free count regression an estimate of preferences or supply effects. Distinguish checks that can use existing approved aggregates from any that require newly approved origin flows.</p>
+<h3 id="pooling-across-time-can-create-apparent-within-venue-diversity">3. Pooling across time can create apparent within-venue diversity</h3>
+<p>Replace venues in the variance identity above with time blocks. Diversity of the pooled annual crowd is at least the weighted average of time-block diversity when group definitions and weights align. A venue used exclusively by one group in one period and by another group in a second period can look diverse annually even if the groups never overlap. The artificial two-period, two-group example has annual diversity 0.5 and diversity within each period zero.</p>
+<p>Annual origin data therefore measure diversity in recorded patronage over a period. The paper should not describe this as observed conversation or simultaneous contact. Testing temporal mixing requires joint origin-by-time information. Marginal hourly totals and annual origin shares cannot recover the joint distribution without assumptions. This limitation matters especially for weather, employment-related interaction and any policy claim about encounters.</p>
+<h2 id="why-exposure-is-not-connectedness-or-attitudes">Why exposure is not connectedness or attitudes</h2>
+<p><strong>Chetty et al. (2022), Social capital II, Nature.</strong> They distinguish the composition of social settings from the formation of cross-class friendships within those settings. Their definition of friending bias is statistical and may reflect institutional organisation rather than tastes. They additionally use high-school cohort variation to study how changes in composition translate into friendships. Inspected: full HTML definitions, interpretation and identification sections, not a replication. <a href="https://www.nature.com/articles/s41586-022-04997-3">Primary article</a>.</p>
+<p>Our implication is deliberately narrower: measuring visits to diverse venues does not establish that the same visitors become friends or change their beliefs. Expected workforce demographics add a proxy for who might work in an industry-area, not observed colleagues or customer-worker interaction. A weak attitude association is not necessarily a contradiction of the contact literature; it may concern a different exposure, population and period. Conversely, finding a positive connectedness association does not validate the contact mechanism. The earlier negative equal-county validation, correction 70a and stopped attitude family must stay visible.</p>
+<h2 id="proposed-audit-outputs-and-stop-conditions">Proposed audit outputs and stop conditions</h2>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Minimum output</th>
+<th>What a pass would establish</th>
+<th>What it would not establish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Production lineage</td>
+<td>Exact releases, code, settings and retained annual-flow definition</td>
+<td>Which transformation was used</td>
+<td>That its definition is economically appropriate</td>
+</tr>
+<tr>
+<td>Independent reconstruction</td>
+<td>Predeclared complete-week sample, flow and index comparisons</td>
+<td>Correctness for the checked construction/sample</td>
+<td>Universal correctness or population representativeness</td>
+</tr>
+<tr>
+<td>Geography and denominators</td>
+<td>Vintage-resolved area map; missing-origin and omitted-group mass</td>
+<td>Comparable support and geographic meaning</td>
+<td>Personal race or personal income</td>
+</tr>
+<tr>
+<td>Coverage</td>
+<td>Origin/venue/year coverage matrix and aligned external benchmarks where available</td>
+<td>Where estimates can be interpreted with known limitations</td>
+<td>Ignorable selection into all recorded visits</td>
+</tr>
+<tr>
+<td>Algebra</td>
+<td>Conservation, within/between and time-pooling identities</td>
+<td>Internal consistency of definitions</td>
+<td>Identified behavioural mechanisms</td>
+</tr>
+<tr>
+<td>Paper contribution</td>
+<td>Close-predecessor comparison and a predeclared discriminating output</td>
+<td>A testable incremental question</td>
+<td>Guaranteed novelty, significance or publication</td>
+</tr>
+</tbody>
+</table></div>
+<p>Do not waive a failed gate by changing the sample, weights or category list after viewing results. If the proposed substantive distinction disappears under defensible coverage or benchmark choices, that is an informative no-go. An audited descriptive contribution is preferable to an unsupported structural explanation, but an audit alone is not automatically a publishable economics paper.</p>
+<h2 id="search-scope-and-limits">Search scope and limits</h2>
+<p>Searches on 19 October 2026 used Consensus for discovery, followed by required record fetches and primary author/publisher verification, and web searches for sampling bias, segregation measurement and exposure-versus-friendship. Sources include recent 2026 records and older methodological work. This is a focused critical review, not a registered systematic review or an exhaustive claim of coverage. No new proprietary data were retrieved, no historical empirical result was rerun, and no new causal estimate was produced.</p>
+</main><footer>Reviewed documentation snapshot. No new licensed-data analysis, empirical replication or adopted research protocol is implied. Earlier results and failed gates remain in force.</footer></body></html>
