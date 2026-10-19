@@ -1,0 +1,337 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Dewey: annualization audit and withheld-release record</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} code{overflow-wrap:anywhere}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Dewey: annualization audit and withheld-release record</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>19 October 2026. Complete authored audit note, frozen protocol, historical first safeguard, explicit union correction, construction log and independent review. The first safeguard’s joint-sufficiency claim is superseded only by the correction. The empirical union pass did not run. No withheld economic outcomes, raw records or private paths are included. This is a dated snapshot, not live Project access or upstream replication.</p>
+<h1 id="annualization-check-arithmetic-verified-new-results-withheld">Annualization check: arithmetic verified, new results withheld</h1>
+<p>19 October 2026. This is a completed local calculation and a failed disclosure release, <strong>not a new economic finding</strong>. The earlier published results remain unchanged. This note adds an audit outcome; it does not certify the upstream pipeline or supersede earlier scientific protocols.</p>
+<h2 id="the-question">The question</h2>
+<p>Do the rules used to expand incompletely observed venues to a full year help explain why visit-weighted diversity differs from the equally weighted venue average? This is a measurement check within ranks 1 and 2, not a new attitude regression or an estimate of preferences.</p>
+<p>For each retained venue, the planned check keeps its stored diversity indices and analysis sample fixed. It compares equal venue weights, the stored annualized matched-visit weight, and that stored weight multiplied by observed weeks divided by 52. The last quantity undoes the documented expansion in the analysis weight; it is <strong>not independently verified raw visits</strong>. It cannot repair missing weeks, panel selection or suppressed origins. Recorded 53-week values are retained, not capped or reinterpreted as 52.</p>
+<h2 id="what-ran-and-what-passed">What ran and what passed</h2>
+<p>The same three approved final POI files were read locally without alteration. Their full fingerprints match the previous release. The run retained the changing common sample and the stable-ID sample for all three years, both racial and home-area income diversity, and all three weighting choices. That is 36 planned means, 12 weighting-gap accounts and 12 cell-decomposition accounts. None of these new outcome values is released here.</p>
+<p>The calculation and provenance checks finished in <strong>773.78 seconds</strong>, about 12.9 minutes. Independent Python/SQL mean calculations agree within 6.90e-13; earlier national means reproduce within 2.38e-14. Cell identities and an independent high-precision calculation agree within 3.14e-16. The complete candidate was saved privately before the release decision. These checks verify this calculation on inherited final files, not the original weekly-to-annual construction.</p>
+<h2 id="why-there-is-no-new-result-table">Why there is no new result table</h2>
+<p>Several weighted summaries can be individually broad but reveal information when subtracted from one another. A pre-execution artificial example showed why a large national sample alone is insufficient. The frozen release screen therefore examined the combined coefficient directions of the proposed summaries, with a maximum-leverage threshold strictly below 0.01.</p>
+<p>All nine preliminary sample-year screens failed:</p>
+<div class="table-scroll" tabindex="0"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>Sample</th>
+<th style="text-align: right;">2017 venue-years</th>
+<th style="text-align: right;">2018 venue-years</th>
+<th style="text-align: right;">2019 venue-years</th>
+<th>Release screen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Changing common sample</td>
+<td style="text-align: right;">2,699,564</td>
+<td style="text-align: right;">2,904,929</td>
+<td style="text-align: right;">3,271,219</td>
+<td>Failed in all three years</td>
+</tr>
+<tr>
+<td>Stable recorded IDs</td>
+<td style="text-align: right;">2,399,249</td>
+<td style="text-align: right;">2,399,249</td>
+<td style="text-align: right;">2,399,249</td>
+<td>Failed in all three years</td>
+</tr>
+<tr>
+<td>Common sample outside stable IDs</td>
+<td style="text-align: right;">300,315</td>
+<td style="text-align: right;">505,680</td>
+<td style="text-align: right;">871,970</td>
+<td>Failed in all three years</td>
+</tr>
+</tbody>
+</table></div>
+<p>The diagnostic maxima range from 0.05994 to 0.22658, above the fixed 0.01 threshold. <strong>These are release-risk diagnostics, not effect sizes or evidence that a few venues drive the actual economic comparison.</strong> No new mean, weighting gap or cell component was printed to the assistant, exported to the site or shared with an external model. The full planned family remains in private storage rather than selectively releasing favourable entries.</p>
+<p>A second independent synthetic test also found that checking each sample separately is insufficient for a joint all/stable release. A separate union checker and explicit protocol correction now address that design defect. The correction is retained alongside the original frozen addendum. It was <strong>not run on empirical data</strong>: the preliminary failure already prevents the planned release, and a different check cannot rescue that failed gate. The mathematical correction is not production approval: review also flags separate file-read/hash snapshot binding that must be hardened before future private use. The existing synthetic suite passes 55 tests and 580 subtests after a malformed-hash validation repair; it does not rerun private data.</p>
+<h2 id="what-follows-for-the-paper">What follows for the paper</h2>
+<p>We cannot yet say whether undoing annualization preserves, attenuates or reverses the weighting difference. Withheld does not mean zero, insignificant or scientifically disproved. The new check provides numerical reassurance about reconstructing earlier results and a concrete constraint on releasing this more detailed comparison. It provides no new evidence for a mechanism.</p>
+<p>The priority remains the exact code-only production snapshot, sanitized run manifests and an outcome-blind weekly replication sample. Any future release redesign must be justified independently of the hidden outcomes and undergo fresh joint disclosure review; do not relax thresholds, trim influential venues or choose a promising subset to obtain a result. The separate 2019 annual-flow/ACS permission request for Eren’s urban-scale decomposition is still pending and was not used for this check.</p>
+<h2 id="evidence-and-limits">Evidence and limits</h2>
+<p>The accompanying diagnostic JSON contains only national support, release screen diagnostics, numerical agreement and provenance hashes. It contains no new index means, gaps, cell estimates, venue identifiers or private paths. The construction log and independent review distinguish pre-execution tests, the completed private computation, the failed release and the unrun empirical union check. Operational disclosure screens are not a formal privacy guarantee or a change to provider permissions.</p>
+<p>Racial and income measures retain their different group partitions. Income is home-area household-income rank, not a person’s earnings. Stable recorded IDs do not establish physical business continuity. Expected employees are not observed workers. Earlier missing-income bounds, concentration failures, negative equal-county validation, correction 70a, note 69’s non-FE distinction and failed designs remain in force.</p>
+<hr />
+<h1 id="annualization-and-the-visit-versus-venue-diversity-gap">Annualization and the visit-versus-venue diversity gap</h1>
+<p>19 October 2026. Prospective relative to this calculation, after the earlier weighting results are known. This is not a preregistration or a new outcome search. It tests one specific observation-process explanation for ranks 1-2 in note 88, not a public-facing, attitude or preference regression.</p>
+<h2 id="question-and-interpretation">Question and interpretation</h2>
+<p>Does the use of <code>annualized_matched_visits</code> rather than its inverse-transformed pre-expansion weight explain the national difference between visit-weighted and equal-venue diversity? The documented downstream rule multiplies an inherited total by 52 / <code>weeks_observed</code>. Undo that arithmetic, holding every venue’s stored diversity index and sample membership fixed.</p>
+<p>Let a_j be the stored annualized weight, k_j the observed-week count, and v_j = a_j k_j / 52. Call v the <strong>inverse-expanded weight</strong>, not independently observed raw visits or a verified complete-year total. The original weekly source field, deduplication, calendar and week-count rules remain unverified. Neither weighting is automatically the right population estimand. The index still pools the venue’s available observations; changing its analysis weight does not reconstruct a same-calendar crowd or correct missing visits.</p>
+<h2 id="scope-and-fixed-family">Scope and fixed family</h2>
+<p>Read only the three named final harmonized 2017-2019 POI files approved for bounded quality/coverage checks, the unchanged frozen category bridge and existing safe national continuity baseline. Add <code>weeks_observed</code> to the previous required columns; no annual origin-flow, ACS lookup, employee workbook, weekly file, address or coordinate input is authorized by this check. Private caches, cells and logs remain in a new PRS directory. Originals are read-only. No licensed row or detailed cell is released.</p>
+<p>Retain the exact earlier common-valid sample and the same stable-ID sample (valid all three years, unchanged recorded area and category). Do not select categories, choose a new balanced sample or drop partial-year observations. Use all three years, both samples, both racial and national-home-income fractionalization, and exactly three weights: equal venues, stored annualized weights and inverse-expanded weights. This gives 36 means (18 rows with two outcomes) and 12 within-year gap accountings. Retain every setting.</p>
+<p>Race conditions on four retained origin-demographic groups. Income uses ten national CBG median-household-income rank groups. Neither measures individual traits. Index levels across those partitions are not directly comparable.</p>
+<h2 id="calculations-fixed-before-execution">Calculations fixed before execution</h2>
+<p>For each sample/year/metric, calculate M_e, M_a and M_v: means with equal, annualized and inverse-expanded weights. Report in index points (100 times F):</p>
+<pre><code>M_a - M_e = (M_v - M_e) + (M_a - M_v).</code></pre>
+<p>The last term isolates the mechanical effect of the documented expansion on this mean. It is not the fraction of all measurement error explained, or a causal mechanism. Report levels and differences; do not divide by a near-zero gap or select only one sign. Changing the constant 52 to another common constant within a year cannot change a normalized weighted mean.</p>
+<p>Split M_a - M_v across the same recorded area-category cells using the symmetric two-order accounting already used in note 91:</p>
+<pre><code>within = sum_c ((p_a,c + p_v,c)/2) (mu_a,c - mu_v,c)
+across = sum_c (p_a,c - p_v,c) ((mu_a,c + mu_v,c)/2).</code></pre>
+<p>Here p is a cell’s weight share and mu its mean venue index. Report both ordered alternatives and their symmetric average. Within + across must equal the national difference. These are accounting terms, not causal shares; recorded <code>MSA_CODE</code> is not a validated metropolitan geography.</p>
+<p>No new significance tests, standard errors, confidence intervals, trend headline or regression is planned. Earlier missing-income trend bounds and all public-facing, geography, worker-provenance and upstream-replication gates remain in force regardless of this result.</p>
+<h2 id="validation-and-stopping-rules">Validation and stopping rules</h2>
+<ol type="1">
+<li>Match each final file’s frozen hash, exact basename/year and unchanged before/after size and modification time. Match bridge, code, protocol and baseline hashes. Fail on source/code drift; do not substitute inputs.</li>
+<li>Reuse historical key/bridge/common/stable-sample checks. Match counts, support, annualized denominators and both equal/annualized mean indices to the national continuity baseline (1e-8 absolute index, 1e-9 relative weight).</li>
+<li>On retained rows require finite integral week counts in [1,53]. A count of 53 is retained, not silently capped. Outside this domain stops the weight calculation; it does not establish the true calendar convention. Report only reviewed national week summaries, not venue records.</li>
+<li>Require positive finite a and v and valid index domains. Compute national means independently with batched NumPy and SQL; tolerance 1e-8. Check cell accounting against high-precision arithmetic and direct means.</li>
+<li>Synthetic tests must include identical week counts (no weighting change), variable weeks, 53 weeks, scaling invariance, nonfinite/fractional/out-of- range weeks, duplicate joins, missing support, empty families, and a case where the expansion reverses the sign of the equal-versus-weighted gap.</li>
+<li>National release only after a second review of the exact candidate hash. Require at least 1,000 venues, 100 cells and 20 recorded areas per setting, with largest venue weight below 1%. For all-minus-stable overlap, require at least 1,000 complement observations and a conservative largest-weight bound below 1%. Failure withholds the release, not observations.</li>
+</ol>
+<p>An unchanged gap rules out this specific expansion as its arithmetic driver, not observation bias more generally. A changed gap identifies sensitivity to this weighting choice, not which estimate describes the true population. Either outcome feeds the ranked paper recommendation without relaxing gates.</p>
+<hr />
+<h1 id="joint-release-disclosure-safeguard">Joint-release disclosure safeguard</h1>
+<p>19 October 2026, before any new empirical annualization result. Addendum to <code>annualization_weight_audit_20261019.md</code>; the scientific sample and reported comparison family are unchanged. The original protocol remains intact.</p>
+<p>Independent synthetic review showed that national breadth and all-minus-stable checks alone do not exclude reconstruction by differencing weights: if all but one venue have identical weeks, the annualized and inverse-expanded weighted sums can isolate that venue. This is a constructed counterexample, not evidence that it occurs in the actual files.</p>
+<p>Before releasing the new comparisons, check the joint linear span of all released index sums. Within each year and each of the all, stable and complement samples, let A_c and V_c be cell totals and a_j and v_j the two venue weights. The national means and every ordered/symmetric within/across accounting term are linear in the fixed venue index, with coefficient vectors in the span of:</p>
+<pre><code>1, a_j, v_j, a_j V_c/A_c, v_j A_c/V_c.</code></pre>
+<p>Normalize columns and use a reduced QR factorization privately. Require maximum diagonal projection leverage below 0.01, with trace equal to the retained rank and the existing national support rules. This checks whether any linear combination of these releases is concentrated in a few venues. All/stable releases jointly imply complement sums, so check that complement explicitly. Apply to race and income through the common coefficient design.</p>
+<p>Remove only analytically redundant columns: when all weeks are identical, the span is 1,a; when weeks are constant within every cell, it is 1,a,v; when all a values are identical, a duplicates the constant. Otherwise a singular/ill-conditioned reduced factor (relative singular value at most 1e-10) withholds the release for review; do not discard a potentially revealing direction because it is numerically small. No venues are removed.</p>
+<p>This is an additional conservative operational check, not differential privacy, a provider-approved anonymity theorem, or protection against all possible auxiliary data. It does not validate scientific inference or the population representativeness of any weighting. Any failure remains in the private receipt and blocks this release; it must not be bypassed by selecting a more appealing empirical sample or weakening the threshold.</p>
+<hr />
+<h1 id="joint-allstable-release-correction">Joint all/stable release correction</h1>
+<p>19 October 2026. Written before inspecting any new empirical index results, after the private computation began and before public release. This corrects the first disclosure addendum’s sufficiency claim; it does not overwrite that historical protocol or change the scientific comparison family.</p>
+<p>The independent reviewer constructed a case where all, stable and complement coefficient-span checks pass separately, but their joint release isolates one venue. Recomputed complement cell ratios are not the same as all-sample ratios restricted to complement venues. Separate projection checks therefore do not protect the joint cell-component release.</p>
+<p>For each year, construct the union on the same all-sample venue rows:</p>
+<pre><code>X_joint = [X_all, zero-padded X_stable]
+X_sample = [1, a, v, a V_c/A_c, v A_c/V_c].</code></pre>
+<p>Each block uses its own sample’s cell totals. The stable block is zero for nonstable rows. Retain the analytically justified constant-weight/week reductions from the earlier addendum, separately within each block. Use QR on the entire union, with rank at most ten, a relative smallest singular value greater than 1e-10 and maximum projection leverage below 0.01. Do not discard weak directions numerically. Insufficient rank/support withholds release for review rather than selecting observations or changing thresholds.</p>
+<p>A separate read-only, candidate-linked pass performs this check after the already-running computation. Revalidate all three source hashes, the original execution-code/protocol/bridge/baseline hashes, common/stable construction, counts and weight totals. The new receipt binds the exact private candidate hash and this separate checker. No new indices or regressions are estimated. All three years must pass before the new mean/component family can be released.</p>
+<p>The earlier per-sample checks remain necessary diagnostics but are no longer treated as sufficient. The public builder must require the union receipt; an older candidate or successful preliminary checker is not authorization. This is an operational disclosure safeguard for the stated joint release, not a formal guarantee against every possible auxiliary dataset or historical release. An exact-candidate independent aggregate review remains required.</p>
+<hr />
+<h1 id="annualization-weight-audit-construction-log">Annualization weight audit: construction log</h1>
+<p>19 October 2026. Opened before the empirical run. The protocol is <code>docs/protocols/annualization_weight_audit_20261019.md</code>.</p>
+<h2 id="permission-and-inputs">Permission and inputs</h2>
+<p>This is a bounded observation-coverage and weighting check on the three approved final POI files, not access to the separately requested annual-flow or ACS files. Reuse <code>within_venue_audit_config_20261018.json</code> in private PRS storage, the frozen bridge and national continuity baseline. Exact raw paths are never embedded in public code. A new private output directory must not exist before execution. Original files are unchanged.</p>
+<p>No missing value is imputed. The code will fail rather than silently drop a common-valid venue with an invalid week count. Retain 53 weeks when present; the historical fixed-52 calendar interpretation remains unverified.</p>
+<h2 id="planned-computation">Planned computation</h2>
+<p>Use the old common/stable samples, two indices and three weighting schemes. Undo only the documented analysis-weight expansion: stored weight times observed weeks divided by 52. Do not call this verified raw visits. It leaves venue composition, incomplete observation windows and source-panel bias intact. Release national levels, exact gap accounting and national within/across-cell terms only, after provenance, independent numerical and disclosure checks. No category/cell, origin, identity or private-path output is eligible.</p>
+<h2 id="completion">Completion</h2>
+<p>Private execution started 20:00 UTC on 19 October, after 25 independent construction, aggregate, exact-accounting and reconciliation tests passed in the main rerun (3.834 seconds). An earlier release-state test exposed a missing stage KeyError; the guard now rejects it explicitly. No scientific formula or sample was changed. The same-model reviewer owns only synthetic tests/review.</p>
+<p>Before execution, an independent synthetic counterexample motivated <code>annualization_disclosure_addendum_20261019.md</code>: differenced weighted sums can isolate a single unusual-week venue despite large national sample sizes. The initial coefficient-span check covers each sample separately, including the all-minus-stable complement. A single-outlier synthetic design is withheld by its numerical rank guard. Subsequent independent review found that this was not sufficient for the joint all/stable release; the correction is recorded below. Neither artificial example establishes that pattern in real data.</p>
+<p>The executed code/protocol remained frozen during the private run. The run completed its calculation in 773.7819855 seconds and then exited with <code>ValueError: Failed joint disclosure check</code>. The complete private candidate had already been saved; its SHA-256 is <code>173b197dbfc99808349605b54d4f22ff213f87eadf8957c06b3b05d087134414</code>. This is a calculation completion followed by a release failure, not a successful full pipeline exit or an empirical null result. No job remains running.</p>
+<p>All three source hashes, frozen execution-code/protocol fingerprints and the category bridge were verified. Common/stable support and historical means reconcile. Python/SQL means differ by at most 6.8923e-13, historical means by 2.3759e-14, the cell identity by 2.9258e-16 and the independent Decimal check by 3.1356e-16. All nine sample-year release screens fail the prospective maximum-leverage limit of 0.01; no new index means, gaps or components were read into the assistant or exported. All planned results remain private.</p>
+<h2 id="separate-release-correction-and-diagnostic-only-record">Separate release correction and diagnostic-only record</h2>
+<p>The independent reviewer found a synthetic case in which separate all, stable and complement screens pass but their joint release isolates one venue. <code>annualization_joint_release_union_20261019.md</code> and <code>verify_annualization_joint_release.py</code> specify a union of all-sample and zero-padded stable-sample coefficient matrices, with sample-specific cell totals. This correction was written after the private run started but before any new index results were viewed or published. It does not modify the frozen execution protocol or the private results. The full-results builder now requires a verified candidate-linked union receipt in addition to the earlier gates. The empirical union checker was NOT run: the prior failure is binding.</p>
+<p><code>summarize_annualization_release_stop.py</code> reads the candidate locally and exports a strict diagnostic-only allowlist: national support, gate values, numerical errors and hashes. It rejects incomplete provenance, missing sample-years, insufficient breadth and inconsistent gate labels. Its initial review candidate has SHA-256 <code>7b1d1b0e5bb9efafa8c5ee1d10ea6c1bd3603dbd0fc1ae903cc66dea20e134f7</code>. This is not the full-results builder. No outcome figures are generated.</p>
+<p>Exact independent diagnostic review and final synthetic-test evidence are recorded in <code>workstreams/annualization_weight_audit_review_20261019.md</code>. Main reran the complete owned suite after adding a strict 64-character hexadecimal candidate-hash guard to the separate future verifier: 55 tests and 580 subtests passed in 7.78 seconds. The preceding five failed subcases remain documented in the review. The frozen empirical runner was unchanged. Static review also identifies separate candidate read/hash operations in future tooling; parsing and hashing one byte snapshot remains a prerequisite before future private use. No empirical union pass or full-results builder was run. These code limitations do not invalidate the exact diagnostic bytes independently cleared above; that clearance does not generalize to arbitrary inputs or authorize the withheld index family. Public delivery is recorded separately, not assumed from a local build. Original protocols, earlier results and failed designs are not superseded.</p>
+<hr />
+<h1 id="independent-annualization-weight-audit-review">Independent annualization-weight audit review</h1>
+<p>19 October 2026. Scope: code/protocol review and invented in-memory examples only, using the inherited model. No reviewer empirical run, private configuration, restricted source, PRS access, browser, publication or external model. Ownership is limited to this note and <code>code/analysis/test_annualization_weight_audit.py</code>.</p>
+<h2 id="current-disposition-empirical-release-stopped">Current disposition: empirical release stopped</h2>
+<p>Main reported terminal exit 1 with <code>Failed joint disclosure check</code>, after the full <code>national_candidate.json</code> had been saved privately. This status is reported by main, not independently verified by reading private files. No new index, outcome, gap or component has been read, printed or exported by this reviewer. The complete scientific comparison family remains retained privately and withheld; it must not be selected down to passing comparisons.</p>
+<p>The preliminary prespecified per-sample disclosure gate already failed. <strong>Do not perform an empirical union pass to rescue this failed release.</strong> No empirical union verification occurred. The separate union checker and its synthetic tests are future implementation work only. Original running code and protocols remain frozen historical records; this reviewer changed neither. A mathematically better later gate does not override the earlier failure for this run.</p>
+<p>Main prepared a diagnostic-only excerpt restricted to year/sample, support counts, rank, maximum leverage, pass status, code/input hashes and numerical checks. It must contain no new means, outcomes, gaps or components. The exact supplied excerpt has now been reviewed and cleared for diagnostic-only sharing at the hash recorded below. This does not clear the withheld index family.</p>
+<p>The existing owned tests were rerun after main added strict 64-character lowercase-hex candidate-hash validation to the separate verifier: <strong>55 passed, 580 subtests passed in 7.68 seconds, exit 0</strong>. Main independently reported the same counts in 7.78 seconds. The malformed-hash finding is resolved; earlier failing checkpoints remain historical below. The static snapshot-binding issue remains uncorrected in future-only code and is not an empirical claim or a request for another pass. No test expansion occurred for this correction.</p>
+<h2 id="exact-diagnostic-only-clearance">Exact diagnostic-only clearance</h2>
+<p><strong>CLEAR for diagnostic-only sharing of this exact file; no new index-result release and no empirical union verification.</strong> Reviewed:</p>
+<ul>
+<li>File: <code>output/annualization_weight_audit_20261019/diagnostic_review_candidate.json</code></li>
+<li>Exact diagnostic-file SHA-256: <code>7b1d1b0e5bb9efafa8c5ee1d10ea6c1bd3603dbd0fc1ae903cc66dea20e134f7</code></li>
+<li>Reviewed exporter: <code>code/analysis/summarize_annualization_release_stop.py</code></li>
+<li>Exporter SHA-256: <code>57de56d873f089bb6a9279ca747dfa00e3271edfe14ad9c81f5268aedc5f458d</code></li>
+<li>Embedded private-candidate SHA-256, recorded but not independently verified against the private file: <code>173b197dbfc99808349605b54d4f22ff213f87eadf8957c06b3b05d087134414</code></li>
+</ul>
+<p>The exact JSON passes an independent structured allowlist/type/value review. It contains nine and only nine sample/year diagnostics, each restricted to <code>sample</code>, <code>year</code>, <code>poi_years</code>, <code>rank</code>, <code>max_leverage</code> and <code>passed</code>; all flags are false. All/stable/complement counts reconcile exactly within each year. Rank is five throughout. Maximum leverages range from 0.0599429113 to 0.2265794117, all above the .01 threshold. These are disclosure diagnostics, not index means or evidence about an economic effect or its drivers.</p>
+<p>The four numerical-check fields are finite and below 1e-8. The largest reported arithmetic discrepancy is 6.892264536872972e-13; the reported historical-mean discrepancy is 2.375877272697835e-14. Elapsed time is 773.7819855000125 seconds. These are reported calculation receipts, not an independent empirical recomputation by this reviewer.</p>
+<p>The remaining fields are fixed status/date/scope/interpretation text, a finite elapsed time, provenance hashes, three year/byte-count/source-hash records, and the explicit false flags <code>new_outcome_values_released</code> and <code>union_check_empirically_run</code>. There are no new outcome levels, mean indices, gaps, cell components, row-level records, detailed cells or private paths. The text correctly declines causal, zero-effect and economic-driver claims.</p>
+<p>All eight recorded code/protocol hashes were independently recomputed from allowed repository files and match. The three declared source hashes, bridge hash and baseline hash match the frozen code constants. The restricted input files, bridge file, baseline data file and private candidate were not opened or hashed by this reviewer. No PRS access, empirical rerun, empirical union pass, artifact generation, publication or external model was used.</p>
+<h3 id="exporter-allowlist-scope">Exporter allowlist scope</h3>
+<p><code>excerpt</code> explicitly selects the six diagnostic fields and four numerical check fields, exports only year/bytes/hash from input fingerprints, and uses an explicit top-level return dictionary. It does not copy <code>settings</code>, <code>gaps</code> or <code>decomposition</code>. It requires the full diagnostic family, numerical agreement, source-hash agreement and at least one failed preliminary gate.</p>
+<p>This clearance is for the reviewed bytes, not a blanket claim that the exporter is hardened against arbitrary malformed input. Its <code>candidate_hash</code>, elapsed-time, input-byte-count and bridge-hash output values are not all independently type/domain checked inside <code>excerpt</code>, and its CLI separately reads and hashes the private candidate. The exact exported values were checked here and contain no hidden nested payloads. Future reuse should validate those metadata slots and bind parsing/hashing to the same byte snapshot. Those future-code limitations do not require another empirical pass and do not block diagnostic-only clearance of this exact reviewed file.</p>
+<h3 id="final-test-receipt">Final test receipt</h3>
+<p>Final existing owned-suite run, with no further general-test expansion:</p>
+<pre class="text"><code>python -B -m pytest -q -p no:cacheprovider code/analysis/test_annualization_weight_audit.py
+55 passed, 580 subtests passed in 7.68s</code></pre>
+<p>The five previously failing malformed-candidate-hash subcases now pass after the strict guard was added to the separate verifier. No test was skipped or weakened; the earlier failure receipt is retained below as historical. All corrected-union numerical tests, safe-design and isolation tests, old-core-insufficiency documentation, and builder receipt-integration tests pass. The builder cannot use its old separate gate alone, cannot omit the receipt argument, and rejects a failed union receipt even when the old gate accepts the same artificial candidate. No stateful builder CLI or private-execution function was run.</p>
+<p>Final owned-test SHA-256: <code>0ed4d7cfb78c661d9f1a376e803d64d01755bfe0d672f1778385e0ec399ca662</code>. Corrected future checker snapshot: <code>6e4b487656565841f1bfdb3fb2a46ba6d75c7220d971d649fd247427b48459c8</code>. Builder snapshot: <code>1f83dc8f46e6cab21a7957afac6a0992ba2999e075ca07f4f74192d206eb0d15</code>.</p>
+<p>Review closed for the requested scope. Preserve the stopped full comparison family privately. The corrected union machinery remains synthetic/future-only; it is not a route to rescue the failed prespecified gate for this run.</p>
+<h2 id="earlier-focused-future-code-checkpoint">Earlier focused future-code checkpoint</h2>
+<p>The malformed-hash finding in this earlier checkpoint is now resolved by the strict guard and passing final test receipt above. The separate-read/hash snapshot-binding observation remains an uncorrected future-code limitation. Neither finding warrants empirical use of the union checker for this stopped run. Diagnostic-only clearance remains tied to the unchanged exact file hash.</p>
+<p>The separate <code>verify_annualization_joint_release.py</code> implements the correct ten-column union. On the artificial isolation fixture it returns rank 10, trace 10, maximum leverage approximately 1, and <code>passed=False</code>. The safe 19,200-row synthetic joint design returns rank 10 and maximum leverage 0.005378319713974324, with <code>passed=True</code>. Both agree with an independent SVD projector. Relative singular values depend on column normalization: the new module’s isolation ratio is 0.00136409, safely above 1e-10; the unit-norm reference ratio recorded below is 0.00305785. There is no rank-truncation explanation for the isolation result.</p>
+<p>The old core test now explicitly documents that all separate screens pass the counterexample, and separately asserts that the new verifier rejects it. This does not pretend the frozen core was repaired. The builder’s extracted <code>prepare_excerpt</code> requires a union receipt before invoking the old release gate; synthetic integration checks reject missing/failed receipts and strip extra nested private fields. No builder CLI, figures or output writes ran.</p>
+<p>Two bounded binding findings were present at this checkpoint:</p>
+<ol type="1">
+<li><code>verify_receipt</code> accepted matching malformed candidate identifiers, including <code>None</code>, empty text, nonhex text and a 63-character value. The focused regression failed for all five cases. It required a SHA-256 string with exactly 64 hexadecimal characters before treating equality as candidate binding. The builder separately validates hash syntax, so this is a verifier-API weakness, not a demonstrated bypass of the complete builder. Resolved by the later strict candidate-hash guard; all five subcases now pass.</li>
+<li>Static inspection finds a hash/read race: the new verifier parses the private candidate and then hashes the path separately. A replacement between these operations can bind parsed content from one snapshot to another snapshot’s hash. The builder CLI hashes first and separately reads JSON, with the analogous gap. Parse and hash the same byte buffer, retaining any final unchanged-file checks. This finding does not involve executing private I/O or changing the frozen running core.</li>
+</ol>
+<p>The new verifier’s source-year validation and all/stable per-year count, annualized-mass and inverse-expanded-mass comparisons are present in code. Execution of those private-source guards remains outside this review’s scope. Receipt tests reject missing/duplicate/unplanned years, wrong candidate or checker/protocol hashes, absent/false source-validation flags, changed sample counts, failed leverage, nonfinite values, invalid rank/trace and weak factors.</p>
+<p>Focused command:</p>
+<pre class="text"><code>python -B -m pytest -q -p no:cacheprovider code/analysis/test_annualization_weight_audit.py -k &quot;JointUnionVerifier or BuilderUnionGate or frozen_per_sample&quot;</code></pre>
+<p>Observed result: 13 passed, five failed malformed-hash subtests, 22 passing subtests, 42 deselected. The sole failing test function is <code>TestJointUnionVerifier.test_matching_malformed_candidate_hash_is_not_a_binding</code>. The older union-assembly failure below is now a preserved historical finding, not an uncorrected claim against the new module. These synthetic findings do not provide empirical clearance. The current run remains stopped under the earlier failed gate; no empirical union pass is requested or recommended.</p>
+<h2 id="initial-algebra-and-identification-review">Initial algebra and identification review</h2>
+<p>The prospective interpretation is adequate for a bounded accounting exercise. With normalized annualized-weight expectation E_a, v = a*k/52 gives</p>
+<pre><code>M_v = E_a[k F] / E_a[k]
+M_a - M_v = -Cov_a(k, F) / E_a[k].</code></pre>
+<p>The constant 52 cancels in normalized means; using 53 instead cannot change the mean within a year. Constant observed weeks imply no expansion effect, including the boundary cases 1, 52 and 53. More generally, cancellation can produce a zero national difference with nonzero opposing cell components. The three-mean identity and symmetric two-order decomposition are exact. For the reused helper, visit means/masses must mean annualized and equal means/masses must mean inverse-expanded; the latter argument is not a count.</p>
+<p>A fabricated sign reversal is possible with annualized masses (9,1), weeks (1,53), and racial fractionalization (.1,.7): equal mean .4, annualized .16, inverse-expanded 19/31. This is a test fixture, not a Dewey finding.</p>
+<p>Week counts in [1,53] are admissibility checks, not bounds on missing visits or validation of the weekly calendar. This exercise cannot establish which weight is the population estimand, undo pooled-index calendar composition, identify selection or causal effects, or relax prior missing-income, geography, worker-provenance and inference gates. No outcome sign or size is required. Results should be presented in index points with the conversion from stored fractions made explicit; no near-zero-gap ratio is warranted.</p>
+<h2 id="pre-execution-and-release-boundaries">Pre-execution and release boundaries</h2>
+<ul>
+<li>One-to-one key integrity is necessary. A missing match and an extra match can offset in row counts; duplicate/null keys must fail separately. The current runner explicitly checks source/stable/retained duplicate keys.</li>
+<li>Counts, support, denominators and moments do not establish stable-ID membership. An impostor moving between already occupied cells can have the same annual moments and support as a genuinely stable ID. The tests demonstrate that even reconciliation can pass this substitution. <code>continuity_tables</code> must supply the untouched stable IDs from the audited same-run common table; this is a provenance dependency, not proof furnished by <code>reconcile</code> alone.</li>
+<li>National breadth plus all-minus-stable complement gates are necessary but not sufficient for cross-weight disclosure safety. If every venue has 52 weeks except one with 53, differencing the annualized and inverse-expanded weighted sums isolates that venue’s weighted index. A synthetic fixture passes the stated 1,000/100/20 and complement gates while allowing this reconstruction. The pending exact-candidate second review must assess cross-weight differencing or withhold the affected release. This does not prevent authorized private computation, and is not a demand about results.</li>
+<li>The release whitelist is an excerpt pending review, not publication authorization. The explicit completed-private stage must be required. Main owns controlled provenance-hash addition and verification of the exact candidate; no real hashes or file invariance are verified here.</li>
+</ul>
+<h2 id="historical-blocker-joint-cell-component-span">Historical blocker: joint cell-component span</h2>
+<p><strong>The separately computed all/stable/complement leverage gates are not sufficient for joint release of the cell components.</strong> The independent test constructs a counterexample using only artificial weights, integral weeks and cell memberships. All three separate screens pass, but a linear combination of the actual published all/stable components isolates one stable venue.</p>
+<p>For one sample, define A_c=sum(a) and V_c=sum(v) within its cells. Its five coefficient columns are correctly specified as:</p>
+<pre><code>X_sample = [1, a, v, a*(V_c/A_c), v*(A_c/V_c)].</code></pre>
+<p>Writing the last two columns as g and h, the ordered terms are (a-h)/A, h/A-v/V, (g-v)/V and a/A-g/V, respectively. The symmetric terms are their pairwise averages. The national means and gap terms add no directions beyond these columns. Tests verify these expressions against the independent Fraction accounting, for every sample/year/metric.</p>
+<p>The issue is overlap, not this single-sample algebra. All-sample cell ratios restricted to stable or complement rows generally differ from ratios recomputed within those groups. Separate tests do not screen all linear combinations of the actual released all and stable terms.</p>
+<h3 id="exact-remedy">Exact remedy</h3>
+<p>For each year, form the five all-sample columns using all-sample cell totals. Form the five stable-sample columns using stable-sample cell totals, and embed them into the all-row coordinate system with zeros outside stable rows:</p>
+<pre><code>X_joint = [X_all, I_stable * X_stable].</code></pre>
+<p>This is one matrix with up to ten independent columns. Scaling its columns by their national denominators does not change the span. Check projection leverage of the entire union, not either block alone. Retain the stipulated strict maximum below .01, trace/rank checks and support gates. Apply only provable analytic reductions; after those reductions, a weak or singular factor must withhold release rather than silently truncate a direction. Any receipt schema for this union must permit rank up to ten, not five.</p>
+<p>An alternative conservative screen restricts <em>every actual published column</em> to each disjoint stable/complement group and checks the union of restrictions there. Stable restrictions can span up to seven directions. Recomputing a new complement-cell decomposition is not that operation.</p>
+<p>Before the preliminary failure was known, a separate post-run union check was proposed to be independently hashed and linked to the exact private candidate and frozen input/code receipt. The core computation would not have needed to be changed or repeated solely to correct this disclosure gate. No new scientific comparison, sample trimming or unrelated analysis is requested. The frozen runner/protocol were not edited by this reviewer. Current output must not describe its separate-cell screens as sufficient for joint disclosure protection.</p>
+<h3 id="artificial-counterexample-receipt">Artificial counterexample receipt</h3>
+<p><code>overlap_isolation_fixture()</code> supplies 23,961 invented rows for one year: 15,961 stable rows, 8,000 complement rows, 400 cells and 20 recorded areas. The fixture uses L=1.1. For ordinary cells choose r_c=sqrt(k_complement/52), constant complement weeks within a cell, and stable weight mixtures on weeks 1 and 53 with weighted mean week fraction L*r_c. In one cell retain a single stable row with 52 weeks and adjust its positive weight so the all-cell ratio still equals r_c. Every weight and week is artificial.</p>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Screen</th>
+<th style="text-align: right;">Maximum leverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All, separately</td>
+<td style="text-align: right;">0.00553250352656</td>
+</tr>
+<tr>
+<td>Stable, separately</td>
+<td style="text-align: right;">0.00825298268046</td>
+</tr>
+<tr>
+<td>Complement, separately</td>
+<td style="text-align: right;">0.00094364786906</td>
+</tr>
+<tr>
+<td>Actual ten-column joint release</td>
+<td style="text-align: right;">1.00000000000010</td>
+</tr>
+</tbody>
+</table></div>
+<p>The joint design has rank 10 and relative smallest singular value 0.00305785. The independently constructed contrast</p>
+<pre><code>g_all - h_all - g_stable/L + L*h_stable</code></pre>
+<p>is zero outside the exceptional stable row, up to roundoff. After normalizing that row’s coefficient to one, the largest other coefficient is below 1e-12. Thus this is a well-conditioned reconstruction counterexample, not merely a singular-matrix warning. The five-column helper passes its independent SVD projector checks; the omission is in the assembly of the joint release.</p>
+<h2 id="earlier-verification-checkpoint">Earlier verification checkpoint</h2>
+<p>Before the separate verifier: <strong>42 passed, one failed, 553 subtests passed</strong> in 7.54 seconds. The sole failing test is deliberately left as a regression: <code>TestCoefficientDisclosure.test_actual_joint_overlap_isolation_must_be_withheld</code>. It requires the actual joint-isolation fixture to be withheld; the current separate-sample implementation incorrectly reports passing receipts. That failing assertion has since been replaced by an explicit demonstration of the frozen core’s insufficiency and rejection by the new separate verifier.</p>
+<p>Earlier, before the new disclosure API, 35 tests and 423 subtests passed; including the inherited synthetic fixture and decomposition tests gave 76 tests and 563 subtests passing. Those earlier counts do not clear the current union-span blocker. One original fixture SQL-alias error and a missing-stage exception-type expectation were corrected; neither was a production defect.</p>
+<p>Covered: exact Fraction means and cell accounting; separate 60-digit Decimal identity; constant weeks 1/52/53; common scaling; fabricated sign reversal; invalid/nonfinite/domain and overflow/underflow cases; duplicate/missing and compensating join matches; stable-membership trust boundary; empty/incomplete families; 132,300-row multi-batch aggregation; historical reconciliation; release stage, nested whitelist, complements and numerical receipts; pure table formatting and index-point conversion; exact analytic reductions; independent SVD projection and actual combined-release isolation.</p>
+<p>The positive release fixture’s joint metadata is calculated from artificial rows, never inserted as unearned passing flags. The sparse one-53-week counterexample is now a withholding test. Numerical singularity may itself withhold that example; it does not dispose of the full-rank overlap example. All connections are in-memory with DuckDB external access disabled. The table formatter is loaded from its AST without running builder imports, figures, publication or filesystem-output functions. No stateful builder, empirical candidate, private source, provenance source hash or live release was tested.</p>
+<p>Command (from the named project checkout):</p>
+<pre class="text"><code>python -B -m pytest -q -p no:cacheprovider code/analysis/test_annualization_weight_audit.py</code></pre>
+<p>Code-only SHA-256 snapshots observed immediately after the failing run:</p>
+<ul>
+<li>Runner: <code>5b2d03873445368b0d34e208983922897b0c3d0cb61a908f9312752a7f8c4f78</code></li>
+<li>Owned test: <code>887b9d4de71ec5fb6ca63ce09cf74a5559fac58045e2b2f3ef5651fa7e34866e</code></li>
+<li>Builder: <code>bf5dc0a68d7e7453800abc768a49478f5c4e43754a666d5e117bb1616e033d68</code></li>
+<li>Disclosure addendum: <code>0a0f7168266a1e65a9c99413673d9bc5ef4dc15deae184f1176c505b1dd7868b</code></li>
+</ul>
+<p>These identify inspected code/protocol snapshots, not approval of a private candidate or proof that empirical source files were unchanged. The requirements discussed at that earlier checkpoint were a corrected union-span check and independent exact-candidate review. The subsequently reported preliminary gate failure supersedes that proposed route: no empirical union check or release of the new index family is now to proceed. No additional arithmetic defect was found in this bounded synthetic audit.</p>
+<p>Owned changed files only:</p>
+<ul>
+<li><code>code/analysis/test_annualization_weight_audit.py</code></li>
+<li><code>workstreams/annualization_weight_audit_review_20261019.md</code></li>
+</ul>
+<section><h2>Source identity and scope</h2><ul><li><code>notes/96_annualization_weight_audit.md</code>: Complete audit outcome; no new economic estimates; SHA-256 <code>07a870956670df912cc161eff6cf0109ab75d85583963cff67413f329d8a7d94</code>.</li><li><code>docs/protocols/annualization_weight_audit_20261019.md</code>: Complete frozen scientific protocol; SHA-256 <code>cc2ceec3fded7ff26af10cfd5abeff2c61ae8cf3da196a44486246441e6512eb</code>.</li><li><code>docs/protocols/annualization_disclosure_addendum_20261019.md</code>: Complete historical first safeguard; joint sufficiency superseded by next correction; SHA-256 <code>0a0f7168266a1e65a9c99413673d9bc5ef4dc15deae184f1176c505b1dd7868b</code>.</li><li><code>docs/protocols/annualization_joint_release_union_20261019.md</code>: Complete union correction; empirical pass not run; SHA-256 <code>aef1be77361b832221a240d96d01e290646de7a28cd4bb75afb553ab134667ef</code>.</li><li><code>docs/data_construction/96_annualization_weight_audit.md</code>: Complete construction log; delivery verified separately; SHA-256 <code>5cfddc76563bd4ef69d16ef89fdce5a6f5376822f7d3042b3b43620b43c9762a</code>.</li><li><code>workstreams/annualization_weight_audit_review_20261019.md</code>: Complete independent synthetic and diagnostic-only review; SHA-256 <code>de3aeaf1d06d6f073cb9b3d24cbb470ae5935f882c688d543e55e6f6db50bb27</code>.</li><li><code>output/annualization_weight_audit_20261019/diagnostic_review_candidate.json</code>: Diagnostic-only verification; no index results; SHA-256 <code>7b1d1b0e5bb9efafa8c5ee1d10ea6c1bd3603dbd0fc1ae903cc66dea20e134f7</code>.</li><li><code>output/annualization_weight_audit_20261019/diagnostic_release_review.json</code>: Diagnostic-only verification; no index results; SHA-256 <code>4e1d7600393657c2f203597bb67e9befb2da29b3c683e30dea3b339184342ea0</code>.</li></ul></section></main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>
