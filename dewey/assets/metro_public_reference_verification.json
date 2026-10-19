@@ -1,0 +1,197 @@
+{
+  "scope": "public_definitions_only_no_POI_results",
+  "all_seven_output_hashes_match": true,
+  "all_deterministic_receipt_fields_match": true,
+  "execution_seconds": [
+    2.589587699971162,
+    2.5747475000098348
+  ],
+  "first_receipt_sha256": "81ab6c974e81fafdf0f560eafbe525d19025e786c3ddfe4988069563101a10a2",
+  "replicate_receipt_sha256": "9a85562d84943cb8ab86c7302f0f0759bbd427045804311280bf3eb51cded413",
+  "verification": {
+    "completed_utc": "2026-10-19T21:22:32.327827+00:00",
+    "scope": "public_reference_only_no_restricted_processing_or_regression",
+    "source_manifest_sha256": "46a4b3517626ef66a597aef3fe1aaf3c354220df1261a33db9fcf475f6f2a3df",
+    "source_sha256": {
+      "delineation_2013.xls": "1bb1d7ce747bcd72fc212bda806c28bb4b17d4cec72d1388770f2b0a6d06f5c0",
+      "delineation_2018.xls": "22ba2e944ce1aa88b0bf0d09530d08f26c17a0bba7ae823290e7c4816316418c",
+      "delineation_2020.xls": "95b389487efcd818d71ba2a992e1edd43af93228e70c2a9634fd152acb345409",
+      "cbsa_population_2019.csv": "e43a8296927bb5d482fab0e85a76022e264dba998c366626c6b9021de66809a8",
+      "county_population_2019.csv": "654032fbb805bc9a7c124ba04ad47e170f5d9dc9d4974a73edfc20598fde77d8",
+      "cbsa_population_layout.pdf": "12c7ddcdf9125293cf678ce75516c28b36633a7d97ff27897296144916e44e14",
+      "county_population_layout.pdf": "42670240dfd594dece0bd256f2deffbc8a7b20c2a2dd652493e73a880876ad9f"
+    },
+    "execution_sha256": {
+      "code/analysis/metro_population_reference.py": "933fbbe29b1f94ab060edfb58def21bbdef92e3289843b8b92249ae908b74fb5",
+      "code/analysis/prepare_metro_population_reference.py": "15a86d082a1c168dfa21d7938a1f94e7cf1c2270d4dbe8082008c84bd57e8587",
+      "docs/protocols/metro_population_reference_20261019.md": "feccfc499f94189db64bf0227a4d32f8bca61ae41c6991801e272181f1f743d7"
+    },
+    "primary_boundary": "September 2018",
+    "population_vintage": 2019,
+    "population_years": [
+      2017,
+      2018,
+      2019
+    ],
+    "scope_primary": "US50DC",
+    "county_population_rows": 3142,
+    "published_cbsa_totals": 926,
+    "published_county_components": 1840,
+    "metropolitan_divisions_excluded": 31,
+    "reference_rows": 2778,
+    "all_3_year_county_sums_and_components_match_exactly": true,
+    "all_3_year_state_sums_match_exactly": true,
+    "independent_python_sums_match_exactly": true,
+    "delineation_counts": [
+      {
+        "boundary_year": 2013,
+        "scope": "PR",
+        "type": "metro",
+        "codes": 7
+      },
+      {
+        "boundary_year": 2013,
+        "scope": "PR",
+        "type": "micro",
+        "codes": 5
+      },
+      {
+        "boundary_year": 2013,
+        "scope": "US50DC",
+        "type": "metro",
+        "codes": 381
+      },
+      {
+        "boundary_year": 2013,
+        "scope": "US50DC",
+        "type": "micro",
+        "codes": 536
+      },
+      {
+        "boundary_year": 2018,
+        "scope": "PR",
+        "type": "metro",
+        "codes": 8
+      },
+      {
+        "boundary_year": 2018,
+        "scope": "PR",
+        "type": "micro",
+        "codes": 4
+      },
+      {
+        "boundary_year": 2018,
+        "scope": "US50DC",
+        "type": "metro",
+        "codes": 384
+      },
+      {
+        "boundary_year": 2018,
+        "scope": "US50DC",
+        "type": "micro",
+        "codes": 542
+      },
+      {
+        "boundary_year": 2020,
+        "scope": "PR",
+        "type": "metro",
+        "codes": 8
+      },
+      {
+        "boundary_year": 2020,
+        "scope": "PR",
+        "type": "micro",
+        "codes": 4
+      },
+      {
+        "boundary_year": 2020,
+        "scope": "US50DC",
+        "type": "metro",
+        "codes": 384
+      },
+      {
+        "boundary_year": 2020,
+        "scope": "US50DC",
+        "type": "micro",
+        "codes": 543
+      }
+    ],
+    "comparisons": [
+      {
+        "left_vintage": 2013,
+        "right_vintage": 2018,
+        "left_codes": 917,
+        "right_codes": 926,
+        "common_codes": 896,
+        "only_left": 21,
+        "only_right": 30,
+        "common_changed_county_sets": 114,
+        "common_changed_types": 2,
+        "common_changed_names": 45,
+        "common_metro_in_both": 379,
+        "common_metro_changed_county_sets": 73,
+        "common_incomplete_county_population": 1,
+        "common_abs_population_difference_over_5pct": 77,
+        "common_metro_abs_population_difference_over_5pct": 41
+      },
+      {
+        "left_vintage": 2018,
+        "right_vintage": 2020,
+        "left_codes": 926,
+        "right_codes": 927,
+        "common_codes": 926,
+        "only_left": 0,
+        "only_right": 1,
+        "common_changed_county_sets": 0,
+        "common_changed_types": 0,
+        "common_changed_names": 0,
+        "common_metro_in_both": 384,
+        "common_metro_changed_county_sets": 0,
+        "common_incomplete_county_population": 0,
+        "common_abs_population_difference_over_5pct": 0,
+        "common_metro_abs_population_difference_over_5pct": 0
+      },
+      {
+        "left_vintage": 2013,
+        "right_vintage": 2020,
+        "left_codes": 917,
+        "right_codes": 927,
+        "common_codes": 896,
+        "only_left": 21,
+        "only_right": 31,
+        "common_changed_county_sets": 114,
+        "common_changed_types": 2,
+        "common_changed_names": 45,
+        "common_metro_in_both": 379,
+        "common_metro_changed_county_sets": 73,
+        "common_incomplete_county_population": 1,
+        "common_abs_population_difference_over_5pct": 77,
+        "common_metro_abs_population_difference_over_5pct": 41
+      }
+    ],
+    "output_sha256": {
+      "cbsa_population_reference_2017_2019.csv": "84a782826c69ec30938f4786fd1d6179cbbb8a448338d6d42a2cb43de7cb7d63",
+      "comparison_2013_2018.csv": "64cdb240e243101095b7c528f2d28f3da15c2832240fb4496374e9ac0172dd68",
+      "comparison_2018_2020.csv": "ce940fa8b5c87d2810d062666e76c87ca5f0295769ead909d602381485dfe105",
+      "comparison_2013_2020.csv": "9f961ab6144f3101a8de90317cd8d93736821ba7bdfe99863bc368a9f9b07918",
+      "county_membership_2013.csv": "8b6b51718b409adc01a28a2d1fe768f8634e1e7ec5cf83b2312907b50d860dbe",
+      "county_membership_2018.csv": "3a042d6d93e084906390d45db78f76cadd8b2b00599fdec47b440b19db4564aa",
+      "county_membership_2020.csv": "5b7013ae6dc5ab8511baf2e07a34a46bf9651d6fa03b3c75963c4a49730503b1"
+    },
+    "elapsed_seconds": 2.589587699971162,
+    "inherited_mobility_geography_validated": false,
+    "historical_county_keys_repaired": false,
+    "population_reference_is_residential_opportunity_measure": false
+  },
+  "figure_sha256": "b79a10d22f1eb849281ee572a329e4e761de06cf68435a2cebfc8fc5fb26310c",
+  "same_changed_county_lists": [
+    306,
+    73
+  ],
+  "population_difference_le5_gt5_missing": [
+    337,
+    41,
+    1
+  ],
+  "verifier_sha256": "1ed892eceeb716e1c882c9fdd67aba55f2e229d21c67038014b0d7656aaaa508"
+}

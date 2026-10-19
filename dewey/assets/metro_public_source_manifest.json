@@ -1,0 +1,62 @@
+{
+  "scope": "official_public_census_only_no_restricted_data",
+  "acquisition_code_sha256": "15a86d082a1c168dfa21d7938a1f94e7cf1c2270d4dbe8082008c84bd57e8587",
+  "sources": [
+    {
+      "file": "delineation_2013.xls",
+      "url": "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2013/delineation-files/list1.xls",
+      "final_url": "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2013/delineation-files/list1.xls",
+      "retrieved_utc": "2026-10-19T21:19:32.636836+00:00",
+      "bytes": 423424,
+      "sha256": "1bb1d7ce747bcd72fc212bda806c28bb4b17d4cec72d1388770f2b0a6d06f5c0"
+    },
+    {
+      "file": "delineation_2018.xls",
+      "url": "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2018/delineation-files/list1_Sep_2018.xls",
+      "final_url": "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2018/delineation-files/list1_Sep_2018.xls",
+      "retrieved_utc": "2026-10-19T21:19:33.459161+00:00",
+      "bytes": 454144,
+      "sha256": "22ba2e944ce1aa88b0bf0d09530d08f26c17a0bba7ae823290e7c4816316418c"
+    },
+    {
+      "file": "delineation_2020.xls",
+      "url": "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2020/delineation-files/list1_2020.xls",
+      "final_url": "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2020/delineation-files/list1_2020.xls",
+      "retrieved_utc": "2026-10-19T21:19:34.292210+00:00",
+      "bytes": 454656,
+      "sha256": "95b389487efcd818d71ba2a992e1edd43af93228e70c2a9634fd152acb345409"
+    },
+    {
+      "file": "cbsa_population_2019.csv",
+      "url": "https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/metro/totals/cbsa-est2019-alldata.csv",
+      "final_url": "https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/metro/totals/cbsa-est2019-alldata.csv",
+      "retrieved_utc": "2026-10-19T21:19:35.279586+00:00",
+      "bytes": 1269330,
+      "sha256": "e43a8296927bb5d482fab0e85a76022e264dba998c366626c6b9021de66809a8"
+    },
+    {
+      "file": "county_population_2019.csv",
+      "url": "https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.csv",
+      "final_url": "https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.csv",
+      "retrieved_utc": "2026-10-19T21:19:36.098289+00:00",
+      "bytes": 3644730,
+      "sha256": "654032fbb805bc9a7c124ba04ad47e170f5d9dc9d4974a73edfc20598fde77d8"
+    },
+    {
+      "file": "cbsa_population_layout.pdf",
+      "url": "https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/metro/totals/cbsa-est2019-alldata.pdf",
+      "final_url": "https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/metro/totals/cbsa-est2019-alldata.pdf",
+      "retrieved_utc": "2026-10-19T21:19:36.843536+00:00",
+      "bytes": 193600,
+      "sha256": "12c7ddcdf9125293cf678ce75516c28b36633a7d97ff27897296144916e44e14"
+    },
+    {
+      "file": "county_population_layout.pdf",
+      "url": "https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf",
+      "final_url": "https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf",
+      "retrieved_utc": "2026-10-19T21:19:37.686210+00:00",
+      "bytes": 213575,
+      "sha256": "42670240dfd594dece0bd256f2deffbc8a7b20c2a2dd652493e73a880876ad9f"
+    }
+  ]
+}
