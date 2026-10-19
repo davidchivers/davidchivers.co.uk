@@ -87,6 +87,17 @@ control still uses the stable lecture_3.pptx release asset. The legacy Lecture 3
 PDF was not rebuilt or selected in the download control. Blackboard links,
 visibility and other lectures are unchanged.
 
+### Lecture 3 layout follow-up, 19 October 2026
+
+The context, welfare question and migration preview now use clearer layouts.
+Demand functions are grouped by market, and equations align beneath their
+headings. Welfare diagrams give area B more room; the three integration panels
+retain identical geometry with equilibrium and curve labels separated.
+Industrial restructuring answers reveal below each question with the forward
+controls and are all visible in the PowerPoint. All 32 slide captures and the
+rendered export were checked. The stable HTML and Download links are preserved;
+no other lecture, legacy PDF or Blackboard setting changed.
+
 ## Political Economy and seminar handouts
 
 Political Economy has five HTML lectures at `/teaching/political-economy/lecture_N.html`, with its index at `/teaching/political-economy/`. Editable sources are under `teaching/political_economy_quarto` in the AI workspace. All 120 source slides remain in order.
