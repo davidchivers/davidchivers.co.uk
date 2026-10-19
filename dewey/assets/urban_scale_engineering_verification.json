@@ -1,0 +1,41 @@
+{
+  "verified_utc": "2026-10-19T21:04:00.569449+00:00",
+  "scope": "artificial_files_only_not_empirical_reconstruction",
+  "tests_run": 99,
+  "tests_passed": true,
+  "synthetic_smoke": {
+    "artificial_source_venues": 10000,
+    "engineering_modulus": 10,
+    "selected_artificial_venues": 1036,
+    "batch_sizes": [
+      17,
+      257
+    ],
+    "recorded_area_variant_outcomes": 4,
+    "elapsed_seconds": [
+      6.636688600003254,
+      2.0872255000285804
+    ],
+    "outcomes_and_support_identical": true,
+    "independent_max_absolute_error": 3.4139358007223564e-15,
+    "artificial_input_hashes_unchanged": true,
+    "temporary_artificial_files_retained": false,
+    "full_volume_runtime_or_peak_memory_estimate": null
+  },
+  "source_sha256": {
+    "code/analysis/run_urban_scale_engineering_pilot.py": "d61ccb391006ccaa3ce799f39ef03f6eb6374efe7d1a9504e4a86bd5524ca80a",
+    "code/analysis/urban_scale_flow_contract.py": "efec15c5930b626d2f30e358688e292ce5733d3d4cb4d13babaced5761e83ddd",
+    "code/analysis/urban_scale_information.py": "af6cb861d5db077006d77f1d2b0972ce6edb07a60edf9a18cc362654f6986c66",
+    "docs/protocols/urban_scale_information_pilot_20261019.md": "7ddc819bf4099025813b152d946df7a05183ccbf0d3d5912f6473495334282ea",
+    "docs/protocols/urban_scale_engineering_adapter_20261019.md": "f9765748d6e9ae66783ea54168cfa9bb0ccaf049d7ae40287707b7f5bd2457a4",
+    "code/analysis/verify_urban_scale_engineering_pilot.py": "81b27d5d1de066e58e855fa8a42f10af530425ce3964586945f6fd27d1b84869",
+    "code/analysis/test_urban_scale_information.py": "4d0f341c584d0956f0c7be1d4f8eca46fa60e148ec619865211030997bbf79e9",
+    "code/analysis/test_urban_scale_flow_contract.py": "7ccee78c372d9ccd0b9c344032bb23cd20465cf954d64c404e374c3e3cebfb0c",
+    "code/analysis/test_urban_scale_engineering_pilot.py": "cf280b031ecd106ee978f74c5750f2c9af0156b7af1d13e42430fcf12b3abbdc",
+    "code/analysis/test_urban_scale_adapter_independent.py": "6d16eb4440a29511331eb2bafc9d7d4630fd50792172d94cb8011724a615572e"
+  },
+  "test_log_sha256": "3198ffd8b3afdc24afe7be833548774ea6c467026ce8a37be18567eb6ded4b56",
+  "original_data_read": false,
+  "new_city_size_result": false,
+  "annual_flow_acs_approval": "still_pending"
+}
