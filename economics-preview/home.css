@@ -1,0 +1,105 @@
+/* Community home: useful destinations and a real seminar in the first view. */
+.community-home .header-inner { min-height: 82px; }
+.hub-start { display: grid; grid-template-columns: 1.18fr 1fr; align-items: stretch; gap: 48px; padding-block: 34px; }
+.hub-intro .eyebrow { font-size: 10px; color: var(--purple); }
+.hub-intro h1 { font-size: clamp(40px,4.3vw,62px); margin: 12px 0; line-height: 1.04; }
+.hub-intro h1 em { display: block; color: var(--purple); font-weight: 400; }
+.hub-summary { font-size: 14px; max-width: 42ch; color: var(--muted); }
+.quick-routes { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+.quick-routes a { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); min-height: 66px; }
+.quick-routes a:nth-child(odd) { padding-right: 20px; }
+.quick-routes a:nth-child(even) { padding-left: 20px; border-left: 1px solid var(--line); }
+.quick-routes strong { display: block; font-size: 13px; font-weight: 600; }
+.quick-routes small { display: block; font-size: 10px; color: var(--muted); margin-top: 2px; }
+.quick-routes a>span:last-child { color: var(--purple); }
+.quick-routes a:hover strong { text-decoration: underline; text-underline-offset: 4px; }
+.next-seminar { background: var(--navy); color: white; padding: 28px 32px; position: relative; border-top: 4px solid var(--yellow); display: flex; flex-direction: column; justify-content: center; }
+.next-meta .eyebrow { font-size: 10px; color: var(--yellow); }
+.next-meta time { display: block; font-size: 12px; margin-top: 10px; color: #d0dce4; }
+.next-seminar h2 { font-size: clamp(29px,3vw,40px); margin: 18px 0 14px; max-width: 15ch; line-height: 1.06; }
+.next-speaker { font-size: 15px; font-weight: 600; }
+.next-speaker span { display: block; font-size: 12px; font-weight: 400; color: #d0dce4; }
+.next-link { margin-top: 23px; padding-bottom: 10px; display: flex; align-items: center; justify-content: space-between; gap: 15px; border-bottom: 1px solid #ffffff66; font-size: 13px; font-weight: 600; }
+.next-link:hover { color: var(--yellow); }
+.next-note { color: #c2d1da; font-size: 9px; margin-top: 13px; max-width: 47ch; }
+.upcoming { border-block: 1px solid var(--line); background: white; padding-block: 25px; }
+.compact-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 18px; }
+.compact-heading h2 { font-size: 28px; }
+.compact-heading>a { font-size: 12px; font-weight: 600; color: var(--purple); text-decoration: underline; text-underline-offset: 4px; }
+.compact-heading>p { font-size: 12px; color: var(--muted); }
+.upcoming-list { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.upcoming-event { display: grid; grid-template-columns: 42px 1fr 18px; gap: 18px; align-items: start; padding-top: 17px; border-top: 1px solid var(--line); }
+.upcoming-event time { text-align: center; color: var(--purple); }
+.upcoming-event time b { display: block; font-family: var(--serif); font-size: 32px; font-weight: 400; line-height: 1; }
+.upcoming-event time span { font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
+.upcoming-event h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; }
+.upcoming-event p { font-size: 12px; line-height: 1.5; margin-top: 6px; }
+.upcoming-event small { display: block; font-size: 10px; color: var(--muted); margin-top: 5px; }
+.upcoming-event:hover h3 { color: var(--purple); text-decoration: underline; text-underline-offset: 4px; }
+.event-go { color: var(--purple); }
+.student-life { padding-block: 44px; display: grid; grid-template-columns: 1.12fr 1fr; gap: 48px; align-items: center; }
+.student-photo { margin: 0; min-width: 0; }
+.student-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 38% 50%; }
+.student-photo figcaption { font-size: 9px; color: var(--muted); margin-top: 7px; }
+.student-social .eyebrow { font-size: 10px; color: var(--purple); letter-spacing: .09em; }
+.student-social .eyebrow:before { display: none; }
+.student-social svg { width: 19px; height: 19px; flex-shrink: 0; }
+.student-social h2 { font-size: clamp(32px,3.4vw,44px); margin: 16px 0; }
+.student-social>p:not(.eyebrow) { font-size: 13px; color: var(--muted); max-width: 43ch; }
+.instagram-link { display: flex; align-items: center; gap: 15px; padding: 15px 0; border-block: 1px solid var(--line); margin: 19px 0 12px; }
+.instagram-link strong { display: block; font-size: 15px; color: var(--purple); }
+.instagram-link small { display: block; font-size: 11px; color: var(--muted); }
+.instagram-link>span:last-child { margin-left: auto; }
+.instagram-link:hover strong { text-decoration: underline; text-underline-offset: 4px; }
+.student-social p.social-context { font-size: 10px; line-height: 1.7; }
+.resources { padding-block: 34px 42px; background: #eeeae3; }
+.resource-columns { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 40px; }
+.resource-num { font-size: 9px; color: var(--purple); text-transform: uppercase; letter-spacing: .09em; margin-bottom: 8px; }
+.resource-columns h3 { font-family: var(--serif); font-size: 26px; margin-bottom: 18px; }
+.resource-columns ul { list-style: none; padding: 0; margin: 0; }
+.resource-columns li { border-top: 1px solid #002a4126; }
+.resource-columns a { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-block: 11px; font-size: 12px; min-height: 44px; }
+.resource-columns a:hover { color: var(--purple); text-decoration: underline; text-underline-offset: 4px; }
+.resource-columns small { font-size: 9px; white-space: nowrap; color: var(--muted); }
+.community-home .site-footer { padding-top: 30px; }
+.community-home .footer-top { padding-bottom: 26px; }
+@media(max-width:880px) {
+  .hub-start { gap: 28px; }
+  .next-seminar { padding: 24px; }
+  .student-life { gap: 30px; }
+  .upcoming-list,.resource-columns { gap: 25px; }
+}
+@media(max-width:700px) {
+  .community-home .header-inner { min-height: 72px; }
+  .community-home .nav { top: 72px; }
+  .hub-start { grid-template-columns: 1fr; gap: 24px; padding-block: 24px; }
+  .hub-intro h1 { font-size: 39px; margin: 10px 0; }
+  .hub-summary { font-size: 12px; max-width: 39ch; }
+  .hub-intro .eyebrow { font-size: 9px; }
+  .quick-routes { margin-top: 17px; }
+  .quick-routes a { min-height: 65px; padding-block: 11px; gap: 7px; }
+  .quick-routes a:nth-child(odd) { padding-right: 12px; }
+  .quick-routes a:nth-child(even) { padding-left: 12px; }
+  .quick-routes strong { font-size: 12px; }
+  .quick-routes small { font-size: 9px; }
+  .next-seminar { padding: 20px; }
+  .next-meta time { font-size: 11px; margin-top: 6px; }
+  .next-seminar h2 { font-size: 30px; margin: 13px 0 11px; max-width: 100%; }
+  .next-speaker { font-size: 13px; }
+  .next-speaker span { font-size: 11px; }
+  .next-link { margin-top: 17px; font-size: 12px; }
+  .next-note { font-size: 9px; margin-top: 10px; }
+  .compact-heading { display: block; margin-bottom: 16px; }
+  .compact-heading h2 { font-size: 28px; }
+  .compact-heading>a,.compact-heading>p { display: inline-block; margin-top: 9px; }
+  .upcoming-list { grid-template-columns: 1fr; gap: 18px; }
+  .upcoming-event { grid-template-columns: 36px 1fr 16px; gap: 13px; }
+  .student-life { grid-template-columns: 1fr; gap: 22px; padding-block: 30px; }
+  .student-photo img { aspect-ratio: 4 / 3; }
+  .student-social h2 { font-size: 34px; }
+  .student-social h2 br { display: none; }
+  .resource-columns { grid-template-columns: 1fr; gap: 27px; }
+  .resource-columns h3 { font-size: 25px; margin-bottom: 12px; }
+  .resources { padding-block: 28px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } }
