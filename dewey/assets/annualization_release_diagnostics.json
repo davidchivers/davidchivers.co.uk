@@ -1,0 +1,119 @@
+{
+  "stage": "private_computation_verified_new_index_outputs_withheld",
+  "date": "2026-10-19",
+  "candidate_sha256": "173b197dbfc99808349605b54d4f22ff213f87eadf8957c06b3b05d087134414",
+  "elapsed_seconds": 773.7819855000125,
+  "national_disclosure_diagnostics": [
+    {
+      "sample": "all",
+      "year": 2017,
+      "poi_years": 2699564,
+      "rank": 5,
+      "max_leverage": 0.059942911327958266,
+      "passed": false
+    },
+    {
+      "sample": "all",
+      "year": 2018,
+      "poi_years": 2904929,
+      "rank": 5,
+      "max_leverage": 0.06630760645120796,
+      "passed": false
+    },
+    {
+      "sample": "all",
+      "year": 2019,
+      "poi_years": 3271219,
+      "rank": 5,
+      "max_leverage": 0.07955376953608985,
+      "passed": false
+    },
+    {
+      "sample": "stable_venue",
+      "year": 2017,
+      "poi_years": 2399249,
+      "rank": 5,
+      "max_leverage": 0.09148737777393161,
+      "passed": false
+    },
+    {
+      "sample": "stable_venue",
+      "year": 2018,
+      "poi_years": 2399249,
+      "rank": 5,
+      "max_leverage": 0.06657832074708914,
+      "passed": false
+    },
+    {
+      "sample": "stable_venue",
+      "year": 2019,
+      "poi_years": 2399249,
+      "rank": 5,
+      "max_leverage": 0.11570545864889875,
+      "passed": false
+    },
+    {
+      "sample": "complement",
+      "year": 2017,
+      "poi_years": 300315,
+      "rank": 5,
+      "max_leverage": 0.15939907865375497,
+      "passed": false
+    },
+    {
+      "sample": "complement",
+      "year": 2018,
+      "poi_years": 505680,
+      "rank": 5,
+      "max_leverage": 0.22657941171056456,
+      "passed": false
+    },
+    {
+      "sample": "complement",
+      "year": 2019,
+      "poi_years": 871970,
+      "rank": 5,
+      "max_leverage": 0.16604994938872716,
+      "passed": false
+    }
+  ],
+  "numerical_checks": {
+    "python_sql_max_error": 6.892264536872972e-13,
+    "cell_identity_max_error": 2.9257195624521337e-16,
+    "cell_decimal_max_error": 3.135512682828079e-16,
+    "historical_mean_max_error": 2.375877272697835e-14
+  },
+  "inputs": [
+    {
+      "year": 2017,
+      "bytes": 2019675603,
+      "sha256": "3733d38bb93335e93d1cba377b3f81d6443390200983b7cbc9f11c71079e1f9e"
+    },
+    {
+      "year": 2018,
+      "bytes": 2184820641,
+      "sha256": "8816d91da0e2ffa53b954ddf9610978dc63bc31ab6f9a8c4313de2912b2c4044"
+    },
+    {
+      "year": 2019,
+      "bytes": 2471813652,
+      "sha256": "dd4aff1f85092ae17dff7e0d4b5c6ff0748e9af9caade9bfc6e706a5ab5b4890"
+    }
+  ],
+  "source_hashes": {
+    "code/analysis/run_annualization_weight_audit.py": "5b2d03873445368b0d34e208983922897b0c3d0cb61a908f9312752a7f8c4f78",
+    "code/analysis/run_within_venue_measurement_audit.py": "fe2a49babe70bd9814c21af1c343992a0f870d17815e1a02a3639c6ce28a3fed",
+    "code/analysis/ranked_measurement_checks.py": "933cdb43fe48556d55a65f7291fd214af17423947e3e32979c80c43674f9db6f",
+    "code/analysis/venue_count_pilot.py": "836a8bd59e82aa790b9600981baf18043f330defd10a3fbcdf56061d7549f2be",
+    "code/analysis/service_weighting_decomposition.py": "f29dbf90b20a2663141f1ef6431a6345b5274e30b51826b81dacd60c60698d0d",
+    "code/analysis/service_comparison_stability.py": "57e3777976f4be1c823f36357fa1fcf75a0cca4ed5f42320b8be70a91abad35f",
+    "docs/protocols/annualization_weight_audit_20261019.md": "cc2ceec3fded7ff26af10cfd5abeff2c61ae8cf3da196a44486246441e6512eb",
+    "docs/protocols/annualization_disclosure_addendum_20261019.md": "0a0f7168266a1e65a9c99413673d9bc5ef4dc15deae184f1176c505b1dd7868b",
+    "output/ranked_research_20261019/continuity_results.json": "75be4f375832da068d15d852bba3abf4d958290753c9e8e39a89473627ab2b74"
+  },
+  "bridge_sha256": "7a9334eeedc0e5537aa45ffd2c3e20d98d8494827668c586ccb53b840ce91606",
+  "new_outcome_values_released": false,
+  "union_check_empirically_run": false,
+  "interpretation": "A disclosure screen failed. This is not evidence of a zero effect, causal mechanism, or a few venues driving the actual economic comparison.",
+  "scope": "Gate diagnostics and numerical agreement only; all new mean indices, gaps and cell components remain private. No source rows or private paths."
+}

@@ -1,0 +1,151 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Annualization audit: no new result cleared</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} code{overflow-wrap:anywhere}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Annualization audit: no new result cleared</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>19 October 2026. This is a completed local calculation and a failed disclosure release, <strong>not a new economic finding</strong>. The earlier published results remain unchanged. This note adds an audit outcome; it does not certify the upstream pipeline or supersede earlier scientific protocols.</p>
+<h2 id="the-question">The question</h2>
+<p>Do the rules used to expand incompletely observed venues to a full year help explain why visit-weighted diversity differs from the equally weighted venue average? This is a measurement check within ranks 1 and 2, not a new attitude regression or an estimate of preferences.</p>
+<p>For each retained venue, the planned check keeps its stored diversity indices and analysis sample fixed. It compares equal venue weights, the stored annualized matched-visit weight, and that stored weight multiplied by observed weeks divided by 52. The last quantity undoes the documented expansion in the analysis weight; it is <strong>not independently verified raw visits</strong>. It cannot repair missing weeks, panel selection or suppressed origins. Recorded 53-week values are retained, not capped or reinterpreted as 52.</p>
+<h2 id="what-ran-and-what-passed">What ran and what passed</h2>
+<p>The same three approved final POI files were read locally without alteration. Their full fingerprints match the previous release. The run retained the changing common sample and the stable-ID sample for all three years, both racial and home-area income diversity, and all three weighting choices. That is 36 planned means, 12 weighting-gap accounts and 12 cell-decomposition accounts. None of these new outcome values is released here.</p>
+<p>The calculation and provenance checks finished in <strong>773.78 seconds</strong>, about 12.9 minutes. Independent Python/SQL mean calculations agree within 6.90e-13; earlier national means reproduce within 2.38e-14. Cell identities and an independent high-precision calculation agree within 3.14e-16. The complete candidate was saved privately before the release decision. These checks verify this calculation on inherited final files, not the original weekly-to-annual construction.</p>
+<h2 id="why-there-is-no-new-result-table">Why there is no new result table</h2>
+<p>Several weighted summaries can be individually broad but reveal information when subtracted from one another. A pre-execution artificial example showed why a large national sample alone is insufficient. The frozen release screen therefore examined the combined coefficient directions of the proposed summaries, with a maximum-leverage threshold strictly below 0.01.</p>
+<p>All nine preliminary sample-year screens failed:</p>
+<div class="table-scroll" tabindex="0"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>Sample</th>
+<th style="text-align: right;">2017 venue-years</th>
+<th style="text-align: right;">2018 venue-years</th>
+<th style="text-align: right;">2019 venue-years</th>
+<th>Release screen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Changing common sample</td>
+<td style="text-align: right;">2,699,564</td>
+<td style="text-align: right;">2,904,929</td>
+<td style="text-align: right;">3,271,219</td>
+<td>Failed in all three years</td>
+</tr>
+<tr>
+<td>Stable recorded IDs</td>
+<td style="text-align: right;">2,399,249</td>
+<td style="text-align: right;">2,399,249</td>
+<td style="text-align: right;">2,399,249</td>
+<td>Failed in all three years</td>
+</tr>
+<tr>
+<td>Common sample outside stable IDs</td>
+<td style="text-align: right;">300,315</td>
+<td style="text-align: right;">505,680</td>
+<td style="text-align: right;">871,970</td>
+<td>Failed in all three years</td>
+</tr>
+</tbody>
+</table></div>
+<p>The diagnostic maxima range from 0.05994 to 0.22658, above the fixed 0.01 threshold. <strong>These are release-risk diagnostics, not effect sizes or evidence that a few venues drive the actual economic comparison.</strong> No new mean, weighting gap or cell component was printed to the assistant, exported to the site or shared with an external model. The full planned family remains in private storage rather than selectively releasing favourable entries.</p>
+<p>A second independent synthetic test also found that checking each sample separately is insufficient for a joint all/stable release. A separate union checker and explicit protocol correction now address that design defect. The correction is retained alongside the original frozen addendum. It was <strong>not run on empirical data</strong>: the preliminary failure already prevents the planned release, and a different check cannot rescue that failed gate. The mathematical correction is not production approval: review also flags separate file-read/hash snapshot binding that must be hardened before future private use. The existing synthetic suite passes 55 tests and 580 subtests after a malformed-hash validation repair; it does not rerun private data.</p>
+<h2 id="what-follows-for-the-paper">What follows for the paper</h2>
+<p>We cannot yet say whether undoing annualization preserves, attenuates or reverses the weighting difference. Withheld does not mean zero, insignificant or scientifically disproved. The new check provides numerical reassurance about reconstructing earlier results and a concrete constraint on releasing this more detailed comparison. It provides no new evidence for a mechanism.</p>
+<p>The priority remains the exact code-only production snapshot, sanitized run manifests and an outcome-blind weekly replication sample. Any future release redesign must be justified independently of the hidden outcomes and undergo fresh joint disclosure review; do not relax thresholds, trim influential venues or choose a promising subset to obtain a result. The separate 2019 annual-flow/ACS permission request for Eren’s urban-scale decomposition is still pending and was not used for this check.</p>
+<h2 id="evidence-and-limits">Evidence and limits</h2>
+<p>The accompanying diagnostic JSON contains only national support, release screen diagnostics, numerical agreement and provenance hashes. It contains no new index means, gaps, cell estimates, venue identifiers or private paths. The construction log and independent review distinguish pre-execution tests, the completed private computation, the failed release and the unrun empirical union check. Operational disclosure screens are not a formal privacy guarantee or a change to provider permissions.</p>
+<p>Racial and income measures retain their different group partitions. Income is home-area household-income rank, not a person’s earnings. Stable recorded IDs do not establish physical business continuity. Expected employees are not observed workers. Earlier missing-income bounds, concentration failures, negative equal-county validation, correction 70a, note 69’s non-FE distinction and failed designs remain in force.</p>
+<h2 id="downloads">Downloads</h2>
+<p><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/Dewey_Annualization_Release_Stop_20261019_sourcebook.html">Complete dated methods and audit sourcebook</a> | <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/annualization_release_diagnostics.json">Diagnostic-only JSON</a></p>
+</main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>
