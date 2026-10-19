@@ -47,6 +47,22 @@ html { scroll-padding-top: 92px; }
 .events-section .section-intro p,.events-section .eyebrow,
 .event-date span,.event-main small,.event-speaker span,.event-foot p { color: #fff; }
 .social-section { padding-block: 60px; }
+.instagram-stage { min-width: 0; background: #f7f7f7; display: flex; flex-direction: column; align-items: center; padding: 26px 20px 20px; }
+.instagram-phone { width: 274px; max-width: 100%; background: #fff; border: 7px solid #212529; border-radius: 34px; padding-top: 17px; overflow: hidden; box-shadow: 0 12px 30px #21252917; }
+.phone-speaker { display: block; width: 45px; height: 4px; margin: -7px auto 5px; background: #212529; border-radius: 4px; }
+.instagram-profile { display: flex; align-items: center; gap: 9px; padding: 11px 13px 12px; }
+.instagram-icon { width: 24px; height: 24px; color: var(--purple); flex: 0 0 auto; }
+.instagram-profile strong { display: block; font-size: 11px; font-weight: 600; }
+.instagram-profile small { display: block; font-size: 9px; color: var(--muted); margin-top: 2px; }
+.matriculation-video { width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: contain; display: block; background: #212529; }
+.instagram-post { padding: 13px 14px 12px; }
+.instagram-post > strong { font-size: 12px; display: block; }
+.instagram-post > a { display: flex; align-items: center; justify-content: space-between; min-height: 44px; color: var(--purple); font-size: 11px; font-weight: 600; }
+.instagram-post .arrow { width: 18px; height: 18px; }
+.instagram-credit { font-size: 9px; color: var(--muted); text-align: center; margin: 18px 0 0; }
+.instagram-credit a { text-decoration: underline; text-underline-offset: 3px; }
+.instagram-phone a:focus-visible { outline: 3px solid var(--purple); outline-offset: -3px; }
+.instagram-profile:hover strong,.instagram-post > a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .site-footer { background: #212529; }
 .footer-top p,.footer-bottom { color: #ebebeb; }
 .dialog::backdrop { background: rgba(33,37,41,.7); }
@@ -75,6 +91,7 @@ html { scroll-padding-top: 92px; }
   .path-grid a,.path-grid a:first-child,.path-grid a:last-child { padding-block: 14px; }
   .section { padding-block: 42px; }
   .events-section,.social-section { padding-block: 48px; }
+  .instagram-stage { padding: 24px 14px 20px; }
 }
 @media (max-width: 360px) {
   .brand { gap: 12px; }
