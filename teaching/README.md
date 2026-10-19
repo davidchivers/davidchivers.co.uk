@@ -76,6 +76,17 @@ Earlier source
 PowerPoints, development previews, QA files and build folders remain outside
 this public collection. The sync step adds search metadata without altering slide content. Keep existing Blackboard URLs unchanged when replacing a deck.
 
+### Lecture 3 revision, 19 October 2026
+
+Lecture 3 now has 32 slides, with larger vector diagrams and aligned welfare
+and integration sequences. The reaction functions and equilibrium graph share
+one slide; the old l3-s09 anchor redirects to l3-s10. Only Lecture 3 HTML and
+its PowerPoint export were replaced. The PowerPoint contains static slide
+artwork and notes, matching the reviewed HTML captures. The existing Download
+control still uses the stable lecture_3.pptx release asset. The legacy Lecture 3
+PDF was not rebuilt or selected in the download control. Blackboard links,
+visibility and other lectures are unchanged.
+
 ## Political Economy and seminar handouts
 
 Political Economy has five HTML lectures at `/teaching/political-economy/lecture_N.html`, with its index at `/teaching/political-economy/`. Editable sources are under `teaching/political_economy_quarto` in the AI workspace. All 120 source slides remain in order.
