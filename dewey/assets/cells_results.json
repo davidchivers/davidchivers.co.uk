@@ -1,0 +1,1088 @@
+{
+  "stage": "new_empirical_private_cell_diagnostics_not_causal",
+  "main_models": [
+    {
+      "sample": "all_2017",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 75320,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2675114,
+      "correlations": {
+        "sorting": 0.5593676515825134,
+        "between_race": 0.5473082628609232,
+        "within_race": 0.2888652094530099
+      },
+      "residual_exposure_sd": 1.1751743428046102,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 5.081845597253294e-16
+      },
+      "independent_sparse_correlation_error": 1.1102230246251565e-16
+    },
+    {
+      "sample": "all_2017",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 75320,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2675114,
+      "correlations": {
+        "sorting": 0.1372535846776694,
+        "between_race": 0.11951054872322583,
+        "within_race": -0.010221882224659553
+      },
+      "residual_exposure_sd": 0.5342671085045702,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 6.033673560779107e-13
+      },
+      "independent_sparse_correlation_error": 2.7755575615628914e-17
+    },
+    {
+      "sample": "all_2017",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 75320,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2675114,
+      "correlations": {
+        "sorting": 0.241367089818285,
+        "between_race": 0.206563311362361,
+        "within_race": -0.07887102554786571
+      },
+      "residual_exposure_sd": 0.35414262576499106,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 7.264952528451829e-13
+      },
+      "independent_sparse_correlation_error": 5.551115123125783e-17
+    },
+    {
+      "sample": "all_2017",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 75320,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2675114,
+      "correlations": {
+        "sorting": 0.2530088713665232,
+        "between_race": 0.2223441203497658,
+        "within_race": -0.22234412034976594
+      },
+      "residual_exposure_sd": 0.35412264603907573,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 7.264952528451829e-13
+      },
+      "independent_sparse_correlation_error": 5.551115123125783e-17
+    },
+    {
+      "sample": "balanced_cells_2017",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2667912,
+      "correlations": {
+        "sorting": 0.5596217209565016,
+        "between_race": 0.5479673206739062,
+        "within_race": 0.2865838360891952
+      },
+      "residual_exposure_sd": 1.1788640964185335,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 2.459520623874609e-16
+      }
+    },
+    {
+      "sample": "balanced_cells_2017",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2667912,
+      "correlations": {
+        "sorting": 0.1355273027560677,
+        "between_race": 0.11885919860762101,
+        "within_race": -0.010672808251933927
+      },
+      "residual_exposure_sd": 0.5303797315518075,
+      "convergence": {
+        "iterations": 17,
+        "max_group_mean": 3.3439917501709715e-13
+      }
+    },
+    {
+      "sample": "balanced_cells_2017",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2667912,
+      "correlations": {
+        "sorting": 0.24242762137388407,
+        "between_race": 0.208020789306166,
+        "within_race": -0.08102319963031904
+      },
+      "residual_exposure_sd": 0.34987921050529786,
+      "convergence": {
+        "iterations": 17,
+        "max_group_mean": 3.9851455468919994e-13
+      }
+    },
+    {
+      "sample": "balanced_cells_2017",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2667912,
+      "correlations": {
+        "sorting": 0.2543812465267008,
+        "between_race": 0.22421911944664705,
+        "within_race": -0.22421911944664696
+      },
+      "residual_exposure_sd": 0.3498579295531868,
+      "convergence": {
+        "iterations": 17,
+        "max_group_mean": 3.9851455468919994e-13
+      }
+    },
+    {
+      "sample": "all_2018",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 77182,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2880329,
+      "correlations": {
+        "sorting": 0.5637805661347812,
+        "between_race": 0.5588417142978114,
+        "within_race": 0.3011867618953631
+      },
+      "residual_exposure_sd": 1.1748986331126927,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 2.9667626380261126e-16
+      },
+      "independent_sparse_correlation_error": 1.1102230246251565e-16
+    },
+    {
+      "sample": "all_2018",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 77182,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2880329,
+      "correlations": {
+        "sorting": 0.13989385185491626,
+        "between_race": 0.12478653741471614,
+        "within_race": -0.004671996230197401
+      },
+      "residual_exposure_sd": 0.5319262169046619,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 2.918431779766377e-13
+      },
+      "independent_sparse_correlation_error": 9.540979117872439e-18
+    },
+    {
+      "sample": "all_2018",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 77182,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2880329,
+      "correlations": {
+        "sorting": 0.2394893745879672,
+        "between_race": 0.20653928748552844,
+        "within_race": -0.07441662737319024
+      },
+      "residual_exposure_sd": 0.36286575698321416,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 3.5468945788093624e-13
+      },
+      "independent_sparse_correlation_error": 1.3877787807814457e-17
+    },
+    {
+      "sample": "all_2018",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 77182,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2880329,
+      "correlations": {
+        "sorting": 0.2507311870886741,
+        "between_race": 0.22177168245354362,
+        "within_race": -0.22177168245354367
+      },
+      "residual_exposure_sd": 0.3628589914387816,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 3.5468945788093624e-13
+      },
+      "independent_sparse_correlation_error": 8.326672684688674e-17
+    },
+    {
+      "sample": "balanced_cells_2018",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2868414,
+      "correlations": {
+        "sorting": 0.5684514854788382,
+        "between_race": 0.5637912752329876,
+        "within_race": 0.3010395378558451
+      },
+      "residual_exposure_sd": 1.1756405546900293,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 3.551941797207482e-16
+      }
+    },
+    {
+      "sample": "balanced_cells_2018",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2868414,
+      "correlations": {
+        "sorting": 0.13978108023280902,
+        "between_race": 0.12493149606735447,
+        "within_race": -0.00879283674742576
+      },
+      "residual_exposure_sd": 0.5269755915040291,
+      "convergence": {
+        "iterations": 17,
+        "max_group_mean": 3.40394379350073e-13
+      }
+    },
+    {
+      "sample": "balanced_cells_2018",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2868414,
+      "correlations": {
+        "sorting": 0.24314086203608443,
+        "between_race": 0.20988012314275173,
+        "within_race": -0.07463894525833929
+      },
+      "residual_exposure_sd": 0.3567319716915221,
+      "convergence": {
+        "iterations": 17,
+        "max_group_mean": 4.1147640850169864e-13
+      }
+    },
+    {
+      "sample": "balanced_cells_2018",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2868414,
+      "correlations": {
+        "sorting": 0.25425006215927837,
+        "between_race": 0.22518571974843288,
+        "within_race": -0.22518571974843282
+      },
+      "residual_exposure_sd": 0.3567295406870343,
+      "convergence": {
+        "iterations": 17,
+        "max_group_mean": 4.1147640850169864e-13
+      }
+    },
+    {
+      "sample": "all_2019",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 82032,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3247365,
+      "correlations": {
+        "sorting": 0.5676270582984004,
+        "between_race": 0.5634714756545636,
+        "within_race": 0.3047298836499009
+      },
+      "residual_exposure_sd": 1.1775438493281642,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 2.6298900015943425e-16
+      },
+      "independent_sparse_correlation_error": 2.220446049250313e-16
+    },
+    {
+      "sample": "all_2019",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 82032,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3247365,
+      "correlations": {
+        "sorting": 0.14075664151525571,
+        "between_race": 0.12467004973058061,
+        "within_race": -0.010357097625936104
+      },
+      "residual_exposure_sd": 0.5298222012906042,
+      "convergence": {
+        "iterations": 15,
+        "max_group_mean": 4.0216441288265514e-13
+      },
+      "independent_sparse_correlation_error": 8.326672684688674e-17
+    },
+    {
+      "sample": "all_2019",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 82032,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3247365,
+      "correlations": {
+        "sorting": 0.2460371721009158,
+        "between_race": 0.21093328252286742,
+        "within_race": -0.07055789980988855
+      },
+      "residual_exposure_sd": 0.3737330095473983,
+      "convergence": {
+        "iterations": 15,
+        "max_group_mean": 4.939699443135786e-13
+      },
+      "independent_sparse_correlation_error": 5.551115123125783e-17
+    },
+    {
+      "sample": "all_2019",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 82032,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3247365,
+      "correlations": {
+        "sorting": 0.25557212171300536,
+        "between_race": 0.22444933198298606,
+        "within_race": -0.22444933198298606
+      },
+      "residual_exposure_sd": 0.37373243848878207,
+      "convergence": {
+        "iterations": 15,
+        "max_group_mean": 4.939699443135786e-13
+      },
+      "independent_sparse_correlation_error": 5.551115123125783e-17
+    },
+    {
+      "sample": "balanced_cells_2019",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3221659,
+      "correlations": {
+        "sorting": 0.5811109012431372,
+        "between_race": 0.5763286106081993,
+        "within_race": 0.3107470638957063
+      },
+      "residual_exposure_sd": 1.1778248783888952,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 2.183146066209547e-16
+      }
+    },
+    {
+      "sample": "balanced_cells_2019",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3221659,
+      "correlations": {
+        "sorting": 0.14350636337174028,
+        "between_race": 0.12931831733218352,
+        "within_race": -0.011339443371270026
+      },
+      "residual_exposure_sd": 0.5166679366428962,
+      "convergence": {
+        "iterations": 17,
+        "max_group_mean": 3.3864577808628837e-13
+      }
+    },
+    {
+      "sample": "balanced_cells_2019",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3221659,
+      "correlations": {
+        "sorting": 0.24932754675042623,
+        "between_race": 0.21474655274397597,
+        "within_race": -0.07130797199237152
+      },
+      "residual_exposure_sd": 0.3621429042150463,
+      "convergence": {
+        "iterations": 17,
+        "max_group_mean": 4.160352617965657e-13
+      }
+    },
+    {
+      "sample": "balanced_cells_2019",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3221659,
+      "correlations": {
+        "sorting": 0.25903128192864444,
+        "between_race": 0.22872509744534864,
+        "within_race": -0.22872509744534875
+      },
+      "residual_exposure_sd": 0.36214235208593465,
+      "convergence": {
+        "iterations": 17,
+        "max_group_mean": 4.160352617965657e-13
+      }
+    },
+    {
+      "sample": "balanced_cells_change_2017_2019",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 5889571,
+      "correlations": {
+        "sorting": 0.1300294865559696,
+        "between_race": 0.10615471642291674,
+        "within_race": -0.045468060928775464
+      },
+      "residual_exposure_sd": 0.24302420093852486,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 1.754114997661127e-16
+      },
+      "independent_sparse_correlation_error": 2.7755575615628914e-17
+    },
+    {
+      "sample": "balanced_cells_change_2017_2019",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 5889571,
+      "correlations": {
+        "sorting": 0.14479993860890053,
+        "between_race": 0.12066878710348464,
+        "within_race": -0.011678404547375964
+      },
+      "residual_exposure_sd": 0.22616962191546308,
+      "convergence": {
+        "iterations": 14,
+        "max_group_mean": 8.892045086361655e-13
+      },
+      "independent_sparse_correlation_error": 6.938893903907228e-17
+    },
+    {
+      "sample": "balanced_cells_change_2017_2019",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 5889571,
+      "correlations": {
+        "sorting": 0.17926166375252306,
+        "between_race": 0.153351875980434,
+        "within_race": -0.03317500084739049
+      },
+      "residual_exposure_sd": 0.19859099085478657,
+      "convergence": {
+        "iterations": 15,
+        "max_group_mean": 6.195564894451167e-13
+      },
+      "independent_sparse_correlation_error": 1.1102230246251565e-16
+    },
+    {
+      "sample": "balanced_cells_change_2017_2019",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 72328,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 5889571,
+      "correlations": {
+        "sorting": 0.18176728432893027,
+        "between_race": 0.15700494178587895,
+        "within_race": -0.1570049417858788
+      },
+      "residual_exposure_sd": 0.19856216252074357,
+      "convergence": {
+        "iterations": 15,
+        "max_group_mean": 6.195564894451167e-13
+      },
+      "independent_sparse_correlation_error": 5.551115123125783e-17
+    }
+  ],
+  "threshold_sensitivities": [
+    {
+      "sample": "threshold_0.01_2017",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 75832,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2677346,
+      "correlations": {
+        "sorting": 0.5603960899548021,
+        "between_race": 0.5481426899984221,
+        "within_race": 0.294435254872961
+      },
+      "residual_exposure_sd": 1.1744113679121437,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 3.0139596844055976e-16
+      }
+    },
+    {
+      "sample": "threshold_0.01_2017",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 75832,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2677346,
+      "correlations": {
+        "sorting": 0.13749492366166302,
+        "between_race": 0.11962327333375306,
+        "within_race": -0.008988771109243645
+      },
+      "residual_exposure_sd": 0.5345038004537517,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 5.736411345935721e-13
+      }
+    },
+    {
+      "sample": "threshold_0.01_2017",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 75832,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2677346,
+      "correlations": {
+        "sorting": 0.24060031740163096,
+        "between_race": 0.20597151731842567,
+        "within_race": -0.08153421254086651
+      },
+      "residual_exposure_sd": 0.35476443555245885,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 6.909056660120427e-13
+      }
+    },
+    {
+      "sample": "threshold_0.01_2017",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 75832,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2677346,
+      "correlations": {
+        "sorting": 0.2529985337609873,
+        "between_race": 0.22266843411622864,
+        "within_race": -0.22266843411622864
+      },
+      "residual_exposure_sd": 0.35473210388341997,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 6.909056660120427e-13
+      }
+    },
+    {
+      "sample": "threshold_0.1_2017",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 68899,
+      "areas": 917,
+      "categories": 150,
+      "poi_years": 2623470,
+      "correlations": {
+        "sorting": 0.5526478940378088,
+        "between_race": 0.5418250592172459,
+        "within_race": 0.24181005607924116
+      },
+      "residual_exposure_sd": 1.195575549743712,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 2.4435791081210555e-16
+      }
+    },
+    {
+      "sample": "threshold_0.1_2017",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 68899,
+      "areas": 917,
+      "categories": 150,
+      "poi_years": 2623470,
+      "correlations": {
+        "sorting": 0.13650030345579164,
+        "between_race": 0.11987909771919222,
+        "within_race": -0.02064937102434663
+      },
+      "residual_exposure_sd": 0.5355629617564477,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 1.2060866401783125e-12
+      }
+    },
+    {
+      "sample": "threshold_0.1_2017",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 68899,
+      "areas": 917,
+      "categories": 150,
+      "poi_years": 2623470,
+      "correlations": {
+        "sorting": 0.24855734540391877,
+        "between_race": 0.21433124419075503,
+        "within_race": -0.07713661499007024
+      },
+      "residual_exposure_sd": 0.3521617865664996,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 1.448935498945387e-12
+      }
+    },
+    {
+      "sample": "threshold_0.1_2017",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 68899,
+      "areas": 917,
+      "categories": 150,
+      "poi_years": 2623470,
+      "correlations": {
+        "sorting": 0.25857109083910784,
+        "between_race": 0.2287552670702966,
+        "within_race": -0.22875526707029653
+      },
+      "residual_exposure_sd": 0.3521569836818714,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 1.448935498945387e-12
+      }
+    },
+    {
+      "sample": "threshold_0.01_2018",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 77730,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2882722,
+      "correlations": {
+        "sorting": 0.5648622769264557,
+        "between_race": 0.5597241298332618,
+        "within_race": 0.3070085913527595
+      },
+      "residual_exposure_sd": 1.1741659682803331,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 2.291225857891505e-16
+      }
+    },
+    {
+      "sample": "threshold_0.01_2018",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 77730,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2882722,
+      "correlations": {
+        "sorting": 0.14000066839972516,
+        "between_race": 0.12473965654728718,
+        "within_race": -0.0029383347722523067
+      },
+      "residual_exposure_sd": 0.532134643051098,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 2.718591635333849e-13
+      }
+    },
+    {
+      "sample": "threshold_0.01_2018",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 77730,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2882722,
+      "correlations": {
+        "sorting": 0.23858739139737306,
+        "between_race": 0.20582701530325823,
+        "within_race": -0.07632672230293726
+      },
+      "residual_exposure_sd": 0.3633557579950294,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 3.3000422318168447e-13
+      }
+    },
+    {
+      "sample": "threshold_0.01_2018",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 77730,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2882722,
+      "correlations": {
+        "sorting": 0.2504553149180377,
+        "between_race": 0.22178452894885672,
+        "within_race": -0.22178452894885686
+      },
+      "residual_exposure_sd": 0.3633432073005723,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 3.3000422318168447e-13
+      }
+    },
+    {
+      "sample": "threshold_0.1_2018",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 71040,
+      "areas": 919,
+      "categories": 150,
+      "poi_years": 2828325,
+      "correlations": {
+        "sorting": 0.5581223127090406,
+        "between_race": 0.5545061190618613,
+        "within_race": 0.25979615939021916
+      },
+      "residual_exposure_sd": 1.1942396203325365,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 2.743654601085157e-16
+      }
+    },
+    {
+      "sample": "threshold_0.1_2018",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 71040,
+      "areas": 919,
+      "categories": 150,
+      "poi_years": 2828325,
+      "correlations": {
+        "sorting": 0.14055347699256332,
+        "between_race": 0.12620823410365473,
+        "within_race": -0.012717580979566793
+      },
+      "residual_exposure_sd": 0.5336374603810263,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 6.879567338337822e-13
+      }
+    },
+    {
+      "sample": "threshold_0.1_2018",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 71040,
+      "areas": 919,
+      "categories": 150,
+      "poi_years": 2828325,
+      "correlations": {
+        "sorting": 0.24727439729463935,
+        "between_race": 0.21447758413108062,
+        "within_race": -0.07246742703381535
+      },
+      "residual_exposure_sd": 0.3616622827055073,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 8.328769012494854e-13
+      }
+    },
+    {
+      "sample": "threshold_0.1_2018",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 71040,
+      "areas": 919,
+      "categories": 150,
+      "poi_years": 2828325,
+      "correlations": {
+        "sorting": 0.256749901303584,
+        "between_race": 0.22816716197868597,
+        "within_race": -0.22816716197868603
+      },
+      "residual_exposure_sd": 0.36166226236936094,
+      "convergence": {
+        "iterations": 16,
+        "max_group_mean": 8.328769012494854e-13
+      }
+    },
+    {
+      "sample": "threshold_0.01_2019",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 82566,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3249687,
+      "correlations": {
+        "sorting": 0.5685564603759417,
+        "between_race": 0.5642490637233041,
+        "within_race": 0.3095636576497956
+      },
+      "residual_exposure_sd": 1.1765619578837956,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 2.0282670929409293e-16
+      }
+    },
+    {
+      "sample": "threshold_0.01_2019",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 82566,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3249687,
+      "correlations": {
+        "sorting": 0.14105419997017635,
+        "between_race": 0.12482961283585507,
+        "within_race": -0.008950743465942955
+      },
+      "residual_exposure_sd": 0.5300778653772692,
+      "convergence": {
+        "iterations": 15,
+        "max_group_mean": 3.6828873284378005e-13
+      }
+    },
+    {
+      "sample": "threshold_0.01_2019",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 82566,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3249687,
+      "correlations": {
+        "sorting": 0.24519825806310028,
+        "between_race": 0.21028078563687466,
+        "within_race": -0.07354925945829548
+      },
+      "residual_exposure_sd": 0.3742088364157208,
+      "convergence": {
+        "iterations": 15,
+        "max_group_mean": 4.521303966141334e-13
+      }
+    },
+    {
+      "sample": "threshold_0.01_2019",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 82566,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3249687,
+      "correlations": {
+        "sorting": 0.25566284813526063,
+        "between_race": 0.22490592833345432,
+        "within_race": -0.22490592833345432
+      },
+      "residual_exposure_sd": 0.37420399167529317,
+      "convergence": {
+        "iterations": 15,
+        "max_group_mean": 4.521303966141334e-13
+      }
+    },
+    {
+      "sample": "threshold_0.1_2019",
+      "specification": "category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 75628,
+      "areas": 921,
+      "categories": 150,
+      "poi_years": 3190582,
+      "correlations": {
+        "sorting": 0.5624303185989517,
+        "between_race": 0.5594061381043428,
+        "within_race": 0.26389416518163517
+      },
+      "residual_exposure_sd": 1.1959832334091738,
+      "convergence": {
+        "iterations": 2,
+        "max_group_mean": 2.410710258743513e-16
+      }
+    },
+    {
+      "sample": "threshold_0.1_2019",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 75628,
+      "areas": 921,
+      "categories": 150,
+      "poi_years": 3190582,
+      "correlations": {
+        "sorting": 0.14228275924669964,
+        "between_race": 0.12684239528868102,
+        "within_race": -0.01713917280075448
+      },
+      "residual_exposure_sd": 0.5315478088750117,
+      "convergence": {
+        "iterations": 15,
+        "max_group_mean": 7.430173648065813e-13
+      }
+    },
+    {
+      "sample": "threshold_0.1_2019",
+      "specification": "area_category_volume",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 75628,
+      "areas": 921,
+      "categories": 150,
+      "poi_years": 3190582,
+      "correlations": {
+        "sorting": 0.2540905611017547,
+        "between_race": 0.21939506260041505,
+        "within_race": -0.06732860989752693
+      },
+      "residual_exposure_sd": 0.3725986956226307,
+      "convergence": {
+        "iterations": 15,
+        "max_group_mean": 9.089609872861811e-13
+      }
+    },
+    {
+      "sample": "threshold_0.1_2019",
+      "specification": "area_category_volume_pool",
+      "exposure": "log_count",
+      "released": true,
+      "cells": 75628,
+      "areas": 921,
+      "categories": 150,
+      "poi_years": 3190582,
+      "correlations": {
+        "sorting": 0.2617070779365675,
+        "between_race": 0.23100445269259676,
+        "within_race": -0.23100445269259676
+      },
+      "residual_exposure_sd": 0.3725933524263597,
+      "convergence": {
+        "iterations": 15,
+        "max_group_mean": 9.089609872861811e-13
+      }
+    }
+  ],
+  "balanced_cell_count": 72328,
+  "balanced_is_same_venue_panel": false,
+  "validation": {
+    "identity_error": 2.4424906541753444e-15,
+    "equal_identity_error": 2.1094237467877974e-15
+  },
+  "provenance": {
+    "script_sha256": "933cdb43fe48556d55a65f7291fd214af17423947e3e32979c80c43674f9db6f",
+    "protocol_sha256": "f7c2fc9bd2b2d38f91d41c491645010b4bdb4c0766be30a6d556ead6086f8820",
+    "cell_sha256": "70658e84ec61595fc8988fd62e9e85381faead9b16be86047c852efddfa38770",
+    "source_hashes": {
+      "2017": "3733d38bb93335e93d1cba377b3f81d6443390200983b7cbc9f11c71079e1f9e",
+      "2018": "8816d91da0e2ffa53b954ddf9610978dc63bc31ab6f9a8c4313de2912b2c4044",
+      "2019": "dd4aff1f85092ae17dff7e0d4b5c6ff0748e9af9caade9bfc6e706a5ab5b4890"
+    },
+    "elapsed_seconds": 17.97266860003583
+  },
+  "disclosure_review": "Reviewed 19 October 2026: national moments, prespecified correlations and count-bin summaries only; no area/category IDs or raw rows. Size screens are not provider permission.",
+  "limits": [
+    "Home-area composition, not personal attributes or simultaneous encounters.",
+    "Recorded area vintage remains unresolved; no MSA-only claim.",
+    "Visit weights are not independent observed individuals.",
+    "Stable identifiers do not verify physical establishment continuity.",
+    "No original-weekly replication, causal or public-facing coefficient."
+  ]
+}

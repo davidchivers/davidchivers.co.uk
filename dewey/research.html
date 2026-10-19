@@ -1,0 +1,310 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>New research: results, audit and next decisions</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} figure{margin:28px 0} figure img, main img{max-width:100%;height:auto;display:block} figcaption{font-size:14px} table td:first-child{min-width:130px}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>New research: results, audit and next decisions</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><h2 id="headline">Main result</h2>
+<p><strong>The venue-count pattern is substantially weaker when comparisons are made within recorded areas.</strong> In 2019, the correlation between log recorded venue count and the share of diversity lying between venues is 0.568 after service category controls. It is 0.141 after adding area controls, and 0.246 after also allowing for recorded visit volume. The same pattern appears in 2017 and 2018. This is new empirical work on the existing data, not another literature assessment.</p>
+<p>The result narrows the interpretation. The initial cross-area pattern is not strong evidence that more choice itself causes greater separation. But the within-area association is not zero. Area controls remove shared local conditions, which can include substantive parts of a city-size mechanism as well as confounding. A change in correlation is <strong>not a percentage of the effect explained by geography</strong>.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/count_controls.png" alt="Count-separation correlations under successive controls" />
+<figcaption aria-hidden="true">Count-separation correlations under successive controls</figcaption>
+</figure>
+<p><a href="#comparisons">Results and exact comparisons</a> | <a href="#independent-audit">Independent audit</a> | <a href="#team-inputs">What we need from the team</a> | <a href="#programme">Ranked work programme</a></p>
+<h2 id="comparisons">What was run</h2>
+<p>The initial calculation uses the previously verified private area-by-subcategory-by-year moments constructed from the final NHGIS-corrected POI files. Those cells preserve the quantities needed for this particular comparison; they cannot replace raw venue identities for a continuity audit. The source is SafeGraph/Advan foot-traffic data obtained via Dewey, combined with year-matched ACS five-year home-CBG demographics and the project’s NHGIS geography correction. The census periods are 2013-17, 2014-18 and 2015-19.</p>
+<p>The sample retains the inherited 150 mapped subcategories, valid race and income measures, at least two venues per cell and pooled racial diversity of at least 0.05. The 2019 primary comparison has 82,032 cells containing 3,247,365 venue-years across 933 recorded area codes. These are <strong>not 933 verified metropolitan areas</strong>: micropolitan and unresolved codes remain. Cells receive equal weight in the correlations; visits weight venues inside each cell. This is not an equally weighted POI regression.</p>
+<p>For each cell, the racial measure is fractionalization: one minus the sum of squared shares across four retained race/ethnicity groups. The shares are inferred from visitors’ home areas, not observed personal race. Within-venue diversity averages the venue-specific indices using annualized matched visit weights. Pooled diversity first combines the visitor shares across venues. Their difference is the between-venue component. The separation share is that difference divided by pooled diversity.</p>
+<p>Each correlation is computed between residual log count and a residual outcome after the listed additive controls. There is one calculation for each year, not a regression pooling years with a year dummy. The volume control is the log of summed annualized matched visits. We also retain a pooled-diversity sensitivity, with its accounting limitation below. There are no causal coefficients, standard errors, significance stars or selected p-values.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>2019 controls</th>
+<th style="text-align: right;">Separation share</th>
+<th style="text-align: right;">Between-venue diversity</th>
+<th style="text-align: right;">Within-venue diversity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subcategory</td>
+<td style="text-align: right;">0.568</td>
+<td style="text-align: right;">0.563</td>
+<td style="text-align: right;">0.305</td>
+</tr>
+<tr>
+<td>Recorded area and subcategory</td>
+<td style="text-align: right;">0.141</td>
+<td style="text-align: right;">0.125</td>
+<td style="text-align: right;">-0.010</td>
+</tr>
+<tr>
+<td>Area, subcategory and recorded volume</td>
+<td style="text-align: right;">0.246</td>
+<td style="text-align: right;">0.211</td>
+<td style="text-align: right;">-0.071</td>
+</tr>
+<tr>
+<td>Above, plus pooled diversity</td>
+<td style="text-align: right;">0.256</td>
+<td style="text-align: right;">0.224</td>
+<td style="text-align: right;">-0.224</td>
+</tr>
+</tbody>
+</table></div>
+<p>All entries are partial correlations with log venue count on the same 2019 sample. They are not changes in diversity caused by one additional venue. The last row is not independent evidence that count reduces within-venue mixing: once pooled diversity is held fixed, the between and within components necessarily move in opposite directions. Volume is also an endogenous constructed variable, not an exogenous demand instrument.</p>
+<h3 id="stability-checks">Stability checks</h3>
+<p>The area/category-adjusted separation correlation is 0.141 when the minimum pooled-diversity threshold is 0.01, 0.141 at the primary 0.05 threshold, and 0.142 at 0.10 in 2019. Thus the finding is not driven by that denominator cutoff within the tested range.</p>
+<p>A separate sample retains 72,328 identical area-category cells that qualify in every year. Changes from 2017 to 2019 have a count-separation partial correlation of 0.145 after area and category controls, or 0.179 with changes in volume added. This does not identify the effect of entry: recorded counts, coverage, demand and composition can change together. A balanced cell panel does not imply the same establishments are present within each cell.</p>
+<h3 id="stable-venue-audit">Stable-venue audit</h3>
+<p>The separate, authorized pass through all three final files is complete. It finds 3,795,599 distinct venue IDs, of which 2,565,192 appear in all three years. Keeping common-valid race/income observations with an unchanged valid recorded area and category leaves <strong>2,399,249 stable venue IDs each year</strong>. There are no detected area/category changes among the three-year IDs, but that may reflect harmonized metadata rather than independently verified unchanging businesses. An ID disappearing is not evidence of closure.</p>
+<p>The 2019 count-separation correlation on stable venues is 0.579 with category controls, <strong>0.142 with area and category controls</strong>, and 0.232 with volume added. Thus the attenuation is not eliminated by holding venue identities fixed. The stable-venue regression has 71,134 qualifying area-category cells; it is not the same cell sample as the 82,032-cell main comparison. Qualifying pooled-diversity thresholds can change from year to year even with fixed IDs.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/count_pattern_stable.png" alt="Mixing and separation across venue-count bins, with stable-ID comparison" />
+<figcaption aria-hidden="true">Mixing and separation across venue-count bins, with stable-ID comparison</figcaption>
+</figure>
+<p>The unadjusted bin graph retains both sides of the earlier result: absolute within-venue diversity and between-venue separation can both increase across markets with more recorded venues. It is an equal-cell descriptive comparison, not evidence that adding venues raises both outcomes within a market.</p>
+<h3 id="income-trends-a-composition-warning">Income trends: a composition warning</h3>
+<p>The direction of the equally weighted venue trend changes on stable support:</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>Sample and weights</th>
+<th style="text-align: right;">2017 index x 100</th>
+<th style="text-align: right;">2019 index x 100</th>
+<th style="text-align: right;">Change, index points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All retained venues; annualized matched-visit weights</td>
+<td style="text-align: right;">78.333</td>
+<td style="text-align: right;">79.104</td>
+<td style="text-align: right;">+0.771</td>
+</tr>
+<tr>
+<td>Stable venues; annualized matched-visit weights</td>
+<td style="text-align: right;">78.464</td>
+<td style="text-align: right;">79.571</td>
+<td style="text-align: right;">+1.107</td>
+</tr>
+<tr>
+<td>All retained venues; equal venue weights</td>
+<td style="text-align: right;">68.589</td>
+<td style="text-align: right;">67.928</td>
+<td style="text-align: right;">-0.661</td>
+</tr>
+<tr>
+<td>Stable venues; equal venue weights</td>
+<td style="text-align: right;">69.829</td>
+<td style="text-align: right;">71.194</td>
+<td style="text-align: right;">+1.365</td>
+</tr>
+</tbody>
+</table></div>
+<p>The changing-sample decline is therefore <strong>not a general decline among the same venues</strong>. This makes sample composition a necessary part of any trend account. It does not prove whether differences arise from real entry/exit, provider coverage, demographic matching or other selection. Stable IDs are a selected sample; the changing and stable populations answer different questions. Changes also inherit annual census inputs and income-rank construction, so the stable-panel increase is not automatically a behavioural change.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/income_weighting_stable.png" alt="Income-background diversity under visit and venue weights" />
+<figcaption aria-hidden="true">Income-background diversity under visit and venue weights</figcaption>
+</figure>
+<p>Income diversity here is fractionalization across ten groups ranked by home-CBG income. It does not measure the size of monetary gaps or the personal income of visitors. The two plot panels use different vertical scales.</p>
+<h3 id="nominal-count-versus-effective-count">Nominal count versus effective count</h3>
+<p>Effective count is squared total visit weight divided by the sum of squared venue weights. It is smaller when a few venues dominate. On exactly the same 2019 cells and area/category controls, its separation correlation is <strong>0.208</strong>, compared with 0.141 for nominal count. Among stable IDs the figures are 0.201 and 0.142. This is a concentration sensitivity, not an independent choice-set measure, customer sample size or correction for measurement noise.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/effective_count.png" alt="Nominal and effective counts on the same samples" />
+<figcaption aria-hidden="true">Nominal and effective counts on the same samples</figcaption>
+</figure>
+<p>The release also retains a distinct-venue pair contrast: between-venue diversity divided by one minus the sum of squared normalized venue weights. Its 2019 equal-cell mean rises from 0.0092 in the 2-4-venue bin to 0.0421 in the 100-plus bin (stable sample: 0.0085 to 0.0437). This removes the same-venue mass in the pairwise identity, <strong>not sampling noise or confounding</strong>. No iid finite-customer correction is justified by these annualized weights.</p>
+<h2 id="independent-audit">Independent construction audit</h2>
+<p>The project is not unaudited: previous final-file and NHGIS reconstruction checks remain substantial. The new independent audit inspected the safe construction code and tested it on artificial inputs. It <strong>did not</strong> certify the original weekly-to-annual aggregation, which is upstream of that code.</p>
+<p>Thirty-four tests were run and independently repeated: 29 pass their intended contracts; five deliberately reproduce unresolved validation failures. A successful test-run exit therefore does <strong>not</strong> mean production passed all 34 contracts. The demonstrated gaps are:</p>
+<ol type="1">
+<li>Duplicate JSON origin keys can silently retain the last value.</li>
+<li>Quoted NaN origin weights are not rejected by the current parser.</li>
+<li>Quoted Infinity weights are likewise not rejected.</li>
+<li>A full build can ignore extra trailing metadata rows.</li>
+<li>An existing output can be reused without a matching complete-build and input-provenance manifest; a partial test run uses the same output name.</li>
+</ol>
+<p>These are code weaknesses, <strong>not observations that malformed inputs occurred or that the released numerical results are wrong</strong>. Historical full-file counts and alignment checks provide additional protection, but do not replace fail-closed validation for future runs. Original production code and historical outputs remain unchanged. Forward repairs require explicit full-versus-test build manifests, exact full-build row alignment and duplicate/non-finite rejection, without silently changing historical missing-value conventions.</p>
+<p>The <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/construction-audit.html">complete independent audit</a> gives the code references, artificial examples, passed contracts and replication-input list.</p>
+<p>Two interpretation issues also matter. Income bins are ranks of home-CBG income, with a tie-breaking fallback: an artificial example with identical income values can still have diverse rank groups. Its prevalence in real lookups is unmeasured. The four-group racial measure conditions on the retained groups within each origin; omitted population mass cannot be recovered from the exported normalized shares alone. Neither diagnostic measures personal income, race or actual conversation.</p>
+<h3 id="what-the-inherited-annual-weights-still-require">What the inherited annual weights still require</h3>
+<p>The downstream code expands a supplied annual total by 52 divided by observed weeks. The original source field, distinct-week rule, 26-week filter and year-boundary convention must be traced to the actual production run. A saved initial audit reports up to 53 weeks in 2018; that is not automatically an error, but the calendar convention and fixed-52 interpretation need documenting. Agreement of annual origin-map totals is not an independent check of these expanded analysis weights.</p>
+<h2 id="team-inputs">Exact request to the team</h2>
+<p>Please supply a <strong>code-only snapshot of the version actually run</strong>: <code>pipeline_poi_statewise.py</code>, <code>config.py</code>, <code>replication_note.md</code>, any launcher, and their imported parsing, aggregation and metadata-assignment helpers. Also provide sanitized per-year commands/run logs and an input manifest with release identifiers, archive/member names, hashes and week coverage. A current copy of similarly named code is not enough to establish historical provenance.</p>
+<p>The first questions are: were origin weights visits or visitors; what counted as an observed week; when was the 26-week filter applied; how were duplicate venue-weeks and changing metadata handled; and which geography vintage assigned destination areas? The actual producer/runner should identify the source versions, rather than attributing them from memory.</p>
+<p>After that, an outcome-blind sample can be frozen for independent replication against <code>poi_annual_cbg_flows_&lt;year&gt;.parquet</code> and the inherited <code>poi_indices_&lt;year&gt;.csv.gz</code> comparison targets. That requires separately approved local access to the exact weekly members and intermediates. Raw records, credentials and unsanitized logs should stay out of this chat, website and shared Project. Employee workbooks are not needed for this core replication.</p>
+<h2 id="feasibility">Other source-feasibility work</h2>
+<h3 id="independent-opportunity-data-libraries">Independent opportunity data: libraries</h3>
+<p>A new outcome-blind audit verified the hashes and archive integrity of the already acquired <strong>IMLS Public Libraries Survey</strong> releases for 2017-2019. The outlet files contain 17,452, 17,478 and 17,496 records, with 17,267 outlet keys present in all three. Restricting to central/branch outlets not coded closed or temporarily closed and with usable numeric coordinates leaves 16,735, 16,801 and 16,812 candidate records respectively. This is a potential historical supply list, <strong>not a verified match to our mobility data</strong>.</p>
+<p>Fiscal/reporting years need alignment with calendar-year visits. Hours/weeks and imputation flags need care: the 2017/18 outlet schemas do not contain the same hours/weeks flag fields as 2019. Missing flag columns do not establish zero imputation. Stable outlet keys do not establish unchanged addresses. The agency’s live landing-page fetch returned 403; this check used the hash-matched public archives already held, not a fresh download.</p>
+<p>This opens a bounded alternative source check for the access question. It does not rescue the earlier library-investment event study: that design’s 38 treated systems remained below its locked minimum of 40. No mobility linkage, opportunity-coverage statistic or investment regression was run here.</p>
+<p><a href="https://www.imls.gov/research-evaluation/surveys/public-libraries-survey-pls">IMLS source</a> and the packaged annual public-use instructions identify the data and caveats.</p>
+<h3 id="green-book">Green Book</h3>
+<p>The source audit has moved beyond the previously blocked project website. NYPL provides verified CC0 structured data, and the Harvard replication deposit exposes CC0 aggregate schemas. Neither is yet the complete establishment-to-modern-site bridge we need.</p>
+<p>There is an important version problem: the two NYPL 1947 derivatives contain 1,056 and 796 entries respectively, without a reconciled coverage crosswalk. The larger file does not include North Carolina. Coordinates and a licence do not establish a complete national sampling frame.</p>
+<p>The strongest bounded lead is North Carolina’s official historical-resource inventory. Its current report distinguishes 63 extant, 226 demolished and 28 unknown resources, rather than keeping only survivors. But its master spreadsheet and exact reuse terms have not been obtained, and a 2024 site survey does not establish whether a firm/site was operating in 2017-2019. The report’s 317 resources and project page’s 327 businesses also require unit/version reconciliation; they are not necessarily ten missing firms.</p>
+<p><strong>Decision: narrow to a rights-cleared, outcome-blind historical-site pilot.</strong> First obtain the master inventory, its dictionary and licence, original edition identifiers, location uncertainty and dated transition evidence. Keep firm, site and district persistence separate; retain demolished and unmatched sites in the denominator. Unlisted businesses are not automatically discriminatory, and a listed business is not proof of integrated patronage. No modern POI linkage, proprietor extract, access-request message or regression was performed.</p>
+<p><a href="https://github.com/NYPL-publicdomain/greenbooks">NYPL data</a>, <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/NXFB5R">Harvard replication deposit</a>, <a href="https://www.hpo.nc.gov/survey-and-national-register/green-book-mpdf/open">official NC report</a>. The <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/green-book-feasibility.html">full feasibility audit</a> records exact files, versions, access failures, schema checks and the proposed bounded pilot.</p>
+<h2 id="programme">Ranked work programme</h2>
+<p>The active goal covers all eight directions. This milestone does not declare all eight analysed or a publishable result found. The order remains the literature review’s priority for bounded investigation, not expected significance.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Direction</th>
+<th>Position after this first work stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Within-place mixing and residential opportunity</td>
+<td>Stable-support and weighting checks completed: the equally weighted income trend reverses on fixed IDs. Next resolve construction provenance and an independent opportunity benchmark; this is not yet a national mixing trend.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Venue variety and separation</td>
+<td>Continue as a measurement/falsification question. Geography substantially weakens the cross-sectional pattern; preferences and causal supply effects remain unidentified.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Green Book legacy</td>
+<td>Source/schema feasibility completed. Narrow to an NC historical-site pilot; obtain the rights-cleared inventory and target-year histories before modern linkage.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Access to mixed places</td>
+<td>An existing public historical library source passes the initial metadata/hash check. Next verify geographic/calendar support and mobility coverage, without relaxing failed historical-menu or investment gates.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Incoming versus outgoing</td>
+<td>Retain as a descriptive component, not a new standalone claim. A matched-flow service decomposition needs separately approved original flows; no such new decomposition has been run.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Historical infrastructure</td>
+<td>Defer new outcome estimation until a dated placement/access design and comparison support exist. Modern visits alone cannot supply historical pretrends; prior network gates remain failed.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Weather and mixing</td>
+<td>Defer: the required joint origin-by-time composition is not supplied by annual shares or marginal hourly counts. Existing heat-segregation research also constrains novelty.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Ancestral attitudes</td>
+<td>Defer pending an actual cohort-compatible historical exposure crosswalk. Preserve earlier parental-location attempts, multiplicity failures and the separate calendar-support stop.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="verification">Verification and interpretation</h2>
+<p>A separate release reviewer found no blocking arithmetic, stable-selection or aggregation error in the inspected code and national results. The review reproduced the quoted changes and identified an imprecise figure caption, now corrected to <strong>annualized matched-visit weights</strong>, not independent raw visits. It did not inspect restricted rows, certify upstream construction or establish year-to-year income-bin comparability. In the stable equal-venue mean the ID weights are constant; in the stable visit-weighted mean they are not.</p>
+<p>The new measurement code passes nine artificial-data tests, including explicit dummy-OLS comparisons, independent sparse least-squares residuals, stable-ID selection and weighted pairwise identities. The empirical cell pass reconciles the previous source/cell hashes, counts, weights and national moments. Its principal correlations were independently reconstructed with a sparse solver; the remaining threshold comparisons reuse the tested engine. The saved-cell pass took 17.97 seconds. The full-file pass, including source hashing and network-drive reads, took 1,234.46 seconds (20.57 minutes). It reproduced the prior common sample of 8,875,712 venue-years and national moments to numerical precision (largest difference 1.1e-16); input sizes/timestamps remained unchanged. Within/between identity error was below 2.5e-15. This reproduces final-file accounting, not the original weekly construction.</p>
+<p>The <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/cells_results.json">cell results</a>, <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/continuity_results.json">continuity results</a> and <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/public_library_readiness.json">public-library readiness audit</a> contain reviewed national aggregates and provenance, not venue-level records.</p>
+<p>The protocol was frozen <strong>after the historical count result was known but before these new diagnostics</strong>. It is not a preregistration. All four control specifications, three years, denominator thresholds and balanced-cell changes remain in the reproducible output, including weak and contrary patterns.</p>
+<p>No new attitudes, connectedness or worker-facing regression was run. The four failed public-facing concentration screens remain binding. Expected worker profiles are not observed employees. The negative equal-county validation, correction 70a’s Atlas-child weights, and note 69’s distinction between local deviations and category-FE coefficients remain part of the record.</p>
+<p><strong>Current paper assessment:</strong> the work is becoming a more disciplined description of visitor-origin composition. The count result alone is not yet a persuasive mechanism paper. The stable-venue results make a composition audit substantively important. The next decision depends on upstream provenance and a genuinely independent opportunity or historical-linkage contribution, not another search for significant outcomes.</p>
+</main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>
