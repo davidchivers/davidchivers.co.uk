@@ -1,0 +1,46 @@
+{
+  "scope": "one_reviewed_national_2019_binary_profile_only",
+  "year": 2019,
+  "classification_reference": "September 2018; US50DC",
+  "rows_total": 3526891,
+  "groups": [
+    {
+      "group": "compatible",
+      "rows": 3300148,
+      "percent": 93.57102331770389
+    },
+    {
+      "group": "not_demonstrated_compatible",
+      "rows": 226743,
+      "percent": 6.428976682296107
+    }
+  ],
+  "definition": "Recorded county belongs to recorded CBSA under the fixed reference",
+  "not_demonstrated_is_error_rate": false,
+  "visit_weighted": false,
+  "full_geolocation_or_source_vintage_validated": false,
+  "completed_utc": "2026-10-19T21:34:26.554478+00:00",
+  "elapsed_seconds": 109.25496619998012,
+  "source_sha256": "dd4aff1f85092ae17dff7e0d4b5c6ff0748e9af9caade9bfc6e706a5ab5b4890",
+  "source_bytes": 2471813652,
+  "source_columns": [
+    "MSA_CODE",
+    "destination_county"
+  ],
+  "source_size_mtime_unchanged": true,
+  "new_annual_flow_or_acs_access": false,
+  "originals_changed": false,
+  "private_candidate_sha256": "3417fafd3e5d2c1a65fa852b050cb992486a64d7b95dfc40bea1284e413af3be",
+  "private_receipt_sha256": "0b13d63667cca0364c8014bee01bfc19dc0a837ba4b4db73622ef2208ded60cb",
+  "execution_sha256": {
+    "code/analysis/audit_poi_metro_assignment.py": "add99ef10b15a6ed83a4264762a7b4eb56fffe0ff3cfa7c1569198c3e5a77b82",
+    "code/analysis/metro_population_reference.py": "933fbbe29b1f94ab060edfb58def21bbdef92e3289843b8b92249ae908b74fb5",
+    "code/analysis/prepare_metro_population_reference.py": "15a86d082a1c168dfa21d7938a1f94e7cf1c2270d4dbe8082008c84bd57e8587",
+    "docs/protocols/metro_population_reference_20261019.md": "feccfc499f94189db64bf0227a4d32f8bca61ae41c6991801e272181f1f743d7",
+    "docs/protocols/metro_assignment_check_20261019.md": "0f2cfd22dabc9c8f8e5f8e35c8bfee7a6ac2d3bc2f862ae6cfc05c5c49f80b8a"
+  },
+  "review_source": "workstreams/metro_assignment_review_20261019.md",
+  "review_sha256": "61746b37aab441ee285d4c385e0085e816f8073957c4a0fa31d23b1b061fcd6a",
+  "exporter_sha256": "0af1e044cd1933765b77962c424b2ebb8aaa67e3c67e22bd606d518fb6fd49c1",
+  "disclosure_scope": "No code identities, code-support counts, private failure counts or cross-vintage overlaps"
+}

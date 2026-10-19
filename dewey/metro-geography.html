@@ -1,0 +1,201 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>City size: population and geography checks</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} code{overflow-wrap:anywhere} main img{max-width:100%;height:auto;display:block}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>City size: population and geography checks</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>19 October 2026. Public population-reference construction and a separate approved 2019 final-file geography audit. This advances the larger-city question in note 93; it is not a new regression or a test of attitudes.</p>
+<h2 id="bottom-line">Bottom line</h2>
+<p><strong>We now have a checked population denominator for 2017-2019, on one explicit metropolitan definition. We should not simply merge it to an old MSA code and assume the geography is identical.</strong></p>
+<p>The common-reference choice is September 2018 OMB delineations, with Vintage 2019 Census population estimates for July 1 of each study year. That provides 384 metropolitan and 542 micropolitan areas in the 50 states plus DC. The proposed city-size analysis uses metros, not all CBSAs. A CBSA can be either metro or micro; neither a venue count nor an arbitrary recorded MSA code is a population measure. Puerto Rico is outside this particular population source.</p>
+<h2 id="what-the-public-source-check-found">What the public-source check found</h2>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Comparison</th>
+<th style="text-align: right;">Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>County sums versus published CBSA populations</td>
+<td style="text-align: right;">2,778 / 2,778 exact</td>
+<td>All 926 areas reconcile in each of three years.</td>
+</tr>
+<tr>
+<td>Same code, metropolitan in both 2013 and 2018</td>
+<td style="text-align: right;">379 codes</td>
+<td>This is the denominator for the definition comparison, not a POI sample.</td>
+</tr>
+<tr>
+<td>Those codes with a changed county-key list</td>
+<td style="text-align: right;">73 / 379</td>
+<td>Code continuity alone does not guarantee geographic continuity.</td>
+</tr>
+<tr>
+<td>Population denominator differs by more than 5%</td>
+<td style="text-align: right;">41 / 378 comparable metros</td>
+<td>Both sums use the same 2019 county populations; this is not growth.</td>
+</tr>
+<tr>
+<td>Historical population comparison unavailable</td>
+<td style="text-align: right;">1 metro</td>
+<td>An obsolete county key is left unmatched, not imputed.</td>
+</tr>
+<tr>
+<td>2018 versus 2020 metro county-key lists</td>
+<td style="text-align: right;">384 / 384 identical</td>
+<td>Reassuring for those public definitions, not proof of POI source vintage.</td>
+</tr>
+</tbody>
+</table></div>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/metro_definition_comparison.png" alt="Public metropolitan-definition comparison" />
+<figcaption aria-hidden="true">Public metropolitan-definition comparison</figcaption>
+</figure>
+<p>The historical mismatch concerns Bedford city’s conversion to a town within Bedford County. It illustrates why a changed county-key set is not necessarily a physical change in a metro’s footprint. No historical population crosswalk has been improvised. The older project PUMS context uses an MSA2013 bridge; that construction is retained, not silently relabelled as MSA2018.</p>
+<h2 id="the-separate-2019-poi-check">The separate 2019 POI check</h2>
+<p>The existing permission allowed a read-only check of <strong>two columns only</strong>: recorded destination county and recorded area code. It covered the full 2019 final file and took 109.25 seconds including source fingerprinting. No visit, income, race, worker, coordinate or individual identifier was read for this check. The pending annual-flow and ACS files were not processed.</p>
+<p>The fixed question is whether each recorded county belongs to its recorded area under the September 2018 reference. Missing or malformed keys, unsupported counties/codes, counties outside any CBSA and actual county/code disagreement are all retained in the denominator. They have separate private diagnoses, but the only proposed disclosure is a single national binary profile.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>All 2019 final-file rows</th>
+<th style="text-align: right;">Count</th>
+<th style="text-align: right;">Share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recorded county and CBSA code compatible with the fixed reference</td>
+<td style="text-align: right;">3,300,148</td>
+<td style="text-align: right;">93.57%</td>
+</tr>
+<tr>
+<td>Not demonstrated compatible</td>
+<td style="text-align: right;">226,743</td>
+<td style="text-align: right;">6.43%</td>
+</tr>
+<tr>
+<td>Total</td>
+<td style="text-align: right;">3,526,891</td>
+<td style="text-align: right;">100.00%</td>
+</tr>
+</tbody>
+</table></div>
+<p>This is the single exact national profile cleared by independent review. <strong>The compatible group includes both metropolitan and micropolitan areas; it is not the future metro-only regression sample.</strong> The reviewer independently reclassified the authorized private geography aggregate, reproduced both counts and checked the combination with seven named existing public notes. All 20 correspondence checks passed. Detailed diagnoses and code identities remain private; the review is not a formal privacy guarantee.</p>
+<p>Even a compatible pair does not prove accurate geocoding, establish the producer’s boundary vintage or validate every previous result. Conversely, not demonstrated compatible does not mean the record is erroneous: it includes out-of-scope and non-CBSA observations as well as unresolved keys/conflicts. Neither group is weighted by visits. No row has been corrected, dropped from the original data or assigned a replacement area.</p>
+<h2 id="what-to-do-with-this">What to do with this</h2>
+<ol type="1">
+<li><strong>Use the common public reference as a candidate, not an automatic merge.</strong> Keep metro/micro classification, population year and boundary vintage explicit. Resolve the recorded-geography convention before an inference sample is fixed. Retain a flow diagram of all exclusions.</li>
+<li><strong>Ask the producer for the actual geography assignment step.</strong> We need its dated delineation/crosswalk, the meanings of <code>MSA_CODE</code> and <code>destination_county</code>, and the handling of non-CBSA/unmatched areas. A known code is not enough, and choosing the vintage with the highest match rate would not establish provenance. This is part of the original replication request, not a request to rerun everything blindly.</li>
+<li><strong>Then reconstruct the income-group masses and run the planned split.</strong> The file-to-file adapter has passed artificial tests, but its annual-flow and ACS-lookup approval is still pending. A population lookup cannot replace group-by-venue masses. County subdivisions remain too coarse to identify a shared shopping centre or a genuine feasible menu.</li>
+</ol>
+<p>The economic question remains: does separation in larger cities occur across service types, across destination areas, or between establishments within an area and service type? The present work strengthens the denominator and merge checks needed to ask it. It does <strong>not</strong> answer which component dominates, establish preferences for co-patrons, or show that adding venues causes sorting.</p>
+<h2 id="verification-and-limits">Verification and limits</h2>
+<p>The public construction was reproduced from staged bytes with identical hashes for all seven derived tables. A separate reviewer used direct workbook/CSV reading and integer arithmetic. Both main and independent tests pass. The two-column audit separately passed artificial normalization, conservation, fail-closed source and disclosure tests after two documented repairs.</p>
+<p>Originals and prospective protocols remain unchanged. Public reference validation, private recorded-field compatibility, accurate physical location and full weekly-to-annual replication are four different claims. Only the first two are addressed here, within their stated scope. Prior failed gates, nulls, correction 70a, the negative equal-county validation and the home-area versus personal-income limitation remain in force.</p>
+<h2 id="primary-sources">Primary sources</h2>
+<ul>
+<li><a href="https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/historical-delineation-files.html">Census historical metropolitan and micropolitan delineations</a>.</li>
+<li><a href="https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/metro/totals/">Vintage 2019 CBSA population files</a> and <a href="https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/metro/totals/cbsa-est2019-alldata.pdf">file layout, including boundary dates</a>.</li>
+<li><a href="https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/">Vintage 2019 county population files</a> and <a href="https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf">county file layout</a>.</li>
+</ul>
+<p>Complete methods, source hashes and the independent reviews accompany the dated sourcebook. These are snapshots, not live access to private data.</p>
+<h2 id="full-record">Full record</h2>
+<p><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/Dewey_Metro_Geography_20261019_sourcebook.html">Methods, protocols, reviews and hashes</a> | <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/metro_geography_replication.zip">Code and primary artificial tests</a> | <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/metro_public_reference_verification.json">Public reference verification</a> | <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/metro_recorded_geography_release.json">Reviewed national compatibility profile</a> | <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/metro_public_source_manifest.json">Official input URLs and hashes</a></p>
+</main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>
