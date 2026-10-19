@@ -47,6 +47,24 @@ html { scroll-padding-top: 92px; }
 .events-section .section-intro p,.events-section .eyebrow,
 .event-date span,.event-main small,.event-speaker span,.event-foot p { color: #fff; }
 .social-section { padding-block: 60px; }
+.instagram-preview { min-width: 0; background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 26px #21252908; }
+.instagram-profile { display: flex; align-items: center; gap: 13px; padding: 20px; }
+.instagram-icon { width: 43px; height: 43px; display: grid; place-items: center; flex: 0 0 auto; background: var(--purple); color: #fff; border-radius: 50%; }
+.instagram-icon svg { width: 25px; height: 25px; }
+.instagram-profile strong { display: block; font-size: 14px; font-weight: 600; }
+.instagram-profile small { display: block; font-size: 11px; color: var(--muted); margin-top: 3px; }
+.instagram-profile > .arrow { margin-left: auto; width: 21px; height: 21px; color: var(--purple); }
+.instagram-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 3px; overflow: hidden; }
+.instagram-grid img { width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; display: block; }
+.instagram-footer { padding: 18px 20px 16px; }
+.instagram-cta { display: flex; align-items: center; justify-content: center; gap: 16px; min-height: 44px; background: var(--purple); color: #fff; font-size: 12px; font-weight: 600; border-radius: 4px; }
+.instagram-cta .arrow { width: 19px; height: 19px; }
+.instagram-footer p { color: var(--muted); font-size: 9px; text-align: center; margin: 11px 0 0; }
+.instagram-footer p a { text-decoration: underline; text-underline-offset: 3px; }
+.instagram-preview a:focus-visible { outline: 3px solid var(--purple); outline-offset: -3px; }
+.instagram-cta:focus-visible { outline-color: #fff; outline-offset: -5px; }
+.instagram-profile:hover strong { text-decoration: underline; text-underline-offset: 4px; }
+.instagram-cta:hover { background: #522056; }
 .site-footer { background: #212529; }
 .footer-top p,.footer-bottom { color: #ebebeb; }
 .dialog::backdrop { background: rgba(33,37,41,.7); }
@@ -75,6 +93,10 @@ html { scroll-padding-top: 92px; }
   .path-grid a,.path-grid a:first-child,.path-grid a:last-child { padding-block: 14px; }
   .section { padding-block: 42px; }
   .events-section,.social-section { padding-block: 48px; }
+  .instagram-profile { padding: 16px; gap: 10px; }
+  .instagram-profile strong { font-size: 12px; }
+  .instagram-profile small { font-size: 10px; }
+  .instagram-footer { padding: 15px; }
 }
 @media (max-width: 360px) {
   .brand { gap: 12px; }
