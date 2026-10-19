@@ -1,0 +1,212 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Construction validation: a separate tested prototype</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} figure{margin:28px 0} figure img, main img{max-width:100%;height:auto;display:block} figcaption{font-size:14px}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Construction validation: a separate tested prototype</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>19 October 2026. Forward-only, synthetic-only implementation of the five validation weaknesses reproduced by the independent construction audit.</p>
+<h2 id="scope-and-outcome">Scope and outcome</h2>
+<p>This is an isolated prototype, <strong>not a production repair or integration</strong>. No production module imports it, no existing builder was edited or invoked, and no historical test was altered, rerun, or relabelled as passing. The original five expected failures remain historical unresolved production contracts. The final suite has <strong>87 tests passed, 179 subtests executed, zero failures, errors, expected failures, unexpected successes or skips</strong>. Subtests are included within the 87 unittest test methods, not additional tests. Final verification runtime after the fingerprint-policy correction: 0.048 seconds; Python 3.12.10, standard library only. The initial 81-test/176-subtest verification took 0.061 seconds; main independently reran that version in 0.053 seconds with the same counts and all 33 original fingerprints unchanged. The final six additional tests exercise only the requested distinction between immutable history and mutable context; the validation API was not expanded. The latest JSON report and transcript describe the final 87-test run.</p>
+<p>Main integration verification, after the worker’s run: all 87 tests passed again in 0.058 seconds, with 179 subtests, all 11 immutable baseline matches and all 33 files unchanged during testing. One informational baseline difference was then present because main had updated canonical STATUS. References below to the worker’s final zero-difference run describe that earlier verification snapshot, not a promise that mutable context stays unchanged after authorized project updates. The latest test transcript is the main rerun; original code and the frozen baseline remain unchanged.</p>
+<p>No private R: or Dropbox data were read. There was no licensed-data processing, national-composition calculation, empirical estimate, remote execution, external message, publication, installation, or change to STATUS or notes.</p>
+<h2 id="explicit-apis">Explicit APIs</h2>
+<p>All functions below live in <code>code/analysis/construction_validation.py</code>. Contract failures raise <code>ConstructionValidationError</code> (a ValueError). Omitted mandatory Python arguments raise TypeError; neither failure grants cache acceptance. Callers must stop or rebuild separately in an approved new location, never treat an exception as permission to reuse.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>API</th>
+<th>Accepted contract and fail-closed behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>strict_json_loads(payload)</code></td>
+<td>Requires raw JSON text/bytes. Duplicate decoded keys at any depth, nonstandard NaN/Infinity constants, overflowed numbers and malformed JSON fail. Preparsed dictionaries are refused because duplicate evidence is already lost.</td>
+</tr>
+<tr>
+<td><code>parse_origin_map(payload, *, null_policy="reject", allow_numeric_strings=False)</code></td>
+<td>Numeric, finite, nonnegative weights and nonempty string origin keys. Positive weights retained in source order; zero weights omitted. Duplicate keys always fail. Null/string coercion is disabled by default. Explicit null dropping and numeric-string acceptance are separately declared policies; quoted NaN/Infinity and overflow still fail. Total overflow also fails. An empty map is not an imputed zero diversity index.</td>
+</tr>
+<tr>
+<td><code>validate_weighted_values(values, weights)</code></td>
+<td>Equal nonempty lengths, finite numeric values, finite nonnegative weights and positive finite total. Rejects booleans, coercions and nonfinite values even at zero weight. No silent case deletion.</td>
+</tr>
+<tr>
+<td><code>weighted_mean(values, weights)</code></td>
+<td>Small arithmetic contract using normalized weights and finite summation; not a new POI-index builder.</td>
+</tr>
+<tr>
+<td><code>validate_alignment(flow_ids, metadata_ids, *, source_rows, run_mode, max_pois)</code></td>
+<td>Full input sequences must exactly match the independently declared source length, have unique nonempty IDs, and match in order. No sorting or truncation. Returns immutable source/output counts and ordered-ID SHA-256 receipts.</td>
+</tr>
+<tr>
+<td><code>json_sha256(value)</code></td>
+<td>Finite JSON canonicalization: sorted mapping keys, retained list order, ASCII encoding and compact separators. Distinguishes JSON boolean versus numeric config values.</td>
+</tr>
+<tr>
+<td><code>cache_identity(request)</code></td>
+<td>Validates the mandatory request and fingerprints it with manifest version 1. Every input/code/config/scope field and explicit max_pois participates. Full and partial keys differ. This function does not locate or write a cache.</td>
+</tr>
+<tr>
+<td><code>observe_output(payload, *, ordered_ids, schema)</code></td>
+<td>Hashes supplied bytes and records byte length, independently decoded row count, ID-order hash and schema hash. Pure in-memory evidence helper, not a Parquet reader.</td>
+</tr>
+<tr>
+<td><code>validate_cache_contract(manifest_json, *, expected_request, observed_output, allow_partial=False)</code></td>
+<td>Requires raw manifest, independent current request and independently observed artifact evidence. Returns an immutable CacheAcceptance only on an exact complete match. Missing, legacy, stale, malformed and incomplete evidence fails; partial reuse requires explicit opt-in.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Partial mode means a strictly positive <code>max_pois &lt; source_rows</code> and the exact leading prefix. Full mode requires an explicitly present <code>max_pois=null</code>. A cap equal to or exceeding the universe is conservatively rejected as partial, not silently promoted to full. Even partial runs require alignment of both <strong>full</strong> input sequences, so a selected prefix cannot hide trailing metadata or later ID mismatches. Empty universes are not supported by this prototype.</p>
+<h2 id="manifest-contract">Manifest contract</h2>
+<p>Manifest version 1 has exactly <code>manifest_version</code>, <code>request</code>, <code>cache_key</code>, <code>run</code> and <code>output</code>. Missing and unknown fields fail.</p>
+<ul>
+<li>Request: <code>input_sha256</code>, <code>code_sha256</code>, nonempty resolved <code>config</code>, <code>config_sha256</code>, <code>run_mode</code>, explicitly present <code>max_pois</code>, <code>scope</code>, and <code>output_schema_sha256</code>.</li>
+<li>Minimum input roles: flows, metadata, lookup. Minimum code roles: builder, validator. Additional dependencies may be included and affect identity; the caller is responsible for enumerating the complete dependency closure.</li>
+<li>Scope: name, year, full source rows and ID-order hash, planned output rows and ID-order hash, and explicit unique expected work-unit identifiers.</li>
+<li>Run: nonempty run ID; status exactly complete; scope_complete literally true; full_dataset_complete literally true only for full mode; exact completed-unit set without duplicates; empty failed/skipped units; processed and written row counts equal the planned output count.</li>
+<li>Output: actual byte SHA-256 and length, row count, schema hash and ID-order hash. Claims must match independent observations and the planned scope/schema.</li>
+</ul>
+<p>Run units may finish in any order; venue IDs may not change order. Scope completeness and full-dataset completeness are distinct. Partial opt-in does not permit a partial cache to satisfy a full request or a different cap.</p>
+<p>The two output examples are <strong>invented JSON fixtures</strong>, not production manifests. Their builder hash identifies the synthetic test fixture code; their validator hash identifies this prototype. <code>synthetic_inputs.json</code> contains the invented objects whose canonical bytes are fingerprinted. No manifest is manufactured for historical production outputs.</p>
+<h2 id="verification-and-preservation">Verification and preservation</h2>
+<p>Executed from the named project root:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>python <span class="op">-</span>B code<span class="op">/</span>analysis<span class="op">/</span>test_construction_validation<span class="op">.</span><span class="fu">py</span></span></code></pre></div>
+<p>The exact local interpreter is recorded in the JSON verification report.</p>
+<p>Independent references use Fraction arithmetic and separate hashlib/JSON calculations, not validator helpers, for weighted means, parser totals, lengths, schema/byte/order hashes and fixture manifests. Adversarial cases cover both length-mismatch directions, trailing ID permutations, duplicates, nonfinite strings/literals/values/weights, sum overflow, stale hashes/config, missing every mandatory manifest field, false completeness claims, missing/ extra/duplicate/failed/skipped work units, incomplete row counts, mutated output bytes/schema/order, partial/full swaps and changed caps.</p>
+<p>Before edits, 33 safe original files were SHA-256 snapshotted. The inventory includes the original audit’s 25 safe sources, its workstream and two reports, plus project AGENTS, DATA_POLICY, STATUS, README and memory. <strong>All 33 matched the pre-edit snapshot before and after the final prototype tests.</strong> Full hashes are recorded in <code>original_fingerprints_before.json</code> and the three original fingerprint maps in <code>synthetic_validation_report.json</code>. Selected originals:</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Original file</th>
+<th>Unchanged SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>code/analysis/build_harmonized_poi_indices.py</code></td>
+<td><code>eae0ed41b60047516852d67ceb5e2163539c94ceca4be08ece5aaf17d89e11c4</code></td>
+</tr>
+<tr>
+<td><code>code/analysis/test_independent_construction_contracts.py</code></td>
+<td><code>448e8b44e359cb392d8c826834b0109e061bcf1d695fa81a92e9ca5237301b28</code></td>
+</tr>
+<tr>
+<td><code>workstreams/independent_construction_audit_20261019.md</code></td>
+<td><code>98998e7e693eb659e5be21c97e47191620c4d9f695afacb09857a254fac2bee0</code></td>
+</tr>
+<tr>
+<td><code>output/independent_construction_audit_20261019/synthetic_contract_report.json</code></td>
+<td><code>9d3dd71026fe3551fc6aa1150027f7615ab2f2df0c890e81a14d0b958570d17c</code></td>
+</tr>
+<tr>
+<td><code>output/independent_construction_audit_20261019/synthetic_test_run.txt</code></td>
+<td><code>1094d832452c5399aa1ac1728648d8364f63bb69a946906113606c766225fb05</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>Output directory: <code>output/construction_validation_prototype_20261019/</code>. It contains the pre-edit fingerprint snapshot, exact test transcript, JSON verification report, synthetic inputs, and full/partial synthetic outputs and manifests. All generated test artifacts stay in that directory; <code>-B</code> prevents bytecode writes elsewhere.</p>
+<p>The original 33-file baseline is preserved exactly, not regenerated or silently relabelled. Final rerun enforcement is:</p>
+<ul>
+<li><strong>11 immutable historical files:</strong> the eight production/audit Python files in the original audit inventory, its historical workstream, and its two output reports must equal the original baseline both before and after tests. <code>immutable_original_paths</code> records this exact subset.</li>
+<li><strong>22 mutable context files:</strong> governance, current notes/construction docs and the collaborator workstream must be unchanged from before to after each test run. Earlier authorized changes do not fail the suite. Differences from the original baseline are explicitly reported, not approved or hidden.</li>
+<li><code>original_fingerprints_unchanged</code> retains its original strict meaning: all 33 equal the pre-edit baseline before and after the run. It may legitimately be false after a mutable-context update while <code>fingerprint_gate_passed</code> and <code>successful</code> are true. The latter require immutable baseline equality and all 33 files unchanged during tests. Final run: both gates passed; zero informational mutable baseline differences.</li>
+</ul>
+<p>The six policy tests use invented hash maps. They demonstrate that prior STATUS changes are informational, that in-run context changes fail, that any historical code/output change fails, and that incomplete inventories fail. They do not modify STATUS or any other original file to simulate changes.</p>
+<p>Owned authored files: the prototype module, its new test module, and this workstream. Original production code, historical tests/outputs, STATUS, DATA_POLICY and notes were not edited. The pre-existing dirty checkout was preserved. The separately requested accounting review has its own workstream.</p>
+<h2 id="limits-and-integration-gate">Limits and integration gate</h2>
+<p>Passing tests establish only these invented-input contracts. No raw-weekly replication, real anomaly prevalence, final-file validation, annualization semantics, demographic missingness policy, or causal claim is established.</p>
+<p>This is an in-memory prototype with materialized ID lists and no Parquet adapter, atomic output/manifest transaction, concurrency control or cache migration. Floating-point arithmetic is not an exact-integer count engine. The generic schema/ID evidence helper cannot prove that caller-supplied IDs and schema came from the supplied bytes; a future approved adapter must decode and bind them. Likewise hashes do not authenticate a producer, prove its supplied scope is complete, or identify omitted dependencies. Freeze the complete input/code/runtime/config inventory and expected scope independently; do not derive the expected request by copying an untrusted manifest.</p>
+<p>Any production integration needs separate approval, an approved local I/O adapter, unchanged historical outputs, real file-boundary/integration tests, and explicit handling of publication/commit of a complete manifest. None is claimed here.</p>
+</main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>
