@@ -1,0 +1,339 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Why the income-diversity trend changes sign</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} figure{margin:28px 0} figure img, main img{max-width:100%;height:auto;display:block} figcaption{font-size:14px}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Why the income-diversity trend changes sign</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><h2 id="headline">Main finding</h2>
+<p><strong>The apparent decline in average venue income diversity is an aggregate composition result, not a decline among the same observed venues.</strong> In the equal-venue calculation, the common-valid stable group becomes more diverse, but represents a smaller share of the recorded sample. The remaining group has substantially lower average diversity. Its growing share more than offsets the increase within the stable group.</p>
+<p>This sharpens the warning in the <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">first research report</a>. It does <strong>not</strong> establish why the sample changed: actual business turnover, provider coverage and measurement/validity selection remain possible. Nor does it make the stable sample representative of all establishments.</p>
+<p>The racial-diversity comparison does not reverse sign. Average racial diversity increases under both weighting schemes and on stable support. The composition contribution is negative but smaller than for income.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/composition_accounting.png" alt="Contributions to the 2017-2019 changes in income and racial diversity" />
+<figcaption aria-hidden="true">Contributions to the 2017-2019 changes in income and racial diversity</figcaption>
+</figure>
+<h2 id="sample">What was compared</h2>
+<p>The source is the previously verified national summary of the final 2017-2019 SafeGraph/Advan POI files obtained via Dewey, combined with ACS five-year home-CBG characteristics and the project’s NHGIS geography correction. No restricted data were reopened for this follow-up. The same 150 inherited mapped subcategories and common-valid race/income support are retained. This is new arithmetic on verified summaries, not a new regression or a replication of the original weekly construction.</p>
+<p>The <strong>stable group</strong> contains the same 2,399,249 valid venue IDs in all three years with unchanged recorded area and category. The <strong>other group</strong> is the remainder of each year’s retained sample. It is not the same set of venues each year, and is not an identified set of entrants or closures. Stable IDs and harmonized metadata do not prove unchanged businesses or locations.</p>
+<p>Income diversity is fractionalization across ten home-CBG income-rank groups. It measures diversity of visitors’ inferred residential backgrounds, not individual earnings. Race diversity is fractionalization across four retained origin-based race/ethnicity groups. Both are annual composition measures rather than observed simultaneous interactions. Numbers below are the indices multiplied by 100, not percentage changes or attitude effects.</p>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Equal-venue calculation</th>
+<th style="text-align: right;">2017</th>
+<th style="text-align: right;">2018</th>
+<th style="text-align: right;">2019</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All retained venue IDs</td>
+<td style="text-align: right;">2,699,564</td>
+<td style="text-align: right;">2,904,929</td>
+<td style="text-align: right;">3,271,219</td>
+</tr>
+<tr>
+<td>Stable venue IDs</td>
+<td style="text-align: right;">2,399,249</td>
+<td style="text-align: right;">2,399,249</td>
+<td style="text-align: right;">2,399,249</td>
+</tr>
+<tr>
+<td>Other retained IDs</td>
+<td style="text-align: right;">300,315</td>
+<td style="text-align: right;">505,680</td>
+<td style="text-align: right;">871,970</td>
+</tr>
+<tr>
+<td>Stable share of venue count</td>
+<td style="text-align: right;">88.88%</td>
+<td style="text-align: right;">82.59%</td>
+<td style="text-align: right;">73.34%</td>
+</tr>
+<tr>
+<td>Stable-group income diversity</td>
+<td style="text-align: right;">69.83</td>
+<td style="text-align: right;">70.08</td>
+<td style="text-align: right;">71.19</td>
+</tr>
+<tr>
+<td>Other-group income diversity</td>
+<td style="text-align: right;">58.68</td>
+<td style="text-align: right;">59.27</td>
+<td style="text-align: right;">58.94</td>
+</tr>
+<tr>
+<td>Overall income diversity</td>
+<td style="text-align: right;">68.59</td>
+<td style="text-align: right;">68.20</td>
+<td style="text-align: right;">67.93</td>
+</tr>
+</tbody>
+</table></div>
+<p>Both group means are higher in 2019 than in 2017, yet the overall equal-venue mean is lower. The lower-diversity group accounts for 26.66% of retained venue count in 2019, compared with 11.12% in 2017. Calling those additional observations newly opened businesses would be unjustified.</p>
+<h2 id="accounting">Exact accounting</h2>
+<p>The overall mean is a weighted average of the two group means. We split its change into (i) the stable group’s mean change, weighted by its average share; (ii) the other group’s mean change, similarly weighted; and (iii) the change in their relative shares, multiplied by their average mean gap. Using endpoint averages treats both years symmetrically. The three terms sum exactly to the observed change, up to rounding.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>2017-2019 comparison</th>
+<th style="text-align: right;">Stable-group mean contribution</th>
+<th style="text-align: right;">Other-group mean contribution</th>
+<th style="text-align: right;">Changing-share contribution</th>
+<th style="text-align: right;">Total change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Income; equal venues</td>
+<td style="text-align: right;">+1.107</td>
+<td style="text-align: right;">+0.049</td>
+<td style="text-align: right;">-1.817</td>
+<td style="text-align: right;"><strong>-0.661</strong></td>
+</tr>
+<tr>
+<td>Income; annualized matched visits</td>
+<td style="text-align: right;">+1.041</td>
+<td style="text-align: right;">-0.146</td>
+<td style="text-align: right;">-0.123</td>
+<td style="text-align: right;"><strong>+0.771</strong></td>
+</tr>
+<tr>
+<td>Race; equal venues</td>
+<td style="text-align: right;">+0.856</td>
+<td style="text-align: right;">+0.161</td>
+<td style="text-align: right;">-0.237</td>
+<td style="text-align: right;"><strong>+0.781</strong></td>
+</tr>
+<tr>
+<td>Race; annualized matched visits</td>
+<td style="text-align: right;">+0.822</td>
+<td style="text-align: right;">+0.022</td>
+<td style="text-align: right;">-0.049</td>
+<td style="text-align: right;"><strong>+0.795</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>These are contributions to the aggregate change, not causal coefficients. The stable group’s standalone equal-venue income change is <strong>+1.365</strong> points; its contribution above is <strong>+1.107</strong> because that change is multiplied by the group’s average share. The -1.817 share term is not an estimate of provider- coverage bias. Percentages of the net change are not reported: opposing components make those percentages misleading.</p>
+<h3 id="why-visit-weighting-differs">Why visit weighting differs</h3>
+<p>Stable venues account for <strong>95.32% of annualized matched-visit weight in 2017 and 92.62% in 2019</strong>, a much smaller share change than in venue count. The other group matters much less when weighting by recorded visits. The resulting national income-diversity trend is positive under visit weighting, despite a negative share contribution.</p>
+<p>Neither scheme is universally correct. Equal weighting describes the average recorded establishment; visit weighting describes composition associated with the retained annualized visit weights. Those weights are not known counts of independent people, and do not establish representativeness of all US visits. Stable-ID visit-weighted changes can also reflect redistribution of weight across those same venues.</p>
+<h2 id="all-comparisons">All planned time comparisons</h2>
+<p>All three year pairs and both background dimensions were specified for this diagnostic after the original reversal was known. No result was selected by significance. The two one-year decompositions need not add component-by-component to the two-year decomposition because each uses different endpoint averages; their total changes do add.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th>Background and weights</th>
+<th>Period</th>
+<th style="text-align: right;">Stable mean</th>
+<th style="text-align: right;">Other mean</th>
+<th style="text-align: right;">Shares</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Income; equal venues</td>
+<td>2017-18</td>
+<td style="text-align: right;">+0.219</td>
+<td style="text-align: right;">+0.084</td>
+<td style="text-align: right;">-0.690</td>
+<td style="text-align: right;">-0.387</td>
+</tr>
+<tr>
+<td>Income; equal venues</td>
+<td>2018-19</td>
+<td style="text-align: right;">+0.866</td>
+<td style="text-align: right;">-0.073</td>
+<td style="text-align: right;">-1.067</td>
+<td style="text-align: right;">-0.274</td>
+</tr>
+<tr>
+<td>Income; equal venues</td>
+<td>2017-19</td>
+<td style="text-align: right;">+1.107</td>
+<td style="text-align: right;">+0.049</td>
+<td style="text-align: right;">-1.817</td>
+<td style="text-align: right;">-0.661</td>
+</tr>
+<tr>
+<td>Income; matched visits</td>
+<td>2017-18</td>
+<td style="text-align: right;">+0.376</td>
+<td style="text-align: right;">-0.070</td>
+<td style="text-align: right;">-0.046</td>
+<td style="text-align: right;">+0.260</td>
+</tr>
+<tr>
+<td>Income; matched visits</td>
+<td>2018-19</td>
+<td style="text-align: right;">+0.663</td>
+<td style="text-align: right;">-0.073</td>
+<td style="text-align: right;">-0.078</td>
+<td style="text-align: right;">+0.511</td>
+</tr>
+<tr>
+<td>Income; matched visits</td>
+<td>2017-19</td>
+<td style="text-align: right;">+1.041</td>
+<td style="text-align: right;">-0.146</td>
+<td style="text-align: right;">-0.123</td>
+<td style="text-align: right;">+0.771</td>
+</tr>
+<tr>
+<td>Race; equal venues</td>
+<td>2017-18</td>
+<td style="text-align: right;">+0.492</td>
+<td style="text-align: right;">+0.102</td>
+<td style="text-align: right;">-0.085</td>
+<td style="text-align: right;">+0.509</td>
+</tr>
+<tr>
+<td>Race; equal venues</td>
+<td>2018-19</td>
+<td style="text-align: right;">+0.376</td>
+<td style="text-align: right;">+0.030</td>
+<td style="text-align: right;">-0.134</td>
+<td style="text-align: right;">+0.272</td>
+</tr>
+<tr>
+<td>Race; equal venues</td>
+<td>2017-19</td>
+<td style="text-align: right;">+0.856</td>
+<td style="text-align: right;">+0.161</td>
+<td style="text-align: right;">-0.237</td>
+<td style="text-align: right;">+0.781</td>
+</tr>
+<tr>
+<td>Race; matched visits</td>
+<td>2017-18</td>
+<td style="text-align: right;">+0.631</td>
+<td style="text-align: right;">+0.023</td>
+<td style="text-align: right;">-0.021</td>
+<td style="text-align: right;">+0.633</td>
+</tr>
+<tr>
+<td>Race; matched visits</td>
+<td>2018-19</td>
+<td style="text-align: right;">+0.194</td>
+<td style="text-align: right;">-0.005</td>
+<td style="text-align: right;">-0.028</td>
+<td style="text-align: right;">+0.161</td>
+</tr>
+<tr>
+<td>Race; matched visits</td>
+<td>2017-19</td>
+<td style="text-align: right;">+0.822</td>
+<td style="text-align: right;">+0.022</td>
+<td style="text-align: right;">-0.049</td>
+<td style="text-align: right;">+0.795</td>
+</tr>
+</tbody>
+</table></div>
+<p>All entries are index-point contributions, not percent changes. Matched visits means the inherited annualized matched-visit weights throughout.</p>
+<h2 id="decision">Implications for the paper</h2>
+<p><strong>Do not lead with a claim that income mixing fell from 2017 to 2019.</strong> Its direction depends on the establishment population and weighting rule. A fixed-ID comparison is an essential sensitivity, but not an automatic correction: it excludes nonpersistent and invalid observations by construction. Even its increase can reflect origins, ACS estimates or measurement rather than the same people choosing more diverse venues.</p>
+<p>The immediate descriptive question remains whether comparisons between service types survive coherent within-establishment measurement and credible observation support. This accounting establishes a concrete reason to test those comparisons on fixed support, not a publishable behavioural mechanism by itself. The within-area venue-count association in note 89 survives the stable-ID check but remains descriptive; supply and preferences are not separately identified.</p>
+<p>Priorities 3 and 4 remain conditional Green Book linkage and independent opportunity-list feasibility. Priorities 5-8 retain their earlier novelty, timing, cohort and input gates; this calculation supplies none of those missing data. Failed public-facing concentration screens, negative equal- county validation, stopped shock designs and null/contrary attitude results are unchanged. No public-facing or downstream coefficient was estimated.</p>
+<h2 id="verification">Verification and reproducibility</h2>
+<p>Ten synthetic tests pass, including sign reversals, time reversal, missing years, changing stable support, invalid means/weights and small complements. All 12 empirical identities agree with a separate decimal calculation and the average of both sequential decompositions within 1e-10; the largest observed discrepancy is below 9e-17 in index units. The input hash matches the released summary. Its aggregation code confirms additive denominators on identical support. The first figure draft had clipped titles; it was archived and the final version passes text-boundary and visual checks.</p>
+<p>Code: <code>code/analysis/stable_support_accounting.py</code>; tests: <code>code/analysis/test_stable_support_accounting.py</code>; diagnostic protocol: <code>docs/protocols/stable_support_accounting_20261019.md</code>. Complete national results and source/code/protocol hashes are in <code>output/stable_support_accounting_20261019/</code>. Construction log 91 records commands and delivery state. The protocol records that the initial sign reversal was already known; this is not a preregistered discovery. Shared files are dated snapshots, not live data or repository access.</p>
+</main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>

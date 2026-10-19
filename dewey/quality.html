@@ -40,7 +40,7 @@ footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; 
   a { color: inherit; }
 }
 
-colgroup{display:none} figure{margin:28px 0} figure img, main img{max-width:100%;height:auto;display:block} figcaption{font-size:14px} table td:first-child{min-width:130px}
+colgroup{display:none} figure{margin:28px 0} figure img, main img{max-width:100%;height:auto;display:block} figcaption{font-size:14px}
 </style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
 :root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
 html, body, header, main, footer { background: var(--page); color: var(--ink); }
@@ -91,6 +91,7 @@ table { min-width: 620px; }
 <p><strong>Bottom line:</strong> the corrected 2017-19 files have passed substantial downstream checks, but the complete production pipeline and population representativeness have not been independently certified. The next priority is to reproduce the annual origin flows and inherited weights from a preselected sample of original weekly inputs, then assess coverage. More regressions cannot substitute for these checks.</p>
 <h2 id="current-quality-assessment">Current quality assessment</h2>
 <p><strong>Subsequent empirical update, 19 October:</strong> explicitly authorized read-only checks now reproduce the final-file accounting and isolate 2,399,249 stable venue IDs. The equally weighted income-diversity trend changes from -0.66 index points in the changing sample to +1.37 on stable IDs. This is a material composition warning, not a behavioural or causal result. See the <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">new results and four graphs</a> and <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/construction-audit.html">complete independent code audit</a>.</p>
+<p>The <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/composition.html">composition follow-up</a> now accounts exactly for the sign reversal without reopening restricted data. A separate <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/validation-prototype.html">validation prototype</a> passes 87 synthetic tests (179 subtests within those tests) and rejects the five audited input/cache failure classes. It is not wired into production and does not establish whether those anomalies occur in the actual inputs. The original five expected failures and outstanding weekly replication remain unchanged.</p>
 <p>The table combines the prior audit record with these separately labelled new checks. The literature discussion below remains an assessment of methods, not a claim that every proposed validation was performed.</p>
 <div class="table-scroll" tabindex="0"><table>
 <colgroup>
