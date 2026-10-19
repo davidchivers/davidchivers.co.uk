@@ -1,0 +1,279 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Dewey: urban-scale engineering check</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} code{overflow-wrap:anywhere}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Dewey: urban-scale engineering check</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>19 October 2026. Complete implementation note, adapter protocol, construction log, independent review and unchanged original urban-scale protocol. Adds artificial-only file-to-file verification; does not supersede historical findings, empirical gates, source permissions or the original research design. No private correspondence or provider rows. This is a documentation snapshot, not a Project upload or new city-size estimate.</p>
+<h1 id="urban-scale-analysis-file-to-file-pilot-prepared">Urban-scale analysis: file-to-file pilot prepared</h1>
+<p>19 October 2026. <strong>Software verification on artificial inputs, not a new empirical finding.</strong> This advances the implementation of the category/area/venue income-sorting question in note 93. It does not change the research ranking.</p>
+<h2 id="what-is-now-implemented">What is now implemented</h2>
+<p>The existing calculation helpers are connected to a bounded file-to-file pipeline. It joins annual origin flows to final POI metadata by venue ID, checks the income lookup, reconstructs ten home-area income-group masses and reconciles them to the saved indices before decomposing sorting. It checks both the preferred NHGIS and strict lookup variants, with separate support.</p>
+<p>The first proposed real-data run selects a fixed, outcome-blind approximately one-in-1,000 venue-ID sample. Full-file ID uniqueness, matching and category/ recorded-area agreement are checked before any sample result is accepted. Original file order cannot substitute for a join. Duplicate IDs, incompatible metadata or unexplained index disagreements stop the decomposition rather than quietly dropping the problematic observations.</p>
+<p>Unknown income remains excluded from the weighted calculation. Its known positive flow mass is reported separately; null weights have unknown mass. The pipeline also records missing geography/categories and explicitly marks single-group normalized information as undefined. It does not use annualized matched visits in place of the origin-flow denominator.</p>
+<h2 id="what-was-actually-tested">What was actually tested</h2>
+<p>All <strong>99 tests pass</strong>: 57 existing calculation/flow tests, 24 integration tests and 18 independent-review tests. An additional file-to-file smoke check used 10,000 artificial venues and selected 1,036 of them using a deliberately larger artificial sampling fraction. Batch sizes 17 and 257 produced identical outcomes and support, agreeing with an independent information calculation within 3.42e-15. The runs took 6.64 and 2.09 seconds on this computer.</p>
+<p>These timings are <strong>not a forecast for the real 4.9 GB flow file</strong>. Actual origin counts, JSON sizes, disk performance and full-file hashing remain untested. Memory is managed through batches, a disk-backed join index and explicit lookup/sample row caps; a hard per-record byte cap and peak-memory benchmark have not been implemented or measured.</p>
+<p>Independent review found two error-handling problems: private filesystem paths could appear in errors, and an extreme scalar mismatch could make its failure receipt invalid. Both are fixed and covered by passing regression tests. No restricted input rows were opened, copied or changed in this work.</p>
+<h2 id="what-still-needs-to-happen">What still needs to happen</h2>
+<p>The named permission request for <code>poi_annual_cbg_flows_2019.parquet</code> and <code>acs2019_cbg_harmonized_2020.parquet</code> remains outstanding. After approval is recorded, bind their exact fingerprints and run the engineering pilot locally alongside the already named final 2019 POI file. Detailed outputs remain in private storage; release requires a separate disclosure review.</p>
+<p>Even a passing reconstruction would not yet establish the city-size result. That needs verified metro boundaries/status and a matched population year. County-within-recorded-area is not a neighbourhood or shared commercial centre. This is destination-based sorting of recorded visits by <strong>home-area income</strong>, not personal income, resident exposure, interaction, preferences or an attitude effect. Original weekly replication and all earlier failed gates remain separate and unresolved where previously recorded.</p>
+<p>Verification: <code>output/urban_scale_adapter_20261019/synthetic_verification.json</code>. Full construction details: <code>docs/data_construction/98_urban_scale_engineering_adapter.md</code>. Public and shared delivery, if completed, is recorded separately; this note alone is not an upload or publication receipt.</p>
+<hr />
+<h1 id="urban-scale-engineering-adapter-prospective-scope">Urban-scale engineering adapter: prospective scope</h1>
+<p>19 October 2026. Frozen before the first adapter test. This supplements, and does not replace, <code>urban_scale_information_pilot_20261019.md</code>.</p>
+<h2 id="purpose-and-authorization">Purpose and authorization</h2>
+<p>Connect the existing pure flow parser and information decomposition through a bounded, file-to-file engineering pilot. This implementation round uses only artificial Parquet fixtures in temporary storage. No annual-flow or ACS rows are authorized by this protocol or by a software execution flag. Their named processing request remains unanswered. No original construction is changed.</p>
+<h2 id="fixed-source-and-interpretation-contract">Fixed source and interpretation contract</h2>
+<ul>
+<li>Year 2019; ACS five-year release ending in 2019; 2020 CBG geography as in the existing harmonized release. These are asserted provenance requirements, not facts inferred from a filename.</li>
+<li>Join <code>ID_STORE</code> by exact string in annual flow and final POI files, never by row order. Reject duplicate IDs in either input and duplicate <code>cbg</code> lookup keys. Scan the full input ID/metadata rosters even for a small pilot.</li>
+<li>Compare recorded <code>MSA_CODE</code> and <code>combined_category</code> in both venue inputs. Count missing-side IDs and conflicting metadata; any discrepancy stops all decomposition. Nulls are not silently matched to a real geography/category.</li>
+<li>Use literal final-file <code>SUB_CATEGORY</code> as K and <code>destination_county</code> as A. This is not the frozen 136-category comparison bridge or a fine-area menu. <code>MSA_CODE</code> is a recorded area code, not proof of metropolitan status.</li>
+<li>Reconstruct both <code>nat_decile_tdw</code> and <code>nat_decile_strict</code> separately. In the reviewed NHGIS builder, the preferred <code>tdw</code> slots are overwritten by the NHGIS values and <code>nat_decile_nhgis</code> is copied from <code>nat_decile_tdw</code>. Check this alias row by row when loading the lookup; never select a variant by its result. Null lookup groups mean unknown, not zero-income people. Other out-of-range labels fail instead of being silently recoded.</li>
+<li>Weights are recorded annual origin-flow mass, not annualized matched visits and not independent people. Missing income is excluded and the remaining positive mass renormalized. Retain known unclassified mass and null/zero weight counts. Absent flows are not observed zeros.</li>
+</ul>
+<h2 id="deterministic-engineering-selection-and-memory">Deterministic engineering selection and memory</h2>
+<p>The proposed empirical pilot selects IDs where the unsigned big-endian integer formed by the first eight bytes of SHA-256 of the exact UTF-8 ID is congruent to zero modulo 1,000. Freeze this before seeing outcomes. This is an engineering sample, not a national or city estimate; no selection weight is introduced. Synthetic tests may explicitly use smaller moduli or all artificial IDs.</p>
+<p>Use Parquet batches and a disk-backed SQLite join/uniqueness index outside the repository. Keep the small lookup in memory, with a 500,000-row hard cap, and retain at most 20,000 selected venues. Stop if either cap is exceeded; do not silently downsample or truncate. Decompose one recorded area and variant at a time through the already tested information function. Do not use a successful small artificial run as a full-volume performance forecast.</p>
+<h2 id="reconciliation-and-failure-behavior">Reconciliation and failure behavior</h2>
+<p>For every selected matched venue, compare each variant’s reconstructed fractionalization, entropy in nats, entropy divided by log(10), and national decile coverage to the corresponding final-file columns. Compare total known positive origin mass to <code>total_origin_visit_weight</code>, never to the annualized matched-visit variable. Numerical tolerances are fixed at absolute 1e-8 and relative 1e-9. A known-versus-undefined disagreement fails. Null weights still have unknown mass even if the known positive total reconciles.</p>
+<p>Unavailable or malformed flow objects, negative/nonfinite weights, invalid labels, duplicate JSON origins, changed input fingerprints or unhandled schema values fail closed. Preserve aggregate counts of scalar and metadata conflicts in private diagnostics. Do not simply discard discrepant selected venues and estimate on the remaining ones. Withhold every decomposition when an input or reconciliation gate fails.</p>
+<p>After reconciliation, explicitly account for selected rows excluded for missing recorded area, county, subcategory, or no classified mass. Use that priority for disjoint exclusion counts and report overlapping flags separately. A city with no classified support has no outcome. Single-group city entropy yields an undefined normalized outcome, never zero. Each variant has its own documented support; this is not a fixed-support comparison between variants.</p>
+<h2 id="provenance-verification-and-disclosure">Provenance, verification and disclosure</h2>
+<p>Require exact expected SHA-256 hashes of all three inputs before row reads; record size/mtime before hashing and verify them after processing. This checks ordinary concurrent changes, not a malicious writer preserving metadata. Bind the adapter, parser, decomposition and both protocols with hashes before and after execution. New output directories must be outside the repository; never overwrite an old run. SQLite working tables, city outcomes and receipts stay private. No automatic publication, release certification, network call, regression, source discovery or path default is provided.</p>
+<p>Tests must independently construct expected venue metrics, reorder inputs, alter one join/metric/group at a time, exercise cross-batch duplicates and sample invariance, and compare end-to-end output with independent artificial information calculations. Test failure receipts, unchanged input hashes, resource caps and redacted errors. A larger artificial smoke run establishes batching and reproducibility only. Record actual tests and limitations in a separate construction log without retroactively editing this protocol.</p>
+<hr />
+<h1 id="urban-scale-adapter-construction-and-verification-log">Urban-scale adapter construction and verification log</h1>
+<p>19 October 2026. Artificial-only implementation milestone following note 93. No real annual origin-flow/ACS row processing or city-size regression occurred.</p>
+<h2 id="source-and-decision-provenance">Source and decision provenance</h2>
+<p>The live schema receipt from note 93 was read, not the underlying three files. The already repository-held <code>build_nhgis_acs_2020_cbg.py</code> was inspected around <code>merge_reference_and_nhgis</code>: the preferred <code>tdw</code> slots are replaced by NHGIS values and <code>nat_decile_nhgis</code> is copied from <code>nat_decile_tdw</code>. The adapter checks that alias rather than silently using different groups. This code reading is not proof that the inherited production output used that exact source version.</p>
+<p>The existing <code>build_harmonized_poi_indices.py</code> was inspected around <code>compute_batch</code> and <code>finalize_variant</code>. This establishes the comparison column contract: national decile coverage, fractionalization, natural-log entropy and entropy/log(10), separately for preferred and strict variants. No data-side Tommy script, production import or original weekly source was opened or run.</p>
+<p>The prospective adapter protocol was written before its first test. It freezes the engineering sampling hash, resource limits, comparison tolerances, interpretation and failure rules. The original urban-scale protocol and both existing pure helper modules remain unchanged.</p>
+<h2 id="implementation">Implementation</h2>
+<p><code>run_urban_scale_engineering_pilot.py</code> exposes <code>execute_pilot</code>; there is no default source path or empirical CLI. The caller must supply the three paths, their expected SHA-256 hashes, explicit provenance years, source kind, a new private destination and an execution acknowledgement. That acknowledgement does not constitute human approval. The real annual-flow/ACS request is still pending; this implementation has only been called with artificial fixtures.</p>
+<p>Parquet records are read in batches. SQLite holds final-file metadata, the full seen-flow ID roster and selected group masses outside the repository. Unique keys are enforced for both venue inputs and the lookup. Venue metadata must agree by ID on both sides; a one-to-many join or positional match is not permitted. Lookup capacity is 500,000 rows; selected capacity is 20,000 venues. The first restricted engineering sample is SHA-256 exact-ID modulo 1,000, bucket zero, using the first eight digest bytes as an unsigned big-endian integer. The synthetic smoke test explicitly uses modulo 10 instead.</p>
+<p>Both lookup variants are reconstructed by the unchanged strict parser. Null income group means unknown; invalid/out-of-range labels fail. Known positive unclassified mass is excluded from each income distribution and recorded. Null weights, observed zero weights and unavailable flow objects are distinct. No missing-flow imputation, population adjustment, annualized-weight expansion, group-threshold change or sampling-weight estimator is introduced.</p>
+<p>All nine selected-venue scalar comparisons are binding: the common positive origin total and four measures for each variant. Tolerances are absolute 1e-8 and relative 1e-9; known-versus-undefined mismatches fail. Any mismatch stops every area decomposition, rather than selecting a concordant subset. Full roster/metadata checks also cover venues outside the engineering sample.</p>
+<p>Following successful reconciliation, missing recorded area, missing county, missing literal subcategory and no classified mass are disjoint exclusions in that priority. Overlapping flags and pre-geography mass totals are retained. Each variant has its own support; this is not a common-support contrast. No classified geographic support yields an explicit unavailable outcome; a single-group area has null normalized information, not zero. Existing <code>decompose_city_year_information</code> supplies both chain orders, direct-KL and entropy cross-checks on explicit ten-group vectors for each recorded area.</p>
+<h2 id="tests-repairs-and-actual-execution">Tests, repairs and actual execution</h2>
+<p>The initial 24 primary integration tests passed. The focused independent review reproduced two defect classes: preflight filesystem exceptions could expose local paths, and an extreme finite scalar difference could overflow the JSON diagnostic. Main corrected both and hardened exclusive JSON output. The reviewer verified source/output-path redaction, finite diagnostic failure, no partial JSON from nonfinite encoding, and no overwriting. No original protocol or historical result was rewritten to hide these repairs.</p>
+<p>One interim combined run returned nonzero because two old expected-failure markers now unexpectedly passed after the fixes. This was not a decomposition failure. Those markers were removed after independent verification. The final review has no open finding in its bounded scope; passing tests do not certify source correctness, licence compliance or production readiness.</p>
+<p>The final verifier executed <strong>99 methods</strong>, all passing with warnings treated as errors: 46 information, 11 flow, 24 integration, 18 independent. The full log and exact code/protocol fingerprints are retained in the output directory. The independently written tests calculate joint KL without calling the flow helper for their expected metrics. Tests cover join order, duplicates across batches, mismatch and definedness failures, missingness/exclusion accounting, sample/order invariance, resource caps, source changes and execution hashes.</p>
+<p>The same verifier generated three artificial Parquet files with 10,000 venue rows and a four-origin lookup in temporary storage. It selected 1,036 IDs, ran batch sizes 17 and 257, and compared all four artificial area/variant outcomes and support ledgers exactly. Both runs match a separate entropy calculation within 3.4139358007223564e-15. Timings are 6.6366886 and 2.0872255 seconds, including hashing and staged processing, not fixture generation or the unit suite. All artificial input bytes were unchanged. Temporary data files were removed by the fixture context; synthetic aggregate receipts remain.</p>
+<p>Verification completed at 21:04:00 UTC on 19 October. Runtime versions and all ten code/protocol hashes are recorded in <code>synthetic_verification.json</code>. Python 3.12.10, numpy 2.3.5, pandas 3.0.0 and pyarrow 23.0.1 were reused; no dependency was installed. No peak-memory, large-JSON or real-input runtime measurement was made. Row caps are not a hard byte bound.</p>
+<h2 id="reproduction-and-output-scope">Reproduction and output scope</h2>
+<p>From the project directory, using the existing scientific Python environment:</p>
+<pre class="text"><code>python -B -W error code/analysis/verify_urban_scale_engineering_pilot.py --output output/urban_scale_adapter_new_check</code></pre>
+<p>Choose a new output name: the verifier refuses to overwrite its earlier directory. It accepts no private-data argument, creates only artificial temporary Parquet files, runs the four focused suites and emits safe synthetic verification receipts. Its test fixtures are openly artificial, not disguised or transformed provider records. No full-repository suite was run.</p>
+<p><code>output/urban_scale_adapter_20261019/</code> contains the complete test log, <code>synthetic_verification.json</code>, and two artificial execution receipts. These are not actual city estimates. Real <code>execute_pilot</code> outputs, should it later be authorized, include a private working SQLite database, private area outcomes and a private receipt. None is automatically cleared for release. Source size/ mtime and execution-code hashes are checked at the end, not just at startup; this is not protection against a malicious concurrent writer preserving metadata. A pre-output path failure cannot safely write a receipt there.</p>
+<h2 id="delivery-and-remaining-prerequisites">Delivery and remaining prerequisites</h2>
+<p>Public artifacts and original-file correspondence are recorded by the separate documentation manifest and delivery receipt, not inferred from this log. The Project’s last verified 40-source snapshot is unchanged pending the specific consolidation decision. No upload/deletion retry, permission change, Teams message or substantive external-model submission was performed.</p>
+<p>The independent GPT-6.1 reviewer completed and was closed. Main integrated and verified the work. Real reconstruction requires named-file human approval and private fingerprint binding; city-size comparison additionally needs a vetted metro population/geography reference. Fine-area and structural claims require the further inputs in note 93. Upstream weekly replication remains distinct.</p>
+<hr />
+<h1 id="independent-urban-scale-adapter-review">Independent urban-scale adapter review</h1>
+<p>19 October 2026. Synthetic only. Main retains integration and design. Final disposition: all reported P2 defects fixed by main and independently verified. Review complete; no open findings in the reviewed scope.</p>
+<h2 id="material-findings-and-current-disposition">Material findings and current disposition</h2>
+<ol type="1">
+<li><p><strong>[P2, FIXED BY MAIN, VERIFIED] Redact output preflight filesystem errors too.</strong> The previous adapter resolved the supplied output and created it before entering the protected processing block. A regular synthetic input file used as the output’s parent raised a raw filesystem exception whose string contains an absolute local path, rather than a value-free <code>PilotError</code>. This matters because callers may log errors and DATA_POLICY requires keeping private local paths out of Git. Minimal reproduced case: use <code>paths['flow'] / 'artificial-output-marker'</code> as <code>private_output</code>. No source rows are read and no output is created. Regression test: <code>test_output_parent_error_is_redacted</code> now passes normally. Current <code>code/analysis/run_urban_scale_engineering_pilot.py:385</code> guards output resolution; lines 389-397 guard existence/directory creation with fixed <code>PilotError</code> messages. Existing-output preservation still passes. A pre-output failure need not create a receipt in an unsafe destination. The originally reproduced missing-SOURCE path leak is now <strong>FIXED BY MAIN, VERIFIED</strong>: lines 378-381 redact source-resolution errors to a fixed <code>PilotError</code>. <code>test_preflight_source_path_errors_are_redacted</code> now passes as a normal regression, without an expected-failure marker.</p></li>
+<li><p><strong>[P2, FIXED BY MAIN, VERIFIED] Keep mismatch diagnostics JSON-finite.</strong> The original <code>code/analysis/run_urban_scale_engineering_pilot.py:167</code> computed an unchecked absolute difference and stored it as <code>max_absolute_error</code>. A single finite reconstructed positive mass <code>1e308</code> and finite inherited total <code>-1e308</code> yield infinity. The reconciliation gate correctly rejects this mismatch, but originally the mandatory receipt write then raised <code>ValueError</code> from <code>allow_nan=False</code>, masked the <code>PilotError</code>, and left a truncated, invalid <code>private_execution_receipt.json</code>. Minimal reproduced case: one selected venue, one classified positive flow, matching diversity/coverage scalars, and the opposite-signed inherited total. No outcomes file is produced. Regression test: <code>test_extreme_scalar_mismatch_still_writes_failure_receipt</code> now passes as a normal regression. Main added an explicit finite-difference guard, currently at lines 171-172, before recording the error. It raises a fixed <code>PilotError</code> and the failed receipt remains valid JSON. No reviewer production edit was needed. This is an extreme-input robustness defect, not evidence of empirical scale problems or an observed release of restricted data.</p></li>
+</ol>
+<h2 id="fixed-versus-open">Fixed versus open</h2>
+<p>Production fixes were independently implemented by main, not this reviewer. All reproducers now pass as normal regressions. No expected-failure markers remain. Two additional focused tests verify only the new JSON writer behavior: nonfinite serialization creates no partial output; filesystem errors are redacted and exclusive output creation preserves existing bytes. No material regression was found in these specific changes. No additional correctness, reconciliation or release finding was substantiated in this bounded review.</p>
+<h2 id="executed-verification">Executed verification</h2>
+<p>Command, from the project directory:</p>
+<pre class="text"><code>python -B -m unittest discover -s code/analysis -p test_urban_scale_adapter_independent.py -v</code></pre>
+<p>Initial result: 15 test methods in 3.310 seconds; 13 passed and 2 expected failures. After main’s fixes and the output-parent counterexample: 16 methods in 3.345 seconds; 15 passed and 1 expected failure. Final run after output-path and JSON-writer hardening: <strong>18 methods in 3.770 seconds, all passed; zero expected failures, errors or failures</strong>. Python 3.12; pandas 3.0.0; pyarrow 23.0.1. Only artificial Parquet fixtures created in <code>TemporaryDirectory</code> outside the repository were processed. Tests do not print rows or caught path-bearing source exceptions.</p>
+<p>Verified behaviors:</p>
+<ul>
+<li>Independently calculated fractionalization, entropy, normalized entropy and positive-weight coverage for both preferred and strict group assignments. Expected values do not call the production flow parser.</li>
+<li>Independently calculated joint-KL information for venue, category, county and category/county partitions, checking all six raw and normalized components, both chain orders, separate variant support and private outcome hashes.</li>
+<li>Input reordering and batch sizes 1 versus 3 leave outcomes identical.</li>
+<li>Unselected ID or metadata mismatches stop every decomposition. Duplicate venue IDs and CBG lookup keys across row groups/batches fail closed.</li>
+<li>All nine inherited scalars reject numeric and definedness mismatches; input content hashes remain unchanged after the normal and failed synthetic runs.</li>
+<li>Missing known-income labels and absent lookup origins retain unclassified known mass; null weights remain counted separately; zero entries are counted. Disjoint geography/category exclusion priority and overlapping flags reconcile. Zero group entropy produces JSON-null normalized outcomes, not zero. All-unknown income produces no outcome and an explicit availability reason.</li>
+<li>Invalid lookup labels, preferred/NHGIS alias disagreement, lookup and selected venue caps stop instead of truncating. Cap tests use lower artificial limits.</li>
+<li>Malformed/unavailable JSON, duplicate origins, negative/nonfinite weights, booleans and string weights fail with redacted errors and no outcomes file.</li>
+<li>Wrong expected hashes fail before row reads. A controlled input-mtime change and controlled execution-hash change withhold outcomes. The latter mocks the hash return only; it does not modify production source files.</li>
+<li>Existing output directories are not overwritten. Receipts explicitly deny release authorization and bind the five execution/protocol files.</li>
+<li>Output-parent errors return redacted <code>PilotError</code>. <code>_write_json</code> (line 155) serializes finite JSON before opening; invalid nonfinite output leaves no partial file. JSON filesystem errors are redacted and existing output bytes survive exclusive-create failures.</li>
+</ul>
+<h2 id="boundaries-and-changed-paths">Boundaries and changed paths</h2>
+<p>No empirical execution, source rerun, restricted input reads, private-path searches, browsers, network calls, downloads or messages were used. The human approval remains limited to the three final files for the old bounded checks; annual-flow and ACS processing authorization remains pending. Execution flags do not expand that permission. No production code, protocol, STATUS or another worker’s test file was edited. No publication or release certification occurred.</p>
+<p>Changed paths owned by this review only:</p>
+<ul>
+<li><code>code/analysis/test_urban_scale_adapter_independent.py</code></li>
+<li><code>workstreams/urban_scale_adapter_review_20261019.md</code></li>
+</ul>
+<p>These tiny tests establish behavior, not full-volume memory/performance bounds, provider correctness, a validated geography, or readiness for empirical work. The disk index and explicit row/selection caps are present; per-record JSON and Parquet batch byte sizes have no separate hard byte cap. No large-memory claim was tested or inferred. Main’s primary integration suite is concurrent and is not counted as this reviewer’s executed verification.</p>
+<hr />
+<h1 id="urban-scale-and-income-sorting-prospective-implementation-protocol">Urban scale and income sorting: prospective implementation protocol</h1>
+<p>Date: 19 October 2026. Status: calculation implementation and synthetic tests; empirical reconstruction not yet authorized or run under this protocol. This is a new branch of the existing venue-variety question, not a replacement for notes 74, 75, 89 or 91, nor a restart of a failed causal design.</p>
+<h2 id="question-and-order-of-work">1. Question and order of work</h2>
+<p>Do larger metropolitan areas exhibit more separation of recorded visits by visitors’ <strong>home-area income group</strong>, and does that association arise across service categories, across destination areas, or across individual venues within the same category and destination area?</p>
+<p>First reconstruct and validate group-by-venue masses. Then establish a consistent metropolitan population/geography reference and describe the city-size association. Only then investigate comparable local menus and independent product differentiation. Do not estimate co-patron preferences from a residual or fit a structural model before these checks.</p>
+<p>The previous venue-count pilot is not this analysis. Its units were recorded area-category-year cells, its predictor was venue count, and it used racial within/between diversity summaries. A correlation after area/category controls is neither a city-population gradient nor the share caused by venue variety.</p>
+<h2 id="current-input-contract-and-what-was-actually-checked">2. Current input contract and what was actually checked</h2>
+<p><code>output/urban_scale_followup_20261019/source_schema_receipt.json</code> records an executed footer/schema-only check. No row groups or individual data values were read. Matching footer row counts do not verify a one-to-one merge.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Existing input</th>
+<th>Verified footer</th>
+<th>Role and limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>poi_annual_cbg_flows_2019.parquet</code></td>
+<td>3,526,891 rows; 4.909 GB decimal</td>
+<td><code>ID_STORE</code>, recorded <code>MSA_CODE</code>, <code>combined_category</code>, <code>cbg_visits_json</code>. Candidate source of annual origin-to-venue weights, not a complete observed choice set.</td>
+</tr>
+<tr>
+<td><code>acs2019_cbg_harmonized_2020.parquet</code></td>
+<td>242,747 rows; 30.295 MB decimal</td>
+<td>Origin CBG lookup, income variables and national/MSA decile labels. Does not contain an explicit origin-MSA identifier or venue coordinates.</td>
+</tr>
+<tr>
+<td><code>poi_indices_harmonized_2019.parquet</code></td>
+<td>3,526,891 rows; 2.472 GB decimal</td>
+<td>Venue ID, subcategory, recorded MSA, destination county, coverage, visits and scalar indices. Contains income entropy/fractionalization, but not the ten income-group masses/shares; no latitude/longitude.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The three files have unchanged size/mtime across the metadata check. This is not a new full-content hash verification. Source-file paths remain in private execution configuration, not in a public packet.</p>
+<p>The previous approval covers named final POI files and private summaries for bounded checks. A separate request now names the annual-flow file and ACS lookup for local, read-only 2019 reconstruction. Do not process their rows until David approves and DATA_POLICY records that scope. No new acquisitions, employee files, original weekly flows, or external-model transmission follow from that approval.</p>
+<h2 id="group-definitions-and-retained-observation-universe">3. Group definitions and retained observation universe</h2>
+<p>For the engineering pilot, use the existing <code>nat_decile_tdw</code> labels, 1-10, with the preferred NHGIS-harmonized lookup. This reproduces the project’s existing national <strong>CBG median-household-income</strong> ranking; it is not a ranking of individuals, wages, or per-capita income. The historical construction uses unweighted CBG quantiles, not equal population groups. Keep the ACS 5-year release ending in the mobility year: 2015-2019 ACS for 2019, as documented in construction log 20. Do not switch the income variable or ACS wave silently.</p>
+<p>For the substantive city comparison, a local-rank definition requires an audited origin-CBG-to-metro map and common vintage. Existing origin-MSA decile labels alone cannot establish that an incoming visitor is ranked against the destination metro. Freeze one of the following before estimating:</p>
+<ol type="1">
+<li>Resident-based activity: origins resident in a metro, destinations visited by those residents, with explicit treatment of out-of-metro destinations.</li>
+<li>Destination-based clientele: venues inside a metro and all retained origins, using national groups, or a separately constructed destination-relative threshold assignment applicable to all origins.</li>
+</ol>
+<p>The first technical pilot is explicitly the second, using national groups and recorded area codes. It is not the resident exposure/attitudes object and not a definitive large-city result. Display this on every empirical output.</p>
+<p>Rebuild observed group mass <code>x[g,j]</code> by summing valid positive origin weights whose income group is known. Unknown CBG income is excluded from numerator and denominator; never impute zero, the median or a group. Report excluded known-weight mass separately from null/invalid weights whose mass is unknown. Track strict and preferred linkage variants as a planned sensitivity, not a post-result selection. Absent origin-venue pairs are unreported, not observed zero visitation. The conditional distribution describes retained recorded flows; it does not repair upstream suppression or unequal observation.</p>
+<h2 id="exact-decomposition">4. Exact decomposition</h2>
+<p>Within one city-year and one fixed retained universe, let <code>x[g,j]</code> be valid group-by-venue mass, <code>T = sum(g,j) x[g,j]</code>, and <code>p[g,j] = x[g,j]/T</code>. Every venue has exactly one category K and destination area A in that run. Let H denote entropy in natural-log units (nats).</p>
+<p><code>I(G;J) = H(G) - sum(j) p[j] H(G | j)</code></p>
+<p>Category-first chain rule:</p>
+<p><code>I(G;J) = I(G;K) + I(G;A | K) + I(G;J | A,K)</code>.</p>
+<p>Area-first sensitivity:</p>
+<p><code>I(G;J) = I(G;A) + I(G;K | A) + I(G;J | A,K)</code>.</p>
+<p>Both totals and the final within-area/category term must agree. Attribution between the first two terms depends on the ordering; neither is a causal effect. An optional order-averaged allocation must be labelled an accounting convention, not an identified contribution of geography or category.</p>
+<p>Report raw nats and components divided by the same city-year H(G). H(G)=0 means normalized separation is undefined, not zero. Also report H(G), retained mass, support and coverage. Do not normalize each component by a different conditional entropy or compare different samples and call the sum exact. Income-group composition and group thresholds can affect comparisons even after entropy normalization.</p>
+<p>Scalar entropy/fractionalization at each venue cannot recover this object: two homogeneous venues may serve the same group or entirely different groups. Their individual diversity scores are identical in both cases; the pooled composition and between-venue separation are different. Group identities and masses must therefore be reconstructed. Do not infer them from venue means.</p>
+<h2 id="empirical-stages-and-stop-rules">5. Empirical stages and stop rules</h2>
+<h3 id="a.-bounded-2019-reconstruction-only-after-permission">A. Bounded 2019 reconstruction, only after permission</h3>
+<ul>
+<li>Hash the named inputs once, record source sizes/mtime and code/environment.</li>
+<li>Audit unique venue IDs in both files and unique CBG IDs in the lookup. Join explicitly by ID, never by row position or equal row counts.</li>
+<li>Compare flow and final-file recorded MSA/category metadata. Preserve and report conflicts; do not silently choose the convenient version.</li>
+<li>Reconstruct national-group masses in bounded batches. Retain detailed diagnostics in a new PRS directory, with inputs read-only and no raw logging.</li>
+<li>Reconcile total positive flow, national-group coverage, national entropy and fractionalization against their existing final-file counterparts on the same rows/variants. Use explicit absolute/relative numerical tolerances, record every exclusion class, and stop inference on unexplained failures.</li>
+<li>Compute the accounting only on verified common support. Initial A is destination county because that is present, not a neighbourhood or centre. Produce coverage diagnostics before interpreting levels or comparisons.</li>
+<li>A deterministic small engineering sample establishes code feasibility only; it is not a national estimate. Freeze any sample selection before running.</li>
+</ul>
+<h3 id="b.-city-size-gradient-not-available-from-the-three-files-alone">B. City-size gradient, not available from the three files alone</h3>
+<p>Audit a fixed county-to-metro definition, distinguish metropolitan from micropolitan codes, and acquire/verify a population denominator for that same year and boundary. Do not substitute venue count for population or label all 933 recorded codes metropolitan areas. Freeze the sample/weights/controls before reading gradients. Initial descriptive regression for each component:</p>
+<p><code>D[m] = alpha + beta * log(population[m]) + error[m]</code>.</p>
+<p>Use the same metro sample and design matrix for the total and all components. Then OLS component slopes add to the total slope by linearity. This is an accounting decomposition of an association, not a mediation or causal model. Report unweighted-metro results first and a predeclared population-weighted sensitivity, with support, leverage and uncertainty appropriate to metro units. Any pooled 2017-2019 specification needs year effects and dependence across repeated metros; 2019-only is the first independent implementation. Do not present beta as a causal effect of growing a city.</p>
+<h3 id="c.-fine-area-and-shared-menu-mechanisms">C. Fine-area and shared-menu mechanisms</h3>
+<p>Obtain a licensed historical <code>ID_STORE</code>-to-coordinates/brand bridge and audit its identity, date and match-selection. County-within-metro is too coarse to establish sorting within a shared commercial centre. Freeze multiple spatial definitions (fixed-size grids and independently defined centres) rather than choosing the one yielding the desired gradient.</p>
+<p>For nearby-origin/shared-menu tests, require independent venue availability, origin/destination geography and credible travel costs. Jointly visited venues are selected outcomes, not a feasible menu. Restricting to a chain controls only some differentiation; it does not fix prices, hours, size or access. Without these inputs, report descriptive conditional distributions, not taste parameters. Aggregate home-origin records do not reveal direct home-venue-home trips.</p>
+<h3 id="d.-simulations-model-and-causal-follow-ups">D. Simulations, model and causal follow-ups</h3>
+<p>Synthetic permutations may illustrate the mechanical rise in measured separation with smaller venue samples. Do not permute annualized weights as independent people or treat their sum as a sample size. An empirical finite-observation correction needs the provider’s actual observation and suppression process, effective counts, and an appropriate dependence model.</p>
+<p>Only after A-C pass, consider a common-parameter gravity/choice model with held-out cities. Estimate access/attractiveness/product terms before any co-patron term. Endogenous crowd composition is not a separately identified preference. Product/menu counterfactuals must reallocate visits and account for capacity; dropping venues or merging labels is measurement sensitivity, not a behavioural counterfactual.</p>
+<p>An openings design requires credible externally driven variation, complete nearby-network reallocation and residential/pretrend checks. Ordinary entry is endogenous. A randomized menu/differentiation experiment would need a new protocol, budget and ethics approvals. None is launched by this document.</p>
+<h2 id="verification-disclosure-and-interpretation">6. Verification, disclosure and interpretation</h2>
+<p>Use independent entropy and direct-KL calculations; test category-only, area-only, within-cell-only and mixed cases; compare both chain orders; test relabeling and scale invariance, absent groups, invalid nesting, duplicates, negative/nonfinite weights, and zero-entropy groups. Synthetic tests establish calculation behavior, not source-data quality.</p>
+<p>Detailed cell/venue results and private provenance stay in PRS. Release only separately disclosure-reviewed aggregates: prohibit overlapping counts/means that reveal small complements, including via differencing with earlier releases. Do not reuse concentration bounds for a different signed component. No public raw flows, venue group vectors, locations or origin identifiers.</p>
+<p>Retain null gradients and all planned sensitivities. The substantive question is whether the pattern survives measurement checks, not how to obtain a positive coefficient. Historical correction 70a, negative equal-county validation, failed worker-score/concentration gates and stopped causal designs are unaffected. This work cannot identify personal income, face-to- face contact, worker demographics, preferences, or attitude effects.</p>
+<section><h2>Source identity and scope</h2><ul><li><code>notes/98_urban_scale_engineering_adapter.md</code>: Complete implementation note; no empirical result; SHA-256 <code>37a056c41784b1649648309c7a077a8d15d523f11acae96b0220057b784e53df</code>.</li><li><code>docs/protocols/urban_scale_engineering_adapter_20261019.md</code>: Complete prospective adapter protocol; SHA-256 <code>f9765748d6e9ae66783ea54168cfa9bb0ccaf049d7ae40287707b7f5bd2457a4</code>.</li><li><code>docs/data_construction/98_urban_scale_engineering_adapter.md</code>: Complete construction and verification log; SHA-256 <code>8ac22927e2261c8d13c51a232b927a2635ac8f107475b2be2d3df08a7d4a5748</code>.</li><li><code>workstreams/urban_scale_adapter_review_20261019.md</code>: Complete independent review and repair dispositions; SHA-256 <code>af7aaeb3532bf0bda600ff2a76d0166954024f916b83521c4f9f4aeb43936e78</code>.</li><li><code>docs/protocols/urban_scale_information_pilot_20261019.md</code>: Complete original protocol; unchanged historical snapshot; SHA-256 <code>7ddc819bf4099025813b152d946df7a05183ccbf0d3d5912f6473495334282ea</code>.</li><li><code>code/analysis/run_urban_scale_engineering_pilot.py</code>: Complete safe code, protocol or synthetic receipt; SHA-256 <code>d61ccb391006ccaa3ce799f39ef03f6eb6374efe7d1a9504e4a86bd5524ca80a</code>.</li><li><code>code/analysis/urban_scale_flow_contract.py</code>: Complete safe code, protocol or synthetic receipt; SHA-256 <code>efec15c5930b626d2f30e358688e292ce5733d3d4cb4d13babaced5761e83ddd</code>.</li><li><code>code/analysis/urban_scale_information.py</code>: Complete safe code, protocol or synthetic receipt; SHA-256 <code>af6cb861d5db077006d77f1d2b0972ce6edb07a60edf9a18cc362654f6986c66</code>.</li><li><code>code/analysis/verify_urban_scale_engineering_pilot.py</code>: Complete safe code, protocol or synthetic receipt; SHA-256 <code>81b27d5d1de066e58e855fa8a42f10af530425ce3964586945f6fd27d1b84869</code>.</li><li><code>code/analysis/test_urban_scale_information.py</code>: Complete safe code, protocol or synthetic receipt; SHA-256 <code>4d0f341c584d0956f0c7be1d4f8eca46fa60e148ec619865211030997bbf79e9</code>.</li><li><code>code/analysis/test_urban_scale_flow_contract.py</code>: Complete safe code, protocol or synthetic receipt; SHA-256 <code>7ccee78c372d9ccd0b9c344032bb23cd20465cf954d64c404e374c3e3cebfb0c</code>.</li><li><code>code/analysis/test_urban_scale_engineering_pilot.py</code>: Complete safe code, protocol or synthetic receipt; SHA-256 <code>cf280b031ecd106ee978f74c5750f2c9af0156b7af1d13e42430fcf12b3abbdc</code>.</li><li><code>code/analysis/test_urban_scale_adapter_independent.py</code>: Complete safe code, protocol or synthetic receipt; SHA-256 <code>6d16eb4440a29511331eb2bafc9d7d4630fd50792172d94cb8011724a615572e</code>.</li><li><code>output/urban_scale_adapter_20261019/synthetic_verification.json</code>: Complete safe code, protocol or synthetic receipt; SHA-256 <code>8fbf5863d047942aec32364fdb8994ca116d1ef76e0006a323636588a51076b7</code>.</li></ul></section></main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>
