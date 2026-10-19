@@ -1,0 +1,470 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Income diversity: what missing information can change</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} figure{margin:28px 0} figure img,main img{max-width:100%;height:auto;display:block} figcaption{font-size:14px}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Income diversity: what missing information can change</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>19 October 2026. National missingness diagnostic on the existing 2017-2019 final files. New calculations, not a new income measure, regression or replication of the original weekly construction.</p>
+<h2 id="main-finding">Main finding</h2>
+<p><strong>The small national income-diversity trends should not be presented as robust increases or decreases.</strong> The earlier estimates reproduce, but none of twelve prespecified year-change comparisons has a sign established by the conservative missing-income bounds. This applies to both the changing common sample and stable recorded venue IDs, under both weighting schemes.</p>
+<p>For example, the visit-weighted 2017-2019 increase in the changing common sample is <strong>0.77 index points</strong>. Its outer interval is <strong>-0.96 to +2.52</strong>. Holding recorded venue IDs fixed gives <strong>+1.11</strong>, with an interval of <strong>-0.63 to +2.86</strong>. These are not confidence intervals or significance tests. Containing zero does not show that the true change is zero, that missing income caused the observed pattern, or even that both endpoints are jointly attainable. It means this deliberately conservative check cannot certify the direction.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr>
+<th>2017-2019 sample</th>
+<th>Weighting</th>
+<th style="text-align: right;">Original change</th>
+<th style="text-align: right;">Lower limit</th>
+<th style="text-align: right;">Upper limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Changing common sample</td>
+<td>Each venue equally</td>
+<td style="text-align: right;">-0.661</td>
+<td style="text-align: right;">-2.297</td>
+<td style="text-align: right;">+1.058</td>
+</tr>
+<tr>
+<td>Changing common sample</td>
+<td>Annualized matched visits</td>
+<td style="text-align: right;">+0.771</td>
+<td style="text-align: right;">-0.961</td>
+<td style="text-align: right;">+2.524</td>
+</tr>
+<tr>
+<td>Stable recorded IDs</td>
+<td>Each venue equally</td>
+<td style="text-align: right;">+1.365</td>
+<td style="text-align: right;">-0.274</td>
+<td style="text-align: right;">+3.053</td>
+</tr>
+<tr>
+<td>Stable recorded IDs</td>
+<td>Annualized matched visits</td>
+<td style="text-align: right;">+1.107</td>
+<td style="text-align: right;">-0.627</td>
+<td style="text-align: right;">+2.857</td>
+</tr>
+</tbody>
+</table></div>
+<p>All entries are changes in fractionalization multiplied by 100. The full tables also retain 2017-2018 and 2018-2019; none is selected away.</p>
+<h2 id="what-was-measured">What was measured</h2>
+<p>The input is <code>ses_frac_nat_tdw</code>: within-venue diversity across ten national rank groups of visitors’ home-CBG median household income. CBGs, not people, determine the rank cutoffs. The index is one minus the sum of squared group shares, so it is zero for a single group and reaches 0.9 when all ten group shares are equal. Displaying it times 100 gives a maximum of 90, not 100.</p>
+<p>This describes the mix of <strong>home-area income backgrounds</strong> among recorded origin weights. It does not observe visitors’ personal incomes or simultaneous encounters. It is not the separate per-capita-income extension and does not measure racial diversity.</p>
+<p>Some recorded origin weight cannot be assigned to an income group. The existing producer excludes it from the classified-income distribution. The check uses its stored coverage and largest classified-group share to bound what the recorded-mass index could be under alternative allocations of that unclassified weight. No missing income is filled in, no original index is overwritten, and the stored bins and venue weights remain fixed.</p>
+<p>The mean classified coverage in 2019 is 97.33% under visit weighting in the changing common sample (97.78% under equal-venue weighting). These are weighted averages of venue-specific coverage, <strong>not</strong> a pooled national share of all real visits. In that year’s visit-weighted calculation, the existing level is 79.10 and the envelope is 78.33 to 80.16. A modest allowance around levels is still material compared with a small year-to-year change.</p>
+<h2 id="samples-and-verification">Samples and verification</h2>
+<p>The run processed only the approved final files and retained the prior common-valid sample: <strong>8,875,712 venue-year records</strong>, including <strong>2,399,249 stable recorded IDs</strong>. Stability means valid in all three years with unchanged recorded area/category, not verified continuity of the same business. This is not the more restrictive service-ranking sample.</p>
+<p>Both equal-venue and annualized matched-visit averages are reported separately. Neither is an independently sampled national average of individuals. The 12 level settings and 12 year contrasts were fixed before these bounds were calculated, after historical trends were already known. The diagnostic is therefore prospective relative to this calculation, not preregistered.</p>
+<p>All three source hashes match the earlier release; source size/modification metadata remain unchanged. Counts, area/category support, weights, original means and visit-weighted coverage reproduce the previous national results. The largest mean discrepancy is below 2.34e-14 in unscaled index units. Independent batched Python and SQL calculations agree within 1.12e-13. Every retained row passes the fractionalization/dominance feasibility checks. This is a successful downstream consistency check, not certification of the original weekly data or all records excluded from the common sample.</p>
+<p>The private full-file pass, including hashes and reconstruction, took 797.70 seconds (13.3 minutes). The separate mathematical, runner and export suites contain 93 passing artificial-data tests. Their success is not evidence of population representativeness or identification.</p>
+<h2 id="what-this-changes">What this changes</h2>
+<p>Keep the national time trend as a qualified descriptive result rather than a headline that mixing increased. Continue the spatial/service accounting proposed in note 93, conditional on its input and measurement gates; this test does not estimate its city-size components. It also does not validate category rankings, racial results, public-facing coefficients, attitudes associations or the expected-worker proxy.</p>
+<p>Recovering labelled income-group masses can support a sharper analysis; scalar diversity scores cannot supply those vectors. Before further claims, retain the original construction audit, fixed-sample sensitivities and an explicit account of the observation process. Do not change specifications until a trend becomes positive or an interval excludes zero.</p>
+<h2 id="limits-of-the-bounds">Limits of the bounds</h2>
+<p>The lower endpoint is sharp for an isolated venue with its known classified composition. The upper endpoint is conservative. Missing origins may visit multiple venues, so independently assigning their income across venues relaxes a real consistency constraint. The national envelopes are consequently outer bounds, not necessarily jointly attainable extrema.</p>
+<p>They cover only unclassified income within <strong>recorded positive origin weights</strong>, conditional on the retained sample, stored annual weights and year-specific bins. They do not cover wholly unreported/suppressed flows, missing venues, incorrect observed incomes, within-CBG heterogeneity, ACS uncertainty, changing cutoffs, geographic interpolation or selection into recorded visits. Four-group racial composition has a different denominator and is not covered by these income formulas.</p>
+<p>Source and replication records: the three final <code>poi_indices_harmonized_2017/2018/2019.parquet</code> files; the unchanged reviewed category bridge; the prior national <code>continuity_results.json</code>; the separate income-missingness protocol; and construction log 94. Only a reviewed national aggregate excerpt is eligible for the public packet. No venue, origin, category-cell or private-path data are included. Original protocols, historical results, correction 70a and all failed inference gates remain in force.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/income_missingness_levels.png" alt="National income-diversity levels and conservative missing-income bounds" />
+<figcaption aria-hidden="true">National income-diversity levels and conservative missing-income bounds</figcaption>
+</figure>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/income_missingness_changes.png" alt="2017-2019 changes and conservative bounds, under both samples and weights" />
+<figcaption aria-hidden="true">2017-2019 changes and conservative bounds, under both samples and weights</figcaption>
+</figure>
+<h2 id="complete-national-levels">Complete national levels</h2>
+<p>Values are fractionalization x 100; coverage is percent.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr>
+<th>Sample</th>
+<th style="text-align: right;">Year</th>
+<th>Weight</th>
+<th style="text-align: right;">Observed</th>
+<th style="text-align: right;">Lower</th>
+<th style="text-align: right;">Upper</th>
+<th style="text-align: right;">Coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Changing common sample</td>
+<td style="text-align: right;">2017</td>
+<td>Each venue equally</td>
+<td style="text-align: right;">68.589</td>
+<td style="text-align: right;">67.979</td>
+<td style="text-align: right;">69.494</td>
+<td style="text-align: right;">98.140</td>
+</tr>
+<tr>
+<td>Changing common sample</td>
+<td style="text-align: right;">2018</td>
+<td>Each venue equally</td>
+<td style="text-align: right;">68.202</td>
+<td style="text-align: right;">67.553</td>
+<td style="text-align: right;">69.183</td>
+<td style="text-align: right;">98.024</td>
+</tr>
+<tr>
+<td>Changing common sample</td>
+<td style="text-align: right;">2019</td>
+<td>Each venue equally</td>
+<td style="text-align: right;">67.928</td>
+<td style="text-align: right;">67.197</td>
+<td style="text-align: right;">69.037</td>
+<td style="text-align: right;">97.781</td>
+</tr>
+<tr>
+<td>Changing common sample</td>
+<td style="text-align: right;">2017</td>
+<td>Matched-visit weighted</td>
+<td style="text-align: right;">78.333</td>
+<td style="text-align: right;">77.634</td>
+<td style="text-align: right;">79.294</td>
+<td style="text-align: right;">97.629</td>
+</tr>
+<tr>
+<td>Changing common sample</td>
+<td style="text-align: right;">2018</td>
+<td>Matched-visit weighted</td>
+<td style="text-align: right;">78.593</td>
+<td style="text-align: right;">77.880</td>
+<td style="text-align: right;">79.560</td>
+<td style="text-align: right;">97.547</td>
+</tr>
+<tr>
+<td>Changing common sample</td>
+<td style="text-align: right;">2019</td>
+<td>Matched-visit weighted</td>
+<td style="text-align: right;">79.104</td>
+<td style="text-align: right;">78.333</td>
+<td style="text-align: right;">80.158</td>
+<td style="text-align: right;">97.327</td>
+</tr>
+<tr>
+<td>Stable recorded venue IDs</td>
+<td style="text-align: right;">2017</td>
+<td>Each venue equally</td>
+<td style="text-align: right;">69.829</td>
+<td style="text-align: right;">69.207</td>
+<td style="text-align: right;">70.749</td>
+<td style="text-align: right;">98.096</td>
+</tr>
+<tr>
+<td>Stable recorded venue IDs</td>
+<td style="text-align: right;">2018</td>
+<td>Each venue equally</td>
+<td style="text-align: right;">70.084</td>
+<td style="text-align: right;">69.435</td>
+<td style="text-align: right;">71.045</td>
+<td style="text-align: right;">98.012</td>
+</tr>
+<tr>
+<td>Stable recorded venue IDs</td>
+<td style="text-align: right;">2019</td>
+<td>Each venue equally</td>
+<td style="text-align: right;">71.194</td>
+<td style="text-align: right;">70.475</td>
+<td style="text-align: right;">72.260</td>
+<td style="text-align: right;">97.772</td>
+</tr>
+<tr>
+<td>Stable recorded venue IDs</td>
+<td style="text-align: right;">2017</td>
+<td>Matched-visit weighted</td>
+<td style="text-align: right;">78.464</td>
+<td style="text-align: right;">77.762</td>
+<td style="text-align: right;">79.433</td>
+<td style="text-align: right;">97.611</td>
+</tr>
+<tr>
+<td>Stable recorded venue IDs</td>
+<td style="text-align: right;">2018</td>
+<td>Matched-visit weighted</td>
+<td style="text-align: right;">78.861</td>
+<td style="text-align: right;">78.148</td>
+<td style="text-align: right;">79.829</td>
+<td style="text-align: right;">97.533</td>
+</tr>
+<tr>
+<td>Stable recorded venue IDs</td>
+<td style="text-align: right;">2019</td>
+<td>Matched-visit weighted</td>
+<td style="text-align: right;">79.571</td>
+<td style="text-align: right;">78.805</td>
+<td style="text-align: right;">80.618</td>
+<td style="text-align: right;">97.316</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="complete-year-change-family">Complete year-change family</h2>
+<p>Intervals are mathematical outer bounds, not confidence intervals.</p>
+<div class="table-scroll" tabindex="0"><table style="width:100%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr>
+<th>Sample</th>
+<th>Weight</th>
+<th>Years</th>
+<th style="text-align: right;">Observed change</th>
+<th style="text-align: right;">Lower</th>
+<th style="text-align: right;">Upper</th>
+<th>Sign robust?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Changing common sample</td>
+<td>Each venue equally</td>
+<td>2017-2018</td>
+<td style="text-align: right;">-0.387</td>
+<td style="text-align: right;">-1.941</td>
+<td style="text-align: right;">+1.203</td>
+<td>not established</td>
+</tr>
+<tr>
+<td>Changing common sample</td>
+<td>Each venue equally</td>
+<td>2017-2019</td>
+<td style="text-align: right;">-0.661</td>
+<td style="text-align: right;">-2.297</td>
+<td style="text-align: right;">+1.058</td>
+<td>not established</td>
+</tr>
+<tr>
+<td>Changing common sample</td>
+<td>Each venue equally</td>
+<td>2018-2019</td>
+<td style="text-align: right;">-0.274</td>
+<td style="text-align: right;">-1.986</td>
+<td style="text-align: right;">+1.484</td>
+<td>not established</td>
+</tr>
+<tr>
+<td>Changing common sample</td>
+<td>Matched-visit weighted</td>
+<td>2017-2018</td>
+<td style="text-align: right;">+0.260</td>
+<td style="text-align: right;">-1.415</td>
+<td style="text-align: right;">+1.926</td>
+<td>not established</td>
+</tr>
+<tr>
+<td>Changing common sample</td>
+<td>Matched-visit weighted</td>
+<td>2017-2019</td>
+<td style="text-align: right;">+0.771</td>
+<td style="text-align: right;">-0.961</td>
+<td style="text-align: right;">+2.524</td>
+<td>not established</td>
+</tr>
+<tr>
+<td>Changing common sample</td>
+<td>Matched-visit weighted</td>
+<td>2018-2019</td>
+<td style="text-align: right;">+0.511</td>
+<td style="text-align: right;">-1.227</td>
+<td style="text-align: right;">+2.278</td>
+<td>not established</td>
+</tr>
+<tr>
+<td>Stable recorded venue IDs</td>
+<td>Each venue equally</td>
+<td>2017-2018</td>
+<td style="text-align: right;">+0.255</td>
+<td style="text-align: right;">-1.314</td>
+<td style="text-align: right;">+1.838</td>
+<td>not established</td>
+</tr>
+<tr>
+<td>Stable recorded venue IDs</td>
+<td>Each venue equally</td>
+<td>2017-2019</td>
+<td style="text-align: right;">+1.365</td>
+<td style="text-align: right;">-0.274</td>
+<td style="text-align: right;">+3.053</td>
+<td>not established</td>
+</tr>
+<tr>
+<td>Stable recorded venue IDs</td>
+<td>Each venue equally</td>
+<td>2018-2019</td>
+<td style="text-align: right;">+1.110</td>
+<td style="text-align: right;">-0.569</td>
+<td style="text-align: right;">+2.825</td>
+<td>not established</td>
+</tr>
+<tr>
+<td>Stable recorded venue IDs</td>
+<td>Matched-visit weighted</td>
+<td>2017-2018</td>
+<td style="text-align: right;">+0.397</td>
+<td style="text-align: right;">-1.285</td>
+<td style="text-align: right;">+2.067</td>
+<td>not established</td>
+</tr>
+<tr>
+<td>Stable recorded venue IDs</td>
+<td>Matched-visit weighted</td>
+<td>2017-2019</td>
+<td style="text-align: right;">+1.107</td>
+<td style="text-align: right;">-0.627</td>
+<td style="text-align: right;">+2.857</td>
+<td>not established</td>
+</tr>
+<tr>
+<td>Stable recorded venue IDs</td>
+<td>Matched-visit weighted</td>
+<td>2018-2019</td>
+<td style="text-align: right;">+0.710</td>
+<td style="text-align: right;">-1.023</td>
+<td style="text-align: right;">+2.470</td>
+<td>not established</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="methods-and-downloads">Methods and downloads</h2>
+<p><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/income_missingness_public_results.json">Reviewed national results</a> | <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/income_missingness_tables.md">Full tables</a></p>
+<h2 id="full-diagnostic-protocol">Full diagnostic protocol</h2>
+<p>19 October 2026. Prospective diagnostic, written after the historical diversity levels/trends are known but before this calculation. Not a preregistration. Do not overwrite previous protocols, final inputs or empirical results.</p>
+<h2 id="question-and-authorized-scope">Question and authorized scope</h2>
+<p>Could unknown home-area income among the <strong>recorded positive origin weights</strong> change the reported national within-venue income-diversity means or their 2017-2019 changes? This is a missingness robustness check using the three already approved final <code>poi_indices_harmonized_2017/2018/2019.parquet</code> files, their recorded national-decile coverage, fractionalization and dominance. The unchanged reviewed category bridge and existing audit sample definitions are retained. No original origin-flow/ACS lookup or weekly processing is used.</p>
+<p>This scope falls under David’s explicit final-file missingness authorization recorded in DATA_POLICY. It does not satisfy the separate pending permission for Eren’s annual-flow reconstruction. No new data acquisition or unrestricted regression is implied. Detailed processing and provenance stay in PRS.</p>
+<h2 id="object-and-bounds">Object and bounds</h2>
+<p>For one venue-year, c is the share of recorded positive origin mass assigned to one of ten national home-CBG median-household-income rank groups. Within classified mass, p is the group-share vector, F=1-sum(p^2) is the stored fractionalization and m=max(p) is stored dominance. K=10 is fixed. This is not personal income, per-capita income, wages or equal-population income bins. Keep the original year-matched ACS release and existing rank definitions.</p>
+<p>Let r be any distribution of the unclassified mass across the same fixed groups. The resulting recorded-mass composition is q=c<em>p+(1-c)</em>r. We do not assign r in the data or replace F. We report mathematical envelopes over it.</p>
+<p>The pointwise lower bound is</p>
+<p><code>L = 1 - c^2*(1-F) - 2*c*(1-c)*m - (1-c)^2</code>.</p>
+<p>It is attained for an isolated venue by putting all unclassified mass in the group already largest in p. Convexity of squared norm proves this maximum concentration occurs at a simplex vertex; choose the largest p coordinate.</p>
+<p>A conservative upper bound using only available scalar moments is</p>
+<p><code>U = min(1-1/K, 1-c^2*(1-F)-(1-c)^2/K)</code>.</p>
+<p>This drops a nonnegative cross term and uses sum(r^2)&gt;=1/K. It is generally not sharp. At c=1 both limits equal F; at c=0 use [0,1-1/K] without inferring a missing p. The main empirical sample has c&gt;0 by historical construction. The independent reviewer may reject a faulty bound but may not change the empirical family after inspecting results; any tightening requires an explicit pre-run amendment and tests. Default implementation uses the formulas above.</p>
+<p>Group mass for a missing CBG is linked across all venues it visits. Allowing r to vary freely across venues relaxes that consistency constraint. Thus even averages of individually sharp lower bounds are <strong>outer bounds</strong>, not necessarily jointly attainable. They can establish robustness if restrictive enough, but cannot identify an actual missing-data correction. There are no standard errors, p-values or probabilistic confidence levels on these bounds.</p>
+<h2 id="fixed-samples-and-weights">Fixed samples and weights</h2>
+<p>Reproduce the common-valid sample of the prior final-file audit exactly: positive finite annualized matched-visit weights, mapped inherited category, valid recorded area, valid four-group race shares/index/coverage and valid national-income fractionalization/coverage. Treat area codes as recorded areas, not a verified metro-only universe. Validate duplicate keys, source year, group-index relationships and dominance support. A scalar inconsistency stops the affected calculation; do not trim offending records to get a result.</p>
+<p>Report the all-common sample and the prior stable-ID sample separately. Stable means valid in every year with unchanged recorded category/area; it does not prove an unchanged business or geographic assignment. Reconcile counts, weights and baseline F means against the saved national continuity results. No minimum two-venues-per-cell rule is added: this is the earlier 2,399,249-ID scope, not the 2,376,783-ID service-ranking scope.</p>
+<p>For each of two samples, three years and two weights (12 settings), average F, L and U under exactly the same nonnegative venue weights. Equal-venue weights describe a venue average. Annualized matched-visit weights describe the project’s constructed visit-weighted venue average, not independent people or representative national visits. Hold those weights fixed when varying r. Also report average c under each weighting and the interval width.</p>
+<p>For all three year pairs within each sample/weight combination (12 contrasts), the outer interval for mean change is <code>[L_later-U_earlier, U_later-L_earlier]</code>. Only if an endpoint excludes zero is the sign robust to this relaxed missing-income allocation family. Inclusion of zero means this check cannot establish the sign, not that the true change is zero or that missingness actually generated the historical pattern. No causal or behavioural trend interpretation follows even from sign robustness.</p>
+<h2 id="deliberate-limits">Deliberate limits</h2>
+<ul>
+<li>These intervals cover unclassified income mass in the supplied recorded origin denominator, not entirely unreported/suppressed visits or venues.</li>
+<li>They condition on retained venues, the stored annual weights and existing rank thresholds. They do not fix sample selection, imputed neighbourhood values, changing ACS inputs, geographic interpolation or latent income.</li>
+<li>This is not a between-venue decomposition, a preference test, a city-size model or a reconstruction of ten labelled group vectors from scalar indices.</li>
+<li>Do not apply these formulas to four-group racial shares: their conditional group denominator and omitted racial mass require a separate analysis.</li>
+<li>Rows excluded from the historical common sample stay excluded. Report the scope explicitly; do not describe the intervals as all-POI or population bounds.</li>
+</ul>
+<h2 id="validation-and-disclosure">Validation and disclosure</h2>
+<p>Use independent feasible p/r draws and constrained water-filling calculations to verify bounds, equality at coverage one, unknown composition at coverage zero, exact isolated-venue minima and invalid scalar inputs. Test aggregate changes and both weighting schemes. Reconcile national baselines to 1e-8 absolute for indices and 1e-9 relative for weights, with exact row counts.</p>
+<p>The approved files are read-only. Compare exact input hashes with the recorded release; source sizes/mtime must stay unchanged throughout. No restricted rows or values identifying venues/origins are printed. Keep working databases, spill, detailed diagnostics and private manifests outside the repository.</p>
+<p>Only national rows/contrasts and graphs are candidates for release. Require each sample-year to span &gt;=20 recorded areas, &gt;=100 area-category cells and &gt;=1000 venue-years; review subtraction with existing releases. No new per- category/cell means, support counts, missingness bins or individual identifiers. Retain all 12 settings and 12 contrasts, including non-robust or contrary signs. An independent reviewer checks arithmetic, sample/weight scope and disclosure before public delivery. Preserve the previous Project capacity gap and historical failed-design gates.</p>
+</main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>

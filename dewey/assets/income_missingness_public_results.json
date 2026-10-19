@@ -1,0 +1,305 @@
+{
+  "stage": "verified_national_missing_income_outer_bounds",
+  "utc": "2026-10-19T18:47:39.506377+00:00",
+  "scope": "Unclassified income within recorded positive origin weights; fixed common sample, rank bins and annualized visit weights.",
+  "index_scale": "Unscaled F in [0,0.9]; presentation multiplies by 100",
+  "settings": [
+    {
+      "sample": "all",
+      "year": 2017,
+      "weight": "equal_venue",
+      "observed": 0.6858867566217332,
+      "lower": 0.6797937343796456,
+      "upper": 0.6949401146336582,
+      "classified_coverage": 0.9813978940136783,
+      "width": 0.015146380253961988
+    },
+    {
+      "sample": "all",
+      "year": 2018,
+      "weight": "equal_venue",
+      "observed": 0.6820200736432166,
+      "lower": 0.6755283779530754,
+      "upper": 0.6918274399336084,
+      "classified_coverage": 0.9802434946060845,
+      "width": 0.016299061980441128
+    },
+    {
+      "sample": "all",
+      "year": 2019,
+      "weight": "equal_venue",
+      "observed": 0.6792781042476228,
+      "lower": 0.6719710459567662,
+      "upper": 0.6903723714951825,
+      "classified_coverage": 0.9778137719458107,
+      "width": 0.01840132553829529
+    },
+    {
+      "sample": "all",
+      "year": 2017,
+      "weight": "annualized_matched_visits",
+      "observed": 0.7833276800818658,
+      "lower": 0.7763439215857068,
+      "upper": 0.7929443570568411,
+      "classified_coverage": 0.9762920366544138,
+      "width": 0.016600435471122152
+    },
+    {
+      "sample": "all",
+      "year": 2018,
+      "weight": "annualized_matched_visits",
+      "observed": 0.7859261865622148,
+      "lower": 0.7787992044190076,
+      "upper": 0.7956047115959208,
+      "classified_coverage": 0.9754706792497715,
+      "width": 0.016805507176905248
+    },
+    {
+      "sample": "all",
+      "year": 2019,
+      "weight": "annualized_matched_visits",
+      "observed": 0.7910373805375525,
+      "lower": 0.7833338963679058,
+      "upper": 0.8015833192054391,
+      "classified_coverage": 0.9732704120935493,
+      "width": 0.01824942283754556
+    },
+    {
+      "sample": "stable_venue",
+      "year": 2017,
+      "weight": "equal_venue",
+      "observed": 0.6982874825341463,
+      "lower": 0.6920688759136908,
+      "upper": 0.7074899055881428,
+      "classified_coverage": 0.9809567439954816,
+      "width": 0.015421029674403123
+    },
+    {
+      "sample": "stable_venue",
+      "year": 2018,
+      "weight": "equal_venue",
+      "observed": 0.7008389584470288,
+      "lower": 0.6943520382920979,
+      "upper": 0.7104473589383684,
+      "classified_coverage": 0.9801211441560027,
+      "width": 0.01609532064619633
+    },
+    {
+      "sample": "stable_venue",
+      "year": 2019,
+      "weight": "equal_venue",
+      "observed": 0.7119412816259937,
+      "lower": 0.7047546310142893,
+      "upper": 0.7226007039158155,
+      "classified_coverage": 0.9777224006431391,
+      "width": 0.017846072901477727
+    },
+    {
+      "sample": "stable_venue",
+      "year": 2017,
+      "weight": "annualized_matched_visits",
+      "observed": 0.7846363317407156,
+      "lower": 0.7776163519235765,
+      "upper": 0.7943270247992704,
+      "classified_coverage": 0.9761085414185102,
+      "width": 0.01671067287567609
+    },
+    {
+      "sample": "stable_venue",
+      "year": 2018,
+      "weight": "annualized_matched_visits",
+      "observed": 0.788609142947582,
+      "lower": 0.7814819845689198,
+      "upper": 0.7982864915494159,
+      "classified_coverage": 0.9753256704950982,
+      "width": 0.01680450698048559
+    },
+    {
+      "sample": "stable_venue",
+      "year": 2019,
+      "weight": "annualized_matched_visits",
+      "observed": 0.7957112147782804,
+      "lower": 0.7880535289655969,
+      "upper": 0.8061846887201238,
+      "classified_coverage": 0.9731554176640399,
+      "width": 0.01813115975452735
+    }
+  ],
+  "contrasts": [
+    {
+      "sample": "all",
+      "weight": "equal_venue",
+      "first_year": 2017,
+      "last_year": 2018,
+      "observed_change": -0.0038666829785165557,
+      "lower_change": -0.019411736680582825,
+      "upper_change": 0.01203370555396277,
+      "sign_robust": "not_established"
+    },
+    {
+      "sample": "all",
+      "weight": "equal_venue",
+      "first_year": 2017,
+      "last_year": 2019,
+      "observed_change": -0.0066086523741103465,
+      "lower_change": -0.02296906867689208,
+      "upper_change": 0.01057863711553686,
+      "sign_robust": "not_established"
+    },
+    {
+      "sample": "all",
+      "weight": "equal_venue",
+      "first_year": 2018,
+      "last_year": 2019,
+      "observed_change": -0.0027419693955937907,
+      "lower_change": -0.019856393976842246,
+      "upper_change": 0.014843993542107081,
+      "sign_robust": "not_established"
+    },
+    {
+      "sample": "all",
+      "weight": "annualized_matched_visits",
+      "first_year": 2017,
+      "last_year": 2018,
+      "observed_change": 0.0025985064803489832,
+      "lower_change": -0.014145152637833447,
+      "upper_change": 0.01926079001021408,
+      "sign_robust": "not_established"
+    },
+    {
+      "sample": "all",
+      "weight": "annualized_matched_visits",
+      "first_year": 2017,
+      "last_year": 2019,
+      "observed_change": 0.007709700455686641,
+      "lower_change": -0.00961046068893523,
+      "upper_change": 0.025239397619732373,
+      "sign_robust": "not_established"
+    },
+    {
+      "sample": "all",
+      "weight": "annualized_matched_visits",
+      "first_year": 2018,
+      "last_year": 2019,
+      "observed_change": 0.005111193975337658,
+      "lower_change": -0.012270815228014986,
+      "upper_change": 0.022784114786431497,
+      "sign_robust": "not_established"
+    },
+    {
+      "sample": "stable_venue",
+      "weight": "equal_venue",
+      "first_year": 2017,
+      "last_year": 2018,
+      "observed_change": 0.002551475912882517,
+      "lower_change": -0.013137867296044936,
+      "upper_change": 0.018378483024677594,
+      "sign_robust": "not_established"
+    },
+    {
+      "sample": "stable_venue",
+      "weight": "equal_venue",
+      "first_year": 2017,
+      "last_year": 2019,
+      "observed_change": 0.013653799091847385,
+      "lower_change": -0.0027352745738535855,
+      "upper_change": 0.030531828002124728,
+      "sign_robust": "not_established"
+    },
+    {
+      "sample": "stable_venue",
+      "weight": "equal_venue",
+      "first_year": 2018,
+      "last_year": 2019,
+      "observed_change": 0.011102323178964868,
+      "lower_change": -0.005692727924079155,
+      "upper_change": 0.02824866562371764,
+      "sign_robust": "not_established"
+    },
+    {
+      "sample": "stable_venue",
+      "weight": "annualized_matched_visits",
+      "first_year": 2017,
+      "last_year": 2018,
+      "observed_change": 0.003972811206866433,
+      "lower_change": -0.012845040230350602,
+      "upper_change": 0.020670139625839412,
+      "sign_robust": "not_established"
+    },
+    {
+      "sample": "stable_venue",
+      "weight": "annualized_matched_visits",
+      "first_year": 2017,
+      "last_year": 2019,
+      "observed_change": 0.011074883037564875,
+      "lower_change": -0.006273495833673537,
+      "upper_change": 0.028568336796547356,
+      "sign_robust": "not_established"
+    },
+    {
+      "sample": "stable_venue",
+      "weight": "annualized_matched_visits",
+      "first_year": 2018,
+      "last_year": 2019,
+      "observed_change": 0.007102071830698442,
+      "lower_change": -0.010232962583819005,
+      "upper_change": 0.024702704151204014,
+      "sign_robust": "not_established"
+    }
+  ],
+  "checks": {
+    "validated_rows": 8875712,
+    "python_sql_max_index_error": 1.1102230246251565e-13,
+    "historical_baseline_max_index_error": 2.3314683517128287e-14,
+    "common_audit_count_match": true,
+    "national_support_gate": true
+  },
+  "jointly_sharp": false,
+  "imputed_data": false,
+  "causal_inference": false,
+  "inputs": [
+    {
+      "year": 2017,
+      "bytes": 2019675603,
+      "sha256": "3733d38bb93335e93d1cba377b3f81d6443390200983b7cbc9f11c71079e1f9e"
+    },
+    {
+      "year": 2018,
+      "bytes": 2184820641,
+      "sha256": "8816d91da0e2ffa53b954ddf9610978dc63bc31ab6f9a8c4313de2912b2c4044"
+    },
+    {
+      "year": 2019,
+      "bytes": 2471813652,
+      "sha256": "dd4aff1f85092ae17dff7e0d4b5c6ff0748e9af9caade9bfc6e706a5ab5b4890"
+    }
+  ],
+  "source_hashes": {
+    "code/analysis/income_missingness_bounds.py": "c28cf31f707c91c1e4b2bebf7b3ae4219ad3753564ce9f0655b36b2f54a39717",
+    "code/analysis/ranked_measurement_checks.py": "933cdb43fe48556d55a65f7291fd214af17423947e3e32979c80c43674f9db6f",
+    "code/analysis/run_income_missingness_bounds.py": "fa2d18e778b05597937a6f664e0e31d2fff97891f16318f8425e8a4af594f13e",
+    "code/analysis/run_within_venue_measurement_audit.py": "fe2a49babe70bd9814c21af1c343992a0f870d17815e1a02a3639c6ce28a3fed",
+    "code/analysis/venue_count_pilot.py": "836a8bd59e82aa790b9600981baf18043f330defd10a3fbcdf56061d7549f2be",
+    "docs/protocols/income_missingness_bounds_20261019.md": "58d5e1f8dfe6f2d0266f64f5d3bd5a4c6e6344255d69714bfe4fed2838a79d19",
+    "output/ranked_research_20261019/continuity_results.json": "75be4f375832da068d15d852bba3abf4d958290753c9e8e39a89473627ab2b74"
+  },
+  "bridge_sha256": "7a9334eeedc0e5537aa45ffd2c3e20d98d8494827668c586ccb53b840ce91606",
+  "runtime": {
+    "python": "3.12.10",
+    "duckdb": "1.5.4",
+    "numpy": "2.3.5"
+  },
+  "elapsed_seconds": 797.6982488999492,
+  "release_review": {
+    "national_candidate_sha256": "2c31f79ca32ee66e4120028c555c9f0544b1167468a9c586d49668bd944f436f",
+    "review_note": "workstreams/missing_income_bounds_review_20261019.md",
+    "review_note_sha256": "d28414418d21fb7e8035ae75e1e5d13d62adab1587be0465379a368e4544eac7",
+    "min_areas": 933,
+    "min_cells": 93958,
+    "min_venue_years": 2399249,
+    "largest_national_weight_share": 0.0003290065720414149,
+    "min_complement_venue_years": 300315,
+    "max_complement_weight_share_upper": 0.006257977343076768,
+    "no_cell_or_category_outputs": true
+  }
+}

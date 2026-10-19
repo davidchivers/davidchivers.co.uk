@@ -1,0 +1,153 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Urban scale: a prepared pilot, not a result</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} figure{margin:28px 0} figure img,main img{max-width:100%;height:auto;display:block} figcaption{font-size:14px}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Urban scale: a prepared pilot, not a result</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>19 October 2026. Editorial excerpt from the complete urban-scale follow-up (note 93), with the subsequent hierarchy/novelty clarification. This is a prepared measurement pilot, not an empirical city-size result.</p>
+<h2 id="the-question">The question</h2>
+<p>When richer and poorer home areas send visitors to different places in a larger city, does the separation arise across services, across parts of the city, or between establishments within the same local service market?</p>
+<p>The immediate analysis divides the recorded association between home-area income group and destination into three accounting components:</p>
+<ol type="1">
+<li>Different service categories, such as restaurants versus grocery shops.</li>
+<li>Different destination areas within a service category.</li>
+<li>Different venues within the same category and destination area.</li>
+</ol>
+<p>The components add exactly on a common sample and weights. Reversing the first two steps changes their allocation, so both orderings will be retained. The within-area/category remainder is unchanged. These are not shares of three causal mechanisms or evidence of preferences for particular co-patrons.</p>
+<h2 id="what-is-ready-and-what-is-not">What is ready, and what is not</h2>
+<p>The information-decomposition and missing-income reconstruction helpers pass 57 artificial-data tests. The existing 2019 annual origin-flow and harmonized ACS lookup schemas are suitable candidates for reconstructing labelled income-group masses. No such empirical reconstruction or city-size regression has yet run under this pilot. The separate <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/income-missingness.html">missing-income bounds</a> are a completed diagnostic on final scalar indices, not a substitute for this reconstruction.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Step</th>
+<th>Purpose</th>
+<th>Required evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Income-group reconstruction</td>
+<td>Recover group-by-venue mass, not just a diversity score</td>
+<td>Approved local flow/ACS processing; unique keys, coverage and reconciled totals</td>
+</tr>
+<tr>
+<td>Category/area/venue accounting</td>
+<td>Establish where recorded sorting occurs</td>
+<td>Same sample, denominators and both decomposition orders</td>
+</tr>
+<tr>
+<td>City-size comparison</td>
+<td>Identify which component carries the size association</td>
+<td>Verified metro definitions and aligned population, not venue count as a proxy for city size</td>
+</tr>
+<tr>
+<td>Shared-market comparison</td>
+<td>Narrow geography and service opportunity</td>
+<td>Independently defined centres/grids, historical coordinates and venue hierarchy</td>
+</tr>
+<tr>
+<td>Choice-model prediction</td>
+<td>Test access and product explanations out of sample</td>
+<td>Credible feasible menus, travel costs and attributes; held-out cities</td>
+</tr>
+</tbody>
+</table></div>
+<p>County geography is an engineering pilot, not a test of a shared shopping centre. Jointly visited venues do not reveal the full feasible menu. Annual origin weights are not independent people or a valid multinomial sample size. More elaborate modelling remains conditional on passing the measurement gates.</p>
+<h2 id="the-important-boundary">The important boundary</h2>
+<p>Neither novelty nor identification is established. The closest papers require a direct method-level comparison before claiming a new explanation of urban segregation. A residual venue component does not identify preferences for the income of fellow customers; access, prices, products and recording can matter. <a href="https://www.nature.com/articles/s41586-023-06757-3">Nature paper</a> and <a href="https://www.jdingel.com/research/CoutureDingelGreenHandbury.pdf">January 2026 choice-model manuscript</a>.</p>
+<p>The inspected 2019 final schema contains no explicit parent-child hierarchy, coordinates, brand or chain fields. This does not show they are unavailable elsewhere. A centre analysis needs an independent dated inventory and a parent-child overlap audit before summing visits. Defining centres using clientele similarity would make the comparison partly outcome-defined.</p>
+<p>Home-area income labels are not visitors’ personal incomes. Reported annual composition is not simultaneous contact. Keep the independent original- construction audit alongside this pilot, and retain all earlier failed public-facing, attitude and event-design gates. The next step is the bounded reconstruction, not another unrestricted search for significant regressions.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/urban_scale_synthetic.png" alt="Artificial example: identical venue scores can conceal different area-versus-venue sorting" />
+<figcaption aria-hidden="true">Artificial example: identical venue scores can conceal different area-versus-venue sorting</figcaption>
+</figure>
+<p>Synthetic only: this is not an estimate from the POI data.</p>
+</main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>
