@@ -1,0 +1,578 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Libraries: can the historical inventory support an access study?</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} figure{margin:28px 0} figure img,main img{max-width:100%;height:auto;display:block} figcaption{font-size:14px}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Libraries: can the historical inventory support an access study?</h1><p class="subtitle">19 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>19 October 2026. New empirical audit of previously acquired <strong>public IMLS Public Libraries Survey files</strong>, FY2017-2019. This did not inspect licensed mobility records, calculate exposure or rerun the failed investment design.</p>
+<h2 id="bottom-line">Bottom line</h2>
+<p>The inventory is sufficiently stable to justify a <strong>bounded historical linkage audit</strong>, but not to proceed directly to an access regression. Of 16,603 fixed-outlet candidates present in every year, 15,864 (95.55%) pass the combined street-match, unchanged-address and 100-metre continuity screen. This is a selected subset of recorded outlets, not proof of true location, continuous operation, complete opportunity coverage or a correct mobility match.</p>
+<p>The main new obstacle is calendar alignment. Only about 37% of candidate outlets have parent reporting periods equal to the labelled calendar year. In FY2019, 677 candidates (4.03%) have parent periods with no overlap with calendar 2019. This need not be an error: reporting conventions differ. It does mean that annual service measures cannot be treated as calendar-year measures merely by joining on the survey’s year label.</p>
+<p><strong>Decision: continue, narrowed.</strong> Rank 4 stays an inventory-and-linkage task, not a demonstrated economic mechanism or an investment-event design. The next useful step requires dated mobility-side place metadata and separate authorization for local linkage. It should be chosen without inspecting exposure outcomes. The earlier investment sample-size stop remains in force.</p>
+<h2 id="what-was-actually-checked">What was actually checked</h2>
+<p>The same three hash-verified archives used in the earlier source check were read locally without modification. Outlet identifiers were linked to their administrative-entity parent using a validated many-to-one join. There are no duplicate/malformed outlet keys, unmatched parents or parent-state conflicts in the inspected releases. The previous counts and 17,267 persistent keys are reproduced exactly.</p>
+<p>The inherited candidate screen is central or branch type, not coded closed or temporarily closed, with finite nonzero coordinates in valid ranges. It is intentionally not a verified operating-status screen. All published geography, including territories, is retained; the full tables separately show 50-state/DC candidate counts. All reported percentages below have the stated inventory denominator, not visits, population or mobility coverage.</p>
+<p>For address comparison, text is normalized for Unicode, case, punctuation and whitespace only. Street abbreviations and unit numbers are not removed or expanded. Street, city, state and ZIP5 must be complete. Coordinates are compared using great-circle distance across <strong>all three year pairs</strong>. Missing addresses do not count as identical; changes are not automatically called moves.</p>
+<h2 id="locations-stable-in-aggregate-but-not-interchangeable-with-ids">Locations: stable in aggregate, but not interchangeable with IDs</h2>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>Successive screen</th>
+<th style="text-align: right;">Outlet keys</th>
+<th style="text-align: right;">Share of 16,603 all-year candidates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Candidate in every year</td>
+<td style="text-align: right;">16,603</td>
+<td style="text-align: right;">100.00%</td>
+</tr>
+<tr>
+<td>Street-match code in every year</td>
+<td style="text-align: right;">16,220</td>
+<td style="text-align: right;">97.69%</td>
+</tr>
+<tr>
+<td>Plus complete normalized address unchanged</td>
+<td style="text-align: right;">15,867</td>
+<td style="text-align: right;">95.57%</td>
+</tr>
+<tr>
+<td>Plus maximum coordinate span at most 100 metres</td>
+<td style="text-align: right;">15,864</td>
+<td style="text-align: right;">95.55%</td>
+</tr>
+</tbody>
+</table></div>
+<p>The 100-metre rule is a declared sensitivity screen, not an accuracy guarantee. Keeping the other thresholds, 13,671 pass at 25 metres, 15,866 at 250 metres and 15,867 at 1 kilometre. A tight 25-metre rule discards many more otherwise stable records; choosing that rule after looking at exposure would select the analysis sample for the wrong reason.</p>
+<p>Among all 16,603 candidates, the 2017-2019 comparison has 405 normalized address differences and 504 coordinate differences above 100 metres. Of the 212 coordinate differences exceeding 1 kilometre, 120 retain the same normalized address. The largest recorded coordinate separation is about 1,402 kilometres. These are flags requiring validation, not verified relocations or evidence identifying which year’s coordinate is correct. Every adjacent and endpoint comparison is retained in the full tables.</p>
+<p>The actual files contain GEOMATCH <code>A</code>, <code>9</code> and <code>5</code>. The released-file layouts describe A as a street-address match by interpolation; 9 and 5 are postcode centroids, not building points. The FY2017 guide’s narrative uses a different code scheme, so the audit preserves that documentation conflict rather than silently translating codes. Candidate centroid-coded records fall from 371 in 2017 to 93 in 2019. This is recorded geocoding support, not independent validation of every coordinate. <a href="https://librarydataarchive.com/USGOV/PublicLibs/Documentation/fy2017_pls_data_file_documentation.pdf">IMLS FY2017 guide, archived primary copy</a>.</p>
+<h2 id="dates-and-service-measures-need-separate-treatment">Dates and service measures need separate treatment</h2>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>Survey label</th>
+<th style="text-align: right;">Candidate outlets</th>
+<th style="text-align: right;">Parent period equals calendar year</th>
+<th style="text-align: right;">No calendar overlap</th>
+<th style="text-align: right;">Invalid parent period</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2017</td>
+<td style="text-align: right;">16,735</td>
+<td style="text-align: right;">6,229</td>
+<td style="text-align: right;">677</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>FY2018</td>
+<td style="text-align: right;">16,801</td>
+<td style="text-align: right;">6,229</td>
+<td style="text-align: right;">675</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>FY2019</td>
+<td style="text-align: right;">16,812</td>
+<td style="text-align: right;">6,228</td>
+<td style="text-align: right;">677</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Most remaining periods partially overlap the calendar year. In 2018, one reversed administrative-entity period affects four candidate outlets. It is retained as invalid, not repaired or given another parent’s dates. These are <strong>system reporting dates</strong>, not branch opening/closing dates or the days observed in the foot-traffic data. Even exact calendar alignment cannot establish that an outlet was open every day.</p>
+<p>Operating variables also have explicit qualifications. In FY2019, 133 candidate outlets have missing annual service hours and 124 have missing weeks-open values. The supplied flags mark 181 hours values and 139 weeks values as carried forward from an earlier year. FY2017/2018 lack the same flag columns, which is not evidence of zero imputation. Positive hours are not proof of time-specific availability to a particular visitor. <a href="https://librarydataarchive.com/USGOV/PublicLibs/Documentation/2019_pls_data_file_documentation.pdf">IMLS FY2019 guide, archived primary copy</a>.</p>
+<h2 id="what-to-do-next-and-what-not-to-infer">What to do next, and what not to infer</h2>
+<p>Use this inventory only as a candidate independent list. Before joining it to mobility, specify a bounded geography and service definition, retain unmatched and ambiguous institutions, check parent/branch duplication, validate a blinded sample of address matches and reconcile historical dates. Keep centroid-coded and changing-address cases visible rather than declaring them unavailable. Current final POI schema checks do not establish precise venue coordinates or an address-based historical bridge.</p>
+<p>Then distinguish existence, operating availability, physical reachability, observed visits and crowd composition. The 95.55% retention rate measures none of the latter four. Neither matching most institution counts nor choosing a clean stable subset establishes coverage of opportunity weight or visits. Capacity, public eligibility, travel modes and opening hours remain separate constraints. This audit therefore does not estimate segregation, access preferences, interaction, attitudes or a causal effect of library provision.</p>
+<h2 id="verification-and-source-limits">Verification and source limits</h2>
+<p>The independent definition/code review and main rerun pass 39 synthetic tests and 75 subtests. An initial reporting-contract failure was repaired before empirical execution; its failure receipt is retained. Two fresh executions of the public audit take 4.29 and 4.30 seconds and agree on every deterministic field. Archive hashes, sizes and modification times are unchanged; all aggregate accounting checks pass. This is repeated execution of one implementation, not two independent empirical implementations.</p>
+<p>The definition review inspected selected pages of IMLS-authored historical guides hosted by Library Data Archive, plus the packaged public READMEs. Live-original retrieval failed, so those PDF copies are not claimed to match the inaccessible originals byte-for-byte. The sourcebook records page ranges, hashes, code, construction and complete-versus-excerpt scope. No institution records or licensed data are published here.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/library_continuity.png" alt="Continuity screens for the same outlet keys" />
+<figcaption aria-hidden="true">Continuity screens for the same outlet keys</figcaption>
+</figure>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/library_recorded_changes.png" alt="Recorded address and coordinate differences in every year pair" />
+<figcaption aria-hidden="true">Recorded address and coordinate differences in every year pair</figcaption>
+</figure>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/library_reporting_calendar.png" alt="Parent reporting periods versus calendar years" />
+<figcaption aria-hidden="true">Parent reporting periods versus calendar years</figcaption>
+</figure>
+<h2 id="downloads">Downloads</h2>
+<p><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/Dewey_Library_Inventory_20261019_sourcebook.html">Complete methods and sourcebook</a> | <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/library_inventory_results.json">National results JSON</a> | <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/library_inventory_tables.md">Complete tables</a></p>
+<h1 id="complete-national-inventory-checks">Complete national inventory checks</h1>
+<p>All published geography, including territories, unless explicitly labelled US50/DC. Street-match support is GEOMATCH A, not independent building-coordinate validation.</p>
+<h2 id="annual-support">Annual support</h2>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>FY</th>
+<th style="text-align: right;">All outlets</th>
+<th style="text-align: right;">Candidates</th>
+<th style="text-align: right;">US50/DC candidates</th>
+<th style="text-align: right;">Street-match candidates</th>
+<th style="text-align: right;">Complete address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017</td>
+<td style="text-align: right;">17,452</td>
+<td style="text-align: right;">16,735</td>
+<td style="text-align: right;">16,724</td>
+<td style="text-align: right;">16,364</td>
+<td style="text-align: right;">16,735</td>
+</tr>
+<tr>
+<td>2018</td>
+<td style="text-align: right;">17,478</td>
+<td style="text-align: right;">16,801</td>
+<td style="text-align: right;">16,786</td>
+<td style="text-align: right;">16,673</td>
+<td style="text-align: right;">16,801</td>
+</tr>
+<tr>
+<td>2019</td>
+<td style="text-align: right;">17,496</td>
+<td style="text-align: right;">16,812</td>
+<td style="text-align: right;">16,796</td>
+<td style="text-align: right;">16,719</td>
+<td style="text-align: right;">16,812</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="key-presence-not-openings-or-closures">Key presence, not openings or closures</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Years</th>
+<th style="text-align: right;">Both releases</th>
+<th style="text-align: right;">Earlier only</th>
+<th style="text-align: right;">Later only</th>
+<th style="text-align: right;">Union</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017-2018</td>
+<td style="text-align: right;">17,348</td>
+<td style="text-align: right;">104</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;">17,582</td>
+</tr>
+<tr>
+<td>2018-2019</td>
+<td style="text-align: right;">17,396</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">17,578</td>
+</tr>
+<tr>
+<td>2017-2019</td>
+<td style="text-align: right;">17,270</td>
+<td style="text-align: right;">182</td>
+<td style="text-align: right;">226</td>
+<td style="text-align: right;">17,678</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="every-pair-and-both-samples">Every pair and both samples</h2>
+<div class="table-scroll" tabindex="0"><table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr>
+<th>Years</th>
+<th>Sample</th>
+<th style="text-align: right;">Keys</th>
+<th style="text-align: right;">Same address</th>
+<th style="text-align: right;">Different address</th>
+<th style="text-align: right;">Unusable address</th>
+<th style="text-align: right;">Coordinates &gt;100m</th>
+<th style="text-align: right;">Coordinates &gt;1km</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017-2018</td>
+<td>all three year keys</td>
+<td style="text-align: right;">17,267</td>
+<td style="text-align: right;">17,059</td>
+<td style="text-align: right;">208</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">353</td>
+<td style="text-align: right;">157</td>
+</tr>
+<tr>
+<td>2017-2018</td>
+<td>candidate in all three</td>
+<td style="text-align: right;">16,603</td>
+<td style="text-align: right;">16,411</td>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">323</td>
+<td style="text-align: right;">139</td>
+</tr>
+<tr>
+<td>2018-2019</td>
+<td>all three year keys</td>
+<td style="text-align: right;">17,267</td>
+<td style="text-align: right;">17,013</td>
+<td style="text-align: right;">254</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">231</td>
+<td style="text-align: right;">105</td>
+</tr>
+<tr>
+<td>2018-2019</td>
+<td>candidate in all three</td>
+<td style="text-align: right;">16,603</td>
+<td style="text-align: right;">16,363</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">216</td>
+<td style="text-align: right;">93</td>
+</tr>
+<tr>
+<td>2017-2019</td>
+<td>all three year keys</td>
+<td style="text-align: right;">17,267</td>
+<td style="text-align: right;">16,833</td>
+<td style="text-align: right;">434</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">547</td>
+<td style="text-align: right;">240</td>
+</tr>
+<tr>
+<td>2017-2019</td>
+<td>candidate in all three</td>
+<td style="text-align: right;">16,603</td>
+<td style="text-align: right;">16,198</td>
+<td style="text-align: right;">405</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">504</td>
+<td style="text-align: right;">212</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="full-distance-sensitivity">Full distance sensitivity</h2>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Sample / years</th>
+<th style="text-align: right;">&gt;25m</th>
+<th style="text-align: right;">&gt;100m</th>
+<th style="text-align: right;">&gt;250m</th>
+<th style="text-align: right;">&gt;1km</th>
+<th style="text-align: right;">Median metres</th>
+<th style="text-align: right;">99th percentile metres</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>all three year keys / 2017-2018</td>
+<td style="text-align: right;">2,763</td>
+<td style="text-align: right;">353</td>
+<td style="text-align: right;">289</td>
+<td style="text-align: right;">157</td>
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;">845.2</td>
+</tr>
+<tr>
+<td>candidate in all three / 2017-2018</td>
+<td style="text-align: right;">2,627</td>
+<td style="text-align: right;">323</td>
+<td style="text-align: right;">263</td>
+<td style="text-align: right;">139</td>
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;">758.9</td>
+</tr>
+<tr>
+<td>all three year keys / 2018-2019</td>
+<td style="text-align: right;">269</td>
+<td style="text-align: right;">231</td>
+<td style="text-align: right;">186</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">309.7</td>
+</tr>
+<tr>
+<td>candidate in all three / 2018-2019</td>
+<td style="text-align: right;">253</td>
+<td style="text-align: right;">216</td>
+<td style="text-align: right;">171</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">277.8</td>
+</tr>
+<tr>
+<td>all three year keys / 2017-2019</td>
+<td style="text-align: right;">2,963</td>
+<td style="text-align: right;">547</td>
+<td style="text-align: right;">439</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;">1696.7</td>
+</tr>
+<tr>
+<td>candidate in all three / 2017-2019</td>
+<td style="text-align: right;">2,812</td>
+<td style="text-align: right;">504</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">212</td>
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;">1493.5</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="selected-continuity-subset-all-thresholds">Selected continuity subset: all thresholds</h2>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>Maximum span across all three pairs</th>
+<th style="text-align: right;">Outlet keys</th>
+<th style="text-align: right;">Share of initial all-year candidates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>At most 25m</td>
+<td style="text-align: right;">13,671</td>
+<td style="text-align: right;">82.34%</td>
+</tr>
+<tr>
+<td>At most 100m</td>
+<td style="text-align: right;">15,864</td>
+<td style="text-align: right;">95.55%</td>
+</tr>
+<tr>
+<td>At most 250m</td>
+<td style="text-align: right;">15,866</td>
+<td style="text-align: right;">95.56%</td>
+</tr>
+<tr>
+<td>At most 1000m</td>
+<td style="text-align: right;">15,867</td>
+<td style="text-align: right;">95.57%</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="reporting-calendar-alignment">Reporting-calendar alignment</h2>
+<div class="table-scroll" tabindex="0"><table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr>
+<th>FY</th>
+<th>Unit</th>
+<th style="text-align: right;">Rows</th>
+<th style="text-align: right;">Exact calendar</th>
+<th style="text-align: right;">Partial overlap</th>
+<th style="text-align: right;">No overlap</th>
+<th style="text-align: right;">Missing/invalid</th>
+<th style="text-align: right;">Mean overlap, valid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017</td>
+<td>all systems</td>
+<td style="text-align: right;">9,245</td>
+<td style="text-align: right;">3,645</td>
+<td style="text-align: right;">5,271</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">70.26%</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>candidate outlets</td>
+<td style="text-align: right;">16,735</td>
+<td style="text-align: right;">6,229</td>
+<td style="text-align: right;">9,829</td>
+<td style="text-align: right;">677</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">69.16%</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>all systems</td>
+<td style="text-align: right;">9,261</td>
+<td style="text-align: right;">3,638</td>
+<td style="text-align: right;">5,311</td>
+<td style="text-align: right;">299</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">70.18%</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>candidate outlets</td>
+<td style="text-align: right;">16,801</td>
+<td style="text-align: right;">6,229</td>
+<td style="text-align: right;">9,893</td>
+<td style="text-align: right;">675</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">69.11%</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>all systems</td>
+<td style="text-align: right;">9,260</td>
+<td style="text-align: right;">3,631</td>
+<td style="text-align: right;">5,308</td>
+<td style="text-align: right;">302</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">70.14%</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>candidate outlets</td>
+<td style="text-align: right;">16,812</td>
+<td style="text-align: right;">6,228</td>
+<td style="text-align: right;">9,907</td>
+<td style="text-align: right;">677</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">69.09%</td>
+</tr>
+</tbody>
+</table></div>
+<p>The complete JSON retains all observed code frequencies, missing/negative operating-field codes, available imputation flags, parent-join checks, address-by-distance cross-tabs, distance quantiles and source hashes. Absent flag columns are null, not zero imputation. These are public-inventory diagnostics, not exposure estimates.</p>
+</main><footer>Dated research snapshot: new bounded measurement checks, independent safe-code audit and source feasibility. Not upstream weekly replication, causal identification or publication readiness. Historical results and failed gates remain in force.</footer></body></html>

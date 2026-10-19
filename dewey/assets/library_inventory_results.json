@@ -1,0 +1,1898 @@
+{
+  "annual": [
+    {
+      "year": 2017,
+      "rows": 17452,
+      "candidate_fixed_not_closed_coordinates": 16735,
+      "candidate_50_states_dc": 16724,
+      "candidate_precise_geocode": 16364,
+      "candidate_complete_address": 16735,
+      "geocode_codes_all": {
+        "5": 206,
+        "9": 191,
+        "A": 17055
+      },
+      "geocode_codes_candidates": {
+        "5": 193,
+        "9": 178,
+        "A": 16364
+      },
+      "outlet_types": {
+        "BR": 7749,
+        "BS": 631,
+        "CE": 9070,
+        "MO": 2
+      },
+      "structure_codes": {
+        "00": 17269,
+        "01": 1,
+        "02": 57,
+        "03": 73,
+        "04": 6,
+        "08": 12,
+        "09": 1,
+        "11": 1,
+        "13": 5,
+        "23": 23,
+        "24": 4
+      },
+      "address_codes": {
+        "00": 16828,
+        "07": 128,
+        "15": 496
+      },
+      "conformance_codes": {
+        "N": 174,
+        "Y": 17278
+      },
+      "unmatched_parents": 0,
+      "state_discordant_parents": 0,
+      "reporting_calendar_all_systems": {
+        "rows": 9245,
+        "valid_period": 9216,
+        "missing_or_invalid_period": 29,
+        "reversed_period": 0,
+        "exact_calendar_year": 3645,
+        "full_calendar_coverage_not_exact": 0,
+        "partial_calendar_coverage": 5271,
+        "no_calendar_overlap": 300,
+        "non_365_366_day_valid_period": 2,
+        "mean_calendar_share_if_valid": 0.7026047612252664,
+        "calendar_share_quantiles_if_valid": {
+          "0": 0.0,
+          "0.1": 0.4958904109589041,
+          "0.5": 0.7479452054794521,
+          "0.9": 1.0,
+          "1": 1.0
+        }
+      },
+      "reporting_calendar_candidate_outlets": {
+        "rows": 16735,
+        "valid_period": 16735,
+        "missing_or_invalid_period": 0,
+        "reversed_period": 0,
+        "exact_calendar_year": 6229,
+        "full_calendar_coverage_not_exact": 0,
+        "partial_calendar_coverage": 9829,
+        "no_calendar_overlap": 677,
+        "non_365_366_day_valid_period": 2,
+        "mean_calendar_share_if_valid": 0.6915677503059374,
+        "calendar_share_quantiles_if_valid": {
+          "0": 0.0,
+          "0.1": 0.4958904109589041,
+          "0.5": 0.7479452054794521,
+          "0.9": 1.0,
+          "1": 1.0
+        }
+      },
+      "hours_candidate": {
+        "positive": 16257,
+        "zero": 25,
+        "negative_codes": {
+          "-1": 453
+        },
+        "nonnumeric": 0,
+        "infinite": 0
+      },
+      "wks_open_candidate": {
+        "positive": 16468,
+        "zero": 16,
+        "negative_codes": {
+          "-1": 251
+        },
+        "nonnumeric": 0,
+        "infinite": 0
+      },
+      "f_hours_candidate": null,
+      "f_wksopn_candidate": null
+    },
+    {
+      "year": 2018,
+      "rows": 17478,
+      "candidate_fixed_not_closed_coordinates": 16801,
+      "candidate_50_states_dc": 16786,
+      "candidate_precise_geocode": 16673,
+      "candidate_complete_address": 16801,
+      "geocode_codes_all": {
+        "5": 115,
+        "9": 23,
+        "A": 17340
+      },
+      "geocode_codes_candidates": {
+        "5": 108,
+        "9": 20,
+        "A": 16673
+      },
+      "outlet_types": {
+        "BR": 7757,
+        "BS": 628,
+        "CE": 9092,
+        "MO": 1
+      },
+      "structure_codes": {
+        "00": 17324,
+        "01": 1,
+        "02": 51,
+        "03": 56,
+        "04": 3,
+        "08": 12,
+        "09": 1,
+        "11": 6,
+        "13": 10,
+        "23": 11,
+        "24": 3
+      },
+      "address_codes": {
+        "00": 17257,
+        "07": 110,
+        "15": 111
+      },
+      "conformance_codes": {
+        "N": 203,
+        "Y": 17275
+      },
+      "unmatched_parents": 0,
+      "state_discordant_parents": 0,
+      "reporting_calendar_all_systems": {
+        "rows": 9261,
+        "valid_period": 9248,
+        "missing_or_invalid_period": 13,
+        "reversed_period": 1,
+        "exact_calendar_year": 3638,
+        "full_calendar_coverage_not_exact": 0,
+        "partial_calendar_coverage": 5311,
+        "no_calendar_overlap": 299,
+        "non_365_366_day_valid_period": 0,
+        "mean_calendar_share_if_valid": 0.7017609138740105,
+        "calendar_share_quantiles_if_valid": {
+          "0": 0.0,
+          "0.1": 0.4958904109589041,
+          "0.5": 0.7479452054794521,
+          "0.9": 1.0,
+          "1": 1.0
+        }
+      },
+      "reporting_calendar_candidate_outlets": {
+        "rows": 16801,
+        "valid_period": 16797,
+        "missing_or_invalid_period": 4,
+        "reversed_period": 4,
+        "exact_calendar_year": 6229,
+        "full_calendar_coverage_not_exact": 0,
+        "partial_calendar_coverage": 9893,
+        "no_calendar_overlap": 675,
+        "non_365_366_day_valid_period": 0,
+        "mean_calendar_share_if_valid": 0.6910743193704681,
+        "calendar_share_quantiles_if_valid": {
+          "0": 0.0,
+          "0.1": 0.4958904109589041,
+          "0.5": 0.6657534246575343,
+          "0.9": 1.0,
+          "1": 1.0
+        }
+      },
+      "hours_candidate": {
+        "positive": 16386,
+        "zero": 26,
+        "negative_codes": {
+          "-1": 389
+        },
+        "nonnumeric": 0,
+        "infinite": 0
+      },
+      "wks_open_candidate": {
+        "positive": 16495,
+        "zero": 14,
+        "negative_codes": {
+          "-1": 292
+        },
+        "nonnumeric": 0,
+        "infinite": 0
+      },
+      "f_hours_candidate": null,
+      "f_wksopn_candidate": null
+    },
+    {
+      "year": 2019,
+      "rows": 17496,
+      "candidate_fixed_not_closed_coordinates": 16812,
+      "candidate_50_states_dc": 16796,
+      "candidate_precise_geocode": 16719,
+      "candidate_complete_address": 16812,
+      "geocode_codes_all": {
+        "5": 87,
+        "9": 17,
+        "A": 17392
+      },
+      "geocode_codes_candidates": {
+        "5": 79,
+        "9": 14,
+        "A": 16719
+      },
+      "outlet_types": {
+        "BR": 7781,
+        "BS": 629,
+        "CE": 9085,
+        "MO": 1
+      },
+      "structure_codes": {
+        "00": 17331,
+        "02": 74,
+        "03": 48,
+        "04": 1,
+        "08": 10,
+        "09": 1,
+        "11": 7,
+        "13": 4,
+        "23": 16,
+        "24": 4
+      },
+      "address_codes": {
+        "00": 16822,
+        "07": 123,
+        "15": 551
+      },
+      "conformance_codes": {
+        "N": 194,
+        "Y": 17302
+      },
+      "unmatched_parents": 0,
+      "state_discordant_parents": 0,
+      "reporting_calendar_all_systems": {
+        "rows": 9260,
+        "valid_period": 9241,
+        "missing_or_invalid_period": 19,
+        "reversed_period": 0,
+        "exact_calendar_year": 3631,
+        "full_calendar_coverage_not_exact": 0,
+        "partial_calendar_coverage": 5308,
+        "no_calendar_overlap": 302,
+        "non_365_366_day_valid_period": 3,
+        "mean_calendar_share_if_valid": 0.7014407205529852,
+        "calendar_share_quantiles_if_valid": {
+          "0": 0.0,
+          "0.1": 0.4958904109589041,
+          "0.5": 0.7479452054794521,
+          "0.9": 1.0,
+          "1": 1.0
+        }
+      },
+      "reporting_calendar_candidate_outlets": {
+        "rows": 16812,
+        "valid_period": 16812,
+        "missing_or_invalid_period": 0,
+        "reversed_period": 0,
+        "exact_calendar_year": 6228,
+        "full_calendar_coverage_not_exact": 0,
+        "partial_calendar_coverage": 9907,
+        "no_calendar_overlap": 677,
+        "non_365_366_day_valid_period": 3,
+        "mean_calendar_share_if_valid": 0.6909378167584145,
+        "calendar_share_quantiles_if_valid": {
+          "0": 0.0,
+          "0.1": 0.4958904109589041,
+          "0.5": 0.6657534246575343,
+          "0.9": 1.0,
+          "1": 1.0
+        }
+      },
+      "hours_candidate": {
+        "positive": 16632,
+        "zero": 47,
+        "negative_codes": {
+          "-1": 133
+        },
+        "nonnumeric": 0,
+        "infinite": 0
+      },
+      "wks_open_candidate": {
+        "positive": 16658,
+        "zero": 30,
+        "negative_codes": {
+          "-1": 124
+        },
+        "nonnumeric": 0,
+        "infinite": 0
+      },
+      "f_hours_candidate": {
+        "IP15": 24,
+        "IP16": 19,
+        "IP17": 24,
+        "IP18": 114,
+        "M_19": 133,
+        "R_19": 16498
+      },
+      "f_wksopn_candidate": {
+        "IP15": 24,
+        "IP16": 16,
+        "IP17": 16,
+        "IP18": 83,
+        "M_19": 124,
+        "R_19": 16549
+      }
+    }
+  ],
+  "stable_keys": 17267,
+  "continuity_waterfall": {
+    "candidate_all_three_years": 16603,
+    "precise_geocodes_all_three": 16220,
+    "complete_address_unchanged_all_three": 15867,
+    "address_unchanged_and_max_coordinate_span_le_m": {
+      "25": 13671,
+      "100": 15864,
+      "250": 15866,
+      "1000": 15867
+    }
+  },
+  "comparisons": [
+    {
+      "years": [
+        2017,
+        2018
+      ],
+      "sample": "all_three_year_keys",
+      "common_keys": 17267,
+      "address_comparable": 17267,
+      "same_normalized_address": 17059,
+      "different_normalized_address": 208,
+      "address_not_comparable": 0,
+      "name_comparable": 17267,
+      "different_normalized_name": 125,
+      "recorded_type_changes": 18,
+      "recorded_state_changes": 0,
+      "valid_coordinate_pairs": 17267,
+      "coordinate_distances_above_m": {
+        "25": 2763,
+        "100": 353,
+        "250": 289,
+        "1000": 157
+      },
+      "coordinate_distance_quantiles_m": {
+        "0": 0.0,
+        "0.5": 5.3575589637169525,
+        "0.9": 50.992246940422255,
+        "0.99": 845.1697673988544,
+        "1": 1401550.7102419755
+      },
+      "address_by_coordinate_bin": {
+        "different": {
+          "0_to_25m": 42,
+          "over1000m": 54,
+          "over100_to250m": 23,
+          "over250_to1000m": 54,
+          "over25_to100m": 35
+        },
+        "same": {
+          "0_to_25m": 14462,
+          "over1000m": 103,
+          "over100_to250m": 41,
+          "over250_to1000m": 78,
+          "over25_to100m": 2375
+        }
+      },
+      "earlier_address_status_codes": {
+        "00": 16652,
+        "07": 125,
+        "15": 490
+      },
+      "earlier_structure_status_codes": {
+        "00": 17174,
+        "01": 1,
+        "02": 54,
+        "03": 3,
+        "04": 5,
+        "08": 12,
+        "09": 1,
+        "11": 1,
+        "13": 5,
+        "23": 7,
+        "24": 4
+      },
+      "later_address_status_codes": {
+        "00": 17058,
+        "07": 107,
+        "15": 102
+      },
+      "later_structure_status_codes": {
+        "00": 17254,
+        "01": 1,
+        "03": 2,
+        "08": 5,
+        "23": 3,
+        "24": 2
+      },
+      "address_status_transitions": {
+        "00": {
+          "00": 16467,
+          "07": 99,
+          "15": 86
+        },
+        "07": {
+          "00": 115,
+          "07": 5,
+          "15": 5
+        },
+        "15": {
+          "00": 476,
+          "07": 3,
+          "15": 11
+        }
+      },
+      "structure_status_transitions": {
+        "00": {
+          "00": 17168,
+          "01": 1,
+          "03": 2,
+          "08": 0,
+          "23": 3,
+          "24": 0
+        },
+        "01": {
+          "00": 1,
+          "01": 0,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "02": {
+          "00": 54,
+          "01": 0,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "03": {
+          "00": 2,
+          "01": 0,
+          "03": 0,
+          "08": 1,
+          "23": 0,
+          "24": 0
+        },
+        "04": {
+          "00": 5,
+          "01": 0,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "08": {
+          "00": 12,
+          "01": 0,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "09": {
+          "00": 1,
+          "01": 0,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "11": {
+          "00": 1,
+          "01": 0,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "13": {
+          "00": 5,
+          "01": 0,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "23": {
+          "00": 1,
+          "01": 0,
+          "03": 0,
+          "08": 4,
+          "23": 0,
+          "24": 2
+        },
+        "24": {
+          "00": 4,
+          "01": 0,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        }
+      },
+      "address_status_pair_by_observed_address": {
+        "00 -> 00": {
+          "different": 10,
+          "same": 16457
+        },
+        "00 -> 07": {
+          "different": 99,
+          "same": 0
+        },
+        "00 -> 15": {
+          "different": 79,
+          "same": 7
+        },
+        "07 -> 00": {
+          "different": 0,
+          "same": 115
+        },
+        "07 -> 07": {
+          "different": 5,
+          "same": 0
+        },
+        "07 -> 15": {
+          "different": 4,
+          "same": 1
+        },
+        "15 -> 00": {
+          "different": 0,
+          "same": 476
+        },
+        "15 -> 07": {
+          "different": 3,
+          "same": 0
+        },
+        "15 -> 15": {
+          "different": 8,
+          "same": 3
+        }
+      },
+      "address_status_pair_by_coordinate_bin": {
+        "00 -> 00": {
+          "0_to_25m": 14080,
+          "over1000m": 96,
+          "over100_to250m": 40,
+          "over250_to1000m": 72,
+          "over25_to100m": 2179
+        },
+        "00 -> 07": {
+          "0_to_25m": 4,
+          "over1000m": 35,
+          "over100_to250m": 12,
+          "over250_to1000m": 38,
+          "over25_to100m": 10
+        },
+        "00 -> 15": {
+          "0_to_25m": 37,
+          "over1000m": 10,
+          "over100_to250m": 8,
+          "over250_to1000m": 13,
+          "over25_to100m": 18
+        },
+        "07 -> 00": {
+          "0_to_25m": 97,
+          "over1000m": 1,
+          "over100_to250m": 0,
+          "over250_to1000m": 1,
+          "over25_to100m": 16
+        },
+        "07 -> 07": {
+          "0_to_25m": 0,
+          "over1000m": 3,
+          "over100_to250m": 1,
+          "over250_to1000m": 1,
+          "over25_to100m": 0
+        },
+        "07 -> 15": {
+          "0_to_25m": 1,
+          "over1000m": 0,
+          "over100_to250m": 1,
+          "over250_to1000m": 0,
+          "over25_to100m": 3
+        },
+        "15 -> 00": {
+          "0_to_25m": 280,
+          "over1000m": 9,
+          "over100_to250m": 2,
+          "over250_to1000m": 5,
+          "over25_to100m": 180
+        },
+        "15 -> 07": {
+          "0_to_25m": 1,
+          "over1000m": 1,
+          "over100_to250m": 0,
+          "over250_to1000m": 1,
+          "over25_to100m": 0
+        },
+        "15 -> 15": {
+          "0_to_25m": 4,
+          "over1000m": 2,
+          "over100_to250m": 0,
+          "over250_to1000m": 1,
+          "over25_to100m": 4
+        }
+      }
+    },
+    {
+      "years": [
+        2017,
+        2018
+      ],
+      "sample": "candidate_in_all_three",
+      "common_keys": 16603,
+      "address_comparable": 16603,
+      "same_normalized_address": 16411,
+      "different_normalized_address": 192,
+      "address_not_comparable": 0,
+      "name_comparable": 16603,
+      "different_normalized_name": 112,
+      "recorded_type_changes": 14,
+      "recorded_state_changes": 0,
+      "valid_coordinate_pairs": 16603,
+      "coordinate_distances_above_m": {
+        "25": 2627,
+        "100": 323,
+        "250": 263,
+        "1000": 139
+      },
+      "coordinate_distance_quantiles_m": {
+        "0": 0.0,
+        "0.5": 5.352645429050716,
+        "0.9": 50.230546264964666,
+        "0.99": 758.899793036278,
+        "1": 1401550.7102419755
+      },
+      "address_by_coordinate_bin": {
+        "different": {
+          "0_to_25m": 41,
+          "over1000m": 42,
+          "over100_to250m": 22,
+          "over250_to1000m": 53,
+          "over25_to100m": 34
+        },
+        "same": {
+          "0_to_25m": 13935,
+          "over1000m": 97,
+          "over100_to250m": 38,
+          "over250_to1000m": 71,
+          "over25_to100m": 2270
+        }
+      },
+      "earlier_address_status_codes": {
+        "00": 16015,
+        "07": 116,
+        "15": 472
+      },
+      "earlier_structure_status_codes": {
+        "00": 16538,
+        "01": 1,
+        "02": 37,
+        "04": 4,
+        "08": 12,
+        "09": 1,
+        "11": 1,
+        "13": 5,
+        "24": 4
+      },
+      "later_address_status_codes": {
+        "00": 16410,
+        "07": 97,
+        "15": 96
+      },
+      "later_structure_status_codes": {
+        "00": 16602,
+        "01": 1
+      },
+      "address_status_transitions": {
+        "00": {
+          "00": 15844,
+          "07": 91,
+          "15": 80
+        },
+        "07": {
+          "00": 106,
+          "07": 5,
+          "15": 5
+        },
+        "15": {
+          "00": 460,
+          "07": 1,
+          "15": 11
+        }
+      },
+      "structure_status_transitions": {
+        "00": {
+          "00": 16537,
+          "01": 1
+        },
+        "01": {
+          "00": 1,
+          "01": 0
+        },
+        "02": {
+          "00": 37,
+          "01": 0
+        },
+        "04": {
+          "00": 4,
+          "01": 0
+        },
+        "08": {
+          "00": 12,
+          "01": 0
+        },
+        "09": {
+          "00": 1,
+          "01": 0
+        },
+        "11": {
+          "00": 1,
+          "01": 0
+        },
+        "13": {
+          "00": 5,
+          "01": 0
+        },
+        "24": {
+          "00": 4,
+          "01": 0
+        }
+      },
+      "address_status_pair_by_observed_address": {
+        "00 -> 00": {
+          "different": 8,
+          "same": 15836
+        },
+        "00 -> 07": {
+          "different": 91,
+          "same": 0
+        },
+        "00 -> 15": {
+          "different": 75,
+          "same": 5
+        },
+        "07 -> 00": {
+          "different": 0,
+          "same": 106
+        },
+        "07 -> 07": {
+          "different": 5,
+          "same": 0
+        },
+        "07 -> 15": {
+          "different": 4,
+          "same": 1
+        },
+        "15 -> 00": {
+          "different": 0,
+          "same": 460
+        },
+        "15 -> 07": {
+          "different": 1,
+          "same": 0
+        },
+        "15 -> 15": {
+          "different": 8,
+          "same": 3
+        }
+      },
+      "address_status_pair_by_coordinate_bin": {
+        "00 -> 00": {
+          "0_to_25m": 13571,
+          "over1000m": 89,
+          "over100_to250m": 37,
+          "over250_to1000m": 67,
+          "over25_to100m": 2080
+        },
+        "00 -> 07": {
+          "0_to_25m": 4,
+          "over1000m": 27,
+          "over100_to250m": 12,
+          "over250_to1000m": 38,
+          "over25_to100m": 10
+        },
+        "00 -> 15": {
+          "0_to_25m": 34,
+          "over1000m": 8,
+          "over100_to250m": 7,
+          "over250_to1000m": 13,
+          "over25_to100m": 18
+        },
+        "07 -> 00": {
+          "0_to_25m": 90,
+          "over1000m": 1,
+          "over100_to250m": 0,
+          "over250_to1000m": 0,
+          "over25_to100m": 15
+        },
+        "07 -> 07": {
+          "0_to_25m": 0,
+          "over1000m": 3,
+          "over100_to250m": 1,
+          "over250_to1000m": 1,
+          "over25_to100m": 0
+        },
+        "07 -> 15": {
+          "0_to_25m": 1,
+          "over1000m": 0,
+          "over100_to250m": 1,
+          "over250_to1000m": 0,
+          "over25_to100m": 3
+        },
+        "15 -> 00": {
+          "0_to_25m": 271,
+          "over1000m": 9,
+          "over100_to250m": 2,
+          "over250_to1000m": 4,
+          "over25_to100m": 174
+        },
+        "15 -> 07": {
+          "0_to_25m": 1,
+          "over1000m": 0,
+          "over100_to250m": 0,
+          "over250_to1000m": 0,
+          "over25_to100m": 0
+        },
+        "15 -> 15": {
+          "0_to_25m": 4,
+          "over1000m": 2,
+          "over100_to250m": 0,
+          "over250_to1000m": 1,
+          "over25_to100m": 4
+        }
+      }
+    },
+    {
+      "years": [
+        2018,
+        2019
+      ],
+      "sample": "all_three_year_keys",
+      "common_keys": 17267,
+      "address_comparable": 17267,
+      "same_normalized_address": 17013,
+      "different_normalized_address": 254,
+      "address_not_comparable": 0,
+      "name_comparable": 17267,
+      "different_normalized_name": 136,
+      "recorded_type_changes": 13,
+      "recorded_state_changes": 0,
+      "valid_coordinate_pairs": 17267,
+      "coordinate_distances_above_m": {
+        "25": 269,
+        "100": 231,
+        "250": 186,
+        "1000": 105
+      },
+      "coordinate_distance_quantiles_m": {
+        "0": 0.0,
+        "0.5": 0.0,
+        "0.9": 0.0,
+        "0.99": 309.7471704509547,
+        "1": 177278.47407944791
+      },
+      "address_by_coordinate_bin": {
+        "different": {
+          "0_to_25m": 41,
+          "over1000m": 70,
+          "over100_to250m": 41,
+          "over250_to1000m": 69,
+          "over25_to100m": 33
+        },
+        "same": {
+          "0_to_25m": 16957,
+          "over1000m": 35,
+          "over100_to250m": 4,
+          "over250_to1000m": 12,
+          "over25_to100m": 5
+        }
+      },
+      "earlier_address_status_codes": {
+        "00": 17058,
+        "07": 107,
+        "15": 102
+      },
+      "earlier_structure_status_codes": {
+        "00": 17254,
+        "01": 1,
+        "03": 2,
+        "08": 5,
+        "23": 3,
+        "24": 2
+      },
+      "later_address_status_codes": {
+        "00": 16604,
+        "07": 119,
+        "15": 544
+      },
+      "later_structure_status_codes": {
+        "00": 17199,
+        "03": 46,
+        "08": 4,
+        "23": 16,
+        "24": 2
+      },
+      "address_status_transitions": {
+        "00": {
+          "00": 16440,
+          "07": 105,
+          "15": 513
+        },
+        "07": {
+          "00": 89,
+          "07": 10,
+          "15": 8
+        },
+        "15": {
+          "00": 75,
+          "07": 4,
+          "15": 23
+        }
+      },
+      "structure_status_transitions": {
+        "00": {
+          "00": 17193,
+          "03": 46,
+          "08": 0,
+          "23": 15,
+          "24": 0
+        },
+        "01": {
+          "00": 1,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "03": {
+          "00": 0,
+          "03": 0,
+          "08": 2,
+          "23": 0,
+          "24": 0
+        },
+        "08": {
+          "00": 4,
+          "03": 0,
+          "08": 0,
+          "23": 1,
+          "24": 0
+        },
+        "23": {
+          "00": 0,
+          "03": 0,
+          "08": 2,
+          "23": 0,
+          "24": 1
+        },
+        "24": {
+          "00": 1,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 1
+        }
+      },
+      "address_status_pair_by_observed_address": {
+        "00 -> 00": {
+          "different": 18,
+          "same": 16422
+        },
+        "00 -> 07": {
+          "different": 103,
+          "same": 2
+        },
+        "00 -> 15": {
+          "different": 107,
+          "same": 406
+        },
+        "07 -> 00": {
+          "different": 0,
+          "same": 89
+        },
+        "07 -> 07": {
+          "different": 9,
+          "same": 1
+        },
+        "07 -> 15": {
+          "different": 5,
+          "same": 3
+        },
+        "15 -> 00": {
+          "different": 2,
+          "same": 73
+        },
+        "15 -> 07": {
+          "different": 4,
+          "same": 0
+        },
+        "15 -> 15": {
+          "different": 6,
+          "same": 17
+        }
+      },
+      "address_status_pair_by_coordinate_bin": {
+        "00 -> 00": {
+          "0_to_25m": 16370,
+          "over1000m": 43,
+          "over100_to250m": 8,
+          "over250_to1000m": 11,
+          "over25_to100m": 8
+        },
+        "00 -> 07": {
+          "0_to_25m": 8,
+          "over1000m": 30,
+          "over100_to250m": 23,
+          "over250_to1000m": 37,
+          "over25_to100m": 7
+        },
+        "00 -> 15": {
+          "0_to_25m": 432,
+          "over1000m": 22,
+          "over100_to250m": 10,
+          "over250_to1000m": 27,
+          "over25_to100m": 22
+        },
+        "07 -> 00": {
+          "0_to_25m": 89,
+          "over1000m": 0,
+          "over100_to250m": 0,
+          "over250_to1000m": 0,
+          "over25_to100m": 0
+        },
+        "07 -> 07": {
+          "0_to_25m": 1,
+          "over1000m": 5,
+          "over100_to250m": 1,
+          "over250_to1000m": 3,
+          "over25_to100m": 0
+        },
+        "07 -> 15": {
+          "0_to_25m": 5,
+          "over1000m": 1,
+          "over100_to250m": 0,
+          "over250_to1000m": 1,
+          "over25_to100m": 1
+        },
+        "15 -> 00": {
+          "0_to_25m": 74,
+          "over1000m": 1,
+          "over100_to250m": 0,
+          "over250_to1000m": 0,
+          "over25_to100m": 0
+        },
+        "15 -> 07": {
+          "0_to_25m": 0,
+          "over1000m": 1,
+          "over100_to250m": 1,
+          "over250_to1000m": 2,
+          "over25_to100m": 0
+        },
+        "15 -> 15": {
+          "0_to_25m": 19,
+          "over1000m": 2,
+          "over100_to250m": 2,
+          "over250_to1000m": 0,
+          "over25_to100m": 0
+        }
+      }
+    },
+    {
+      "years": [
+        2018,
+        2019
+      ],
+      "sample": "candidate_in_all_three",
+      "common_keys": 16603,
+      "address_comparable": 16603,
+      "same_normalized_address": 16363,
+      "different_normalized_address": 240,
+      "address_not_comparable": 0,
+      "name_comparable": 16603,
+      "different_normalized_name": 111,
+      "recorded_type_changes": 8,
+      "recorded_state_changes": 0,
+      "valid_coordinate_pairs": 16603,
+      "coordinate_distances_above_m": {
+        "25": 253,
+        "100": 216,
+        "250": 171,
+        "1000": 93
+      },
+      "coordinate_distance_quantiles_m": {
+        "0": 0.0,
+        "0.5": 0.0,
+        "0.9": 0.0,
+        "0.99": 277.79895506449947,
+        "1": 177278.47407944791
+      },
+      "address_by_coordinate_bin": {
+        "different": {
+          "0_to_25m": 39,
+          "over1000m": 61,
+          "over100_to250m": 41,
+          "over250_to1000m": 66,
+          "over25_to100m": 33
+        },
+        "same": {
+          "0_to_25m": 16311,
+          "over1000m": 32,
+          "over100_to250m": 4,
+          "over250_to1000m": 12,
+          "over25_to100m": 4
+        }
+      },
+      "earlier_address_status_codes": {
+        "00": 16410,
+        "07": 97,
+        "15": 96
+      },
+      "earlier_structure_status_codes": {
+        "00": 16602,
+        "01": 1
+      },
+      "later_address_status_codes": {
+        "00": 15958,
+        "07": 114,
+        "15": 531
+      },
+      "later_structure_status_codes": {
+        "00": 16603
+      },
+      "address_status_transitions": {
+        "00": {
+          "00": 15808,
+          "07": 101,
+          "15": 501
+        },
+        "07": {
+          "00": 80,
+          "07": 10,
+          "15": 7
+        },
+        "15": {
+          "00": 70,
+          "07": 3,
+          "15": 23
+        }
+      },
+      "structure_status_transitions": {
+        "00": {
+          "00": 16602
+        },
+        "01": {
+          "00": 1
+        }
+      },
+      "address_status_pair_by_observed_address": {
+        "00 -> 00": {
+          "different": 16,
+          "same": 15792
+        },
+        "00 -> 07": {
+          "different": 99,
+          "same": 2
+        },
+        "00 -> 15": {
+          "different": 101,
+          "same": 400
+        },
+        "07 -> 00": {
+          "different": 0,
+          "same": 80
+        },
+        "07 -> 07": {
+          "different": 9,
+          "same": 1
+        },
+        "07 -> 15": {
+          "different": 4,
+          "same": 3
+        },
+        "15 -> 00": {
+          "different": 2,
+          "same": 68
+        },
+        "15 -> 07": {
+          "different": 3,
+          "same": 0
+        },
+        "15 -> 15": {
+          "different": 6,
+          "same": 17
+        }
+      },
+      "address_status_pair_by_coordinate_bin": {
+        "00 -> 00": {
+          "0_to_25m": 15744,
+          "over1000m": 38,
+          "over100_to250m": 8,
+          "over250_to1000m": 11,
+          "over25_to100m": 7
+        },
+        "00 -> 07": {
+          "0_to_25m": 8,
+          "over1000m": 26,
+          "over100_to250m": 23,
+          "over250_to1000m": 37,
+          "over25_to100m": 7
+        },
+        "00 -> 15": {
+          "0_to_25m": 425,
+          "over1000m": 20,
+          "over100_to250m": 10,
+          "over250_to1000m": 24,
+          "over25_to100m": 22
+        },
+        "07 -> 00": {
+          "0_to_25m": 80,
+          "over1000m": 0,
+          "over100_to250m": 0,
+          "over250_to1000m": 0,
+          "over25_to100m": 0
+        },
+        "07 -> 07": {
+          "0_to_25m": 1,
+          "over1000m": 5,
+          "over100_to250m": 1,
+          "over250_to1000m": 3,
+          "over25_to100m": 0
+        },
+        "07 -> 15": {
+          "0_to_25m": 4,
+          "over1000m": 1,
+          "over100_to250m": 0,
+          "over250_to1000m": 1,
+          "over25_to100m": 1
+        },
+        "15 -> 00": {
+          "0_to_25m": 69,
+          "over1000m": 1,
+          "over100_to250m": 0,
+          "over250_to1000m": 0,
+          "over25_to100m": 0
+        },
+        "15 -> 07": {
+          "0_to_25m": 0,
+          "over1000m": 0,
+          "over100_to250m": 1,
+          "over250_to1000m": 2,
+          "over25_to100m": 0
+        },
+        "15 -> 15": {
+          "0_to_25m": 19,
+          "over1000m": 2,
+          "over100_to250m": 2,
+          "over250_to1000m": 0,
+          "over25_to100m": 0
+        }
+      }
+    },
+    {
+      "years": [
+        2017,
+        2019
+      ],
+      "sample": "all_three_year_keys",
+      "common_keys": 17267,
+      "address_comparable": 17267,
+      "same_normalized_address": 16833,
+      "different_normalized_address": 434,
+      "address_not_comparable": 0,
+      "name_comparable": 17267,
+      "different_normalized_name": 253,
+      "recorded_type_changes": 27,
+      "recorded_state_changes": 0,
+      "valid_coordinate_pairs": 17267,
+      "coordinate_distances_above_m": {
+        "25": 2963,
+        "100": 547,
+        "250": 439,
+        "1000": 240
+      },
+      "coordinate_distance_quantiles_m": {
+        "0": 0.0,
+        "0.5": 5.4294653319525565,
+        "0.9": 55.451944093327285,
+        "0.99": 1696.7244962358684,
+        "1": 1401550.7102419755
+      },
+      "address_by_coordinate_bin": {
+        "different": {
+          "0_to_25m": 78,
+          "over1000m": 113,
+          "over100_to250m": 60,
+          "over250_to1000m": 116,
+          "over25_to100m": 67
+        },
+        "same": {
+          "0_to_25m": 14226,
+          "over1000m": 127,
+          "over100_to250m": 48,
+          "over250_to1000m": 83,
+          "over25_to100m": 2349
+        }
+      },
+      "earlier_address_status_codes": {
+        "00": 16652,
+        "07": 125,
+        "15": 490
+      },
+      "earlier_structure_status_codes": {
+        "00": 17174,
+        "01": 1,
+        "02": 54,
+        "03": 3,
+        "04": 5,
+        "08": 12,
+        "09": 1,
+        "11": 1,
+        "13": 5,
+        "23": 7,
+        "24": 4
+      },
+      "later_address_status_codes": {
+        "00": 16604,
+        "07": 119,
+        "15": 544
+      },
+      "later_structure_status_codes": {
+        "00": 17199,
+        "03": 46,
+        "08": 4,
+        "23": 16,
+        "24": 2
+      },
+      "address_status_transitions": {
+        "00": {
+          "00": 16005,
+          "07": 112,
+          "15": 535
+        },
+        "07": {
+          "00": 119,
+          "07": 4,
+          "15": 2
+        },
+        "15": {
+          "00": 480,
+          "07": 3,
+          "15": 7
+        }
+      },
+      "structure_status_transitions": {
+        "00": {
+          "00": 17108,
+          "03": 46,
+          "08": 4,
+          "23": 15,
+          "24": 1
+        },
+        "01": {
+          "00": 1,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "02": {
+          "00": 54,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "03": {
+          "00": 3,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "04": {
+          "00": 5,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "08": {
+          "00": 12,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "09": {
+          "00": 1,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "11": {
+          "00": 1,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "13": {
+          "00": 5,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        },
+        "23": {
+          "00": 5,
+          "03": 0,
+          "08": 0,
+          "23": 1,
+          "24": 1
+        },
+        "24": {
+          "00": 4,
+          "03": 0,
+          "08": 0,
+          "23": 0,
+          "24": 0
+        }
+      },
+      "address_status_pair_by_observed_address": {
+        "00 -> 00": {
+          "different": 168,
+          "same": 15837
+        },
+        "00 -> 07": {
+          "different": 106,
+          "same": 6
+        },
+        "00 -> 15": {
+          "different": 130,
+          "same": 405
+        },
+        "07 -> 00": {
+          "different": 7,
+          "same": 112
+        },
+        "07 -> 07": {
+          "different": 4,
+          "same": 0
+        },
+        "07 -> 15": {
+          "different": 1,
+          "same": 1
+        },
+        "15 -> 00": {
+          "different": 10,
+          "same": 470
+        },
+        "15 -> 07": {
+          "different": 2,
+          "same": 1
+        },
+        "15 -> 15": {
+          "different": 6,
+          "same": 1
+        }
+      },
+      "address_status_pair_by_coordinate_bin": {
+        "00 -> 00": {
+          "0_to_25m": 13479,
+          "over1000m": 163,
+          "over100_to250m": 63,
+          "over250_to1000m": 121,
+          "over25_to100m": 2179
+        },
+        "00 -> 07": {
+          "0_to_25m": 10,
+          "over1000m": 31,
+          "over100_to250m": 27,
+          "over250_to1000m": 36,
+          "over25_to100m": 8
+        },
+        "00 -> 15": {
+          "0_to_25m": 442,
+          "over1000m": 27,
+          "over100_to250m": 9,
+          "over250_to1000m": 30,
+          "over25_to100m": 27
+        },
+        "07 -> 00": {
+          "0_to_25m": 93,
+          "over1000m": 5,
+          "over100_to250m": 2,
+          "over250_to1000m": 2,
+          "over25_to100m": 17
+        },
+        "07 -> 07": {
+          "0_to_25m": 1,
+          "over1000m": 1,
+          "over100_to250m": 0,
+          "over250_to1000m": 2,
+          "over25_to100m": 0
+        },
+        "07 -> 15": {
+          "0_to_25m": 0,
+          "over1000m": 0,
+          "over100_to250m": 0,
+          "over250_to1000m": 0,
+          "over25_to100m": 2
+        },
+        "15 -> 00": {
+          "0_to_25m": 277,
+          "over1000m": 12,
+          "over100_to250m": 2,
+          "over250_to1000m": 6,
+          "over25_to100m": 183
+        },
+        "15 -> 07": {
+          "0_to_25m": 0,
+          "over1000m": 0,
+          "over100_to250m": 2,
+          "over250_to1000m": 1,
+          "over25_to100m": 0
+        },
+        "15 -> 15": {
+          "0_to_25m": 2,
+          "over1000m": 1,
+          "over100_to250m": 3,
+          "over250_to1000m": 1,
+          "over25_to100m": 0
+        }
+      }
+    },
+    {
+      "years": [
+        2017,
+        2019
+      ],
+      "sample": "candidate_in_all_three",
+      "common_keys": 16603,
+      "address_comparable": 16603,
+      "same_normalized_address": 16198,
+      "different_normalized_address": 405,
+      "address_not_comparable": 0,
+      "name_comparable": 16603,
+      "different_normalized_name": 216,
+      "recorded_type_changes": 20,
+      "recorded_state_changes": 0,
+      "valid_coordinate_pairs": 16603,
+      "coordinate_distances_above_m": {
+        "25": 2812,
+        "100": 504,
+        "250": 400,
+        "1000": 212
+      },
+      "coordinate_distance_quantiles_m": {
+        "0": 0.0,
+        "0.5": 5.41416713953809,
+        "0.9": 54.538363912084826,
+        "0.99": 1493.5326456487714,
+        "1": 1401550.7102419755
+      },
+      "address_by_coordinate_bin": {
+        "different": {
+          "0_to_25m": 76,
+          "over1000m": 92,
+          "over100_to250m": 59,
+          "over250_to1000m": 112,
+          "over25_to100m": 66
+        },
+        "same": {
+          "0_to_25m": 13715,
+          "over1000m": 120,
+          "over100_to250m": 45,
+          "over250_to1000m": 76,
+          "over25_to100m": 2242
+        }
+      },
+      "earlier_address_status_codes": {
+        "00": 16015,
+        "07": 116,
+        "15": 472
+      },
+      "earlier_structure_status_codes": {
+        "00": 16538,
+        "01": 1,
+        "02": 37,
+        "04": 4,
+        "08": 12,
+        "09": 1,
+        "11": 1,
+        "13": 5,
+        "24": 4
+      },
+      "later_address_status_codes": {
+        "00": 15958,
+        "07": 114,
+        "15": 531
+      },
+      "later_structure_status_codes": {
+        "00": 16603
+      },
+      "address_status_transitions": {
+        "00": {
+          "00": 15385,
+          "07": 107,
+          "15": 523
+        },
+        "07": {
+          "00": 110,
+          "07": 4,
+          "15": 2
+        },
+        "15": {
+          "00": 463,
+          "07": 3,
+          "15": 6
+        }
+      },
+      "structure_status_transitions": {
+        "00": {
+          "00": 16538
+        },
+        "01": {
+          "00": 1
+        },
+        "02": {
+          "00": 37
+        },
+        "04": {
+          "00": 4
+        },
+        "08": {
+          "00": 12
+        },
+        "09": {
+          "00": 1
+        },
+        "11": {
+          "00": 1
+        },
+        "13": {
+          "00": 5
+        },
+        "24": {
+          "00": 4
+        }
+      },
+      "address_status_pair_by_observed_address": {
+        "00 -> 00": {
+          "different": 152,
+          "same": 15233
+        },
+        "00 -> 07": {
+          "different": 101,
+          "same": 6
+        },
+        "00 -> 15": {
+          "different": 124,
+          "same": 399
+        },
+        "07 -> 00": {
+          "different": 7,
+          "same": 103
+        },
+        "07 -> 07": {
+          "different": 4,
+          "same": 0
+        },
+        "07 -> 15": {
+          "different": 1,
+          "same": 1
+        },
+        "15 -> 00": {
+          "different": 9,
+          "same": 454
+        },
+        "15 -> 07": {
+          "different": 2,
+          "same": 1
+        },
+        "15 -> 15": {
+          "different": 5,
+          "same": 1
+        }
+      },
+      "address_status_pair_by_coordinate_bin": {
+        "00 -> 00": {
+          "0_to_25m": 12988,
+          "over1000m": 143,
+          "over100_to250m": 60,
+          "over250_to1000m": 116,
+          "over25_to100m": 2078
+        },
+        "00 -> 07": {
+          "0_to_25m": 10,
+          "over1000m": 26,
+          "over100_to250m": 27,
+          "over250_to1000m": 36,
+          "over25_to100m": 8
+        },
+        "00 -> 15": {
+          "0_to_25m": 436,
+          "over1000m": 25,
+          "over100_to250m": 8,
+          "over250_to1000m": 27,
+          "over25_to100m": 27
+        },
+        "07 -> 00": {
+          "0_to_25m": 86,
+          "over1000m": 5,
+          "over100_to250m": 2,
+          "over250_to1000m": 1,
+          "over25_to100m": 16
+        },
+        "07 -> 07": {
+          "0_to_25m": 1,
+          "over1000m": 1,
+          "over100_to250m": 0,
+          "over250_to1000m": 2,
+          "over25_to100m": 0
+        },
+        "07 -> 15": {
+          "0_to_25m": 0,
+          "over1000m": 0,
+          "over100_to250m": 0,
+          "over250_to1000m": 0,
+          "over25_to100m": 2
+        },
+        "15 -> 00": {
+          "0_to_25m": 268,
+          "over1000m": 11,
+          "over100_to250m": 2,
+          "over250_to1000m": 5,
+          "over25_to100m": 177
+        },
+        "15 -> 07": {
+          "0_to_25m": 0,
+          "over1000m": 0,
+          "over100_to250m": 2,
+          "over250_to1000m": 1,
+          "over25_to100m": 0
+        },
+        "15 -> 15": {
+          "0_to_25m": 2,
+          "over1000m": 1,
+          "over100_to250m": 3,
+          "over250_to1000m": 0,
+          "over25_to100m": 0
+        }
+      }
+    }
+  ],
+  "key_presence_not_openings_or_closures": [
+    {
+      "years": [
+        2017,
+        2018
+      ],
+      "left_keys": 17452,
+      "right_keys": 17478,
+      "both": 17348,
+      "left_only": 104,
+      "right_only": 130,
+      "union": 17582
+    },
+    {
+      "years": [
+        2018,
+        2019
+      ],
+      "left_keys": 17478,
+      "right_keys": 17496,
+      "both": 17396,
+      "left_only": 82,
+      "right_only": 100,
+      "union": 17578
+    },
+    {
+      "years": [
+        2017,
+        2019
+      ],
+      "left_keys": 17452,
+      "right_keys": 17496,
+      "both": 17270,
+      "left_only": 182,
+      "right_only": 226,
+      "union": 17678
+    }
+  ],
+  "stage": "public_inventory_continuity_not_mobility_linkage",
+  "utc": "2026-10-19T19:29:24.945461+00:00",
+  "runtime_seconds": 4.29395,
+  "source_manifest_sha256": "3ad45bea610590e84f2df1c763655ccf4daf3281c94bd03e2bd1bcd51e2f86a2",
+  "sources": [
+    {
+      "year": 2017,
+      "archive_sha256": "d16005052c9742ee33a7efbd422fb327d88fdedb1bfcb578d1191793792afc0c",
+      "archive_bytes": 3261122,
+      "archive_mtime_ns": 1785159780377228500,
+      "members": {
+        "outlet": {
+          "name": "PLS_FY2017_Data_Files_CSV/PLS_FY17_Outlet_pud17i.csv",
+          "sha256": "2dec52c7109f9dd84307d4e2bcd01afde86c312137b2ec57df1a5a7ed2f052fd",
+          "bytes": 3829239
+        },
+        "system": {
+          "name": "PLS_FY2017_Data_Files_CSV/PLS_FY17_AE_pud17i.csv",
+          "sha256": "0614bfb4371aeaad859a0852ee517cddc53d2fb3b825d1fb0ea3e733bad6cb63",
+          "bytes": 7377453
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "archive_sha256": "522deaf5927e1575184f76782e0d2b9a297007421555f25a2cd6cfd4b9bedea3",
+      "archive_bytes": 3260022,
+      "archive_mtime_ns": 1785159783358925800,
+      "members": {
+        "outlet": {
+          "name": "pls_fy18_outlet_pud18i.csv",
+          "sha256": "95c3f831a2b9329f742160d6093145c265cfdc076a24e078ab3f202a2cb39099",
+          "bytes": 3812904
+        },
+        "system": {
+          "name": "pls_fy18_ae_pud18i.csv",
+          "sha256": "888fb239f1876ee2e97688f26a3f5f2b4a9f874545a6e58e30b8a734c8061eff",
+          "bytes": 7788072
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "archive_sha256": "8c4815720ea50cab51a43db5616eb8d5936bac44382d465b8330e72bcfff71d9",
+      "archive_bytes": 2926343,
+      "archive_mtime_ns": 1785159785437786400,
+      "members": {
+        "outlet": {
+          "name": "PLS_FY19_Outlet_pud19i.csv",
+          "sha256": "0c2755b39839a1f479fd8dcbd7abb77b50d2768327a6fda3a928f90904ee230a",
+          "bytes": 3909086
+        },
+        "system": {
+          "name": "PLS_FY19_AE_pud19i.csv",
+          "sha256": "24a4dbeb2dab7a0dcdabe7edfa9b0b660adac981a1c0ae9e6fbe8dcaa3bf6fe1",
+          "bytes": 7744610
+        }
+      }
+    }
+  ],
+  "precise_geocode_codes": [
+    "A"
+  ],
+  "definition_review_sha256": "eb97498a20594232d17d8fb7e8581c43f95eea1738247275b26bb966fea2c749",
+  "script_sha256": "79b0a0f125b6ea9f6e1626c17c194e469c4c4e12d6478499bfaa87567833d048",
+  "prior_reconciliation_passed": true,
+  "inputs_unchanged": true,
+  "scope": "Published IMLS geography includes territories; US50/DC counts are explicit. No mobility records or exposure outcomes used.",
+  "limits": [
+    "Recorded address/coordinate changes are not verified moves.",
+    "AE reporting dates are not outlet operating dates or mobility calendar coverage.",
+    "Precise geocode codes describe provider matching, not independent coordinate validation.",
+    "Stable screened subset is selected; not a corrected national opportunity set.",
+    "No modern POI linkage, access effect, investment event or segregation estimate."
+  ]
+}
