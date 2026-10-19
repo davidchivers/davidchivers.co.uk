@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kit · Economics at Durham · design concept 2</title>
+<meta name="description" content="Design concept: the Economics at Durham essentials laid out like objects on a table.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#3a143f">
+<link rel="stylesheet" href="kit.css">
+<script src="kit.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#table">Skip to the table</a>
+
+<header class="bar">
+  <div class="brand">
+    <img class="logo" src="../assets/durham-logo-white.svg" width="240" height="99" alt="Durham University">
+    <span class="dept">Economics<br>community hub</span>
+  </div>
+  <p class="tape">Design concept 2 · Kit</p>
+  <a class="all" href="../index.html">All four concepts</a>
+</header>
+
+<main id="main">
+  <div class="intro">
+    <h1>Everything you need, <span>laid out on one table.</span></h1>
+    <div class="arrange" data-arrange hidden>
+      <p class="arrange-label" id="arrange-label">Lay it out for</p>
+      <div class="arrange-buttons" role="group" aria-labelledby="arrange-label">
+        <button type="button" data-mode="all" aria-pressed="true">Everyone</button>
+        <button type="button" data-mode="apply" aria-pressed="false">Thinking of applying</button>
+        <button type="button" data-mode="arrive" aria-pressed="false">Starting soon</button>
+        <button type="button" data-mode="study" aria-pressed="false">Studying here</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="table" id="table" data-table data-mode="all">
+
+    <!-- Seminar programme card -->
+    <section class="obj programme" data-obj="programme" data-name="Seminar programme" aria-labelledby="prog-h">
+      <div class="card">
+        <div class="card-main">
+          <p class="kicker">Visiting speakers · Autumn 2026</p>
+          <h2 id="prog-h">Seminar programme</h2>
+          <ol class="talks">
+            <li class="talk">
+              <a href="https://davidchivers.co.uk/seminars/">
+                <time datetime="2026-10-21"><b>21</b><span>Oct · Wed</span></time>
+                <span class="talk-body"><strong>Algorithmic equilibria</strong><span class="who">Mich Tvede · University of Sheffield</span></span>
+              </a>
+            </li>
+            <li class="talk">
+              <a href="https://davidchivers.co.uk/seminars/">
+                <time datetime="2026-11-11"><b>11</b><span>Nov · Wed</span></time>
+                <span class="talk-body"><strong>Punishment and crime: Impact of death sentences on local crime rates in India</strong><span class="who">Ashwini Deshpande · Ashoka University</span></span>
+              </a>
+            </li>
+            <li class="talk">
+              <a href="https://davidchivers.co.uk/seminars/">
+                <time datetime="2026-11-18"><b>18</b><span>Nov · Wed</span></time>
+                <span class="talk-body"><strong class="tbc">Title to follow</strong><span class="who">Petros Sekeris · Toulouse Business School</span></span>
+              </a>
+            </li>
+          </ol>
+        </div>
+        <a class="stub" href="https://davidchivers.co.uk/seminars/"><span>Full programme, rooms <span class="amp">&amp;</span> calendars</span><span class="go" aria-hidden="true">↗</span></a>
+      </div>
+      <p class="obj-note">Programme snapshot, checked 19 October 2026. Times and rooms are on the seminar page.</p>
+    </section>
+
+    <!-- Key fobs: sign-ins and daily routes -->
+    <section class="obj keys" data-obj="keys" data-name="Key fobs for current students" aria-labelledby="keys-h">
+      <h2 class="obj-label" id="keys-h"><span>Already here</span> Your everyday keys</h2>
+      <div class="ring" aria-hidden="true"></div>
+      <ul class="fobs">
+        <li class="fob fob-yellow"><a href="https://blackboard.durham.ac.uk/"><span class="insert"><strong>Blackboard</strong><span>Teaching materials</span><em>Sign-in <span aria-hidden="true">↗</span></em></span></a></li>
+        <li class="fob fob-purple"><a href="https://durhamuniversity.sharepoint.com/teams/BUS-Students"><span class="insert"><strong>Student Gateway</strong><span>Business School site</span><em>Sign-in <span aria-hidden="true">↗</span></em></span></a></li>
+        <li class="fob fob-teal"><a href="https://www.durham.ac.uk/business/programmes/undergraduate/employability-and-career-for-economics-students-/"><span class="insert"><strong>Careers</strong><span>and opportunities</span><em>Open <span aria-hidden="true">↗</span></em></span></a></li>
+      </ul>
+    </section>
+
+    <!-- Course leaflet -->
+    <section class="obj leaflet" data-obj="leaflet" data-name="Course leaflet" aria-labelledby="leaflet-h">
+      <div class="paper">
+        <h2 class="leaflet-h" id="leaflet-h"><span>Thinking of applying</span> Study Economics at Durham</h2>
+        <ul class="panels">
+          <li><a href="https://www.durham.ac.uk/business/courses/economics-l100/"><span class="lvl">Undergraduate</span><strong>BSc Economics</strong><span class="go" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.durham.ac.uk/business/programmes/masters/masters-in-economics/"><span class="lvl">Postgraduate taught</span><strong>Master’s programmes</strong><span class="go" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.durham.ac.uk/business/about/departments/economics/phd-in-economics/"><span class="lvl">Research</span><strong>PhD in Economics</strong><span class="go" aria-hidden="true">↗</span></a></li>
+        </ul>
+        <a class="slip" href="https://www.durham.ac.uk/visit-us/open-days/"><span>Come and see us: <strong>open days and visits</strong></span><span class="go" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <!-- Luggage tag -->
+    <section class="obj tag" data-obj="tag" data-name="Arrival tag" aria-labelledby="tag-h">
+      <div class="tag-shape">
+        <svg class="string" viewBox="0 0 120 60" aria-hidden="true" focusable="false"><path d="M118 30 C 90 4, 58 58, 30 26 S 4 14, 2 40" fill="none" stroke="#efe6d2" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <div class="tag-body">
+          <span class="eyelet" aria-hidden="true"></span>
+          <div class="tag-text">
+            <p class="tag-dest"><span>Destination</span> Economics, Durham</p>
+            <h2 id="tag-h">Starting soon</h2>
+            <ul class="tag-lines">
+              <li><a href="https://www.durham.ac.uk/business/about/departments/economics/welcome-to-new-students/">Department welcome for new students <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://apps.dur.ac.uk/induction/calendar">Induction planner <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://www.durham.ac.uk/study/undergraduate/offer/before-you-arrive/checklist-for-new-students/">Arrival checklist <span aria-hidden="true">↗</span></a></li>
+              <li class="minor"><a href="https://dubs.awh.durham.ac.uk/econ/msc/">MSc preparation, the original course <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Postcard -->
+    <section class="obj postcard" data-obj="postcard" data-name="Student-life postcard" aria-labelledby="post-h">
+      <figure class="print">
+        <img src="../assets/durham-students.jpg" width="2000" height="1333" alt="Two students laughing as they walk across Kingsgate Bridge among autumn trees" loading="lazy" decoding="async">
+        <figcaption>
+          <h2 id="post-h">Life around Durham</h2>
+          <a class="insta" href="https://www.instagram.com/thedurhamstudent/">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></svg>
+            <span><strong>@thedurhamstudent</strong> on Instagram</span><span class="go" aria-hidden="true">↗</span>
+          </a>
+          <p class="post-note">The existing Durham Student account, an example until Economics has its own. Photograph: Durham University, shown as a print rather than an Instagram post.</p>
+        </figcaption>
+      </figure>
+    </section>
+  </div>
+
+  <p class="status" id="table-status" role="status" aria-live="polite"></p>
+</main>
+
+<footer class="foot">
+  <p>Design concept 2 of 4: a design proposal by David Chivers, October 2026. This is not an official Durham University information service; current official information is on the linked pages.</p>
+  <nav aria-label="About this concept">
+    <a href="../index.html">Compare all four concepts</a>
+    <a href="../../index.html">Baseline design</a>
+    <a href="https://www.durham.ac.uk/business/about/departments/economics/">Official department website <span aria-hidden="true">↗</span></a>
+    <a href="../../sources.html">Sources and credits</a>
+  </nav>
+</footer>
+</body>
+</html>
