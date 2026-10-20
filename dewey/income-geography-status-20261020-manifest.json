@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-20",
+  "status": "prepared_not_deployment_proof",
+  "supersession": "Coordinate-audit readiness only; national/category results and frozen protocols unchanged",
+  "sources": [
+    {
+      "source": "notes/120_income_geography_audit.md",
+      "route": "assets/income_geography_2019_20261020/note120.md",
+      "sha256": "e63c89add3c496651cafa1b4c30c065e58e05b3a61a05aa72543691a639a587a",
+      "scope": "complete",
+      "date": "2026-10-20"
+    },
+    {
+      "source": "docs/data_construction/120_income_geography_audit.md",
+      "route": "assets/income_geography_2019_20261020/construction.md",
+      "sha256": "62147ee60f66c0602836996b138ba8148ac19915e3e524b1987656958a65cf6b",
+      "scope": "complete",
+      "date": "2026-10-20"
+    },
+    {
+      "source": "docs/protocols/income_finer_geography_2019_20261020.md",
+      "route": "assets/income_geography_2019_20261020/protocol.md",
+      "sha256": "0f12c42c519e7fa5908e7e7d0e2a8f2ab6f2dfcc202fbb387ba337b0f9ea72d4",
+      "scope": "complete",
+      "date": "2026-10-20"
+    }
+  ],
+  "site_files_sha256": {
+    "index.html": "4f6f8312c07096601954497ce35e9ec4e8a3b5bd7eb1d8d54772a0021f625895",
+    "research.html": "8986ec0097c772dccfd6e8e800bd3cce77d21da1c2fda04dc1ef9b80afb7bb63",
+    "quality.html": "01f83cc9e4ece88ceef568336f3ab07a73f0e8dcc15172b8aaf6cccd16b66467",
+    "income-accounting-2019.html": "8769f2a81be028bf14bd221fb558a2ab971a36c5e22f754a8226590e0131332e"
+  },
+  "private_rows_read": false,
+  "finer_income_outcomes_computed": false
+}
