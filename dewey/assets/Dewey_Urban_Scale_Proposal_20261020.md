@@ -128,8 +128,8 @@ The previously reported attenuation in the venue-count association concerned
 
 ### 4.1 Reconstruct before interpreting
 
-Let \(v_{oj}\) be a valid, positive recorded annual weight from origin CBG
-\(o\) to venue \(j\). Let \(g(o)\) be its known income group. Define
+Let $v_{oj}$ be a valid, positive recorded annual weight from origin CBG
+$o$ to venue $j$. Let $g(o)$ be its known income group. Define
 
 $$
 x_{gj}=\sum_{o:g(o)=g}v_{oj},\qquad
@@ -171,8 +171,8 @@ derived solely from positive visits cannot serve as independent availability.
 
 ### 4.3 An exact accounting, with limited interpretation
 
-Within one service, metro and year, \(G\) is the origin-income group, \(J\)
-the venue, \(C=C(J)\) its centre and \(P=P(J)\) a predeclared discrete product
+Within one service, metro and year, $G$ is the origin-income group, $J$
+the venue, $C=C(J)$ its centre and $P=P(J)$ a predeclared discrete product
 bin. Products and centres can cross; both must be fixed attributes of the
 venue in this accounting. With entropy in natural-log units,
 
@@ -198,8 +198,8 @@ Reversing the order reallocates the first two components; report both.
 Do not rename these components access, product and preference effects.
 
 Use the identical flow universe and weights throughout. Show raw nats and
-each component divided by the same \(H(G)\); normalisation is undefined when
-\(H(G)=0\). Report group composition and coverage alongside the normalised
+each component divided by the same $H(G)$; normalisation is undefined when
+$H(G)=0$. Report group composition and coverage alongside the normalised
 index. A finer product partition can mechanically move separation out of
 the final term. A cell with one venue has zero within-cell separation by
 construction, not demonstrated integration.
@@ -213,15 +213,15 @@ product channel unresolved.
 
 ## 5. City-size regressions {#regressions}
 
-For component \(r\), let \(D^r_m\) be its raw or normalised value in metro
-\(m\) in 2019. The first regression is
+For component $r$, let $D^r_m$ be its raw or normalised value in metro
+$m$ in 2019. The first regression is
 
 $$
 D^r_m=\alpha^r+\beta^r\log N_m+\varepsilon^r_m,
 $$
 
-where \(N_m\) is population on the verified metro definition. An association
-with a doubling of population is \(\beta^r\log 2\), in the displayed outcome's
+where $N_m$ is population on the verified metro definition. An association
+with a doubling of population is $\beta^r\log 2$, in the displayed outcome's
 units. Report coefficients, confidence intervals, metro counts, outcome
 means and the exact weighting rule. No coefficient is currently available.
 
@@ -311,9 +311,9 @@ f_{g(o)}(d^{home}_{oj})+
 X_j^\prime\theta_{g(o)}\right\}.
 $$
 
-Here \(\alpha_{oc}\) absorbs the origin's activity at that centre,
-\(\delta_j\) absorbs common venue attractiveness, \(d^{home}_{oj}\) is the
-home-based cost proxy, and \(X_j\) contains independently measured historical
+Here $\alpha_{oc}$ absorbs the origin's activity at that centre,
+$\delta_j$ absorbs common venue attractiveness, $d^{home}_{oj}$ is the
+home-based cost proxy, and $X_j$ contains independently measured historical
 products. One income group is the reference for product interactions.
 Venue effects absorb product main effects; origin-centre effects absorb
 origin-income main effects. Variation and rank conditions must be checked,
