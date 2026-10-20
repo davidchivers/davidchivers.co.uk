@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-20",
+  "status": "prepared_not_deployment_proof",
+  "source_note_sha256": "8d0af9a8baa0ac1348aabc69327a06725480eadbfc2c708d5a95bfd127e1620c",
+  "page_scope": "Adapted public assessment; complete protocol and authored source reviews linked, not private proposal or correspondence.",
+  "sources": [
+    {
+      "source": "docs/protocols/sales_tax_mixing_feasibility_20261020.md",
+      "route": "assets/sales_tax_feasibility_20261020/protocol.md",
+      "sha256": "f7a7294ead1dccc5473185d0f4ba3c65cf88d88881d5b8b561c9b0d4aaab6af4",
+      "scope": "complete_authored_snapshot",
+      "date": "2026-10-20"
+    },
+    {
+      "source": "workstreams/sales_tax_literature_20261020.md",
+      "route": "assets/sales_tax_feasibility_20261020/literature.md",
+      "sha256": "f4dd4e51b0f034d2ca55563657178a71b4551ee43f1595a5573ed809c3704638",
+      "scope": "complete_authored_snapshot",
+      "date": "2026-10-20"
+    },
+    {
+      "source": "workstreams/sales_tax_event_sources_20261020.md",
+      "route": "assets/sales_tax_feasibility_20261020/event_sources.md",
+      "sha256": "dcc1ebd5460631ec45ecc4e5bd2161c3a899a26e8a3af07e9942e91cde6a6b90",
+      "scope": "complete_authored_snapshot",
+      "date": "2026-10-20"
+    },
+    {
+      "source": "workstreams/sales_tax_design_review_20261020.md",
+      "route": "assets/sales_tax_feasibility_20261020/design_review.md",
+      "sha256": "d317153bebeb9df6c8779560f561583a6d3f252cd874765ee371ec1b1d56d8bc",
+      "scope": "complete_authored_snapshot",
+      "date": "2026-10-20"
+    },
+    {
+      "source": "output/sales_tax_feasibility_20261020/ca_april2018_policy_registry.json",
+      "route": "assets/sales_tax_feasibility_20261020/california_registry.json",
+      "sha256": "4eaf4c25b5c256430cbea7731a3aa489838dc4820eb2534f67670c8ec9ea80dc",
+      "scope": "complete_authored_snapshot",
+      "date": "2026-10-20"
+    }
+  ],
+  "site_files_sha256": {
+    "sales-tax-mixing.html": "8521093083ee978b85a30ee8420bc1fabfbe74ab2f0e99d1abade62f89d9623f",
+    "index.html": "e856de8b8d51efe84bf1b2c1deb85bd841a3161b8cd574d2f158b0eddbeb87c0"
+  },
+  "raw_rows_read": false,
+  "tax_regressions_run": false,
+  "supersession": "Current ranking only; original eight identifiers, historical reviews and empirical results unchanged."
+}

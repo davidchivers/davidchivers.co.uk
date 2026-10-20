@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-10-20",
+  "status": "public_source_screen_only_no_mobility_results",
+  "selection": "All 15 changing-rate rows in CDTFA L-533; no outcome screening. Extensions without a rate change excluded from this treatment cohort, not certified controls.",
+  "source_url": "https://cdtfa.ca.gov/formspubs/l533.pdf",
+  "corroborating_url": "https://www.cdtfa.ca.gov/news/18-13.htm",
+  "source_sha256": "886218d351dee88f7a879a2d8a466913d41c3cba900158777a5d96413866da5f",
+  "effective_date": "2018-04-01",
+  "target_pre_start": "2017-04-01",
+  "target_post_end_exclusive": "2019-04-01",
+  "historical_boundary_verified": false,
+  "local_weekly_integrity_verified": false,
+  "raw_processing_authorized": false,
+  "analysis_sample_frozen": false,
+  "cautions": [
+    "15 jurisdiction-rate rows correspond to 11 provisional policy groups, not 15 independent shocks; group identities and dependence need legislative verification.",
+    "No taxability bridge, counterpart rates, historical map, announcement date or identification assumption has been certified.",
+    "The effective date is Sunday: weekly intervals crossing it must not be split using separate day/origin margins.",
+    "Declared target window lies within nominal 2017-2019 scope, not a verified monthly or weekly panel.",
+    "No rate-change extension is automatically an unaffected control; all case histories need review."
+  ],
+  "events": [
+    {
+      "jurisdiction": "Burlingame",
+      "county": "San Mateo",
+      "geography_type": "city",
+      "prior_rate_pct": 8.75,
+      "new_rate_pct": 9,
+      "delta_percentage_points": 0.25,
+      "policy_group": "CA_BURLINGAME_2018",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Farmersville",
+      "county": "Tulare",
+      "geography_type": "city",
+      "prior_rate_pct": 8.25,
+      "new_rate_pct": 8.75,
+      "delta_percentage_points": 0.5,
+      "policy_group": "CA_FARMERSVILLE_2018",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Hawthorne",
+      "county": "Los Angeles",
+      "geography_type": "city",
+      "prior_rate_pct": 9.5,
+      "new_rate_pct": 10.25,
+      "delta_percentage_points": 0.75,
+      "policy_group": "CA_HAWTHORNE_2018",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Larkspur",
+      "county": "Marin",
+      "geography_type": "city",
+      "prior_rate_pct": 8.75,
+      "new_rate_pct": 9,
+      "delta_percentage_points": 0.25,
+      "policy_group": "CA_LARKSPUR_2018",
+      "component_history_excerpt": "L-533 footnote 1: existing city tax LKSG increased from 0.50 to 0.75 percent and its expiration was extended indefinitely. Full legislative history remains unchecked.",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Palm Springs",
+      "county": "Riverside",
+      "geography_type": "city",
+      "prior_rate_pct": 8.75,
+      "new_rate_pct": 9.25,
+      "delta_percentage_points": 0.5,
+      "policy_group": "CA_PALM_SPRINGS_2018",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Santa Barbara",
+      "county": "Santa Barbara",
+      "geography_type": "city",
+      "prior_rate_pct": 7.75,
+      "new_rate_pct": 8.75,
+      "delta_percentage_points": 1,
+      "policy_group": "CA_SANTA_BARBARA_2018",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Vacaville",
+      "county": "Solano",
+      "geography_type": "city",
+      "prior_rate_pct": 7.625,
+      "new_rate_pct": 8.125,
+      "delta_percentage_points": 0.5,
+      "policy_group": "CA_VACAVILLE_2018",
+      "component_history_excerpt": "L-533 footnote 2: existing city tax VACG increased from 0.25 to 0.75 percent and its expiration was extended for 20 years. Full legislative history remains unchecked.",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Woodlake",
+      "county": "Tulare",
+      "geography_type": "city",
+      "prior_rate_pct": 7.75,
+      "new_rate_pct": 8.75,
+      "delta_percentage_points": 1,
+      "policy_group": "CA_WOODLAKE_2018",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Mendocino unincorporated",
+      "county": "Mendocino",
+      "geography_type": "county_unincorporated",
+      "prior_rate_pct": 7.375,
+      "new_rate_pct": 7.875,
+      "delta_percentage_points": 0.5,
+      "policy_group": "CA_MENDOCINO_COUNTYWIDE_2018",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Fort Bragg",
+      "county": "Mendocino",
+      "geography_type": "city",
+      "prior_rate_pct": 8.375,
+      "new_rate_pct": 8.875,
+      "delta_percentage_points": 0.5,
+      "policy_group": "CA_MENDOCINO_COUNTYWIDE_2018",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Point Arena",
+      "county": "Mendocino",
+      "geography_type": "city",
+      "prior_rate_pct": 7.875,
+      "new_rate_pct": 8.375,
+      "delta_percentage_points": 0.5,
+      "policy_group": "CA_MENDOCINO_COUNTYWIDE_2018",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Ukiah",
+      "county": "Mendocino",
+      "geography_type": "city",
+      "prior_rate_pct": 8.375,
+      "new_rate_pct": 8.875,
+      "delta_percentage_points": 0.5,
+      "policy_group": "CA_MENDOCINO_COUNTYWIDE_2018",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Willits",
+      "county": "Mendocino",
+      "geography_type": "city",
+      "prior_rate_pct": 7.875,
+      "new_rate_pct": 8.375,
+      "delta_percentage_points": 0.5,
+      "policy_group": "CA_MENDOCINO_COUNTYWIDE_2018",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "La Mirada",
+      "county": "Los Angeles",
+      "geography_type": "city",
+      "prior_rate_pct": 10.25,
+      "new_rate_pct": 9.5,
+      "delta_percentage_points": -0.75,
+      "policy_group": "CA_LA_MIRADA_2018",
+      "component_history_excerpt": "L-533 footnote 3: the 0.25 percent Measure H district tax LACH becomes operative when the city district tax expires. The table reports a net decline from 10.25 to 9.50 percent; this is not a simple standalone 0.75-point repeal. Full legislative history remains unchecked.",
+      "source_page": 1,
+      "statutory_date_verified": true
+    },
+    {
+      "jurisdiction": "Nevada City",
+      "county": "Nevada",
+      "geography_type": "city",
+      "prior_rate_pct": 8.75,
+      "new_rate_pct": 8.375,
+      "delta_percentage_points": -0.375,
+      "policy_group": "CA_NEVADA_CITY_2018",
+      "source_page": 1,
+      "statutory_date_verified": true
+    }
+  ]
+}
