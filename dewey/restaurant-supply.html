@@ -1,0 +1,246 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Restaurant supply and city size</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} figure{margin:24px 0} figure img,main img{max-width:100%;height:auto;display:block} math[display=block]{display:block;max-width:100%;overflow-x:auto;padding:12px 0}</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Restaurant supply and city size</h1><p class="subtitle">20 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>20 October 2026. New empirical supporting analysis for rank 2, using public Census data only. Not the income-separation pilot, a causal mechanism test, or a claim of a new standalone contribution.</p>
+<h2 id="the-result-in-plain-english">The result in plain English</h2>
+<p>Larger metropolitan areas have more restaurants, but full-service restaurant numbers rise almost in proportion to the number of residents. Across 308 geographically comparable metros, doubling population is associated with about <strong>2.03 times as many full-service establishments</strong>, or <strong>1.6% more per resident</strong>. The model-based interval includes exact proportionality.</p>
+<p>This does not refute the proposed choice mechanism. Twice as many venues can still allow more sorting, even if population also doubles. A large positive relationship between city population and venue counts is therefore not sufficient evidence for that mechanism. We must measure accessible alternatives and use of those alternatives, not mistake the mechanical size relationship for evidence of segregation.</p>
+<h2 id="data-and-model">Data and model</h2>
+<p>The outcome is the published count of employer establishments in each of four fixed 2017 NAICS industries in the <strong>2019 County Business Patterns</strong> metropolitan file. The regressor is log metropolitan population, constructed from Vintage 2019 county population. There is one observation per metro, one cross-section, equal metro weights, and an intercept. There are no individual incomes, visits, worker profiles, attitude outcomes, year effects or other controls in these regressions.</p>
+<p>For each industry separately:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>N</mi><mi>m</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>α</mi><mo>+</mo><mi>β</mi><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><mi>m</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><msub><mi>ε</mi><mi>m</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\log(N_m)=\alpha+\beta\log(P_m)+\varepsilon_m.
+</annotation></semantics></math></p>
+<p>Here <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mi>m</mi></msub><annotation encoding="application/x-tex">N_m</annotation></semantics></math> is establishments and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mi>m</mi></msub><annotation encoding="application/x-tex">P_m</annotation></semantics></math> is residents. The reference value is <strong>beta = 1</strong>, which means proportionate supply, not beta = 0. Doubling population corresponds to a fitted count ratio of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mi>β</mi></msup><annotation encoding="application/x-tex">2^\beta</annotation></semantics></math>, and to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo stretchy="false" form="prefix">[</mo><msup><mn>2</mn><mrow><mi>β</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">100[2^{\beta-1}-1]</annotation></semantics></math>% more establishments per resident. These are cross-sectional associations, not effects of making a city bigger.</p>
+<p>Sources: <a href="https://www2.census.gov/programs-surveys/cbp/datasets/2019/">2019 CBP files</a>, <a href="https://www.census.gov/programs-surveys/cbp/technical-documentation/reference/metro-area-geography-reference.html">CBP county-membership reference</a>, <a href="https://www.census.gov/programs-surveys/cbp/technical-documentation/reference/naics-descriptions.html">2017 NAICS labels</a>, and the previously verified population construction in note 99. The prospective protocol fixed the four industries and both geographic samples before establishment counts were downloaded or read.</p>
+<h2 id="complete-primary-results">Complete primary results</h2>
+<p>Primary sample: US metropolitan areas with the <strong>same complete county set and metropolitan status</strong> in the CBP reference and September 2018 population reference. Category-specific missing counts are not filled in.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Industry</th>
+<th style="text-align: right;">Metros</th>
+<th style="text-align: right;">Log-population slope</th>
+<th style="text-align: right;">HC3 SE</th>
+<th style="text-align: right;">95% interval</th>
+<th style="text-align: right;">R-squared</th>
+<th style="text-align: right;">Establishments per resident when population doubles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full-service restaurants (722511), primary</td>
+<td style="text-align: right;">308</td>
+<td style="text-align: right;">1.0225</td>
+<td style="text-align: right;">0.0132</td>
+<td style="text-align: right;">[0.9966, 1.0484]</td>
+<td style="text-align: right;">0.9346</td>
+<td style="text-align: right;">+1.57%</td>
+</tr>
+<tr>
+<td>Limited-service restaurants (722513)</td>
+<td style="text-align: right;">308</td>
+<td style="text-align: right;">1.0187</td>
+<td style="text-align: right;">0.0079</td>
+<td style="text-align: right;">[1.0032, 1.0342]</td>
+<td style="text-align: right;">0.9768</td>
+<td style="text-align: right;">+1.31%</td>
+</tr>
+<tr>
+<td>Cafeterias, grill buffets and buffets (722514)</td>
+<td style="text-align: right;">210</td>
+<td style="text-align: right;">0.7518</td>
+<td style="text-align: right;">0.0321</td>
+<td style="text-align: right;">[0.6888, 0.8148]</td>
+<td style="text-align: right;">0.7542</td>
+<td style="text-align: right;">-15.81%</td>
+</tr>
+<tr>
+<td>Snack and nonalcoholic beverage bars (722515)</td>
+<td style="text-align: right;">307</td>
+<td style="text-align: right;">1.0985</td>
+<td style="text-align: right;">0.0222</td>
+<td style="text-align: right;">[1.0550, 1.1421]</td>
+<td style="text-align: right;">0.8653</td>
+<td style="text-align: right;">+7.07%</td>
+</tr>
+</tbody>
+</table></div>
+<p>The four rows are the entire predeclared industry set, not selected significant examples. The primary full-service per-resident interval is approximately -0.24% to +3.41%. Limited-service supply is also close to proportional; snacks/nonalcoholic drinks have a larger positive gradient. The buffet result is conditional on publication: counts are absent for 98 of 308 otherwise eligible metros, so it is particularly vulnerable to selection by the small-cell disclosure rule. It should not be interpreted as an unconditional national buffet-supply elasticity.</p>
+<p>The intervals describe HC3 model-based uncertainty, not Census measurement error or spatial dependence. The four estimates are descriptive comparisons, not independent confirmatory significance tests. A high R-squared largely reflects the relationship between two measures of city size.</p>
+<figure>
+<img src="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/restaurant_supply_scaling_20261020.png" alt="Restaurant supply and city size: fixed primary sample and all four industries" />
+<figcaption aria-hidden="true">Restaurant supply and city size: fixed primary sample and all four industries</figcaption>
+</figure>
+<h2 id="geographic-and-publication-checks">Geographic and publication checks</h2>
+<p>CBP’s documented metropolitan reference covers 2017-2021; it is not automatically the September 2018 population geography. Of its 382 US metros, 308 have exactly matching county sets and metro status, 72 have different county membership, and two codes are absent from the 2018 reference. We do not silently match on the five-digit code. The CBP reference’s 551 micropolitan areas are excluded. The strict primary sample accounts for 74.61% of the newer reference’s metropolitan population, not all US metro residents. The broader, separately labelled sensitivity below is therefore important; boundary stability is not a random selection criterion.</p>
+<p>For the primary sample, full- and limited-service counts cover all 308 metros. Buffets are published for 210 of the 308 eligible metros, containing 92.81% of the eligible sample’s population; snacks cover 307 metros and 99.96% of the same eligible population. Population coverage is not venue or visitor coverage. An omitted CBP cell is unknown here, not a zero. No suppressed count is reconstructed from totals.</p>
+<h2 id="predeclared-boundary-sensitivity">Predeclared boundary sensitivity</h2>
+<p>The sensitivity uses all 382 CBP-defined US metros, summing 2019 population over their own county membership only where every county has population. All 382 pass this completeness check. It does not relabel the primary sample or silently crosswalk an incompatible area.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Industry</th>
+<th style="text-align: right;">Metros with published counts</th>
+<th style="text-align: right;">Slope</th>
+<th style="text-align: right;">HC3 SE</th>
+<th style="text-align: right;">95% interval</th>
+<th style="text-align: right;">R-squared</th>
+<th style="text-align: right;">Per-resident change for doubled population</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full-service restaurants</td>
+<td style="text-align: right;">382</td>
+<td style="text-align: right;">1.0206</td>
+<td style="text-align: right;">0.0113</td>
+<td style="text-align: right;">[0.9983, 1.0428]</td>
+<td style="text-align: right;">0.9426</td>
+<td style="text-align: right;">+1.44%</td>
+</tr>
+<tr>
+<td>Limited-service restaurants</td>
+<td style="text-align: right;">382</td>
+<td style="text-align: right;">1.0235</td>
+<td style="text-align: right;">0.0068</td>
+<td style="text-align: right;">[1.0102, 1.0369]</td>
+<td style="text-align: right;">0.9790</td>
+<td style="text-align: right;">+1.64%</td>
+</tr>
+<tr>
+<td>Cafeterias, grill buffets and buffets</td>
+<td style="text-align: right;">267</td>
+<td style="text-align: right;">0.7647</td>
+<td style="text-align: right;">0.0269</td>
+<td style="text-align: right;">[0.7120, 0.8174]</td>
+<td style="text-align: right;">0.7648</td>
+<td style="text-align: right;">-15.05%</td>
+</tr>
+<tr>
+<td>Snack and nonalcoholic beverage bars</td>
+<td style="text-align: right;">381</td>
+<td style="text-align: right;">1.0853</td>
+<td style="text-align: right;">0.0193</td>
+<td style="text-align: right;">[1.0476, 1.1230]</td>
+<td style="text-align: right;">0.8731</td>
+<td style="text-align: right;">+6.09%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Again the full-service interval includes proportionality. Buffet counts are unpublished in 115 metros (retained population coverage 93.51%); one snacks cell is absent (99.97% coverage). The boundary sensitivity does not resolve small-cell selection, within-metro accessibility or product differentiation.</p>
+<h2 id="what-this-changes-in-the-research-plan">What this changes in the research plan</h2>
+<p><strong>Continue rank 2, but keep this as a supply benchmark.</strong> The substantive question remains whether people from different-income home areas use different reachable centres, different products, or different venues within the same centre/service. Metropolitan counts cannot distinguish these.</p>
+<p>The next income-accounting run still requires the named annual-flow and ACS inputs, mass reconciliation and producer geography checks. A later common-menu study additionally needs independent historical centre/tenant and product information. No coefficient here is a preference parameter, a measure of co-presence, or evidence that exposure changes attitudes. Counts are establishments, not firms, seats, opening hours, or accessible menus.</p>
+<p>This is a different use of CBP from note 25’s historical county employment regressions. Those estimates were not rerun or endorsed by this exercise. The prior racial venue-count comparison, negative equal-county validation, correction 70a and failed public-facing gates are unchanged. Home-area income is still not individual income, and expected workers are not observed staff.</p>
+<h2 id="reproducibility-and-delivery">Reproducibility and delivery</h2>
+<p>Source ZIP integrity, unique geographic/industry keys, complete county membership and positive published counts passed. Seven focused tests pass; the production rerun produces identical bytes for all three CSVs and the figure. The initial run stopped before estimation on the official label file’s legacy text encoding; a documented parser fix and regression test preceded the successful runs. No category or sample rule changed.</p>
+<p>The independent audit reconstructs the geography from raw public sources and reproduces all eight coefficients and HC3 standard errors within 1e-10. Its two low-severity wording findings were corrected without changing any estimate, sample or protocol. The original review, response and release receipt are retained with the safe outputs. The full construction log records source URLs, hashes, dates, exact commands, software versions and output identities. Public geographic rows remain outside the repository; no restricted source was processed.</p>
+<p>This website version supplies the result table and figure, with the dated source record below. It does not establish upload to the shared ChatGPT Project, which retains its separately recorded source-capacity gap. Original protocols, historical outputs and source files are preserved.</p>
+<h2 id="full-source-record">Full source record</h2>
+<p><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/restaurant_supply_coefficients_20261020.csv">Download the complete eight-row table</a>. <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/assets/Dewey_Supply_And_Source_Feasibility_20261020_sourcebook.html">Read the complete methods, review and source record</a>.</p>
+<p>The result page updates only the original note’s delivery paragraph and figure link. The sourcebook retains the original local-stage text and records exact source hashes. The Green Book note is a separate source qualification, not part of the restaurant regression.</p>
+</main><footer>20 October 2026. Public-data supply benchmark and dated source qualification. Not an income-sorting estimate, upstream replication or a shared Project upload. Original protocols, contrary results and failed gates remain unchanged.</footer></body></html>
