@@ -1,0 +1,19 @@
+{
+  "verified_utc": "2026-10-20T17:52:34.049633+00:00",
+  "status": "verified_release_stop",
+  "release_permitted": false,
+  "claimed_stop_confirmed": true,
+  "stop_reason": "nonempty_lookup_only_atom_below_minimum",
+  "thresholds_unchanged": true,
+  "independent_full_outer_join": true,
+  "inputs_and_code_unchanged": true,
+  "no_candidate_in_run_directory": true,
+  "elapsed_seconds": 12.493578900001012,
+  "synthetic_verifier_tests_passed": 19,
+  "synthetic_verifier_tests_seconds": 8.667,
+  "private_verification_receipt_sha256": "121cea8c1009c371f4a799e00cd989f58ce40b21b99de789c4f71d482bf2fc3b",
+  "verifier_sha256": "55ee89149644f3345c3224a25b30c16293c16c83c1071a914e2e5f4206149cb4",
+  "invocation_wrapper_sha256": "7803932f1a7fce5742e5324ca255e7f2e4c9f99aea58313af70615022ce78937",
+  "review_scope": "Explicit coarse status and provenance fields only; no category labels, exact support counts, query memberships or economic outcomes.",
+  "verification_scope": "Independent release-stop reconstruction, not new entropy accounting, original-weekly replication or publication clearance."
+}

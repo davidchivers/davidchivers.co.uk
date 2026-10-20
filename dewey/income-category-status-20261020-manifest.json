@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-20",
+  "status": "reviewed_documentation_prepared_not_delivery_proof",
+  "supersedes": "Readiness wording only; national source assets and original protocols unchanged.",
+  "new_sources": [
+    {
+      "source": "notes/118_income_category_accounting.md",
+      "route": "assets/income_category_2019_20261020/note118.md",
+      "sha256": "068e0d9e52e480d452151733157707641f35ab1edabfb7da652fb4a4f5a0e27f",
+      "label": "note118.md",
+      "key": "category_note118.md",
+      "completeness": "complete"
+    },
+    {
+      "source": "docs/data_construction/118_income_category_accounting.md",
+      "route": "assets/income_category_2019_20261020/construction.md",
+      "sha256": "5df8dc383d7520165c118ba0085472a2c611cb2df3b4d56c8b3761627c0c844c",
+      "label": "construction.md",
+      "key": "category_construction.md",
+      "completeness": "complete"
+    },
+    {
+      "source": "output/income_category_accounting_2019/release_stop_verification.json",
+      "route": "assets/income_category_2019_20261020/release_stop_verification.json",
+      "sha256": "2cc88d5bb3aa0d8bf42212d419f32fb14853f2cff7a77462a3738faccff4ef2c",
+      "label": "release_stop_verification.json",
+      "key": "category_release_stop_verification.json",
+      "completeness": "complete"
+    }
+  ],
+  "site_files_sha256": {
+    "index.html": "e9f7cd1c502afd91388a4979fd198b0e01139dc6c1a8920332ba74f9f200ae7c",
+    "research.html": "4a4b3f8f98910488186d0498710599ecd1f9f0ecc5f20d29970c43f74dbd9816",
+    "quality.html": "702c93edacda1a903d0f6e6e2a12bf3eebd4afbad9f022cec20effd6801a2701",
+    "income-accounting-2019.html": "a1394979338f88d52ffdd257b605bf87dab569b74b554ec56da8d025698ca24c",
+    "assets/income_category_2019_20261020/note118.md": "068e0d9e52e480d452151733157707641f35ab1edabfb7da652fb4a4f5a0e27f",
+    "assets/income_category_2019_20261020/construction.md": "5df8dc383d7520165c118ba0085472a2c611cb2df3b4d56c8b3761627c0c844c",
+    "assets/income_category_2019_20261020/release_stop_verification.json": "2cc88d5bb3aa0d8bf42212d419f32fb14853f2cff7a77462a3738faccff4ef2c"
+  },
+  "project_pack": {
+    "file": "Dewey_Income_Accounting_And_Category_Status_20261020.md",
+    "sha256": "aa02120eb5c9256a26cb1dda5e4248bba511bb1316673766989a936f51c45c55",
+    "complete_sources": [
+      {
+        "key": "note",
+        "label": "Complete research note 117",
+        "source": "notes/117_full_2019_income_accounting.md",
+        "route": "assets/full_income_2019_20261020/note117.md",
+        "sha256": "2f7cae88feadb89014e589831a93e13969f0f6ecc5cf6e11a69c379468c0bb81"
+      },
+      {
+        "key": "source_review",
+        "label": "Complete source-code review 116",
+        "source": "notes/116_diego_production_code_review.md",
+        "route": "assets/full_income_2019_20261020/note116.md",
+        "sha256": "f8e4c354ae40eae0dab3b921b414109c0e81dc7be783edae9b86594c49fbfb4a"
+      },
+      {
+        "key": "protocol",
+        "label": "Complete frozen full-year protocol",
+        "source": "docs/protocols/full_income_accounting_2019_20261020.md",
+        "route": "assets/full_income_2019_20261020/protocol.md",
+        "sha256": "816eed49cda4c3ae7c9534a20ca986a4b9f5393f5d9238868336c247b5dd30ff"
+      },
+      {
+        "key": "construction",
+        "label": "Complete construction log 117",
+        "source": "docs/data_construction/117_full_2019_income_accounting.md",
+        "route": "assets/full_income_2019_20261020/construction.md",
+        "sha256": "4de9875053f1041e91e664993e3cfbc16c5c567906a17969cbbe3e94f0458b94"
+      },
+      {
+        "source": "notes/118_income_category_accounting.md",
+        "route": "assets/income_category_2019_20261020/note118.md",
+        "sha256": "068e0d9e52e480d452151733157707641f35ab1edabfb7da652fb4a4f5a0e27f",
+        "label": "note118.md",
+        "key": "category_note118.md",
+        "completeness": "complete"
+      },
+      {
+        "source": "docs/data_construction/118_income_category_accounting.md",
+        "route": "assets/income_category_2019_20261020/construction.md",
+        "sha256": "5df8dc383d7520165c118ba0085472a2c611cb2df3b4d56c8b3761627c0c844c",
+        "label": "construction.md",
+        "key": "category_construction.md",
+        "completeness": "complete"
+      },
+      {
+        "source": "output/income_category_accounting_2019/release_stop_verification.json",
+        "route": "assets/income_category_2019_20261020/release_stop_verification.json",
+        "sha256": "2cc88d5bb3aa0d8bf42212d419f32fb14853f2cff7a77462a3738faccff4ef2c",
+        "label": "release_stop_verification.json",
+        "key": "category_release_stop_verification.json",
+        "completeness": "complete"
+      }
+    ],
+    "uploaded": false
+  },
+  "static_local_links_checked": 106,
+  "private_data_read": false,
+  "category_economic_outcomes_released": false
+}
