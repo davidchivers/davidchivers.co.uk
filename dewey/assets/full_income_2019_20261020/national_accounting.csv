@@ -1,0 +1,13 @@
+lookup,component,nats,normalized_by_pooled_entropy,percent_of_total_separation
+Preferred NHGIS lookup,Total between-venue separation,0.4094375976227987,0.17992901910006281,100.0
+Preferred NHGIS lookup,Between subcategories,0.013788248282902486,0.006059301840023852,3.3676067764556255
+Preferred NHGIS lookup,Between counties within subcategories,0.18235666584249316,0.08013737918036938,44.53832938187868
+Preferred NHGIS lookup,Between venues within county and subcategory,0.21329268349740305,0.09373233807966959,52.094063841665694
+Preferred NHGIS lookup,Between counties,0.17222242120396747,0.07568384411735381,42.0631671844241
+Preferred NHGIS lookup,Between subcategories within counties,0.023922492921428177,0.010512836903039433,5.842768973910202
+Strict lookup,Total between-venue separation,0.4432004745031406,0.19520422459814551,100.0
+Strict lookup,Between subcategories,0.013670158430355626,0.006020915657915124,3.0844187262391474
+Strict lookup,Between counties within subcategories,0.18877490403291697,0.08314444790846849,42.59356992894629
+Strict lookup,Between venues within county and subcategory,0.240755412039868,0.10603886103176191,54.322011344814555
+Strict lookup,Between counties,0.17623978086381265,0.0776234497615003,39.765250942339364
+Strict lookup,Between subcategories within counties,0.026205281599459933,0.011541913804883298,5.912737712846072

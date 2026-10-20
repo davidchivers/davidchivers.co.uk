@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "kind": "national_descriptive_income_accounting",
+  "release_status": "candidate_pending_independent_disclosure_review",
+  "year": 2019,
+  "acs_wave": "2015-2019",
+  "cbg_vintage": 2020,
+  "income_group_definition": "National unweighted CBG median-household-income deciles",
+  "weight_definition": "Recorded positive annual origin-flow mass; not independent people",
+  "area_definition": "Destination county",
+  "category_definition": "Literal SUB_CATEGORY",
+  "missing_income_rule": "Exclude from classified numerator and denominator; no imputation",
+  "national_support": "Known county and subcategory, positive classified income mass",
+  "missing_msa_rule": "Not excluded from national accounting",
+  "normalization": "Each component divided by the same within-variant pooled income entropy",
+  "component_share_denominator": "Total venue separation, not pooled entropy",
+  "variants_use_own_support": true,
+  "roster_venues": 3526891,
+  "scalar_comparisons": 31742019,
+  "scalar_mismatches": 0,
+  "elapsed_seconds": 2385.7810352000524,
+  "variants": {
+    "tdw": {
+      "retained_venues": 3525080,
+      "counties": 3136,
+      "subcategories": 624,
+      "classified_share_of_known_positive_weight_all_venues": 0.9730146063841829,
+      "retained_without_recorded_msa": 187191,
+      "pooled_entropy_nats": 2.275550656979354,
+      "components": {
+        "i_group_venue": {
+          "nats": 0.4094375976227987,
+          "normalized_by_pooled_entropy": 0.17992901910006281,
+          "share_of_total_separation": 1.0
+        },
+        "i_group_category": {
+          "nats": 0.013788248282902486,
+          "normalized_by_pooled_entropy": 0.006059301840023852,
+          "share_of_total_separation": 0.033676067764556256
+        },
+        "i_group_area_given_category": {
+          "nats": 0.18235666584249316,
+          "normalized_by_pooled_entropy": 0.08013737918036938,
+          "share_of_total_separation": 0.44538329381878683
+        },
+        "i_group_venue_given_category_area": {
+          "nats": 0.21329268349740305,
+          "normalized_by_pooled_entropy": 0.09373233807966959,
+          "share_of_total_separation": 0.5209406384166569
+        },
+        "i_group_area": {
+          "nats": 0.17222242120396747,
+          "normalized_by_pooled_entropy": 0.07568384411735381,
+          "share_of_total_separation": 0.42063167184424105
+        },
+        "i_group_category_given_area": {
+          "nats": 0.023922492921428177,
+          "normalized_by_pooled_entropy": 0.010512836903039433,
+          "share_of_total_separation": 0.05842768973910202
+        }
+      }
+    },
+    "strict": {
+      "retained_venues": 3506222,
+      "counties": 3136,
+      "subcategories": 623,
+      "classified_share_of_known_positive_weight_all_venues": 0.6800302332590281,
+      "retained_without_recorded_msa": 185800,
+      "pooled_entropy_nats": 2.2704450962346185,
+      "components": {
+        "i_group_venue": {
+          "nats": 0.4432004745031406,
+          "normalized_by_pooled_entropy": 0.19520422459814551,
+          "share_of_total_separation": 1.0
+        },
+        "i_group_category": {
+          "nats": 0.013670158430355626,
+          "normalized_by_pooled_entropy": 0.006020915657915124,
+          "share_of_total_separation": 0.030844187262391472
+        },
+        "i_group_area_given_category": {
+          "nats": 0.18877490403291697,
+          "normalized_by_pooled_entropy": 0.08314444790846849,
+          "share_of_total_separation": 0.4259356992894629
+        },
+        "i_group_venue_given_category_area": {
+          "nats": 0.240755412039868,
+          "normalized_by_pooled_entropy": 0.10603886103176191,
+          "share_of_total_separation": 0.5432201134481456
+        },
+        "i_group_area": {
+          "nats": 0.17623978086381265,
+          "normalized_by_pooled_entropy": 0.0776234497615003,
+          "share_of_total_separation": 0.39765250942339364
+        },
+        "i_group_category_given_area": {
+          "nats": 0.026205281599459933,
+          "normalized_by_pooled_entropy": 0.011541913804883298,
+          "share_of_total_separation": 0.059127377128460716
+        }
+      }
+    }
+  },
+  "limits": {
+    "personal_income_observed": false,
+    "direct_interaction_observed": false,
+    "original_weekly_pipeline_replicated": false,
+    "raw_archive_integrity": "unresolved",
+    "common_local_choice_sets_verified": false,
+    "causal_or_attitude_regressions_run": false
+  },
+  "provenance": {
+    "generated_utc": "2026-10-20T16:11:04.539489+00:00",
+    "exporter_sha256": "1afe791447d4e6dc2e18339896f6fb5087b9f7635956c6341bc26e35c7cf9979",
+    "full_receipt_sha256": "789d24ed1655a1839221f63645ff365d6b2ce7bb9622215e1d24b199373bf2c4",
+    "outcome_sha256": "4423259ddf22ec54accc1734b39d62bf2644f59066d793bc4d70f0a01017b00a",
+    "verification_sha256": "eb097be70c38d9bb7a3133c1e0e84acf2f0f3dcbdbf99ffb6f3c8cdd8d377dc3",
+    "input_sha256": {
+      "flow": "384e39110e133cceb4a6f7691863258a8d882ef2217eb5554b89ca7281156663",
+      "lookup": "2583dea93e1d20ff325d5c3a68012d2dcf9bff5e97dca6b26e3d1e1375dade21",
+      "poi": "dd4aff1f85092ae17dff7e0d4b5c6ff0748e9af9caade9bfc6e706a5ab5b4890"
+    },
+    "execution_sha256": {
+      "code\\analysis\\run_full_income_accounting_2019.py": "c8d11c567c117fa6514ec33de4ade8bd9b911530b66c445d91ba1f837d717698",
+      "code\\analysis\\full_income_accounting.py": "8ba8b9dc38e0c7033d56d092887eed232b33a202eeae34ce9cd382d6e7521cbc",
+      "code\\analysis\\run_urban_scale_engineering_pilot.py": "d61ccb391006ccaa3ce799f39ef03f6eb6374efe7d1a9504e4a86bd5524ca80a",
+      "code\\analysis\\urban_scale_flow_contract.py": "efec15c5930b626d2f30e358688e292ce5733d3d4cb4d13babaced5761e83ddd",
+      "code\\analysis\\acquire_montgomery_centre_sources.py": "90152624e9b36c91a8b001e7b0f07b66023a73fab9998161ca1066ad554b34c7",
+      "docs\\protocols\\full_income_accounting_2019_20261020.md": "816eed49cda4c3ae7c9534a20ca986a4b9f5393f5d9238868336c247b5dd30ff"
+    }
+  }
+}
