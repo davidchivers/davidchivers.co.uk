@@ -1,0 +1,250 @@
+{
+  "status": "independently_reviewed_national_correlations",
+  "candidate_sha256": "632815923e482e12eb803326ee8999ce78b5b8cea43b97bd98000250e0d1da7f",
+  "models": [
+    {
+      "year": 2017,
+      "sample": "mapped",
+      "specification": "category",
+      "exposure": "log_count",
+      "cells": 75320,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2675114,
+      "correlations": {
+        "sorting": 0.5593676515825132,
+        "between_race": 0.5473082628609232,
+        "within_race": 0.28886520945301,
+        "distinct_venue": 0.40022527995687973
+      }
+    },
+    {
+      "year": 2017,
+      "sample": "mapped",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "cells": 75320,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2675114,
+      "correlations": {
+        "sorting": 0.13725358467766938,
+        "between_race": 0.11951054872322577,
+        "within_race": -0.010221882224659553,
+        "distinct_venue": -5.370023068152607e-05
+      }
+    },
+    {
+      "year": 2017,
+      "sample": "all_named_categories",
+      "specification": "category",
+      "exposure": "log_count",
+      "cells": 82364,
+      "areas": 933,
+      "categories": 269,
+      "poi_years": 2708843,
+      "correlations": {
+        "sorting": 0.537360113978573,
+        "between_race": 0.5229719980157771,
+        "within_race": 0.2850007702224566,
+        "distinct_venue": 0.35794382886721443
+      }
+    },
+    {
+      "year": 2017,
+      "sample": "all_named_categories",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "cells": 82364,
+      "areas": 933,
+      "categories": 269,
+      "poi_years": 2708843,
+      "correlations": {
+        "sorting": 0.17063360585724663,
+        "between_race": 0.15898222066170525,
+        "within_race": -0.0041527541057175335,
+        "distinct_venue": 0.00642184300030745
+      }
+    },
+    {
+      "year": 2018,
+      "sample": "mapped",
+      "specification": "category",
+      "exposure": "log_count",
+      "cells": 77182,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2880329,
+      "correlations": {
+        "sorting": 0.5637805661347811,
+        "between_race": 0.5588417142978116,
+        "within_race": 0.30118676189536314,
+        "distinct_venue": 0.41121858067217787
+      }
+    },
+    {
+      "year": 2018,
+      "sample": "mapped",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "cells": 77182,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2880329,
+      "correlations": {
+        "sorting": 0.13989385185491618,
+        "between_race": 0.1247865374147162,
+        "within_race": -0.004671996230197403,
+        "distinct_venue": 0.0022484471680675193
+      }
+    },
+    {
+      "year": 2018,
+      "sample": "all_named_categories",
+      "specification": "category",
+      "exposure": "log_count",
+      "cells": 84500,
+      "areas": 933,
+      "categories": 267,
+      "poi_years": 2916032,
+      "correlations": {
+        "sorting": 0.5415500936524272,
+        "between_race": 0.5341320196058785,
+        "within_race": 0.29685930804667127,
+        "distinct_venue": 0.3671450454372765
+      }
+    },
+    {
+      "year": 2018,
+      "sample": "all_named_categories",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "cells": 84500,
+      "areas": 933,
+      "categories": 267,
+      "poi_years": 2916032,
+      "correlations": {
+        "sorting": 0.17332407418319853,
+        "between_race": 0.16440571309649568,
+        "within_race": 0.0022782608720898403,
+        "distinct_venue": 0.008312832788058033
+      }
+    },
+    {
+      "year": 2019,
+      "sample": "mapped",
+      "specification": "category",
+      "exposure": "log_count",
+      "cells": 82032,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3247365,
+      "correlations": {
+        "sorting": 0.5676270582984003,
+        "between_race": 0.5634714756545632,
+        "within_race": 0.30472988364990106,
+        "distinct_venue": 0.41369549144486695
+      }
+    },
+    {
+      "year": 2019,
+      "sample": "mapped",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "cells": 82032,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3247365,
+      "correlations": {
+        "sorting": 0.14075664151525555,
+        "between_race": 0.12467004973058053,
+        "within_race": -0.010357097625936095,
+        "distinct_venue": 0.0025183224004191184
+      }
+    },
+    {
+      "year": 2019,
+      "sample": "all_named_categories",
+      "specification": "category",
+      "exposure": "log_count",
+      "cells": 91098,
+      "areas": 933,
+      "categories": 282,
+      "poi_years": 3291988,
+      "correlations": {
+        "sorting": 0.5436929683835866,
+        "between_race": 0.5366237646797184,
+        "within_race": 0.29958618276650906,
+        "distinct_venue": 0.3696710781220411
+      }
+    },
+    {
+      "year": 2019,
+      "sample": "all_named_categories",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "cells": 91098,
+      "areas": 933,
+      "categories": 282,
+      "poi_years": 3291988,
+      "correlations": {
+        "sorting": 0.1783170541440146,
+        "between_race": 0.16801472803138454,
+        "within_race": -0.003716555222097277,
+        "distinct_venue": 0.00897521380995664
+      }
+    }
+  ],
+  "max_selection_baseline_error": 2.220446049250313e-16,
+  "max_distinct_baseline_error": 1.3877787807814457e-16,
+  "max_independent_sparse_error": 2.2537527399890678e-14,
+  "elapsed_seconds": 486.9559365999885,
+  "code_hashes": {
+    "code/analysis/broader_distinct_venue_comparison.py": "c7bf331f74b869409364d13631f07967cb39990f17f3bcefe6cc729f24c188f8",
+    "code/analysis/distinct_venue_adjusted_comparison.py": "b3ea9882bbdd6e4f77808455d8676a4a7f52dec319d8d1ce787abbcf091cd969",
+    "code/analysis/workforce_bridge_selection.py": "c68f2b21c995fbd637c0af30626fd0aca26feedffc217682db7bf6c727fd5d47",
+    "code/analysis/ranked_measurement_checks.py": "933cdb43fe48556d55a65f7291fd214af17423947e3e32979c80c43674f9db6f",
+    "code/analysis/run_within_venue_measurement_audit.py": "fe2a49babe70bd9814c21af1c343992a0f870d17815e1a02a3639c6ce28a3fed",
+    "code/analysis/venue_count_pilot.py": "836a8bd59e82aa790b9600981baf18043f330defd10a3fbcdf56061d7549f2be",
+    "code/analysis/service_comparison_stability.py": "57e3777976f4be1c823f36357fa1fcf75a0cca4ed5f42320b8be70a91abad35f",
+    "docs/protocols/broader_distinct_venue_20261020.md": "07cd12c3409f077ff735a98aba147fdf930814f5977b1dedae082746a31a7ec2",
+    "output/workforce_bridge_selection_20261020/released_v2/model_summary.json": "b69549dc52b30ff3e5d98cc12bda06e66652981666fc4b780729489b716f248a",
+    "output/distinct_venue_adjusted_20261020/released/model_summary.json": "8a6333a65e84d466c91c013df75245c3c070b389dad8e85bc1429c7ba0f66cf7"
+  },
+  "environment": {
+    "python": "3.12.10",
+    "duckdb": "1.5.4",
+    "numpy": "2.3.5",
+    "pandas": "3.0.0",
+    "scipy": "1.15.3"
+  },
+  "source_checks": [
+    {
+      "year": 2017,
+      "sha256_before": "3733d38bb93335e93d1cba377b3f81d6443390200983b7cbc9f11c71079e1f9e",
+      "sha256_after": "3733d38bb93335e93d1cba377b3f81d6443390200983b7cbc9f11c71079e1f9e"
+    },
+    {
+      "year": 2018,
+      "sha256_before": "8816d91da0e2ffa53b954ddf9610978dc63bc31ab6f9a8c4313de2912b2c4044",
+      "sha256_after": "8816d91da0e2ffa53b954ddf9610978dc63bc31ab6f9a8c4313de2912b2c4044"
+    },
+    {
+      "year": 2019,
+      "sha256_before": "dd4aff1f85092ae17dff7e0d4b5c6ff0748e9af9caade9bfc6e706a5ab5b4890",
+      "sha256_after": "dd4aff1f85092ae17dff7e0d4b5c6ff0748e9af9caade9bfc6e706a5ab5b4890"
+    }
+  ],
+  "limits": [
+    "Post-result category-selection sensitivity, not a primary specification.",
+    "Mapped and broader named categories; neither is a stable-ID comparison.",
+    "Separate annual equal-cell partial correlations, not effects or significance tests.",
+    "D conditions independent weighted draws on different recorded venues, not a noise correction.",
+    "Recorded areas are not verified MSAs; home-area race is not observed individual race."
+  ],
+  "independent_review_sha256": "aafec4eb1efeff2128561f288c12948c8d4b02b0663034bdcc4373cf09207816",
+  "exporter_sha256": "4539ca85be4a902b4e12c7c03e711466bcc0b2cb40a8c366b8a7e49d1fb75dc6",
+  "exporter_dependencies": {
+    "code/analysis/release_distinct_venue_adjusted.py": "f3915730dfff6c64b415ed69dd669a3126760039fd346263fdc8593135827b28"
+  }
+}

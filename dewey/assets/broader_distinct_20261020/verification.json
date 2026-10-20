@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "models": 12,
+  "correlations": 48,
+  "public_artifact_hashes": {
+    "all_models.csv": "72f58e532098da7da58d0d9efc785933334d3c9a4d5f80379d7ac8fe706751a1",
+    "broader_distinct_venue.png": "d591a6fb349270844f421e796a216c5093eb835cdabfbbbda567d6995c4a327e",
+    "model_summary.json": "b96a1eed63e12809f82c2f7f0453c8546a66ff08e508af98eee189779dd5b96a"
+  },
+  "code_and_review_hashes_match": true,
+  "table_graph_replay_byte_identical": true,
+  "private_inputs_opened": false,
+  "verifier_sha256": "07c4771b56ddaa6cd29fdea5f5c5fbb8979e3b960c1bb5908732edea6638f85b"
+}
