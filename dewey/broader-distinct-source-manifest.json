@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-20",
+  "scope": "Complete authored note/protocol and reviewed national release, not a new data run",
+  "sources": [
+    {
+      "key": "note",
+      "label": "Complete research note 111",
+      "source": "notes/111_broader_distinct_venue_comparison.md",
+      "route": "assets/broader_distinct_20261020/note111.md",
+      "sha256": "cd5be758325c8a84f6515a9c1b357ae91adc2b87c5c18a74c65917c2ee2dd49d"
+    },
+    {
+      "key": "protocol",
+      "label": "Complete frozen sensitivity protocol",
+      "source": "docs/protocols/broader_distinct_venue_20261020.md",
+      "route": "assets/broader_distinct_20261020/protocol.md",
+      "sha256": "07cd12c3409f077ff735a98aba147fdf930814f5977b1dedae082746a31a7ec2"
+    },
+    {
+      "key": "models",
+      "label": "Complete reviewed national model summary",
+      "source": "output/broader_distinct_venue_20261020/released/model_summary.json",
+      "route": "assets/broader_distinct_20261020/model_summary.json",
+      "sha256": "b96a1eed63e12809f82c2f7f0453c8546a66ff08e508af98eee189779dd5b96a"
+    },
+    {
+      "key": "table",
+      "label": "Complete full-precision results",
+      "source": "output/broader_distinct_venue_20261020/released/all_models.csv",
+      "route": "assets/broader_distinct_20261020/all_models.csv",
+      "sha256": "72f58e532098da7da58d0d9efc785933334d3c9a4d5f80379d7ac8fe706751a1"
+    },
+    {
+      "key": "graph",
+      "label": "Complete reviewed graph",
+      "source": "output/broader_distinct_venue_20261020/released/broader_distinct_venue.png",
+      "route": "assets/broader_distinct_20261020/broader_distinct_venue.png",
+      "sha256": "d591a6fb349270844f421e796a216c5093eb835cdabfbbbda567d6995c4a327e"
+    },
+    {
+      "key": "review",
+      "label": "Complete aggregate review receipt",
+      "source": "output/broader_distinct_venue_20261020/review_receipt.json",
+      "route": "assets/broader_distinct_20261020/review_receipt.json",
+      "sha256": "aafec4eb1efeff2128561f288c12948c8d4b02b0663034bdcc4373cf09207816"
+    },
+    {
+      "key": "verification",
+      "label": "Complete table/graph replay receipt",
+      "source": "output/broader_distinct_venue_20261020/release_verification.json",
+      "route": "assets/broader_distinct_20261020/verification.json",
+      "sha256": "b1313ef4b539c63b19eb68a9111ffdfbe2ea8a882f34aa3feaf422e2a88d9536"
+    }
+  ],
+  "artifacts": {
+    "assets/broader_distinct_20261020/note111.md": "cd5be758325c8a84f6515a9c1b357ae91adc2b87c5c18a74c65917c2ee2dd49d",
+    "assets/broader_distinct_20261020/protocol.md": "07cd12c3409f077ff735a98aba147fdf930814f5977b1dedae082746a31a7ec2",
+    "assets/broader_distinct_20261020/model_summary.json": "b96a1eed63e12809f82c2f7f0453c8546a66ff08e508af98eee189779dd5b96a",
+    "assets/broader_distinct_20261020/all_models.csv": "72f58e532098da7da58d0d9efc785933334d3c9a4d5f80379d7ac8fe706751a1",
+    "assets/broader_distinct_20261020/broader_distinct_venue.png": "d591a6fb349270844f421e796a216c5093eb835cdabfbbbda567d6995c4a327e",
+    "assets/broader_distinct_20261020/review_receipt.json": "aafec4eb1efeff2128561f288c12948c8d4b02b0663034bdcc4373cf09207816",
+    "assets/broader_distinct_20261020/verification.json": "b1313ef4b539c63b19eb68a9111ffdfbe2ea8a882f34aa3feaf422e2a88d9536",
+    "broader-distinct-venue.html": "48e59a97681d7d5345ed1bccea1631a4ddca16792a1c51d19dbf1badb2cfd502"
+  },
+  "template_source": "restaurant-supply.html",
+  "template_sha256": "3a920eeafb61eef61ff0848a5a48dad54779340a5b27b7ec00589465379adc63",
+  "builder_sha256": "a7d7051469ec71b1751c14b75faef1c940219c75283f34dec58e242184d69d6b",
+  "render_helper_sha256": "7afaa88dc80a84fc5654b60709a5021c3e52d556145aae6af7be2bf0134e4ce6",
+  "displayed_correlations_verified": 48,
+  "displayed_support_records_verified": 6,
+  "raw_data_opened": false,
+  "builder_performs_publication": false
+}

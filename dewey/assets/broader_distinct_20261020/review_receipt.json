@@ -1,0 +1,100 @@
+{
+  "review_date": "2026-10-20",
+  "reviewer_role": "Independent bounded synthetic-code and exact-aggregate disclosure reviewer",
+  "independent_review_complete": true,
+  "release_approved": true,
+  "decision": "approve_exact_whitelist_only",
+  "candidate_sha256": "632815923e482e12eb803326ee8999ce78b5b8cea43b97bd98000250e0d1da7f",
+  "gate_report_sha256": "9f1692fe7c780acba2093bfbbc3be62886089c3e0b5f670edda38d83c668faa7",
+  "allowed_model_fields": [
+    "year",
+    "sample",
+    "specification",
+    "exposure",
+    "cells",
+    "areas",
+    "categories",
+    "poi_years",
+    "correlations"
+  ],
+  "allowed_extra_fields": [
+    "max_selection_baseline_error",
+    "max_distinct_baseline_error",
+    "max_independent_sparse_error",
+    "elapsed_seconds",
+    "code_hashes",
+    "environment",
+    "source_checks"
+  ],
+  "review_note": "Completed independent review of the exact authorized aggregate candidate and gate, the existing national releases for notes 106 and 108, and the reviewed code. Approval applies only to the complete national family and the exact exporter whitelist, not the candidate as a whole or any source/cell file.",
+  "reviewed_output_limits": [
+    "Exactly 12 unique annual model records: 2017, 2018 and 2019; mapped and all_named_categories samples; category and additive area_category specifications; log_count exposure.",
+    "Exactly four finite scalar correlations per model: sorting, between_race, within_race and distinct_venue, for 48 values in total. Retain the entire family regardless of sign.",
+    "Model support is national. Both specifications have identical support within sample-year. Every model spans 933 recorded areas, with at least 75320 eligible cells and 150 categories.",
+    "Only the named MODEL_FIELDS and SAFE_EXTRA candidate values may be copied. Exporter-generated status, exact digest and static interpretation limits, plus review/exporter integrity hashes, are operational wrappers rather than permission for additional candidate fields.",
+    "Do not export validation, added_support, bridge_sha256, per-model independent_sparse_error, cell/category/area labels, weight moments, means, variances, residuals, input paths, exceptions, or preliminary diagnostics. Previously public added-support facts were used for this review but are not added to this release whitelist.",
+    "Code hashes must have exactly the reviewed repository-relative keys and lowercase SHA-256 values. Environment metadata must contain exactly the five bounded scalar version strings. Source checks must contain only year and approved before/after hashes. No filesystem/account paths or nested details are permitted in these metadata values."
+  ],
+  "checks": {
+    "exact_candidate_digest_verified_before_and_after_review": true,
+    "complete_identity_and_outcome_family_verified": true,
+    "strict_gate_booleans_and_matching_digest_verified": true,
+    "gate_independent_review_was_false_before_this_review": true,
+    "all_correlations_finite_scalar_and_in_domain": true,
+    "integer_national_support_and_specification_consistency_verified": true,
+    "added_support_screen_verified_each_year_without_exporting_details": true,
+    "added_support_released_fields_match_note106": true,
+    "selection_baseline_values_independently_compared": 36,
+    "mapped_distinct_baseline_values_independently_compared": 24,
+    "max_selection_baseline_error": 2.220446049250313e-16,
+    "max_distinct_baseline_error": 1.3877787807814457e-16,
+    "max_independent_sparse_error": 2.2537527399890678e-14,
+    "candidate_error_maxima_reconciled_to_records": true,
+    "excluded_aggregate_metadata_inspected_and_withheld": true,
+    "all_production_execution_hashes_match_current_local_code_protocol_and_baselines": true,
+    "source_check_hashes_match_existing_approved_constants": true,
+    "pure_exporter_guard_exercised_on_exact_candidate_without_writing_release": true,
+    "only_two_newly_authorized_aggregate_files_read": true,
+    "private_cells_configuration_and_raw_files_not_accessed": true
+  },
+  "cumulative_risk_review": {
+    "comparison_sources": [
+      "notes/106_workforce_bridge_selection.md",
+      "notes/108_distinct_venue_adjusted_comparison.md",
+      "output/workforce_bridge_selection_20261020/released_v2/model_summary.json",
+      "output/distinct_venue_adjusted_20261020/released/model_summary.json"
+    ],
+    "new_national_correlation_values_beyond_reviewed_prior_releases": 6,
+    "reasoning": [
+      "The 36 S/B/W values and their support reproduce note 106; the 24 mapped S/B/W/D values and support reproduce note 108's all-eligible sample. Only six broader-sample D correlations add information; this is not a new fine-grained partition of released cells.",
+      "Broad-minus-mapped differences contain 7044, 7318 and 9066 eligible cells across the three years, not singleton or small residual groups. Their national support facts already appeared in note 106. The prior stable-ID comparisons likewise do not create a new small group through this release.",
+      "Differences of partial correlations are not differences of linear cell totals: fixed effects and residual normalizations are re-estimated. No cell means, residual sums of squares, weight moments or labelled cell values accompany the new correlations. The reviewed outputs therefore do not provide the algebra needed to isolate individual POIs, cell compositions or squared-weight moments.",
+      "No category-specific or area-specific coefficient, label, residual, count table, missing-cell pattern or narrow temporal subgroup is released. Year/sample/model identifiers describe the full national estimands only.",
+      "No reconstruction channel was identified from this exact whitelist jointly with notes 106/108 and their reviewed national summaries. This is a bounded disclosure judgment, not a universal reconstruction proof, differential-privacy guarantee or independent licence determination. Additional releases or finer partitions require a new cumulative review."
+    ]
+  },
+  "interpretation_limits": [
+    "Post-result sample-selection sensitivity, not a preregistered or new primary specification.",
+    "Equal-cell annual partial correlations, not outcome-unit slopes, causal effects, significance tests, equivalence tests or evidence of a zero population effect.",
+    "The broader adjusted D values are small positive point estimates; retain them and the original B/S findings without converting proximity to zero into proof that composition or availability effects are absent.",
+    "D conditions independent weighted venue draws on selecting different recorded venues. It is not a noise correction, observed encounters, preferences, or an identified urban-variety mechanism.",
+    "Neither new sample is the stable-ID sample. Recorded area codes are not verified metropolitan areas; home-area composition is not observed individual race. Inherited source, annualization, coverage and failed inference limitations remain.",
+    "Source verification is based on the authorized aggregate gate/hash evidence and reviewed code. The reviewer did not reopen restricted sources or rerun production or upstream construction. Rendered release files and publication delivery still require Main's verification."
+  ],
+  "tests": {
+    "command": "python -B code/analysis/test_broader_distinct_venue.py -v",
+    "test_methods": 28,
+    "passed": 28,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "elapsed_seconds": 2.879,
+    "scope": "Artificial construction and exact count reconciliation, independent weighted pair identity, dense dummy OLS, complete family and eligibility, strict approval and source/overwrite safeguards, exact exporter whitelist, malformed digests and metadata injection. The only empirical test reads are the already released national baseline JSONs."
+  },
+  "reviewed_local_hashes": {
+    "code/analysis/broader_distinct_venue_comparison.py": "c7bf331f74b869409364d13631f07967cb39990f17f3bcefe6cc729f24c188f8",
+    "code/analysis/release_broader_distinct_venue.py": "4539ca85be4a902b4e12c7c03e711466bcc0b2cb40a8c366b8a7e49d1fb75dc6",
+    "code/analysis/test_broader_distinct_venue.py": "9212a3d83542f88072a9af068380d934bdfa0740d4b7068516685c04351d0f50",
+    "code/analysis/release_distinct_venue_adjusted.py": "f3915730dfff6c64b415ed69dd669a3126760039fd346263fdc8593135827b28"
+  }
+}
