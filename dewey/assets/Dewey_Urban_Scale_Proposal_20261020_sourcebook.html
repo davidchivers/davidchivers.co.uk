@@ -1,0 +1,394 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Dewey: urban-scale proposal and source record</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} math[display=block]{display:block;max-width:100%;overflow-x:auto;padding:12px 0} code{overflow-wrap:anywhere}
+</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script></head><body><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>Dewey: urban-scale proposal and source record</h1><p class="subtitle">20 October 2026 | Exposure, mixing and attitudes</p><div class="theme-control"><label for="dark-mode">Dark mode<input id="dark-mode" type="checkbox" role="switch" checked aria-label="Dark mode"></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main><p>20 October 2026. Complete authored proposal and complete construction record. Supplement to the original 19 October protocol, not a replacement or an empirical run. Private correspondence and original attachments are excluded.</p>
+<h1 id="urban-scale-shared-destinations-and-separate-venues">Urban scale, shared destinations and separate venues</h1>
+<p>20 October 2026. <strong>Detailed research proposal, not a new empirical result.</strong> This supplements the <a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/urban-scale.html">prepared urban-scale pilot</a>. It does not amend its frozen protocol, authorise additional data processing, or replace historical estimates. No real annual-flow reconstruction, city-size regression or preference model has run under this proposal.</p>
+<h2 id="the-recommendation">The recommendation</h2>
+<p>The useful question is not simply whether large cities are more segregated. It is <strong>whether access to a mixed activity centre translates into use of the same establishments, and how much of any separation within the centre is associated with independently measured product differences</strong>.</p>
+<p>Three explanations can produce similar aggregate patterns. Residents may have different reachable destinations; a common destination may offer different products; or different groups may use different establishments even among apparently comparable options. The proposed sequence distinguishes these observable patterns before attempting a model of preferences.</p>
+<p>Start with 2019, one clearly defined service and a verified metropolitan sample. Reconstruct the income-group composition of venues, then study centres and their constituent establishments. Add travel-cost and product information only after the measurement checks pass. Extend to 2017-2019 after that implementation is validated and the additional inputs are authorised. <strong>Do not begin by fitting a structural co-patron preference model.</strong></p>
+<p>The potential paper is a descriptive account of the gap between shared destinations and shared establishments, with a disciplined assessment of access and product differences. Its novelty remains conditional on the fine-grained evidence and comparison with the literature below. A chain-rule decomposition alone is not a new mechanism or sufficient contribution.</p>
+<p><strong>Contents:</strong> <a href="#literature">Literature</a> | <a href="#hypotheses">Hypotheses</a> | <a href="#data">Data</a> | <a href="#measurement">Measurement</a> | <a href="#regressions">Regressions</a> | <a href="#common-menus">Common menus</a> | <a href="#model">Model</a> | <a href="#outputs">Outputs</a> | <a href="#decisions">Decisions</a></p>
+<h2 id="literature">1. What would be new?</h2>
+<p>Nilforoshan et al. already relate urban scale to experienced segregation, differentiated venues and bridging hubs. Importantly, their exposure measure uses time-stamped device encounters, and their methods distinguish fine POIs from parent activity centres. Our annual origin-composition measure is different: a tenant-level composition gap would not refute their encounter result or demonstrate that it overstated actual co-presence. The relevant comparison is their abstract, activity-specific analysis, bridging-hub analysis and POI/exposure methods. <a href="https://www.nature.com/articles/s41586-023-06757-3">Nature, 2023</a></p>
+<p>Couture, Dingel, Green and Handbury’s January 2026 paper already separates travel frictions and demographic preferences in a richer demand framework, including within-chain comparisons. Its data and identifying restrictions are not supplied by our annual CBG flows. Their distance-only and demographic-only counterfactuals should not be treated as additive shares of a single total. Relevant sections are 2, 4.5 and Table 3 with its qualification. Simply estimating distance and a crowd-composition regressor would therefore be neither a safe identification strategy nor an established novel contribution. <a href="https://www.jdingel.com/research/CoutureDingelGreenHandbury.pdf">Author paper, January 2026</a></p>
+<p>Beiro et al. study mall-level social mixing in Santiago using home-area socioeconomic characteristics and a gravity model involving population, distance and mall size. This is a further predecessor for a centre-accessibility analysis. The distinction worth investigating here is the allocation among establishments inside independently identified centres, not the existence of mall mixing itself. <a href="https://link.springer.com/article/10.1140/epjds/s13688-018-0157-5">EPJ Data Science, 2018, sections 3-4</a></p>
+<p>These are focused checks of the closest methods, not a claim to have read every supplement or established novelty exhaustively. A contribution would need to survive these comparisons <strong>and</strong> deliver information that cannot be obtained merely by changing the spatial unit of an existing index.</p>
+<h2 id="hypotheses">2. Three hypotheses and discriminating evidence</h2>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Explanation</th>
+<th>What we would look for</th>
+<th>What that would not establish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Separate local catchments</td>
+<td>Different-income origin areas have different independently defined feasible menus; much separation is between centres rather than within common centres.</td>
+<td>That distance caused the separation. Residential sorting, transport access, working locations and venue placement are jointly determined.</td>
+</tr>
+<tr>
+<td>Differentiated products</td>
+<td>Within common centres and one service, allocation differs across independently measured price, format, cuisine, hours or other product attributes.</td>
+<td>A causal share attributable to products. Products and locations are supplied in response to demand; omitted attributes remain.</td>
+</tr>
+<tr>
+<td>Separate venues within a common menu</td>
+<td>Different-income origins allocate activity differently among establishments in the same centre, including a predeclared comparable-product subset.</td>
+<td>Preference for rich or poor co-patrons, discrimination, or interpersonal avoidance. Unmeasured products, timing, trip purposes and access can remain.</td>
+</tr>
+</tbody>
+</table></div>
+<p>These mechanisms can coexist. The word <strong>chiefly</strong> needs care: we can quantify where measured separation is concentrated, but cannot assign causal percentages to these three explanations using an accounting identity.</p>
+<p>A centre is a geographic grouping of destinations. A catchment is an origin-specific set of feasible destinations. They are not interchangeable. A destination county is neither. A broad subcategory is also not a measurement of price or quality.</p>
+<h2 id="data">3. Data, units and what is actually available</h2>
+<p>The outcome concerns <strong>recorded activity from neighbourhoods with different median household incomes</strong>, not observed personal income. The starting groups are the existing ten national CBG income groups, <code>nat_decile_tdw</code>. They were formed from unweighted CBG quantiles, not equal-sized population groups. For 2019, retain the documented ACS 2015-2019 five-year convention. Do not silently substitute per-capita income or a later ACS release.</p>
+<p>The initial object is destination-based: venues in a metro and their retained origins, including origins outside that metro. It is not the resident-based exposure measure previously linked to county outcomes. Neither annual composition nor common centre attendance establishes that people met at the same time. Workers cannot be distinguished from customers without additional evidence.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Input</th>
+<th>Present state</th>
+<th>Role in this proposal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Final 2017-2019 harmonised POI indices</td>
+<td>Approved for the previously bounded quality and venue-count checks.</td>
+<td>Existing scalar indices, IDs, categories, recorded areas and reconciliation targets. Scalars cannot recover labelled group masses.</td>
+</tr>
+<tr>
+<td>2019 annual origin-flow file and harmonised ACS lookup</td>
+<td>Schemas checked; separate local processing approval still pending.</td>
+<td>Reconstruct group-by-venue masses, missing-income coverage and, later, origin-preserving allocations.</td>
+</tr>
+<tr>
+<td>Metro classification and population</td>
+<td>Public reference prepared and checked; producer geography provenance unresolved.</td>
+<td>Same-vintage metropolitan sample and city-size denominator. Not all recorded area codes are metros.</td>
+</tr>
+<tr>
+<td>Historical venue coordinates, centre boundaries and tenant inventory</td>
+<td>Not supplied by the three inspected schemas; suitable project-wide input not yet established.</td>
+<td>Identify actual centres, memberships, non-centre venues and opportunity sets independently of observed visits.</td>
+</tr>
+<tr>
+<td>Historical product attributes</td>
+<td>Not yet established for this design.</td>
+<td>Price, format, chain, cuisine, capacity and hours, with source dates and linkage coverage. Category alone is insufficient.</td>
+</tr>
+<tr>
+<td>Origin geography and relevant travel costs</td>
+<td>Additional verified inputs required.</td>
+<td>Geographic opportunity and common-menu comparisons. Home-to-venue cost is only a proxy when actual trip origins are unknown.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The existing engineering adapter checks rosters and joins, reconstructs income-group masses and reconciles inherited scalars. Its 99 artificial-data tests are a prior software result, not a new test run or validation of real inputs. It currently uses destination county and literal <code>SUB_CATEGORY</code>; it does not identify centres or estimate city-size gradients. It discards origin identities after constructing group vectors, so common-menu analysis requires a separately specified, authorised origin-preserving construction.</p>
+<p>The deterministic engineering sample is not a national inferential sample. The previously reported attenuation in the venue-count association concerned <strong>racial diversity</strong>, not a newly estimated income-separation result.</p>
+<h2 id="measurement">4. Measurement and construction</h2>
+<h3 id="reconstruct-before-interpreting">4.1 Reconstruct before interpreting</h3>
+<p>Let (v_{oj}) be a valid, positive recorded annual weight from origin CBG (o) to venue (j). Let (g(o)) be its known income group. Define</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mi>g</mi><mi>j</mi></mrow></msub><mo>=</mo><munder><mo>∑</mo><mrow><mi>o</mi><mo>:</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>o</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>g</mi></mrow></munder><msub><mi>v</mi><mrow><mi>o</mi><mi>j</mi></mrow></msub><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>p</mi><mrow><mi>g</mi><mi>j</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>x</mi><mrow><mi>g</mi><mi>j</mi></mrow></msub><mrow><munder><mo>∑</mo><mrow><mi>g</mi><mo>,</mo><mi>j</mi></mrow></munder><msub><mi>x</mi><mrow><mi>g</mi><mi>j</mi></mrow></msub></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">
+x_{gj}=\sum_{o:g(o)=g}v_{oj},\qquad
+p_{gj}=\frac{x_{gj}}{\sum_{g,j}x_{gj}}.
+</annotation></semantics></math></p>
+<p>Exclude origins with missing income from both the numerator and denominator; do not impute them. Report their known positive weight separately from invalid or null weights whose mass is unknown. Preserve preferred and strict lookup versions and use a fixed common-support comparison when interpreting their difference. Unreported origin-venue pairs are not observed zeros.</p>
+<p>Join on verified identifiers, not row positions. Stop on unexplained roster, metadata or scalar-reconciliation failures. The producer’s original construction, annualisation and suppression rules remain separate provenance questions; successful final-file reconciliation alone does not answer them.</p>
+<h3 id="define-centres-and-products-without-using-the-outcome">4.2 Define centres and products without using the outcome</h3>
+<p>Start with a single service. Full-service restaurants are a candidate, not an empirically selected winner: confirm their availability and historical product coverage without inspecting the resulting segregation gradient. Freeze the service, centre definitions, product taxonomy and inclusion rules before estimation.</p>
+<p>Use independently dated centre boundaries and a complete tenant inventory where possible. A venue must have exactly one centre assignment for the decomposition. Resolve overlapping boundaries by a rule fixed in advance. Keep venues outside centres explicitly, for example as singleton units, and report their contribution separately. Do not combine all outside venues into one artificial common centre. Compare alternative fixed geographic units as sensitivity checks, not as the same economic object.</p>
+<p>Count constituent establishments consistently. Do not add a parent’s recorded visits to its tenants’ recorded visits and call them separate activity. If duplicate attribution cannot be reconciled, restrict the estimand to retained tenant-attributed activity and state that limitation. Membership derived solely from positive visits cannot serve as independent availability.</p>
+<h3 id="an-exact-accounting-with-limited-interpretation">4.3 An exact accounting, with limited interpretation</h3>
+<p>Within one service, metro and year, (G) is the origin-income group, (J) the venue, (C=C(J)) its centre and (P=P(J)) a predeclared discrete product bin. Products and centres can cross; both must be fixed attributes of the venue in this accounting. With entropy in natural-log units,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo stretchy="false" form="prefix">(</mo><mi>G</mi><mo>;</mo><mi>J</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mi>G</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>p</mi><mi>j</mi></msub><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mi>G</mi><mo>∣</mo><mi>J</mi><mo>=</mo><mi>j</mi><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+I(G;J)=H(G)-\sum_jp_jH(G\mid J=j).
+</annotation></semantics></math></p>
+<p>The centre-first identity is</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo stretchy="false" form="prefix">(</mo><mi>G</mi><mo>;</mo><mi>J</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>I</mi><mo stretchy="false" form="prefix">(</mo><mi>G</mi><mo>;</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>I</mi><mo stretchy="false" form="prefix">(</mo><mi>G</mi><mo>;</mo><mi>P</mi><mo>∣</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>I</mi><mo stretchy="false" form="prefix">(</mo><mi>G</mi><mo>;</mo><mi>J</mi><mo>∣</mo><mi>C</mi><mo>,</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+I(G;J)=I(G;C)+I(G;P\mid C)+I(G;J\mid C,P).
+</annotation></semantics></math></p>
+<p>The product-first identity is</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo stretchy="false" form="prefix">(</mo><mi>G</mi><mo>;</mo><mi>J</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>I</mi><mo stretchy="false" form="prefix">(</mo><mi>G</mi><mo>;</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>I</mi><mo stretchy="false" form="prefix">(</mo><mi>G</mi><mo>;</mo><mi>C</mi><mo>∣</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>I</mi><mo stretchy="false" form="prefix">(</mo><mi>G</mi><mo>;</mo><mi>J</mi><mo>∣</mo><mi>C</mi><mo>,</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+I(G;J)=I(G;P)+I(G;C\mid P)+I(G;J\mid C,P).
+</annotation></semantics></math></p>
+<p>These label separation <strong>between centres</strong>, <strong>between measured product types within centres</strong>, and <strong>between venues within centre-product cells</strong>. Reversing the order reallocates the first two components; report both. Do not rename these components access, product and preference effects.</p>
+<p>Use the identical flow universe and weights throughout. Show raw nats and each component divided by the same (H(G)); normalisation is undefined when (H(G)=0). Report group composition and coverage alongside the normalised index. A finer product partition can mechanically move separation out of the final term. A cell with one venue has zero within-cell separation by construction, not demonstrated integration.</p>
+<p>The gap between a centre’s pooled diversity and the weighted diversity of its tenants is nonnegative by the entropy identity. <strong>A positive gap alone is therefore not a discovery.</strong> Its magnitude, support, robustness and association with scale are the objects of interest. Without independently measured product bins, report only the centre/venue split and leave the product channel unresolved.</p>
+<h2 id="regressions">5. City-size regressions</h2>
+<p>For component (r), let (D^r_m) be its raw or normalised value in metro (m) in 2019. The first regression is</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>D</mi><mi>m</mi><mi>r</mi></msubsup><mo>=</mo><msup><mi>α</mi><mi>r</mi></msup><mo>+</mo><msup><mi>β</mi><mi>r</mi></msup><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><msub><mi>N</mi><mi>m</mi></msub><mo>+</mo><msubsup><mi>ε</mi><mi>m</mi><mi>r</mi></msubsup><mo>,</mo></mrow><annotation encoding="application/x-tex">
+D^r_m=\alpha^r+\beta^r\log N_m+\varepsilon^r_m,
+</annotation></semantics></math></p>
+<p>where (N_m) is population on the verified metro definition. An association with a doubling of population is (^r), in the displayed outcome’s units. Report coefficients, confidence intervals, metro counts, outcome means and the exact weighting rule. No coefficient is currently available.</p>
+<p>Equal-metro weighting is primary. Population weighting is a predeclared sensitivity with a different target; it does not correct mobility coverage. Use identical metros, covariates and regression weights for the total and all components, so their OLS slopes add exactly. Fit raw and normalised outcomes as distinct families. Use metro-level heteroskedasticity-robust uncertainty for the 2019 cross-section and assess spatial dependence separately; millions of visits do not create millions of independent cities.</p>
+<p>A second, explicitly conditional specification adds a small, predetermined set of geography and measurement covariates, such as population density, residential income composition and documented coverage, when compatible sources exist. Report it beside, not instead of, the unadjusted gradient. Product variety and venue count are potential pathways: adding them is a descriptive conditioning exercise, not a causal mediation estimate.</p>
+<p>If 2017-2019 are later authorised and validated, the first extension is</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>D</mi><mrow><mi>m</mi><mi>t</mi></mrow><mi>r</mi></msubsup><mo>=</mo><msup><mi>α</mi><mi>r</mi></msup><mo>+</mo><msup><mi>β</mi><mi>r</mi></msup><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><msub><mi>N</mi><mrow><mi>m</mi><mi>t</mi></mrow></msub><mo>+</mo><msubsup><mi>λ</mi><mi>t</mi><mi>r</mi></msubsup><mo>+</mo><msubsup><mi>ε</mi><mrow><mi>m</mi><mi>t</mi></mrow><mi>r</mi></msubsup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+D^r_{mt}=\alpha^r+\beta^r\log N_{mt}+\lambda^r_t+\varepsilon^r_{mt}.
+</annotation></semantics></math></p>
+<p>Use year effects and metro-clustered uncertainty. This is a pooled association, largely reflecting differences across metros. Adding metro effects changes the question to short-run within-metro change; three annual observations and small population changes do not provide a convincing city-growth experiment. Show those distinctions rather than presenting fixed effects as a general solution to confounding.</p>
+<p>Stable venue support, missing-income coverage, product-link selection, centre definitions and sensitivity to influential metros must be reported alongside the main gradient. Larger menus and sparse observation can mechanically increase measured separation. Do not implement a finite-sample correction by treating weighted annual activity as independent people.</p>
+<h2 id="common-menus">6. The most informative comparison: common menus</h2>
+<p>First ask whether different-income origins have overlapping independent menus and whether they use the same centres. Then, separately, compare allocations inside a centre conditional on reaching it. Conditioning on arrival selects the sample and can create selection bias; it is a different estimand, not proof that access no longer matters.</p>
+<p>Match or balance <strong>different origin CBGs</strong> on geographic position and their vector of travel costs to the same candidate venues. It is not possible to compare differently classified people within one CBG when everyone has been assigned the same neighbourhood-income label. Record overlap and discard unsupported comparisons using thresholds fixed before outcomes.</p>
+<p>The feasible menu must come from historical availability, not the union of venues those groups happened to visit. Walking distance within a shopping centre does not establish equal affordability, opening hours, disability access or information. Home-to-centre travel costs also need special caution: annual home-origin records do not show whether the trip began at home, work or another destination. Without direct-trip information, call the adjustment <strong>home-based geographic accessibility</strong>, not actual trip cost.</p>
+<p>On a fixed common menu, describe group differences in allocation across tenants. Then examine the same origins, tenants and weights using independently measured products. Include a narrow, predeclared chain/format/price comparison if coverage permits. A chain comparison is useful but does not hold every product or access attribute constant.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observed pattern</th>
+<th>Defensible reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Separation concentrated between centres; little within supported common menus</td>
+<td>Consistent with a geographic allocation account, conditional on the quality of the accessibility proxy.</td>
+</tr>
+<tr>
+<td>Within-centre separation concentrated across measured product bins</td>
+<td>Consistent with product differentiation accounting for part of the recorded pattern.</td>
+</tr>
+<tr>
+<td>Separation persists among comparable venues in supported common menus</td>
+<td>A remaining within-menu allocation difference; grounds to investigate missing attributes or preferences, not an estimate of either.</td>
+</tr>
+<tr>
+<td>The pattern disappears under stable support or coverage checks</td>
+<td>Measurement or sample composition may be central. This is a result to report, not a reason to change the outcome until it returns.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="model">7. A conditional allocation model, only after its data gate</h2>
+<p>Do not fit a demand model on positive reported pairs while coding missing pairs as zero. Before any such estimation, establish which origin-venue pairs were observable, the suppression process, genuine zero semantics and the relevant availability period. If that cannot be established, retain the observed-flow accounting and stop the preference exercise.</p>
+<p>For a supported menu, a possible descriptive conditional model is</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">𝔼</mi><mo stretchy="false" form="prefix">[</mo><msub><mi>v</mi><mrow><mi>o</mi><mi>j</mi></mrow></msub><mo>∣</mo><mi>o</mi><mo>,</mo><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>j</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>c</mi><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mrow><mi mathvariant="normal">exp</mi><mo>&#8289;</mo></mrow><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>α</mi><mrow><mi>o</mi><mi>c</mi></mrow></msub><mo>+</mo><msub><mi>δ</mi><mi>j</mi></msub><mo>+</mo><msub><mi>f</mi><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>o</mi><mo stretchy="false" form="postfix">)</mo></mrow></msub><mo stretchy="false" form="prefix">(</mo><msubsup><mi>d</mi><mrow><mi>o</mi><mi>j</mi></mrow><mrow><mi>h</mi><mi>o</mi><mi>m</mi><mi>e</mi></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>+</mo><msubsup><mi>X</mi><mi>j</mi><mi>′</mi></msubsup><msub><mi>θ</mi><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>o</mi><mo stretchy="false" form="postfix">)</mo></mrow></msub><mo stretchy="true" form="postfix">}</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\mathbb{E}[v_{oj}\mid o,C(j)=c]
+=\exp\left\{\alpha_{oc}+\delta_j+
+f_{g(o)}(d^{home}_{oj})+
+X_j^\prime\theta_{g(o)}\right\}.
+</annotation></semantics></math></p>
+<p>Here (_{oc}) absorbs the origin’s activity at that centre, (<em>j) absorbs common venue attractiveness, (d^{home}</em>{oj}) is the home-based cost proxy, and (X_j) contains independently measured historical products. One income group is the reference for product interactions. Venue effects absorb product main effects; origin-centre effects absorb origin-income main effects. Variation and rank conditions must be checked, particularly because travel costs to tenants in one centre may barely vary.</p>
+<p>PPML is a candidate estimator for a conditional mean with nonnegative weights; it does not require those weights to be independent Poisson people. It also does not repair censoring, omitted products or selection. Appropriate clustering must reflect repeated origins and destinations and the number of independent centres/metros; do not report pair-level naive precision. Diagnose separation and all-zero fixed-effect groups, log dropped observations, and enforce the same effective sample when comparing specifications.</p>
+<p>Compare an access-proxy specification with product interactions on the identical observations. Assess out-of-sample allocation prediction, not just in-sample fit. For a venue-effect model, hold out origin areas while retaining training-supported venues, conditioning predictions on held-out origin-centre totals. Normalise predicted venue intensities within each supported menu to that total; do not reuse an unknown origin fixed effect. Do not claim it predicts unseen cities using unobserved venue effects. A genuinely held-out-city exercise needs a separately specified transferable model of attractiveness.</p>
+<p>The model’s parameters describe area-group allocation under its maintained assumptions. They are not personal-income preferences. Do not put the contemporaneously constructed co-patron composition on the right-hand side and interpret its coefficient as a preference: the same choices construct that regressor. Nor are reductions in separation or prediction error additive causal mechanism shares.</p>
+<p>A structural or causal extension would require further restrictions and evidence: credible exogenous changes to access or products, dated exposure, pretrend checks, substitution across the full relevant network and an observation model. Ordinary venue entry or disappearance in a panel is not such a design. No failed closure design is restarted here.</p>
+<h2 id="outputs">8. What the paper’s tables and figures would show</h2>
+<p>All entries below are <strong>planned outputs, not completed estimates</strong>.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Output</th>
+<th>Exact purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Table 1: construction and sample</td>
+<td>Metro definition; venue/centre support; retained activity; missing-income weight; unknown-weight cases; parent/tenant exclusions; product-link coverage. Include the units and denominator at each step.</td>
+</tr>
+<tr>
+<td>Table 2: separation accounting</td>
+<td>Total and centre/product/within-cell components, both orderings, raw nats and common-entropy normalisation, on identical support.</td>
+</tr>
+<tr>
+<td>Table 3: city-size association</td>
+<td>2019 coefficient, confidence interval, population-doubling association, means and metro count for every component; equal-metro and population-weighted panels.</td>
+</tr>
+<tr>
+<td>Table 4: common-menu comparisons</td>
+<td>Origin support and balance; tenant allocation differences; the fixed-sample product comparison. Include a stopped/not-estimable entry if the zero/menu gate fails.</td>
+</tr>
+<tr>
+<td>Figure 1: measurement sequence</td>
+<td>Origins to centres to tenants, with a separate product classification and explicit missingness/observation gates. Conceptual, not a data result.</td>
+</tr>
+<tr>
+<td>Figure 2: city-size gradient</td>
+<td>Metro-level total and component plots with coverage and influential observations visible; no selected positive panels.</td>
+</tr>
+<tr>
+<td>Figure 3: pooled-centre versus tenant composition</td>
+<td>The distribution of supported centre gaps and their scale association, with the mechanically nonnegative gap explained. Public release only after disclosure review.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Retain racial and income outcomes as distinct concepts. Do not quietly substitute a racial result for an income result. This branch does not estimate attitude effects or validate expected worker demographics. Historical null and contrary results, correction 70a, negative equal-county validation and failed disclosure/inference gates remain in force.</p>
+<h2 id="decisions">9. Implementation and stop decisions</h2>
+<ol type="1">
+<li><strong>Permission and provenance.</strong> Obtain the pending, named approval for the 2019 annual-flow and harmonised ACS lookup. Confirm the producer’s geographic construction and source versions. Do not broaden access to original weekly files or employee workbooks.</li>
+<li><strong>Reconstruction.</strong> Run the bounded engineering check privately; reconcile by ID and stop on unexplained differences. Only then freeze a substantive metro sample and its coverage requirements before computing gradients.</li>
+<li><strong>Centre and product feasibility.</strong> Inventory candidate historical coordinates, centre/tenant and product sources at metadata level. Record licensing, dates, identifier bridges and missingness. Do not acquire or process restricted additions without their own scope. If centres cannot be identified, the current county decomposition remains a coarse descriptive audit, not the proposed centre paper.</li>
+<li><strong>Descriptive evidence.</strong> Estimate the city gradient and centre/tenant accounting on the frozen sample. Keep nulls and sensitivity failures. If the result is explained by unstable coverage or is merely the inevitable gap from aggregation, narrow the contribution or stop.</li>
+<li><strong>Discriminating comparisons.</strong> Proceed to common menus and products only with the required independent inputs. If product data fail, do not claim to have separated products from preferences. If zero/observation semantics fail, do not fit the allocation model.</li>
+<li><strong>Paper decision.</strong> Continue only if supported evidence adds a substantive distinction beyond existing city-size and hub results. A precise null or measurement finding can be informative; publication cannot be promised.</li>
+</ol>
+<p>Each empirical stage needs a versioned protocol before its outcomes are inspected, input hashes, join/exclusion counts, exact code and environment, private intermediate storage and an independent verification record. Pre-existing outputs are not to be overwritten. Disclosure review must consider combinations with previous releases, not just each new table in isolation. The website and shared Project are documentation snapshots, not access to licensed data or proof that coauthors can run the code.</p>
+<p><strong>Immediate decision:</strong> approve the bounded reconstruction if its named inputs may be used, and identify the original geography/venue-metadata construction. The more ambitious common-menu design should follow that check, not precede it.</p>
+<hr />
+<h1 id="construction-record-detailed-urban-scale-proposal">Construction record: detailed urban-scale proposal</h1>
+<p>20 October 2026. Documentation and research-design work only.</p>
+<h2 id="trigger-and-scope">Trigger and scope</h2>
+<p>A new coauthor request was verified in the existing project Teams conversation. Its substantive request was for an analysis or detailed methodology distinguishing local catchments, product differentiation and separate venue allocation within accessible activity centres. Private correspondence and its original attachment are not part of the public proposal or documentation pack. No Teams reply was sent.</p>
+<p><code>notes/101_urban_scale_research_proposal.md</code> is newly authored methodology. It supplements note 93 and the unchanged 19 October protocol; it is not an adopted replacement, a new empirical run or additional processing permission. The two-file annual-flow/ACS request remains pending.</p>
+<h2 id="inputs-and-checking">Inputs and checking</h2>
+<ul>
+<li>Read the live project instructions, DATA_POLICY and canonical STATUS.</li>
+<li>Reused safe notes, schemas, code and protocols for the existing urban-scale engineering adapter and metropolitan-reference work.</li>
+<li>An independent GPT-6.1 worker inspected these safe sources and wrote <code>workstreams/urban_scale_design_feasibility_20261020.md</code>. Its exact file/line crosswalk informed the proposal. The internal review is not published in full because it includes local source-context pointers.</li>
+<li>Primary literature was checked in the live official/author sources below. This was a focused methods check, not an exhaustive literature search.</li>
+<li>No restricted rows, original data-side scripts or employee workbooks were read. No source data were modified or downloaded. No tests or prior regressions were rerun in preparing the proposal.</li>
+</ul>
+<h2 id="focused-primary-source-ledger">Focused primary-source ledger</h2>
+<p>All entries checked 20 October 2026. No complete external paper is reproduced.</p>
+<div class="table-scroll" tabindex="0"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Source</th>
+<th>Read scope and relevance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>https://www.nature.com/articles/s41586-023-06757-3</td>
+<td>Abstract, city-scale/differentiation and hub sections, and relevant POI/exposure methods. Confirms the distinction between timestamped encounters and our annual composition object; parent/fine-POI treatment is already present. Not a full supplement audit.</td>
+</tr>
+<tr>
+<td>https://www.jdingel.com/research/CoutureDingelGreenHandbury.pdf</td>
+<td>January 2026 title/version; selected sections 2 and 4.5, Table 3 and its qualification. Richer demand data and within-chain comparisons are predecessors; counterfactual components are not generally additive. Not a complete new review of all 75 PDF pages.</td>
+</tr>
+<tr>
+<td>https://link.springer.com/article/10.1140/epjds/s13688-018-0157-5</td>
+<td>Author/title/version and sections 3-4, with abstract/context. Centre mixing and geographic attraction are established predecessors; no causal interpretation adopted from observational fit.</td>
+</tr>
+<tr>
+<td>https://www.sciencedirect.com/science/article/pii/S0047272725000337</td>
+<td>Retrieval failed in this session. No new final-paper methods claim was based on it.</td>
+</tr>
+<tr>
+<td>https://pmc.ncbi.nlm.nih.gov/articles/PMC5676902/</td>
+<td>CAPTCHA prevented access. Not bypassed; no new full-text verification claimed. The proposal’s entropy equations are explicit chain-rule derivations.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="review-dispositions">Review dispositions</h2>
+<p>The independent reviewer found that county/subcategory accounting does not identify the three mechanisms, an origin-preserving construction is needed for shared menus, and geography/zero/menu semantics remain unresolved. The proposal incorporates all three points. It also distinguishes conditional centre arrival from access, warns that home origins are not observed trip starts, and avoids claiming that venue-effect models predict new-city venues. The two decomposition orders use common support and a common entropy denominator. A positive centre/tenant gap is identified as mechanically nonnegative, not novel evidence by itself.</p>
+<p>The worker’s second check found no material errors in the equations, fixed-effect specification or identification language. The final integration adds its explicit safeguards for PPML separation/effective-sample changes and normalisation of held-out menu predictions. Its recorded draft hash precedes those two additions; the publication manifest identifies the final authored source. This distinction is not an independent review of later empirical code.</p>
+<h2 id="publication-and-verification-contract">Publication and verification contract</h2>
+<p>Publish only the complete authored proposal and this construction record, plus explicit hashes and scope labels. The private message and original attachment are excluded. Reuse the established Dewey GitHub Pages route and existing persistent dark/light theme; do not migrate hosting or change the custom domain.</p>
+<p>The builder must verify source hashes, parse internal links and anchors and preserve all existing page content except the narrow proposal links. Record the actual deployment and live-byte checks separately. Browser QA must state the viewports checked and any limitation. Preparation is not delivery.</p>
+<p>The shared ChatGPT Project remains at its last verified 40-source snapshot; the pending consolidation decision is unchanged. No upload/deletion retry is authorised by this work. A bounded Space pointer update requires fresh Page guards, relevant comments and exact readback. Neither surface is to be called current merely because the website is published.</p>
+<section id="documentation-fingerprints"><h2>Documentation fingerprints</h2><ul><li><code>notes/101_urban_scale_research_proposal.md</code>: Complete authored methodology proposal. SHA-256 <code>79932384248b44422eb5c8a071722d9381194633f67bbe851ad12f9f487e624b</code>.</li><li><code>docs/data_construction/101_urban_scale_research_proposal.md</code>: Complete construction and source-check record. SHA-256 <code>3e44db80dd3e5965dcc418088b169af9a20368aa9b4a03e50850a9b983f92434</code>.</li></ul></section></main><footer>20 October 2026. Authored research proposal and documentation snapshot. No new empirical estimates, source-data access or additional processing permission. Original protocols, historical results and failed gates remain in force.</footer></body></html>
