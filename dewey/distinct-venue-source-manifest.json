@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-20",
+  "stage": "site_integration_snapshot_deployment_verified_separately",
+  "new_empirical_results": false,
+  "private_inputs_accessed": false,
+  "source_scope": "complete safe authored sources and exact released aggregate files",
+  "transforms": [
+    "Byte-identical raw sources and released assets; no line-ending normalization.",
+    "Pandoc native MathML, heading shifts and local-link rewrites in rendered HTML.",
+    "Report contains complete note 108, with its title moved into the page header.",
+    "Sourcebook includes complete note, protocol, construction, review and receipts.",
+    "Site integration changes only the two HTML publication labels and manifest links; all ten source snapshots remain byte-identical."
+  ],
+  "sources": [
+    {
+      "source": "notes/108_distinct_venue_adjusted_comparison.md",
+      "route": "assets/distinct_venue_20261020/note108.md",
+      "scope": "complete",
+      "source_date": "2026-10-20",
+      "sha256": "5eef1f883fd2198b8e6834f735abaeafdddeb58bbb86a6a9b823a59b2637029c",
+      "bytes": 9561
+    },
+    {
+      "source": "docs/protocols/distinct_venue_adjusted_comparison_20261020.md",
+      "route": "assets/distinct_venue_20261020/protocol.md",
+      "scope": "complete",
+      "source_date": "2026-10-20",
+      "sha256": "285d0c825dfeec11fee5788713dfde2cea91544dc742ed1a466e704fd5e4f15c",
+      "bytes": 5371
+    },
+    {
+      "source": "docs/data_construction/108_distinct_venue_adjusted_comparison.md",
+      "route": "assets/distinct_venue_20261020/construction.md",
+      "scope": "complete",
+      "source_date": "2026-10-20",
+      "sha256": "3a0a494c46ec172ccf0ee027dc6b1e5b89673df40ef17118ee169484f3e1c5e1",
+      "bytes": 7859
+    },
+    {
+      "source": "workstreams/distinct_venue_adjusted_review_20261020.md",
+      "route": "assets/distinct_venue_20261020/review.md",
+      "scope": "complete",
+      "source_date": "2026-10-20",
+      "sha256": "9f8b84b1829765ed815e9f9e1e28cc9a02737e248dc37c6328021eaf3570f592",
+      "bytes": 15565
+    },
+    {
+      "source": "output/distinct_venue_adjusted_20261020/review_receipt.json",
+      "route": "assets/distinct_venue_20261020/review_receipt.json",
+      "scope": "complete",
+      "source_date": "2026-10-20",
+      "sha256": "74f33008e04b91588f22082e94d9fa04a2e7625b409b41997768a71abf799e9c",
+      "bytes": 4192
+    },
+    {
+      "source": "output/distinct_venue_adjusted_20261020/released/model_summary.json",
+      "route": "assets/distinct_venue_20261020/model_summary.json",
+      "scope": "complete",
+      "source_date": "2026-10-20",
+      "sha256": "8a6333a65e84d466c91c013df75245c3c070b389dad8e85bc1429c7ba0f66cf7",
+      "bytes": 11033
+    },
+    {
+      "source": "output/distinct_venue_adjusted_20261020/released/all_models.csv",
+      "route": "assets/distinct_venue_20261020/all_models.csv",
+      "scope": "complete",
+      "source_date": "2026-10-20",
+      "sha256": "1bacd85578f57ce332322de6949bdc1996c064b626a3891b85ca30edaf8ffd6f",
+      "bytes": 1775
+    },
+    {
+      "source": "output/distinct_venue_adjusted_20261020/released/distinct_venue_comparison.png",
+      "route": "assets/distinct_venue_20261020/distinct_venue_comparison.png",
+      "scope": "complete",
+      "source_date": "2026-10-20",
+      "sha256": "4eb7dfea1e72fbbcfe2d3aa9af8707bc18d881a6164e5aa32931bcc3aaf2e937",
+      "bytes": 114996
+    },
+    {
+      "source": "output/distinct_venue_adjusted_20261020/released/release_manifest.json",
+      "route": "assets/distinct_venue_20261020/release_manifest.json",
+      "scope": "complete",
+      "source_date": "2026-10-20",
+      "sha256": "073e9c818fb7e18e2bfc045e8dd426330cd6603cdca6ffd487963eed53924672",
+      "bytes": 291
+    },
+    {
+      "source": "output/distinct_venue_adjusted_20261020/released/verification_receipt.json",
+      "route": "assets/distinct_venue_20261020/verification_receipt.json",
+      "scope": "complete",
+      "source_date": "2026-10-20",
+      "sha256": "798db4cb0dfbbdc0d61e39b68f0de796b09d7f0e63b40f93b74995fa403ef099",
+      "bytes": 991
+    }
+  ],
+  "style_reference": {
+    "source": "dewey/restaurant-supply.html",
+    "sha256": "bf989665a7e2be60b561fbcfa8481710f647f71202b4fd2a8e8175d9a6979eec",
+    "theme_storage_key": "dewey-theme",
+    "equations": "native MathML"
+  },
+  "builder": {
+    "source": "code/analysis/prepare_distinct_venue_publication.py",
+    "sha256": "7afaa88dc80a84fc5654b60709a5021c3e52d556145aae6af7be2bf0134e4ce6"
+  },
+  "prior_code_hashes": {
+    "scope": "Retained in released summary; only the supplied protocol is rehashed here.",
+    "upstream_replication": false
+  },
+  "public_files": [
+    {
+      "route": "assets/distinct_venue_20261020/all_models.csv",
+      "sha256": "1bacd85578f57ce332322de6949bdc1996c064b626a3891b85ca30edaf8ffd6f",
+      "bytes": 1775
+    },
+    {
+      "route": "assets/distinct_venue_20261020/construction.md",
+      "sha256": "3a0a494c46ec172ccf0ee027dc6b1e5b89673df40ef17118ee169484f3e1c5e1",
+      "bytes": 7859
+    },
+    {
+      "route": "assets/distinct_venue_20261020/distinct_venue_comparison.png",
+      "sha256": "4eb7dfea1e72fbbcfe2d3aa9af8707bc18d881a6164e5aa32931bcc3aaf2e937",
+      "bytes": 114996
+    },
+    {
+      "route": "assets/distinct_venue_20261020/model_summary.json",
+      "sha256": "8a6333a65e84d466c91c013df75245c3c070b389dad8e85bc1429c7ba0f66cf7",
+      "bytes": 11033
+    },
+    {
+      "route": "assets/distinct_venue_20261020/note108.md",
+      "sha256": "5eef1f883fd2198b8e6834f735abaeafdddeb58bbb86a6a9b823a59b2637029c",
+      "bytes": 9561
+    },
+    {
+      "route": "assets/distinct_venue_20261020/protocol.md",
+      "sha256": "285d0c825dfeec11fee5788713dfde2cea91544dc742ed1a466e704fd5e4f15c",
+      "bytes": 5371
+    },
+    {
+      "route": "assets/distinct_venue_20261020/release_manifest.json",
+      "sha256": "073e9c818fb7e18e2bfc045e8dd426330cd6603cdca6ffd487963eed53924672",
+      "bytes": 291
+    },
+    {
+      "route": "assets/distinct_venue_20261020/review.md",
+      "sha256": "9f8b84b1829765ed815e9f9e1e28cc9a02737e248dc37c6328021eaf3570f592",
+      "bytes": 15565
+    },
+    {
+      "route": "assets/distinct_venue_20261020/review_receipt.json",
+      "sha256": "74f33008e04b91588f22082e94d9fa04a2e7625b409b41997768a71abf799e9c",
+      "bytes": 4192
+    },
+    {
+      "route": "assets/distinct_venue_20261020/sourcebook.html",
+      "sha256": "eef004a2df12968135d248a283d870b04cc43a451ad0e4829ff76d7151393760",
+      "bytes": 85986
+    },
+    {
+      "route": "assets/distinct_venue_20261020/verification_receipt.json",
+      "sha256": "798db4cb0dfbbdc0d61e39b68f0de796b09d7f0e63b40f93b74995fa403ef099",
+      "bytes": 991
+    },
+    {
+      "route": "distinct-venue-comparison.html",
+      "sha256": "9bb7a0a8e3fa7c33c5e78baad026eff6eb39e8e7ceaf7abd1518c4a88deb1292",
+      "bytes": 27585
+    }
+  ],
+  "manifest_self_hash": "Recorded in the separate delivery receipt.",
+  "verification_limits": [
+    "Deployment and browser verification are separate from this integration.",
+    "Prior private-source assertions are retained, not newly rechecked."
+  ],
+  "preparation_manifest_sha256": "417ae88088292545357065961ef1213efaa5214f498cbe27b900e89030410dec",
+  "integration_script_sha256": "b237bd2058c063e29b684e7da003d87f96f160ea9b0095cb5dfacb775fa9435c"
+}

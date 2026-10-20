@@ -1,0 +1,237 @@
+{
+  "status": "independently_reviewed_national_correlations",
+  "candidate_sha256": "c8ced95a8881bcdbff43c6d9de143594a6c36d2cfc1ae3256f76529b897fb626",
+  "models": [
+    {
+      "year": 2017,
+      "sample": "all",
+      "specification": "category",
+      "exposure": "log_count",
+      "cells": 75320,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2675114,
+      "correlations": {
+        "sorting": 0.5593676515825132,
+        "between_race": 0.5473082628609232,
+        "within_race": 0.28886520945300986,
+        "distinct_venue": 0.4002252799568798
+      }
+    },
+    {
+      "year": 2017,
+      "sample": "all",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "cells": 75320,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2675114,
+      "correlations": {
+        "sorting": 0.13725358467766943,
+        "between_race": 0.11951054872322588,
+        "within_race": -0.010221882224659548,
+        "distinct_venue": -5.370023068147479e-05
+      }
+    },
+    {
+      "year": 2018,
+      "sample": "all",
+      "specification": "category",
+      "exposure": "log_count",
+      "cells": 77182,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2880329,
+      "correlations": {
+        "sorting": 0.563780566134781,
+        "between_race": 0.5588417142978115,
+        "within_race": 0.30118676189536303,
+        "distinct_venue": 0.41121858067217776
+      }
+    },
+    {
+      "year": 2018,
+      "sample": "all",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "cells": 77182,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2880329,
+      "correlations": {
+        "sorting": 0.13989385185491607,
+        "between_race": 0.12478653741471606,
+        "within_race": -0.004671996230197406,
+        "distinct_venue": 0.002248447168067604
+      }
+    },
+    {
+      "year": 2019,
+      "sample": "all",
+      "specification": "category",
+      "exposure": "log_count",
+      "cells": 82032,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3247365,
+      "correlations": {
+        "sorting": 0.5676270582984004,
+        "between_race": 0.5634714756545632,
+        "within_race": 0.30472988364990095,
+        "distinct_venue": 0.413695491444867
+      }
+    },
+    {
+      "year": 2019,
+      "sample": "all",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "cells": 82032,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 3247365,
+      "correlations": {
+        "sorting": 0.14075664151525558,
+        "between_race": 0.1246700497305805,
+        "within_race": -0.010357097625936089,
+        "distinct_venue": 0.0025183224004191288
+      }
+    },
+    {
+      "year": 2017,
+      "sample": "stable_venue",
+      "specification": "category",
+      "exposure": "log_count",
+      "cells": 71033,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2374836,
+      "correlations": {
+        "sorting": 0.5574897023837682,
+        "between_race": 0.5460785255992217,
+        "within_race": 0.29145395914352273,
+        "distinct_venue": 0.3978180169074907
+      }
+    },
+    {
+      "year": 2017,
+      "sample": "stable_venue",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "cells": 71033,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2374836,
+      "correlations": {
+        "sorting": 0.1380319787016729,
+        "between_race": 0.1190231875781798,
+        "within_race": -0.013207390120647403,
+        "distinct_venue": -0.0016506184677669465
+      }
+    },
+    {
+      "year": 2018,
+      "sample": "stable_venue",
+      "specification": "category",
+      "exposure": "log_count",
+      "cells": 71054,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2374990,
+      "correlations": {
+        "sorting": 0.5660597579416076,
+        "between_race": 0.5596708856685204,
+        "within_race": 0.3047054916250218,
+        "distinct_venue": 0.41396133105234667
+      }
+    },
+    {
+      "year": 2018,
+      "sample": "stable_venue",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "cells": 71054,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2374990,
+      "correlations": {
+        "sorting": 0.13830667731482862,
+        "between_race": 0.12196759047535231,
+        "within_race": -0.00750265228179874,
+        "distinct_venue": -0.0003314905899106472
+      }
+    },
+    {
+      "year": 2019,
+      "sample": "stable_venue",
+      "specification": "category",
+      "exposure": "log_count",
+      "cells": 71134,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2375384,
+      "correlations": {
+        "sorting": 0.5785320683438472,
+        "between_race": 0.571312276472738,
+        "within_race": 0.3124262074870046,
+        "distinct_venue": 0.42834420432602743
+      }
+    },
+    {
+      "year": 2019,
+      "sample": "stable_venue",
+      "specification": "area_category",
+      "exposure": "log_count",
+      "cells": 71134,
+      "areas": 933,
+      "categories": 150,
+      "poi_years": 2375384,
+      "correlations": {
+        "sorting": 0.14240919536285018,
+        "between_race": 0.12614100698797276,
+        "within_race": -0.004480356220337727,
+        "distinct_venue": 0.0009246811158492533
+      }
+    }
+  ],
+  "max_baseline_error": 2.220446049250313e-16,
+  "max_independent_sparse_error": 7.549516567451064e-15,
+  "elapsed_seconds": 10.730934099992737,
+  "code_hashes": {
+    "code/analysis/distinct_venue_adjusted_comparison.py": "b3ea9882bbdd6e4f77808455d8676a4a7f52dec319d8d1ce787abbcf091cd969",
+    "docs/protocols/distinct_venue_adjusted_comparison_20261020.md": "285d0c825dfeec11fee5788713dfde2cea91544dc742ed1a466e704fd5e4f15c",
+    "code/analysis/ranked_measurement_checks.py": "933cdb43fe48556d55a65f7291fd214af17423947e3e32979c80c43674f9db6f",
+    "code/analysis/service_comparison_stability.py": "57e3777976f4be1c823f36357fa1fcf75a0cca4ed5f42320b8be70a91abad35f",
+    "code/analysis/run_within_venue_measurement_audit.py": "fe2a49babe70bd9814c21af1c343992a0f870d17815e1a02a3639c6ce28a3fed",
+    "code/analysis/venue_count_pilot.py": "836a8bd59e82aa790b9600981baf18043f330defd10a3fbcdf56061d7549f2be",
+    "output/ranked_research_20261019/continuity_results.json": "75be4f375832da068d15d852bba3abf4d958290753c9e8e39a89473627ab2b74"
+  },
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.3.5",
+    "pandas": "3.0.0",
+    "scipy": "1.15.3"
+  },
+  "limits": [
+    "Post-result descriptive sensitivity of an existing contrast, not a new primary index.",
+    "Conditional pair difference is not a fraction of pooled diversity or a noise correction.",
+    "Separate annual recorded-area/category models, not verified metro or causal effects.",
+    "Home-area composition and stable IDs do not establish personal traits or business continuity."
+  ],
+  "independent_review_sha256": "74f33008e04b91588f22082e94d9fa04a2e7625b409b41997768a71abf799e9c",
+  "review_note": "Independent aggregate disclosure review completed 20 October 2026. The authorized gate and exact candidate hash were verified before candidate inspection. The complete 12-model/48-correlation whitelist and safe metadata passed checks against the fixed exporter and both named prior public releases. All support totals were already public, all 36 original correlations reproduced within 1e-8, and the shared workforce-mapped supports and 18 correlations agreed. Cumulative review identified no direct small-subset subtraction or row/cell reconstruction route within the reviewed releases and this whitelist. Full scope, source identities, prior synthetic findings and limits are preserved in workstreams/distinct_venue_adjusted_review_20261020.md. This is aggregate disclosure clearance, not an empirical rerun or approval to copy the complete candidate.",
+  "review_caveats": [
+    "Approval is limited to the exact candidate SHA-256 and these whitelists. The complete private candidate, its directory and its inputs are not approved for copying or publication.",
+    "Retain all twelve separate year/sample/specification records and all 48 correlations. Samples are all and stable_venue; years are 2017-2019; specifications are category and area_category; exposure is log_count. Correlation keys are exactly sorting, between_race, within_race and distinct_venue.",
+    "Safe extras are limited to two maximum error scalars, finite nonnegative runtime, the exact seven safe code/protocol/public-baseline hashes and four software-version strings required by the fixed exporter. The reviewed exporter SHA-256 is f3915730dfff6c64b415ed69dd669a3126760039fd346263fdc8593135827b28.",
+    "Exclude private_validation, per-model sparse errors, convergence, residual standard deviations or vectors, coefficients, covariances, new means, H/effective-count details, additional bins, category/area identifiers, source-data paths and detailed rows/cells.",
+    "Cumulative review included the previously released continuity annual moments, count-bin D/effective-count means and exposure standard deviations, plus the workforce mapped/broader models and added-support counts. The incremental substantive information is twelve national adjusted D correlations on existing supports; no new support partitions or D residual moments are approved.",
+    "Support screens and this bounded cumulative assessment are not a formal privacy guarantee, an exhaustive external-linkage audit or a provider-permission determination. New partitions, outcome moments, residual scales or identifiers require further review.",
+    "This is a post-result descriptive sensitivity, not a new primary specification, significance result, worker model or causal mechanism. D is the composition contrast for independent weight-proportional draws conditional on distinct recorded venues, not a noise correction or a fraction of pooled diversity.",
+    "Home-area composition is not personal race or simultaneous encounters; recorded areas are not verified MSAs and stable IDs do not establish business continuity. Preserve mixed findings and all prior failed inference and annualization gates.",
+    "The reviewer inspected only the expressly authorized configuration/gate/candidate and named public aggregate context. Restricted-source fingerprint assertions came from the production gate; no cell Parquet or original dataset was reopened, and no empirical computation or export was rerun.",
+    "Main must rehash the candidate at use, require literal true receipt approvals, enforce the exact complete-family whitelist with the fixed exporter, and verify the generated release and its hashes separately before publication."
+  ],
+  "exporter_sha256": "f3915730dfff6c64b415ed69dd669a3126760039fd346263fdc8593135827b28"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "scope": "Reviewed public family and byte-identical CSV/PNG replay only.",
+  "restricted_inputs_reopened": false,
+  "raw_pipeline_rerun": false,
+  "model_records": 12,
+  "correlations": 48,
+  "current_execution_hashes_match": true,
+  "csv_byte_replay": true,
+  "png_byte_replay": true,
+  "review_sha256": "74f33008e04b91588f22082e94d9fa04a2e7625b409b41997768a71abf799e9c",
+  "release_manifest_sha256": "073e9c818fb7e18e2bfc045e8dd426330cd6603cdca6ffd487963eed53924672",
+  "verifier_sha256": "8fd0a7fc7ff6637213b8aa751e10677cb69c12f63362de7d28f6fd14d0755e61",
+  "environment": {
+    "python": "3.12.10",
+    "matplotlib": "3.10.8"
+  },
+  "files": {
+    "all_models.csv": "1bacd85578f57ce332322de6949bdc1996c064b626a3891b85ca30edaf8ffd6f",
+    "distinct_venue_comparison.png": "4eb7dfea1e72fbbcfe2d3aa9af8707bc18d881a6164e5aa32931bcc3aaf2e937",
+    "model_summary.json": "8a6333a65e84d466c91c013df75245c3c070b389dad8e85bc1429c7ba0f66cf7"
+  }
+}
