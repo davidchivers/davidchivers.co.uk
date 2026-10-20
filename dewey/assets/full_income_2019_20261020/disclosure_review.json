@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "status": "approved_national_aggregate_release",
+  "reviewed_utc": "2026-10-20T16:17:16.2144186+00:00",
+  "candidate_sha256": "c41adda44b36ef8cdcbfd20141269b0d7100e2dbece509c97e53158e939fa900",
+  "reviewer": {
+    "identity": "Codex independent reviewer, Diego source-review sidecar",
+    "scope": "Independent aggregate-only disclosure and correspondence review of the four explicitly authorized national JSON files and the reviewed exporter/verifier code."
+  },
+  "approval_scope": {
+    "exact_candidate_hash_only": true,
+    "national_aggregates_only": true,
+    "candidate_copied_by_reviewer": false,
+    "detailed_private_outputs_approved": false,
+    "external_transfer_performed": false
+  },
+  "reviewed_national_file_sha256": {
+    "national_release_candidate.json": "c41adda44b36ef8cdcbfd20141269b0d7100e2dbece509c97e53158e939fa900",
+    "private_accounting.json": "4423259ddf22ec54accc1734b39d62bf2644f59066d793bc4d70f0a01017b00a",
+    "private_execution_receipt.json": "789d24ed1655a1839221f63645ff365d6b2ce7bb9622215e1d24b199373bf2c4",
+    "verification_income_full.json": "eb097be70c38d9bb7a3133c1e0e84acf2f0f3dcbdbf99ffb6f3c8cdd8d377dc3"
+  },
+  "reviewed_code_sha256": {
+    "export_full_income_accounting_2019.py": "1afe791447d4e6dc2e18339896f6fb5087b9f7635956c6341bc26e35c7cf9979",
+    "verify_full_income_accounting_2019.py": "6f99e7f98b6994b40100c2d21e018ea89be7129c78eaa16dcacf47557a8812d8"
+  },
+  "checks": {
+    "exact_recursive_candidate_field_whitelist": true,
+    "candidate_values_match_authorized_national_sources": true,
+    "definitions_denominators_and_limits_match_reviewed_exporter": true,
+    "both_variants_available": true,
+    "national_support_and_dominance_gates": true,
+    "full_roster_and_nine_scalar_reconciliation": true,
+    "coverage_and_disjoint_eligibility_accounting": true,
+    "pooled_entropy_normalization_and_both_information_chains": true,
+    "component_shares_use_total_venue_separation": true,
+    "receipt_outcomes_verification_and_code_hash_chain": true,
+    "exact_three_input_roles_and_hash_correspondence": true,
+    "six_execution_pins_match_reviewed_freeze": true,
+    "prior_verification_and_launch_anchor_correspondence": true,
+    "reviewed_files_unchanged_at_end": true,
+    "no_identifiers_vectors_geographic_cells_or_account_paths_in_candidate": true
+  },
+  "national_disclosure_gates": {
+    "minimum_retained_venues": 1000,
+    "minimum_counties": 10,
+    "minimum_subcategories": 10,
+    "maximum_permitted_venue_mass_share": 0.01,
+    "tdw": {
+      "retained_venues": 3525080,
+      "counties": 3136,
+      "subcategories": 624,
+      "max_venue_mass_share": 0.0002965404249559533
+    },
+    "strict": {
+      "retained_venues": 3506222,
+      "counties": 3136,
+      "subcategories": 623,
+      "max_venue_mass_share": 0.0003224549920922342
+    }
+  },
+  "input_sha256": {
+    "flow": "384e39110e133cceb4a6f7691863258a8d882ef2217eb5554b89ca7281156663",
+    "lookup": "2583dea93e1d20ff325d5c3a68012d2dcf9bff5e97dca6b26e3d1e1375dade21",
+    "poi": "dd4aff1f85092ae17dff7e0d4b5c6ff0748e9af9caade9bfc6e706a5ab5b4890"
+  },
+  "verification_basis": {
+    "input_pins": "Exact candidate and receipt hash correspondence, with approved-pin enforcement established by the hash-bound reviewed verifier and frozen execution identity; underlying inputs were not reopened.",
+    "pilot_overlap": "Reviewed verifier reports 6686 matched retained venue-variant rows, no missing rows or membership conflicts, and zero maximum group-mass error. The row-level comparison was not rerun.",
+    "saved_scalar_support": "Reviewed verifier reports matching counts and zero relative mass error for both variants; no saved roster was opened.",
+    "roster_identity_limitation": "The saved-roster hash was captured after execution by the verifier, not bound in the producer receipt."
+  },
+  "limits": {
+    "raw_or_row_level_files_opened_by_reviewer": false,
+    "source_configuration_opened_by_reviewer": false,
+    "original_weekly_pipeline_replicated": false,
+    "raw_archive_integrity": "unresolved",
+    "personal_income_or_direct_interaction_observed": false,
+    "common_local_choice_sets_verified": false,
+    "causal_or_attitude_claims_approved": false,
+    "production_execution_or_tests_rerun_for_this_review": false
+  },
+  "material_findings": []
+}

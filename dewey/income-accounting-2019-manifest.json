@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-20",
+  "scope": "Completed national accounting; new category/geography tests not run",
+  "sources": [
+    {
+      "key": "note",
+      "label": "Complete research note 117",
+      "source": "notes/117_full_2019_income_accounting.md",
+      "route": "assets/full_income_2019_20261020/note117.md",
+      "sha256": "2f7cae88feadb89014e589831a93e13969f0f6ecc5cf6e11a69c379468c0bb81"
+    },
+    {
+      "key": "source_review",
+      "label": "Complete source-code review 116",
+      "source": "notes/116_diego_production_code_review.md",
+      "route": "assets/full_income_2019_20261020/note116.md",
+      "sha256": "f8e4c354ae40eae0dab3b921b414109c0e81dc7be783edae9b86594c49fbfb4a"
+    },
+    {
+      "key": "protocol",
+      "label": "Complete frozen full-year protocol",
+      "source": "docs/protocols/full_income_accounting_2019_20261020.md",
+      "route": "assets/full_income_2019_20261020/protocol.md",
+      "sha256": "816eed49cda4c3ae7c9534a20ca986a4b9f5393f5d9238868336c247b5dd30ff"
+    },
+    {
+      "key": "construction",
+      "label": "Complete construction log 117",
+      "source": "docs/data_construction/117_full_2019_income_accounting.md",
+      "route": "assets/full_income_2019_20261020/construction.md",
+      "sha256": "4de9875053f1041e91e664993e3cfbc16c5c567906a17969cbbe3e94f0458b94"
+    },
+    {
+      "key": "aggregate",
+      "label": "Exact reviewed national aggregate",
+      "source": "output/full_income_accounting_2019/national_aggregate.json",
+      "route": "assets/full_income_2019_20261020/national_aggregate.json",
+      "sha256": "c41adda44b36ef8cdcbfd20141269b0d7100e2dbece509c97e53158e939fa900"
+    },
+    {
+      "key": "review",
+      "label": "Independent disclosure approval",
+      "source": "output/full_income_accounting_2019/disclosure_review.json",
+      "route": "assets/full_income_2019_20261020/disclosure_review.json",
+      "sha256": "7673d659ed7937784b7e49f7bb030f391116826ba0c0258812f89fe1d3435bc8"
+    },
+    {
+      "key": "table",
+      "label": "Complete accounting table",
+      "source": "output/full_income_accounting_2019/national_accounting.csv",
+      "route": "assets/full_income_2019_20261020/national_accounting.csv",
+      "sha256": "12a85eb30663fc0327e6fd9be3d4c621690e9ec15e4c12c5d9b5f23d6dde2bb4"
+    },
+    {
+      "key": "graph",
+      "label": "Both accounting orders and lookups",
+      "source": "output/full_income_accounting_2019/national_accounting.png",
+      "route": "assets/full_income_2019_20261020/national_accounting.png",
+      "sha256": "240dbcec33abc40578c2c16e4242956d7bd62256bd82314185431b298f011f55"
+    }
+  ],
+  "artifacts": {
+    "assets/full_income_2019_20261020/note117.md": "2f7cae88feadb89014e589831a93e13969f0f6ecc5cf6e11a69c379468c0bb81",
+    "assets/full_income_2019_20261020/note116.md": "f8e4c354ae40eae0dab3b921b414109c0e81dc7be783edae9b86594c49fbfb4a",
+    "assets/full_income_2019_20261020/protocol.md": "816eed49cda4c3ae7c9534a20ca986a4b9f5393f5d9238868336c247b5dd30ff",
+    "assets/full_income_2019_20261020/construction.md": "4de9875053f1041e91e664993e3cfbc16c5c567906a17969cbbe3e94f0458b94",
+    "assets/full_income_2019_20261020/national_aggregate.json": "c41adda44b36ef8cdcbfd20141269b0d7100e2dbece509c97e53158e939fa900",
+    "assets/full_income_2019_20261020/disclosure_review.json": "7673d659ed7937784b7e49f7bb030f391116826ba0c0258812f89fe1d3435bc8",
+    "assets/full_income_2019_20261020/national_accounting.csv": "12a85eb30663fc0327e6fd9be3d4c621690e9ec15e4c12c5d9b5f23d6dde2bb4",
+    "assets/full_income_2019_20261020/national_accounting.png": "240dbcec33abc40578c2c16e4242956d7bd62256bd82314185431b298f011f55",
+    "income-accounting-2019.html": "b486621186807e7b7a302b565a8ef69a3e7500867d16860fd99c5b20beb529da"
+  },
+  "template_sha256": "3a920eeafb61eef61ff0848a5a48dad54779340a5b27b7ec00589465379adc63",
+  "builder_sha256": "ffef62eb921510be7d1a8e36ace5266349ecd181c3366ad6278b2bac82d13d54",
+  "render_helper_sha256": "7afaa88dc80a84fc5654b60709a5021c3e52d556145aae6af7be2bf0134e4ce6",
+  "private_inputs_opened": false,
+  "new_empirical_run": false
+}
