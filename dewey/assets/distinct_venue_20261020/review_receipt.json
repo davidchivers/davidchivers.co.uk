@@ -1,0 +1,36 @@
+{
+  "independent_review_complete": true,
+  "release_approved": true,
+  "candidate_sha256": "c8ced95a8881bcdbff43c6d9de143594a6c36d2cfc1ae3256f76529b897fb626",
+  "allowed_model_fields": [
+    "year",
+    "sample",
+    "specification",
+    "exposure",
+    "cells",
+    "areas",
+    "categories",
+    "poi_years",
+    "correlations"
+  ],
+  "allowed_extra_fields": [
+    "max_baseline_error",
+    "max_independent_sparse_error",
+    "elapsed_seconds",
+    "code_hashes",
+    "environment"
+  ],
+  "review_note": "Independent aggregate disclosure review completed 20 October 2026. The authorized gate and exact candidate hash were verified before candidate inspection. The complete 12-model/48-correlation whitelist and safe metadata passed checks against the fixed exporter and both named prior public releases. All support totals were already public, all 36 original correlations reproduced within 1e-8, and the shared workforce-mapped supports and 18 correlations agreed. Cumulative review identified no direct small-subset subtraction or row/cell reconstruction route within the reviewed releases and this whitelist. Full scope, source identities, prior synthetic findings and limits are preserved in workstreams/distinct_venue_adjusted_review_20261020.md. This is aggregate disclosure clearance, not an empirical rerun or approval to copy the complete candidate.",
+  "caveats": [
+    "Approval is limited to the exact candidate SHA-256 and these whitelists. The complete private candidate, its directory and its inputs are not approved for copying or publication.",
+    "Retain all twelve separate year/sample/specification records and all 48 correlations. Samples are all and stable_venue; years are 2017-2019; specifications are category and area_category; exposure is log_count. Correlation keys are exactly sorting, between_race, within_race and distinct_venue.",
+    "Safe extras are limited to two maximum error scalars, finite nonnegative runtime, the exact seven safe code/protocol/public-baseline hashes and four software-version strings required by the fixed exporter. The reviewed exporter SHA-256 is f3915730dfff6c64b415ed69dd669a3126760039fd346263fdc8593135827b28.",
+    "Exclude private_validation, per-model sparse errors, convergence, residual standard deviations or vectors, coefficients, covariances, new means, H/effective-count details, additional bins, category/area identifiers, source-data paths and detailed rows/cells.",
+    "Cumulative review included the previously released continuity annual moments, count-bin D/effective-count means and exposure standard deviations, plus the workforce mapped/broader models and added-support counts. The incremental substantive information is twelve national adjusted D correlations on existing supports; no new support partitions or D residual moments are approved.",
+    "Support screens and this bounded cumulative assessment are not a formal privacy guarantee, an exhaustive external-linkage audit or a provider-permission determination. New partitions, outcome moments, residual scales or identifiers require further review.",
+    "This is a post-result descriptive sensitivity, not a new primary specification, significance result, worker model or causal mechanism. D is the composition contrast for independent weight-proportional draws conditional on distinct recorded venues, not a noise correction or a fraction of pooled diversity.",
+    "Home-area composition is not personal race or simultaneous encounters; recorded areas are not verified MSAs and stable IDs do not establish business continuity. Preserve mixed findings and all prior failed inference and annualization gates.",
+    "The reviewer inspected only the expressly authorized configuration/gate/candidate and named public aggregate context. Restricted-source fingerprint assertions came from the production gate; no cell Parquet or original dataset was reopened, and no empirical computation or export was rerun.",
+    "Main must rehash the candidate at use, require literal true receipt approvals, enforce the exact complete-family whitelist with the fixed exporter, and verify the generated release and its hashes separately before publication."
+  ]
+}

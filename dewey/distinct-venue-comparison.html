@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="en-GB"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="noindex,nofollow" name="robots"/><title>The adjusted venue-count association depends on the comparison object</title><style>:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #23282b; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: 0; background: #fff; color: #23282b; }
+header, main, footer { max-width: 1160px; margin: 0 auto; padding: 24px 32px; background: #fff; color: #23282b; }
+header { border-top: 7px solid #682046; padding-top: 26px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 50px 0 18px; border-bottom: 2px solid #c7dcd9; padding-bottom: 10px; }
+h3 { font-size: 21px; line-height: 1.35; margin-top: 34px; }
+h4 { font-size: 18px; line-height: 1.4; margin-top: 28px; }
+main > p, main > ul, main > ol { max-width: 980px; }
+section, h2, h3, h4 { scroll-margin-top: 24px; }
+p { margin: 12px 0 18px; }
+a { color: #00686c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover { color: #682046; }
+a:focus-visible { outline: 3px solid #00686c; outline-offset: 3px; }
+nav { border-block: 1px solid #cbd6d5; background: #f1f7f6; }
+nav div { max-width: 1160px; margin: auto; padding: 14px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 15px; font-weight: 600; }
+.subtitle, footer { color: #58646b; font-size: 14px; }
+main { padding-top: 6px; }
+li { margin: 10px 0; }
+.table-scroll { overflow-x: auto; margin: 22px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 660px; }
+th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #d5dedd; padding: 12px 13px; overflow-wrap: anywhere; }
+th { background: #eef4f3; color: #253c3b; }
+tr:nth-child(even) td { background: #fafbfb; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+pre { background: #f4f5f6; padding: 18px; overflow-x: auto; border-left: 3px solid #00686c; }
+footer { border-top: 1px solid #cbd6d5; margin-top: 36px; padding-bottom: 44px; }
+@media (max-width: 680px) {
+  header, main, footer { padding-left: 18px; padding-right: 18px; }
+  nav div { padding: 12px 18px; }
+}
+@media print {
+  nav, .no-print { display: none; }
+  header, main, footer { max-width: none; padding: 12px 0; }
+  body { font-size: 10pt; } h1 { font-size: 23pt; } h2 { font-size: 17pt; } h3 { font-size: 13pt; }
+  table { min-width: 0; font-size: 9pt; } .table-scroll { overflow: visible; }
+  tr { break-inside: avoid; } h2, h3 { break-after: avoid; }
+  a { color: inherit; }
+}
+
+colgroup{display:none} figure{margin:24px 0} figure img,main img{max-width:100%;height:auto;display:block} math[display=block]{display:block;max-width:100%;overflow-x:auto;padding:12px 0}</style><style>:root { color-scheme: light; --page: #ffffff; --ink: #23282b; --muted: #58646b; --panel: #f1f7f6; --row: #fafbfb; --line: #cbd6d5; --link: #00686c; --accent: #682046; --code: #f4f5f6; }
+:root[data-theme="dark"] { color-scheme: dark; --page: #181a1b; --ink: #e8ebea; --muted: #b4bfbc; --panel: #222b2a; --row: #1d2222; --line: #465452; --link: #7ddbd0; --accent: #e9a7c5; --code: #242728; }
+html, body, header, main, footer { background: var(--page); color: var(--ink); }
+header { border-top-color: var(--accent); }
+h2 { border-bottom-color: var(--line); }
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+nav, th, .notice { background: var(--panel); color: var(--ink); }
+nav, footer, th, td { border-color: var(--line); }
+tr:nth-child(even) td { background: var(--row); }
+pre { background: var(--code); border-color: var(--link); }
+.subtitle, footer { color: var(--muted); }
+.project-home { display: inline-block; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+main > p, main > ul, main > ol { max-width: 850px; }
+blockquote { margin: 24px 0; padding: 12px 22px; border-left: 3px solid var(--link); background: var(--panel); max-width: 850px; }
+blockquote p { margin: 5px 0; }
+pre { font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { min-width: 620px; }
+@media (max-width: 680px) { h1 { font-size: 28px; } h2 { font-size: 23px; } }
+.theme-control { display: flex; justify-content: flex-end; margin-top: 14px; }
+.theme-control label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer; user-select: none; }
+.theme-control input { appearance: none; width: 42px; height: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--code); position: relative; cursor: pointer; flex: 0 0 42px; }
+.theme-control input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); }
+.theme-control input:checked { background: #18665f; border-color: #7ddbd0; }
+.theme-control input:checked::before { transform: translateX(18px); background: #ffffff; }
+@media print { :root, :root[data-theme="dark"] { color-scheme: light; --page: #fff; --ink: #111; --muted: #444; --panel: #eee; --row: #fff; --line: #bbb; --link: #111; --accent: #111; --code: #eee; } .theme-control { display: none; } }
+</style><script>(function () {
+  "use strict";
+  var theme = "dark";
+  try {
+    var saved = localStorage.getItem("dewey-theme");
+    if (saved === "light" || saved === "dark") theme = saved;
+  } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+  document.addEventListener("DOMContentLoaded", function () {
+    var control = document.getElementById("dark-mode");
+    if (!control) return;
+    control.checked = document.documentElement.dataset.theme === "dark";
+    control.addEventListener("change", function () {
+      var next = control.checked ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("dewey-theme", next); } catch (_) {}
+    });
+  });
+}());
+</script><style id="supply-table-layout">
+table { table-layout: auto; }
+th, td { overflow-wrap: normal; word-break: normal; }
+td[style*="text-align: right"] { white-space: nowrap; font-variant-numeric: tabular-nums; }
+th { min-width: 72px; }
+.table-scroll { max-width: 100%; }
+@media print { th, td { padding: 6px; } }
+</style><style id="distinct-venue-layout">
+header, main, footer { min-width: 0; }
+h1, h2, h3, h4, code, .source-identity { overflow-wrap: anywhere; }
+.table-scroll { max-width: 100%; }
+table { table-layout: auto; }
+td[style*="text-align: right"] { white-space: nowrap; font-variant-numeric: tabular-nums; }
+math { color: inherit; }
+math[display="block"] { display: block; max-width: 100%; overflow-x: auto; padding: 12px 0; }
+figure { margin: 24px 0; }
+figure img, main img { display: block; max-width: 100%; height: auto; }
+figcaption, .source-identity { color: var(--muted); font-size: 14px; }
+.source-identity code { white-space: normal; overflow-wrap: anywhere; }
+.document-source { border-top: 1px solid var(--line); margin-top: 40px; }
+.document-source > h2 { margin-top: 24px; }
+.source-toc { padding-left: 22px; }
+.skip-link { position: absolute; left: -10000px; }
+.skip-link:focus { position: static; display: block; padding: 12px; }
+@media print {
+  .skip-link { display: none; }
+  table { min-width: 0; font-size: 8pt; }
+  th, td { padding: 5px; }
+}
+</style></head><body><a class="skip-link" href="#main">Skip to report</a><header><a class="project-home" href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Dewey research project</a><h1>The adjusted venue-count association depends on the comparison object</h1><p class="subtitle">20 October 2026 | Completed descriptive qualification</p><div class="theme-control"><label for="dark-mode">Dark mode<input aria-label="Dark mode" checked="" id="dark-mode" role="switch" type="checkbox"/></label></div></header><nav aria-label="Research library"><div><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/">Overview and ranking</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/research.html">New results and audit</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/methods.html">Measures and approach</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/quality.html">Data quality</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/#details">Eight literature reviews</a><a href="https://davidchivers.github.io/davidchivers.co.uk/dewey/sources.html">Source library</a></div></nav><main id="main"><p>Complete authored note 108. Results and original estimates are retained; only headings, equation display and local links are adapted. <a href="assets/distinct_venue_20261020/sourcebook.html">Complete dated sourcebook</a> | <a href="distinct-venue-source-manifest.json">Source and artifact manifest</a></p>
+<p>20 October 2026. Completed empirical descriptive sensitivity, with independent code and aggregate-disclosure review. This extends an existing measure to matched adjusted samples; it is not a new index, preregistration, causal estimate or upstream replication. STATUS.md remains canonical.</p>
+<h2 id="note-main-result">Main result</h2>
+<p>The earlier positive association between venue count and racial separation does <strong>not</strong> carry over to the conditional difference between two distinct venues after additive area and subcategory controls. In 2019, on the all- eligible sample, the partial correlation with log venue count is 0.124670 for the original absolute between-venue component, but 0.002518 for the distinct-venue contrast. The original separation share has correlation 0.140757. The same qualification holds in 2017 and 2018 and in the stable-ID sample: all six area/category-adjusted distinct-venue correlations lie between -0.001651 and 0.002518.</p>
+<p>Without area controls, distinct-venue correlations remain positive (0.397818 to 0.428344 across the six sample-years). Thus the result is not “no composition differences anywhere.” It is a much narrower finding: the earlier count gradient is sensitive to whether same-venue pairs are included and whether geographic average differences are removed.</p>
+<p>These are descriptive point estimates, not equivalence tests or evidence that venue availability has no causal effect. No standard errors, p-values or significance claims were estimated in this bounded diagnostic.</p>
+<h2 id="note-what-the-two-objects-measure">What the two objects measure</h2>
+<p>Each cell is one recorded area, subcategory and year. Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>p</mi><mi>j</mi></msub><annotation encoding="application/x-tex">p_j</annotation></semantics></math> be a venue’s four-group visitor-origin racial-composition vector and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>w</mi><mi>j</mi></msub><annotation encoding="application/x-tex">w_j</annotation></semantics></math> its normalized inherited annualized matched-visit weight. These are home-area demographic proxies, not observed visitors’ individual race or simultaneous encounters.</p>
+<p>The original component is</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><munder><mo>∑</mo><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow></munder><msub><mi>w</mi><mi>j</mi></msub><msub><mi>w</mi><mi>k</mi></msub><msup><mrow><mo form="prefix" stretchy="true">‖</mo><msub><mi>p</mi><mi>j</mi></msub><mo>−</mo><msub><mi>p</mi><mi>k</mi></msub><mo form="postfix" stretchy="true">‖</mo></mrow><mn>2</mn></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+B=\tfrac12\sum_{j,k}w_jw_k\lVert p_j-p_k\rVert^2.
+</annotation></semantics></math></p>
+<p>It draws two venues independently, proportional to their weights. Sometimes the two draws select the same venue, which contributes zero difference. Writing <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><msub><mo>∑</mo><mi>j</mi></msub><msubsup><mi>w</mi><mi>j</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">H=\sum_jw_j^2</annotation></semantics></math>, the probability of different recorded venues is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">1-H</annotation></semantics></math>. The existing distinct-venue contrast is</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mi>B</mi><mrow><mn>1</mn><mo>−</mo><mi>H</mi></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">
+D=\frac{B}{1-H}.
+</annotation></semantics></math></p>
+<p>It asks: conditional on drawing <strong>different</strong> venues, how different are their composition vectors? It does not mean drawing the first venue and then renormalizing the remaining venues for the second draw. It is also not a correction for noisy composition estimates or an assumption that annualized visits are independent customers.</p>
+<p>The accounting identity is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>H</mi><mo form="postfix" stretchy="false">)</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">B=(1-H)D</annotation></semantics></math>. A cell can have a larger original between-venue component because visits are less concentrated, because different venues have more different composition, or both. The changed correlation does not identify a causal contribution from either factor.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> lies between zero and one but can exceed the pooled fractionalization <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>. It is not a share of total diversity. The earlier separation share is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi>B</mi><mi>/</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">S=B/P</annotation></semantics></math>, and within-venue diversity is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>=</mo><msub><mo>∑</mo><mi>j</mi></msub><msub><mi>w</mi><mi>j</mi></msub><mo form="prefix" stretchy="false">(</mo><mn>1</mn><mo>−</mo><msub><mo>∑</mo><mi>g</mi></msub><msubsup><mi>p</mi><mrow><mi>j</mi><mi>g</mi></mrow><mn>2</mn></msubsup><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">W=\sum_jw_j(1-\sum_g p_{jg}^2)</annotation></semantics></math>. Unlike <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> changes if a recorded venue is split into identical copies. It is a different estimand, not an automatically superior replacement for the original.</p>
+<h2 id="note-exact-specification-and-sample">Exact specification and sample</h2>
+<p>For each year separately, report</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Corr</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">{</mo><msub><mi>M</mi><mi>X</mi></msub><mrow><mi mathvariant="normal">log</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>N</mi><mo form="postfix" stretchy="false">)</mo><mo>,</mo><mspace width="0.167em"></mspace><msub><mi>M</mi><mi>X</mi></msub><mi>Y</mi><mo form="postfix" stretchy="false">}</mo><mo>,</mo><mspace width="2.0em"></mspace><mi>Y</mi><mo>∈</mo><mo form="prefix" stretchy="false">{</mo><mi>S</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>W</mi><mo>,</mo><mi>D</mi><mo form="postfix" stretchy="false">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\operatorname{Corr}\{M_X\log(N),\,M_X Y\},
+\qquad Y\in\{S,B,W,D\}.
+</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>M</mi><mi>X</mi></msub><annotation encoding="application/x-tex">M_X</annotation></semantics></math> removes either subcategory fixed effects alone or additive recorded- area and subcategory fixed effects. This is not an area-by-subcategory interaction specification. Cells receive equal regression weight; visit weights operate within cells when constructing the outcomes. The years are not pooled, so there are no pooled-year fixed effects.</p>
+<p>The input is the approved, hash-pinned continuity summary used in note 89, not a fresh pass through raw POI or flow files. Retain the same 150 matched subcategories and the original rules: at least two eligible venues, pooled racial diversity at least 0.05, and at least 20 eligible areas per subcategory. The stable sample requires the inherited valid venue ID, category and area continuity; it is not independent proof of business continuity. All 933 recorded areas are retained as labelled areas, not claimed to be 933 verified metropolitan areas.</p>
+<h2 id="note-complete-results">Complete results</h2>
+<p>All entries are partial correlations with log nominal venue count, rounded to six decimals. They are not percentage changes in diversity. The first three outcome columns reproduce previously released estimates; the last column contains the 12 new estimates.</p>
+<div aria-label="Table in complete research note 108" class="table-scroll" role="region" tabindex="0"><table>
+<colgroup>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Year</th>
+<th scope="col">Sample</th>
+<th scope="col">Controls</th>
+<th scope="col" style="text-align: right;">Separation S</th>
+<th scope="col" style="text-align: right;">Between B</th>
+<th scope="col" style="text-align: right;">Within W</th>
+<th scope="col" style="text-align: right;">Distinct D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017</td>
+<td>All</td>
+<td>Category</td>
+<td style="text-align: right;">0.559368</td>
+<td style="text-align: right;">0.547308</td>
+<td style="text-align: right;">0.288865</td>
+<td style="text-align: right;">0.400225</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>All</td>
+<td>Area + category</td>
+<td style="text-align: right;">0.137254</td>
+<td style="text-align: right;">0.119511</td>
+<td style="text-align: right;">-0.010222</td>
+<td style="text-align: right;">-0.000054</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>All</td>
+<td>Category</td>
+<td style="text-align: right;">0.563781</td>
+<td style="text-align: right;">0.558842</td>
+<td style="text-align: right;">0.301187</td>
+<td style="text-align: right;">0.411219</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>All</td>
+<td>Area + category</td>
+<td style="text-align: right;">0.139894</td>
+<td style="text-align: right;">0.124787</td>
+<td style="text-align: right;">-0.004672</td>
+<td style="text-align: right;">0.002248</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>All</td>
+<td>Category</td>
+<td style="text-align: right;">0.567627</td>
+<td style="text-align: right;">0.563471</td>
+<td style="text-align: right;">0.304730</td>
+<td style="text-align: right;">0.413695</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>All</td>
+<td>Area + category</td>
+<td style="text-align: right;">0.140757</td>
+<td style="text-align: right;">0.124670</td>
+<td style="text-align: right;">-0.010357</td>
+<td style="text-align: right;">0.002518</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>Stable IDs</td>
+<td>Category</td>
+<td style="text-align: right;">0.557490</td>
+<td style="text-align: right;">0.546079</td>
+<td style="text-align: right;">0.291454</td>
+<td style="text-align: right;">0.397818</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>Stable IDs</td>
+<td>Area + category</td>
+<td style="text-align: right;">0.138032</td>
+<td style="text-align: right;">0.119023</td>
+<td style="text-align: right;">-0.013207</td>
+<td style="text-align: right;">-0.001651</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>Stable IDs</td>
+<td>Category</td>
+<td style="text-align: right;">0.566060</td>
+<td style="text-align: right;">0.559671</td>
+<td style="text-align: right;">0.304705</td>
+<td style="text-align: right;">0.413961</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>Stable IDs</td>
+<td>Area + category</td>
+<td style="text-align: right;">0.138307</td>
+<td style="text-align: right;">0.121968</td>
+<td style="text-align: right;">-0.007503</td>
+<td style="text-align: right;">-0.000331</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>Stable IDs</td>
+<td>Category</td>
+<td style="text-align: right;">0.578532</td>
+<td style="text-align: right;">0.571312</td>
+<td style="text-align: right;">0.312426</td>
+<td style="text-align: right;">0.428344</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>Stable IDs</td>
+<td>Area + category</td>
+<td style="text-align: right;">0.142409</td>
+<td style="text-align: right;">0.126141</td>
+<td style="text-align: right;">-0.004480</td>
+<td style="text-align: right;">0.000925</td>
+</tr>
+</tbody>
+</table></div>
+<p>The two control specifications use identical support within each sample-year. Each row below covers 933 recorded areas and 150 subcategories.</p>
+<div aria-label="Table in complete research note 108" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Year</th>
+<th scope="col">Sample</th>
+<th scope="col" style="text-align: right;">Area-subcategory cells</th>
+<th scope="col" style="text-align: right;">Included POI-years</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017</td>
+<td>All</td>
+<td style="text-align: right;">75,320</td>
+<td style="text-align: right;">2,675,114</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>All</td>
+<td style="text-align: right;">77,182</td>
+<td style="text-align: right;">2,880,329</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>All</td>
+<td style="text-align: right;">82,032</td>
+<td style="text-align: right;">3,247,365</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>Stable IDs</td>
+<td style="text-align: right;">71,033</td>
+<td style="text-align: right;">2,374,836</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>Stable IDs</td>
+<td style="text-align: right;">71,054</td>
+<td style="text-align: right;">2,374,990</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>Stable IDs</td>
+<td style="text-align: right;">71,134</td>
+<td style="text-align: right;">2,375,384</td>
+</tr>
+</tbody>
+</table></div>
+<figure>
+<img alt="Same samples and controls, with a common full correlation scale" height="1120" src="assets/distinct_venue_20261020/distinct_venue_comparison.png" width="1760"/>
+<figcaption aria-hidden="true">Same samples and controls, with a common full correlation scale</figcaption>
+</figure>
+<p><a href="assets/distinct_venue_20261020/all_models.csv">Full-precision table</a> and <a href="assets/distinct_venue_20261020/model_summary.json">reviewed model summary</a>.</p>
+<h2 id="note-consequence-for-the-paper">Consequence for the paper</h2>
+<p><strong>Narrow the count-based claim.</strong> More recorded venues are associated with the original separation component, but the evidence does not establish that the composition of different venues becomes more dissimilar after the fixed geographic/category adjustments. This qualification belongs alongside the original finding, not in a hidden robustness appendix. Do not select the original measure merely because its association is larger, or replace it with D merely because the result is near zero.</p>
+<p>The broader-category sensitivity in note 106 remains a separate completed result: removing workforce-match selection did not remove the original count gradient. That exercise did not estimate D on the broader category sample. This new exercise retains the original 150 categories; it must not be presented as that unrun broader-sample D test.</p>
+<p>Continue the measurement-led descriptive contribution. Do not promote this nominal-count correlation as evidence of sorting preferences or an urban- variety mechanism. The distinct income/common-menu question still requires its authorized inputs, source geography and choice-set checks. The January 2026 demographic-preferences paper uses much more specific trip, product and home-location restrictions; our annual cell correlations do not reproduce its identification strategy. <a href="https://www.jdingel.com/research/CoutureDingelGreenHandbury.pdf">Couture, Dingel, Green and Handbury, January 2026 working paper</a>.</p>
+<h2 id="note-verification-and-remaining-limits">Verification and remaining limits</h2>
+<p>The real summary-based calculation took 10.731 seconds. All 36 old correlations reproduce within <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.23</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>16</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2.23\times10^{-16}</annotation></semantics></math>; an independent sparse projection agrees on the full family within <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7.55</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>15</mn></mrow></msup></mrow><annotation encoding="application/x-tex">7.55\times10^{-15}</annotation></semantics></math>. The 38 artificial-data tests pass, including an independent dense fixed-effect calculation. Three release-boundary defects identified during review were fixed before export and are retained in the review record.</p>
+<p>Independent disclosure review cleared only the complete 12-model, 48-correlation national whitelist and named safe metadata for the exact candidate fingerprint. A separate replay regenerated the released CSV and PNG byte-for-byte using only the public summary. This is not a rerun of Tommy’s or Diego’s upstream pipeline and does not establish its correctness.</p>
+<p>Missing/suppressed origins, uncertain source geography, venue definitions, measurement error and the earlier failed inference gates remain. The frozen protocol, construction record, independent review and verification receipts are linked below. No original data or historical result was overwritten.</p>
+<ul>
+<li><a href="assets/distinct_venue_20261020/protocol.md">Protocol</a></li>
+<li><a href="assets/distinct_venue_20261020/construction.md">Construction record</a></li>
+<li><a href="assets/distinct_venue_20261020/review.md">Independent review</a></li>
+<li><a href="assets/distinct_venue_20261020/review_receipt.json">Exact disclosure receipt</a></li>
+<li><a href="assets/distinct_venue_20261020/verification_receipt.json">Public-summary replay receipt</a></li>
+</ul>
+</main><footer>20 October 2026. Dated research snapshot. Underlying mobility data: Advan via Dewey. Reviewed national aggregates and complete authored documentation only; no provider text or licensed rows. Original estimates and failed inference gates are retained.</footer></body></html>

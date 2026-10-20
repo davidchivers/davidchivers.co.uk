@@ -1,0 +1,4 @@
+# Preserve the reviewed complete source snapshots byte-for-byte.
+dewey/assets/distinct_venue_20261020/* -text
+dewey/distinct-venue-comparison.html -text
+dewey/distinct-venue-source-manifest.json -text
