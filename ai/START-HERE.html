@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>AI practice — start here</title>
+  <style>
+
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">:root { color-scheme: light; --ink:#173737; --accent:#08675f; --paper:#fffdf7; --edge:#cdd9d3; }
+* { box-sizing:border-box; }
+html { scroll-behavior:auto; }
+body { max-width:850px; margin:0 auto; padding:42px 28px 70px; color:var(--ink); background:var(--paper); font:18px/1.6 system-ui,sans-serif; border-top:7px solid var(--accent); }
+h1 { font-size:clamp(34px,6vw,52px); line-height:1.1; letter-spacing:-.035em; margin:10px 0 22px; }
+h2 { font-size:29px; line-height:1.25; margin:42px 0 16px; }
+p { margin:14px 0; }
+li { margin:12px 0; padding-left:4px; }
+a { color:#00675e; text-underline-offset:3px; }
+code { font-size:.9em; overflow-wrap:anywhere; background:#edf1eb; border-radius:3px; padding:1px 4px; }
+.intro-box { border-left:5px solid #b95422; padding:16px 20px; background:#faeddf; margin:22px 0 28px; }
+.intro-box p { margin:5px 0; }
+.button,button { display:inline-block; background:var(--accent); color:white; border:0; border-radius:6px; padding:10px 15px; font:600 16px/1.3 system-ui,sans-serif; cursor:pointer; text-decoration:none; }
+.button { margin:0 0 8px; }
+.select-prompt { margin-left:8px; background:white; color:var(--accent); border:1px solid var(--accent); }
+blockquote { margin:20px 0; border:1px solid var(--edge); border-left:5px solid var(--accent); border-radius:6px; background:#edf4ee; padding:18px 20px; }
+blockquote p { margin:0 0 16px; }
+blockquote p:last-child { margin-bottom:0; }
+.copy-status { display:inline-block; font-size:14px; margin-left:10px; }
+details { border:1px solid var(--edge); border-radius:7px; padding:14px 18px; margin:14px 0; background:#fff; }
+summary { cursor:pointer; font-weight:650; line-height:1.45; }
+details[open] summary { padding-bottom:8px; }
+:focus-visible { outline:3px solid #b95422; outline-offset:4px; }
+textarea.copy-fallback { display:block; width:100%; min-height:120px; margin-top:12px; font:16px/1.5 system-ui,sans-serif; padding:12px; }
+@media(max-width:550px) { body { padding:24px 18px 42px; } h2 { font-size:26px; } blockquote { padding:14px; } ol { padding-left:24px; } .copy-status { display:block; margin:8px 0 0; } }
+@media print { body { max-width:none; padding:0; background:white; } button,.copy-status { display:none; } details { break-inside:avoid; } }
+</style>
+</head>
+<body><main><nav aria-label="Course navigation"><p><strong>AI at university · Lesson 4 exercises</strong></p><p><a href="index.html">All lessons</a> · <a href="index.html#lesson-4">Lesson 4: video and resources</a> · <a href="https://davidchivers.co.uk/ai_install/">Install VS Code and Copilot</a></p></nav>
+<h1 id="try-ai-beyond-the-chat">Try AI beyond the chat</h1>
+<p>Make one interactive slide, then try a study coach. Use these
+invented examples to practise; follow your assessment instructions for
+assessed work.</p>
+<p>This is optional practice. For everyday study, start with <a href="https://ask.durham.ac.uk/">Ask Durham</a> or <a href="https://m365.cloud.microsoft/">Microsoft 365 Copilot Chat</a>
+using your Durham account. <strong>You do not need to buy an AI
+subscription.</strong> The activities below use the separate GitHub
+Copilot student benefit in VS Code. While waiting for access, you can <a href="study-slides-example.html">explore the prepared example</a> in
+your browser.</p>
+<div id="download-route" class="intro-box">
+<p><a class="button" href="ai-practice.zip" download>Download lesson 4 folder: ai-practice ↓</a></p>
+<p>Extract the ZIP, then open <strong>START-HERE.html</strong> inside it for this same guide offline.
+Keep the guide open beside VS Code.</p></div>
+<h2 id="get-ready">Get ready</h2>
+<ol type="1">
+<li><strong>Extract the ZIP.</strong> On Windows, right-click it and
+choose <strong>Extract All</strong>. On a Mac, double-click it. Work in
+the extracted folder.</li>
+<li><strong>Open the folder in VS Code:</strong> File → Open Folder →
+<strong>ai-practice</strong>. Choose the folder containing
+<code>README.md</code>, <code>notes</code> and
+<code>START-HERE.html</code>, rather than opening a single file.</li>
+<li><strong>Open the chat and select Agent.</strong> Sign in to GitHub
+Copilot with the account that has your student access. If a model picker
+is shown, Auto is a reasonable starting point when available.</li>
+</ol>
+<p>If VS Code shows <strong>Restricted Mode</strong>, review this
+supplied folder, then use <strong>Manage</strong> in the banner to trust
+it if you are happy with its contents. Copilot needs a trusted workspace
+for this exercise.</p>
+<p>Need VS Code or Copilot first? Follow the <a href="https://davidchivers.co.uk/ai_install/">setup guide</a>. You need
+internet access for Copilot. <strong>No Quarto, LaTeX, Python or other
+software is needed for this practice.</strong></p>
+<h2 id="make-a-slide">1. Make a slide</h2>
+<p>A <em>skill</em> is a saved method the assistant can reuse. Paste
+this into the chat:</p>
+<blockquote>
+<p>Use the study-slides skill and the spending example in
+notes/slide-examples.md. Make one slide with a button to switch between
+pounds and percentage growth. Save it as outputs/spending-chart.html.
+Keep it simple: no animation or installs. Check the values and buttons,
+then give me a link to open the file.</p>
+</blockquote>
+<p>It may take a few minutes. Look for a permission request if it seems
+to be waiting: read the proposed action before allowing it. You do not
+need to turn off approvals.</p>
+<p><strong>Open the result:</strong> follow the file link in the reply.
+If you see HTML code instead of a slide, find
+<code>outputs/spending-chart.html</code> in File Explorer or Finder and
+open it with your usual web browser. Refresh that browser tab after
+edits.</p>
+<p><strong>Check it:</strong> does the switch change the units and
+scale? Which category has the larger increase in pounds, and which has
+the larger percentage increase?</p>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>Food rises from £240 to £300: <strong>£60, or 25%</strong>. Energy
+rises from £80 to £120: <strong>£40, or 50%</strong>. Food has the
+larger cash increase; energy the larger percentage increase. The chart
+should use £0–£400 for pounds and 0–60% for growth, with both growth
+lines starting at zero. These are invented spending figures, not
+inflation estimates.</p>
+</details>
+<p>Want to change it? Ask in your own words: “Make the labels larger” or
+“Add a short transition when I press the button.” Recheck both views
+after a change.</p>
+<details>
+<summary>
+Explore a prepared example while you wait
+</summary>
+<p><a href="study-slides-example.html">Open the example slides</a>.
+Try the spending switch, score distributions, worked calculation and
+revealable answer. This file works without Copilot or an internet
+connection once downloaded. It is a prepared example: your generated
+slide will look different and needs its own checks.</p>
+</details>
+<h2 id="try-a-study-coach">2. Try a study coach</h2>
+<p>An <em>agent</em> has a saved role and a set of tools. Start a
+<strong>new chat</strong>, then choose <strong>Study coach</strong> from
+the agent picker, where you selected Agent. Paste:</p>
+<blockquote>
+<p>Read notes/slide-examples.md. I can follow the standard deviation
+calculation, but I don’t understand why we square the differences. Help
+me reason it through. Ask one question and wait for my attempt before
+explaining.</p>
+</blockquote>
+<p>Answer its question. Ask for a hint, challenge its explanation or say
+where you are stuck. The point is to work through the idea, not just
+receive an answer.</p>
+<p>Study coach can read and discuss your files. <strong>Switch back to
+Agent to edit them.</strong> You can ask it to adapt the skill or coach
+for another subject, then inspect the changed instructions and try them
+in a new chat.</p>
+<details>
+<summary>
+Optional: save a preference for next time
+</summary>
+<p>A fresh chat will not necessarily know your earlier decisions. Ask
+Agent:</p>
+<blockquote>
+<p>Save a short project note in notes/project-memory.md: use cream, teal
+and orange. Next time, check that both chart views have the right axis
+labels.</p>
+</blockquote>
+<p>Then start a new chat and ask:</p>
+<blockquote>
+<p>Read notes/project-memory.md and tell me our design choice and next
+check.</p>
+</blockquote>
+<p>Open the saved note to see what it recorded. This is memory in a file
+that you ask it to read, rather than an assumption that it remembers
+every chat.</p>
+</details>
+<h2 id="stuck">Stuck?</h2>
+<details>
+<summary>
+I cannot see Copilot, Agent or my student access
+</summary>
+<p>Check the <a href="https://davidchivers.co.uk/ai_install/">setup
+guide</a> and that you are signed into the intended GitHub account. The
+folder recommends the GitHub Copilot Chat extension; accepting that
+recommendation does not sign you in or activate student access. If
+access is pending or you reach a usage limit, explore the prepared
+example and its notes for now. You do not need to buy a plan to read
+this material. Your organisation may control which features are
+available.</p>
+</details>
+<details>
+<summary>
+It cannot find the skill or Study coach
+</summary>
+<p>Check that you opened the extracted <strong>ai-practice</strong>
+folder, not the ZIP, its parent folder or an individual file. Use a
+current version of VS Code and the GitHub Copilot Chat extension. In
+versions with a session-target picker, choose the local Copilot session
+for these exercises.</p>
+<p>For the skill, type <code>/study-slides</code>, or ask it to read and
+follow <code>.github/skills/study-slides/SKILL.md</code> explicitly.</p>
+<p>For the coach, start a new chat and look in the agent picker. Its
+instructions are in <code>.github/agents/study-coach.agent.md</code>.
+You can attach that file to a normal chat to try the tutoring style, but
+that does not give the chat the custom agent’s read-only tool
+configuration.</p>
+</details>
+<details>
+<summary>
+It has stopped, wants permission or proposes an installation
+</summary>
+<p>Read any request waiting in the chat. A request to read files, edit
+the requested output or open that output for checking may be part of the
+task. Approve only an action you understand and want; an approval may
+cover just that action or the session, depending on the prompt. Keep the
+normal approval settings.</p>
+<p>This exercise needs no extra software. If it proposes an
+installation, decline and ask: “Use one self-contained HTML file with no
+installs or external libraries.” If a tool fails, ask it to explain the
+error and use a simpler approach. If it cannot check the browser itself,
+open the result and use the checks above.</p>
+</details>
+<details>
+<summary>
+The slide is blank, broken or has the wrong numbers
+</summary>
+<p>Check that you opened the generated file in <code>outputs</code>,
+then refresh the browser. Tell Agent what you expected and what
+happened, for example: “The percentage button does nothing. Fix it and
+recheck both views.” Include any visible error text. Ask it to compare
+the result with <code>notes/slide-examples.md</code>.</p>
+<p>You can still use the prepared example if generation fails. A
+plausible-looking slide is not proof that its calculations or controls
+work.</p>
+</details>
+<details>
+<summary>
+What is in the folder? Is it uploaded to GitHub?
+</summary>
+<p>The <code>.github</code> folder holds Copilot’s skill and agent
+instructions. It does not upload anything to GitHub. The files stay in
+your local folder, although Copilot can send relevant content to its
+online service. The supplied data are invented; do not add private or
+restricted material without checking the applicable rules.</p>
+<p>The <code>.vscode</code> folder contains a few display settings:
+wrapped text, no minimap or sticky headings, and readable Markdown
+maths. It recommends Copilot Chat. It contains no account details, paid
+model selection or changes to permissions. These are folder settings;
+they do not copy the lecturer’s personal profile.</p>
+<p>You can read the <a href="study-slides-skill.txt">skill</a>, <a href="study-coach-agent.txt">coach instructions</a> and <a href="slide-example-notes.txt">example notes</a>. Copilot needs internet
+access; the downloaded guide and prepared HTML example do not.</p>
+</details>
+<details>
+<summary>
+Can I use Quarto later?
+</summary>
+<p>Yes. Ask explicitly for Quarto if you want editable <code>.qmd</code>
+slides. Unlike this HTML exercise, rendering Quarto needs the Quarto
+application installed. Start with a plain theme and your own details. <a href="https://quarto.org/docs/presentations/revealjs/">Quarto
+presentations</a>.</p>
+<p>For current tool help, see VS Code’s <a href="https://code.visualstudio.com/docs/agent-customization/custom-agents">custom
+agents</a> and <a href="https://code.visualstudio.com/docs/agents/run/approvals">approval
+controls</a>.</p>
+</details>
+<script>
+document.querySelectorAll('blockquote').forEach((box, index) => {
+  const prompt = Array.from(box.querySelectorAll('p')).map(p => p.textContent.trim()).join('\n\n');
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.textContent = 'Copy prompt';
+  button.setAttribute('aria-label', 'Copy prompt ' + (index + 1));
+  const status = document.createElement('span');
+  status.className = 'copy-status';
+  status.setAttribute('role', 'status');
+  status.setAttribute('aria-live', 'polite');
+  const select = document.createElement('button');
+  select.type = 'button';
+  select.className = 'select-prompt';
+  select.textContent = 'Select text';
+  select.setAttribute('aria-label', 'Select prompt ' + (index + 1));
+  const selectPrompt = () => {
+    let area = box.querySelector('textarea.copy-fallback');
+    if (!area) {
+      area = document.createElement('textarea');
+      area.className = 'copy-fallback';
+      area.readOnly = true;
+      area.setAttribute('aria-label', 'Prompt to copy manually');
+      area.value = prompt;
+      box.append(area);
+    }
+    area.focus();
+    area.select();
+    status.textContent = 'Text selected. Press Ctrl+C (Windows) or Command+C (Mac), then paste into the chat.';
+  };
+  select.addEventListener('click', selectPrompt);
+  button.addEventListener('click', async () => {
+    try {
+      if (!navigator.clipboard || !window.isSecureContext) throw new Error('Manual copy');
+      await navigator.clipboard.writeText(prompt);
+      status.textContent = 'Copied. If pasting fails, use Select text.';
+    } catch (_) {
+      selectPrompt();
+    }
+  });
+  box.append(button, select, status);
+});
+</script>
+<nav aria-label="Course navigation"><p><strong>AI at university · Lesson 4 exercises</strong></p><p><a href="index.html">All lessons</a> · <a href="index.html#lesson-4">Lesson 4: video and resources</a> · <a href="https://davidchivers.co.uk/ai_install/">Install VS Code and Copilot</a></p></nav></main></body>
+</html>

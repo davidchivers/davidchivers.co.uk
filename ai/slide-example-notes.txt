@@ -27,7 +27,8 @@ Percentage growth = 100 * (current value / 2020 value - 1).
 
 Label the units and update the vertical scale when switching views: £0–£400 in
 pounds, 0–60% for growth. Both growth series start at zero percent. Keep the years
-and data unchanged. Show the complete pounds view initially. Use a short,
+and data unchanged. Show the complete pounds view initially. An instant switch
+is enough for the first version. If asked to add animation later, use a short,
 user-triggered transition with an instant alternative for reduced motion.
 These figures are invented spending, not inflation estimates or observed data.
 
