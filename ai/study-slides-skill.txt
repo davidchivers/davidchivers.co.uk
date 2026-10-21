@@ -10,7 +10,9 @@ is not required. Ask about a missing choice only when it affects the result.
 
 - Default to one self-contained HTML file in `outputs/`, with its CSS and any
   navigation script included. It should open directly in a browser without
-  installing anything. Use an original design without institutional logos or branding.
+  installing anything, running a server or fetching external libraries or assets.
+  Use the available file tools; do not introduce a build toolchain for this format.
+  Use an original design without institutional logos or branding.
   Do not copy the lecturer's Durham template or course examples. The supplied
   student showcase uses its own cream, teal and orange style.
 - Keep one clear point per slide and enough explanation for revision. Use
@@ -18,18 +20,27 @@ is not required. Ask about a missing choice only when it affects the result.
   descriptions and simple controls. When requested, use sliders, animated
   diagrams or staged explanations to explain the supplied topic. Keep a
   useful static version, keyboard controls and reduced-motion support. Avoid
-  autoplay; test the controls and the relationships they display.
+  autoplay; test the controls and the relationships they display. Start with a
+  working static view and simple controls; add animation only when requested.
 - Preserve assumptions, qualifications and source references. Check arithmetic
   and define symbols. Do not invent evidence or citations. Identify gaps in the
   notes; label any illustrative example you add.
 - Keep the editable file. Inspect the actual result for crowded text, missing
-  content and working navigation. Say which checks could not be run.
+  content and working navigation. If browser checking is unavailable, do not
+  install tools just to perform it: state the limitation and give two concrete
+  manual checks. Finish with a link to the output and a short explanation of how
+  to open it in a normal browser if the link opens source code in the editor.
 - For revisions, edit the source and recheck the changed slides. If Quarto is
   specifically requested, use a plain Reveal.js theme and save the `.qmd` too.
   Check that Quarto is available before promising a rendered presentation;
   otherwise explain the setup needed and offer standalone HTML.
 
 For the course example, `notes/slide-examples.md` supplies the spending series,
-synthetic score distributions, calculations and checked values. `reference/study-slides.html` is a prepared
-interactive showcase, not the student's generated output. Use it for inspiration;
-choose only features that help the explanation and match the learner's request.
+synthetic score distributions, calculations and checked values. Read the relevant
+section and build only the requested feature. No package installation or build
+tool is needed for the default HTML output.
+
+`reference/study-slides.html` is a prepared visual showcase, not a source template.
+Its large bundled presentation libraries are unnecessary for this exercise;
+do not read them to build a new slide. Open the showcase only when a visual
+comparison is useful. Check the student's generated file separately.
