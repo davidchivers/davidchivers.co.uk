@@ -128,3 +128,16 @@ This selected publication used the canonical project's
 It updates only the five HTML/PowerPoint pairs and their manifest records.
 The legacy PDFs were not selected or rebuilt; a full sync requiring current
 PDFs is therefore inappropriate for this revision.
+
+### PhD workshop slides, 23 October 2026
+
+The reviewed 43-slide workshop is published at the existing `ai-course.html`
+address, with its income/substitution interactive example alongside it. The
+opening now includes the silent Will Smith comparison, the revised LLM
+explanation and the earlier learning section. The single-slide tasks section
+was removed. The current PhD exercises are embedded in the slides.
+
+The canonical source is `E:/AI/teaching/ai_workshop/revealjs/`. This scoped
+publication copies only the two HTML files, adds noindex and retargets the
+interactive example's return link to `ai-course.html`. The manifest records
+source and published hashes. The videos stream from their existing hosts.

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en-GB"><head>
+<meta name="robots" content="noindex"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Income and substitution effects · Interactive example</title><style>:root{color-scheme:light;--ink:#173039;--teal:#08786e;--orange:#b65527;--paper:#fbfaf6;--line:#d8e1db}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.5 'Segoe UI',Arial,sans-serif;border-top:5px solid var(--teal)}
+main{max-width:1270px;margin:auto;padding:24px 28px 40px}a{color:var(--teal);text-underline-offset:3px}.topline{display:flex;justify-content:space-between;align-items:center;gap:15px;font-size:14px}.eyebrow{font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--teal)}
+h1{font-size:clamp(29px,3.5vw,43px);line-height:1.15;letter-spacing:-.035em;margin:17px 0 10px}header>p{margin:0 0 20px;max-width:900px;color:#496069}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:22px;align-items:start}
+.chart-card,.control-card{background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden}.chart-card{padding:18px 15px 8px}.model-line{font-size:14px;margin:0 8px 12px}.model-line strong{font-weight:650}.legend{display:flex;gap:10px 19px;flex-wrap:wrap;font-size:13px;margin:0 8px 9px}.legend span{display:flex;align-items:center;gap:7px}.legend i{display:inline-block;width:28px;border-top:3px solid}.legend .old{border-color:#728086;border-top-style:dashed}.legend .new{border-color:var(--teal)}.legend .comp{border-color:var(--orange);border-top-style:dashed}
+#diagram{display:block;width:100%;height:auto;overflow:visible}.grid path{stroke:#e7ece8;stroke-width:1;fill:none}.ticks{font-size:19px;fill:#53666c}.axis{fill:none;stroke:#53666c;stroke-width:1.7}.axis-label{font-size:21px;fill:var(--ink)}.budget{fill:none;stroke-width:3}.original-budget{stroke:#728086;stroke-dasharray:9 6}.new-budget{stroke:var(--teal)}.compensated-budget{stroke:var(--orange);stroke-dasharray:5 5}.utility{fill:none;stroke-width:1.8}.original-utility{stroke:#647482;stroke-dasharray:2 4}.new-utility{stroke:#73a79f;stroke-dasharray:2 4}.effect{fill:none;stroke-width:3.2}.sub-effect{stroke:var(--orange)}.inc-effect{stroke:var(--teal)}.point-label{font-size:23px;font-weight:700;paint-order:stroke;stroke:white;stroke-width:5;stroke-linejoin:round}.stage-hidden,[hidden]{display:none!important}.curve-note{font-size:13px;margin:3px 8px 7px;color:#53666c}
+.control-card{padding:20px}label{display:block;font-size:17px;font-weight:650}output{float:right;font-size:24px;color:var(--teal);line-height:1.1}input[type=range]{width:100%;height:36px;accent-color:var(--teal);margin:8px 0 0;cursor:pointer}.range-labels{display:flex;justify-content:space-between;font-size:12px;color:#53666c}.preset-row{display:flex;gap:8px;margin:12px 0 19px;flex-wrap:wrap}button{font:inherit;cursor:pointer;color:var(--teal);border:1px solid #a5c0b7;border-radius:6px;background:#fff;padding:8px 11px;line-height:1.3}.preset-row button,#reset{font-size:13px}.control-heading{font-size:14px;font-weight:650;margin:0 0 9px}.stages{display:grid;grid-template-columns:1fr 1fr;gap:8px}.stages button{font-size:14px;text-align:left;min-height:44px}.stages button[aria-pressed=true]{background:var(--teal);color:white;border-color:var(--teal)}#reset{width:100%;margin-top:11px}.static-note{font-size:15px;background:#e8f1ec;padding:12px;margin-top:0}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:20px;font-variant-numeric:tabular-nums}caption{text-align:left;font-weight:650;font-size:13px;margin-bottom:8px}th,td{padding:8px 3px;border-bottom:1px solid #e6eae7}th{text-align:left;font-weight:500}td,thead th:not(:first-child){text-align:right}thead{color:#53666c;font-size:12px}.badge{display:inline-flex;width:22px;height:22px;align-items:center;justify-content:center;color:white;border-radius:50%;margin-right:5px;font-weight:700;font-size:12px}.badge.a{background:#42575c}.badge.b{background:var(--orange)}.badge.c{background:var(--teal);border-radius:3px}
+.explanation{margin:19px 0 14px;padding:16px 20px;background:#e8f1ec;border-left:4px solid var(--teal);border-radius:0 8px 8px 0}.explanation h2{font-size:19px;margin:0 0 6px}.explanation p{margin:0;font-size:16px;max-width:1100px}.effects{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.effect-card{background:white;border:1px solid var(--line);border-radius:8px;padding:13px 18px}.effect-card>span{display:block;font-size:14px;font-weight:650}.effect-card strong{display:block;font-size:30px;font-variant-numeric:tabular-nums;line-height:1.4;color:var(--orange)}.effect-card:nth-child(2) strong{color:var(--teal)}.effect-card.total strong{color:var(--ink)}.effect-card small{display:block;font-size:12px;color:#53666c}.unrevealed{background:#f2f3f0}
+details{margin-top:20px;border-top:1px solid var(--line);padding:15px 0 0}summary{cursor:pointer;font-weight:650;color:var(--teal)}.model-details{max-width:1000px;font-size:15px}.model-details p{margin:13px 0}.formula{font-family:Cambria,'Times New Roman',serif;font-size:19px}.model-details a{font-size:14px}.footer{font-size:13px;margin-top:24px;color:#53666c}:is(button,input,summary,a):focus-visible{outline:3px solid var(--orange);outline-offset:4px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+@media(max-width:850px){.workspace{grid-template-columns:1fr}.control-card{display:grid;grid-template-columns:1fr 1fr;gap:22px}table{margin-top:0}.topline{align-items:start}.effects{gap:8px}.effect-card{padding:12px}.chart-card{padding:12px 5px}}
+@media(max-width:520px){main{padding:18px 15px 28px}.topline{font-size:12px}.control-card{display:block}table{margin-top:18px}.effects{grid-template-columns:1fr}.effect-card{display:grid;grid-template-columns:1fr auto;align-items:center}.effect-card small{grid-column:1/-1}.legend{font-size:11px;gap:7px 12px}.model-line{font-size:12px}.curve-note{font-size:12px}.explanation{padding:14px}.explanation p{font-size:15px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{body{border:0;background:#fff}main{max-width:none;padding:0}.topline a,#controls{display:none!important}.workspace{grid-template-columns:1fr 240px;gap:14px}.control-card{padding:10px}.chart-card,.effect-card{break-inside:avoid}.explanation{break-inside:avoid}.model-details{display:block!important}details{break-inside:avoid}.footer{margin:12px 0}.effects{gap:8px}}
+</style></head>
+<body><main>
+<header><div class="topline"><span class="eyebrow">Explore an economics model</span><a href="ai-course.html#/learn-by-experimenting">← Back to the lesson</a></div>
+<h1>One price change. Two effects.</h1><p>Change the price of X. Predict the response, then separate the change in relative prices from the change in purchasing power.</p></header>
+<div class="workspace">
+  <section class="chart-card" aria-label="Budget lines and consumption choices">
+    <p class="model-line"><strong>Illustrative model:</strong> U(x, y) = √(xy) · Income £12 · Price of Y £1 · Original price of X £2</p>
+    <div class="legend" aria-label="Budget line legend"><span><i class="old"></i>Original budget</span><span><i class="new"></i>New budget</span><span><i class="comp"></i>Compensated budget</span></div>
+    <div id="chart"><svg id="diagram" viewBox="0 0 900 510" role="img" aria-labelledby="diagram-title diagram-desc">
+      <title id="diagram-title">Income and substitution effects: new price of X £1.00</title>
+      <desc id="diagram-desc">X on the horizontal axis and Y on the vertical axis, both from zero to fourteen. A is the original bundle (3.00, 6.00). B is the Hicksian compensated bundle (4.24, 4.24), at the original utility. C is the new bundle (6.00, 6.00) with the original £12 income.  Visible stage: all. The table below gives the same values.</desc>
+      <defs><clipPath id="plot-clip"><rect x="68" y="32" width="794" height="412"/></clipPath>
+      <marker id="sub-arrow" viewBox="0 0 7 7" markerUnits="userSpaceOnUse" markerWidth="22.4" markerHeight="22.4" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7Z" fill="#b65527"/></marker>
+      <marker id="inc-arrow" viewBox="0 0 7 7" markerUnits="userSpaceOnUse" markerWidth="22.4" markerHeight="22.4" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7Z" fill="#08786e"/></marker></defs>
+      <g class="grid"><path d="M68,32V444 M68,444H862"/><path d="M181.42857142857142,32V444 M68,385.14285714285717H862"/><path d="M294.85714285714283,32V444 M68,326.2857142857143H862"/><path d="M408.2857142857143,32V444 M68,267.42857142857144H862"/><path d="M521.7142857142857,32V444 M68,208.57142857142858H862"/><path d="M635.1428571428571,32V444 M68,149.71428571428572H862"/><path d="M748.5714285714286,32V444 M68,90.85714285714289H862"/><path d="M862,32V444 M68,32H862"/></g><g class="ticks"><text x="68" y="470" text-anchor="middle">0</text><text x="54" y="450" text-anchor="end">0</text><text x="181.42857142857142" y="470" text-anchor="middle">2</text><text x="54" y="391.14285714285717" text-anchor="end">2</text><text x="294.85714285714283" y="470" text-anchor="middle">4</text><text x="54" y="332.2857142857143" text-anchor="end">4</text><text x="408.2857142857143" y="470" text-anchor="middle">6</text><text x="54" y="273.42857142857144" text-anchor="end">6</text><text x="521.7142857142857" y="470" text-anchor="middle">8</text><text x="54" y="214.57142857142858" text-anchor="end">8</text><text x="635.1428571428571" y="470" text-anchor="middle">10</text><text x="54" y="155.71428571428572" text-anchor="end">10</text><text x="748.5714285714286" y="470" text-anchor="middle">12</text><text x="54" y="96.85714285714289" text-anchor="end">12</text><text x="862" y="470" text-anchor="middle">14</text><text x="54" y="38" text-anchor="end">14</text></g>
+      <path class="axis" d="M68,32V444H862"/>
+      <text class="axis-label" x="465" y="497" text-anchor="middle">Good X (units)</text>
+      <text class="axis-label" transform="translate(20,238) rotate(-90)" text-anchor="middle">Good Y (units)</text>
+      <g clip-path="url(#plot-clip)">
+        <path class="utility original-utility" d="M140.918,32.000 L144.924,53.456 L148.930,72.788 L152.936,90.296 L156.942,106.227 L160.948,120.785 L164.954,134.139 L168.960,146.434 L172.966,157.791 L176.972,168.312 L180.978,178.088 L184.984,187.194 L188.990,195.696 L192.996,203.654 L197.002,211.118 L201.009,218.132 L205.015,224.736 L209.021,230.965 L213.027,236.849 L217.033,242.417 L221.039,247.694 L225.045,252.702 L229.051,257.460 L233.057,261.987 L237.063,266.300 L241.069,270.414 L245.075,274.341 L249.081,278.094 L253.087,281.685 L257.093,285.124 L261.099,288.420 L265.105,291.582 L269.111,294.618 L273.117,297.535 L277.123,300.341 L281.129,303.041 L285.135,305.642 L289.141,308.148 L293.147,310.565 L297.153,312.898 L301.159,315.151 L305.165,317.327 L309.171,319.431 L313.177,321.466 L317.183,323.436 L321.189,325.344 L325.195,327.192 L329.201,328.984 L333.207,330.721 L337.213,332.407 L341.219,334.043 L345.225,335.632 L349.231,337.175 L353.237,338.676 L357.243,340.134 L361.249,341.553 L365.255,342.934 L369.261,344.278 L373.267,345.587 L377.273,346.861 L381.279,348.103 L385.285,349.314 L389.291,350.495 L393.297,351.646 L397.303,352.770 L401.309,353.866 L405.315,354.937 L409.321,355.982 L413.327,357.003 L417.333,358.001 L421.339,358.976 L425.345,359.929 L429.351,360.861 L433.357,361.773 L437.363,362.664 L441.369,363.537 L445.375,364.391 L449.381,365.227 L453.387,366.046 L457.393,366.848 L461.399,367.634 L465.405,368.404 L469.411,369.158 L473.417,369.898 L477.423,370.623 L481.429,371.334 L485.435,372.031 L489.441,372.715 L493.447,373.386 L497.453,374.045 L501.459,374.692 L505.465,375.326 L509.471,375.949 L513.477,376.561 L517.483,377.162 L521.489,377.753 L525.495,378.333 L529.501,378.903 L533.507,379.463 L537.513,380.014 L541.519,380.555 L545.525,381.087 L549.531,381.611 L553.537,382.126 L557.543,382.632 L561.549,383.130 L565.555,383.620 L569.561,384.102 L573.567,384.577 L577.573,385.044 L581.579,385.504 L585.585,385.957 L589.591,386.402 L593.597,386.841 L597.603,387.274 L601.609,387.700 L605.615,388.119 L609.621,388.533 L613.627,388.940 L617.633,389.341 L621.639,389.737 L625.645,390.126 L629.651,390.511 L633.657,390.889 L637.663,391.263 L641.670,391.631 L645.676,391.994 L649.682,392.353 L653.688,392.706 L657.694,393.054 L661.700,393.398 L665.706,393.737 L669.712,394.072 L673.718,394.402 L677.724,394.728 L681.730,395.050 L685.736,395.367 L689.742,395.680 L693.748,395.990 L697.754,396.295 L701.760,396.597 L705.766,396.894 L709.772,397.188 L713.778,397.479 L717.784,397.766 L721.790,398.049 L725.796,398.329 L729.802,398.605 L733.808,398.878 L737.814,399.148 L741.820,399.415 L745.826,399.678 L749.832,399.939 L753.838,400.196 L757.844,400.450 L761.850,400.702 L765.856,400.950 L769.862,401.196 L773.868,401.439 L777.874,401.679 L781.880,401.917 L785.886,402.152 L789.892,402.384 L793.898,402.614 L797.904,402.841 L801.910,403.065 L805.916,403.288 L809.922,403.507 L813.928,403.725 L817.934,403.940 L821.940,404.153 L825.946,404.363 L829.952,404.572 L833.958,404.778 L837.964,404.982 L841.970,405.184 L845.976,405.384 L849.982,405.582 L853.988,405.778 L857.994,405.971 L862.000,406.163"/>
+        <path class="utility new-utility" d="M213.837,32.000 L217.438,41.928 L221.039,51.388 L224.639,60.414 L228.240,69.034 L231.841,77.275 L235.442,85.161 L239.043,92.716 L242.644,99.959 L246.245,106.909 L249.846,113.584 L253.447,120.000 L257.048,126.171 L260.649,132.112 L264.249,137.835 L267.850,143.351 L271.451,148.673 L275.052,153.809 L278.653,158.769 L282.254,163.563 L285.855,168.198 L289.456,172.683 L293.057,177.024 L296.658,181.228 L300.259,185.302 L303.859,189.252 L307.460,193.083 L311.061,196.800 L314.662,200.409 L318.263,203.914 L321.864,207.319 L325.465,210.629 L329.066,213.848 L332.667,216.980 L336.268,220.027 L339.868,222.993 L343.469,225.882 L347.070,228.697 L350.671,231.439 L354.272,234.113 L357.873,236.720 L361.474,239.264 L365.075,241.745 L368.676,244.168 L372.277,246.533 L375.878,248.842 L379.478,251.098 L383.079,253.303 L386.680,255.458 L390.281,257.564 L393.882,259.624 L397.483,261.639 L401.084,263.611 L404.685,265.540 L408.286,267.429 L411.887,269.277 L415.488,271.088 L419.088,272.862 L422.689,274.599 L426.290,276.302 L429.891,277.970 L433.492,279.606 L437.093,281.210 L440.694,282.783 L444.295,284.325 L447.896,285.839 L451.497,287.324 L455.098,288.781 L458.698,290.212 L462.299,291.616 L465.900,292.995 L469.501,294.350 L473.102,295.680 L476.703,296.987 L480.304,298.271 L483.905,299.532 L487.506,300.773 L491.107,301.991 L494.707,303.190 L498.308,304.368 L501.909,305.527 L505.510,306.667 L509.111,307.788 L512.712,308.891 L516.313,309.976 L519.914,311.044 L523.515,312.095 L527.116,313.129 L530.717,314.148 L534.317,315.151 L537.918,316.138 L541.519,317.110 L545.120,318.068 L548.721,319.011 L552.322,319.941 L555.923,320.856 L559.524,321.758 L563.125,322.647 L566.726,323.523 L570.327,324.387 L573.927,325.238 L577.528,326.078 L581.129,326.905 L584.730,327.721 L588.331,328.526 L591.932,329.320 L595.533,330.102 L599.134,330.875 L602.735,331.636 L606.336,332.388 L609.937,333.130 L613.537,333.861 L617.138,334.584 L620.739,335.296 L624.340,336.000 L627.941,336.695 L631.542,337.380 L635.143,338.057 L638.744,338.726 L642.345,339.386 L645.946,340.037 L649.546,340.681 L653.147,341.317 L656.748,341.945 L660.349,342.565 L663.950,343.178 L667.551,343.784 L671.152,344.382 L674.753,344.973 L678.354,345.558 L681.955,346.135 L685.556,346.706 L689.156,347.270 L692.757,347.827 L696.358,348.378 L699.959,348.923 L703.560,349.462 L707.161,349.994 L710.762,350.521 L714.363,351.042 L717.964,351.557 L721.565,352.066 L725.166,352.570 L728.766,353.068 L732.367,353.561 L735.968,354.049 L739.569,354.531 L743.170,355.008 L746.771,355.480 L750.372,355.947 L753.973,356.409 L757.574,356.867 L761.175,357.319 L764.776,357.767 L768.376,358.211 L771.977,358.650 L775.578,359.084 L779.179,359.514 L782.780,359.940 L786.381,360.361 L789.982,360.778 L793.583,361.191 L797.184,361.600 L800.785,362.005 L804.385,362.406 L807.986,362.803 L811.587,363.196 L815.188,363.586 L818.789,363.971 L822.390,364.353 L825.991,364.732 L829.592,365.106 L833.193,365.478 L836.794,365.845 L840.395,366.210 L843.995,366.571 L847.596,366.928 L851.197,367.283 L854.798,367.634 L858.399,367.982 L862.000,368.327"/>
+        <path class="budget original-budget" d="M68.000,90.857 L408.286,444.000"/>
+        <path class="budget new-budget" d="M68.000,90.857 L748.571,444.000"/>
+        <path class="budget compensated-budget" d="M68.000,194.290 L549.237,444.000"/>
+        <path class="effect sub-effect" d="M248.009,277.107 L249.654,278.618 L251.298,280.101 L252.943,281.559 L254.587,282.990 L256.232,284.397 L257.876,285.779 L259.520,287.138 L261.165,288.473 L262.809,289.786 L264.454,291.077 L266.098,292.346 L267.743,293.595 L269.387,294.823 L271.031,296.031 L272.676,297.220 L274.320,298.390 L275.965,299.541 L277.609,300.674 L279.254,301.790 L280.898,302.888 L282.542,303.970 L284.187,305.035 L285.831,306.084 L287.476,307.118 L289.120,308.136 L290.765,309.138 L292.409,310.127 L294.053,311.101 L295.698,312.060 L297.342,313.006" marker-end="url(#sub-arrow)"/>
+        <path class="effect inc-effect" d="M322.572,311.905 L392.339,275.703" marker-end="url(#inc-arrow)"/>
+      </g>
+      <circle cx="238.14285714285714" cy="267.42857142857144" r="6.5" fill="#42575c"/><text class="point-label" x="213.14285714285714" y="252.42857142857144" fill="#42575c">A</text><g class=""><path d="M308.6183361123366,311.1451454933468l8,8 -8,8 -8,-8Z" fill="#b65527"/><text class="point-label" x="323.6183361123366" y="347.1451454933468" fill="#b65527">B</text></g><g class=""><rect x="402.2857142857143" y="261.42857142857144" width="12" height="12" fill="#08786e"/><text class="point-label" x="425.2857142857143" y="252.42857142857144" fill="#08786e">C</text></g>
+    </svg></div><p class="curve-note">Fine dotted curves show utility levels: the original through A and B, the new through C. Axes stay fixed.</p>
+  </section>
+  <aside class="control-card" aria-label="Explore the example">
+    <div id="controls" hidden>
+      <label for="price">New price of X <output id="price-value" for="price">£1.00</output></label>
+      <input id="price" type="range" min="1" max="4" step="0.1" value="1" aria-describedby="price-help">
+      <div class="range-labels" id="price-help"><span>£1</span><span>Original: £2</span><span>£4</span></div>
+      <div class="preset-row"><button type="button" data-price="2">No change (£2)</button><button type="button" data-price="3">Price rise (£3)</button></div>
+      <p class="control-heading">Explore the decomposition</p>
+      <div class="stages" role="group" aria-label="Diagram stage">
+        <button type="button" data-stage="price" aria-pressed="false">1 · Price change</button>
+        <button type="button" data-stage="substitution" aria-pressed="false">2 · Substitution</button>
+        <button type="button" data-stage="income" aria-pressed="false">3 · Income</button>
+        <button type="button" data-stage="all" aria-pressed="true">All together</button>
+      </div><button id="reset" type="button">Reset example</button>
+    </div>
+    <p id="static-note" class="static-note">Static example: the price of X falls from £2 to £1. Enable JavaScript to change the price and explore the steps.</p>
+    <div id="bundles"><table><caption>Chosen bundles · units of X and Y</caption><thead><tr><th scope="col">Choice</th><th scope="col">X</th><th scope="col">Y</th></tr></thead><tbody>
+      <tr><th scope="row"><span class="badge a">A</span> Original</th><td>3.00</td><td>6.00</td></tr>
+      <tr class=""><th scope="row"><span class="badge b">B</span> Compensated</th><td>4.24</td><td>4.24</td></tr>
+      <tr class=""><th scope="row"><span class="badge c">C</span> New</th><td>6.00</td><td>6.00</td></tr></tbody></table></div>
+  </aside>
+</div>
+<section class="explanation" aria-labelledby="explanation-heading"><h2 id="explanation-heading">One price change, two effects</h2><p id="explanation-text">A → B changes relative prices while holding original utility fixed. B → C returns income to £12 at the new prices. Together they give A → C.</p></section>
+<section id="effects" class="effects" aria-label="Changes in the quantity of X"><div class="effect-card"><span>Substitution · A → B</span><strong>+1.24</strong><small>units of X · original utility held fixed</small></div>
+      <div class="effect-card"><span>Income · B → C</span><strong>+1.76</strong><small>units of X · new prices held fixed</small></div>
+      <div class="effect-card total"><span>Total · A → C</span><strong>+3.00</strong><small>units of X · substitution + income</small></div></section>
+<p id="live-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+<details><summary>Model, assumptions and calculations</summary><div class="model-details">
+<p>This is a two-good Cobb–Douglas illustration, with positive quantities, a fixed £12 income and a fixed £1 price for Y. It uses <strong>Hicksian compensation</strong>: B faces the new prices but reaches exactly the original utility. B is a hypothetical comparison; actual income stays £12.</p>
+<p>The initial choice is A = (3, 6), with utility √18. Writing <i>p</i> for the new price of X, the compensated choice is <span class="formula">B = (√(18/p), √(18p))</span>, requiring income <span class="formula">2√(18p)</span>. The final choice is <span class="formula">C = (6/p, 6)</span>.</p>
+<p>Substitution in X is <span class="formula">x<sub>B</sub> − x<sub>A</sub></span>; income is <span class="formula">x<sub>C</sub> − x<sub>B</sub></span>. They add to the total, <span class="formula">x<sub>C</sub> − x<sub>A</sub></span>. Calculations use full precision; displayed values are rounded.</p>
+<p><strong>Why does Y finish at 6?</strong> These preferences allocate half the budget to each good. With income and the price of Y fixed, the final quantity of Y stays at 6. Its substitution and income effects offset. That is a feature of this example, not a general prediction for all preferences. Both goods here are normal; the model does not show inferior or Giffen goods.</p>
+<p>The stages separate two economic effects, not a claim that people literally make these choices in sequence. Slutsky compensation uses a different finite-change comparison: making the original bundle affordable. Follow the convention in your course.</p>
+<p><a href="https://ocw.mit.edu/courses/14-471-public-economics-i-fall-2012/ef094c3b690e4da7ca2a590f0ee45f64_MIT14_471F12_recnotes1.pdf" target="_blank" rel="noopener">Background: MIT notes on Hicksian demand and compensation ↗</a></p>
+</div></details>
+<p class="footer">Illustrative economics example · Made with AI and checked against the stated model.</p>
+</main><script>/* Pure economics and plot geometry, shared by the static build and the browser. */
+const IncomeModel = (() => {
+  const M = 12, PY = 1, P0 = 2, U0 = Math.sqrt(18);
+  const plot = {left: 68, right: 862, top: 32, bottom: 444, max: 14};
+  const sx = x => plot.left + x / plot.max * (plot.right - plot.left);
+  const sy = y => plot.bottom - y / plot.max * (plot.bottom - plot.top);
+  function solve(p) {
+    if (!Number.isFinite(p) || p < 1 || p > 4) throw new RangeError('Price must be between 1 and 4.');
+    const a = {x: M / (2 * P0), y: M / (2 * PY)};
+    const b = {x: U0 * Math.sqrt(PY / p), y: U0 * Math.sqrt(p / PY)};
+    const c = {x: M / (2 * p), y: M / (2 * PY)};
+    const compensatedIncome = p * b.x + PY * b.y;
+    return {p, a, b, c, compensatedIncome, u0: U0, u1: Math.sqrt(c.x * c.y),
+      substitution: b.x - a.x, income: c.x - b.x, total: c.x - a.x,
+      unchanged: Math.abs(p - P0) < 1e-9};
+  }
+  function path(points) { return points.map(([x,y],i) => `${i?'L':'M'}${sx(x).toFixed(3)},${sy(y).toFixed(3)}`).join(' '); }
+  function budget(p, income) {
+    const x0 = Math.max(0, (income - plot.max * PY) / p);
+    const x1 = Math.min(plot.max, income / p);
+    return path([[x0,(income-p*x0)/PY],[x1,(income-p*x1)/PY]]);
+  }
+  function curve(u) {
+    const start = Math.max(.05, u*u / plot.max);
+    return path(Array.from({length:181},(_,i) => { const x=start+(plot.max-start)*i/180; return [x,u*u/x]; }));
+  }
+  function substitutionArrow(s) {
+    return path(Array.from({length:31},(_,i) => {const t=.14+.7*i/30, x=s.a.x+(s.b.x-s.a.x)*t; return [x,s.u0*s.u0/x];}));
+  }
+  function incomeArrow(s) {
+    return path([.14,.84].map(t=>[s.b.x+(s.c.x-s.b.x)*t,s.b.y+(s.c.y-s.b.y)*t]));
+  }
+  return {M,PY,P0,U0,plot,sx,sy,solve,path,budget,curve,substitutionArrow,incomeArrow};
+})();
+if (typeof module === 'object' && module.exports) module.exports = IncomeModel;
+
+const IncomeView = (() => {
+  const m = typeof module === 'object' && module.exports ? require('./model.js') : IncomeModel;
+  const f = n => Math.abs(n) < .00001 ? '0.00' : n.toFixed(2);
+  const signed = n => (n > .00001 ? '+' : '') + f(n);
+  const active = (stage, allowed) => stage === 'all' || allowed.includes(stage);
+  const cls = (stage, allowed) => active(stage,allowed) ? '' : ' stage-hidden';
+  function point(p,label,color,dx,dy,shape='circle') {
+    const x=m.sx(p.x), y=m.sy(p.y);
+    let mark=shape==='square' ? `<rect x="${x-6}" y="${y-6}" width="12" height="12" fill="${color}"/>` :
+      shape==='diamond' ? `<path d="M${x},${y-8}l8,8 -8,8 -8,-8Z" fill="${color}"/>` : `<circle cx="${x}" cy="${y}" r="6.5" fill="${color}"/>`;
+    return `${mark}<text class="point-label" x="${x+dx}" y="${y+dy}" fill="${color}">${label}</text>`;
+  }
+  function chart(s,stage='all') {
+    let grid='', ticks='';
+    for(let v=0;v<=14;v+=2) {
+      grid+=`<path d="M${m.sx(v)},${m.plot.top}V${m.plot.bottom} M${m.plot.left},${m.sy(v)}H${m.plot.right}"/>`;
+      ticks+=`<text x="${m.sx(v)}" y="${m.plot.bottom+26}" text-anchor="middle">${v}</text><text x="${m.plot.left-14}" y="${m.sy(v)+6}" text-anchor="end">${v}</text>`;
+    }
+    const same=s.unchanged;
+    const rising=s.p>m.P0;
+    const arrowSize=(a,b)=>Math.min(22.4,.35*Math.hypot(m.sx(a.x)-m.sx(b.x),m.sy(a.y)-m.sy(b.y)));
+    const bundleDescription=same?'All three bundles coincide at A = B = C (3.00, 6.00).':
+      `A is the original bundle (${f(s.a.x)}, ${f(s.a.y)}). `+
+      (active(stage,['substitution','income'])?`B is the Hicksian compensated bundle (${f(s.b.x)}, ${f(s.b.y)}), at the original utility. `:'')+
+      (active(stage,['price','income'])?`C is the new bundle (${f(s.c.x)}, ${f(s.c.y)}) with the original £12 income. `:'');
+    return `<svg id="diagram" viewBox="0 0 900 510" role="img" aria-labelledby="diagram-title diagram-desc">
+      <title id="diagram-title">Income and substitution effects: new price of X £${f(s.p)}</title>
+      <desc id="diagram-desc">X on the horizontal axis and Y on the vertical axis, both from zero to fourteen. ${bundleDescription} Visible stage: ${stage}. The table below gives the same values.</desc>
+      <defs><clipPath id="plot-clip"><rect x="68" y="32" width="794" height="412"/></clipPath>
+      <marker id="sub-arrow" viewBox="0 0 7 7" markerUnits="userSpaceOnUse" markerWidth="${arrowSize(s.a,s.b)}" markerHeight="${arrowSize(s.a,s.b)}" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7Z" fill="#b65527"/></marker>
+      <marker id="inc-arrow" viewBox="0 0 7 7" markerUnits="userSpaceOnUse" markerWidth="${arrowSize(s.b,s.c)}" markerHeight="${arrowSize(s.b,s.c)}" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7Z" fill="#08786e"/></marker></defs>
+      <g class="grid">${grid}</g><g class="ticks">${ticks}</g>
+      <path class="axis" d="M68,32V444H862"/>
+      <text class="axis-label" x="465" y="497" text-anchor="middle">Good X (units)</text>
+      <text class="axis-label" transform="translate(20,238) rotate(-90)" text-anchor="middle">Good Y (units)</text>
+      <g clip-path="url(#plot-clip)">
+        <path class="utility original-utility" d="${m.curve(s.u0)}"/>
+        <path class="utility new-utility${cls(stage,['price','income'])}${same?' stage-hidden':''}" d="${m.curve(s.u1)}"/>
+        <path class="budget original-budget" d="${m.budget(m.P0,m.M)}"/>
+        <path class="budget new-budget" d="${m.budget(s.p,m.M)}"/>
+        <path class="budget compensated-budget${cls(stage,['substitution','income'])}${same?' stage-hidden':''}" d="${m.budget(s.p,s.compensatedIncome)}"/>
+        <path class="effect sub-effect${cls(stage,['substitution'])}${same?' stage-hidden':''}" d="${m.substitutionArrow(s)}" marker-end="url(#sub-arrow)"/>
+        <path class="effect inc-effect${cls(stage,['income'])}${same?' stage-hidden':''}" d="${m.incomeArrow(s)}" marker-end="url(#inc-arrow)"/>
+      </g>
+      ${same?point(s.a,'A = B = C','#263f46',16,-16):
+        point(s.a,'A','#42575c',rising?17:-25,rising?28:-15)+
+        `<g class="${cls(stage,['substitution','income'])}">${point(s.b,'B','#b65527',15,rising?-18:28,'diamond')}</g>`+
+        `<g class="${cls(stage,['price','income'])}">${point(s.c,'C','#08786e',rising?-30:17,-15,'square')}</g>`}
+    </svg>`;
+  }
+  function explanation(s,stage) {
+    if(s.unchanged) return {heading:'No price change',text:'The price is still £2. All three choices coincide at A = B = C, so both effects are zero.'};
+    const direction=s.p<2?'falls':'rises';
+    if(stage==='price') return {heading:`1 · The price of X ${direction}`,text:`The budget line pivots around the unchanged Y intercept. Income stays £12. The choice moves from A to C: the total change in X is ${signed(s.total)} units.`};
+    if(stage==='substitution') return {heading:'2 · Hold the original utility fixed',text:`At the new prices, the dashed orange budget is tangent to the original indifference curve at B. It uses £${f(s.compensatedIncome)} of hypothetical income. A → B is the substitution effect.`};
+    if(stage==='income') return {heading:'3 · Return to the actual £12 income',text:`B and C face the same new prices. Move from the hypothetical £${f(s.compensatedIncome)} budget to the actual £12 budget. The parallel shift gives the income effect, B → C.`};
+    return {heading:'One price change, two effects',text:`A → B changes relative prices while holding original utility fixed. B → C returns income to £12 at the new prices. Together they give A → C.`};
+  }
+  function table(s,stage='all') {
+    return `<table><caption>Chosen bundles · units of X and Y</caption><thead><tr><th scope="col">Choice</th><th scope="col">X</th><th scope="col">Y</th></tr></thead><tbody>
+      <tr><th scope="row"><span class="badge a">A</span> Original</th><td>${f(s.a.x)}</td><td>${f(s.a.y)}</td></tr>
+      <tr class="${cls(stage,['substitution','income'])}"><th scope="row"><span class="badge b">B</span> Compensated</th><td>${f(s.b.x)}</td><td>${f(s.b.y)}</td></tr>
+      <tr class="${cls(stage,['price','income'])}"><th scope="row"><span class="badge c">C</span> New</th><td>${f(s.c.x)}</td><td>${f(s.c.y)}</td></tr></tbody></table>`;
+  }
+  function effects(s,stage='all') {
+    return `<div class="effect-card${active(stage,['substitution'])?'':' unrevealed'}"><span>Substitution · A → B</span><strong>${active(stage,['substitution'])?signed(s.substitution):'—'}</strong><small>units of X · original utility held fixed</small></div>
+      <div class="effect-card${active(stage,['income'])?'':' unrevealed'}"><span>Income · B → C</span><strong>${active(stage,['income'])?signed(s.income):'—'}</strong><small>units of X · new prices held fixed</small></div>
+      <div class="effect-card total"><span>Total · A → C</span><strong>${signed(s.total)}</strong><small>units of X · substitution + income</small></div>`;
+  }
+  return {f,signed,chart,table,effects,explanation};
+})();
+if (typeof module === 'object' && module.exports) module.exports = IncomeView;
+
+(() => {
+  const price=document.getElementById('price');
+  const buttons=[...document.querySelectorAll('[data-stage]')];
+  let stage='all', savedStage=null;
+  function render(announce=false) {
+    const state=IncomeModel.solve(Number(price.value));
+    const copy=IncomeView.explanation(state,stage);
+    document.getElementById('price-value').textContent='£'+IncomeView.f(state.p);
+    price.setAttribute('aria-valuetext','£'+IncomeView.f(state.p)+' per unit of X; original price £2');
+    document.getElementById('chart').innerHTML=IncomeView.chart(state,stage);
+    document.getElementById('bundles').innerHTML=IncomeView.table(state,stage);
+    document.getElementById('effects').innerHTML=IncomeView.effects(state,stage);
+    document.getElementById('explanation-heading').textContent=copy.heading;
+    document.getElementById('explanation-text').textContent=copy.text;
+    buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.stage===stage)));
+    if(announce) document.getElementById('live-status').textContent=`Price of X £${IncomeView.f(state.p)}. ${copy.heading}. Total change in X ${IncomeView.signed(state.total)} units.`;
+  }
+  price.addEventListener('input',()=>render());
+  price.addEventListener('change',()=>render(true));
+  buttons.forEach(b=>b.addEventListener('click',()=>{stage=b.dataset.stage;render(true);}));
+  document.querySelectorAll('[data-price]').forEach(b=>b.addEventListener('click',()=>{price.value=b.dataset.price;render(true);}));
+  document.getElementById('reset').addEventListener('click',()=>{stage='all';price.value='1';render(true);});
+  window.addEventListener('beforeprint',()=>{savedStage=stage;stage='all';render();});
+  window.addEventListener('afterprint',()=>{if(savedStage!==null){stage=savedStage;savedStage=null;render();}});
+  render();
+  document.getElementById('controls').hidden=false;
+  document.getElementById('static-note').hidden=true;
+})();
+</script></body></html>
