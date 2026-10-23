@@ -4,7 +4,7 @@ This file is the quick orientation note for the public website repo.
 
 ## Repo
 
-- Local repo: `C:\Users\Dave_\OneDrive\Documents\GitHub\davidchivers.co.uk`
+- Shared local repo: `E:\AI\other\davidchivers_site` (preserve local changes; publish from a separate clean checkout)
 - Remote: `https://github.com/davidchivers/davidchivers.co.uk.git`
 - Branch: `main`
 
@@ -20,6 +20,8 @@ Confirmed from the local repo contents:
 - `/results.html`
 - `/alcohol.html`
 - `/ai_install/`
+- `/ai/` - student AI course
+- `/teaching/ai-course.html` - PhD AI workshop
 - `/countdown/`
 - `/drafter/`
 - `/email_app/`
@@ -44,27 +46,22 @@ This repo is now the intended source for the root `davidchivers.co.uk` site and 
 To avoid confusion:
 
 - Canonical working source for the drafter lives in the AI workspace:
-  - `C:\Users\Dave_\AI\other\email_app\email_drafter\`
+  - `E:\AI\other\email_app\email_drafter\`
 - This website repo is the publish target copy for the public site:
-  - `C:\Users\Dave_\OneDrive\Documents\GitHub\davidchivers.co.uk\drafter\`
+  - `E:\AI\other\davidchivers_site\drafter\`
 
 Recommended rule:
 
 - Edit the drafter in `other/email_app/email_drafter`
 - Mirror approved files into this repo when publishing
 
-## Legacy Repo
+## Single publishing repository
 
-- Legacy migration source:
+David's instruction on 23 October 2026 is to use only this repository for future publication. Do not push updates or create mirror pull requests in `thomshutt/davidchivers`. Earlier guidance to use it as a temporary publishing bridge is superseded.
 
-- `C:\Users\Dave_\AI\_playground\sandbox_repos\davidchivers_site`
-- remote `https://github.com/thomshutt/davidchivers.git`
+One hosting prerequisite remains unresolved. The GitHub Pages API checked on 23 October still assigned `davidchivers.co.uk` to the old repository; this repository's `cname` was null. Assigning the domain here returned HTTP 400, `Invalid cname`, because the domain was already taken. David's login has admin rights here but only write access on the old repository. Its owner must release the domain under Settings > Pages before it can be assigned here. Do not delete or disable the live site as a substitute for this transfer.
 
-Current rule:
-
-- `davidchivers/davidchivers.co.uk` is the canonical website repo
-- `thomshutt/davidchivers` is only a temporary Pages bridge until the custom domain is moved
-- do not treat the legacy repo as the long-run deployment authority
+After the domain is released, assign `davidchivers.co.uk` in this repository's Pages settings, deploy `main`, and verify HTTPS and the live routes. Both repositories use Actions deployments, so a `CNAME` file alone does not configure the domain. Until the transfer is verified, a successful deployment at the GitHub backup address does not prove the custom domain has received a release.
 
 ## Before Pushing New Website Work
 
