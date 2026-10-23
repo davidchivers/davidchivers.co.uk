@@ -1,0 +1,7 @@
+weighting,assignment,status,rho
+equal,mixture,shown_pending_review,-0.14
+equal,primary,shown_pending_review,0.34
+equal,reverse,shown_pending_review,0.34
+visits,mixture,shown_pending_review,-0.13
+visits,primary,shown_pending_review,0.15
+visits,reverse,shown_pending_review,0.15

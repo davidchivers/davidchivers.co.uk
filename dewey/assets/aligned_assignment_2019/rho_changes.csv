@@ -1,0 +1,5 @@
+weighting,assignment,direction,status,delta_rho_interval_lower,delta_rho_interval_upper
+equal,primary,label_minus_mixture,shown_pending_review,0.47,0.49
+equal,reverse,label_minus_mixture,shown_pending_review,0.47,0.49
+visits,primary,label_minus_mixture,shown_pending_review,0.27,0.29
+visits,reverse,label_minus_mixture,shown_pending_review,0.27,0.29

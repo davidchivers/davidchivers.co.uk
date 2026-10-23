@@ -1,0 +1,301 @@
+category,weighting,status,mixture_F_points,income_F_points,primary_F_points,reverse_F_points,primary_minus_mixture_interval_points_lower,primary_minus_mixture_interval_points_upper,reverse_minus_mixture_interval_points_lower,reverse_minus_mixture_interval_points_upper
+All Other Amusement and Recreation Industries,equal,shown_pending_review,45.2,74.2,19.8,19.8,-25.5,-25.3,-25.5,-25.3
+All Other Consumer Goods Rental,equal,shown_pending_review,39.8,76.5,19.0,19.1,-20.9,-20.7,-20.8,-20.6
+All Other General Merchandise Stores,equal,shown_pending_review,38.0,72.0,16.9,16.9,-21.2,-21.0,-21.2,-21.0
+All Other Health and Personal Care Stores,equal,shown_pending_review,39.3,69.4,14.6,14.7,-24.8,-24.6,-24.7,-24.5
+All Other Home Furnishings Stores,equal,shown_pending_review,41.3,68.7,15.9,15.9,-25.5,-25.3,-25.5,-25.3
+All Other Miscellaneous Manufacturing,equal,shown_pending_review,38.1,78.1,15.1,15.1,-23.1,-22.9,-23.1,-22.9
+All Other Miscellaneous Store Retailers (except Tobacco Stores),equal,shown_pending_review,37.9,64.3,14.5,14.5,-23.5,-23.3,-23.5,-23.3
+All Other Specialty Food Stores,equal,shown_pending_review,41.7,62.4,16.0,16.0,-25.8,-25.6,-25.8,-25.6
+All Other Transportation Equipment Manufacturing,equal,shown_pending_review,32.6,78.3,13.5,13.5,-19.2,-19.0,-19.2,-19.0
+All Other Traveler Accommodation,equal,shown_pending_review,36.8,46.8,7.8,7.8,-29.1,-28.9,-29.1,-28.9
+Automobile Manufacturing,equal,shown_pending_review,36.7,75.6,16.0,16.0,-20.8,-20.6,-20.8,-20.6
+"Automotive Body, Paint, and Interior Repair and Maintenance",equal,shown_pending_review,47.3,71.7,22.1,22.1,-25.3,-25.1,-25.3,-25.1
+Automotive Glass Replacement Shops,equal,shown_pending_review,40.5,58.5,14.6,14.6,-26.0,-25.8,-26.0,-25.8
+Automotive Oil Change and Lubrication Shops,equal,shown_pending_review,38.4,76.5,16.5,16.5,-22.0,-21.8,-22.0,-21.8
+Automotive Parts and Accessories Stores,equal,shown_pending_review,36.5,70.9,15.0,15.0,-21.6,-21.4,-21.6,-21.4
+Automotive Transmission Repair,equal,shown_pending_review,41.2,71.1,19.4,19.4,-21.9,-21.7,-21.9,-21.7
+Baked Goods Stores,equal,shown_pending_review,41.7,71.9,17.3,17.3,-24.5,-24.3,-24.5,-24.3
+Barber Shops,equal,shown_pending_review,41.1,65.2,16.7,16.7,-24.5,-24.3,-24.5,-24.3
+Beauty Salons,equal,shown_pending_review,40.3,63.8,15.0,15.0,-25.4,-25.2,-25.4,-25.2
+"Beer, Wine, and Liquor Stores",equal,shown_pending_review,41.3,66.3,16.7,16.7,-24.7,-24.5,-24.7,-24.5
+Boat Dealers,equal,shown_pending_review,35.1,65.0,12.5,12.5,-22.7,-22.5,-22.7,-22.5
+Book Stores,equal,shown_pending_review,41.0,63.4,14.8,14.8,-26.3,-26.1,-26.3,-26.1
+Bowling Centers,equal,shown_pending_review,33.4,73.8,12.7,12.8,-20.8,-20.6,-20.7,-20.5
+Breweries,equal,shown_pending_review,35.4,74.5,12.4,12.4,-23.1,-22.9,-23.1,-22.9
+Business Associations,equal,shown_pending_review,29.2,70.1,9.7,9.7,-19.6,-19.4,-19.6,-19.4
+"Cafeterias, Grill Buffets, and Buffets",equal,shown_pending_review,41.6,68.4,18.6,18.6,-23.1,-22.9,-23.1,-22.9
+Car Washes,equal,shown_pending_review,40.0,65.8,15.0,15.0,-25.1,-24.9,-25.1,-24.9
+Casino Hotels,equal,shown_pending_review,41.3,71.5,19.3,19.3,-22.1,-21.9,-22.1,-21.9
+Children's and Infants' Clothing Stores,equal,shown_pending_review,43.2,73.2,19.8,19.8,-23.5,-23.3,-23.5,-23.3
+Clothing Accessories Stores,equal,shown_pending_review,45.1,56.9,17.1,17.2,-28.1,-27.9,-28.0,-27.8
+Coin-Operated Laundries and Drycleaners,equal,shown_pending_review,44.0,65.1,19.7,19.7,-24.4,-24.2,-24.4,-24.2
+"Colleges, Universities, and Professional Schools",equal,shown_pending_review,42.8,71.6,19.8,19.8,-23.1,-22.9,-23.1,-22.9
+Commercial Banking,equal,shown_pending_review,38.2,71.6,15.1,15.1,-23.2,-23.0,-23.2,-23.0
+Commercial Printing (except Screen and Books),equal,shown_pending_review,42.0,65.9,18.7,18.8,-23.4,-23.2,-23.3,-23.1
+Confectionery and Nut Stores,equal,shown_pending_review,39.6,58.4,13.5,13.5,-26.2,-26.0,-26.2,-26.0
+Consumer Lending,equal,shown_pending_review,41.7,74.3,18.8,18.8,-23.0,-22.8,-23.0,-22.8
+Convenience Stores,equal,shown_pending_review,41.6,68.9,17.8,17.9,-23.9,-23.7,-23.8,-23.6
+Convention and Trade Show Organizers,equal,shown_pending_review,37.5,73.6,15.1,15.1,-22.5,-22.3,-22.5,-22.3
+"Cosmetics, Beauty Supplies, and Perfume Stores",equal,shown_pending_review,43.2,71.2,18.8,18.9,-24.5,-24.3,-24.4,-24.2
+Couriers and Express Delivery Services,equal,shown_pending_review,41.9,72.3,17.6,17.6,-24.4,-24.2,-24.4,-24.2
+Department Stores,equal,shown_pending_review,40.6,74.9,18.7,18.7,-22.0,-21.8,-22.0,-21.8
+Direct Life Insurance Carriers,equal,shown_pending_review,38.2,66.8,13.6,13.6,-24.7,-24.5,-24.7,-24.5
+Direct Property and Casualty Insurance Carriers,equal,shown_pending_review,38.4,68.1,14.6,14.6,-23.9,-23.7,-23.9,-23.7
+Dog and Cat Food Manufacturing,equal,shown_pending_review,37.7,78.2,15.1,15.1,-22.7,-22.5,-22.7,-22.5
+Drinking Places (Alcoholic Beverages),equal,shown_pending_review,39.1,68.5,15.4,15.4,-23.8,-23.6,-23.8,-23.6
+Electronics Stores,equal,shown_pending_review,43.1,63.1,16.9,17.0,-26.3,-26.1,-26.2,-26.0
+Ethyl Alcohol Manufacturing,equal,shown_pending_review,42.4,71.0,20.0,20.0,-22.5,-22.3,-22.5,-22.3
+Exam Preparation and Tutoring,equal,shown_pending_review,45.0,60.9,15.6,15.7,-29.5,-29.3,-29.4,-29.2
+Family Clothing Stores,equal,shown_pending_review,45.2,76.2,23.4,23.4,-21.9,-21.7,-21.9,-21.7
+Farm Supplies Merchant Wholesalers,equal,shown_pending_review,26.0,77.4,8.5,8.5,-17.6,-17.4,-17.6,-17.4
+"Financial Transactions Processing, Reserve, and Clearinghouse Activities",equal,shown_pending_review,41.5,69.5,16.0,16.0,-25.6,-25.4,-25.6,-25.4
+Fish and Seafood Markets,equal,shown_pending_review,43.3,67.7,21.4,21.4,-22.0,-21.8,-22.0,-21.8
+Fitness and Recreational Sports Centers,equal,shown_pending_review,39.4,61.0,13.2,13.2,-26.3,-26.1,-26.3,-26.1
+Floor Covering Stores,equal,shown_pending_review,41.2,52.9,12.8,12.8,-28.5,-28.3,-28.5,-28.3
+Florists,equal,shown_pending_review,38.5,61.3,13.9,13.9,-24.7,-24.5,-24.7,-24.5
+Food (Health) Supplement Stores,equal,shown_pending_review,42.9,72.4,17.7,17.7,-25.3,-25.1,-25.3,-25.1
+Fresh Fruit and Vegetable Merchant Wholesalers,equal,shown_pending_review,38.8,60.4,16.0,16.1,-22.9,-22.7,-22.8,-22.6
+Full-Service Restaurants,equal,shown_pending_review,41.7,69.8,17.6,17.6,-24.2,-24.0,-24.2,-24.0
+Funeral Homes and Funeral Services,equal,shown_pending_review,35.1,71.0,15.4,15.4,-19.8,-19.6,-19.8,-19.6
+Furniture Merchant Wholesalers,equal,shown_pending_review,41.4,59.6,16.9,16.9,-24.6,-24.4,-24.6,-24.4
+Furniture Stores,equal,shown_pending_review,41.7,70.9,17.4,17.4,-24.4,-24.2,-24.4,-24.2
+Gasoline Stations with Convenience Stores,equal,shown_pending_review,36.9,71.2,15.6,15.6,-21.4,-21.2,-21.4,-21.2
+General Automotive Repair,equal,shown_pending_review,39.7,64.4,15.7,15.7,-24.1,-23.9,-24.1,-23.9
+General Line Grocery Merchant Wholesalers,equal,shown_pending_review,42.8,69.5,21.0,21.0,-21.9,-21.7,-21.9,-21.7
+General Warehousing and Storage,equal,shown_pending_review,40.1,68.5,16.0,16.0,-24.2,-24.0,-24.2,-24.0
+"Gift, Novelty, and Souvenir Stores",equal,shown_pending_review,39.6,61.4,13.9,13.9,-25.8,-25.6,-25.8,-25.6
+Golf Courses and Country Clubs,equal,shown_pending_review,30.4,69.5,9.7,9.8,-20.8,-20.6,-20.7,-20.5
+Grape Vineyards,equal,withheld_support,,,,,,,,
+Hardware Stores,equal,shown_pending_review,36.1,71.0,14.6,14.6,-21.6,-21.4,-21.6,-21.4
+"Hobby, Toy, and Game Stores",equal,shown_pending_review,40.3,69.8,15.7,15.8,-24.7,-24.5,-24.6,-24.4
+Home Centers,equal,shown_pending_review,36.6,60.0,12.9,12.9,-23.8,-23.6,-23.8,-23.6
+Hotels (except Casino Hotels) and Motels,equal,shown_pending_review,41.5,73.6,19.9,19.9,-21.7,-21.5,-21.7,-21.5
+Household Appliance Stores,equal,shown_pending_review,39.6,70.7,16.4,16.4,-23.3,-23.1,-23.3,-23.1
+"Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers",equal,shown_pending_review,36.9,77.0,15.6,15.6,-21.4,-21.2,-21.4,-21.2
+Insurance Agencies and Brokerages,equal,shown_pending_review,36.5,70.4,14.1,14.1,-22.5,-22.3,-22.5,-22.3
+Investment Advice,equal,shown_pending_review,36.1,67.2,11.6,11.6,-24.6,-24.4,-24.6,-24.4
+Iron and Steel Mills and Ferroalloy Manufacturing,equal,shown_pending_review,37.6,68.9,17.4,17.4,-20.3,-20.1,-20.3,-20.1
+Jewelry Stores,equal,shown_pending_review,43.9,75.4,20.2,20.2,-23.8,-23.6,-23.8,-23.6
+"Jewelry, Watch, Precious Stone, and Precious Metal Merchant Wholesalers",equal,shown_pending_review,38.7,73.5,14.2,14.2,-24.6,-24.4,-24.6,-24.4
+Leather and Hide Tanning and Finishing,equal,shown_pending_review,37.6,77.9,16.0,16.0,-21.7,-21.5,-21.7,-21.5
+Lessors of Miniwarehouses and Self-Storage Units,equal,shown_pending_review,48.4,71.0,22.9,23.0,-25.6,-25.4,-25.5,-25.3
+Lessors of Nonfinancial Intangible Assets (except Copyrighted Works),equal,shown_pending_review,37.6,80.1,16.9,16.9,-20.8,-20.6,-20.8,-20.6
+Lessors of Nonresidential Buildings (except Miniwarehouses),equal,shown_pending_review,45.2,77.9,22.8,22.8,-22.5,-22.3,-22.5,-22.3
+Lessors of Other Real Estate Property,equal,shown_pending_review,37.2,69.4,13.3,13.3,-24.0,-23.8,-24.0,-23.8
+Lessors of Residential Buildings and Dwellings,equal,shown_pending_review,48.7,65.6,21.5,21.5,-27.3,-27.1,-27.3,-27.1
+Libraries and Archives,equal,shown_pending_review,35.9,67.2,13.6,13.6,-22.4,-22.2,-22.4,-22.2
+Limited-Service Restaurants,equal,shown_pending_review,41.3,75.1,18.4,18.4,-23.0,-22.8,-23.0,-22.8
+Locksmiths,equal,shown_pending_review,43.4,55.7,15.9,15.9,-27.6,-27.4,-27.6,-27.4
+Mattress Manufacturing,equal,shown_pending_review,41.2,78.6,18.5,18.6,-22.8,-22.6,-22.7,-22.5
+Meat Markets,equal,shown_pending_review,40.3,65.6,16.7,16.7,-23.7,-23.5,-23.7,-23.5
+Men's Clothing Stores,equal,shown_pending_review,43.3,69.1,18.9,19.0,-24.5,-24.3,-24.4,-24.2
+Motion Picture Theaters (except Drive-Ins),equal,shown_pending_review,42.8,81.3,21.2,21.2,-21.7,-21.5,-21.7,-21.5
+Motor Vehicle Towing,equal,shown_pending_review,39.8,52.7,14.2,14.2,-25.7,-25.5,-25.7,-25.5
+Motor and Generator Manufacturing,equal,shown_pending_review,29.5,65.7,9.4,9.5,-20.2,-20.0,-20.1,-19.9
+"Motorcycle, ATV, and All Other Motor Vehicle Dealers",equal,shown_pending_review,39.2,61.5,15.0,15.0,-24.3,-24.1,-24.3,-24.1
+Museums,equal,shown_pending_review,39.2,72.4,16.5,16.5,-22.8,-22.6,-22.8,-22.6
+Musical Instrument and Supplies Stores,equal,shown_pending_review,41.0,67.5,15.7,15.7,-25.4,-25.2,-25.4,-25.2
+Nail Salons,equal,shown_pending_review,43.4,68.1,17.5,17.5,-26.0,-25.8,-26.0,-25.8
+Nature Parks and Other Similar Institutions,equal,shown_pending_review,54.1,68.9,31.7,31.7,-22.5,-22.3,-22.5,-22.3
+New Car Dealers,equal,shown_pending_review,39.0,71.6,17.3,17.4,-21.8,-21.6,-21.7,-21.5
+"Nursery, Garden Center, and Farm Supply Stores",equal,shown_pending_review,31.2,68.0,10.1,10.1,-21.2,-21.0,-21.2,-21.0
+Office Supplies and Stationery Stores,equal,shown_pending_review,40.9,72.3,16.6,16.6,-24.4,-24.2,-24.4,-24.2
+Offices of Real Estate Agents and Brokers,equal,shown_pending_review,45.2,66.1,19.7,19.7,-25.6,-25.4,-25.6,-25.4
+Optical Goods Stores,equal,shown_pending_review,39.3,73.0,15.6,15.7,-23.8,-23.6,-23.7,-23.5
+Other Activities Related to Credit Intermediation,equal,shown_pending_review,41.7,74.1,18.6,18.6,-23.2,-23.0,-23.2,-23.0
+Other Automotive Mechanical and Electrical Repair and Maintenance,equal,shown_pending_review,40.1,67.9,18.3,18.3,-21.9,-21.7,-21.9,-21.7
+Other Building Material Dealers,equal,shown_pending_review,37.8,58.8,13.7,13.7,-24.2,-24.0,-24.2,-24.0
+Other Clothing Stores,equal,shown_pending_review,43.0,67.6,17.9,17.9,-25.2,-25.0,-25.2,-25.0
+Other Communications Equipment Manufacturing,equal,shown_pending_review,38.9,77.6,16.9,16.9,-22.1,-21.9,-22.1,-21.9
+Other Gambling Industries,equal,shown_pending_review,40.7,73.9,16.1,16.1,-24.7,-24.5,-24.7,-24.5
+Other Gasoline Stations,equal,shown_pending_review,35.7,70.9,14.3,14.3,-21.5,-21.3,-21.5,-21.3
+Other Millwork (including Flooring),equal,shown_pending_review,35.7,78.1,14.8,14.8,-21.0,-20.8,-21.0,-20.8
+Paint and Coating Manufacturing,equal,shown_pending_review,38.1,72.7,15.1,15.1,-23.1,-22.9,-23.1,-22.9
+Painting and Wall Covering Contractors,equal,shown_pending_review,39.7,37.5,9.0,9.0,-30.8,-30.6,-30.8,-30.6
+Parking Lots and Garages,equal,shown_pending_review,47.3,73.7,22.5,22.5,-24.9,-24.7,-24.9,-24.7
+Passenger Car Leasing,equal,shown_pending_review,40.8,74.4,18.0,18.0,-22.9,-22.7,-22.9,-22.7
+Passenger Car Rental,equal,shown_pending_review,43.7,74.5,20.6,20.6,-23.2,-23.0,-23.2,-23.0
+Pesticide and Other Agricultural Chemical Manufacturing,equal,shown_pending_review,29.2,60.0,11.0,11.0,-18.3,-18.1,-18.3,-18.1
+Pet Care (except Veterinary) Services,equal,shown_pending_review,34.9,58.5,10.9,10.9,-24.1,-23.9,-24.1,-23.9
+Pet and Pet Supplies Stores,equal,shown_pending_review,38.0,71.0,13.2,13.3,-24.9,-24.7,-24.8,-24.6
+Pharmacies and Drug Stores,equal,shown_pending_review,40.3,70.2,16.8,16.8,-23.6,-23.4,-23.6,-23.4
+Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers,equal,shown_pending_review,43.2,73.5,20.0,20.0,-23.3,-23.1,-23.3,-23.1
+"Plumbing, Heating, and Air-Conditioning Contractors",equal,shown_pending_review,37.2,46.8,10.5,10.5,-26.8,-26.6,-26.8,-26.6
+Postal Service,equal,shown_pending_review,30.9,59.4,10.3,10.3,-20.7,-20.5,-20.7,-20.5
+Private Mail Centers,equal,shown_pending_review,41.4,68.7,14.7,14.7,-26.8,-26.6,-26.8,-26.6
+RV (Recreational Vehicle) Parks and Campgrounds,equal,shown_pending_review,32.5,76.6,13.6,13.6,-19.0,-18.8,-19.0,-18.8
+Refrigeration Equipment and Supplies Merchant Wholesalers,equal,shown_pending_review,38.6,61.9,14.4,14.5,-24.3,-24.1,-24.2,-24.0
+Regulation and Administration of Transportation Programs,equal,shown_pending_review,38.8,76.0,17.8,17.9,-21.1,-20.9,-21.0,-20.8
+Retail Bakeries,equal,shown_pending_review,43.0,61.2,17.0,17.0,-26.1,-25.9,-26.1,-25.9
+"Rooming and Boarding Houses, Dormitories, and Workers' Camps",equal,shown_pending_review,41.2,40.4,6.8,6.8,-34.5,-34.3,-34.5,-34.3
+Securities Brokerage,equal,shown_pending_review,33.0,69.1,9.6,9.6,-23.5,-23.3,-23.5,-23.3
+"Sewing, Needlework, and Piece Goods Stores",equal,shown_pending_review,37.4,63.9,13.1,13.1,-24.4,-24.2,-24.4,-24.2
+Shoe Stores,equal,shown_pending_review,41.1,78.1,19.2,19.2,-22.0,-21.8,-22.0,-21.8
+Snack and Nonalcoholic Beverage Bars,equal,shown_pending_review,40.6,69.7,15.6,15.7,-25.1,-24.9,-25.0,-24.8
+Sporting Goods Stores,equal,shown_pending_review,37.4,68.5,13.3,13.3,-24.2,-24.0,-24.2,-24.0
+Supermarkets and Other Grocery (except Convenience) Stores,equal,shown_pending_review,41.4,67.1,18.0,18.1,-23.5,-23.3,-23.4,-23.2
+Tax Preparation Services,equal,shown_pending_review,42.2,64.0,17.3,17.4,-25.0,-24.8,-24.9,-24.7
+Taxi Service,equal,shown_pending_review,47.5,46.9,15.7,15.7,-31.9,-31.7,-31.9,-31.7
+Television Broadcasting,equal,shown_pending_review,38.8,79.1,15.6,15.6,-23.3,-23.1,-23.3,-23.1
+Tire Dealers,equal,shown_pending_review,39.0,74.9,17.5,17.5,-21.6,-21.4,-21.6,-21.4
+Tire Manufacturing (except Retreading),equal,shown_pending_review,38.5,75.3,16.3,16.3,-22.3,-22.1,-22.3,-22.1
+Tobacco Stores,equal,shown_pending_review,46.5,67.4,21.2,21.2,-25.4,-25.2,-25.4,-25.2
+Travel Agencies,equal,shown_pending_review,44.0,51.8,15.5,15.6,-28.6,-28.4,-28.5,-28.3
+"Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing",equal,shown_pending_review,39.9,70.7,17.2,17.2,-22.8,-22.6,-22.8,-22.6
+Used Car Dealers,equal,shown_pending_review,39.2,71.6,18.8,18.8,-20.5,-20.3,-20.5,-20.3
+Used Merchandise Stores,equal,shown_pending_review,39.0,70.0,16.0,16.0,-23.1,-22.9,-23.1,-22.9
+Veterinary Services,equal,shown_pending_review,36.6,71.3,12.6,12.6,-24.1,-23.9,-24.1,-23.9
+Wineries,equal,shown_pending_review,37.3,71.0,15.0,15.0,-22.4,-22.2,-22.4,-22.2
+Wireless Telecommunications Carriers (except Satellite),equal,shown_pending_review,43.3,73.0,19.5,19.6,-23.9,-23.7,-23.8,-23.6
+Women's Clothing Stores,equal,shown_pending_review,42.4,67.2,17.2,17.2,-25.3,-25.1,-25.3,-25.1
+All Other Amusement and Recreation Industries,visits,withheld_support,,,,,,,,
+All Other Consumer Goods Rental,visits,shown_pending_review,40.9,79.2,20.3,20.3,-20.7,-20.5,-20.7,-20.5
+All Other General Merchandise Stores,visits,shown_pending_review,40.6,81.5,19.9,19.9,-20.8,-20.6,-20.8,-20.6
+All Other Health and Personal Care Stores,visits,shown_pending_review,42.6,75.0,18.8,18.8,-23.9,-23.7,-23.9,-23.7
+All Other Home Furnishings Stores,visits,shown_pending_review,43.6,77.5,19.5,19.5,-24.2,-24.0,-24.2,-24.0
+All Other Miscellaneous Manufacturing,visits,shown_pending_review,37.2,80.9,15.5,15.5,-21.8,-21.6,-21.8,-21.6
+All Other Miscellaneous Store Retailers (except Tobacco Stores),visits,shown_pending_review,42.2,76.1,19.7,19.7,-22.6,-22.4,-22.6,-22.4
+All Other Specialty Food Stores,visits,shown_pending_review,45.8,74.9,22.4,22.4,-23.5,-23.3,-23.5,-23.3
+All Other Transportation Equipment Manufacturing,visits,shown_pending_review,37.8,82.5,18.0,18.0,-19.9,-19.7,-19.9,-19.7
+All Other Traveler Accommodation,visits,shown_pending_review,39.1,72.3,15.0,15.1,-24.2,-24.0,-24.1,-23.9
+Automobile Manufacturing,visits,shown_pending_review,40.3,79.3,19.5,19.5,-20.9,-20.7,-20.9,-20.7
+"Automotive Body, Paint, and Interior Repair and Maintenance",visits,shown_pending_review,50.3,77.4,26.6,26.7,-23.8,-23.6,-23.7,-23.5
+Automotive Glass Replacement Shops,visits,shown_pending_review,44.1,76.9,22.1,22.1,-22.1,-21.9,-22.1,-21.9
+Automotive Oil Change and Lubrication Shops,visits,shown_pending_review,39.1,80.9,17.9,18.0,-21.3,-21.1,-21.2,-21.0
+Automotive Parts and Accessories Stores,visits,shown_pending_review,40.2,76.3,18.5,18.6,-21.8,-21.6,-21.7,-21.5
+Automotive Transmission Repair,visits,shown_pending_review,44.8,78.7,25.0,25.0,-19.9,-19.7,-19.9,-19.7
+Baked Goods Stores,visits,shown_pending_review,45.7,75.7,21.2,21.2,-24.6,-24.4,-24.6,-24.4
+Barber Shops,visits,shown_pending_review,44.8,75.3,21.7,21.7,-23.2,-23.0,-23.2,-23.0
+Beauty Salons,visits,shown_pending_review,44.2,74.8,20.8,20.8,-23.5,-23.3,-23.5,-23.3
+"Beer, Wine, and Liquor Stores",visits,shown_pending_review,44.9,74.1,21.0,21.0,-24.0,-23.8,-24.0,-23.8
+Boat Dealers,visits,shown_pending_review,42.6,79.2,21.1,21.2,-21.6,-21.4,-21.5,-21.3
+Book Stores,visits,shown_pending_review,44.3,77.2,20.4,20.4,-24.0,-23.8,-24.0,-23.8
+Bowling Centers,visits,shown_pending_review,39.1,81.4,18.5,18.5,-20.7,-20.5,-20.7,-20.5
+Breweries,visits,shown_pending_review,37.5,79.0,14.5,14.5,-23.1,-22.9,-23.1,-22.9
+Business Associations,visits,shown_pending_review,35.4,77.4,14.7,14.7,-20.8,-20.6,-20.8,-20.6
+"Cafeterias, Grill Buffets, and Buffets",visits,shown_pending_review,44.7,78.0,23.1,23.1,-21.7,-21.5,-21.7,-21.5
+Car Washes,visits,shown_pending_review,43.3,77.5,19.9,19.9,-23.5,-23.3,-23.5,-23.3
+Casino Hotels,visits,shown_pending_review,46.7,81.1,26.9,26.9,-19.9,-19.7,-19.9,-19.7
+Children's and Infants' Clothing Stores,visits,shown_pending_review,46.3,79.3,24.3,24.3,-22.1,-21.9,-22.1,-21.9
+Clothing Accessories Stores,visits,shown_pending_review,48.5,73.9,25.6,25.6,-23.0,-22.8,-23.0,-22.8
+Coin-Operated Laundries and Drycleaners,visits,shown_pending_review,47.5,76.5,25.8,25.8,-21.8,-21.6,-21.8,-21.6
+"Colleges, Universities, and Professional Schools",visits,shown_pending_review,47.7,82.5,27.8,27.8,-20.0,-19.8,-20.0,-19.8
+Commercial Banking,visits,shown_pending_review,41.9,76.8,19.1,19.1,-22.9,-22.7,-22.9,-22.7
+Commercial Printing (except Screen and Books),visits,shown_pending_review,48.1,80.9,28.4,28.5,-19.8,-19.6,-19.7,-19.5
+Confectionery and Nut Stores,visits,shown_pending_review,43.8,75.6,20.6,20.6,-23.3,-23.1,-23.3,-23.1
+Consumer Lending,visits,shown_pending_review,42.8,77.0,20.1,20.1,-22.8,-22.6,-22.8,-22.6
+Convenience Stores,visits,shown_pending_review,43.4,75.6,20.2,20.3,-23.3,-23.1,-23.2,-23.0
+Convention and Trade Show Organizers,visits,shown_pending_review,43.5,79.6,22.0,22.1,-21.6,-21.4,-21.5,-21.3
+"Cosmetics, Beauty Supplies, and Perfume Stores",visits,shown_pending_review,47.2,77.9,24.6,24.7,-22.7,-22.5,-22.6,-22.4
+Couriers and Express Delivery Services,visits,shown_pending_review,43.3,76.9,19.7,19.8,-23.7,-23.5,-23.6,-23.4
+Department Stores,visits,shown_pending_review,44.2,81.4,23.3,23.3,-21.0,-20.8,-21.0,-20.8
+Direct Life Insurance Carriers,visits,shown_pending_review,42.1,73.1,17.6,17.6,-24.6,-24.4,-24.6,-24.4
+Direct Property and Casualty Insurance Carriers,visits,shown_pending_review,46.2,76.3,23.3,23.3,-23.0,-22.8,-23.0,-22.8
+Dog and Cat Food Manufacturing,visits,shown_pending_review,40.3,81.3,17.9,18.0,-22.5,-22.3,-22.4,-22.2
+Drinking Places (Alcoholic Beverages),visits,shown_pending_review,44.5,77.2,21.4,21.5,-23.2,-23.0,-23.1,-22.9
+Electronics Stores,visits,shown_pending_review,47.1,77.0,24.3,24.3,-22.9,-22.7,-22.9,-22.7
+Ethyl Alcohol Manufacturing,visits,shown_pending_review,43.5,75.2,21.0,21.1,-22.6,-22.4,-22.5,-22.3
+Exam Preparation and Tutoring,visits,shown_pending_review,46.6,67.2,19.1,19.1,-27.6,-27.4,-27.6,-27.4
+Family Clothing Stores,visits,shown_pending_review,47.1,81.2,26.2,26.3,-21.0,-20.8,-20.9,-20.7
+Farm Supplies Merchant Wholesalers,visits,shown_pending_review,25.0,81.7,7.9,8.0,-17.2,-17.0,-17.1,-16.9
+"Financial Transactions Processing, Reserve, and Clearinghouse Activities",visits,shown_pending_review,41.0,76.2,17.3,17.4,-23.8,-23.6,-23.7,-23.5
+Fish and Seafood Markets,visits,shown_pending_review,48.5,79.1,29.2,29.2,-19.4,-19.2,-19.4,-19.2
+Fitness and Recreational Sports Centers,visits,shown_pending_review,44.6,74.6,20.5,20.6,-24.2,-24.0,-24.1,-23.9
+Floor Covering Stores,visits,shown_pending_review,44.4,71.9,20.1,20.1,-24.4,-24.2,-24.4,-24.2
+Florists,visits,shown_pending_review,43.5,73.5,20.3,20.3,-23.3,-23.1,-23.3,-23.1
+Food (Health) Supplement Stores,visits,shown_pending_review,45.4,76.7,21.1,21.1,-24.4,-24.2,-24.4,-24.2
+Fresh Fruit and Vegetable Merchant Wholesalers,visits,shown_pending_review,46.7,79.7,27.0,27.0,-19.8,-19.6,-19.8,-19.6
+Full-Service Restaurants,visits,shown_pending_review,43.8,77.6,21.0,21.0,-22.9,-22.7,-22.9,-22.7
+Funeral Homes and Funeral Services,visits,shown_pending_review,40.4,80.2,21.1,21.1,-19.4,-19.2,-19.4,-19.2
+Furniture Merchant Wholesalers,visits,shown_pending_review,49.4,79.1,29.5,29.5,-20.0,-19.8,-20.0,-19.8
+Furniture Stores,visits,shown_pending_review,45.3,78.3,22.2,22.2,-23.2,-23.0,-23.2,-23.0
+Gasoline Stations with Convenience Stores,visits,shown_pending_review,38.4,77.2,17.5,17.5,-21.0,-20.8,-21.0,-20.8
+General Automotive Repair,visits,shown_pending_review,44.8,77.2,23.0,23.0,-21.9,-21.7,-21.9,-21.7
+General Line Grocery Merchant Wholesalers,visits,shown_pending_review,45.2,76.9,25.1,25.1,-20.2,-20.0,-20.2,-20.0
+General Warehousing and Storage,visits,shown_pending_review,44.7,74.2,21.1,21.1,-23.7,-23.5,-23.7,-23.5
+"Gift, Novelty, and Souvenir Stores",visits,shown_pending_review,43.1,76.2,20.1,20.1,-23.1,-22.9,-23.1,-22.9
+Golf Courses and Country Clubs,visits,shown_pending_review,37.7,74.4,15.2,15.3,-22.6,-22.4,-22.5,-22.3
+Grape Vineyards,visits,withheld_support,,,,,,,,
+Hardware Stores,visits,shown_pending_review,39.6,80.7,18.9,18.9,-20.8,-20.6,-20.8,-20.6
+"Hobby, Toy, and Game Stores",visits,shown_pending_review,41.7,79.8,18.5,18.5,-23.3,-23.1,-23.3,-23.1
+Home Centers,visits,shown_pending_review,43.3,79.4,22.5,22.5,-20.9,-20.7,-20.9,-20.7
+Hotels (except Casino Hotels) and Motels,visits,shown_pending_review,47.5,81.9,27.7,27.7,-19.9,-19.7,-19.9,-19.7
+Household Appliance Stores,visits,shown_pending_review,44.4,77.9,21.7,21.7,-22.8,-22.6,-22.8,-22.6
+"Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers",visits,shown_pending_review,39.9,81.7,18.8,18.8,-21.2,-21.0,-21.2,-21.0
+Insurance Agencies and Brokerages,visits,shown_pending_review,44.3,77.4,22.7,22.7,-21.7,-21.5,-21.7,-21.5
+Investment Advice,visits,shown_pending_review,42.0,74.3,18.2,18.2,-23.9,-23.7,-23.9,-23.7
+Iron and Steel Mills and Ferroalloy Manufacturing,visits,shown_pending_review,39.4,77.2,20.7,20.7,-18.8,-18.6,-18.8,-18.6
+Jewelry Stores,visits,shown_pending_review,46.6,79.5,24.2,24.2,-22.5,-22.3,-22.5,-22.3
+"Jewelry, Watch, Precious Stone, and Precious Metal Merchant Wholesalers",visits,shown_pending_review,45.5,78.4,21.7,21.7,-23.9,-23.7,-23.9,-23.7
+Leather and Hide Tanning and Finishing,visits,shown_pending_review,40.1,82.4,19.0,19.0,-21.2,-21.0,-21.2,-21.0
+Lessors of Miniwarehouses and Self-Storage Units,visits,shown_pending_review,50.8,76.0,27.0,27.0,-23.9,-23.7,-23.9,-23.7
+Lessors of Nonfinancial Intangible Assets (except Copyrighted Works),visits,shown_pending_review,38.6,82.3,17.7,17.7,-21.0,-20.8,-21.0,-20.8
+Lessors of Nonresidential Buildings (except Miniwarehouses),visits,shown_pending_review,46.9,81.1,25.6,25.6,-21.4,-21.2,-21.4,-21.2
+Lessors of Other Real Estate Property,visits,shown_pending_review,42.7,79.7,21.1,21.1,-21.7,-21.5,-21.7,-21.5
+Lessors of Residential Buildings and Dwellings,visits,shown_pending_review,52.6,76.8,28.8,28.8,-23.9,-23.7,-23.9,-23.7
+Libraries and Archives,visits,shown_pending_review,41.0,72.5,17.0,17.0,-24.1,-23.9,-24.1,-23.9
+Limited-Service Restaurants,visits,shown_pending_review,41.7,79.0,19.3,19.3,-22.5,-22.3,-22.5,-22.3
+Locksmiths,visits,shown_pending_review,47.9,73.4,24.5,24.5,-23.5,-23.3,-23.5,-23.3
+Mattress Manufacturing,visits,shown_pending_review,45.6,82.2,24.5,24.5,-21.2,-21.0,-21.2,-21.0
+Meat Markets,visits,shown_pending_review,45.6,75.7,23.4,23.4,-22.3,-22.1,-22.3,-22.1
+Men's Clothing Stores,visits,shown_pending_review,46.9,76.0,24.2,24.2,-22.8,-22.6,-22.8,-22.6
+Motion Picture Theaters (except Drive-Ins),visits,shown_pending_review,46.0,82.0,24.3,24.3,-21.8,-21.6,-21.8,-21.6
+Motor Vehicle Towing,visits,shown_pending_review,44.8,76.4,24.4,24.5,-20.5,-20.3,-20.4,-20.2
+Motor and Generator Manufacturing,visits,shown_pending_review,32.7,74.9,13.1,13.1,-19.7,-19.5,-19.7,-19.5
+"Motorcycle, ATV, and All Other Motor Vehicle Dealers",visits,shown_pending_review,44.5,79.6,23.8,23.8,-20.8,-20.6,-20.8,-20.6
+Museums,visits,shown_pending_review,46.0,79.6,23.9,24.0,-22.2,-22.0,-22.1,-21.9
+Musical Instrument and Supplies Stores,visits,shown_pending_review,45.2,77.0,21.9,21.9,-23.4,-23.2,-23.4,-23.2
+Nail Salons,visits,shown_pending_review,45.8,76.3,21.6,21.6,-24.3,-24.1,-24.3,-24.1
+Nature Parks and Other Similar Institutions,visits,shown_pending_review,61.4,82.0,47.8,47.8,-13.7,-13.5,-13.7,-13.5
+New Car Dealers,visits,shown_pending_review,44.2,81.8,24.5,24.5,-19.8,-19.6,-19.8,-19.6
+"Nursery, Garden Center, and Farm Supply Stores",visits,shown_pending_review,33.2,76.7,12.9,12.9,-20.4,-20.2,-20.4,-20.2
+Office Supplies and Stationery Stores,visits,shown_pending_review,43.7,78.6,20.7,20.7,-23.1,-22.9,-23.1,-22.9
+Offices of Real Estate Agents and Brokers,visits,shown_pending_review,48.8,77.6,26.3,26.3,-22.6,-22.4,-22.6,-22.4
+Optical Goods Stores,visits,shown_pending_review,44.1,78.3,21.4,21.4,-22.8,-22.6,-22.8,-22.6
+Other Activities Related to Credit Intermediation,visits,shown_pending_review,41.8,79.8,19.6,19.6,-22.3,-22.1,-22.3,-22.1
+Other Automotive Mechanical and Electrical Repair and Maintenance,visits,shown_pending_review,46.1,81.0,26.8,26.8,-19.4,-19.2,-19.4,-19.2
+Other Building Material Dealers,visits,shown_pending_review,44.5,78.2,23.7,23.7,-20.9,-20.7,-20.9,-20.7
+Other Clothing Stores,visits,shown_pending_review,45.1,77.9,22.3,22.3,-22.9,-22.7,-22.9,-22.7
+Other Communications Equipment Manufacturing,visits,shown_pending_review,40.2,80.8,18.7,18.7,-21.6,-21.4,-21.6,-21.4
+Other Gambling Industries,visits,shown_pending_review,46.6,82.6,25.8,25.8,-20.9,-20.7,-20.9,-20.7
+Other Gasoline Stations,visits,shown_pending_review,37.9,77.5,16.3,16.3,-21.7,-21.5,-21.7,-21.5
+Other Millwork (including Flooring),visits,shown_pending_review,39.3,82.0,18.2,18.3,-21.2,-21.0,-21.1,-20.9
+Paint and Coating Manufacturing,visits,shown_pending_review,40.3,75.0,17.2,17.2,-23.2,-23.0,-23.2,-23.0
+Painting and Wall Covering Contractors,visits,shown_pending_review,44.5,68.6,19.9,19.9,-24.7,-24.5,-24.7,-24.5
+Parking Lots and Garages,visits,shown_pending_review,51.3,80.2,29.9,29.9,-21.5,-21.3,-21.5,-21.3
+Passenger Car Leasing,visits,shown_pending_review,43.8,81.1,22.2,22.2,-21.7,-21.5,-21.7,-21.5
+Passenger Car Rental,visits,shown_pending_review,45.3,81.0,24.3,24.3,-21.1,-20.9,-21.1,-20.9
+Pesticide and Other Agricultural Chemical Manufacturing,visits,withheld_support,,,,,,,,
+Pet Care (except Veterinary) Services,visits,shown_pending_review,42.3,78.7,20.4,20.5,-22.0,-21.8,-21.9,-21.7
+Pet and Pet Supplies Stores,visits,shown_pending_review,38.1,79.1,15.2,15.2,-23.0,-22.8,-23.0,-22.8
+Pharmacies and Drug Stores,visits,shown_pending_review,42.9,76.0,19.7,19.7,-23.3,-23.1,-23.3,-23.1
+Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers,visits,shown_pending_review,46.6,78.1,23.9,23.9,-22.8,-22.6,-22.8,-22.6
+"Plumbing, Heating, and Air-Conditioning Contractors",visits,shown_pending_review,43.2,73.2,20.8,20.8,-22.5,-22.3,-22.5,-22.3
+Postal Service,visits,shown_pending_review,38.9,70.3,16.1,16.1,-22.9,-22.7,-22.9,-22.7
+Private Mail Centers,visits,shown_pending_review,43.2,71.8,17.0,17.0,-26.3,-26.1,-26.3,-26.1
+RV (Recreational Vehicle) Parks and Campgrounds,visits,shown_pending_review,38.0,81.9,18.8,18.8,-19.3,-19.1,-19.3,-19.1
+Refrigeration Equipment and Supplies Merchant Wholesalers,visits,shown_pending_review,43.0,71.1,19.3,19.4,-23.8,-23.6,-23.7,-23.5
+Regulation and Administration of Transportation Programs,visits,shown_pending_review,44.2,80.0,23.5,23.5,-20.8,-20.6,-20.8,-20.6
+Retail Bakeries,visits,shown_pending_review,46.9,74.7,23.8,23.8,-23.2,-23.0,-23.2,-23.0
+"Rooming and Boarding Houses, Dormitories, and Workers' Camps",visits,shown_pending_review,42.5,50.2,9.6,9.6,-33.0,-32.8,-33.0,-32.8
+Securities Brokerage,visits,shown_pending_review,39.5,75.5,15.6,15.7,-24.0,-23.8,-23.9,-23.7
+"Sewing, Needlework, and Piece Goods Stores",visits,shown_pending_review,41.1,77.6,19.0,19.0,-22.2,-22.0,-22.2,-22.0
+Shoe Stores,visits,shown_pending_review,43.0,81.5,21.4,21.4,-21.7,-21.5,-21.7,-21.5
+Snack and Nonalcoholic Beverage Bars,visits,shown_pending_review,43.3,75.7,18.9,18.9,-24.5,-24.3,-24.5,-24.3
+Sporting Goods Stores,visits,shown_pending_review,39.8,78.9,17.0,17.0,-22.9,-22.7,-22.9,-22.7
+Supermarkets and Other Grocery (except Convenience) Stores,visits,shown_pending_review,42.1,77.3,19.6,19.6,-22.6,-22.4,-22.6,-22.4
+Tax Preparation Services,visits,shown_pending_review,45.6,76.8,23.6,23.6,-22.1,-21.9,-22.1,-21.9
+Taxi Service,visits,shown_pending_review,51.0,71.5,28.2,28.2,-22.9,-22.7,-22.9,-22.7
+Television Broadcasting,visits,shown_pending_review,39.3,81.9,16.6,16.6,-22.8,-22.6,-22.8,-22.6
+Tire Dealers,visits,shown_pending_review,42.1,82.5,22.2,22.2,-20.0,-19.8,-20.0,-19.8
+Tire Manufacturing (except Retreading),visits,shown_pending_review,40.7,80.0,18.8,18.9,-22.0,-21.8,-21.9,-21.7
+Tobacco Stores,visits,shown_pending_review,50.0,75.3,27.3,27.3,-22.8,-22.6,-22.8,-22.6
+Travel Agencies,visits,shown_pending_review,48.6,74.1,26.0,26.0,-22.7,-22.5,-22.7,-22.5
+"Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing",visits,shown_pending_review,42.8,77.9,21.3,21.3,-21.6,-21.4,-21.6,-21.4
+Used Car Dealers,visits,shown_pending_review,44.6,83.6,26.3,26.3,-18.4,-18.2,-18.4,-18.2
+Used Merchandise Stores,visits,shown_pending_review,41.8,78.0,19.6,19.6,-22.3,-22.1,-22.3,-22.1
+Veterinary Services,visits,shown_pending_review,39.2,75.7,15.0,15.0,-24.3,-24.1,-24.3,-24.1
+Wineries,visits,shown_pending_review,42.8,79.6,21.4,21.4,-21.5,-21.3,-21.5,-21.3
+Wireless Telecommunications Carriers (except Satellite),visits,shown_pending_review,44.8,77.6,22.0,22.0,-22.9,-22.7,-22.9,-22.7
+Women's Clothing Stores,visits,shown_pending_review,45.4,77.1,22.5,22.5,-23.0,-22.8,-23.0,-22.8

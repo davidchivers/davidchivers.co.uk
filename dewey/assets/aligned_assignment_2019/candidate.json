@@ -1,0 +1,5500 @@
+{
+  "title": "Full-2019 plurality racial-assignment sensitivity",
+  "year": 2019,
+  "category_order": [
+    "All Other Amusement and Recreation Industries",
+    "All Other Consumer Goods Rental",
+    "All Other General Merchandise Stores",
+    "All Other Health and Personal Care Stores",
+    "All Other Home Furnishings Stores",
+    "All Other Miscellaneous Manufacturing",
+    "All Other Miscellaneous Store Retailers (except Tobacco Stores)",
+    "All Other Specialty Food Stores",
+    "All Other Transportation Equipment Manufacturing",
+    "All Other Traveler Accommodation",
+    "Automobile Manufacturing",
+    "Automotive Body, Paint, and Interior Repair and Maintenance",
+    "Automotive Glass Replacement Shops",
+    "Automotive Oil Change and Lubrication Shops",
+    "Automotive Parts and Accessories Stores",
+    "Automotive Transmission Repair",
+    "Baked Goods Stores",
+    "Barber Shops",
+    "Beauty Salons",
+    "Beer, Wine, and Liquor Stores",
+    "Boat Dealers",
+    "Book Stores",
+    "Bowling Centers",
+    "Breweries",
+    "Business Associations",
+    "Cafeterias, Grill Buffets, and Buffets",
+    "Car Washes",
+    "Casino Hotels",
+    "Children's and Infants' Clothing Stores",
+    "Clothing Accessories Stores",
+    "Coin-Operated Laundries and Drycleaners",
+    "Colleges, Universities, and Professional Schools",
+    "Commercial Banking",
+    "Commercial Printing (except Screen and Books)",
+    "Confectionery and Nut Stores",
+    "Consumer Lending",
+    "Convenience Stores",
+    "Convention and Trade Show Organizers",
+    "Cosmetics, Beauty Supplies, and Perfume Stores",
+    "Couriers and Express Delivery Services",
+    "Department Stores",
+    "Direct Life Insurance Carriers",
+    "Direct Property and Casualty Insurance Carriers",
+    "Dog and Cat Food Manufacturing",
+    "Drinking Places (Alcoholic Beverages)",
+    "Electronics Stores",
+    "Ethyl Alcohol Manufacturing",
+    "Exam Preparation and Tutoring",
+    "Family Clothing Stores",
+    "Farm Supplies Merchant Wholesalers",
+    "Financial Transactions Processing, Reserve, and Clearinghouse Activities",
+    "Fish and Seafood Markets",
+    "Fitness and Recreational Sports Centers",
+    "Floor Covering Stores",
+    "Florists",
+    "Food (Health) Supplement Stores",
+    "Fresh Fruit and Vegetable Merchant Wholesalers",
+    "Full-Service Restaurants",
+    "Funeral Homes and Funeral Services",
+    "Furniture Merchant Wholesalers",
+    "Furniture Stores",
+    "Gasoline Stations with Convenience Stores",
+    "General Automotive Repair",
+    "General Line Grocery Merchant Wholesalers",
+    "General Warehousing and Storage",
+    "Gift, Novelty, and Souvenir Stores",
+    "Golf Courses and Country Clubs",
+    "Grape Vineyards",
+    "Hardware Stores",
+    "Hobby, Toy, and Game Stores",
+    "Home Centers",
+    "Hotels (except Casino Hotels) and Motels",
+    "Household Appliance Stores",
+    "Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers",
+    "Insurance Agencies and Brokerages",
+    "Investment Advice",
+    "Iron and Steel Mills and Ferroalloy Manufacturing",
+    "Jewelry Stores",
+    "Jewelry, Watch, Precious Stone, and Precious Metal Merchant Wholesalers",
+    "Leather and Hide Tanning and Finishing",
+    "Lessors of Miniwarehouses and Self-Storage Units",
+    "Lessors of Nonfinancial Intangible Assets (except Copyrighted Works)",
+    "Lessors of Nonresidential Buildings (except Miniwarehouses)",
+    "Lessors of Other Real Estate Property",
+    "Lessors of Residential Buildings and Dwellings",
+    "Libraries and Archives",
+    "Limited-Service Restaurants",
+    "Locksmiths",
+    "Mattress Manufacturing",
+    "Meat Markets",
+    "Men's Clothing Stores",
+    "Motion Picture Theaters (except Drive-Ins)",
+    "Motor Vehicle Towing",
+    "Motor and Generator Manufacturing",
+    "Motorcycle, ATV, and All Other Motor Vehicle Dealers",
+    "Museums",
+    "Musical Instrument and Supplies Stores",
+    "Nail Salons",
+    "Nature Parks and Other Similar Institutions",
+    "New Car Dealers",
+    "Nursery, Garden Center, and Farm Supply Stores",
+    "Office Supplies and Stationery Stores",
+    "Offices of Real Estate Agents and Brokers",
+    "Optical Goods Stores",
+    "Other Activities Related to Credit Intermediation",
+    "Other Automotive Mechanical and Electrical Repair and Maintenance",
+    "Other Building Material Dealers",
+    "Other Clothing Stores",
+    "Other Communications Equipment Manufacturing",
+    "Other Gambling Industries",
+    "Other Gasoline Stations",
+    "Other Millwork (including Flooring)",
+    "Paint and Coating Manufacturing",
+    "Painting and Wall Covering Contractors",
+    "Parking Lots and Garages",
+    "Passenger Car Leasing",
+    "Passenger Car Rental",
+    "Pesticide and Other Agricultural Chemical Manufacturing",
+    "Pet Care (except Veterinary) Services",
+    "Pet and Pet Supplies Stores",
+    "Pharmacies and Drug Stores",
+    "Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers",
+    "Plumbing, Heating, and Air-Conditioning Contractors",
+    "Postal Service",
+    "Private Mail Centers",
+    "RV (Recreational Vehicle) Parks and Campgrounds",
+    "Refrigeration Equipment and Supplies Merchant Wholesalers",
+    "Regulation and Administration of Transportation Programs",
+    "Retail Bakeries",
+    "Rooming and Boarding Houses, Dormitories, and Workers' Camps",
+    "Securities Brokerage",
+    "Sewing, Needlework, and Piece Goods Stores",
+    "Shoe Stores",
+    "Snack and Nonalcoholic Beverage Bars",
+    "Sporting Goods Stores",
+    "Supermarkets and Other Grocery (except Convenience) Stores",
+    "Tax Preparation Services",
+    "Taxi Service",
+    "Television Broadcasting",
+    "Tire Dealers",
+    "Tire Manufacturing (except Retreading)",
+    "Tobacco Stores",
+    "Travel Agencies",
+    "Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing",
+    "Used Car Dealers",
+    "Used Merchandise Stores",
+    "Veterinary Services",
+    "Wineries",
+    "Wireless Telecommunications Carriers (except Satellite)",
+    "Women's Clothing Stores"
+  ],
+  "fixed_rank_categories": [
+    "All Other Consumer Goods Rental",
+    "All Other General Merchandise Stores",
+    "All Other Health and Personal Care Stores",
+    "All Other Home Furnishings Stores",
+    "All Other Miscellaneous Manufacturing",
+    "All Other Miscellaneous Store Retailers (except Tobacco Stores)",
+    "All Other Specialty Food Stores",
+    "Automobile Manufacturing",
+    "Automotive Glass Replacement Shops",
+    "Automotive Oil Change and Lubrication Shops",
+    "Automotive Parts and Accessories Stores",
+    "Barber Shops",
+    "Beauty Salons",
+    "Beer, Wine, and Liquor Stores",
+    "Boat Dealers",
+    "Book Stores",
+    "Bowling Centers",
+    "Breweries",
+    "Business Associations",
+    "Cafeterias, Grill Buffets, and Buffets",
+    "Car Washes",
+    "Casino Hotels",
+    "Children's and Infants' Clothing Stores",
+    "Clothing Accessories Stores",
+    "Coin-Operated Laundries and Drycleaners",
+    "Colleges, Universities, and Professional Schools",
+    "Commercial Banking",
+    "Commercial Printing (except Screen and Books)",
+    "Confectionery and Nut Stores",
+    "Consumer Lending",
+    "Convenience Stores",
+    "Convention and Trade Show Organizers",
+    "Cosmetics, Beauty Supplies, and Perfume Stores",
+    "Couriers and Express Delivery Services",
+    "Department Stores",
+    "Direct Life Insurance Carriers",
+    "Direct Property and Casualty Insurance Carriers",
+    "Dog and Cat Food Manufacturing",
+    "Drinking Places (Alcoholic Beverages)",
+    "Electronics Stores",
+    "Ethyl Alcohol Manufacturing",
+    "Exam Preparation and Tutoring",
+    "Family Clothing Stores",
+    "Farm Supplies Merchant Wholesalers",
+    "Financial Transactions Processing, Reserve, and Clearinghouse Activities",
+    "Fish and Seafood Markets",
+    "Fitness and Recreational Sports Centers",
+    "Floor Covering Stores",
+    "Florists",
+    "Food (Health) Supplement Stores",
+    "Fresh Fruit and Vegetable Merchant Wholesalers",
+    "Full-Service Restaurants",
+    "Funeral Homes and Funeral Services",
+    "Furniture Merchant Wholesalers",
+    "Furniture Stores",
+    "Gasoline Stations with Convenience Stores",
+    "General Automotive Repair",
+    "General Line Grocery Merchant Wholesalers",
+    "General Warehousing and Storage",
+    "Gift, Novelty, and Souvenir Stores",
+    "Golf Courses and Country Clubs",
+    "Hardware Stores",
+    "Hobby, Toy, and Game Stores",
+    "Home Centers",
+    "Hotels (except Casino Hotels) and Motels",
+    "Household Appliance Stores",
+    "Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers",
+    "Insurance Agencies and Brokerages",
+    "Jewelry Stores",
+    "Jewelry, Watch, Precious Stone, and Precious Metal Merchant Wholesalers",
+    "Leather and Hide Tanning and Finishing",
+    "Lessors of Miniwarehouses and Self-Storage Units",
+    "Lessors of Nonfinancial Intangible Assets (except Copyrighted Works)",
+    "Lessors of Nonresidential Buildings (except Miniwarehouses)",
+    "Lessors of Other Real Estate Property",
+    "Lessors of Residential Buildings and Dwellings",
+    "Libraries and Archives",
+    "Limited-Service Restaurants",
+    "Locksmiths",
+    "Mattress Manufacturing",
+    "Meat Markets",
+    "Men's Clothing Stores",
+    "Motion Picture Theaters (except Drive-Ins)",
+    "Motor Vehicle Towing",
+    "Motorcycle, ATV, and All Other Motor Vehicle Dealers",
+    "Museums",
+    "Musical Instrument and Supplies Stores",
+    "Nail Salons",
+    "New Car Dealers",
+    "Nursery, Garden Center, and Farm Supply Stores",
+    "Office Supplies and Stationery Stores",
+    "Offices of Real Estate Agents and Brokers",
+    "Optical Goods Stores",
+    "Other Activities Related to Credit Intermediation",
+    "Other Automotive Mechanical and Electrical Repair and Maintenance",
+    "Other Building Material Dealers",
+    "Other Clothing Stores",
+    "Other Communications Equipment Manufacturing",
+    "Other Gambling Industries",
+    "Other Gasoline Stations",
+    "Other Millwork (including Flooring)",
+    "Paint and Coating Manufacturing",
+    "Painting and Wall Covering Contractors",
+    "Parking Lots and Garages",
+    "Passenger Car Leasing",
+    "Passenger Car Rental",
+    "Pet Care (except Veterinary) Services",
+    "Pet and Pet Supplies Stores",
+    "Pharmacies and Drug Stores",
+    "Plumbing, Heating, and Air-Conditioning Contractors",
+    "Postal Service",
+    "Private Mail Centers",
+    "RV (Recreational Vehicle) Parks and Campgrounds",
+    "Regulation and Administration of Transportation Programs",
+    "Retail Bakeries",
+    "Rooming and Boarding Houses, Dormitories, and Workers' Camps",
+    "Securities Brokerage",
+    "Sewing, Needlework, and Piece Goods Stores",
+    "Shoe Stores",
+    "Snack and Nonalcoholic Beverage Bars",
+    "Sporting Goods Stores",
+    "Supermarkets and Other Grocery (except Convenience) Stores",
+    "Tax Preparation Services",
+    "Taxi Service",
+    "Television Broadcasting",
+    "Tire Dealers",
+    "Tire Manufacturing (except Retreading)",
+    "Tobacco Stores",
+    "Travel Agencies",
+    "Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing",
+    "Used Car Dealers",
+    "Used Merchandise Stores",
+    "Veterinary Services",
+    "Wineries",
+    "Wireless Telecommunications Carriers (except Satellite)",
+    "Women's Clothing Stores"
+  ],
+  "paired_category_means": [
+    {
+      "category": "All Other Amusement and Recreation Industries",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.2",
+      "income_F_points": "74.2",
+      "primary_F_points": "19.8",
+      "reverse_F_points": "19.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.5",
+        "upper": "-25.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.5",
+        "upper": "-25.3"
+      }
+    },
+    {
+      "category": "All Other Consumer Goods Rental",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.8",
+      "income_F_points": "76.5",
+      "primary_F_points": "19.0",
+      "reverse_F_points": "19.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.9",
+        "upper": "-20.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      }
+    },
+    {
+      "category": "All Other General Merchandise Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.0",
+      "income_F_points": "72.0",
+      "primary_F_points": "16.9",
+      "reverse_F_points": "16.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.2",
+        "upper": "-21.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.2",
+        "upper": "-21.0"
+      }
+    },
+    {
+      "category": "All Other Health and Personal Care Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.3",
+      "income_F_points": "69.4",
+      "primary_F_points": "14.6",
+      "reverse_F_points": "14.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.8",
+        "upper": "-24.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.7",
+        "upper": "-24.5"
+      }
+    },
+    {
+      "category": "All Other Home Furnishings Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.3",
+      "income_F_points": "68.7",
+      "primary_F_points": "15.9",
+      "reverse_F_points": "15.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.5",
+        "upper": "-25.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.5",
+        "upper": "-25.3"
+      }
+    },
+    {
+      "category": "All Other Miscellaneous Manufacturing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.1",
+      "income_F_points": "78.1",
+      "primary_F_points": "15.1",
+      "reverse_F_points": "15.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      }
+    },
+    {
+      "category": "All Other Miscellaneous Store Retailers (except Tobacco Stores)",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.9",
+      "income_F_points": "64.3",
+      "primary_F_points": "14.5",
+      "reverse_F_points": "14.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      }
+    },
+    {
+      "category": "All Other Specialty Food Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.7",
+      "income_F_points": "62.4",
+      "primary_F_points": "16.0",
+      "reverse_F_points": "16.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.8",
+        "upper": "-25.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.8",
+        "upper": "-25.6"
+      }
+    },
+    {
+      "category": "All Other Transportation Equipment Manufacturing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "32.6",
+      "income_F_points": "78.3",
+      "primary_F_points": "13.5",
+      "reverse_F_points": "13.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.2",
+        "upper": "-19.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.2",
+        "upper": "-19.0"
+      }
+    },
+    {
+      "category": "All Other Traveler Accommodation",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "36.8",
+      "income_F_points": "46.8",
+      "primary_F_points": "7.8",
+      "reverse_F_points": "7.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-29.1",
+        "upper": "-28.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-29.1",
+        "upper": "-28.9"
+      }
+    },
+    {
+      "category": "Automobile Manufacturing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "36.7",
+      "income_F_points": "75.6",
+      "primary_F_points": "16.0",
+      "reverse_F_points": "16.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      }
+    },
+    {
+      "category": "Automotive Body, Paint, and Interior Repair and Maintenance",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "47.3",
+      "income_F_points": "71.7",
+      "primary_F_points": "22.1",
+      "reverse_F_points": "22.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.3",
+        "upper": "-25.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.3",
+        "upper": "-25.1"
+      }
+    },
+    {
+      "category": "Automotive Glass Replacement Shops",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.5",
+      "income_F_points": "58.5",
+      "primary_F_points": "14.6",
+      "reverse_F_points": "14.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-26.0",
+        "upper": "-25.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-26.0",
+        "upper": "-25.8"
+      }
+    },
+    {
+      "category": "Automotive Oil Change and Lubrication Shops",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.4",
+      "income_F_points": "76.5",
+      "primary_F_points": "16.5",
+      "reverse_F_points": "16.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.0",
+        "upper": "-21.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.0",
+        "upper": "-21.8"
+      }
+    },
+    {
+      "category": "Automotive Parts and Accessories Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "36.5",
+      "income_F_points": "70.9",
+      "primary_F_points": "15.0",
+      "reverse_F_points": "15.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.6",
+        "upper": "-21.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.6",
+        "upper": "-21.4"
+      }
+    },
+    {
+      "category": "Automotive Transmission Repair",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.2",
+      "income_F_points": "71.1",
+      "primary_F_points": "19.4",
+      "reverse_F_points": "19.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.9",
+        "upper": "-21.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.9",
+        "upper": "-21.7"
+      }
+    },
+    {
+      "category": "Baked Goods Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.7",
+      "income_F_points": "71.9",
+      "primary_F_points": "17.3",
+      "reverse_F_points": "17.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.5",
+        "upper": "-24.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.5",
+        "upper": "-24.3"
+      }
+    },
+    {
+      "category": "Barber Shops",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.1",
+      "income_F_points": "65.2",
+      "primary_F_points": "16.7",
+      "reverse_F_points": "16.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.5",
+        "upper": "-24.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.5",
+        "upper": "-24.3"
+      }
+    },
+    {
+      "category": "Beauty Salons",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.3",
+      "income_F_points": "63.8",
+      "primary_F_points": "15.0",
+      "reverse_F_points": "15.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.4",
+        "upper": "-25.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.4",
+        "upper": "-25.2"
+      }
+    },
+    {
+      "category": "Beer, Wine, and Liquor Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.3",
+      "income_F_points": "66.3",
+      "primary_F_points": "16.7",
+      "reverse_F_points": "16.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.7",
+        "upper": "-24.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.7",
+        "upper": "-24.5"
+      }
+    },
+    {
+      "category": "Boat Dealers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "35.1",
+      "income_F_points": "65.0",
+      "primary_F_points": "12.5",
+      "reverse_F_points": "12.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.7",
+        "upper": "-22.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.7",
+        "upper": "-22.5"
+      }
+    },
+    {
+      "category": "Book Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.0",
+      "income_F_points": "63.4",
+      "primary_F_points": "14.8",
+      "reverse_F_points": "14.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-26.3",
+        "upper": "-26.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-26.3",
+        "upper": "-26.1"
+      }
+    },
+    {
+      "category": "Bowling Centers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "33.4",
+      "income_F_points": "73.8",
+      "primary_F_points": "12.7",
+      "reverse_F_points": "12.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.7",
+        "upper": "-20.5"
+      }
+    },
+    {
+      "category": "Breweries",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "35.4",
+      "income_F_points": "74.5",
+      "primary_F_points": "12.4",
+      "reverse_F_points": "12.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      }
+    },
+    {
+      "category": "Business Associations",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "29.2",
+      "income_F_points": "70.1",
+      "primary_F_points": "9.7",
+      "reverse_F_points": "9.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.6",
+        "upper": "-19.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.6",
+        "upper": "-19.4"
+      }
+    },
+    {
+      "category": "Cafeterias, Grill Buffets, and Buffets",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.6",
+      "income_F_points": "68.4",
+      "primary_F_points": "18.6",
+      "reverse_F_points": "18.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      }
+    },
+    {
+      "category": "Car Washes",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.0",
+      "income_F_points": "65.8",
+      "primary_F_points": "15.0",
+      "reverse_F_points": "15.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.1",
+        "upper": "-24.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.1",
+        "upper": "-24.9"
+      }
+    },
+    {
+      "category": "Casino Hotels",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.3",
+      "income_F_points": "71.5",
+      "primary_F_points": "19.3",
+      "reverse_F_points": "19.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.1",
+        "upper": "-21.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.1",
+        "upper": "-21.9"
+      }
+    },
+    {
+      "category": "Children's and Infants' Clothing Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.2",
+      "income_F_points": "73.2",
+      "primary_F_points": "19.8",
+      "reverse_F_points": "19.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      }
+    },
+    {
+      "category": "Clothing Accessories Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.1",
+      "income_F_points": "56.9",
+      "primary_F_points": "17.1",
+      "reverse_F_points": "17.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-28.1",
+        "upper": "-27.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-28.0",
+        "upper": "-27.8"
+      }
+    },
+    {
+      "category": "Coin-Operated Laundries and Drycleaners",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.0",
+      "income_F_points": "65.1",
+      "primary_F_points": "19.7",
+      "reverse_F_points": "19.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      }
+    },
+    {
+      "category": "Colleges, Universities, and Professional Schools",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.8",
+      "income_F_points": "71.6",
+      "primary_F_points": "19.8",
+      "reverse_F_points": "19.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      }
+    },
+    {
+      "category": "Commercial Banking",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.2",
+      "income_F_points": "71.6",
+      "primary_F_points": "15.1",
+      "reverse_F_points": "15.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      }
+    },
+    {
+      "category": "Commercial Printing (except Screen and Books)",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.0",
+      "income_F_points": "65.9",
+      "primary_F_points": "18.7",
+      "reverse_F_points": "18.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.4",
+        "upper": "-23.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      }
+    },
+    {
+      "category": "Confectionery and Nut Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.6",
+      "income_F_points": "58.4",
+      "primary_F_points": "13.5",
+      "reverse_F_points": "13.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-26.2",
+        "upper": "-26.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-26.2",
+        "upper": "-26.0"
+      }
+    },
+    {
+      "category": "Consumer Lending",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.7",
+      "income_F_points": "74.3",
+      "primary_F_points": "18.8",
+      "reverse_F_points": "18.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.0",
+        "upper": "-22.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.0",
+        "upper": "-22.8"
+      }
+    },
+    {
+      "category": "Convenience Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.6",
+      "income_F_points": "68.9",
+      "primary_F_points": "17.8",
+      "reverse_F_points": "17.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.8",
+        "upper": "-23.6"
+      }
+    },
+    {
+      "category": "Convention and Trade Show Organizers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.5",
+      "income_F_points": "73.6",
+      "primary_F_points": "15.1",
+      "reverse_F_points": "15.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      }
+    },
+    {
+      "category": "Cosmetics, Beauty Supplies, and Perfume Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.2",
+      "income_F_points": "71.2",
+      "primary_F_points": "18.8",
+      "reverse_F_points": "18.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.5",
+        "upper": "-24.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      }
+    },
+    {
+      "category": "Couriers and Express Delivery Services",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.9",
+      "income_F_points": "72.3",
+      "primary_F_points": "17.6",
+      "reverse_F_points": "17.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      }
+    },
+    {
+      "category": "Department Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.6",
+      "income_F_points": "74.9",
+      "primary_F_points": "18.7",
+      "reverse_F_points": "18.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.0",
+        "upper": "-21.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.0",
+        "upper": "-21.8"
+      }
+    },
+    {
+      "category": "Direct Life Insurance Carriers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.2",
+      "income_F_points": "66.8",
+      "primary_F_points": "13.6",
+      "reverse_F_points": "13.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.7",
+        "upper": "-24.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.7",
+        "upper": "-24.5"
+      }
+    },
+    {
+      "category": "Direct Property and Casualty Insurance Carriers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.4",
+      "income_F_points": "68.1",
+      "primary_F_points": "14.6",
+      "reverse_F_points": "14.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      }
+    },
+    {
+      "category": "Dog and Cat Food Manufacturing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.7",
+      "income_F_points": "78.2",
+      "primary_F_points": "15.1",
+      "reverse_F_points": "15.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.7",
+        "upper": "-22.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.7",
+        "upper": "-22.5"
+      }
+    },
+    {
+      "category": "Drinking Places (Alcoholic Beverages)",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.1",
+      "income_F_points": "68.5",
+      "primary_F_points": "15.4",
+      "reverse_F_points": "15.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.8",
+        "upper": "-23.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.8",
+        "upper": "-23.6"
+      }
+    },
+    {
+      "category": "Electronics Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.1",
+      "income_F_points": "63.1",
+      "primary_F_points": "16.9",
+      "reverse_F_points": "17.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-26.3",
+        "upper": "-26.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-26.2",
+        "upper": "-26.0"
+      }
+    },
+    {
+      "category": "Ethyl Alcohol Manufacturing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.4",
+      "income_F_points": "71.0",
+      "primary_F_points": "20.0",
+      "reverse_F_points": "20.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      }
+    },
+    {
+      "category": "Exam Preparation and Tutoring",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.0",
+      "income_F_points": "60.9",
+      "primary_F_points": "15.6",
+      "reverse_F_points": "15.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-29.5",
+        "upper": "-29.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-29.4",
+        "upper": "-29.2"
+      }
+    },
+    {
+      "category": "Family Clothing Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.2",
+      "income_F_points": "76.2",
+      "primary_F_points": "23.4",
+      "reverse_F_points": "23.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.9",
+        "upper": "-21.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.9",
+        "upper": "-21.7"
+      }
+    },
+    {
+      "category": "Farm Supplies Merchant Wholesalers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "26.0",
+      "income_F_points": "77.4",
+      "primary_F_points": "8.5",
+      "reverse_F_points": "8.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-17.6",
+        "upper": "-17.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-17.6",
+        "upper": "-17.4"
+      }
+    },
+    {
+      "category": "Financial Transactions Processing, Reserve, and Clearinghouse Activities",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.5",
+      "income_F_points": "69.5",
+      "primary_F_points": "16.0",
+      "reverse_F_points": "16.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.6",
+        "upper": "-25.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.6",
+        "upper": "-25.4"
+      }
+    },
+    {
+      "category": "Fish and Seafood Markets",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.3",
+      "income_F_points": "67.7",
+      "primary_F_points": "21.4",
+      "reverse_F_points": "21.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.0",
+        "upper": "-21.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.0",
+        "upper": "-21.8"
+      }
+    },
+    {
+      "category": "Fitness and Recreational Sports Centers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.4",
+      "income_F_points": "61.0",
+      "primary_F_points": "13.2",
+      "reverse_F_points": "13.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-26.3",
+        "upper": "-26.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-26.3",
+        "upper": "-26.1"
+      }
+    },
+    {
+      "category": "Floor Covering Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.2",
+      "income_F_points": "52.9",
+      "primary_F_points": "12.8",
+      "reverse_F_points": "12.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-28.5",
+        "upper": "-28.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-28.5",
+        "upper": "-28.3"
+      }
+    },
+    {
+      "category": "Florists",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.5",
+      "income_F_points": "61.3",
+      "primary_F_points": "13.9",
+      "reverse_F_points": "13.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.7",
+        "upper": "-24.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.7",
+        "upper": "-24.5"
+      }
+    },
+    {
+      "category": "Food (Health) Supplement Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.9",
+      "income_F_points": "72.4",
+      "primary_F_points": "17.7",
+      "reverse_F_points": "17.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.3",
+        "upper": "-25.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.3",
+        "upper": "-25.1"
+      }
+    },
+    {
+      "category": "Fresh Fruit and Vegetable Merchant Wholesalers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.8",
+      "income_F_points": "60.4",
+      "primary_F_points": "16.0",
+      "reverse_F_points": "16.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      }
+    },
+    {
+      "category": "Full-Service Restaurants",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.7",
+      "income_F_points": "69.8",
+      "primary_F_points": "17.6",
+      "reverse_F_points": "17.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      }
+    },
+    {
+      "category": "Funeral Homes and Funeral Services",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "35.1",
+      "income_F_points": "71.0",
+      "primary_F_points": "15.4",
+      "reverse_F_points": "15.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.8",
+        "upper": "-19.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.8",
+        "upper": "-19.6"
+      }
+    },
+    {
+      "category": "Furniture Merchant Wholesalers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.4",
+      "income_F_points": "59.6",
+      "primary_F_points": "16.9",
+      "reverse_F_points": "16.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.6",
+        "upper": "-24.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.6",
+        "upper": "-24.4"
+      }
+    },
+    {
+      "category": "Furniture Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.7",
+      "income_F_points": "70.9",
+      "primary_F_points": "17.4",
+      "reverse_F_points": "17.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      }
+    },
+    {
+      "category": "Gasoline Stations with Convenience Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "36.9",
+      "income_F_points": "71.2",
+      "primary_F_points": "15.6",
+      "reverse_F_points": "15.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.4",
+        "upper": "-21.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.4",
+        "upper": "-21.2"
+      }
+    },
+    {
+      "category": "General Automotive Repair",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.7",
+      "income_F_points": "64.4",
+      "primary_F_points": "15.7",
+      "reverse_F_points": "15.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.1",
+        "upper": "-23.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.1",
+        "upper": "-23.9"
+      }
+    },
+    {
+      "category": "General Line Grocery Merchant Wholesalers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.8",
+      "income_F_points": "69.5",
+      "primary_F_points": "21.0",
+      "reverse_F_points": "21.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.9",
+        "upper": "-21.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.9",
+        "upper": "-21.7"
+      }
+    },
+    {
+      "category": "General Warehousing and Storage",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.1",
+      "income_F_points": "68.5",
+      "primary_F_points": "16.0",
+      "reverse_F_points": "16.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      }
+    },
+    {
+      "category": "Gift, Novelty, and Souvenir Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.6",
+      "income_F_points": "61.4",
+      "primary_F_points": "13.9",
+      "reverse_F_points": "13.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.8",
+        "upper": "-25.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.8",
+        "upper": "-25.6"
+      }
+    },
+    {
+      "category": "Golf Courses and Country Clubs",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "30.4",
+      "income_F_points": "69.5",
+      "primary_F_points": "9.7",
+      "reverse_F_points": "9.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.7",
+        "upper": "-20.5"
+      }
+    },
+    {
+      "category": "Grape Vineyards",
+      "weighting": "equal",
+      "status": "withheld_support",
+      "mixture_F_points": null,
+      "income_F_points": null,
+      "primary_F_points": null,
+      "reverse_F_points": null,
+      "primary_minus_mixture_interval_points": null,
+      "reverse_minus_mixture_interval_points": null
+    },
+    {
+      "category": "Hardware Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "36.1",
+      "income_F_points": "71.0",
+      "primary_F_points": "14.6",
+      "reverse_F_points": "14.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.6",
+        "upper": "-21.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.6",
+        "upper": "-21.4"
+      }
+    },
+    {
+      "category": "Hobby, Toy, and Game Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.3",
+      "income_F_points": "69.8",
+      "primary_F_points": "15.7",
+      "reverse_F_points": "15.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.7",
+        "upper": "-24.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.6",
+        "upper": "-24.4"
+      }
+    },
+    {
+      "category": "Home Centers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "36.6",
+      "income_F_points": "60.0",
+      "primary_F_points": "12.9",
+      "reverse_F_points": "12.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.8",
+        "upper": "-23.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.8",
+        "upper": "-23.6"
+      }
+    },
+    {
+      "category": "Hotels (except Casino Hotels) and Motels",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.5",
+      "income_F_points": "73.6",
+      "primary_F_points": "19.9",
+      "reverse_F_points": "19.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      }
+    },
+    {
+      "category": "Household Appliance Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.6",
+      "income_F_points": "70.7",
+      "primary_F_points": "16.4",
+      "reverse_F_points": "16.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      }
+    },
+    {
+      "category": "Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "36.9",
+      "income_F_points": "77.0",
+      "primary_F_points": "15.6",
+      "reverse_F_points": "15.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.4",
+        "upper": "-21.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.4",
+        "upper": "-21.2"
+      }
+    },
+    {
+      "category": "Insurance Agencies and Brokerages",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "36.5",
+      "income_F_points": "70.4",
+      "primary_F_points": "14.1",
+      "reverse_F_points": "14.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      }
+    },
+    {
+      "category": "Investment Advice",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "36.1",
+      "income_F_points": "67.2",
+      "primary_F_points": "11.6",
+      "reverse_F_points": "11.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.6",
+        "upper": "-24.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.6",
+        "upper": "-24.4"
+      }
+    },
+    {
+      "category": "Iron and Steel Mills and Ferroalloy Manufacturing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.6",
+      "income_F_points": "68.9",
+      "primary_F_points": "17.4",
+      "reverse_F_points": "17.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.3",
+        "upper": "-20.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.3",
+        "upper": "-20.1"
+      }
+    },
+    {
+      "category": "Jewelry Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.9",
+      "income_F_points": "75.4",
+      "primary_F_points": "20.2",
+      "reverse_F_points": "20.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.8",
+        "upper": "-23.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.8",
+        "upper": "-23.6"
+      }
+    },
+    {
+      "category": "Jewelry, Watch, Precious Stone, and Precious Metal Merchant Wholesalers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.7",
+      "income_F_points": "73.5",
+      "primary_F_points": "14.2",
+      "reverse_F_points": "14.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.6",
+        "upper": "-24.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.6",
+        "upper": "-24.4"
+      }
+    },
+    {
+      "category": "Leather and Hide Tanning and Finishing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.6",
+      "income_F_points": "77.9",
+      "primary_F_points": "16.0",
+      "reverse_F_points": "16.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      }
+    },
+    {
+      "category": "Lessors of Miniwarehouses and Self-Storage Units",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "48.4",
+      "income_F_points": "71.0",
+      "primary_F_points": "22.9",
+      "reverse_F_points": "23.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.6",
+        "upper": "-25.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.5",
+        "upper": "-25.3"
+      }
+    },
+    {
+      "category": "Lessors of Nonfinancial Intangible Assets (except Copyrighted Works)",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.6",
+      "income_F_points": "80.1",
+      "primary_F_points": "16.9",
+      "reverse_F_points": "16.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      }
+    },
+    {
+      "category": "Lessors of Nonresidential Buildings (except Miniwarehouses)",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.2",
+      "income_F_points": "77.9",
+      "primary_F_points": "22.8",
+      "reverse_F_points": "22.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      }
+    },
+    {
+      "category": "Lessors of Other Real Estate Property",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.2",
+      "income_F_points": "69.4",
+      "primary_F_points": "13.3",
+      "reverse_F_points": "13.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.0",
+        "upper": "-23.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.0",
+        "upper": "-23.8"
+      }
+    },
+    {
+      "category": "Lessors of Residential Buildings and Dwellings",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "48.7",
+      "income_F_points": "65.6",
+      "primary_F_points": "21.5",
+      "reverse_F_points": "21.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-27.3",
+        "upper": "-27.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-27.3",
+        "upper": "-27.1"
+      }
+    },
+    {
+      "category": "Libraries and Archives",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "35.9",
+      "income_F_points": "67.2",
+      "primary_F_points": "13.6",
+      "reverse_F_points": "13.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.4",
+        "upper": "-22.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.4",
+        "upper": "-22.2"
+      }
+    },
+    {
+      "category": "Limited-Service Restaurants",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.3",
+      "income_F_points": "75.1",
+      "primary_F_points": "18.4",
+      "reverse_F_points": "18.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.0",
+        "upper": "-22.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.0",
+        "upper": "-22.8"
+      }
+    },
+    {
+      "category": "Locksmiths",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.4",
+      "income_F_points": "55.7",
+      "primary_F_points": "15.9",
+      "reverse_F_points": "15.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-27.6",
+        "upper": "-27.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-27.6",
+        "upper": "-27.4"
+      }
+    },
+    {
+      "category": "Mattress Manufacturing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.2",
+      "income_F_points": "78.6",
+      "primary_F_points": "18.5",
+      "reverse_F_points": "18.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.7",
+        "upper": "-22.5"
+      }
+    },
+    {
+      "category": "Meat Markets",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.3",
+      "income_F_points": "65.6",
+      "primary_F_points": "16.7",
+      "reverse_F_points": "16.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.7",
+        "upper": "-23.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.7",
+        "upper": "-23.5"
+      }
+    },
+    {
+      "category": "Men's Clothing Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.3",
+      "income_F_points": "69.1",
+      "primary_F_points": "18.9",
+      "reverse_F_points": "19.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.5",
+        "upper": "-24.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      }
+    },
+    {
+      "category": "Motion Picture Theaters (except Drive-Ins)",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.8",
+      "income_F_points": "81.3",
+      "primary_F_points": "21.2",
+      "reverse_F_points": "21.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      }
+    },
+    {
+      "category": "Motor Vehicle Towing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.8",
+      "income_F_points": "52.7",
+      "primary_F_points": "14.2",
+      "reverse_F_points": "14.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.7",
+        "upper": "-25.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.7",
+        "upper": "-25.5"
+      }
+    },
+    {
+      "category": "Motor and Generator Manufacturing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "29.5",
+      "income_F_points": "65.7",
+      "primary_F_points": "9.4",
+      "reverse_F_points": "9.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.2",
+        "upper": "-20.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.1",
+        "upper": "-19.9"
+      }
+    },
+    {
+      "category": "Motorcycle, ATV, and All Other Motor Vehicle Dealers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.2",
+      "income_F_points": "61.5",
+      "primary_F_points": "15.0",
+      "reverse_F_points": "15.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.3",
+        "upper": "-24.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.3",
+        "upper": "-24.1"
+      }
+    },
+    {
+      "category": "Museums",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.2",
+      "income_F_points": "72.4",
+      "primary_F_points": "16.5",
+      "reverse_F_points": "16.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      }
+    },
+    {
+      "category": "Musical Instrument and Supplies Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.0",
+      "income_F_points": "67.5",
+      "primary_F_points": "15.7",
+      "reverse_F_points": "15.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.4",
+        "upper": "-25.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.4",
+        "upper": "-25.2"
+      }
+    },
+    {
+      "category": "Nail Salons",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.4",
+      "income_F_points": "68.1",
+      "primary_F_points": "17.5",
+      "reverse_F_points": "17.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-26.0",
+        "upper": "-25.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-26.0",
+        "upper": "-25.8"
+      }
+    },
+    {
+      "category": "Nature Parks and Other Similar Institutions",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "54.1",
+      "income_F_points": "68.9",
+      "primary_F_points": "31.7",
+      "reverse_F_points": "31.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      }
+    },
+    {
+      "category": "New Car Dealers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.0",
+      "income_F_points": "71.6",
+      "primary_F_points": "17.3",
+      "reverse_F_points": "17.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.8",
+        "upper": "-21.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      }
+    },
+    {
+      "category": "Nursery, Garden Center, and Farm Supply Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "31.2",
+      "income_F_points": "68.0",
+      "primary_F_points": "10.1",
+      "reverse_F_points": "10.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.2",
+        "upper": "-21.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.2",
+        "upper": "-21.0"
+      }
+    },
+    {
+      "category": "Office Supplies and Stationery Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.9",
+      "income_F_points": "72.3",
+      "primary_F_points": "16.6",
+      "reverse_F_points": "16.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      }
+    },
+    {
+      "category": "Offices of Real Estate Agents and Brokers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.2",
+      "income_F_points": "66.1",
+      "primary_F_points": "19.7",
+      "reverse_F_points": "19.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.6",
+        "upper": "-25.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.6",
+        "upper": "-25.4"
+      }
+    },
+    {
+      "category": "Optical Goods Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.3",
+      "income_F_points": "73.0",
+      "primary_F_points": "15.6",
+      "reverse_F_points": "15.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.8",
+        "upper": "-23.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.7",
+        "upper": "-23.5"
+      }
+    },
+    {
+      "category": "Other Activities Related to Credit Intermediation",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.7",
+      "income_F_points": "74.1",
+      "primary_F_points": "18.6",
+      "reverse_F_points": "18.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      }
+    },
+    {
+      "category": "Other Automotive Mechanical and Electrical Repair and Maintenance",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.1",
+      "income_F_points": "67.9",
+      "primary_F_points": "18.3",
+      "reverse_F_points": "18.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.9",
+        "upper": "-21.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.9",
+        "upper": "-21.7"
+      }
+    },
+    {
+      "category": "Other Building Material Dealers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.8",
+      "income_F_points": "58.8",
+      "primary_F_points": "13.7",
+      "reverse_F_points": "13.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      }
+    },
+    {
+      "category": "Other Clothing Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.0",
+      "income_F_points": "67.6",
+      "primary_F_points": "17.9",
+      "reverse_F_points": "17.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.2",
+        "upper": "-25.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.2",
+        "upper": "-25.0"
+      }
+    },
+    {
+      "category": "Other Communications Equipment Manufacturing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.9",
+      "income_F_points": "77.6",
+      "primary_F_points": "16.9",
+      "reverse_F_points": "16.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.1",
+        "upper": "-21.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.1",
+        "upper": "-21.9"
+      }
+    },
+    {
+      "category": "Other Gambling Industries",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.7",
+      "income_F_points": "73.9",
+      "primary_F_points": "16.1",
+      "reverse_F_points": "16.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.7",
+        "upper": "-24.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.7",
+        "upper": "-24.5"
+      }
+    },
+    {
+      "category": "Other Gasoline Stations",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "35.7",
+      "income_F_points": "70.9",
+      "primary_F_points": "14.3",
+      "reverse_F_points": "14.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.5",
+        "upper": "-21.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.5",
+        "upper": "-21.3"
+      }
+    },
+    {
+      "category": "Other Millwork (including Flooring)",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "35.7",
+      "income_F_points": "78.1",
+      "primary_F_points": "14.8",
+      "reverse_F_points": "14.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.0",
+        "upper": "-20.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.0",
+        "upper": "-20.8"
+      }
+    },
+    {
+      "category": "Paint and Coating Manufacturing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.1",
+      "income_F_points": "72.7",
+      "primary_F_points": "15.1",
+      "reverse_F_points": "15.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      }
+    },
+    {
+      "category": "Painting and Wall Covering Contractors",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.7",
+      "income_F_points": "37.5",
+      "primary_F_points": "9.0",
+      "reverse_F_points": "9.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-30.8",
+        "upper": "-30.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-30.8",
+        "upper": "-30.6"
+      }
+    },
+    {
+      "category": "Parking Lots and Garages",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "47.3",
+      "income_F_points": "73.7",
+      "primary_F_points": "22.5",
+      "reverse_F_points": "22.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.9",
+        "upper": "-24.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.9",
+        "upper": "-24.7"
+      }
+    },
+    {
+      "category": "Passenger Car Leasing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.8",
+      "income_F_points": "74.4",
+      "primary_F_points": "18.0",
+      "reverse_F_points": "18.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      }
+    },
+    {
+      "category": "Passenger Car Rental",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.7",
+      "income_F_points": "74.5",
+      "primary_F_points": "20.6",
+      "reverse_F_points": "20.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      }
+    },
+    {
+      "category": "Pesticide and Other Agricultural Chemical Manufacturing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "29.2",
+      "income_F_points": "60.0",
+      "primary_F_points": "11.0",
+      "reverse_F_points": "11.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-18.3",
+        "upper": "-18.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-18.3",
+        "upper": "-18.1"
+      }
+    },
+    {
+      "category": "Pet Care (except Veterinary) Services",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "34.9",
+      "income_F_points": "58.5",
+      "primary_F_points": "10.9",
+      "reverse_F_points": "10.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.1",
+        "upper": "-23.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.1",
+        "upper": "-23.9"
+      }
+    },
+    {
+      "category": "Pet and Pet Supplies Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.0",
+      "income_F_points": "71.0",
+      "primary_F_points": "13.2",
+      "reverse_F_points": "13.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.9",
+        "upper": "-24.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.8",
+        "upper": "-24.6"
+      }
+    },
+    {
+      "category": "Pharmacies and Drug Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.3",
+      "income_F_points": "70.2",
+      "primary_F_points": "16.8",
+      "reverse_F_points": "16.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.6",
+        "upper": "-23.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.6",
+        "upper": "-23.4"
+      }
+    },
+    {
+      "category": "Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.2",
+      "income_F_points": "73.5",
+      "primary_F_points": "20.0",
+      "reverse_F_points": "20.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      }
+    },
+    {
+      "category": "Plumbing, Heating, and Air-Conditioning Contractors",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.2",
+      "income_F_points": "46.8",
+      "primary_F_points": "10.5",
+      "reverse_F_points": "10.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-26.8",
+        "upper": "-26.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-26.8",
+        "upper": "-26.6"
+      }
+    },
+    {
+      "category": "Postal Service",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "30.9",
+      "income_F_points": "59.4",
+      "primary_F_points": "10.3",
+      "reverse_F_points": "10.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.7",
+        "upper": "-20.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.7",
+        "upper": "-20.5"
+      }
+    },
+    {
+      "category": "Private Mail Centers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.4",
+      "income_F_points": "68.7",
+      "primary_F_points": "14.7",
+      "reverse_F_points": "14.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-26.8",
+        "upper": "-26.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-26.8",
+        "upper": "-26.6"
+      }
+    },
+    {
+      "category": "RV (Recreational Vehicle) Parks and Campgrounds",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "32.5",
+      "income_F_points": "76.6",
+      "primary_F_points": "13.6",
+      "reverse_F_points": "13.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.0",
+        "upper": "-18.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.0",
+        "upper": "-18.8"
+      }
+    },
+    {
+      "category": "Refrigeration Equipment and Supplies Merchant Wholesalers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.6",
+      "income_F_points": "61.9",
+      "primary_F_points": "14.4",
+      "reverse_F_points": "14.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.3",
+        "upper": "-24.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      }
+    },
+    {
+      "category": "Regulation and Administration of Transportation Programs",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.8",
+      "income_F_points": "76.0",
+      "primary_F_points": "17.8",
+      "reverse_F_points": "17.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.1",
+        "upper": "-20.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.0",
+        "upper": "-20.8"
+      }
+    },
+    {
+      "category": "Retail Bakeries",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.0",
+      "income_F_points": "61.2",
+      "primary_F_points": "17.0",
+      "reverse_F_points": "17.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-26.1",
+        "upper": "-25.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-26.1",
+        "upper": "-25.9"
+      }
+    },
+    {
+      "category": "Rooming and Boarding Houses, Dormitories, and Workers' Camps",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.2",
+      "income_F_points": "40.4",
+      "primary_F_points": "6.8",
+      "reverse_F_points": "6.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-34.5",
+        "upper": "-34.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-34.5",
+        "upper": "-34.3"
+      }
+    },
+    {
+      "category": "Securities Brokerage",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "33.0",
+      "income_F_points": "69.1",
+      "primary_F_points": "9.6",
+      "reverse_F_points": "9.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      }
+    },
+    {
+      "category": "Sewing, Needlework, and Piece Goods Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.4",
+      "income_F_points": "63.9",
+      "primary_F_points": "13.1",
+      "reverse_F_points": "13.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      }
+    },
+    {
+      "category": "Shoe Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.1",
+      "income_F_points": "78.1",
+      "primary_F_points": "19.2",
+      "reverse_F_points": "19.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.0",
+        "upper": "-21.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.0",
+        "upper": "-21.8"
+      }
+    },
+    {
+      "category": "Snack and Nonalcoholic Beverage Bars",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.6",
+      "income_F_points": "69.7",
+      "primary_F_points": "15.6",
+      "reverse_F_points": "15.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.1",
+        "upper": "-24.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.0",
+        "upper": "-24.8"
+      }
+    },
+    {
+      "category": "Sporting Goods Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.4",
+      "income_F_points": "68.5",
+      "primary_F_points": "13.3",
+      "reverse_F_points": "13.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      }
+    },
+    {
+      "category": "Supermarkets and Other Grocery (except Convenience) Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.4",
+      "income_F_points": "67.1",
+      "primary_F_points": "18.0",
+      "reverse_F_points": "18.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.4",
+        "upper": "-23.2"
+      }
+    },
+    {
+      "category": "Tax Preparation Services",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.2",
+      "income_F_points": "64.0",
+      "primary_F_points": "17.3",
+      "reverse_F_points": "17.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.0",
+        "upper": "-24.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.9",
+        "upper": "-24.7"
+      }
+    },
+    {
+      "category": "Taxi Service",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "47.5",
+      "income_F_points": "46.9",
+      "primary_F_points": "15.7",
+      "reverse_F_points": "15.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-31.9",
+        "upper": "-31.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-31.9",
+        "upper": "-31.7"
+      }
+    },
+    {
+      "category": "Television Broadcasting",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.8",
+      "income_F_points": "79.1",
+      "primary_F_points": "15.6",
+      "reverse_F_points": "15.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      }
+    },
+    {
+      "category": "Tire Dealers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.0",
+      "income_F_points": "74.9",
+      "primary_F_points": "17.5",
+      "reverse_F_points": "17.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.6",
+        "upper": "-21.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.6",
+        "upper": "-21.4"
+      }
+    },
+    {
+      "category": "Tire Manufacturing (except Retreading)",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.5",
+      "income_F_points": "75.3",
+      "primary_F_points": "16.3",
+      "reverse_F_points": "16.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.3",
+        "upper": "-22.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.3",
+        "upper": "-22.1"
+      }
+    },
+    {
+      "category": "Tobacco Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.5",
+      "income_F_points": "67.4",
+      "primary_F_points": "21.2",
+      "reverse_F_points": "21.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.4",
+        "upper": "-25.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.4",
+        "upper": "-25.2"
+      }
+    },
+    {
+      "category": "Travel Agencies",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.0",
+      "income_F_points": "51.8",
+      "primary_F_points": "15.5",
+      "reverse_F_points": "15.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-28.6",
+        "upper": "-28.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-28.5",
+        "upper": "-28.3"
+      }
+    },
+    {
+      "category": "Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.9",
+      "income_F_points": "70.7",
+      "primary_F_points": "17.2",
+      "reverse_F_points": "17.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      }
+    },
+    {
+      "category": "Used Car Dealers",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.2",
+      "income_F_points": "71.6",
+      "primary_F_points": "18.8",
+      "reverse_F_points": "18.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.5",
+        "upper": "-20.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.5",
+        "upper": "-20.3"
+      }
+    },
+    {
+      "category": "Used Merchandise Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.0",
+      "income_F_points": "70.0",
+      "primary_F_points": "16.0",
+      "reverse_F_points": "16.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      }
+    },
+    {
+      "category": "Veterinary Services",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "36.6",
+      "income_F_points": "71.3",
+      "primary_F_points": "12.6",
+      "reverse_F_points": "12.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.1",
+        "upper": "-23.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.1",
+        "upper": "-23.9"
+      }
+    },
+    {
+      "category": "Wineries",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.3",
+      "income_F_points": "71.0",
+      "primary_F_points": "15.0",
+      "reverse_F_points": "15.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.4",
+        "upper": "-22.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.4",
+        "upper": "-22.2"
+      }
+    },
+    {
+      "category": "Wireless Telecommunications Carriers (except Satellite)",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.3",
+      "income_F_points": "73.0",
+      "primary_F_points": "19.5",
+      "reverse_F_points": "19.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.8",
+        "upper": "-23.6"
+      }
+    },
+    {
+      "category": "Women's Clothing Stores",
+      "weighting": "equal",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.4",
+      "income_F_points": "67.2",
+      "primary_F_points": "17.2",
+      "reverse_F_points": "17.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-25.3",
+        "upper": "-25.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-25.3",
+        "upper": "-25.1"
+      }
+    },
+    {
+      "category": "All Other Amusement and Recreation Industries",
+      "weighting": "visits",
+      "status": "withheld_support",
+      "mixture_F_points": null,
+      "income_F_points": null,
+      "primary_F_points": null,
+      "reverse_F_points": null,
+      "primary_minus_mixture_interval_points": null,
+      "reverse_minus_mixture_interval_points": null
+    },
+    {
+      "category": "All Other Consumer Goods Rental",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.9",
+      "income_F_points": "79.2",
+      "primary_F_points": "20.3",
+      "reverse_F_points": "20.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.7",
+        "upper": "-20.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.7",
+        "upper": "-20.5"
+      }
+    },
+    {
+      "category": "All Other General Merchandise Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.6",
+      "income_F_points": "81.5",
+      "primary_F_points": "19.9",
+      "reverse_F_points": "19.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      }
+    },
+    {
+      "category": "All Other Health and Personal Care Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.6",
+      "income_F_points": "75.0",
+      "primary_F_points": "18.8",
+      "reverse_F_points": "18.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      }
+    },
+    {
+      "category": "All Other Home Furnishings Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.6",
+      "income_F_points": "77.5",
+      "primary_F_points": "19.5",
+      "reverse_F_points": "19.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      }
+    },
+    {
+      "category": "All Other Miscellaneous Manufacturing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.2",
+      "income_F_points": "80.9",
+      "primary_F_points": "15.5",
+      "reverse_F_points": "15.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.8",
+        "upper": "-21.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.8",
+        "upper": "-21.6"
+      }
+    },
+    {
+      "category": "All Other Miscellaneous Store Retailers (except Tobacco Stores)",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.2",
+      "income_F_points": "76.1",
+      "primary_F_points": "19.7",
+      "reverse_F_points": "19.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.6",
+        "upper": "-22.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.6",
+        "upper": "-22.4"
+      }
+    },
+    {
+      "category": "All Other Specialty Food Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.8",
+      "income_F_points": "74.9",
+      "primary_F_points": "22.4",
+      "reverse_F_points": "22.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      }
+    },
+    {
+      "category": "All Other Transportation Equipment Manufacturing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.8",
+      "income_F_points": "82.5",
+      "primary_F_points": "18.0",
+      "reverse_F_points": "18.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.9",
+        "upper": "-19.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.9",
+        "upper": "-19.7"
+      }
+    },
+    {
+      "category": "All Other Traveler Accommodation",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.1",
+      "income_F_points": "72.3",
+      "primary_F_points": "15.0",
+      "reverse_F_points": "15.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.1",
+        "upper": "-23.9"
+      }
+    },
+    {
+      "category": "Automobile Manufacturing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.3",
+      "income_F_points": "79.3",
+      "primary_F_points": "19.5",
+      "reverse_F_points": "19.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.9",
+        "upper": "-20.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.9",
+        "upper": "-20.7"
+      }
+    },
+    {
+      "category": "Automotive Body, Paint, and Interior Repair and Maintenance",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "50.3",
+      "income_F_points": "77.4",
+      "primary_F_points": "26.6",
+      "reverse_F_points": "26.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.8",
+        "upper": "-23.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.7",
+        "upper": "-23.5"
+      }
+    },
+    {
+      "category": "Automotive Glass Replacement Shops",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.1",
+      "income_F_points": "76.9",
+      "primary_F_points": "22.1",
+      "reverse_F_points": "22.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.1",
+        "upper": "-21.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.1",
+        "upper": "-21.9"
+      }
+    },
+    {
+      "category": "Automotive Oil Change and Lubrication Shops",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.1",
+      "income_F_points": "80.9",
+      "primary_F_points": "17.9",
+      "reverse_F_points": "18.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.3",
+        "upper": "-21.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.2",
+        "upper": "-21.0"
+      }
+    },
+    {
+      "category": "Automotive Parts and Accessories Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.2",
+      "income_F_points": "76.3",
+      "primary_F_points": "18.5",
+      "reverse_F_points": "18.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.8",
+        "upper": "-21.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      }
+    },
+    {
+      "category": "Automotive Transmission Repair",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.8",
+      "income_F_points": "78.7",
+      "primary_F_points": "25.0",
+      "reverse_F_points": "25.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.9",
+        "upper": "-19.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.9",
+        "upper": "-19.7"
+      }
+    },
+    {
+      "category": "Baked Goods Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.7",
+      "income_F_points": "75.7",
+      "primary_F_points": "21.2",
+      "reverse_F_points": "21.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.6",
+        "upper": "-24.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.6",
+        "upper": "-24.4"
+      }
+    },
+    {
+      "category": "Barber Shops",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.8",
+      "income_F_points": "75.3",
+      "primary_F_points": "21.7",
+      "reverse_F_points": "21.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      }
+    },
+    {
+      "category": "Beauty Salons",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.2",
+      "income_F_points": "74.8",
+      "primary_F_points": "20.8",
+      "reverse_F_points": "20.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      }
+    },
+    {
+      "category": "Beer, Wine, and Liquor Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.9",
+      "income_F_points": "74.1",
+      "primary_F_points": "21.0",
+      "reverse_F_points": "21.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.0",
+        "upper": "-23.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.0",
+        "upper": "-23.8"
+      }
+    },
+    {
+      "category": "Boat Dealers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.6",
+      "income_F_points": "79.2",
+      "primary_F_points": "21.1",
+      "reverse_F_points": "21.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.6",
+        "upper": "-21.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.5",
+        "upper": "-21.3"
+      }
+    },
+    {
+      "category": "Book Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.3",
+      "income_F_points": "77.2",
+      "primary_F_points": "20.4",
+      "reverse_F_points": "20.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.0",
+        "upper": "-23.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.0",
+        "upper": "-23.8"
+      }
+    },
+    {
+      "category": "Bowling Centers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.1",
+      "income_F_points": "81.4",
+      "primary_F_points": "18.5",
+      "reverse_F_points": "18.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.7",
+        "upper": "-20.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.7",
+        "upper": "-20.5"
+      }
+    },
+    {
+      "category": "Breweries",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.5",
+      "income_F_points": "79.0",
+      "primary_F_points": "14.5",
+      "reverse_F_points": "14.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      }
+    },
+    {
+      "category": "Business Associations",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "35.4",
+      "income_F_points": "77.4",
+      "primary_F_points": "14.7",
+      "reverse_F_points": "14.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      }
+    },
+    {
+      "category": "Cafeterias, Grill Buffets, and Buffets",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.7",
+      "income_F_points": "78.0",
+      "primary_F_points": "23.1",
+      "reverse_F_points": "23.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      }
+    },
+    {
+      "category": "Car Washes",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.3",
+      "income_F_points": "77.5",
+      "primary_F_points": "19.9",
+      "reverse_F_points": "19.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      }
+    },
+    {
+      "category": "Casino Hotels",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.7",
+      "income_F_points": "81.1",
+      "primary_F_points": "26.9",
+      "reverse_F_points": "26.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.9",
+        "upper": "-19.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.9",
+        "upper": "-19.7"
+      }
+    },
+    {
+      "category": "Children's and Infants' Clothing Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.3",
+      "income_F_points": "79.3",
+      "primary_F_points": "24.3",
+      "reverse_F_points": "24.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.1",
+        "upper": "-21.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.1",
+        "upper": "-21.9"
+      }
+    },
+    {
+      "category": "Clothing Accessories Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "48.5",
+      "income_F_points": "73.9",
+      "primary_F_points": "25.6",
+      "reverse_F_points": "25.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.0",
+        "upper": "-22.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.0",
+        "upper": "-22.8"
+      }
+    },
+    {
+      "category": "Coin-Operated Laundries and Drycleaners",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "47.5",
+      "income_F_points": "76.5",
+      "primary_F_points": "25.8",
+      "reverse_F_points": "25.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.8",
+        "upper": "-21.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.8",
+        "upper": "-21.6"
+      }
+    },
+    {
+      "category": "Colleges, Universities, and Professional Schools",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "47.7",
+      "income_F_points": "82.5",
+      "primary_F_points": "27.8",
+      "reverse_F_points": "27.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.0",
+        "upper": "-19.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.0",
+        "upper": "-19.8"
+      }
+    },
+    {
+      "category": "Commercial Banking",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.9",
+      "income_F_points": "76.8",
+      "primary_F_points": "19.1",
+      "reverse_F_points": "19.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      }
+    },
+    {
+      "category": "Commercial Printing (except Screen and Books)",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "48.1",
+      "income_F_points": "80.9",
+      "primary_F_points": "28.4",
+      "reverse_F_points": "28.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.8",
+        "upper": "-19.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.7",
+        "upper": "-19.5"
+      }
+    },
+    {
+      "category": "Confectionery and Nut Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.8",
+      "income_F_points": "75.6",
+      "primary_F_points": "20.6",
+      "reverse_F_points": "20.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      }
+    },
+    {
+      "category": "Consumer Lending",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.8",
+      "income_F_points": "77.0",
+      "primary_F_points": "20.1",
+      "reverse_F_points": "20.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      }
+    },
+    {
+      "category": "Convenience Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.4",
+      "income_F_points": "75.6",
+      "primary_F_points": "20.2",
+      "reverse_F_points": "20.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      }
+    },
+    {
+      "category": "Convention and Trade Show Organizers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.5",
+      "income_F_points": "79.6",
+      "primary_F_points": "22.0",
+      "reverse_F_points": "22.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.6",
+        "upper": "-21.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.5",
+        "upper": "-21.3"
+      }
+    },
+    {
+      "category": "Cosmetics, Beauty Supplies, and Perfume Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "47.2",
+      "income_F_points": "77.9",
+      "primary_F_points": "24.6",
+      "reverse_F_points": "24.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.7",
+        "upper": "-22.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.6",
+        "upper": "-22.4"
+      }
+    },
+    {
+      "category": "Couriers and Express Delivery Services",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.3",
+      "income_F_points": "76.9",
+      "primary_F_points": "19.7",
+      "reverse_F_points": "19.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.7",
+        "upper": "-23.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.6",
+        "upper": "-23.4"
+      }
+    },
+    {
+      "category": "Department Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.2",
+      "income_F_points": "81.4",
+      "primary_F_points": "23.3",
+      "reverse_F_points": "23.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.0",
+        "upper": "-20.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.0",
+        "upper": "-20.8"
+      }
+    },
+    {
+      "category": "Direct Life Insurance Carriers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.1",
+      "income_F_points": "73.1",
+      "primary_F_points": "17.6",
+      "reverse_F_points": "17.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.6",
+        "upper": "-24.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.6",
+        "upper": "-24.4"
+      }
+    },
+    {
+      "category": "Direct Property and Casualty Insurance Carriers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.2",
+      "income_F_points": "76.3",
+      "primary_F_points": "23.3",
+      "reverse_F_points": "23.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.0",
+        "upper": "-22.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.0",
+        "upper": "-22.8"
+      }
+    },
+    {
+      "category": "Dog and Cat Food Manufacturing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.3",
+      "income_F_points": "81.3",
+      "primary_F_points": "17.9",
+      "reverse_F_points": "18.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.4",
+        "upper": "-22.2"
+      }
+    },
+    {
+      "category": "Drinking Places (Alcoholic Beverages)",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.5",
+      "income_F_points": "77.2",
+      "primary_F_points": "21.4",
+      "reverse_F_points": "21.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      }
+    },
+    {
+      "category": "Electronics Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "47.1",
+      "income_F_points": "77.0",
+      "primary_F_points": "24.3",
+      "reverse_F_points": "24.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      }
+    },
+    {
+      "category": "Ethyl Alcohol Manufacturing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.5",
+      "income_F_points": "75.2",
+      "primary_F_points": "21.0",
+      "reverse_F_points": "21.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.6",
+        "upper": "-22.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      }
+    },
+    {
+      "category": "Exam Preparation and Tutoring",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.6",
+      "income_F_points": "67.2",
+      "primary_F_points": "19.1",
+      "reverse_F_points": "19.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-27.6",
+        "upper": "-27.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-27.6",
+        "upper": "-27.4"
+      }
+    },
+    {
+      "category": "Family Clothing Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "47.1",
+      "income_F_points": "81.2",
+      "primary_F_points": "26.2",
+      "reverse_F_points": "26.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.0",
+        "upper": "-20.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.9",
+        "upper": "-20.7"
+      }
+    },
+    {
+      "category": "Farm Supplies Merchant Wholesalers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "25.0",
+      "income_F_points": "81.7",
+      "primary_F_points": "7.9",
+      "reverse_F_points": "8.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-17.2",
+        "upper": "-17.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-17.1",
+        "upper": "-16.9"
+      }
+    },
+    {
+      "category": "Financial Transactions Processing, Reserve, and Clearinghouse Activities",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.0",
+      "income_F_points": "76.2",
+      "primary_F_points": "17.3",
+      "reverse_F_points": "17.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.8",
+        "upper": "-23.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.7",
+        "upper": "-23.5"
+      }
+    },
+    {
+      "category": "Fish and Seafood Markets",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "48.5",
+      "income_F_points": "79.1",
+      "primary_F_points": "29.2",
+      "reverse_F_points": "29.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.4",
+        "upper": "-19.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.4",
+        "upper": "-19.2"
+      }
+    },
+    {
+      "category": "Fitness and Recreational Sports Centers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.6",
+      "income_F_points": "74.6",
+      "primary_F_points": "20.5",
+      "reverse_F_points": "20.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.2",
+        "upper": "-24.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.1",
+        "upper": "-23.9"
+      }
+    },
+    {
+      "category": "Floor Covering Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.4",
+      "income_F_points": "71.9",
+      "primary_F_points": "20.1",
+      "reverse_F_points": "20.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      }
+    },
+    {
+      "category": "Florists",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.5",
+      "income_F_points": "73.5",
+      "primary_F_points": "20.3",
+      "reverse_F_points": "20.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      }
+    },
+    {
+      "category": "Food (Health) Supplement Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.4",
+      "income_F_points": "76.7",
+      "primary_F_points": "21.1",
+      "reverse_F_points": "21.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.4",
+        "upper": "-24.2"
+      }
+    },
+    {
+      "category": "Fresh Fruit and Vegetable Merchant Wholesalers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.7",
+      "income_F_points": "79.7",
+      "primary_F_points": "27.0",
+      "reverse_F_points": "27.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.8",
+        "upper": "-19.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.8",
+        "upper": "-19.6"
+      }
+    },
+    {
+      "category": "Full-Service Restaurants",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.8",
+      "income_F_points": "77.6",
+      "primary_F_points": "21.0",
+      "reverse_F_points": "21.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      }
+    },
+    {
+      "category": "Funeral Homes and Funeral Services",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.4",
+      "income_F_points": "80.2",
+      "primary_F_points": "21.1",
+      "reverse_F_points": "21.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.4",
+        "upper": "-19.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.4",
+        "upper": "-19.2"
+      }
+    },
+    {
+      "category": "Furniture Merchant Wholesalers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "49.4",
+      "income_F_points": "79.1",
+      "primary_F_points": "29.5",
+      "reverse_F_points": "29.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.0",
+        "upper": "-19.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.0",
+        "upper": "-19.8"
+      }
+    },
+    {
+      "category": "Furniture Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.3",
+      "income_F_points": "78.3",
+      "primary_F_points": "22.2",
+      "reverse_F_points": "22.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      }
+    },
+    {
+      "category": "Gasoline Stations with Convenience Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.4",
+      "income_F_points": "77.2",
+      "primary_F_points": "17.5",
+      "reverse_F_points": "17.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.0",
+        "upper": "-20.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.0",
+        "upper": "-20.8"
+      }
+    },
+    {
+      "category": "General Automotive Repair",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.8",
+      "income_F_points": "77.2",
+      "primary_F_points": "23.0",
+      "reverse_F_points": "23.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.9",
+        "upper": "-21.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.9",
+        "upper": "-21.7"
+      }
+    },
+    {
+      "category": "General Line Grocery Merchant Wholesalers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.2",
+      "income_F_points": "76.9",
+      "primary_F_points": "25.1",
+      "reverse_F_points": "25.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.2",
+        "upper": "-20.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.2",
+        "upper": "-20.0"
+      }
+    },
+    {
+      "category": "General Warehousing and Storage",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.7",
+      "income_F_points": "74.2",
+      "primary_F_points": "21.1",
+      "reverse_F_points": "21.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.7",
+        "upper": "-23.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.7",
+        "upper": "-23.5"
+      }
+    },
+    {
+      "category": "Gift, Novelty, and Souvenir Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.1",
+      "income_F_points": "76.2",
+      "primary_F_points": "20.1",
+      "reverse_F_points": "20.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      }
+    },
+    {
+      "category": "Golf Courses and Country Clubs",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.7",
+      "income_F_points": "74.4",
+      "primary_F_points": "15.2",
+      "reverse_F_points": "15.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.6",
+        "upper": "-22.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      }
+    },
+    {
+      "category": "Grape Vineyards",
+      "weighting": "visits",
+      "status": "withheld_support",
+      "mixture_F_points": null,
+      "income_F_points": null,
+      "primary_F_points": null,
+      "reverse_F_points": null,
+      "primary_minus_mixture_interval_points": null,
+      "reverse_minus_mixture_interval_points": null
+    },
+    {
+      "category": "Hardware Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.6",
+      "income_F_points": "80.7",
+      "primary_F_points": "18.9",
+      "reverse_F_points": "18.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      }
+    },
+    {
+      "category": "Hobby, Toy, and Game Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.7",
+      "income_F_points": "79.8",
+      "primary_F_points": "18.5",
+      "reverse_F_points": "18.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      }
+    },
+    {
+      "category": "Home Centers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.3",
+      "income_F_points": "79.4",
+      "primary_F_points": "22.5",
+      "reverse_F_points": "22.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.9",
+        "upper": "-20.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.9",
+        "upper": "-20.7"
+      }
+    },
+    {
+      "category": "Hotels (except Casino Hotels) and Motels",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "47.5",
+      "income_F_points": "81.9",
+      "primary_F_points": "27.7",
+      "reverse_F_points": "27.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.9",
+        "upper": "-19.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.9",
+        "upper": "-19.7"
+      }
+    },
+    {
+      "category": "Household Appliance Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.4",
+      "income_F_points": "77.9",
+      "primary_F_points": "21.7",
+      "reverse_F_points": "21.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      }
+    },
+    {
+      "category": "Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.9",
+      "income_F_points": "81.7",
+      "primary_F_points": "18.8",
+      "reverse_F_points": "18.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.2",
+        "upper": "-21.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.2",
+        "upper": "-21.0"
+      }
+    },
+    {
+      "category": "Insurance Agencies and Brokerages",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.3",
+      "income_F_points": "77.4",
+      "primary_F_points": "22.7",
+      "reverse_F_points": "22.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      }
+    },
+    {
+      "category": "Investment Advice",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.0",
+      "income_F_points": "74.3",
+      "primary_F_points": "18.2",
+      "reverse_F_points": "18.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      }
+    },
+    {
+      "category": "Iron and Steel Mills and Ferroalloy Manufacturing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.4",
+      "income_F_points": "77.2",
+      "primary_F_points": "20.7",
+      "reverse_F_points": "20.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-18.8",
+        "upper": "-18.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-18.8",
+        "upper": "-18.6"
+      }
+    },
+    {
+      "category": "Jewelry Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.6",
+      "income_F_points": "79.5",
+      "primary_F_points": "24.2",
+      "reverse_F_points": "24.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      }
+    },
+    {
+      "category": "Jewelry, Watch, Precious Stone, and Precious Metal Merchant Wholesalers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.5",
+      "income_F_points": "78.4",
+      "primary_F_points": "21.7",
+      "reverse_F_points": "21.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      }
+    },
+    {
+      "category": "Leather and Hide Tanning and Finishing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.1",
+      "income_F_points": "82.4",
+      "primary_F_points": "19.0",
+      "reverse_F_points": "19.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.2",
+        "upper": "-21.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.2",
+        "upper": "-21.0"
+      }
+    },
+    {
+      "category": "Lessors of Miniwarehouses and Self-Storage Units",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "50.8",
+      "income_F_points": "76.0",
+      "primary_F_points": "27.0",
+      "reverse_F_points": "27.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      }
+    },
+    {
+      "category": "Lessors of Nonfinancial Intangible Assets (except Copyrighted Works)",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.6",
+      "income_F_points": "82.3",
+      "primary_F_points": "17.7",
+      "reverse_F_points": "17.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.0",
+        "upper": "-20.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.0",
+        "upper": "-20.8"
+      }
+    },
+    {
+      "category": "Lessors of Nonresidential Buildings (except Miniwarehouses)",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.9",
+      "income_F_points": "81.1",
+      "primary_F_points": "25.6",
+      "reverse_F_points": "25.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.4",
+        "upper": "-21.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.4",
+        "upper": "-21.2"
+      }
+    },
+    {
+      "category": "Lessors of Other Real Estate Property",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.7",
+      "income_F_points": "79.7",
+      "primary_F_points": "21.1",
+      "reverse_F_points": "21.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      }
+    },
+    {
+      "category": "Lessors of Residential Buildings and Dwellings",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "52.6",
+      "income_F_points": "76.8",
+      "primary_F_points": "28.8",
+      "reverse_F_points": "28.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      }
+    },
+    {
+      "category": "Libraries and Archives",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.0",
+      "income_F_points": "72.5",
+      "primary_F_points": "17.0",
+      "reverse_F_points": "17.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.1",
+        "upper": "-23.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.1",
+        "upper": "-23.9"
+      }
+    },
+    {
+      "category": "Limited-Service Restaurants",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.7",
+      "income_F_points": "79.0",
+      "primary_F_points": "19.3",
+      "reverse_F_points": "19.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      }
+    },
+    {
+      "category": "Locksmiths",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "47.9",
+      "income_F_points": "73.4",
+      "primary_F_points": "24.5",
+      "reverse_F_points": "24.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.5",
+        "upper": "-23.3"
+      }
+    },
+    {
+      "category": "Mattress Manufacturing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.6",
+      "income_F_points": "82.2",
+      "primary_F_points": "24.5",
+      "reverse_F_points": "24.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.2",
+        "upper": "-21.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.2",
+        "upper": "-21.0"
+      }
+    },
+    {
+      "category": "Meat Markets",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.6",
+      "income_F_points": "75.7",
+      "primary_F_points": "23.4",
+      "reverse_F_points": "23.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.3",
+        "upper": "-22.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.3",
+        "upper": "-22.1"
+      }
+    },
+    {
+      "category": "Men's Clothing Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.9",
+      "income_F_points": "76.0",
+      "primary_F_points": "24.2",
+      "reverse_F_points": "24.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      }
+    },
+    {
+      "category": "Motion Picture Theaters (except Drive-Ins)",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.0",
+      "income_F_points": "82.0",
+      "primary_F_points": "24.3",
+      "reverse_F_points": "24.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.8",
+        "upper": "-21.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.8",
+        "upper": "-21.6"
+      }
+    },
+    {
+      "category": "Motor Vehicle Towing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.8",
+      "income_F_points": "76.4",
+      "primary_F_points": "24.4",
+      "reverse_F_points": "24.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.5",
+        "upper": "-20.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.4",
+        "upper": "-20.2"
+      }
+    },
+    {
+      "category": "Motor and Generator Manufacturing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "32.7",
+      "income_F_points": "74.9",
+      "primary_F_points": "13.1",
+      "reverse_F_points": "13.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.7",
+        "upper": "-19.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.7",
+        "upper": "-19.5"
+      }
+    },
+    {
+      "category": "Motorcycle, ATV, and All Other Motor Vehicle Dealers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.5",
+      "income_F_points": "79.6",
+      "primary_F_points": "23.8",
+      "reverse_F_points": "23.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      }
+    },
+    {
+      "category": "Museums",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.0",
+      "income_F_points": "79.6",
+      "primary_F_points": "23.9",
+      "reverse_F_points": "24.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.2",
+        "upper": "-22.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.1",
+        "upper": "-21.9"
+      }
+    },
+    {
+      "category": "Musical Instrument and Supplies Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.2",
+      "income_F_points": "77.0",
+      "primary_F_points": "21.9",
+      "reverse_F_points": "21.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.4",
+        "upper": "-23.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.4",
+        "upper": "-23.2"
+      }
+    },
+    {
+      "category": "Nail Salons",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.8",
+      "income_F_points": "76.3",
+      "primary_F_points": "21.6",
+      "reverse_F_points": "21.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.3",
+        "upper": "-24.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.3",
+        "upper": "-24.1"
+      }
+    },
+    {
+      "category": "Nature Parks and Other Similar Institutions",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "61.4",
+      "income_F_points": "82.0",
+      "primary_F_points": "47.8",
+      "reverse_F_points": "47.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-13.7",
+        "upper": "-13.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-13.7",
+        "upper": "-13.5"
+      }
+    },
+    {
+      "category": "New Car Dealers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.2",
+      "income_F_points": "81.8",
+      "primary_F_points": "24.5",
+      "reverse_F_points": "24.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.8",
+        "upper": "-19.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.8",
+        "upper": "-19.6"
+      }
+    },
+    {
+      "category": "Nursery, Garden Center, and Farm Supply Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "33.2",
+      "income_F_points": "76.7",
+      "primary_F_points": "12.9",
+      "reverse_F_points": "12.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.4",
+        "upper": "-20.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.4",
+        "upper": "-20.2"
+      }
+    },
+    {
+      "category": "Office Supplies and Stationery Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.7",
+      "income_F_points": "78.6",
+      "primary_F_points": "20.7",
+      "reverse_F_points": "20.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.1",
+        "upper": "-22.9"
+      }
+    },
+    {
+      "category": "Offices of Real Estate Agents and Brokers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "48.8",
+      "income_F_points": "77.6",
+      "primary_F_points": "26.3",
+      "reverse_F_points": "26.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.6",
+        "upper": "-22.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.6",
+        "upper": "-22.4"
+      }
+    },
+    {
+      "category": "Optical Goods Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.1",
+      "income_F_points": "78.3",
+      "primary_F_points": "21.4",
+      "reverse_F_points": "21.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      }
+    },
+    {
+      "category": "Other Activities Related to Credit Intermediation",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.8",
+      "income_F_points": "79.8",
+      "primary_F_points": "19.6",
+      "reverse_F_points": "19.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.3",
+        "upper": "-22.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.3",
+        "upper": "-22.1"
+      }
+    },
+    {
+      "category": "Other Automotive Mechanical and Electrical Repair and Maintenance",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.1",
+      "income_F_points": "81.0",
+      "primary_F_points": "26.8",
+      "reverse_F_points": "26.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.4",
+        "upper": "-19.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.4",
+        "upper": "-19.2"
+      }
+    },
+    {
+      "category": "Other Building Material Dealers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.5",
+      "income_F_points": "78.2",
+      "primary_F_points": "23.7",
+      "reverse_F_points": "23.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.9",
+        "upper": "-20.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.9",
+        "upper": "-20.7"
+      }
+    },
+    {
+      "category": "Other Clothing Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.1",
+      "income_F_points": "77.9",
+      "primary_F_points": "22.3",
+      "reverse_F_points": "22.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      }
+    },
+    {
+      "category": "Other Communications Equipment Manufacturing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.2",
+      "income_F_points": "80.8",
+      "primary_F_points": "18.7",
+      "reverse_F_points": "18.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.6",
+        "upper": "-21.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.6",
+        "upper": "-21.4"
+      }
+    },
+    {
+      "category": "Other Gambling Industries",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.6",
+      "income_F_points": "82.6",
+      "primary_F_points": "25.8",
+      "reverse_F_points": "25.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.9",
+        "upper": "-20.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.9",
+        "upper": "-20.7"
+      }
+    },
+    {
+      "category": "Other Gasoline Stations",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "37.9",
+      "income_F_points": "77.5",
+      "primary_F_points": "16.3",
+      "reverse_F_points": "16.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      }
+    },
+    {
+      "category": "Other Millwork (including Flooring)",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.3",
+      "income_F_points": "82.0",
+      "primary_F_points": "18.2",
+      "reverse_F_points": "18.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.2",
+        "upper": "-21.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.1",
+        "upper": "-20.9"
+      }
+    },
+    {
+      "category": "Paint and Coating Manufacturing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.3",
+      "income_F_points": "75.0",
+      "primary_F_points": "17.2",
+      "reverse_F_points": "17.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      }
+    },
+    {
+      "category": "Painting and Wall Covering Contractors",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.5",
+      "income_F_points": "68.6",
+      "primary_F_points": "19.9",
+      "reverse_F_points": "19.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.7",
+        "upper": "-24.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.7",
+        "upper": "-24.5"
+      }
+    },
+    {
+      "category": "Parking Lots and Garages",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "51.3",
+      "income_F_points": "80.2",
+      "primary_F_points": "29.9",
+      "reverse_F_points": "29.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.5",
+        "upper": "-21.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.5",
+        "upper": "-21.3"
+      }
+    },
+    {
+      "category": "Passenger Car Leasing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.8",
+      "income_F_points": "81.1",
+      "primary_F_points": "22.2",
+      "reverse_F_points": "22.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      }
+    },
+    {
+      "category": "Passenger Car Rental",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.3",
+      "income_F_points": "81.0",
+      "primary_F_points": "24.3",
+      "reverse_F_points": "24.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.1",
+        "upper": "-20.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.1",
+        "upper": "-20.9"
+      }
+    },
+    {
+      "category": "Pesticide and Other Agricultural Chemical Manufacturing",
+      "weighting": "visits",
+      "status": "withheld_support",
+      "mixture_F_points": null,
+      "income_F_points": null,
+      "primary_F_points": null,
+      "reverse_F_points": null,
+      "primary_minus_mixture_interval_points": null,
+      "reverse_minus_mixture_interval_points": null
+    },
+    {
+      "category": "Pet Care (except Veterinary) Services",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.3",
+      "income_F_points": "78.7",
+      "primary_F_points": "20.4",
+      "reverse_F_points": "20.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.0",
+        "upper": "-21.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.9",
+        "upper": "-21.7"
+      }
+    },
+    {
+      "category": "Pet and Pet Supplies Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.1",
+      "income_F_points": "79.1",
+      "primary_F_points": "15.2",
+      "reverse_F_points": "15.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.0",
+        "upper": "-22.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.0",
+        "upper": "-22.8"
+      }
+    },
+    {
+      "category": "Pharmacies and Drug Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.9",
+      "income_F_points": "76.0",
+      "primary_F_points": "19.7",
+      "reverse_F_points": "19.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.3",
+        "upper": "-23.1"
+      }
+    },
+    {
+      "category": "Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.6",
+      "income_F_points": "78.1",
+      "primary_F_points": "23.9",
+      "reverse_F_points": "23.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      }
+    },
+    {
+      "category": "Plumbing, Heating, and Air-Conditioning Contractors",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.2",
+      "income_F_points": "73.2",
+      "primary_F_points": "20.8",
+      "reverse_F_points": "20.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.5",
+        "upper": "-22.3"
+      }
+    },
+    {
+      "category": "Postal Service",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.9",
+      "income_F_points": "70.3",
+      "primary_F_points": "16.1",
+      "reverse_F_points": "16.1",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      }
+    },
+    {
+      "category": "Private Mail Centers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.2",
+      "income_F_points": "71.8",
+      "primary_F_points": "17.0",
+      "reverse_F_points": "17.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-26.3",
+        "upper": "-26.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-26.3",
+        "upper": "-26.1"
+      }
+    },
+    {
+      "category": "RV (Recreational Vehicle) Parks and Campgrounds",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "38.0",
+      "income_F_points": "81.9",
+      "primary_F_points": "18.8",
+      "reverse_F_points": "18.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-19.3",
+        "upper": "-19.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-19.3",
+        "upper": "-19.1"
+      }
+    },
+    {
+      "category": "Refrigeration Equipment and Supplies Merchant Wholesalers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.0",
+      "income_F_points": "71.1",
+      "primary_F_points": "19.3",
+      "reverse_F_points": "19.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.8",
+        "upper": "-23.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.7",
+        "upper": "-23.5"
+      }
+    },
+    {
+      "category": "Regulation and Administration of Transportation Programs",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.2",
+      "income_F_points": "80.0",
+      "primary_F_points": "23.5",
+      "reverse_F_points": "23.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.8",
+        "upper": "-20.6"
+      }
+    },
+    {
+      "category": "Retail Bakeries",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "46.9",
+      "income_F_points": "74.7",
+      "primary_F_points": "23.8",
+      "reverse_F_points": "23.8",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.2",
+        "upper": "-23.0"
+      }
+    },
+    {
+      "category": "Rooming and Boarding Houses, Dormitories, and Workers' Camps",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.5",
+      "income_F_points": "50.2",
+      "primary_F_points": "9.6",
+      "reverse_F_points": "9.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-33.0",
+        "upper": "-32.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-33.0",
+        "upper": "-32.8"
+      }
+    },
+    {
+      "category": "Securities Brokerage",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.5",
+      "income_F_points": "75.5",
+      "primary_F_points": "15.6",
+      "reverse_F_points": "15.7",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.0",
+        "upper": "-23.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.9",
+        "upper": "-23.7"
+      }
+    },
+    {
+      "category": "Sewing, Needlework, and Piece Goods Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.1",
+      "income_F_points": "77.6",
+      "primary_F_points": "19.0",
+      "reverse_F_points": "19.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.2",
+        "upper": "-22.0"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.2",
+        "upper": "-22.0"
+      }
+    },
+    {
+      "category": "Shoe Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.0",
+      "income_F_points": "81.5",
+      "primary_F_points": "21.4",
+      "reverse_F_points": "21.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.7",
+        "upper": "-21.5"
+      }
+    },
+    {
+      "category": "Snack and Nonalcoholic Beverage Bars",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "43.3",
+      "income_F_points": "75.7",
+      "primary_F_points": "18.9",
+      "reverse_F_points": "18.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.5",
+        "upper": "-24.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.5",
+        "upper": "-24.3"
+      }
+    },
+    {
+      "category": "Sporting Goods Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.8",
+      "income_F_points": "78.9",
+      "primary_F_points": "17.0",
+      "reverse_F_points": "17.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      }
+    },
+    {
+      "category": "Supermarkets and Other Grocery (except Convenience) Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.1",
+      "income_F_points": "77.3",
+      "primary_F_points": "19.6",
+      "reverse_F_points": "19.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.6",
+        "upper": "-22.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.6",
+        "upper": "-22.4"
+      }
+    },
+    {
+      "category": "Tax Preparation Services",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.6",
+      "income_F_points": "76.8",
+      "primary_F_points": "23.6",
+      "reverse_F_points": "23.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.1",
+        "upper": "-21.9"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.1",
+        "upper": "-21.9"
+      }
+    },
+    {
+      "category": "Taxi Service",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "51.0",
+      "income_F_points": "71.5",
+      "primary_F_points": "28.2",
+      "reverse_F_points": "28.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      }
+    },
+    {
+      "category": "Television Broadcasting",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.3",
+      "income_F_points": "81.9",
+      "primary_F_points": "16.6",
+      "reverse_F_points": "16.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      }
+    },
+    {
+      "category": "Tire Dealers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.1",
+      "income_F_points": "82.5",
+      "primary_F_points": "22.2",
+      "reverse_F_points": "22.2",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-20.0",
+        "upper": "-19.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-20.0",
+        "upper": "-19.8"
+      }
+    },
+    {
+      "category": "Tire Manufacturing (except Retreading)",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "40.7",
+      "income_F_points": "80.0",
+      "primary_F_points": "18.8",
+      "reverse_F_points": "18.9",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.0",
+        "upper": "-21.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.9",
+        "upper": "-21.7"
+      }
+    },
+    {
+      "category": "Tobacco Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "50.0",
+      "income_F_points": "75.3",
+      "primary_F_points": "27.3",
+      "reverse_F_points": "27.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.8",
+        "upper": "-22.6"
+      }
+    },
+    {
+      "category": "Travel Agencies",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "48.6",
+      "income_F_points": "74.1",
+      "primary_F_points": "26.0",
+      "reverse_F_points": "26.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.7",
+        "upper": "-22.5"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.7",
+        "upper": "-22.5"
+      }
+    },
+    {
+      "category": "Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.8",
+      "income_F_points": "77.9",
+      "primary_F_points": "21.3",
+      "reverse_F_points": "21.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.6",
+        "upper": "-21.4"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.6",
+        "upper": "-21.4"
+      }
+    },
+    {
+      "category": "Used Car Dealers",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.6",
+      "income_F_points": "83.6",
+      "primary_F_points": "26.3",
+      "reverse_F_points": "26.3",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-18.4",
+        "upper": "-18.2"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-18.4",
+        "upper": "-18.2"
+      }
+    },
+    {
+      "category": "Used Merchandise Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "41.8",
+      "income_F_points": "78.0",
+      "primary_F_points": "19.6",
+      "reverse_F_points": "19.6",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.3",
+        "upper": "-22.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.3",
+        "upper": "-22.1"
+      }
+    },
+    {
+      "category": "Veterinary Services",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "39.2",
+      "income_F_points": "75.7",
+      "primary_F_points": "15.0",
+      "reverse_F_points": "15.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-24.3",
+        "upper": "-24.1"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-24.3",
+        "upper": "-24.1"
+      }
+    },
+    {
+      "category": "Wineries",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "42.8",
+      "income_F_points": "79.6",
+      "primary_F_points": "21.4",
+      "reverse_F_points": "21.4",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-21.5",
+        "upper": "-21.3"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-21.5",
+        "upper": "-21.3"
+      }
+    },
+    {
+      "category": "Wireless Telecommunications Carriers (except Satellite)",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "44.8",
+      "income_F_points": "77.6",
+      "primary_F_points": "22.0",
+      "reverse_F_points": "22.0",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-22.9",
+        "upper": "-22.7"
+      }
+    },
+    {
+      "category": "Women's Clothing Stores",
+      "weighting": "visits",
+      "status": "shown_pending_review",
+      "mixture_F_points": "45.4",
+      "income_F_points": "77.1",
+      "primary_F_points": "22.5",
+      "reverse_F_points": "22.5",
+      "primary_minus_mixture_interval_points": {
+        "lower": "-23.0",
+        "upper": "-22.8"
+      },
+      "reverse_minus_mixture_interval_points": {
+        "lower": "-23.0",
+        "upper": "-22.8"
+      }
+    }
+  ],
+  "correlations": [
+    {
+      "weighting": "equal",
+      "assignment": "mixture",
+      "status": "shown_pending_review",
+      "rho": "-0.14"
+    },
+    {
+      "weighting": "equal",
+      "assignment": "primary",
+      "status": "shown_pending_review",
+      "rho": "0.34"
+    },
+    {
+      "weighting": "equal",
+      "assignment": "reverse",
+      "status": "shown_pending_review",
+      "rho": "0.34"
+    },
+    {
+      "weighting": "visits",
+      "assignment": "mixture",
+      "status": "shown_pending_review",
+      "rho": "-0.13"
+    },
+    {
+      "weighting": "visits",
+      "assignment": "primary",
+      "status": "shown_pending_review",
+      "rho": "0.15"
+    },
+    {
+      "weighting": "visits",
+      "assignment": "reverse",
+      "status": "shown_pending_review",
+      "rho": "0.15"
+    }
+  ],
+  "paired_rho_changes": [
+    {
+      "weighting": "equal",
+      "assignment": "primary",
+      "direction": "label_minus_mixture",
+      "status": "shown_pending_review",
+      "delta_rho_interval": {
+        "lower": "0.47",
+        "upper": "0.49"
+      }
+    },
+    {
+      "weighting": "equal",
+      "assignment": "reverse",
+      "direction": "label_minus_mixture",
+      "status": "shown_pending_review",
+      "delta_rho_interval": {
+        "lower": "0.47",
+        "upper": "0.49"
+      }
+    },
+    {
+      "weighting": "visits",
+      "assignment": "primary",
+      "direction": "label_minus_mixture",
+      "status": "shown_pending_review",
+      "delta_rho_interval": {
+        "lower": "0.27",
+        "upper": "0.29"
+      }
+    },
+    {
+      "weighting": "visits",
+      "assignment": "reverse",
+      "direction": "label_minus_mixture",
+      "status": "shown_pending_review",
+      "delta_rho_interval": {
+        "lower": "0.27",
+        "upper": "0.29"
+      }
+    }
+  ],
+  "national_information_loss": [
+    {
+      "weighting": "equal",
+      "metric": "tie",
+      "status": "shown_pending_review",
+      "percent": "0.0"
+    },
+    {
+      "weighting": "equal",
+      "metric": "below_half",
+      "status": "shown_pending_review",
+      "percent": "10.8"
+    },
+    {
+      "weighting": "equal",
+      "metric": "gap_le_005",
+      "status": "shown_pending_review",
+      "percent": "3.8"
+    },
+    {
+      "weighting": "visits",
+      "metric": "tie",
+      "status": "shown_pending_review",
+      "percent": "0.0"
+    },
+    {
+      "weighting": "visits",
+      "metric": "below_half",
+      "status": "shown_pending_review",
+      "percent": "12.2"
+    },
+    {
+      "weighting": "visits",
+      "metric": "gap_le_005",
+      "status": "shown_pending_review",
+      "percent": "4.2"
+    }
+  ],
+  "captions": [
+    "Prespecified plurality racial-assignment sensitivity on the fixed full-SJ available-2019 roster, using unchanged origin masks, saved income bins and equal or saved matched-visit venue weights.",
+    "Category indices use 0.1 index-point display bins (fractionalization multiplied by 100). Correlations use 0.01 bins. National information-loss fractions use 0.1 percentage-point bins. Decimal half-even rounding is applied to the round-trip decimal representation of the accepted binary64 values.",
+    "Each displayed change is a conservative interval derived only from its two displayed endpoint bins, in label-minus-mixture order. No independently rounded private difference or additional sign label is disclosed. Full-precision signed differences remain private; an interval containing zero does not establish an exact zero, disappearance or equivalence.",
+    "All 150 category labels and both weights remain. The correlation family uses the same fixed 136 labels throughout. Support failures withhold numbers; constant vectors remain undefined. Neither category intersections nor eligibility rules adapt to observed differences.",
+    "National tie, below-half and gap-at-most-five-percentage-points fractions average within-venue jointly classified origin-flow fractions over the entire SJ roster. They are not pooled origin counts, visitor traits, misclassification rates, error bounds or new eligibility screens. The flags overlap.",
+    "Primary and reverse rules use opposite exact-maximum tie priorities on the same once-normalized racial vectors; near ties are not merged. Reassignment discards within-origin racial shares. Income remains an area label based on median household income, with four race groups versus ten income bins.",
+    "This is sensitivity to the specified lossy reassignment. Mixed and unchanged patterns retain their meaning; no general representation-bias, actual-contact, individual-trait or causal conclusion follows. Common-geography, stable-ID and historical-production limitations remain.",
+    "Candidate for cumulative disclosure review only. No upload, publication, changed data licence or general release is authorized by staging."
+  ]
+}
