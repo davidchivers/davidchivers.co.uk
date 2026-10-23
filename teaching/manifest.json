@@ -218,9 +218,9 @@
     },
     {
       "path": "ai-course.html",
-      "bytes": 6213100,
-      "source_sha256": "5a483e92ef190f78d7a662d0ffef470f0cc3651cf0009e0543dc60e61c86df17",
-      "sha256": "7dfc828ecf90967564a8c5cc8e113dc41299b3693a121a6835f254a344731a1e"
+      "bytes": 6207278,
+      "source_sha256": "c695cca15efd39d2d40e5588cc0f8a82034ab9b73b9b606299840402d3dfcba3",
+      "sha256": "48f5750384db35bfa2caa041ff23ca9f9b984c3f0c805b0eab41f2f617443215"
     },
     {
       "path": "income-substitution-example.html",
