@@ -27,6 +27,7 @@ DECKS = {
     "macro-applications/seminars/4f1483980321224743f1f9a8f7d1f393.html": "macro_seminars_quarto/output/seminar_2_answers.html",
     "induction.html": "induction_quarto/output/induction.html",
     "ai-course.html": "ai_workshop/revealjs/output/ai_course.html",
+    "income-substitution-example.html": "ai_workshop/revealjs/output/income-substitution-example.html",
     "macro-applications/index.html": "macro_applications_quarto/output/index.html",
     **{f"macro-applications/lecture_{i}.html": f"macro_applications_quarto/output/lecture_{i}.html" for i in range(1, 6)},
 }
@@ -99,6 +100,11 @@ def main():
             raise SystemExit(f"Incomplete HTML: {source}")
         if b'id="durham-staff-editor-code"' in content:
             raise SystemExit(f"Browser editor is enabled in student slides: {source}. Rebuild without it before publishing.")
+        if source == workspace / DECKS["income-substitution-example.html"]:
+            content = content.replace(
+                b'ai_course.html#/learn-by-experimenting',
+                b'ai-course.html#/learn-by-experimenting',
+            )
         prepared[source] = unlisted_html(content)
     records = []
     for name, source in sources.items():

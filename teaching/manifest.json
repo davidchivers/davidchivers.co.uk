@@ -7,12 +7,6 @@
       "sha256": "68addeafee6e462713154e1b4b70ff4fafcd77eb042ca2c16d2f23f8402870f9"
     },
     {
-      "path": "ai-course.html",
-      "bytes": 3600075,
-      "source_sha256": "0c8375140148e4986eaee3b16ccc11dab66439e6cf90549dd9e664b4b693d930",
-      "sha256": "2064d80ac4a4e52d5c86c80360abc9cc7173547398873e37f07c0b56aaf6df2f"
-    },
-    {
       "path": "macro-applications/index.html",
       "bytes": 1899139,
       "source_sha256": "4a8f6e7fcd07b5a8ec1b5b4b11d42892edacd074f6ee456cc44c6d0181c4c2c4",
@@ -221,6 +215,18 @@
       "bytes": 1081,
       "source_sha256": "4aea17602cceecfedf2790e464ae90622cbd48be2335b05d0c5ee3c0f2ddc2aa",
       "sha256": "4aea17602cceecfedf2790e464ae90622cbd48be2335b05d0c5ee3c0f2ddc2aa"
+    },
+    {
+      "path": "ai-course.html",
+      "bytes": 6213100,
+      "source_sha256": "5a483e92ef190f78d7a662d0ffef470f0cc3651cf0009e0543dc60e61c86df17",
+      "sha256": "7dfc828ecf90967564a8c5cc8e113dc41299b3693a121a6835f254a344731a1e"
+    },
+    {
+      "path": "income-substitution-example.html",
+      "bytes": 34159,
+      "source_sha256": "61a1b8ea8cb0e7f91589f36d533904c1e269775e4522581f28cf3f666ac53486",
+      "sha256": "537131ec358ec4555b5c7c0d0464fe2e4770525eae9573847e8e2d041119dd79"
     }
   ]
 }
