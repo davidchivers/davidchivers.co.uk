@@ -141,3 +141,10 @@ The canonical source is `E:/AI/teaching/ai_workshop/revealjs/`. This scoped
 publication copies only the two HTML files, adds noindex and retargets the
 interactive example's return link to `ai-course.html`. The manifest records
 source and published hashes. The videos stream from their existing hosts.
+
+## PhD ending revision: 23 October 2026
+
+The 41-slide workshop now ends with adapting the tools to research, AI writing
+and discussion. The repeated threshold and dated-advice slides are removed;
+risk-preference detail remains in the earlier notes. The appendix has a linked
+reference index. Source order, internal targets and changed layouts checked.
