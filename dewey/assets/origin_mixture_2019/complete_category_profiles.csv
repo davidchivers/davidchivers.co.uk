@@ -1,0 +1,301 @@
+category_id,category,setting,weighting,roster,variant,mask,status,race_F_points,race_B_points,income_F_points
+C001,All Other Amusement and Recreation Industries,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,45.2,6.5,74.2
+C001,All Other Amusement and Recreation Industries,legacy_tdw_own,visits,legacy,tdw,own,withheld_support,,,
+C002,All Other Consumer Goods Rental,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.9,5.9,76.5
+C002,All Other Consumer Goods Rental,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,41.0,6.4,79.2
+C003,All Other General Merchandise Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.0,5.5,72.0
+C003,All Other General Merchandise Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,40.7,6.7,81.5
+C004,All Other Health and Personal Care Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.3,5.3,69.4
+C004,All Other Health and Personal Care Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.8,6.8,75.0
+C005,All Other Home Furnishings Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.3,5.5,68.7
+C005,All Other Home Furnishings Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.6,6.7,77.5
+C006,All Other Miscellaneous Manufacturing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.2,5.3,78.1
+C006,All Other Miscellaneous Manufacturing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,37.3,5.7,80.9
+C007,All Other Miscellaneous Store Retailers (except Tobacco Stores),legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.0,4.8,64.3
+C007,All Other Miscellaneous Store Retailers (except Tobacco Stores),legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.3,6.4,76.1
+C008,All Other Specialty Food Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.7,5.0,62.4
+C008,All Other Specialty Food Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.8,7.1,74.9
+C009,All Other Transportation Equipment Manufacturing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,32.7,5.0,78.3
+C009,All Other Transportation Equipment Manufacturing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,37.9,6.3,82.5
+C010,All Other Traveler Accommodation,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,36.8,3.4,46.8
+C010,All Other Traveler Accommodation,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,39.1,5.6,72.3
+C011,Automobile Manufacturing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,36.8,5.9,75.6
+C011,Automobile Manufacturing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,40.4,7.0,79.3
+C012,"Automotive Body, Paint, and Interior Repair and Maintenance",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,47.3,6.5,71.7
+C012,"Automotive Body, Paint, and Interior Repair and Maintenance",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,50.3,7.6,77.4
+C013,Automotive Glass Replacement Shops,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.6,4.6,58.5
+C013,Automotive Glass Replacement Shops,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.1,6.9,76.9
+C014,Automotive Oil Change and Lubrication Shops,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.4,5.3,76.5
+C014,Automotive Oil Change and Lubrication Shops,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,39.2,6.2,80.9
+C015,Automotive Parts and Accessories Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,36.5,4.9,70.9
+C015,Automotive Parts and Accessories Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,40.3,5.9,76.3
+C016,Automotive Transmission Repair,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.2,6.5,71.1
+C016,Automotive Transmission Repair,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.8,8.6,78.7
+C017,Baked Goods Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.7,5.6,71.9
+C017,Baked Goods Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.7,7.0,75.7
+C018,Barber Shops,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.1,5.2,65.2
+C018,Barber Shops,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.9,6.6,75.3
+C019,Beauty Salons,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.4,4.7,63.8
+C019,Beauty Salons,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.2,6.3,74.8
+C020,"Beer, Wine, and Liquor Stores",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.3,5.2,66.3
+C020,"Beer, Wine, and Liquor Stores",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.9,6.6,74.1
+C021,Boat Dealers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,35.2,4.8,65.0
+C021,Boat Dealers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.7,7.6,79.2
+C022,Book Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.1,5.0,63.4
+C022,Book Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.3,7.0,77.2
+C023,Bowling Centers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,33.5,4.8,73.8
+C023,Bowling Centers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,39.2,6.7,81.4
+C024,Breweries,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,35.5,5.0,74.5
+C024,Breweries,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,37.6,5.9,79.0
+C025,Business Associations,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,29.2,3.6,70.1
+C025,Business Associations,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,35.4,5.0,77.4
+C026,"Cafeterias, Grill Buffets, and Buffets",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.7,6.0,68.4
+C026,"Cafeterias, Grill Buffets, and Buffets",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.7,7.4,78.0
+C027,Car Washes,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.0,4.8,65.8
+C027,Car Washes,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.4,6.3,77.5
+C028,Casino Hotels,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.4,7.0,71.5
+C028,Casino Hotels,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.8,9.4,81.1
+C029,Children's and Infants' Clothing Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.2,6.7,73.2
+C029,Children's and Infants' Clothing Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.4,8.1,79.3
+C030,Clothing Accessories Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,45.1,5.3,56.9
+C030,Clothing Accessories Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,48.5,8.2,73.9
+C031,Coin-Operated Laundries and Drycleaners,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,44.1,5.8,65.1
+C031,Coin-Operated Laundries and Drycleaners,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,47.6,7.6,76.5
+C032,"Colleges, Universities, and Professional Schools",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,42.9,6.8,71.6
+C032,"Colleges, Universities, and Professional Schools",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,47.8,10.1,82.5
+C033,Commercial Banking,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.2,5.0,71.6
+C033,Commercial Banking,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.0,6.3,76.8
+C034,Commercial Printing (except Screen and Books),legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,42.1,6.3,65.9
+C034,Commercial Printing (except Screen and Books),legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,48.1,9.6,80.9
+C035,Confectionery and Nut Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.7,4.7,58.4
+C035,Confectionery and Nut Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.8,7.5,75.6
+C036,Consumer Lending,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.7,5.6,74.3
+C036,Consumer Lending,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.9,6.1,77.0
+C037,Convenience Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.7,5.3,68.9
+C037,Convenience Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.4,6.1,75.6
+C038,Convention and Trade Show Organizers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,37.6,5.6,73.6
+C038,Convention and Trade Show Organizers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.6,8.5,79.6
+C039,"Cosmetics, Beauty Supplies, and Perfume Stores",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.2,6.0,71.2
+C039,"Cosmetics, Beauty Supplies, and Perfume Stores",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,47.2,7.9,77.9
+C040,Couriers and Express Delivery Services,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,42.0,5.6,72.3
+C040,Couriers and Express Delivery Services,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.4,6.3,76.9
+C041,Department Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.7,6.2,74.9
+C041,Department Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.2,8.0,81.4
+C042,Direct Life Insurance Carriers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.3,4.3,66.8
+C042,Direct Life Insurance Carriers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.1,5.4,73.1
+C043,Direct Property and Casualty Insurance Carriers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.4,5.0,68.1
+C043,Direct Property and Casualty Insurance Carriers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.2,7.8,76.3
+C044,Dog and Cat Food Manufacturing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,37.8,5.2,78.2
+C044,Dog and Cat Food Manufacturing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,40.4,6.2,81.3
+C045,Drinking Places (Alcoholic Beverages),legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.1,5.3,68.5
+C045,Drinking Places (Alcoholic Beverages),legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.6,7.2,77.2
+C046,Electronics Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.1,5.3,63.1
+C046,Electronics Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,47.1,7.7,77.0
+C047,Ethyl Alcohol Manufacturing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,42.5,5.8,71.0
+C047,Ethyl Alcohol Manufacturing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.5,6.1,75.2
+C048,Exam Preparation and Tutoring,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,45.0,4.7,60.9
+C048,Exam Preparation and Tutoring,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.6,5.8,67.2
+C049,Family Clothing Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,45.3,7.7,76.2
+C049,Family Clothing Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,47.2,8.6,81.2
+C050,Farm Supplies Merchant Wholesalers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,26.1,3.5,77.4
+C050,Farm Supplies Merchant Wholesalers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,25.0,3.5,81.7
+C051,"Financial Transactions Processing, Reserve, and Clearinghouse Activities",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.5,4.7,69.5
+C051,"Financial Transactions Processing, Reserve, and Clearinghouse Activities",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,41.1,5.3,76.2
+C052,Fish and Seafood Markets,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.3,7.0,67.7
+C052,Fish and Seafood Markets,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,48.6,9.4,79.1
+C053,Fitness and Recreational Sports Centers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.5,4.4,61.0
+C053,Fitness and Recreational Sports Centers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.6,6.6,74.6
+C054,Floor Covering Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.2,4.0,52.9
+C054,Floor Covering Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.4,6.2,71.9
+C055,Florists,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.5,4.5,61.3
+C055,Florists,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.5,6.4,73.5
+C056,Food (Health) Supplement Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.0,5.5,72.4
+C056,Food (Health) Supplement Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.4,6.6,76.7
+C057,Fresh Fruit and Vegetable Merchant Wholesalers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.8,5.4,60.4
+C057,Fresh Fruit and Vegetable Merchant Wholesalers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.8,9.2,79.7
+C058,Full-Service Restaurants,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.7,5.8,69.8
+C058,Full-Service Restaurants,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.9,7.1,77.6
+C059,Funeral Homes and Funeral Services,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,35.2,5.6,71.0
+C059,Funeral Homes and Funeral Services,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,40.5,7.6,80.2
+C060,Furniture Merchant Wholesalers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.4,5.6,59.6
+C060,Furniture Merchant Wholesalers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,49.4,9.6,79.1
+C061,Furniture Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.8,5.8,70.9
+C061,Furniture Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.4,7.3,78.3
+C062,Gasoline Stations with Convenience Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,36.9,5.2,71.2
+C062,Gasoline Stations with Convenience Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,38.4,6.1,77.2
+C063,General Automotive Repair,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.7,4.9,64.4
+C063,General Automotive Repair,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.8,7.0,77.2
+C064,General Line Grocery Merchant Wholesalers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,42.9,7.4,69.5
+C064,General Line Grocery Merchant Wholesalers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.2,8.7,76.9
+C065,General Warehousing and Storage,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.2,5.2,68.5
+C065,General Warehousing and Storage,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.7,6.7,74.2
+C066,"Gift, Novelty, and Souvenir Stores",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.6,4.6,61.4
+C066,"Gift, Novelty, and Souvenir Stores",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.1,6.8,76.2
+C067,Golf Courses and Country Clubs,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,30.4,4.1,69.5
+C067,Golf Courses and Country Clubs,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,37.8,5.7,74.4
+C068,Grape Vineyards,legacy_tdw_own,equal,legacy,tdw,own,withheld_support,,,
+C068,Grape Vineyards,legacy_tdw_own,visits,legacy,tdw,own,withheld_support,,,
+C069,Hardware Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,36.2,5.1,71.0
+C069,Hardware Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,39.7,6.6,80.7
+C070,"Hobby, Toy, and Game Stores",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.3,5.2,69.8
+C070,"Hobby, Toy, and Game Stores",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,41.7,6.3,79.8
+C071,Home Centers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,36.6,4.4,60.0
+C071,Home Centers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.4,7.7,79.4
+C072,Hotels (except Casino Hotels) and Motels,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.5,7.4,73.6
+C072,Hotels (except Casino Hotels) and Motels,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,47.5,9.7,81.9
+C073,Household Appliance Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.7,5.4,70.7
+C073,Household Appliance Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.5,6.8,77.9
+C074,"Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,37.0,5.5,77.0
+C074,"Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,40.0,6.6,81.7
+C075,Insurance Agencies and Brokerages,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,36.5,4.8,70.4
+C075,Insurance Agencies and Brokerages,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.3,7.1,77.4
+C076,Investment Advice,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,36.1,4.5,67.2
+C076,Investment Advice,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.0,6.5,74.3
+C077,Iron and Steel Mills and Ferroalloy Manufacturing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,37.6,6.4,68.9
+C077,Iron and Steel Mills and Ferroalloy Manufacturing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,39.5,7.7,77.2
+C078,Jewelry Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,44.0,6.7,75.4
+C078,Jewelry Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.7,8.2,79.5
+C079,"Jewelry, Watch, Precious Stone, and Precious Metal Merchant Wholesalers",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.7,5.3,73.5
+C079,"Jewelry, Watch, Precious Stone, and Precious Metal Merchant Wholesalers",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.5,7.5,78.4
+C080,Leather and Hide Tanning and Finishing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,37.6,5.8,77.9
+C080,Leather and Hide Tanning and Finishing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,40.2,6.9,82.4
+C081,Lessors of Miniwarehouses and Self-Storage Units,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,48.5,6.6,71.0
+C081,Lessors of Miniwarehouses and Self-Storage Units,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,50.9,7.8,76.0
+C082,Lessors of Nonfinancial Intangible Assets (except Copyrighted Works),legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,37.7,6.0,80.1
+C082,Lessors of Nonfinancial Intangible Assets (except Copyrighted Works),legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,38.7,6.3,82.3
+C083,Lessors of Nonresidential Buildings (except Miniwarehouses),legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,45.2,7.5,77.9
+C083,Lessors of Nonresidential Buildings (except Miniwarehouses),legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.9,8.6,81.1
+C084,Lessors of Other Real Estate Property,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,37.3,4.8,69.4
+C084,Lessors of Other Real Estate Property,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.7,7.1,79.7
+C085,Lessors of Residential Buildings and Dwellings,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,48.8,6.6,65.6
+C085,Lessors of Residential Buildings and Dwellings,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,52.7,8.7,76.8
+C086,Libraries and Archives,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,35.9,4.4,67.2
+C086,Libraries and Archives,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,41.0,5.5,72.5
+C087,Limited-Service Restaurants,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.4,5.9,75.1
+C087,Limited-Service Restaurants,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,41.7,6.4,79.0
+C088,Locksmiths,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.4,4.7,55.7
+C088,Locksmiths,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,47.9,7.1,73.4
+C089,Mattress Manufacturing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.2,6.3,78.6
+C089,Mattress Manufacturing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.6,8.3,82.2
+C090,Meat Markets,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.3,5.4,65.6
+C090,Meat Markets,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.7,7.5,75.7
+C091,Men's Clothing Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.2,6.5,69.1
+C091,Men's Clothing Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.8,8.3,76.0
+C092,Motion Picture Theaters (except Drive-Ins),legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,42.8,7.3,81.3
+C092,Motion Picture Theaters (except Drive-Ins),legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.0,8.2,82.0
+C093,Motor and Generator Manufacturing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,29.5,3.8,65.7
+C093,Motor and Generator Manufacturing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,32.8,5.2,74.9
+C094,Motor Vehicle Towing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.8,4.6,52.7
+C094,Motor Vehicle Towing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.9,8.0,76.4
+C095,"Motorcycle, ATV, and All Other Motor Vehicle Dealers",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.2,4.9,61.5
+C095,"Motorcycle, ATV, and All Other Motor Vehicle Dealers",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.6,7.5,79.6
+C096,Museums,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.3,6.5,72.4
+C096,Museums,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.1,9.7,79.6
+C097,Musical Instrument and Supplies Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.0,5.2,67.5
+C097,Musical Instrument and Supplies Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.2,7.2,77.0
+C098,Nail Salons,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.4,5.3,68.1
+C098,Nail Salons,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.8,6.4,76.3
+C099,Nature Parks and Other Similar Institutions,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,54.1,9.9,68.9
+C099,Nature Parks and Other Similar Institutions,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,61.2,16.3,82.0
+C100,New Car Dealers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.0,6.0,71.6
+C100,New Car Dealers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.3,8.2,81.8
+C101,"Nursery, Garden Center, and Farm Supply Stores",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,31.2,3.8,68.0
+C101,"Nursery, Garden Center, and Farm Supply Stores",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,33.3,4.7,76.7
+C102,Office Supplies and Stationery Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.0,5.7,72.3
+C102,Office Supplies and Stationery Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.7,6.7,78.6
+C103,Offices of Real Estate Agents and Brokers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,45.2,6.3,66.1
+C103,Offices of Real Estate Agents and Brokers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,48.9,8.8,77.6
+C104,Optical Goods Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.3,5.4,73.0
+C104,Optical Goods Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.1,7.2,78.3
+C105,Other Activities Related to Credit Intermediation,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.7,5.7,74.1
+C105,Other Activities Related to Credit Intermediation,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,41.9,6.4,79.8
+C106,Other Automotive Mechanical and Electrical Repair and Maintenance,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.2,6.0,67.9
+C106,Other Automotive Mechanical and Electrical Repair and Maintenance,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.2,8.6,81.0
+C107,Other Building Material Dealers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,37.8,4.6,58.8
+C107,Other Building Material Dealers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.6,7.8,78.2
+C108,Other Clothing Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.0,6.0,67.6
+C108,Other Clothing Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.1,7.8,77.9
+C109,Other Communications Equipment Manufacturing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.0,5.7,77.6
+C109,Other Communications Equipment Manufacturing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,40.3,6.5,80.8
+C110,Other Gambling Industries,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.7,5.8,73.9
+C110,Other Gambling Industries,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.7,9.0,82.6
+C111,Other Gasoline Stations,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,35.7,4.8,70.9
+C111,Other Gasoline Stations,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,38.0,5.7,77.5
+C112,Other Millwork (including Flooring),legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,35.8,5.5,78.1
+C112,Other Millwork (including Flooring),legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,39.4,6.6,82.0
+C113,Paint and Coating Manufacturing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.2,5.2,72.7
+C113,Paint and Coating Manufacturing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,40.3,5.8,75.0
+C114,Painting and Wall Covering Contractors,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.7,2.7,37.5
+C114,Painting and Wall Covering Contractors,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.5,6.0,68.6
+C115,Parking Lots and Garages,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,47.3,8.0,73.7
+C115,Parking Lots and Garages,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,51.3,10.6,80.2
+C116,Passenger Car Leasing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.9,5.9,74.4
+C116,Passenger Car Leasing,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.9,7.1,81.1
+C117,Passenger Car Rental,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.7,7.4,74.5
+C117,Passenger Car Rental,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.5,9.6,81.0
+C118,Pesticide and Other Agricultural Chemical Manufacturing,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,29.2,4.1,60.0
+C118,Pesticide and Other Agricultural Chemical Manufacturing,legacy_tdw_own,visits,legacy,tdw,own,withheld_support,,,
+C119,Pet and Pet Supplies Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.1,4.5,71.0
+C119,Pet and Pet Supplies Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,38.1,5.3,79.1
+C120,Pet Care (except Veterinary) Services,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,34.9,3.8,58.5
+C120,Pet Care (except Veterinary) Services,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.4,6.9,78.7
+C121,Pharmacies and Drug Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.4,5.3,70.2
+C121,Pharmacies and Drug Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.9,6.3,76.0
+C122,Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.2,6.7,73.5
+C122,Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.6,7.5,78.1
+C123,"Plumbing, Heating, and Air-Conditioning Contractors",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,37.3,3.4,46.8
+C123,"Plumbing, Heating, and Air-Conditioning Contractors",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.3,6.7,73.2
+C124,Postal Service,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,30.9,3.4,59.4
+C124,Postal Service,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,39.0,5.2,70.3
+C125,Private Mail Centers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.4,4.4,68.7
+C125,Private Mail Centers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.2,5.3,71.8
+C126,Refrigeration Equipment and Supplies Merchant Wholesalers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.7,5.1,61.9
+C126,Refrigeration Equipment and Supplies Merchant Wholesalers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.0,6.6,71.1
+C127,Regulation and Administration of Transportation Programs,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.8,5.7,76.0
+C127,Regulation and Administration of Transportation Programs,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.3,7.4,80.0
+C128,Retail Bakeries,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.0,5.1,61.2
+C128,Retail Bakeries,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,46.9,7.1,74.7
+C129,"Rooming and Boarding Houses, Dormitories, and Workers' Camps",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,42.0,2.0,40.4
+C129,"Rooming and Boarding Houses, Dormitories, and Workers' Camps",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.1,2.8,50.2
+C130,RV (Recreational Vehicle) Parks and Campgrounds,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,32.5,5.2,76.6
+C130,RV (Recreational Vehicle) Parks and Campgrounds,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,38.0,6.9,81.9
+C131,Securities Brokerage,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,33.1,3.8,69.1
+C131,Securities Brokerage,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,39.6,5.7,75.5
+C132,"Sewing, Needlework, and Piece Goods Stores",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,37.5,4.5,63.9
+C132,"Sewing, Needlework, and Piece Goods Stores",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,41.2,6.4,77.6
+C133,Shoe Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.1,6.7,78.1
+C133,Shoe Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.1,7.5,81.5
+C134,Snack and Nonalcoholic Beverage Bars,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.6,5.1,69.7
+C134,Snack and Nonalcoholic Beverage Bars,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,43.3,6.2,75.7
+C135,Sporting Goods Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,37.4,4.7,68.5
+C135,Sporting Goods Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,39.8,6.2,78.9
+C136,Supermarkets and Other Grocery (except Convenience) Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,41.4,5.6,67.1
+C136,Supermarkets and Other Grocery (except Convenience) Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.2,6.3,77.3
+C137,Tax Preparation Services,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,42.2,5.2,64.0
+C137,Tax Preparation Services,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.6,7.1,76.8
+C138,Taxi Service,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,47.5,4.5,46.9
+C138,Taxi Service,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,51.0,8.3,71.5
+C139,Television Broadcasting,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.9,5.6,79.1
+C139,Television Broadcasting,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,39.4,6.1,81.9
+C140,Tire Dealers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.1,5.8,74.9
+C140,Tire Dealers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.2,7.4,82.5
+C141,Tire Manufacturing (except Retreading),legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,38.6,5.3,75.3
+C141,Tire Manufacturing (except Retreading),legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,40.8,6.2,80.0
+C142,Tobacco Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,46.5,6.1,67.4
+C142,Tobacco Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,49.9,8.1,75.3
+C143,Travel Agencies,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.9,4.7,51.8
+C143,Travel Agencies,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,48.6,7.9,74.1
+C144,"Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing",legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,40.0,5.5,70.7
+C144,"Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing",legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.8,6.8,77.9
+C145,Used Car Dealers,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.3,6.4,71.6
+C145,Used Car Dealers,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.6,8.9,83.6
+C146,Used Merchandise Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,39.0,5.4,70.0
+C146,Used Merchandise Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,41.8,6.6,78.0
+C147,Veterinary Services,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,36.6,4.3,71.3
+C147,Veterinary Services,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,39.2,5.0,75.7
+C148,Wineries,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,37.3,5.4,71.0
+C148,Wineries,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,42.8,7.5,79.6
+C149,Wireless Telecommunications Carriers (except Satellite),legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,43.4,5.8,73.0
+C149,Wireless Telecommunications Carriers (except Satellite),legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,44.9,6.6,77.6
+C150,Women's Clothing Stores,legacy_tdw_own,equal,legacy,tdw,own,eligible_provisional,42.4,5.8,67.2
+C150,Women's Clothing Stores,legacy_tdw_own,visits,legacy,tdw,own,eligible_provisional,45.4,7.8,77.1
