@@ -1,0 +1,7 @@
+weighting,metric,status,percent
+equal,tie,shown_pending_review,0.0
+equal,below_half,shown_pending_review,10.8
+equal,gap_le_005,shown_pending_review,3.8
+visits,tie,shown_pending_review,0.0
+visits,below_half,shown_pending_review,12.2
+visits,gap_le_005,shown_pending_review,4.2

@@ -1,0 +1,15 @@
+Prespecified plurality racial-assignment sensitivity on the fixed full-SJ available-2019 roster, using unchanged origin masks, saved income bins and equal or saved matched-visit venue weights.
+
+Category indices use 0.1 index-point display bins (fractionalization multiplied by 100). Correlations use 0.01 bins. National information-loss fractions use 0.1 percentage-point bins. Decimal half-even rounding is applied to the round-trip decimal representation of the accepted binary64 values.
+
+Each displayed change is a conservative interval derived only from its two displayed endpoint bins, in label-minus-mixture order. No independently rounded private difference or additional sign label is disclosed. Full-precision signed differences remain private; an interval containing zero does not establish an exact zero, disappearance or equivalence.
+
+All 150 category labels and both weights remain. The correlation family uses the same fixed 136 labels throughout. Support failures withhold numbers; constant vectors remain undefined. Neither category intersections nor eligibility rules adapt to observed differences.
+
+National tie, below-half and gap-at-most-five-percentage-points fractions average within-venue jointly classified origin-flow fractions over the entire SJ roster. They are not pooled origin counts, visitor traits, misclassification rates, error bounds or new eligibility screens. The flags overlap.
+
+Primary and reverse rules use opposite exact-maximum tie priorities on the same once-normalized racial vectors; near ties are not merged. Reassignment discards within-origin racial shares. Income remains an area label based on median household income, with four race groups versus ten income bins.
+
+This is sensitivity to the specified lossy reassignment. Mixed and unchanged patterns retain their meaning; no general representation-bias, actual-contact, individual-trait or causal conclusion follows. Common-geography, stable-ID and historical-production limitations remain.
+
+Candidate for cumulative disclosure review only. No upload, publication, changed data licence or general release is authorized by staging.
