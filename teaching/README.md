@@ -141,3 +141,11 @@ The canonical source is `E:/AI/teaching/ai_workshop/revealjs/`. This scoped
 publication copies only the two HTML files, adds noindex and retargets the
 interactive example's return link to `ai-course.html`. The manifest records
 source and published hashes. The videos stream from their existing hosts.
+
+### Standalone exercise guide link, 23 October 2026
+
+The guide downloaded individually from the PhD slides now directs readers to
+the slide containing the full exercise-folder download before opening START-HERE.
+Its former sibling-file link worked only inside the ZIP. The ZIP retains that
+working relative link; all 42 student files and the 43-slide content and style
+are unchanged. Local and live diagram navigation and return links were verified.
