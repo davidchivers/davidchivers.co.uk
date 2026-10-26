@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
   publish:
-    if: github.repository == 'davidchivers/davidchivers.co.uk'
+    if: github.repository == 'davidchivers/davidchivers.co.uk' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

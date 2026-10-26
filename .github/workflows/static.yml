@@ -34,6 +34,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Verify this repository owns the public domain
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/check_publishing_setup.py
       - name: Stamp this release with its publishing identity
         env:
           RELEASE_SHA: ${{ github.sha }}

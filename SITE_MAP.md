@@ -61,6 +61,8 @@ David's instruction on 23 October 2026 is to use only this repository for future
 
 The custom-domain transfer was completed on 26 October 2026. Account-level ownership verification released the domain from the old repository without requiring its owner's admin access. The Pages API now assigns `davidchivers.co.uk` to this repository, with `protected_domain_state: verified`, an approved certificate, and HTTPS enforcement enabled. The old repository's custom domain is null.
 
+The publishing audit on the same date removed David's collaborator membership from the retired repository. GitHub now reports `push: false` and `pull: true` for that public repository. Do not rejoin it, create a replacement mirror, or request renewed write access to publish this site. The website repository has no webhooks, Actions secrets or Actions variables for a mirror; the Pages environment permits only the `main` branch.
+
 ### Hosting and DNS
 
 - Publishing repository: `davidchivers/davidchivers.co.uk`, branch `main`, root directory, GitHub Actions workflow `.github/workflows/static.yml`.
@@ -75,7 +77,9 @@ The custom-domain transfer was completed on 26 October 2026. Account-level owner
 
 ### Publication verification
 
-The Pages workflow writes `publishing-release.json` into each deployment with the repository, branch and full commit SHA. After deployment, `scripts/verify_publication.py` requires that exact identity from the custom domain over validated HTTPS and through the HTTPS www redirect, then compares the live homepage, CV, Book, Blog, student AI course and PhD workshop against the deployed Git objects. It rejects redirects to another host or HTTP and retries while CDN caches update. Failure makes the workflow fail even when GitHub accepted the deployment.
+Before deployment, `scripts/check_publishing_setup.py` checks GitHub's current Pages configuration: the exact repository and `main` ref, the assigned custom domain, verified ownership, Actions publishing from the root, and HTTPS enforcement. A mismatch stops deployment. Both site publishing and lecture-download publishing are restricted to `main`, including manual workflow runs.
+
+The Pages workflow writes `publishing-release.json` into each deployment with the repository, branch and full commit SHA. After deployment, `scripts/verify_publication.py` requires that exact identity from the custom domain over validated HTTPS and through the HTTPS www redirect, then compares the live homepage, CV, Book, Blog, student AI course, AI installer (including its JavaScript) and PhD workshop against the deployed Git objects. It rejects redirects to another host or HTTP and retries while CDN caches update. Failure makes the workflow fail even when GitHub accepted the deployment.
 
 To verify a release manually from a checkout containing that commit, run `python scripts/verify_publication.py <full-main-commit-sha>`. Also inspect the specific changed routes and their assets. Do not call a release live from the deployment step alone.
 
