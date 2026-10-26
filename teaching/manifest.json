@@ -32,9 +32,9 @@
     },
     {
       "path": "macro-applications/lecture_4.html",
-      "bytes": 4148190,
-      "source_sha256": "64e3b75d07aaf0cd21cd77316ab53edf96db6f7a1d7393cc0ffbdf9a01f6ec7f",
-      "sha256": "0784580a8d93d84fd80756ffa3f3aa8d7f4388a18ee0b94c7dfdf42d563d421b"
+      "bytes": 3693638,
+      "source_sha256": "c701c595bdbb6014e5e7976e0409ec9412992716a8b4652c272dd4b5245557a7",
+      "sha256": "ac52363630495956981bbd6d2d8d71fe148bdf971b42f0683b8bb555de0dcf02"
     },
     {
       "path": "macro-applications/lecture_5.html",
@@ -80,9 +80,9 @@
     },
     {
       "path": "macro-applications/downloads/lecture_4.pptx",
-      "bytes": 1845758,
-      "source_sha256": "371880da3f29f264dfa21adde4a60c1c4236d08e3d47a5f4ed2eb877e49b7e67",
-      "sha256": "371880da3f29f264dfa21adde4a60c1c4236d08e3d47a5f4ed2eb877e49b7e67"
+      "bytes": 1921869,
+      "source_sha256": "d18bb40f11ab8cdda2236b9490f9b74b219ba402208a9b9ec66a8a7d5f35de6e",
+      "sha256": "d18bb40f11ab8cdda2236b9490f9b74b219ba402208a9b9ec66a8a7d5f35de6e"
     },
     {
       "path": "macro-applications/downloads/lecture_4.pdf",
