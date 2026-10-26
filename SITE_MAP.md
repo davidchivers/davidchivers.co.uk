@@ -95,6 +95,11 @@ recovery procedure. HTTPS enforcement and the ownership TXT record were retained
 The old repository's Pages API reports `cname: null`; the repository itself still
 exists under its owner's account and is not a publishing destination for this site.
 
+The replacement certificate was approved on 26 October and covers both
+`davidchivers.co.uk` and `www.davidchivers.co.uk`, expiring 24 January 2027.
+The HTTPS www redirect and release identity were verified with certificate
+validation enabled, followed by the full public-route content check.
+
 Keep the HTTPS and release-identity checks enabled. Do not treat a deployment
 failure as a reason to resume mirroring or turn off certificate verification.
 For a recurrence, inspect the failed step and Pages certificate/DNS status first.
