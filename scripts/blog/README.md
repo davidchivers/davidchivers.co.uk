@@ -53,10 +53,10 @@ overwrite the source feed with a new export as part of an ordinary rebuild.
 
 ## Deployment
 
-Use a feature branch and pull request. The canonical repository deploys `main`
-with `.github/workflows/static.yml`. At the start of this migration, deployment
-metadata confirmed that `thomshutt/davidchivers` still serves the custom domain
-from `master`. Mirror **only** `blog/` and the homepage/research-page Blog-link changes to that
-temporary bridge using its own pull request. Do not copy unrelated site files
-or alter domain settings. Verify `https://davidchivers.co.uk/blog/` after Pages
-reports successful deployment; the canonical workflow alone is not proof.
+Use a feature branch and pull request in `davidchivers/davidchivers.co.uk`.
+The repository deploys `main` with `.github/workflows/static.yml` and owns the
+verified custom domain `davidchivers.co.uk`. The transfer completed on
+26 October 2026. Do not mirror updates or open publishing PRs in
+`thomshutt/davidchivers`; its custom-domain association has been removed.
+Verify the workflow's HTTPS release check and the changed public blog route.
+See `SITE_MAP.md` for current hosting configuration and verification.

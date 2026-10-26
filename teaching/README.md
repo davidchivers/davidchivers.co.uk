@@ -38,10 +38,11 @@ point to the published HTML, not a GitHub file preview or commit-specific URL.
 4. Check the changed presentation and scoped Git diff. Commit only intended
    changes and publish through a feature branch and pull request to `main`.
    The existing GitHub Pages deployment publishes the merged files.
-5. While the custom domain still uses the temporary `thomshutt/davidchivers`
-   bridge, mirror the same `teaching/` files to its `master` branch through a
-   pull request. Do not assume a canonical Pages run updates the custom domain.
-6. Verify the public URL after deployment. Future updates use the same
+5. Publish only to `davidchivers/davidchivers.co.uk`. The custom domain moved
+   to this repository on 26 October 2026; `thomshutt/davidchivers` no longer
+   has its custom-domain association. Do not mirror files or create PRs there.
+6. Verify the workflow's HTTPS release check and the changed public URL.
+   See `SITE_MAP.md` for current hosting configuration. Future updates use the same
    Blackboard link; Pages deployment and browser caching may take a few minutes.
 
 The induction link belongs immediately below **Programme Director Welcome
