@@ -81,6 +81,25 @@ To verify a release manually from a checkout containing that commit, run `python
 
 Before transfer, the destination's key pages and shared stylesheet matched `main` byte-for-byte at its GitHub Pages address, and every file path in the old repository's current default branch existed in this repository.
 
+### Certificate repair after transfer
+
+On 26 October, the post-deployment checks correctly failed because the retained
+certificate covered the apex domain but omitted `www.davidchivers.co.uk`.
+The website and lecture downloads had deployed; the failed HTTPS redirect check
+caused the GitHub Actions failure notifications.
+
+After verifying both DNS configurations and account-level domain ownership,
+the same custom domain was removed and immediately re-added in David's Pages
+settings to restart certificate provisioning, following GitHub's documented
+recovery procedure. HTTPS enforcement and the ownership TXT record were retained.
+The old repository's Pages API reports `cname: null`; the repository itself still
+exists under its owner's account and is not a publishing destination for this site.
+
+Keep the HTTPS and release-identity checks enabled. Do not treat a deployment
+failure as a reason to resume mirroring or turn off certificate verification.
+For a recurrence, inspect the failed step and Pages certificate/DNS status first.
+Reference: [GitHub certificate provisioning](https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https#troubleshooting-certificate-provisioning-certificate-not-yet-created-error).
+
 ## Before Pushing New Website Work
 
 1. Confirm the route belongs in this repo.
