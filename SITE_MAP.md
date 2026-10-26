@@ -59,9 +59,27 @@ Recommended rule:
 
 David's instruction on 23 October 2026 is to use only this repository for future publication. Do not push updates or create mirror pull requests in `thomshutt/davidchivers`. Earlier guidance to use it as a temporary publishing bridge is superseded.
 
-One hosting prerequisite remains unresolved. The GitHub Pages API checked on 23 October still assigned `davidchivers.co.uk` to the old repository; this repository's `cname` was null. Assigning the domain here returned HTTP 400, `Invalid cname`, because the domain was already taken. David's login has admin rights here but only write access on the old repository. Its owner must release the domain under Settings > Pages before it can be assigned here. Do not delete or disable the live site as a substitute for this transfer.
+The custom-domain transfer was completed on 26 October 2026. Account-level ownership verification released the domain from the old repository without requiring its owner's admin access. The Pages API now assigns `davidchivers.co.uk` to this repository, with `protected_domain_state: verified`, an approved certificate, and HTTPS enforcement enabled. The old repository's custom domain is null.
 
-After the domain is released, assign `davidchivers.co.uk` in this repository's Pages settings, deploy `main`, and verify HTTPS and the live routes. Both repositories use Actions deployments, so a `CNAME` file alone does not configure the domain. Until the transfer is verified, a successful deployment at the GitHub backup address does not prove the custom domain has received a release.
+### Hosting and DNS
+
+- Publishing repository: `davidchivers/davidchivers.co.uk`, branch `main`, root directory, GitHub Actions workflow `.github/workflows/static.yml`.
+- Canonical public URL: `https://davidchivers.co.uk/`.
+- Registrar and DNS management: 123 Reg. Nameservers: `ns01.domaincontrol.com`, `ns02.domaincontrol.com`.
+- Preserve the ownership TXT record permanently: `_github-pages-challenge-davidchivers` = `e53f4219ce341799be1ceab05b89ec`. It was added through 123 Reg with its default TTL; authoritative/public DNS reported 3600 seconds.
+- Existing apex A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
+- Existing apex AAAA records: `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`.
+- `www` CNAME: `davidchivers.github.io`, TTL 1 hour. The old value pointed to the apex and failed HTTPS certificate validation. GitHub requires this direct CNAME for the www HTTPS redirect.
+- `_domainconnect`, NS, SOA, apex A and AAAA records were preserved. The inspected zone had no MX records. DNS changes were limited to the verification TXT record and the www correction.
+- A `CNAME` file alone does not configure an Actions-hosted domain; the repository's Pages settings are authoritative.
+
+### Publication verification
+
+The Pages workflow writes `publishing-release.json` into each deployment with the repository, branch and full commit SHA. After deployment, `scripts/verify_publication.py` requires that exact identity from the custom domain over validated HTTPS and through the HTTPS www redirect, then compares the live homepage, CV, Book, Blog, student AI course and PhD workshop against the deployed Git objects. It rejects redirects to another host or HTTP and retries while CDN caches update. Failure makes the workflow fail even when GitHub accepted the deployment.
+
+To verify a release manually from a checkout containing that commit, run `python scripts/verify_publication.py <full-main-commit-sha>`. Also inspect the specific changed routes and their assets. Do not call a release live from the deployment step alone.
+
+Before transfer, the destination's key pages and shared stylesheet matched `main` byte-for-byte at its GitHub Pages address, and every file path in the old repository's current default branch existed in this repository.
 
 ## Before Pushing New Website Work
 
