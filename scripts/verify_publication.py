@@ -19,6 +19,8 @@ ROUTES = {
     '/book/': 'book/index.html',
     '/blog/': 'blog/index.html',
     '/ai/': 'ai/index.html',
+    '/ai_install/': 'ai_install/index.html',
+    '/ai_install/app.js': 'ai_install/app.js',
     '/teaching/ai-course.html': 'teaching/ai-course.html',
 }
 
