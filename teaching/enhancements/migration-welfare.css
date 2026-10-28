@@ -1,0 +1,27 @@
+#l4-s16 .migration-welfare-graph { position: absolute; left: 124px; top: 143px; width: 1352px; height: 560px; line-height: 0; }
+#l4-s16 .migration-welfare-graph > svg { display: block; width: 100%; height: auto; }
+#l4-s16 .migration-welfare-area, #l4-s16 .migration-welfare-letter { cursor: help; }
+#l4-s16 .migration-welfare-area { outline: none; }
+#l4-s16 .migration-welfare-area.is-active, #l4-s16 .migration-welfare-area:focus-visible {
+  stroke: #18786e; stroke-width: 3; stroke-linejoin: round;
+}
+#l4-s16 .migration-welfare-tooltip {
+  position: absolute; z-index: 5; left: 0; top: calc(100% + 8px); box-sizing: border-box; width: 100%;
+  padding: 12px 18px; border: 2px solid #18786e; border-radius: 10px;
+  background: #fff; color: #24313b; box-shadow: 0 6px 24px #24313b30;
+  font-family: Aptos, 'Segoe UI', Arial, sans-serif; font-size: 24px; line-height: 1.3; text-align: left;
+}
+#l4-s16 .migration-welfare-tooltip[hidden] { display: none; }
+#l4-s16 .migration-welfare-tooltip strong { display: block; margin-bottom: 6px; color: #14665e; }
+#l4-s16 .migration-welfare-tooltip span { display: block; }
+#l4-s16 .migration-welfare-hint { position: absolute; left: 100px; top: 716px; width: 1424px; height: auto; margin: 0; font-size: 22px; line-height: 1.25; color: #495563; }
+#l4-s16 .l4-caption { top: 758px; }
+#l4-s16:has(.migration-welfare-tooltip:not([hidden])) .migration-welfare-hint,
+#l4-s16:has(.migration-welfare-tooltip:not([hidden])) .l4-caption { visibility: hidden; }
+@media print {
+  #l4-s16 .migration-welfare-tooltip, #l4-s16 .migration-welfare-hint { display: none !important; }
+  #l4-s16 .migration-welfare-area { stroke: none !important; }
+  #l4-s16 .migration-welfare-graph { left: 88px; width: 1424px; height: 590px; }
+  #l4-s16 .l4-caption { visibility: visible !important; }
+  #l4-s16 .l4-caption { top: 744px; }
+}

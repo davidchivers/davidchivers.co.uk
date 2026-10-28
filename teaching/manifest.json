@@ -32,9 +32,13 @@
     },
     {
       "path": "macro-applications/lecture_4.html",
-      "bytes": 3674399,
+      "bytes": 3683351,
       "source_sha256": "aec2d39a88ca1354cde353215bcc1481e960df09866f7d5f1dc3d8a57817f014",
-      "sha256": "f8bfe3388ff1795678adb8dc4e948926b28ec75bb8db2ce2346548316fbfdc96"
+      "sha256": "22fec5d53cfce1abfbd5acf7496a6f0668ff901e9a7c5cb76ca5d5d5f46e699d",
+      "enhancements": [
+        "enhancements/migration-welfare.css",
+        "enhancements/migration-welfare.js"
+      ]
     },
     {
       "path": "macro-applications/lecture_5.html",

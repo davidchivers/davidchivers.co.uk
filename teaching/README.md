@@ -149,3 +149,28 @@ The 41-slide workshop now ends with adapting the tools to research, AI writing
 and discussion. The repeated threshold and dated-advice slides are removed;
 risk-preference detail remains in the earlier notes. The appendix has a linked
 reference index. Source order, internal targets and changed layouts checked.
+
+### Migration welfare explanations, 28 October 2026
+
+Lecture 4's Welfare slide (`#/l4-s16`) now explains every area A–J on hover,
+keyboard focus or click/tap. The explanation appears below the graph so it
+does not cover another letter. Escape, clicking outside or changing slides
+dismisses it. The text distinguishes income levels, transfers and net gains;
+the origin-population gain D explicitly includes emigrants.
+
+The canonical Quarto source is on the desktop, which was offline for this
+update. The website therefore maintains this interaction in
+`enhancements/migration-welfare.css` and `enhancements/migration-welfare.js`,
+embedded into the self-contained HTML by `enhance_migration_welfare.py`.
+`sync_slides.py` reapplies it to Lecture 4 before computing publication hashes.
+Any separate scoped publisher must likewise call `enhance_migration_welfare`
+after rendering and before recording the published hash. The helper is
+idempotent and rejects changed diagram artwork until its letter mapping has
+been checked. The manifest retains the original rendered-source hash and
+lists the enhancement assets separately.
+
+This change adds HTML interaction only. The graph's economics, all other
+slides, and the existing static PDF/PowerPoint downloads are unchanged. Print
+styles restore the original diagram size and caption. Browser checks covered
+all ten explanations, pointer interaction, keyboard focus and Escape, and
+the longest tooltip fitting within the slide.

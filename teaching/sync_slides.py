@@ -9,6 +9,7 @@ import argparse
 import hashlib
 import json
 import re
+from enhance_migration_welfare import ASSETS, enhance_migration_welfare
 
 DECKS = {
     "macro-applications/seminars/index.html": "macro_seminars_quarto/output/index.html",
@@ -105,6 +106,8 @@ def main():
                 b'ai_course.html#/learn-by-experimenting',
                 b'ai-course.html#/learn-by-experimenting',
             )
+        if source == workspace / DECKS["macro-applications/lecture_4.html"]:
+            content = enhance_migration_welfare(content)
         prepared[source] = unlisted_html(content)
     records = []
     for name, source in sources.items():
@@ -115,6 +118,8 @@ def main():
             raise SystemExit(f"Publication verification failed: {name}")
         records.append({"path": name, "bytes": target.stat().st_size,
                         "source_sha256": digest(source), "sha256": digest(target)})
+        if name == "macro-applications/lecture_4.html":
+            records[-1]["enhancements"] = ASSETS
     index = destination / "index.html"
     index.write_bytes(unlisted_html(index.read_bytes()))
     (destination / "manifest.json").write_text(json.dumps({"files": records}, indent=2) + "\n", encoding="utf-8")
