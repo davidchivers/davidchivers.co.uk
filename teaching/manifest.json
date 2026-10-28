@@ -32,12 +32,13 @@
     },
     {
       "path": "macro-applications/lecture_4.html",
-      "bytes": 3683351,
+      "bytes": 3684087,
       "source_sha256": "aec2d39a88ca1354cde353215bcc1481e960df09866f7d5f1dc3d8a57817f014",
-      "sha256": "22fec5d53cfce1abfbd5acf7496a6f0668ff901e9a7c5cb76ca5d5d5f46e699d",
+      "sha256": "3720926c215a2c2bb1c87f21db0dfc2be19378c22926d503a71c42bc7fe874dc",
       "enhancements": [
         "enhancements/migration-welfare.css",
-        "enhancements/migration-welfare.js"
+        "enhancements/migration-welfare.js",
+        "enhancements/migration-welfare-summary.html"
       ]
     },
     {
@@ -84,9 +85,9 @@
     },
     {
       "path": "macro-applications/downloads/lecture_4.pptx",
-      "bytes": 1976157,
-      "source_sha256": "286d75e0e6d221cc6bd9048978447ab07aedd6de56434767977921269164bb35",
-      "sha256": "286d75e0e6d221cc6bd9048978447ab07aedd6de56434767977921269164bb35"
+      "bytes": 1966268,
+      "source_sha256": "82cd9a6d3924e013a7594af4e555cbecab92ca3d6d8faf8a9fb29239c22a290d",
+      "sha256": "82cd9a6d3924e013a7594af4e555cbecab92ca3d6d8faf8a9fb29239c22a290d"
     },
     {
       "path": "macro-applications/downloads/lecture_4.pdf",
