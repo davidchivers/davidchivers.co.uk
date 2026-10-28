@@ -174,3 +174,17 @@ slides, and the existing static PDF/PowerPoint downloads are unchanged. Print
 styles restore the original diagram size and caption. Browser checks covered
 all ten explanations, pointer interaction, keyboard focus and Escape, and
 the longest tooltip fitting within the slide.
+
+### Migration summary follow-up, 28 October 2026
+
+The slide immediately after the welfare graph (`#/l4-s17`, slide 16 of 30)
+now summarises the letter-labelled gains and losses. It shows the net gains C
+and D, migrants' gain D + F, the loss F to those remaining in the origin,
+and the world-output gain C + D. The caveat that compensation is not automatic
+remains. No slide was added or reordered.
+
+`enhancements/migration-welfare-summary.html` is the maintained summary fragment.
+The publishing helper applies it alongside the hover explanations and rejects
+an unrecognised source summary until it has been reconciled. The matching
+PowerPoint has the new slide artwork and notes at its existing Download link;
+the other 29 slides are preserved. The legacy PDF was not rebuilt or selected.
