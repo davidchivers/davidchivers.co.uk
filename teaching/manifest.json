@@ -121,9 +121,9 @@
     },
     {
       "path": "macro-applications/seminars/seminar_2.html",
-      "bytes": 1197571,
-      "source_sha256": "bb9485e2f9c6a7c735cb7464dc65ce88a2a9d84e60a7bc0a2228bc0752581f37",
-      "sha256": "28b0de96b38c4260021bdfea7e7cf32f733e21f723970f07e449b9ba6bce7af2"
+      "bytes": 1212566,
+      "source_sha256": "40a0abc58ef2330bf27e012c270810d4f4d8b82ec08165956e02cc71b2831ec5",
+      "sha256": "40a0abc58ef2330bf27e012c270810d4f4d8b82ec08165956e02cc71b2831ec5"
     },
     {
       "path": "political-economy/index.html",
@@ -232,6 +232,12 @@
       "bytes": 34159,
       "source_sha256": "61a1b8ea8cb0e7f91589f36d533904c1e269775e4522581f28cf3f666ac53486",
       "sha256": "537131ec358ec4555b5c7c0d0464fe2e4770525eae9573847e8e2d041119dd79"
+    },
+    {
+      "path": "macro-applications/seminars/readings/allen_1998_competition.pdf",
+      "bytes": 577801,
+      "source_sha256": "74bcdf352f3e431aad67187b31616a92dc25871ec2ee2a22c6cdc55771bae264",
+      "sha256": "74bcdf352f3e431aad67187b31616a92dc25871ec2ee2a22c6cdc55771bae264"
     }
   ]
 }
