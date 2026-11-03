@@ -135,10 +135,12 @@ const reset = figure.querySelector(".zoom-reset");
 const ukPoint = points.find(point => point.dataset.city === "Manchester");
 let zoom = 1;
 
-// At desktop size London and Guildford need about 4,600 pixels of map width.
-// On a small screen stop at a regional view and use the smaller marker style.
+const touchMap = window.matchMedia("(pointer: coarse)");
 function zoomLimit() {
-  return Math.max(1, Math.min(8, 4600 / mapWindow.clientWidth));
+  const width = Math.max(1, mapWindow.clientWidth);
+  // At this map width even London and Surrey are about 25 CSS pixels apart.
+  if (touchMap.matches) return Math.max(1, 18000 / width);
+  return Math.max(1, Math.min(8, 4600 / width));
 }
 
 function anchorAt(x, y) {
