@@ -132,9 +132,9 @@
     {
       "path": "political-economy/index.html",
       "bytes": 1190518,
-      "source_sha256": "ebfc9478c9ce9d8e8afdadae2896686b51d7125f0d3fe90c2b91a9367b6e293f",
-      "sha256": "3e9467632c2c660dfe0e4adc4f8e0efedd3cfe377d7414bc6b3704d5f56bb7a6",
-      "label_revision": "seminar-to-tutorial-20261103"
+      "source_sha256": "fb184eb69cbf6068efc14f4f5433afeec74bcef7b53c7079c7b4bb45ee5919a0",
+      "sha256": "dc99abbae1945fd56e68b908921e384392d2f406f3fac81b0e3a7cca8ccaed38",
+      "label_revision": "political-economy-tutorials-3-4"
     },
     {
       "path": "political-economy/lecture_1.html",
@@ -206,31 +206,31 @@
     },
     {
       "path": "political-economy/seminars/seminar_1.html",
-      "bytes": 1089,
-      "source_sha256": "d6207d391a6d2f077b5e5e46d7f0d7ba0f61b7f862d3c0cb784606231779faf0",
-      "sha256": "2f68bbea166c2d7f8490ce35e3cb29afa739a8fbfcea7e3382d77c4ce1d2f1cd",
-      "label_revision": "seminar-to-tutorial-20261103"
+      "bytes": 1067,
+      "source_sha256": "874059ccd2cbffd9f86f4f2614787b7217b96454223eae2291ac21eaa8aebec3",
+      "sha256": "874059ccd2cbffd9f86f4f2614787b7217b96454223eae2291ac21eaa8aebec3",
+      "label_revision": "political-economy-tutorials-3-4"
     },
     {
       "path": "political-economy/seminars/seminar_2.html",
-      "bytes": 1089,
-      "source_sha256": "9879dccf1adc935386d56b3083590f23272a46fbe1a47203d357d5ede18dc706",
-      "sha256": "c202fca41b6b60568fc3f3fe10b7a70b7dc7cfe033c2115ad6893148506ce09b",
-      "label_revision": "seminar-to-tutorial-20261103"
+      "bytes": 1067,
+      "source_sha256": "a2662a5747299879e2865f2ccffe0524653c3e7ba34924d547dc2499b7c258f4",
+      "sha256": "a2662a5747299879e2865f2ccffe0524653c3e7ba34924d547dc2499b7c258f4",
+      "label_revision": "political-economy-tutorials-3-4"
     },
     {
       "path": "political-economy/seminars/6cf249b800cb4be993e7ee999334427b.html",
       "bytes": 1083,
-      "source_sha256": "b06e11f62ca9daa21cecc0e11fda1b0aa04288e2a37a3d672528efbe823cfbb7",
-      "sha256": "3e653aed5ee62398151e2c85c4f9c40848bcb03b0e8f48889a212bd9824e776f",
-      "label_revision": "seminar-to-tutorial-20261103"
+      "source_sha256": "444e69c0d342e3725118569d0dd085787c8c2730705d9682c612144c1edff62c",
+      "sha256": "444e69c0d342e3725118569d0dd085787c8c2730705d9682c612144c1edff62c",
+      "label_revision": "political-economy-tutorials-3-4"
     },
     {
       "path": "political-economy/seminars/5efa2ccc0e8c4bcdb12e7e0d97159e90.html",
       "bytes": 1083,
-      "source_sha256": "4aea17602cceecfedf2790e464ae90622cbd48be2335b05d0c5ee3c0f2ddc2aa",
-      "sha256": "1462057797002839f30773dee2db9f6312399071f29d625ccb352f842c8014ff",
-      "label_revision": "seminar-to-tutorial-20261103"
+      "source_sha256": "d347bf865bda156fa38db29189645d01c2c34df6f505e2d83345583e71d42317",
+      "sha256": "d347bf865bda156fa38db29189645d01c2c34df6f505e2d83345583e71d42317",
+      "label_revision": "political-economy-tutorials-3-4"
     },
     {
       "path": "ai-course.html",
