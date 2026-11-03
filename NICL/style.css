@@ -25,9 +25,9 @@ cite{font-style:italic}
 }
 .mast-bar {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto auto;
   align-items: center;
-  gap: clamp(10px, 3vw, 40px);
+  gap: clamp(36px, 8vw, 100px);
   padding-block: 13px;
 }
 .nicl-wordmark{font:700 1.8rem/1 var(--display);letter-spacing:-.06em}
@@ -40,9 +40,14 @@ cite{font-style:italic}
 }
 .brand { justify-self: start; gap: 9px; }
 .network-globe { width: 37px; height: auto; flex: none; }
-.mast nav { display: flex; gap: clamp(14px, 2.6vw, 36px); }
-.mast nav a { font-size: .94rem; font-weight: 600; }
-.mast nav a:hover { text-decoration: underline; }
+.mast nav { display: flex; gap: clamp(18px, 2.2vw, 30px); }
+.mast nav a {
+  font: 400 1.13rem/1.2 var(--display);
+  color: #f7edf5;
+  text-underline-offset: .3em;
+}
+.mast nav a:hover,
+.mast nav a:focus-visible { color: var(--white); text-decoration: underline; }
 .mast a:focus-visible { outline-color: var(--cream); }
 .durham { justify-self: end; }
 .durham img { width: 106px; height: auto; }
@@ -54,11 +59,11 @@ h1 .i{color:var(--purple)}
   .mast-bar { gap: 10px; padding-block: 6px; }
   .brand { gap: 5px; font-size: 1.38rem; }
   .network-globe { width: 27px; }
-  .mast nav { gap: 11px; }
-  .mast nav a { font-size: .82rem; }
+  .mast nav { gap: clamp(12px, 3.5vw, 20px); }
+  .mast nav a { font-size: .9rem; }
   .durham img { width: 76px; }
 }
-@media (max-width: 374px) {
+@media (max-width: 460px) {
   .mast-bar { grid-template-columns: 1fr auto; row-gap: 0; }
   .durham { grid-column: 2; grid-row: 1; }
   .mast nav { grid-column: 1 / -1; justify-self: center; gap: 24px; }
