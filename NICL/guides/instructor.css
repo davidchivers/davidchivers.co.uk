@@ -83,11 +83,41 @@ textarea{display:block;resize:vertical;min-height:70px;width:100%;line-height:1.
  .guide-table table{min-width:min(480px,140vw)}.guide-table:has(tr>:nth-child(5)) table{min-width:630px}
 }
 @media print{
- body{background:white;font-size:10.5pt;color:black}.bar,.foot,.rail,.actions,.jump,.save-note,.paging,.skip{display:none}
- .layout,.reader,.library{max-width:none;display:block;margin:0;padding:0}.title{padding:0 0 10pt}
- h1{font-size:23pt}.guide-body h2{font-size:16pt;margin-top:14pt}.guide-body h3{font-size:13pt}
- h1,h2,h3,h4{break-after:avoid}a{color:inherit}.guide-table{overflow:visible}
- .guide-table table{min-width:0!important;table-layout:auto;font-size:8pt}td,th{padding:3pt;overflow-wrap:anywhere}
- .answer textarea,.answer select,.answer input{display:none}.print-answer{display:block;white-space:pre-wrap;overflow-wrap:anywhere;border-bottom:1px solid #aaa;min-height:1.5em}
- .answer{break-inside:auto}.answer label{break-after:avoid}.rating,.score{display:block}.worksheet,.activity-panel{margin:8pt 0}
+ @page {
+   size:A4; margin:23mm 19mm 19mm;
+   @top-left {content:"NICL";font:bold 13pt Georgia,serif;color:#54204f}
+   @top-right {content:"Navigating Leadership";font:italic 10pt Georgia,serif;color:#645963}
+   @bottom-left {content:"INSTRUCTOR GUIDES";font:600 7pt "Segoe UI",sans-serif;letter-spacing:1pt;color:#645963}
+   @bottom-right {content:counter(page) " / " counter(pages);font:9pt Georgia,serif;color:#54204f}
+ }
+ body{background:white;color:var(--ink);font:10.5pt/1.44 var(--sans);print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .bar,.foot,.rail,.actions,.jump,.save-note,.paging,.skip{display:none}
+ .layout,.reader,.library{max-width:none;display:block;margin:0;padding:0}
+ .title{border-top:3pt solid var(--plum);border-bottom:1px solid var(--line);padding:12pt 0}
+ .title .eyebrow{font-size:8pt;margin:0 0 5pt}.title h1{font-size:26pt;line-height:1.11;color:var(--plum)}
+ .guide-body h2{font-size:17pt;color:var(--plum);border:0;margin:13pt 0 5pt;padding:0}
+ .guide-body>h2:first-child{margin-top:12pt}.guide-body h3{font-size:13pt;margin:11pt 0 4pt}
+ .guide-body h4{font:650 10.5pt/1.35 var(--sans);margin:8pt 0 4pt}
+ h1,h2,h3,h4,summary{break-after:avoid-page}
+ .guide-body p,.guide-body ul,.guide-body ol,.guide-body blockquote{margin-bottom:6pt;orphans:2;widows:2}
+ .guide-body p:has(+ .guide-table),.guide-body p:has(+ p>img:only-child){break-after:avoid-page}
+ .guide-body h2[id*="reading"]~p{break-inside:avoid-page}
+ .outline{background:var(--wash);border-left:2pt solid var(--plum);margin:9pt 0;padding:7pt 10pt}
+ .outline summary{display:block;color:var(--plum);font-size:10pt}.outline>ul{margin:3pt 0 0}
+ .guide-body li+li{margin-top:.22em}
+ .guide-body a{color:var(--plum)}.guide-table{overflow:visible;margin:7pt 0}
+ .guide-table table{min-width:0!important;table-layout:auto;font-size:9pt;line-height:1.33}
+ th,td{padding:4pt;overflow-wrap:anywhere}tr,figure{break-inside:avoid-page}
+ .guide-body td p,.guide-body th p{margin-bottom:3pt}
+ .guide-body img{max-height:150mm;object-fit:contain;break-inside:avoid-page}
+ .worksheet,.activity-panel{margin:8pt 0}.answer{break-inside:avoid-page}
+ .answer label{font-size:10pt;break-after:avoid}.answer textarea,.answer select,.answer input{display:none}
+ .print-answer{display:block;white-space:pre-wrap;overflow-wrap:anywhere}
+ .essay .print-answer{min-height:20mm;padding:3pt 6pt;border:1px solid var(--line);border-radius:3pt}
+ body:is([data-chapter="1"],[data-chapter="7"],[data-chapter="12"]) .essay .print-answer{min-height:32mm}
+ body[data-chapter="12"] .guide-body img:not(.table-icon){display:block;max-height:98mm;margin-inline:auto}
+ body:is([data-chapter="4"],[data-chapter="9"]) .outline>ul{columns:2;column-gap:18pt;font-size:9pt}
+ .rating,.score{display:flex;align-items:baseline;gap:8pt;padding:3pt 0;margin:0}
+ .rating label,.score label{flex:1;margin:0}.rating .print-answer,.score .print-answer{min-width:14mm;min-height:1.1em;border-bottom:1px solid var(--muted)}
+ .guide-table .score .print-answer{min-width:0}
 }
