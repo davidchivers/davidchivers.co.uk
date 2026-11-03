@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 416" fill="none">
+  <defs>
+    <pattern id="grid" width="27" height="27" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#d5b7db" opacity=".31"/></pattern>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(34)"><path d="M0 0V8" stroke="#402047" stroke-width="2" opacity=".32"/></pattern>
+    <path id="profile" d="M5 315c13-26 22-58 18-85-3-18-19-41-22-64C-8 116 12 68 57 47c42-20 88-13 116 18 17 19 23 43 26 67l18 40q3 7-4 9l-16 5-2 15-7 5 5 7-7 6-2 21q-1 14-15 15l-34-2c-6 16-3 37 7 62z"/>
+    <clipPath id="figure"><rect x="0" y="16" width="540" height="345"/></clipPath>
+  </defs>
+  <rect width="540" height="416" fill="#50204f"/>
+  <rect width="540" height="416" fill="url(#grid)"/>
+  <g stroke="#d9bed3" stroke-width=".85" opacity=".55">
+    <path d="M28 26h18m-9-9v18m457-9h18m-9-9v18M28 389h18m-9-9v18m457-9h18m-9-9v18"/>
+    <path d="M41 342h457" stroke-dasharray="2 6"/>
+  </g>
+  <g clip-path="url(#figure)" stroke-linejoin="round">
+    <g transform="translate(65 27)">
+      <use href="#profile" fill="#9873ab" stroke="#d0a8d5" stroke-width="1.5"/>
+      <use href="#profile" fill="url(#hatch)"/>
+    </g>
+    <g transform="translate(133 27)">
+      <use href="#profile" fill="#c7a3cc" stroke="#efd2e1" stroke-width="1.5"/>
+      <use href="#profile" fill="url(#hatch)" opacity=".52"/>
+    </g>
+    <g transform="translate(201 27)">
+      <use href="#profile" fill="#f5d6ac" stroke="#ffe7c9" stroke-width="1.5"/>
+      <path d="M8 296c19-26 35-52 46-76 30-65 66-98 126-111M14 307c26-32 41-55 54-83 25-53 61-90 115-104M21 315c24-26 44-53 59-84 24-46 57-84 105-99" stroke="#65374d" stroke-width="1.35" opacity=".67"/>
+    </g>
+  </g>
+  <g stroke="#ffedd5" fill="#50204f">
+    <path d="m99 216 78-94 107 74 74-88" fill="none" stroke="#663b63" stroke-width="1.7" stroke-dasharray="3 5"/>
+    <circle cx="99" cy="216" r="4"/><circle cx="177" cy="122" r="5"/><circle cx="284" cy="196" r="5"/><circle cx="358" cy="108" r="4"/>
+  </g>
+</svg>
