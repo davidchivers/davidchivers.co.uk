@@ -102,3 +102,7 @@
   .place-dot::before { width: 4px; height: 4px; }
   .enlarged .place-dot::before { width: 3px; height: 3px; }
 }
+@media (pointer: coarse) {
+  .place-dot::before { width: 7px; height: 7px; }
+  .enlarged .place-dot::before { width: 10px; height: 10px; }
+}

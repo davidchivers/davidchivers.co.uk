@@ -88,7 +88,7 @@ function show(point) {
 
 function matchingPoints(event) {
   const touch = event.pointerType === "touch" || event.sourceCapabilities?.firesTouchEvents || lastPointerType === "touch";
-  const radius = touch ? 18 : 12;
+  const radius = touch ? 24 : 12;
   const frame = mapWindow.getBoundingClientRect();
   const near = [];
   for (const point of points) {
@@ -100,9 +100,9 @@ function matchingPoints(event) {
   }
   near.sort((a, b) => a.distance - b.distance);
   if (!touch || near.length < 2) return near.slice(0, 1).map(hit => hit.point);
-  // Offer alternatives only if the tap is almost equally close to several dots.
-  const best = near[0].distance;
-  return near.filter(hit => hit.distance <= best + Math.min(3, best * .8 + .3)).map(hit => hit.point);
+  // A fingertip can cover several towns. Let the visitor choose between close matches.
+  const choiceRadius = near[0].distance + 8;
+  return near.filter(hit => hit.distance <= choiceRadius).map(hit => hit.point);
 }
 
 function offerChoices(matches) {
