@@ -169,5 +169,7 @@ img.portrait-schyns { filter: saturate(.78) sepia(.08) brightness(1.035); }
 footer{background:var(--plum);color:var(--white)}
 .footer-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;padding-block:26px}
 .footer-name{flex:1;font-size:.87rem;line-height:1.35;color:#f1e2ee}
+.footer-contact{font-size:.87rem;line-height:1.5;color:#f1e2ee}
+@media(max-width:640px){.footer-contact{flex-basis:100%;margin-block:6px}}
 .footer-bar a{color:var(--white);font-size:.9rem;font-weight:600;white-space:nowrap;text-decoration:none}
 .footer-bar a:hover{text-decoration:underline}
