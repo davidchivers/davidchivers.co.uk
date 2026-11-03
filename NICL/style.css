@@ -42,7 +42,8 @@ cite{font-style:italic}
 .network-globe { width: 37px; height: auto; flex: none; }
 .mast nav { display: flex; gap: clamp(18px, 2.2vw, 30px); }
 .mast nav a {
-  font: 400 1.13rem/1.2 var(--display);
+  font: 400 1rem/1.2 var(--display);
+  padding-top: 4px;
   color: #f7edf5;
   text-underline-offset: .3em;
 }
@@ -67,6 +68,7 @@ h1 .i{color:var(--purple)}
   .mast-bar { grid-template-columns: 1fr auto; row-gap: 0; }
   .durham { grid-column: 2; grid-row: 1; }
   .mast nav { grid-column: 1 / -1; justify-self: center; gap: 24px; }
+  .mast nav a { padding-top: 0; }
 }
 
 /* Opening */
