@@ -8,9 +8,10 @@
     },
     {
       "path": "macro-applications/index.html",
-      "bytes": 1899139,
+      "bytes": 1899142,
       "source_sha256": "4a8f6e7fcd07b5a8ec1b5b4b11d42892edacd074f6ee456cc44c6d0181c4c2c4",
-      "sha256": "2f6efe30c668a923882cba6403713d61cf9215ea7e2fb0de2b5a23702ca4e7c6"
+      "sha256": "552a6c646367a373d5c57af96cf6d8fb8ee48fd2fa5e2330bc378eb673a0072f",
+      "label_revision": "seminar-to-tutorial-20261103"
     },
     {
       "path": "macro-applications/lecture_1.html",
@@ -109,27 +110,31 @@
     },
     {
       "path": "macro-applications/seminars/index.html",
-      "bytes": 1191159,
+      "bytes": 1191163,
       "source_sha256": "44d6250d2816c6dfa2b96a260118e2bbb53b17d2859c059f4bca669894438a1e",
-      "sha256": "79ee0f0b9b5307aa4c83692242039b7db2bd2f9066c8b70a6916630e171afd74"
+      "sha256": "8ec2579e4f75508236e462cf4a15190712b801f32a74f45af926d5b449c39e48",
+      "label_revision": "seminar-to-tutorial-20261103"
     },
     {
       "path": "macro-applications/seminars/seminar_1.html",
-      "bytes": 1213716,
+      "bytes": 1213720,
       "source_sha256": "1719c4c327b595903c9243e88ec7fd81f77e3dd48b1dfc2b05a2c4873838f49b",
-      "sha256": "8832b2d874a5a7e1a155dbfce31c5d914d7c54d820b216fac4887925f94cc326"
+      "sha256": "38455fe39434f2713ae01f327d215fd9f3fe172687a2b5e93dd3298427f8eabd",
+      "label_revision": "seminar-to-tutorial-20261103"
     },
     {
       "path": "macro-applications/seminars/seminar_2.html",
-      "bytes": 1212566,
+      "bytes": 1212568,
       "source_sha256": "40a0abc58ef2330bf27e012c270810d4f4d8b82ec08165956e02cc71b2831ec5",
-      "sha256": "40a0abc58ef2330bf27e012c270810d4f4d8b82ec08165956e02cc71b2831ec5"
+      "sha256": "f98cd6b7660ea27184fc40151ba432288be4a2c625f41968edd1007522097dde",
+      "label_revision": "seminar-to-tutorial-20261103"
     },
     {
       "path": "political-economy/index.html",
-      "bytes": 1190520,
+      "bytes": 1190524,
       "source_sha256": "0567c0361388d7c0b1a8d0a56cf618b6923ab3bdb31e68f0f970ef641435f147",
-      "sha256": "52255f9fdf7db2f738eaae876cd80964832b4b6f6687925ff97b3723fe8c98a2"
+      "sha256": "6c6210635ec23575b25c30415e36578c4e6a513c69af04585751f7202fb57f49",
+      "label_revision": "seminar-to-tutorial-20261103"
     },
     {
       "path": "political-economy/lecture_1.html",
@@ -181,15 +186,17 @@
     },
     {
       "path": "macro-applications/seminars/5ca5efb9377c26c7a6043e1472159f19.html",
-      "bytes": 1254144,
+      "bytes": 1254148,
       "source_sha256": "628b2de109c717f13fa590b6d255e482c1b38ced7664c6e9eae4848c66f19546",
-      "sha256": "616873806b3c4701e3e1368cc12ff0d7f68830093b29a0feb9a8f7d361ee1338"
+      "sha256": "faa59424e60dfa53197f218e263165e4bf8b7dab431c24d0c550eb1c8e11b29d",
+      "label_revision": "seminar-to-tutorial-20261103"
     },
     {
       "path": "macro-applications/seminars/4f1483980321224743f1f9a8f7d1f393.html",
-      "bytes": 1218560,
+      "bytes": 1218561,
       "source_sha256": "3730c5dfdc32fb8684a0f99300edcf3d72712d86397c2506c0c557e7d15dff75",
-      "sha256": "3f47aa8598985fb8e4552c4f20f2a61a1e36a3cc55ea0a732c651ec992c0d5ec"
+      "sha256": "60679c0bee73c163b611f3bf0fde82affb297daee4b885e02b15bbb45a3371ec",
+      "label_revision": "seminar-to-tutorial-20261103"
     },
     {
       "path": "macro-applications/seminars/readings/model_simulation_vs_econometrics.html",
@@ -199,27 +206,31 @@
     },
     {
       "path": "political-economy/seminars/seminar_1.html",
-      "bytes": 1087,
+      "bytes": 1089,
       "source_sha256": "d6207d391a6d2f077b5e5e46d7f0d7ba0f61b7f862d3c0cb784606231779faf0",
-      "sha256": "d6207d391a6d2f077b5e5e46d7f0d7ba0f61b7f862d3c0cb784606231779faf0"
+      "sha256": "2f68bbea166c2d7f8490ce35e3cb29afa739a8fbfcea7e3382d77c4ce1d2f1cd",
+      "label_revision": "seminar-to-tutorial-20261103"
     },
     {
       "path": "political-economy/seminars/seminar_2.html",
-      "bytes": 1087,
+      "bytes": 1089,
       "source_sha256": "9879dccf1adc935386d56b3083590f23272a46fbe1a47203d357d5ede18dc706",
-      "sha256": "9879dccf1adc935386d56b3083590f23272a46fbe1a47203d357d5ede18dc706"
+      "sha256": "c202fca41b6b60568fc3f3fe10b7a70b7dc7cfe033c2115ad6893148506ce09b",
+      "label_revision": "seminar-to-tutorial-20261103"
     },
     {
       "path": "political-economy/seminars/6cf249b800cb4be993e7ee999334427b.html",
-      "bytes": 1081,
+      "bytes": 1083,
       "source_sha256": "b06e11f62ca9daa21cecc0e11fda1b0aa04288e2a37a3d672528efbe823cfbb7",
-      "sha256": "b06e11f62ca9daa21cecc0e11fda1b0aa04288e2a37a3d672528efbe823cfbb7"
+      "sha256": "3e653aed5ee62398151e2c85c4f9c40848bcb03b0e8f48889a212bd9824e776f",
+      "label_revision": "seminar-to-tutorial-20261103"
     },
     {
       "path": "political-economy/seminars/5efa2ccc0e8c4bcdb12e7e0d97159e90.html",
-      "bytes": 1081,
+      "bytes": 1083,
       "source_sha256": "4aea17602cceecfedf2790e464ae90622cbd48be2335b05d0c5ee3c0f2ddc2aa",
-      "sha256": "4aea17602cceecfedf2790e464ae90622cbd48be2335b05d0c5ee3c0f2ddc2aa"
+      "sha256": "1462057797002839f30773dee2db9f6312399071f29d625ccb352f842c8014ff",
+      "label_revision": "seminar-to-tutorial-20261103"
     },
     {
       "path": "ai-course.html",
