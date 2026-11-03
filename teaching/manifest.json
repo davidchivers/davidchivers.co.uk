@@ -131,40 +131,40 @@
     },
     {
       "path": "political-economy/index.html",
-      "bytes": 1190524,
-      "source_sha256": "0567c0361388d7c0b1a8d0a56cf618b6923ab3bdb31e68f0f970ef641435f147",
-      "sha256": "6c6210635ec23575b25c30415e36578c4e6a513c69af04585751f7202fb57f49",
+      "bytes": 1190518,
+      "source_sha256": "ebfc9478c9ce9d8e8afdadae2896686b51d7125f0d3fe90c2b91a9367b6e293f",
+      "sha256": "3e9467632c2c660dfe0e4adc4f8e0efedd3cfe377d7414bc6b3704d5f56bb7a6",
       "label_revision": "seminar-to-tutorial-20261103"
     },
     {
       "path": "political-economy/lecture_1.html",
-      "bytes": 3509643,
-      "source_sha256": "0016e7b62de5e154136d00a46a0bba9ecd4276d5aef64701eec195fea157889c",
-      "sha256": "edd1ad7d4985428d20c504c42f4bd46c75a2d870574f7fbf5145f3e0dcff2eb4"
+      "bytes": 5110164,
+      "source_sha256": "83a547ec7577fc15a0f8b4d411cb7d671c788617dcf442c20dc8656e3d9c2f63",
+      "sha256": "83a547ec7577fc15a0f8b4d411cb7d671c788617dcf442c20dc8656e3d9c2f63"
     },
     {
       "path": "political-economy/lecture_2.html",
-      "bytes": 5109032,
-      "source_sha256": "b04723644ea30716d260585a00b163980296645d1654d818d889e4ef0ddcc2d5",
-      "sha256": "4a08dc429a97191d0b8691c653b13b5de140df090c21f0e15ed7ae75d91ac82a"
+      "bytes": 5063372,
+      "source_sha256": "42f1a3d3d1efa2e46a4934369d04d5b9ead8c4e3ce987022a10b4a869b15525b",
+      "sha256": "42f1a3d3d1efa2e46a4934369d04d5b9ead8c4e3ce987022a10b4a869b15525b"
     },
     {
       "path": "political-economy/lecture_3.html",
-      "bytes": 5063430,
-      "source_sha256": "743dccb573e0179ab4882bfeedc7982f8894f25921299f652e498587c7cb3c11",
-      "sha256": "06498bb5c1ad71417d3a9388bbe0a8b436e424d0efd6e9ddc26e042bee27351b"
+      "bytes": 4188951,
+      "source_sha256": "60b492bceeaa05c33624cfcda506b1b0cb67dfde1b32fd8d46473208cfea936b",
+      "sha256": "60b492bceeaa05c33624cfcda506b1b0cb67dfde1b32fd8d46473208cfea936b"
     },
     {
       "path": "political-economy/lecture_4.html",
-      "bytes": 4189005,
-      "source_sha256": "c2b6c47a81c5f77cc97251e3f5ab58dea4c92ab1123739ae15f4b3bd6d530c7b",
-      "sha256": "176e3b0eecfdc11849e66db994c65ce6da8f007b56ca6e16b2dd4800b4b43d29"
+      "bytes": 3508433,
+      "source_sha256": "53329f38380576e855feba6a20278b1dec6bf303032aaadf3abca1058e440c71",
+      "sha256": "53329f38380576e855feba6a20278b1dec6bf303032aaadf3abca1058e440c71"
     },
     {
       "path": "political-economy/lecture_5.html",
-      "bytes": 4901824,
-      "source_sha256": "02acb54c4b4f56d12843ad81a7fbe15a2cb5e4da27428f1d1ed7a5a3ed307787",
-      "sha256": "ebe3da8ec151d6282a65c13d1f880607813c0af2e047e97e0ddb2ac86b04ca6b"
+      "bytes": 4901766,
+      "source_sha256": "7af4cb8fafb0b3798d6c7cb0028bf52d1476cf9c3cabf47fc9fe2a86dc3c130b",
+      "sha256": "7af4cb8fafb0b3798d6c7cb0028bf52d1476cf9c3cabf47fc9fe2a86dc3c130b"
     },
     {
       "path": "macro-applications/seminars/readings/model_simulation_vs_econometrics.pdf",
