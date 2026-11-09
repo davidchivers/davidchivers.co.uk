@@ -36,6 +36,7 @@ DOWNLOADS = {
     f"macro-applications/downloads/lecture_{i}.{ext}": f"macro_applications_quarto/output/downloads/lecture_{i}.{ext}"
     for i in range(1, 6) for ext in ("pptx", "pdf")
 }
+DOWNLOADS["political-economy/downloads/lecture_1.pptx"] = "political_economy_quarto/output/downloads/lecture_1.pptx"
 
 
 READINGS = {
@@ -74,8 +75,12 @@ def main():
     destination = Path(__file__).resolve().parent
     workspace = args.workspace.resolve() / "teaching"
     sources = {name: workspace / source for name, source in {**DECKS, **DOWNLOADS, **READINGS}.items()}
-    export_manifest = json.loads((workspace / "macro_applications_quarto/output/downloads/manifest.json").read_text(encoding="utf-8"))
-    export_records = {r["path"]: r for r in export_manifest["files"]}
+    export_records = {}
+    for source_name in DOWNLOADS.values():
+        download_dir = (workspace / source_name).parent
+        if download_dir not in export_records:
+            manifest = json.loads((download_dir / "manifest.json").read_text(encoding="utf-8"))
+            export_records[download_dir] = {r["path"]: r for r in manifest["files"]}
     reading_sources = {workspace / value for value in READINGS.values()}
     prepared = {}
     for source in sources.values():
@@ -88,8 +93,8 @@ def main():
             prepared[source] = content
             continue
         if source.suffix in (".pdf", ".pptx"):
-            record = export_records[source.name]
-            lecture = workspace / f'macro_applications_quarto/output/lecture_{record["lecture"]}.html'
+            record = export_records[source.parent][source.name]
+            lecture = source.parent.parent / f'lecture_{record["lecture"]}.html'
             if digest(lecture) != record["source_sha256"] or digest(source) != record["sha256"]:
                 raise SystemExit(f"Stale or changed download: {source}. Rebuild downloads from the current HTML.")
             signature = b"%PDF-" if source.suffix == ".pdf" else b"PK"
@@ -118,6 +123,8 @@ def main():
             raise SystemExit(f"Publication verification failed: {name}")
         records.append({"path": name, "bytes": target.stat().st_size,
                         "source_sha256": digest(source), "sha256": digest(target)})
+        if name == "political-economy/downloads/lecture_1.pptx":
+            records[-1]["lecture_sha256"] = digest(destination / "political-economy/lecture_1.html")
         if name == "macro-applications/lecture_4.html":
             records[-1]["enhancements"] = ASSETS
     index = destination / "index.html"
