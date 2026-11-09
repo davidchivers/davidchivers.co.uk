@@ -986,7 +986,7 @@ display: block;
 margin-left: auto;
 margin-right: 0; }
 </style>
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -3261,6 +3261,47 @@ window.QuartoSupport = function () {
     setLectureAccessibility();
 
     window.addEventListener('load', setLectureAccessibility);
+
+    </script>
+
+    <style>
+.lecture-downloads { position:fixed; z-index:30; left:36px; bottom:12px; display:block; padding:7px 12px; border:1px solid #d5c5d0; border-radius:5px; background:#fff; box-shadow:0 2px 8px #0001; color:#682046; font:500 14px/1.35 'Segoe UI',Arial,sans-serif; text-decoration:none; white-space:nowrap; }
+.lecture-downloads:hover { background:#f4edf2; }
+.lecture-downloads:focus-visible { outline:3px solid #b48027; outline-offset:2px; }
+@media(min-width:701px) { body:not(.reveal-scroll) .reveal .footer.footer-default { left:max(150px, 7.76vw)!important; } }
+@media(max-width:700px) { .lecture-downloads { bottom:75px; left:auto; right:10px; min-height:28px; display:flex; align-items:center; font-size:13px; } }
+@media print { .lecture-downloads { display:none !important; } }
+</style>
+
+    <script>
+
+    (() => {
+
+      const match = location.pathname.match(/lecture_(1)\.html$/);
+
+      if (!match) return;
+
+      const localPreview = ['localhost', '127.0.0.1'].includes(location.hostname);
+
+      const base = localPreview ? new URL('downloads/', location.href).href : 'https://github.com/davidchivers/davidchivers.co.uk/releases/download/political-economy-lecture-downloads/';
+
+      const link = document.createElement('a');
+
+      const filename = `lecture_${match[1]}.pptx`;
+
+      link.className = 'lecture-downloads';
+
+      link.textContent = 'Download';
+
+      link.setAttribute('aria-label', 'Download PowerPoint');
+
+      link.href = `${base}${filename}`;
+
+      link.download = filename;
+
+      document.body.append(link);
+
+    })();
 
     </script>
 

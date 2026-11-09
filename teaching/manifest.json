@@ -137,12 +137,6 @@
       "label_revision": "political-economy-tutorials-3-4"
     },
     {
-      "path": "political-economy/lecture_1.html",
-      "bytes": 5110164,
-      "source_sha256": "83a547ec7577fc15a0f8b4d411cb7d671c788617dcf442c20dc8656e3d9c2f63",
-      "sha256": "83a547ec7577fc15a0f8b4d411cb7d671c788617dcf442c20dc8656e3d9c2f63"
-    },
-    {
       "path": "political-economy/lecture_2.html",
       "bytes": 5063372,
       "source_sha256": "42f1a3d3d1efa2e46a4934369d04d5b9ead8c4e3ce987022a10b4a869b15525b",
@@ -249,6 +243,19 @@
       "bytes": 577801,
       "source_sha256": "74bcdf352f3e431aad67187b31616a92dc25871ec2ee2a22c6cdc55771bae264",
       "sha256": "74bcdf352f3e431aad67187b31616a92dc25871ec2ee2a22c6cdc55771bae264"
+    },
+    {
+      "path": "political-economy/lecture_1.html",
+      "bytes": 4120835,
+      "source_sha256": "ee87e609e548f5d5c9e119a01f9e21c75f738d802d352bf52559ecf8e2996f25",
+      "sha256": "4a0974b6f125276663da6709e75b9cdaefb99e8b6f463d0b50d744e1d4d6dfb8"
+    },
+    {
+      "path": "political-economy/downloads/lecture_1.pptx",
+      "bytes": 2137559,
+      "source_sha256": "87d7d172075a66e41dd30ba4e5cb5354eea34d3c24e34151cd3b71ab7d37fb20",
+      "sha256": "87d7d172075a66e41dd30ba4e5cb5354eea34d3c24e34151cd3b71ab7d37fb20",
+      "lecture_sha256": "4a0974b6f125276663da6709e75b9cdaefb99e8b6f463d0b50d744e1d4d6dfb8"
     }
   ]
 }
