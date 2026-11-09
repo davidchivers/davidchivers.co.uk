@@ -131,9 +131,9 @@
     },
     {
       "path": "political-economy/index.html",
-      "bytes": 1190518,
-      "source_sha256": "fb184eb69cbf6068efc14f4f5433afeec74bcef7b53c7079c7b4bb45ee5919a0",
-      "sha256": "dc99abbae1945fd56e68b908921e384392d2f406f3fac81b0e3a7cca8ccaed38",
+      "bytes": 1190404,
+      "source_sha256": "bcb29ce6219f28ed85819614dcd2775f67b2c0651ae45c2990507c6b9b36eea6",
+      "sha256": "7408f029037aed1b755d1b8058b8debdde8d83f6254100a22443d8af16f1e54d",
       "label_revision": "political-economy-tutorials-3-4"
     },
     {
@@ -206,9 +206,9 @@
     },
     {
       "path": "political-economy/seminars/seminar_1.html",
-      "bytes": 1067,
-      "source_sha256": "874059ccd2cbffd9f86f4f2614787b7217b96454223eae2291ac21eaa8aebec3",
-      "sha256": "874059ccd2cbffd9f86f4f2614787b7217b96454223eae2291ac21eaa8aebec3",
+      "bytes": 1201103,
+      "source_sha256": "416f089f371fd00f198325c9ae98393e6e79041734fa3b74498bf42b3a680681",
+      "sha256": "ef52c14960c533b6dff052cf4957975ee7a689a906801523bd58202bab9c0c86",
       "label_revision": "political-economy-tutorials-3-4"
     },
     {
