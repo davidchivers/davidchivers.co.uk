@@ -187,10 +187,9 @@
     },
     {
       "path": "macro-applications/seminars/4f1483980321224743f1f9a8f7d1f393.html",
-      "bytes": 1218561,
-      "source_sha256": "3730c5dfdc32fb8684a0f99300edcf3d72712d86397c2506c0c557e7d15dff75",
-      "sha256": "60679c0bee73c163b611f3bf0fde82affb297daee4b885e02b15bbb45a3371ec",
-      "label_revision": "seminar-to-tutorial-20261103"
+      "bytes": 1263959,
+      "source_sha256": "ea8d35cbc3cb4c38f2a7a781fd7b46224a1058c9a643da37875c866c4a8361ca",
+      "sha256": "7d929334aa012806cef30b4d099b1673880a719f89e00f41254753116833c85f"
     },
     {
       "path": "macro-applications/seminars/readings/model_simulation_vs_econometrics.html",
