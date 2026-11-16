@@ -131,16 +131,17 @@
     },
     {
       "path": "political-economy/index.html",
-      "bytes": 1190404,
-      "source_sha256": "bcb29ce6219f28ed85819614dcd2775f67b2c0651ae45c2990507c6b9b36eea6",
-      "sha256": "7408f029037aed1b755d1b8058b8debdde8d83f6254100a22443d8af16f1e54d",
-      "label_revision": "political-economy-tutorials-3-4"
+      "bytes": 1190461,
+      "source_sha256": "bca202062097f2c573ea7849521c06b776cd65e8b6b80fa644f022ac81aaee49",
+      "sha256": "72ef9c6604f609c1c1abe3b9caf4ec073cec50353f2c86966270b36e803f8392",
+      "label_revision": "current-political-economy-20261116"
     },
     {
       "path": "political-economy/lecture_2.html",
-      "bytes": 5063372,
-      "source_sha256": "42f1a3d3d1efa2e46a4934369d04d5b9ead8c4e3ce987022a10b4a869b15525b",
-      "sha256": "42f1a3d3d1efa2e46a4934369d04d5b9ead8c4e3ce987022a10b4a869b15525b"
+      "bytes": 4148314,
+      "source_sha256": "08c60b3caefe320e8b2def50daf9b067ff6589ff8d95ff480ab723f4198c999c",
+      "sha256": "771c796cd7d8a5225bfa618f5ab4266aa87199ad79450e35b73006b9da8637ec",
+      "label_revision": "current-political-economy-20261116"
     },
     {
       "path": "political-economy/lecture_3.html",
@@ -213,10 +214,10 @@
     },
     {
       "path": "political-economy/seminars/6cf249b800cb4be993e7ee999334427b.html",
-      "bytes": 1083,
-      "source_sha256": "444e69c0d342e3725118569d0dd085787c8c2730705d9682c612144c1edff62c",
-      "sha256": "444e69c0d342e3725118569d0dd085787c8c2730705d9682c612144c1edff62c",
-      "label_revision": "political-economy-tutorials-3-4"
+      "bytes": 1205215,
+      "source_sha256": "ac554614dbdfecd6ac3e62453c31a3a6b2fa744efb0108157d7cabb061a95e36",
+      "sha256": "72d66593ad65e4202e27ef7fb05fafb5b34d26c13ad919562e6b40dcde0cebc7",
+      "label_revision": "current-political-economy-20261116"
     },
     {
       "path": "political-economy/seminars/5efa2ccc0e8c4bcdb12e7e0d97159e90.html",
