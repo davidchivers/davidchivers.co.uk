@@ -131,10 +131,10 @@
     },
     {
       "path": "political-economy/index.html",
-      "bytes": 1190434,
+      "bytes": 1190462,
       "source_sha256": "f9d2624789a3a5c74b06c3190b4cc8dfa645a2c1926049688356675f1afe8148",
-      "sha256": "51cf5d0110305a3756a4899d8924adb85a352571f8ec6bb558d2c62a71e1f4d0",
-      "label_revision": "current-political-economy-20261116"
+      "sha256": "64d0efe646ccda2578dff227045c187c43b813558ae47e8c5eab163acd216775",
+      "label_revision": "20261116discrimination"
     },
     {
       "path": "political-economy/lecture_2.html",
@@ -200,10 +200,10 @@
     },
     {
       "path": "political-economy/seminars/seminar_1.html",
-      "bytes": 1201103,
-      "source_sha256": "416f089f371fd00f198325c9ae98393e6e79041734fa3b74498bf42b3a680681",
-      "sha256": "ef52c14960c533b6dff052cf4957975ee7a689a906801523bd58202bab9c0c86",
-      "label_revision": "political-economy-tutorials-3-4"
+      "bytes": 1201755,
+      "source_sha256": "c8af1e47bbca59ea15e688f72de207821c17daa09545f013b15568438edb3c2e",
+      "sha256": "d706f745ac14eb57985dd52b9d91638040e57f497db6cd10b34c3bdca57e3450",
+      "label_revision": "20261116discrimination"
     },
     {
       "path": "political-economy/seminars/seminar_2.html",
@@ -214,10 +214,10 @@
     },
     {
       "path": "political-economy/seminars/6cf249b800cb4be993e7ee999334427b.html",
-      "bytes": 1205215,
-      "source_sha256": "ac554614dbdfecd6ac3e62453c31a3a6b2fa744efb0108157d7cabb061a95e36",
-      "sha256": "72d66593ad65e4202e27ef7fb05fafb5b34d26c13ad919562e6b40dcde0cebc7",
-      "label_revision": "current-political-economy-20261116"
+      "bytes": 1206446,
+      "source_sha256": "97d7815416000f432fe37ba2026ee83c908d09b7e519862919415938ecac39b0",
+      "sha256": "8af0ca0375ed782ec5c326926e6b77b384b74fb41da8cec462d6eebe620e0786",
+      "label_revision": "20261116discrimination"
     },
     {
       "path": "political-economy/seminars/5efa2ccc0e8c4bcdb12e7e0d97159e90.html",
@@ -256,6 +256,12 @@
       "source_sha256": "87d7d172075a66e41dd30ba4e5cb5354eea34d3c24e34151cd3b71ab7d37fb20",
       "sha256": "87d7d172075a66e41dd30ba4e5cb5354eea34d3c24e34151cd3b71ab7d37fb20",
       "lecture_sha256": "4a0974b6f125276663da6709e75b9cdaefb99e8b6f463d0b50d744e1d4d6dfb8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4864,
+      "sha256": "72afeb0279efc9584d8bb317a9258d106d534d2a52f45cac42b5ab2b1c195b86",
+      "label_revision": "20261116discrimination"
     }
   ]
 }
