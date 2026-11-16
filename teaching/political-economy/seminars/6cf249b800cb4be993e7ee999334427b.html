@@ -2208,8 +2208,9 @@ p:has(> math[display="block"]) {max-width:100%;overflow-x:auto;}
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1: competition and discrimination</a></li>
+  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1: reasoning about controls</a></li>
   <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2: choices and discrimination</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3: competition and discrimination</a></li>
   </ul>
 </nav>
 </div>
@@ -2244,7 +2245,87 @@ p:has(> math[display="block"]) {max-width:100%;overflow-x:auto;}
 <img role="img" aria-label="Durham University" src="data:image/png;base64,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" alt="Durham University">
 </div>
 <section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1: competition and discrimination</h2>
+<h2 class="anchored" data-anchor-id="question-1">Question 1: reasoning about controls</h2>
+<p><em>“Once occupation, working hours and parenthood have been taken into account, any remaining pay gap measures discrimination.”</em></p>
+<p><strong>Main answer.</strong> No. The remaining gap may include unmeasured differences, while some of the gap “explained” by controls may itself reflect discrimination.</p>
+<section id="the-lecture-example" class="level3">
+<h3 class="anchored" data-anchor-id="the-lecture-example">The lecture example</h3>
+<p>Discrimination affects pay through two routes:</p>
+<ul>
+<li><strong>Within jobs:</strong> women receive less pay at the same job level and skill.</li>
+<li><strong>Through promotion:</strong> women face a higher hurdle to reach better-paid jobs.</li>
+</ul>
+<p>Comparing workers at the same job level leaves out earnings lost through missed promotions. Job level is a <strong>mediator</strong> on that route.</p>
+<p>It can also be a <strong>collider</strong>: discrimination and skill both affect job level. Women who overcome the higher promotion hurdle may be more skilled than men at the same level. If skill is unmeasured, their skill advantage can hide a direct pay penalty. Discrimination has not made women more skilled; conditioning on job level changes whom we compare.</p>
+<p>The lecture’s regression table uses Cunningham’s simulated data. The female coefficient is the estimated wage difference relative to men:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Comparison</th>
+<th style="text-align: right;">Female coefficient</th>
+<th style="text-align: left;">Interpretation in this example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">No controls</td>
+<td style="text-align: right;">−3.074</td>
+<td style="text-align: left;">Captures both routes: missed promotions and lower pay within jobs.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Same occupation</td>
+<td style="text-align: right;">+0.601</td>
+<td style="text-align: left;">Leaves out missed promotions; the skill difference masks the direct pay penalty.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Same occupation and ability</td>
+<td style="text-align: right;">−0.994</td>
+<td style="text-align: left;">Recovers the direct pay penalty, excluding missed promotions.</td>
+</tr>
+</tbody>
+</table>
+<p>Here <strong>occupation means job level</strong>, and <strong>ability means skill</strong>. The final comparison is possible because the simulation records ability; a real dataset may not.</p>
+<p><strong>Apply this to the question.</strong> Occupation and hours can reflect unequal opportunities. A simple parenthood control also misses the different responses of mothers and fathers. Controls need a reason grounded in how the outcome arises.</p>
+<p><strong>Conclusion.</strong> A remaining pay gap does not automatically measure discrimination, and a zero adjusted gap does not establish its absence. The interpretation of the three columns above depends on the lecture model’s assumptions.</p>
+</section>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2: choices and discrimination</h2>
+<p><em>“The gender pay gap reflects choices about work and family rather than discrimination.”</em></p>
+<p><strong>Main answer.</strong> Hours, career breaks and family decisions matter. But “rather than discrimination” is too strong: choices respond to opportunities, constraints and how jobs reward availability. Annual earnings can fall because someone works fewer hours, earns less per hour, or leaves employment.</p>
+<section id="what-the-readings-contribute" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-readings-contribute">What the readings contribute</h3>
+<ul>
+<li><strong>Nobel overview of Goldin’s work (2023): choices depend on opportunities.</strong> Expectations about future careers influence education; access to contraception changes women’s ability to plan. Parenthood creates larger earnings costs where jobs demand constant availability and women take more responsibility for care. <strong>Use:</strong> observed choices reflect institutions and constraints as well as preferences. The lecture’s pharmacy example illustrates how changing work organisation can reduce the cost of flexibility. <a href="https://www.nobelprize.org/prizes/economic-sciences/2023/popular-information/">Overview</a>.</li>
+<li><strong>Bertrand, Goldin and Katz (2010): how careers diverge.</strong> The earnings gap among Chicago MBA graduates widens with time since graduation. Training, weekly hours and career interruptions account for much of it in their analysis; mothers are especially likely to reduce work. <strong>Use:</strong> work histories matter even among highly qualified graduates, but this does not explain why those histories differ or rule out discrimination. <a href="https://www.nber.org/system/files/working_papers/w14681/w14681.pdf#page=30">Table 2</a>.</li>
+<li><strong>Kleven, Landais and Søgaard (2019): when the gap opens.</strong> Mothers’ earnings fall sharply after the first birth; fathers’ barely change. The estimated annual-earnings penalty is <strong>19.4% ten years later</strong>, including subsequent children. Employment, hours and hourly wages all contribute to the pattern. <strong>Use:</strong> parenthood is central, but timing alone cannot distinguish preferences, childcare constraints and employers’ behaviour. The hours and wage panels concern people in work, so selection into employment also matters. <a href="https://jenni.uchicago.edu/Fertility/Kleven_Landais_Sogaaard_2019_AEJAE_v11_n4.pdf#page=10">Figure 1</a>.</li>
+</ul>
+<p><strong>Judgement.</strong> These readings identify important mechanisms. They neither show that discrimination explains the whole gap nor establish that the gap is simply a matter of free choice.</p>
+</section>
+<section id="example-essay-plans" class="level3">
+<h3 class="anchored" data-anchor-id="example-essay-plans">Two rough essay plans</h3>
+<p><span id="one-way-to-build-an-essay-plan"></span></p>
+<p><strong>A. Choices matter, but are shaped by constraints.</strong></p>
+<ol type="1">
+<li>Use the Danish evidence to show the earnings change around parenthood.</li>
+<li>Use the MBA evidence to explain the importance of hours and interruptions.</li>
+<li>Use the Goldin overview to explain how expectations and constraints shape these choices. Conclude that explaining the gap through work histories does not explain how those histories arose.</li>
+</ol>
+<p><strong>B. Focus on the price of flexibility.</strong></p>
+<ol type="1">
+<li>Start with Goldin: why do jobs demanding constant availability disadvantage the person doing more care? Use the lecture’s pharmacy example as a contrast.</li>
+<li>Connect this to the MBA evidence on the earnings costs of shorter hours and career breaks.</li>
+<li>Use the Danish evidence to show who adjusts paid work after parenthood. Conclude that household decisions and job organisation interact; these findings do not separately measure discrimination.</li>
+</ol>
+</section>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3: competition and discrimination</h2>
 <p><em>“Competition between employers will eliminate discrimination in the labour market.”</em></p>
 <p><strong>Main answer.</strong> Competition can remove the wage penalty caused by employer prejudice under Becker’s assumptions. This is a conditional result about wages, not a prediction that prejudice or every form of discrimination disappears.</p>
 <section id="beckers-mechanism" class="level3">
@@ -2264,42 +2345,6 @@ p:has(> math[display="block"]) {max-width:100%;overflow-x:auto;}
 <h3 class="anchored" data-anchor-id="using-the-reading">Using the reading</h3>
 <p><a href="https://www.aeaweb.org/articles?id=10.1257/jep.34.2.68">Lang and Kahn-Lang Spitzer (2020)</a> show why labour-market frictions matter for the taste-based model. Use the review to identify which assumptions support wage equalisation and what changes when those assumptions fail. The existence of a competitive pressure is not evidence that it is strong enough to eliminate an observed wage gap.</p>
 <p><strong>Judgement.</strong> Competition is a possible constraint on discrimination, not a sufficient general remedy. A good answer distinguishes the wage penalty from prejudice, and employer tastes from imperfect information.</p>
-</section>
-</section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2: choices and discrimination</h2>
-<p><em>“The gender pay gap reflects choices about work and family rather than discrimination.”</em></p>
-<p><strong>Main answer.</strong> Hours, career breaks and family decisions matter. But “rather than discrimination” is too strong: choices respond to opportunities, constraints and how jobs reward availability. Annual earnings can fall because someone works fewer hours, earns less per hour, or leaves employment.</p>
-<section id="what-the-readings-contribute" class="level3">
-<h3 class="anchored" data-anchor-id="what-the-readings-contribute">What the readings contribute</h3>
-<ul>
-<li><strong>Nobel overview of Goldin’s work (2023): choices depend on opportunities.</strong> Expectations about future careers influence education; access to contraception changes women’s ability to plan. Parenthood creates larger earnings costs where jobs demand constant availability and women take more responsibility for care. <strong>Use:</strong> observed choices reflect institutions and constraints as well as preferences. The lecture’s pharmacy example illustrates how changing work organisation can reduce the cost of flexibility. <a href="https://www.nobelprize.org/prizes/economic-sciences/2023/popular-information/">Overview</a>.</li>
-<li><strong>Bertrand, Goldin and Katz (2010): how careers diverge.</strong> The earnings gap among Chicago MBA graduates widens with time since graduation. Training, weekly hours and career interruptions account for much of it in their analysis; mothers are especially likely to reduce work. <strong>Use:</strong> work histories matter even among highly qualified graduates, but this does not explain why those histories differ or rule out discrimination. <a href="https://www.nber.org/system/files/working_papers/w14681/w14681.pdf#page=30">Table 2</a>.</li>
-<li><strong>Kleven, Landais and Søgaard (2019): when the gap opens.</strong> Mothers’ earnings fall sharply after the first birth; fathers’ barely change. The estimated annual-earnings penalty is <strong>19.4% ten years later</strong>, including subsequent children. Employment, hours and hourly wages all contribute to the pattern. <strong>Use:</strong> parenthood is central, but timing alone cannot distinguish preferences, childcare constraints and employers’ behaviour. The hours and wage panels concern people in work, so selection into employment also matters. <a href="https://jenni.uchicago.edu/Fertility/Kleven_Landais_Sogaaard_2019_AEJAE_v11_n4.pdf#page=10">Figure 1</a>.</li>
-</ul>
-<p><strong>Judgement.</strong> These readings identify important mechanisms. They neither show that discrimination explains the whole gap nor establish that the gap is simply a matter of free choice.</p>
-</section>
-<section id="discussion-comparing-workers-in-the-same-occupation" class="level3">
-<h3 class="anchored" data-anchor-id="discussion-comparing-workers-in-the-same-occupation">Discussion: comparing workers in the same occupation</h3>
-<p>In the lecture example, discrimination reduces pay <strong>directly within jobs</strong> and <strong>indirectly through missed promotions</strong>. Job level is a mediator on the second route. Holding it fixed leaves out the earnings lost through blocked promotion.</p>
-<p>Job level is also a collider: both discrimination and skill affect promotion. Women who overcome the higher promotion hurdle can be more skilled than men at the same level. If skill is unmeasured, that advantage can mask the direct pay penalty. Conditioning on job level changes whom we compare; it does not make discrimination disappear.</p>
-<p>In Cunningham’s simulated lecture example, the female coefficient changes from <strong>−3.074</strong> without controls to <strong>+0.601</strong> controlling for occupation, then <strong>−0.994</strong> controlling for occupation and ability. The final estimate recovers the direct penalty under the simulation’s assumptions, not the loss through missed promotions. A real dataset may not measure ability. Neither a remaining adjusted gap nor its absence settles the question of discrimination.</p>
-</section>
-<section id="example-essay-plans" class="level3">
-<h3 class="anchored" data-anchor-id="example-essay-plans">Two rough essay plans</h3>
-<p><span id="one-way-to-build-an-essay-plan"></span></p>
-<p><strong>A. Choices matter, but are shaped by constraints.</strong></p>
-<ol type="1">
-<li>Use the Danish evidence to show the earnings change around parenthood.</li>
-<li>Use the MBA evidence to explain the importance of hours and interruptions.</li>
-<li>Use the Goldin overview to explain how expectations and constraints shape these choices. Conclude that explaining the gap through work histories does not explain how those histories arose.</li>
-</ol>
-<p><strong>B. Focus on the price of flexibility.</strong></p>
-<ol type="1">
-<li>Start with Goldin: why do jobs demanding constant availability disadvantage the person doing more care? Use the lecture’s pharmacy example as a contrast.</li>
-<li>Connect this to the MBA evidence on the earnings costs of shorter hours and career breaks.</li>
-<li>Use the Danish evidence to show who adjusts paid work after parenthood. Conclude that household decisions and job organisation interact; these findings do not separately measure discrimination.</li>
-</ol>
 </section>
 </section>
 
