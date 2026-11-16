@@ -2247,17 +2247,10 @@ p:has(> math[display="block"]) {max-width:100%;overflow-x:auto;}
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1: reasoning about controls</h2>
 <p><em>“Once occupation, working hours and parenthood have been taken into account, any remaining pay gap measures discrimination.”</em></p>
-<p><strong>Main answer.</strong> No. The remaining gap may include unmeasured differences, while some of the gap “explained” by controls may itself reflect discrimination.</p>
-<section id="the-lecture-example" class="level3">
-<h3 class="anchored" data-anchor-id="the-lecture-example">The lecture example</h3>
-<p>Discrimination affects pay through two routes:</p>
-<ul>
-<li><strong>Within jobs:</strong> women receive less pay at the same job level and skill.</li>
-<li><strong>Through promotion:</strong> women face a higher hurdle to reach better-paid jobs.</li>
-</ul>
-<p>Comparing workers at the same job level leaves out earnings lost through missed promotions. Job level is a <strong>mediator</strong> on that route.</p>
-<p>It can also be a <strong>collider</strong>: discrimination and skill both affect job level. Women who overcome the higher promotion hurdle may be more skilled than men at the same level. If skill is unmeasured, their skill advantage can hide a direct pay penalty. Discrimination has not made women more skilled; conditioning on job level changes whom we compare.</p>
-<p>The lecture’s regression table uses Cunningham’s simulated data. The female coefficient is the estimated wage difference relative to men:</p>
+<p>An adjusted pay gap does not, by itself, measure discrimination. The remaining difference may reflect unmeasured characteristics, while the variables held fixed may themselves be affected by discrimination. The interpretation depends on how these variables influence pay.</p>
+<p>In the lecture example, discrimination affects earnings through two routes. Women receive less pay within a given job, and face a higher hurdle for promotion into better-paid jobs. Job level is therefore a mediator: it transmits part of the effect of discrimination to pay. Comparing workers at the same level excludes the earnings lost through missed promotions.</p>
+<p>Job level is also a collider because both discrimination and skill affect promotion. Women who overcome the higher promotion hurdle may be more skilled than men at the same level. If skill is unmeasured, this difference can conceal the direct pay penalty. The comparison selects different workers from each group; discrimination has not increased women’s underlying skill.</p>
+<p>The lecture’s regression table illustrates this using Cunningham’s simulated data. The female coefficient measures the estimated wage difference relative to men.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -2275,12 +2268,12 @@ p:has(> math[display="block"]) {max-width:100%;overflow-x:auto;}
 <tr class="odd">
 <td style="text-align: left;">No controls</td>
 <td style="text-align: right;">−3.074</td>
-<td style="text-align: left;">Captures both routes: missed promotions and lower pay within jobs.</td>
+<td style="text-align: left;">Captures both missed promotions and lower pay within jobs.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Same occupation</td>
 <td style="text-align: right;">+0.601</td>
-<td style="text-align: left;">Leaves out missed promotions; the skill difference masks the direct pay penalty.</td>
+<td style="text-align: left;">Excludes missed promotions; the skill difference masks the direct pay penalty.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Same occupation and ability</td>
@@ -2289,62 +2282,52 @@ p:has(> math[display="block"]) {max-width:100%;overflow-x:auto;}
 </tr>
 </tbody>
 </table>
-<p>Here <strong>occupation means job level</strong>, and <strong>ability means skill</strong>. The final comparison is possible because the simulation records ability; a real dataset may not.</p>
-<p><strong>Apply this to the question.</strong> Occupation and hours can reflect unequal opportunities. A simple parenthood control also misses the different responses of mothers and fathers. Controls need a reason grounded in how the outcome arises.</p>
-<p><strong>Conclusion.</strong> A remaining pay gap does not automatically measure discrimination, and a zero adjusted gap does not establish its absence. The interpretation of the three columns above depends on the lecture model’s assumptions.</p>
-</section>
+<p>Here occupation represents job level and ability represents skill. The final comparison is possible because ability is recorded in the simulation. It need not be observed in an actual dataset, and the interpretation of these coefficients depends on the model’s assumptions.</p>
+<p>The same reasoning applies to the question’s other controls. Hours and occupation can reflect unequal opportunities, while parenthood may affect mothers and fathers differently. Accounting for these characteristics does not establish why they differ. Neither a remaining adjusted gap nor its absence is sufficient to establish the extent of discrimination.</p>
 </section>
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2: choices and discrimination</h2>
 <p><em>“The gender pay gap reflects choices about work and family rather than discrimination.”</em></p>
-<p><strong>Main answer.</strong> Hours, career breaks and family decisions matter. But “rather than discrimination” is too strong: choices respond to opportunities, constraints and how jobs reward availability. Annual earnings can fall because someone works fewer hours, earns less per hour, or leaves employment.</p>
-<section id="what-the-readings-contribute" class="level3">
-<h3 class="anchored" data-anchor-id="what-the-readings-contribute">What the readings contribute</h3>
-<ul>
-<li><strong>Nobel overview of Goldin’s work (2023): choices depend on opportunities.</strong> Expectations about future careers influence education; access to contraception changes women’s ability to plan. Parenthood creates larger earnings costs where jobs demand constant availability and women take more responsibility for care. <strong>Use:</strong> observed choices reflect institutions and constraints as well as preferences. The lecture’s pharmacy example illustrates how changing work organisation can reduce the cost of flexibility. <a href="https://www.nobelprize.org/prizes/economic-sciences/2023/popular-information/">Overview</a>.</li>
-<li><strong>Bertrand, Goldin and Katz (2010): how careers diverge.</strong> The earnings gap among Chicago MBA graduates widens with time since graduation. Training, weekly hours and career interruptions account for much of it in their analysis; mothers are especially likely to reduce work. <strong>Use:</strong> work histories matter even among highly qualified graduates, but this does not explain why those histories differ or rule out discrimination. <a href="https://www.nber.org/system/files/working_papers/w14681/w14681.pdf#page=30">Table 2</a>.</li>
-<li><strong>Kleven, Landais and Søgaard (2019): when the gap opens.</strong> Mothers’ earnings fall sharply after the first birth; fathers’ barely change. The estimated annual-earnings penalty is <strong>19.4% ten years later</strong>, including subsequent children. Employment, hours and hourly wages all contribute to the pattern. <strong>Use:</strong> parenthood is central, but timing alone cannot distinguish preferences, childcare constraints and employers’ behaviour. The hours and wage panels concern people in work, so selection into employment also matters. <a href="https://jenni.uchicago.edu/Fertility/Kleven_Landais_Sogaaard_2019_AEJAE_v11_n4.pdf#page=10">Figure 1</a>.</li>
-</ul>
-<p><strong>Judgement.</strong> These readings identify important mechanisms. They neither show that discrimination explains the whole gap nor establish that the gap is simply a matter of free choice.</p>
+<p>Hours, career interruptions and family decisions explain an important part of the earnings gap. However, these decisions respond to opportunities, household constraints and the way jobs reward availability. Evidence that work histories account for a gap does not establish that those histories were freely chosen or unaffected by discrimination.</p>
+<section id="evidence-from-the-readings" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-from-the-readings">Evidence from the readings</h3>
+<p>The <a href="https://www.nobelprize.org/prizes/economic-sciences/2023/popular-information/">Nobel overview of Goldin’s work</a> explains how expectations about future careers influence education and how access to contraception changes women’s ability to plan. It also emphasises the interaction between care responsibilities and jobs that reward long or inflexible hours. Women taking greater responsibility for care face a larger earnings cost in these jobs. The pharmacy example in the lecture illustrates how changes in work organisation can reduce the cost of flexibility.</p>
+<p><a href="https://www.nber.org/system/files/working_papers/w14681/w14681.pdf#page=30">Bertrand, Goldin and Katz (2010)</a> study Chicago MBA graduates whose earnings diverge as their careers develop. Differences in training, working hours and career interruptions account for much of this widening gap in their analysis. Mothers are particularly likely to reduce paid work. These findings show that work histories matter even among highly qualified graduates. They do not, however, identify why men and women have different work histories or exclude discrimination as an explanation.</p>
+<p><a href="https://jenni.uchicago.edu/Fertility/Kleven_Landais_Sogaaard_2019_AEJAE_v11_n4.pdf#page=10">Kleven, Landais and Søgaard (2019)</a> show that mothers’ earnings fall sharply around the first birth, while fathers’ earnings change little. The estimated earnings penalty associated with children is 19.4% ten years later, including the effects of subsequent children. Employment, hours and hourly wages all contribute to the pattern. The hours and wage estimates concern people in work, so selection into employment also matters. The findings establish the importance of parenthood but do not separately identify preferences, childcare constraints and employers’ treatment of parents.</p>
+<p>Taken together, the readings explain when earnings diverge and some of the mechanisms involved. They do not support a simple opposition between choices and discrimination. The relevant question is how household decisions, employment opportunities and the organisation of work interact.</p>
 </section>
 <section id="example-essay-plans" class="level3">
 <h3 class="anchored" data-anchor-id="example-essay-plans">Two rough essay plans</h3>
 <p><span id="one-way-to-build-an-essay-plan"></span></p>
-<p><strong>A. Choices matter, but are shaped by constraints.</strong></p>
+<p><strong>A. Choices and constraints</strong></p>
 <ol type="1">
-<li>Use the Danish evidence to show the earnings change around parenthood.</li>
-<li>Use the MBA evidence to explain the importance of hours and interruptions.</li>
-<li>Use the Goldin overview to explain how expectations and constraints shape these choices. Conclude that explaining the gap through work histories does not explain how those histories arose.</li>
+<li>Establish the change in earnings around parenthood using the Danish evidence.</li>
+<li>Explain the role of hours and interruptions using the MBA study.</li>
+<li>Use Goldin to examine how expectations and constraints shape these decisions. Distinguish explaining the gap through work histories from explaining how those histories arose.</li>
 </ol>
-<p><strong>B. Focus on the price of flexibility.</strong></p>
+<p><strong>B. The cost of flexibility</strong></p>
 <ol type="1">
-<li>Start with Goldin: why do jobs demanding constant availability disadvantage the person doing more care? Use the lecture’s pharmacy example as a contrast.</li>
-<li>Connect this to the MBA evidence on the earnings costs of shorter hours and career breaks.</li>
-<li>Use the Danish evidence to show who adjusts paid work after parenthood. Conclude that household decisions and job organisation interact; these findings do not separately measure discrimination.</li>
+<li>Explain why jobs that reward constant availability impose a cost on the person taking greater responsibility for care. Contrast this with the lecture’s pharmacy example.</li>
+<li>Relate this mechanism to the MBA evidence on shorter hours and career interruptions.</li>
+<li>Use the Danish evidence to show who adjusts paid work after parenthood. Assess how job organisation and household decisions interact, while recognising that these studies do not separately measure discrimination.</li>
 </ol>
 </section>
 </section>
 <section id="question-3" class="level2">
 <h2 class="anchored" data-anchor-id="question-3">Question 3: competition and discrimination</h2>
 <p><em>“Competition between employers will eliminate discrimination in the labour market.”</em></p>
-<p><strong>Main answer.</strong> Competition can remove the wage penalty caused by employer prejudice under Becker’s assumptions. This is a conditional result about wages, not a prediction that prejudice or every form of discrimination disappears.</p>
-<section id="beckers-mechanism" class="level3">
-<h3 class="anchored" data-anchor-id="beckers-mechanism">Becker’s mechanism</h3>
-<p>Workers in groups A and B are equally productive and perfect substitutes. A prejudiced employer treats hiring B as having an additional non-financial cost. If B workers earn less, an employer without this prejudice can obtain the same labour more cheaply.</p>
-<p>Non-discriminating firms earn higher profits and expand. Higher-cost discriminating firms may contract or exit. Expansion raises demand for B workers and bids up their wages. With free entry and sufficient scope for non-discriminating firms to expand, the wage gap disappears.</p>
-<p><strong>Prejudice need not disappear.</strong> At equal wages, prejudiced firms may employ only A workers without paying more for labour. Discriminating firms can therefore survive even when the wage penalty has gone.</p>
+<p>Competition can eliminate the wage penalty arising from employer prejudice under Becker’s assumptions. The result concerns the consequences of prejudice for wages; it does not require prejudice itself to disappear.</p>
+<section id="employer-prejudice-and-competition" class="level3">
+<h3 class="anchored" data-anchor-id="employer-prejudice-and-competition">Employer prejudice and competition</h3>
+<p>Suppose workers in groups A and B are equally productive and perfect substitutes. A prejudiced employer experiences an additional non-financial cost from employing B workers. If their wage is lower, a non-discriminating employer can obtain equally productive labour at a lower financial cost.</p>
+<p>Non-discriminating firms earn higher profits and expand, while higher-cost discriminating firms may contract or exit. Expansion increases demand for B workers and raises their wages. With free entry and sufficient capacity among non-discriminating employers, the wage gap disappears. At equal wages, prejudiced firms can still employ only A workers without paying more for labour. Their survival is therefore consistent with the disappearance of the wage penalty.</p>
+<p><a href="https://www.aeaweb.org/articles?id=10.1257/jep.34.2.68">Lang and Kahn-Lang Spitzer (2020)</a> explain why labour-market frictions qualify this result. When finding and moving between jobs is costly, workers cannot immediately obtain an equally paid alternative. Firms may retain wage-setting power, and discrimination need not make them less profitable. Restrictions on entry or expansion also limit the adjustment in labour demand.</p>
 </section>
-<section id="why-the-result-may-fail" class="level3">
-<h3 class="anchored" data-anchor-id="why-the-result-may-fail">Why the result may fail</h3>
-<ul>
-<li><strong>Search costs and limited mobility:</strong> workers cannot costlessly move to an equally paid job. Firms can retain some wage-setting power, and discrimination need not make them less profitable. Limits to entry or expansion also weaken the competitive adjustment.</li>
-<li><strong>Statistical discrimination:</strong> an employer may use group information when individual productivity is difficult to observe. This can be consistent with profit maximisation, so Becker’s argument against costly prejudice does not automatically remove it. In the lecture’s monitoring model, closer scrutiny sends more unsuccessful matches back into job search. This changes the applicant pool and can sustain different treatment even when the groups have the same population ability distribution.</li>
-</ul>
-</section>
-<section id="using-the-reading" class="level3">
-<h3 class="anchored" data-anchor-id="using-the-reading">Using the reading</h3>
-<p><a href="https://www.aeaweb.org/articles?id=10.1257/jep.34.2.68">Lang and Kahn-Lang Spitzer (2020)</a> show why labour-market frictions matter for the taste-based model. Use the review to identify which assumptions support wage equalisation and what changes when those assumptions fail. The existence of a competitive pressure is not evidence that it is strong enough to eliminate an observed wage gap.</p>
-<p><strong>Judgement.</strong> Competition is a possible constraint on discrimination, not a sufficient general remedy. A good answer distinguishes the wage penalty from prejudice, and employer tastes from imperfect information.</p>
+<section id="monitoring-and-statistical-discrimination" class="level3">
+<h3 class="anchored" data-anchor-id="monitoring-and-statistical-discrimination">Monitoring and statistical discrimination</h3>
+<p><a href="https://wrap.warwick.ac.uk/id/eprint/169779/13/WRAP-Boss-is-watching-how-monitoring-decisions-hurt-23.pdf">Cavounidis, Lang and Weinstein (2024)</a> provide a different reason why discrimination can persist. In their model, employers monitor Black workers more closely. Monitoring identifies poor matches and returns more of these workers to unemployment. If performance is correlated across jobs and employment histories are imperfectly observed, group membership can then provide information about the applicant pool. This makes closer monitoring of new Black hires worthwhile, sustaining the initial difference in treatment. The two populations can have the same ability distribution while their applicant pools differ because of this selection process.</p>
+<p>The paper finds that involuntary separation rates are initially higher for Black workers and that the difference declines with tenure. This pattern supports a prediction of the model, but does not uniquely establish monitoring as its cause.</p>
+<p>The distinction from Becker is that unequal treatment can be consistent with profit maximisation when information is incomplete. Competition puts pressure on employers who incur higher costs because of prejudice. It does not necessarily eliminate discrimination that employers find profitable, nor the processes that sustain the information on which their decisions depend.</p>
 </section>
 </section>
 
