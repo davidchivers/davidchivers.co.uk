@@ -131,9 +131,9 @@
     },
     {
       "path": "political-economy/index.html",
-      "bytes": 1190461,
-      "source_sha256": "bca202062097f2c573ea7849521c06b776cd65e8b6b80fa644f022ac81aaee49",
-      "sha256": "72ef9c6604f609c1c1abe3b9caf4ec073cec50353f2c86966270b36e803f8392",
+      "bytes": 1190462,
+      "source_sha256": "2c28e9ea114973c0eb0eb74b8613ab4358ad44d17637916447b8e896c15c6884",
+      "sha256": "93d47732bc6b9665fd19ac993edddcfe564edc92a9ec084b2a7df703c34261dc",
       "label_revision": "current-political-economy-20261116"
     },
     {
