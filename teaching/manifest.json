@@ -131,10 +131,10 @@
     },
     {
       "path": "political-economy/index.html",
-      "bytes": 1190462,
+      "bytes": 1190450,
       "source_sha256": "f9d2624789a3a5c74b06c3190b4cc8dfa645a2c1926049688356675f1afe8148",
-      "sha256": "6d27f93ff22c1d9190d08f5d9b57f87faf1bfa857501a5925948ed29ef716e0a",
-      "label_revision": "20261116threequestions"
+      "sha256": "4b544270eb32e57ba3a4070c6e013cbc02ae64a8541215cfb1aa9d8de8297e95",
+      "label_revision": "20261116academic"
     },
     {
       "path": "political-economy/lecture_2.html",
@@ -200,10 +200,10 @@
     },
     {
       "path": "political-economy/seminars/seminar_1.html",
-      "bytes": 1202115,
-      "source_sha256": "4630b9782aef4a9e27b4194703a9e0987db8c6270bd0c758a244e6b5c8a90563",
-      "sha256": "d351cd3ce3fb8f86b18881cd8db4b0369b9d3a5df1de17edfaafd171a60191df",
-      "label_revision": "20261116threequestions"
+      "bytes": 1202614,
+      "source_sha256": "2ae23b7b344802491a646f52c7653989344c7dc865bf12b70684e5f9dd953085",
+      "sha256": "227b7777d2f32a76b4017bfeb4bef4d54a913e03e56d6bde2f2e4c45ea993d3d",
+      "label_revision": "20261116academic"
     },
     {
       "path": "political-economy/seminars/seminar_2.html",
@@ -214,10 +214,10 @@
     },
     {
       "path": "political-economy/seminars/6cf249b800cb4be993e7ee999334427b.html",
-      "bytes": 1208559,
-      "source_sha256": "af3eacd18f5473b37847e7e56943cb095055f0f467250818ec0655bc0f20f694",
-      "sha256": "7259670be926e114a7a435a07f44517130c3123cd437de0bb358d499ec1028c6",
-      "label_revision": "20261116threequestions"
+      "bytes": 1208807,
+      "source_sha256": "015436e8519cf3dd5f432f02a3d084cccc9e4d06499a01abe8e4b3e758680414",
+      "sha256": "12ab971b1f54df00df3f74687e2fe8c20d64225d60659649fa56d1e017438920",
+      "label_revision": "20261116academic"
     },
     {
       "path": "political-economy/seminars/5efa2ccc0e8c4bcdb12e7e0d97159e90.html",
@@ -259,9 +259,9 @@
     },
     {
       "path": "index.html",
-      "bytes": 4864,
-      "sha256": "42ec1765c70835f3d8160c801034d3113b4ed6c4abbbc6cf57a6b44aa0bee129",
-      "label_revision": "20261116threequestions"
+      "bytes": 4852,
+      "sha256": "f6cece99a5db1b09fd7a59867a75bbded70faff869e9be7326f3945b4fcaf81c",
+      "label_revision": "20261116academic"
     }
   ]
 }
