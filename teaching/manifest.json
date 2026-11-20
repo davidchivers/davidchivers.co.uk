@@ -133,8 +133,8 @@
       "path": "political-economy/index.html",
       "bytes": 1190450,
       "source_sha256": "f9d2624789a3a5c74b06c3190b4cc8dfa645a2c1926049688356675f1afe8148",
-      "sha256": "4b544270eb32e57ba3a4070c6e013cbc02ae64a8541215cfb1aa9d8de8297e95",
-      "label_revision": "20261116academic"
+      "sha256": "306dc5ea13608fd843fbfe07c8bc41ae8688b817010c27da511be5ae053c314b",
+      "label_revision": "20261120payrules"
     },
     {
       "path": "political-economy/lecture_2.html",
@@ -214,10 +214,10 @@
     },
     {
       "path": "political-economy/seminars/6cf249b800cb4be993e7ee999334427b.html",
-      "bytes": 1208807,
-      "source_sha256": "015436e8519cf3dd5f432f02a3d084cccc9e4d06499a01abe8e4b3e758680414",
-      "sha256": "12ab971b1f54df00df3f74687e2fe8c20d64225d60659649fa56d1e017438920",
-      "label_revision": "20261116academic"
+      "bytes": 1234279,
+      "source_sha256": "8736aa19d170addebed45143a346335b135834ea133fa134b46d0254c5cfcd69",
+      "sha256": "3d41da272e72e10a24ceae6e393a6d5e154f850a7bd89a46ac7182f54af588f3",
+      "label_revision": "20261120payrules"
     },
     {
       "path": "political-economy/seminars/5efa2ccc0e8c4bcdb12e7e0d97159e90.html",
@@ -260,8 +260,8 @@
     {
       "path": "index.html",
       "bytes": 4852,
-      "sha256": "f6cece99a5db1b09fd7a59867a75bbded70faff869e9be7326f3945b4fcaf81c",
-      "label_revision": "20261116academic"
+      "sha256": "85a1894dc3ccab8ac8e75fc2fea2aaf83807f3e28853b545af496c89a2db71d0",
+      "label_revision": "20261120payrules"
     }
   ]
 }

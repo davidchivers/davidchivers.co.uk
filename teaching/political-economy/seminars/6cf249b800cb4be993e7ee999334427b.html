@@ -2172,7 +2172,7 @@ h1,h2,h3 { color:#3e1a47; }h1 { font-size:2.5rem; line-height:1.16; }h2 { font-s
 .diagram-scroll { width:100%; min-width:0; max-width:100%; overflow-x:auto; }
 .diagram-scroll:focus-visible { outline:3px solid #682046; outline-offset:3px; }
 .diagram-hint { display:none; }
-figure { margin:1.4rem 0; }figcaption { font-size:.95rem; color:#51525a; text-align:left; }@media(max-width:600px) { body {font-size:1.05rem;} h1{font-size:2rem;} .subtitle{font-size:1.4rem;} h3{font-size:1.1rem;} }
+figure { margin:1.4rem 0; }#pay-rule-plot svg, img.original-pay-dag { display:block; width:100%; max-width:800px; height:auto; }#pay-rule-dag:has(.pay-rule-choices:not([hidden])) svg { cursor:pointer; }@media screen {#pay-rule-dag [data-pay-route="direct-pay"],#pay-rule-dag[data-rule="fixed"] [data-pay-route="skill-pay"] { display:none; }}.pay-rule-choices { border:0; padding:0; margin:1.25rem 0 1rem; }.pay-rule-choices legend { float:none; color:#3e1a47; font-size:1.08rem; font-weight:650; margin:0 0 .35rem; }.pay-rule-choices label { display:inline-flex; align-items:center; gap:.4rem; margin:0 1rem .2rem 0; padding:.18rem 0; cursor:pointer; }.pay-rule-choices input { accent-color:#682046; }.pay-rule-choices label:has(:checked) { color:#682046; }.pay-rule-choices input:focus-visible { outline:3px solid #315b76; outline-offset:3px; }#pay-rule-answers p { margin:0 0 .55rem; }#pay-rule-plot { margin:.7rem 0; }@media print {.pay-rule-choices, #pay-rule-plot { display:none; }#pay-rule-answers [hidden] { display:block !important; }}figcaption { font-size:.95rem; color:#51525a; text-align:left; }@media(max-width:600px) { body {font-size:1.05rem;} h1{font-size:2rem;} .subtitle{font-size:1.4rem;} h3{font-size:1.1rem;} }
 @media(max-width:600px) {
 .diagram-scroll { max-width:calc(100vw - 3.5rem); }
 .diagram-scroll .seminar-figure { width:940px; max-width:none; max-height:none; }
@@ -2247,10 +2247,167 @@ p:has(> math[display="block"]) {max-width:100%;overflow-x:auto;}
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1: reasoning about controls</h2>
 <p><em>“Once occupation, working hours and parenthood have been taken into account, any remaining pay gap measures discrimination.”</em></p>
-<p>An adjusted pay gap does not, by itself, measure discrimination. The remaining difference may reflect unmeasured characteristics, while the variables held fixed may themselves be affected by discrimination. The interpretation depends on how these variables influence pay.</p>
-<p>In the lecture example, discrimination affects earnings through two routes. Women receive less pay within a given job, and face a higher hurdle for promotion into better-paid jobs. Job level is therefore a mediator: it transmits part of the effect of discrimination to pay. Comparing workers at the same level excludes the earnings lost through missed promotions.</p>
-<p>Job level is also a collider because both discrimination and skill affect promotion. Women who overcome the higher promotion hurdle may be more skilled than men at the same level. If skill is unmeasured, this difference can conceal the direct pay penalty. The comparison selects different workers from each group; discrimination has not increased women’s underlying skill.</p>
-<p>The lecture’s regression table illustrates this using Cunningham’s simulated data. The female coefficient measures the estimated wage difference relative to men.</p>
+<p><strong>An adjusted pay gap depends on whom we compare.</strong> A firm could pay all senior analysts equally and still discriminate when deciding who becomes a senior analyst. Anyone denied promotion is missing from that comparison.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">w</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">e</mi></mrow><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">f</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">m</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">e</mi></mrow><mo>+</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{wage} = \beta_0 + \beta_1\,\mathrm{female} + \varepsilon
+</annotation></semantics></math></p>
+<p><code>wage</code> is a worker’s pay. With <code>female</code> coded 1 for women and 0 for men, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>β</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\beta_0</annotation></semantics></math> is men’s mean pay, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>β</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\beta_1</annotation></semantics></math> is women’s mean pay minus men’s, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ε</mi><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> is individual variation around each group’s mean.</p>
+<section id="pay-dag" class="level3">
+<h3 class="anchored" data-anchor-id="pay-dag">What happens when we control for job grade?</h3>
+<p>In the lecture example, women and men start with the same mix of skills. A woman can lose earnings when she is passed over for a better-paid job. She can also be paid less than an equally skilled man in the job she holds.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img role="img" aria-label="Gender affects exposure to discrimination. Discrimination affects pay directly and through job level. Unmeasured skill affects both job level and pay." src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNDIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQyMCIgcm9sZT0iaW1nIj4KPHRpdGxlPlJvdXRlcyBmcm9tIGRpc2NyaW1pbmF0aW9uIHRvIHBheTwvdGl0bGU+PGRlZnM+PG1hcmtlciBpZD0iYTI5Mzc0NiIgdmlld0JveD0iMCAwIDEyIDEwIiByZWZYPSIxMSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjQiIG1hcmtlckhlaWdodD0iNCIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMSAxIEwxMCA1IEwxIDkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI5Mzc0NiIgc3Ryb2tlLXdpZHRoPSIxLjgiLz48L21hcmtlcj48bWFya2VyIGlkPSJhNzAyYjUzIiB2aWV3Qm94PSIwIDAgMTIgMTAiIHJlZlg9IjExIiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNCIgbWFya2VySGVpZ2h0PSI0IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0xIDEgTDEwIDUgTDEgOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzAyYjUzIiBzdHJva2Utd2lkdGg9IjEuOCIvPjwvbWFya2VyPjxtYXJrZXIgaWQ9ImExOTY4NmIiIHZpZXdCb3g9IjAgMCAxMiAxMCIgcmVmWD0iMTEiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI0IiBtYXJrZXJIZWlnaHQ9IjQiIG9yaWVudD0iYXV0byI+PHBhdGggZD0iTTEgMSBMMTAgNSBMMSA5IiBmaWxsPSJub25lIiBzdHJva2U9IiMxOTY4NmIiIHN0cm9rZS13aWR0aD0iMS44Ii8+PC9tYXJrZXI+PG1hcmtlciBpZD0iYTU4NjY3NCIgdmlld0JveD0iMCAwIDEyIDEwIiByZWZYPSIxMSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjQiIG1hcmtlckhlaWdodD0iNCIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMSAxIEwxMCA1IEwxIDkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzU4NjY3NCIgc3Ryb2tlLXdpZHRoPSIxLjgiLz48L21hcmtlcj48L2RlZnM+CjxnIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI2MDAiPgo8cGF0aCBkPSJNMTMyIDg3IFYyMDYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI5Mzc0NiIgc3Ryb2tlLXdpZHRoPSIzLjQiIG1hcmtlci1lbmQ9InVybCgjYTI5Mzc0NikiLz4KPHBhdGggZD0iTTE0NyAyMjIgSDM4OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzAyYjUzIiBzdHJva2Utd2lkdGg9IjMuNCIgbWFya2VyLWVuZD0idXJsKCNhNzAyYjUzKSIvPgo8cGF0aCBkPSJNNDIzIDIyMiBINjkwIiBmaWxsPSJub25lIiBzdHJva2U9IiM3MDJiNTMiIHN0cm9rZS13aWR0aD0iMy40IiBtYXJrZXItZW5kPSJ1cmwoI2E3MDJiNTMpIi8+CjxnIGRhdGEtcGF5LXJvdXRlPSJkaXJlY3QtcGF5Ij48cGF0aCBkPSJNMTQ0IDIwOSBDMjc5IDc5IDU2MCA3OSA2OTUgMjA3IiBmaWxsPSJub25lIiBzdHJva2U9IiM3MDJiNTMiIHN0cm9rZS13aWR0aD0iMy40IiBtYXJrZXItZW5kPSJ1cmwoI2E3MDJiNTMpIi8+PHRleHQgeD0iNDIwIiB5PSI5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzI5Mzc0NiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI1IiBwYWludC1vcmRlcj0ic3Ryb2tlIj4xLiBQYXkgd2l0aGluIGEgZ3JhZGU8L3RleHQ+PC9nPgo8dGV4dCB4PSIyNjAiIHk9IjE5MyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzI5Mzc0NiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI1IiBwYWludC1vcmRlcj0ic3Ryb2tlIj4yLiBQcm9tb3Rpb248L3RleHQ+Cjx0ZXh0IHg9IjU1MCIgeT0iMjY0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjIxIiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSIjMjkzNzQ2IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlBheSByaXNlIG9uIHByb21vdGlvbjwvdGV4dD4KPHBhdGggZD0iTTQwNiAzNDIgVjI0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTg2Njc0IiBzdHJva2Utd2lkdGg9IjMuNCIgc3Ryb2tlLWRhc2hhcnJheT0iOCA3IiBtYXJrZXItZW5kPSJ1cmwoI2E1ODY2NzQpIi8+CjxnIGRhdGEtcGF5LXJvdXRlPSJza2lsbC1wYXkiPjxwYXRoIGQ9Ik00MjEgMzUzIFE2MDYgMzYzIDcwMCAyMzYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzU4NjY3NCIgc3Ryb2tlLXdpZHRoPSIzLjQiIHN0cm9rZS1kYXNoYXJyYXk9IjggNyIgbWFya2VyLWVuZD0idXJsKCNhNTg2Njc0KSIvPjwvZz4KPGNpcmNsZSBjeD0iMTMyIiBjeT0iNzIiIHI9IjYiIGZpbGw9IiMyOTM3NDYiIHN0cm9rZT0iIzI5Mzc0NiIgc3Ryb2tlLXdpZHRoPSIyLjciLz48dGV4dCB4PSIxMzIiIHk9IjQ4IiBmaWxsPSIjMjkzNzQ2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5HZW5kZXI8L3RleHQ+CjxjaXJjbGUgY3g9IjEzMiIgY3k9IjIyMiIgcj0iNiIgZmlsbD0iIzI5Mzc0NiIgc3Ryb2tlPSIjMjkzNzQ2IiBzdHJva2Utd2lkdGg9IjIuNyIvPjx0ZXh0IHg9IjEzMiIgeT0iMjcwIiBmaWxsPSIjMjkzNzQ2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5EaXNjcmltaW5hdGlvbjwvdGV4dD4KPGNpcmNsZSBjeD0iNDA2IiBjeT0iMjIyIiByPSI2IiBmaWxsPSIjMjkzNzQ2IiBzdHJva2U9IiMyOTM3NDYiIHN0cm9rZS13aWR0aD0iMi43Ii8+PHRleHQgeD0iNDA2IiB5PSIxOTciIGZpbGw9IiMyOTM3NDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkpvYiBsZXZlbDwvdGV4dD4KPGNpcmNsZSBjeD0iNzA2IiBjeT0iMjIyIiByPSI2IiBmaWxsPSIjMjkzNzQ2IiBzdHJva2U9IiMyOTM3NDYiIHN0cm9rZS13aWR0aD0iMi43Ii8+PHRleHQgeD0iNzUzIiB5PSIyMzIiIGZpbGw9IiMyOTM3NDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlBheTwvdGV4dD4KPGNpcmNsZSBjeD0iNDA2IiBjeT0iMzU3IiByPSI2IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjNTg2Njc0IiBzdHJva2Utd2lkdGg9IjIuNyIvPjx0ZXh0IHg9IjQwNiIgeT0iNDAzIiBmaWxsPSIjNTg2Njc0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Vbm1lYXN1cmVkIHNraWxsPC90ZXh0Pgo8L2c+PC9zdmc+Cg==" class="original-pay-dag img-fluid figure-img" alt="Gender affects exposure to discrimination. Discrimination affects pay directly and through job level. Unmeasured skill affects both job level and pay."></p>
+<figcaption>Discrimination affects earnings directly through pay within a grade and indirectly through promotion. The dashed arrows show that unmeasured skill affects both promotion and pay.</figcaption>
+</figure>
+</div>
+<p><strong>What drops out?</strong> Comparing people in the same grade removes the pay loss from missed promotions. Grade is a <em>mediator</em> on the path from discrimination to pay.</p>
+<p><strong>Who gets compared?</strong> Skill also helps workers get promoted. If women face a higher hurdle, senior women can be more skilled on average than senior men. Grade is a <em>collider</em> because both skill and discrimination affect who reaches it. If skill raises pay, the comparison can make women appear better paid even when the firm pays an equally skilled woman less.</p>
+<p><span id="pay-controls"></span>Each row uses the same 10,000 simulated workers. The <strong>female</strong> coefficient gives the estimated pay gap for the comparison shown, in simulated wage units. Here <em>grade</em> denotes occupation and <em>skill</em> denotes ability. <a href="https://mixtape-1ed.netlify.app/03-directed_acyclical_graphs#tbl-screening">Cunningham, Table 3.1</a>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Which women and men are compared?</th>
+<th style="text-align: right;">female</th>
+<th style="text-align: right;">grade</th>
+<th style="text-align: right;">skill</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Across the whole workforce</td>
+<td style="text-align: right;"><strong>−3.074</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">In the same grade</td>
+<td style="text-align: right;"><strong>+0.601</strong></td>
+<td style="text-align: right;">1.793</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">In the same grade, with the same skill</td>
+<td style="text-align: right;"><strong>−0.994</strong></td>
+<td style="text-align: right;">0.991</td>
+<td style="text-align: right;">2.017</td>
+</tr>
+</tbody>
+</table>
+<p>The middle row makes women appear better paid. We can see why because the simulation records skill. Once we also hold skill fixed, the direct pay penalty reappears. Both within-grade comparisons leave out earnings lost through missed promotions.</p>
+<p>The outcome matters for the original claim. At £20 an hour, someone working 30 hours earns £600 a week and someone working 40 earns £800. Matching hours removes that weekly difference. If women were denied the extra hours, the comparison would miss part of their loss. The adjustment can also mislead in the other direction. If men in a grade have more prior experience and experience raises pay, an audit that misses experience could overstate the direct pay penalty. We would still want to know how the experience gap arose.</p>
+</section>
+<section id="fixed-grade-pay" class="level3">
+<h3 class="anchored" data-anchor-id="fixed-grade-pay">What if the firm changed its pay rule?</h3>
+<p><span id="skill-bonus"></span></p>
+<p>Suppose a pay audit covers <strong>only senior analysts</strong>. In this separate example, basic hourly pay is £15 for juniors and £20 for seniors. Women still face the higher promotion hurdle.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">w</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">e</mi></mrow><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">f</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">m</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">e</mi></mrow><mo>+</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{wage} = \beta_0 + \beta_1\,\mathrm{female} + \varepsilon
+</annotation></semantics></math></p>
+<p>Here <code>wage</code> includes any bonus. Start with one rate per grade. Before revealing the skill bonus, predict whether senior women could earn <strong>more</strong> on average under the new rule. Who had to clear the higher promotion hurdle?</p>
+<div id="pay-rule-dag" data-rule="fixed">
+<fieldset class="pay-rule-choices" hidden>
+  <legend>Hourly pay rule</legend>
+  <label><input type="radio" name="pay-setting" value="fixed" checked> One rate per grade</label>
+  <label><input type="radio" name="pay-setting" value="bonus"> Grade rate plus a skill bonus</label>
+</fieldset>
+<div id="pay-rule-plot" hidden="hidden">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 800 420" width="800" height="420" role="img">
+<title>
+Routes from discrimination to pay
+</title>
+<defs><marker id="a293746" viewbox="0 0 12 10" refx="11" refy="5" markerwidth="4" markerheight="4" orient="auto"><path d="M1 1 L10 5 L1 9" fill="none" stroke="#293746" stroke-width="1.8" /></marker><marker id="a702b53" viewbox="0 0 12 10" refx="11" refy="5" markerwidth="4" markerheight="4" orient="auto"><path d="M1 1 L10 5 L1 9" fill="none" stroke="#702b53" stroke-width="1.8" /></marker><marker id="a19686b" viewbox="0 0 12 10" refx="11" refy="5" markerwidth="4" markerheight="4" orient="auto"><path d="M1 1 L10 5 L1 9" fill="none" stroke="#19686b" stroke-width="1.8" /></marker><marker id="a586674" viewbox="0 0 12 10" refx="11" refy="5" markerwidth="4" markerheight="4" orient="auto"><path d="M1 1 L10 5 L1 9" fill="none" stroke="#586674" stroke-width="1.8" /></marker></defs> <g font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="600"> <path d="M132 87 V206" fill="none" stroke="#293746" stroke-width="3.4" marker-end="url(#a293746)" /> <path d="M147 222 H388" fill="none" stroke="#702b53" stroke-width="3.4" marker-end="url(#a702b53)" /> <path d="M423 222 H690" fill="none" stroke="#702b53" stroke-width="3.4" marker-end="url(#a702b53)" /> <g data-pay-route="direct-pay"><path d="M144 209 C279 79 560 79 695 207" fill="none" stroke="#702b53" stroke-width="3.4" marker-end="url(#a702b53)" /><text x="420" y="99" text-anchor="middle" font-size="21" font-weight="600" fill="#293746" stroke="white" stroke-width="5" paint-order="stroke">1. Pay within a grade</text></g> <text x="260" y="193" text-anchor="middle" font-size="21" font-weight="600" fill="#293746" stroke="white" stroke-width="5" paint-order="stroke">2. Promotion</text> <text x="550" y="264" text-anchor="middle" font-size="21" font-weight="600" fill="#293746" stroke="white" stroke-width="5" paint-order="stroke">Pay rise on promotion</text> <path d="M406 342 V240" fill="none" stroke="#586674" stroke-width="3.4" stroke-dasharray="8 7" marker-end="url(#a586674)" /> <g data-pay-route="skill-pay"><path d="M421 353 Q606 363 700 236" fill="none" stroke="#586674" stroke-width="3.4" stroke-dasharray="8 7" marker-end="url(#a586674)" /></g> <circle cx="132" cy="72" r="6" fill="#293746" stroke="#293746" stroke-width="2.7"></circle><text x="132" y="48" fill="#293746" text-anchor="middle">Gender</text> <circle cx="132" cy="222" r="6" fill="#293746" stroke="#293746" stroke-width="2.7"></circle><text x="132" y="270" fill="#293746" text-anchor="middle">Discrimination</text> <circle cx="406" cy="222" r="6" fill="#293746" stroke="#293746" stroke-width="2.7"></circle><text x="406" y="197" fill="#293746" text-anchor="middle">Job level</text> <circle cx="706" cy="222" r="6" fill="#293746" stroke="#293746" stroke-width="2.7"></circle><text x="753" y="232" fill="#293746" text-anchor="middle">Pay</text> <circle cx="406" cy="357" r="6" fill="white" stroke="#586674" stroke-width="2.7"></circle><text x="406" y="403" fill="#586674" text-anchor="middle">Unmeasured skill</text> </g>
+</svg>
+</div>
+<div id="pay-rule-answers" aria-live="polite">
+<div data-answer-rule="fixed">
+<p><strong>One rate per grade.</strong> Cross out both arrows into pay from discrimination and skill. Only grade sets the wage.</p>
+<p><strong>Audit finding.</strong> All seniors earn £20 an hour, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>0</mn></msub><mo>=</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">\beta_0 = 20</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\beta_1 = 0</annotation></semantics></math>. A woman denied promotion stays on £15. The audit misses her £5 hourly loss because it only covers seniors.</p>
+</div>
+<div data-answer-rule="bonus">
+<p><strong>Grade rate plus a skill bonus.</strong> Restore the arrow from skill to pay. The bonus per unit of skill is the same for everyone. The direct arrow from discrimination to pay stays out.</p>
+<p><strong>Audit finding if skill is missing.</strong> Senior women may earn larger bonuses because they cleared a higher hurdle. A positive <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>β</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\beta_1</annotation></semantics></math> would mean they earn more on average. The auditor cannot tell from that figure how equally skilled seniors are paid.</p>
+<p><strong>If skill is recorded</strong>, the auditor can add it to the regression and compare equally skilled seniors.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">w</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">e</mi></mrow><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">f</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">m</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">e</mi></mrow><mo>+</mo><msub><mi>β</mi><mn>2</mn></msub><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">k</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">l</mi></mrow><mo>+</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{wage} = \beta_0 + \beta_1\,\mathrm{female} + \beta_2\,\mathrm{skill} + \varepsilon
+</annotation></semantics></math></p>
+<p>Here <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>β</mi><mn>2</mn></msub><annotation encoding="application/x-tex">\beta_2</annotation></semantics></math> is the bonus per unit of skill. Under this rule equally skilled seniors earn the same, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\beta_1 = 0</annotation></semantics></math>. The audit still misses women who were denied promotion.</p>
+</div>
+</div>
+</div>
+<script>
+(() => {
+  const figure = document.getElementById('pay-rule-dag');
+  const plot = figure.querySelector('svg');
+  const choices = figure.querySelector('fieldset');
+  const inputs = Array.from(choices.querySelectorAll('input'));
+  const answers = figure.querySelectorAll('[data-answer-rule]');
+  const descriptions = {
+    fixed: 'Only job grade determines hourly pay. Discrimination and skill still affect who gets promoted.',
+    bonus: 'Job grade determines basic pay and skill determines the bonus. Discrimination still affects who gets promoted.'
+  };
+  function showRule(input) {
+    input.checked = true;
+    figure.dataset.rule = input.value;
+    plot.setAttribute('aria-label', descriptions[input.value]);
+    for (const answer of answers) {
+      answer.hidden = answer.dataset.answerRule !== input.value;
+    }
+  }
+  choices.addEventListener('change', event => showRule(event.target));
+  plot.addEventListener('click', () => {
+    const current = inputs.findIndex(input => input.checked);
+    showRule(inputs[(current + 1) % inputs.length]);
+  });
+  function selectLinkedRule() {
+    if (location.hash === '#skill-bonus') showRule(choices.querySelector('[value="bonus"]'));
+    else if (location.hash === '#fixed-grade-pay') showRule(choices.querySelector('[value="fixed"]'));
+  }
+  showRule(choices.querySelector('input:checked'));
+  selectLinkedRule();
+  window.addEventListener('hashchange', selectLinkedRule);
+  document.getElementById('pay-rule-plot').hidden = false;
+  choices.hidden = false;
+})();
+</script>
+</section>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2: choices and discrimination</h2>
+<p><em>“The gender pay gap reflects choices about work and family rather than discrimination.”</em></p>
+<p>The difficult words are <em>rather than</em>. A parent may choose shorter hours because they need predictable shifts. How much that choice costs depends on the jobs employers offer and how they reward availability. The readings help distinguish a decision about work from the conditions under which someone made it.</p>
+<section id="evidence-from-the-readings" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-from-the-readings">Evidence from the readings</h3>
+<p><strong>Goldin gives an economic explanation.</strong> In a job where a client expects the same person to be available at short notice, a worker who needs predictable shifts can lose more than the pay for the hours they give up. In the lecture’s pharmacy example, colleagues can cover for each other. The same preference for flexibility can therefore carry a different earnings penalty depending on how work is organised. <a href="https://www.nobelprize.org/prizes/economic-sciences/2023/popular-information/">Nobel overview of Goldin’s work</a></p>
+<p><strong>Bertrand, Goldin and Katz follow Chicago MBA graduates.</strong> Table 2 shows a gap in average annual earnings at graduation that widens over the following decade. The authors’ wider analysis attributes much of the gap to differences in training, hours and career interruptions. That helps explain <em>how</em> earnings diverged. It leaves open why women, particularly mothers, were more likely to interrupt their careers or reduce their hours. <a href="https://www.nber.org/system/files/working_papers/w14681/w14681.pdf#page=30">Bertrand, Goldin and Katz, Table 2</a></p>
+<p><span id="read-figure-1"></span><strong>What would we miss by looking only at hourly wages in Denmark?</strong> Compare panels A and D of Kleven et al.’s Figure 1. Ten years after the first birth, the authors estimate a child penalty of <strong>19.4% in annual earnings</strong> and <strong>9.1% in hourly wages</strong> for women relative to men. Panels B and C show why the distinction matters. Mothers also work fewer hours and are less likely to be in paid work. A mother who leaves employment still counts in the earnings comparison but has no hourly wage to observe. The panel estimates are separate comparisons and cannot be added together. <a href="https://jenni.uchicago.edu/Fertility/Kleven_Landais_Sogaaard_2019_AEJAE_v11_n4.pdf#page=10">Kleven, Landais and Søgaard, Figure 1</a></p>
+<p><strong>What can we infer about choice?</strong> The child penalty was larger for women who grew up in households where their own mother did relatively little paid work compared with their father. That pattern is consistent with family norms shaping decisions about work and care. Families also pass on resources and opportunities, so the association alone cannot tell us what caused a particular mother to reduce her hours. <a href="https://jenni.uchicago.edu/Fertility/Kleven_Landais_Sogaaard_2019_AEJAE_v11_n4.pdf#page=25">Kleven et al., intergenerational evidence</a></p>
+</section>
+<section id="planning-a-30-minute-answer" class="level3">
+<h3 class="anchored" data-anchor-id="planning-a-30-minute-answer">Planning a 30-minute answer</h3>
+<p><span id="example-essay-plans"></span><span id="one-way-to-build-an-essay-plan"></span></p>
+<p>With four questions in two hours, you have about half an hour for each. Spend the first few minutes deciding what you want to argue. A rough plan can fit in a few bullet points.</p>
+<ul>
+<li><strong>Your answer to the claim.</strong> How far do you agree, and why? Here the words <em>rather than</em> matter. Could the evidence distinguish between the two explanations?</li>
+<li><strong>The economic reasoning.</strong> Choose an idea from the lectures that helps explain the outcome. Write down how it works. For instance, why might a reduction in hours carry a larger earnings penalty in some jobs than in others?</li>
+<li><strong>Evidence and what you make of it.</strong> Pick findings from the readings that bear on your argument. For each, say what the authors found and what you can infer. If earnings diverge after the first child, what does the timing tell you? What else would you need to know to explain why they diverge?</li>
+</ul>
+<p>Before you write, try stating your conclusion aloud. Which finding does the most to support it? Which leaves room for a different interpretation? Those are the points worth developing in the time available.</p>
+</section>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3: competition and discrimination</h2>
+<p><em>“Competition between employers will eliminate discrimination in the labour market.”</em></p>
+<section id="becker-wage-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="becker-wage-diagram">Becker’s wage diagram</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img role="img" aria-label="The horizontal axis shows employment at one firm. The solid marginal revenue product curve is the same for A and B. The dashed curve for willingness to pay B lies £3 below it, passing through £17 where marginal revenue product is £20." src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjAgMzI3IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0iYmVja2VyLXRpdGxlIGJlY2tlci1kZXNjIj4KICA8dGl0bGUgaWQ9ImJlY2tlci10aXRsZSI+QmVja2Vy4oCZcyBlbXBsb3llciBtb2RlbDogcHJvZHVjdGl2aXR5IGFuZCB3aWxsaW5nbmVzcyB0byBwYXk8L3RpdGxlPgogIDxkZXNjIGlkPSJiZWNrZXItZGVzYyI+VHdvIGRvd253YXJkLXNsb3BpbmcgcGFyYWxsZWwgbGluZXMgcmVsYXRlIHRoZSB2YWx1ZSBvZiBhbm90aGVyIHdvcmtlciB0byB0aGUgZmlybSdzIGVtcGxveW1lbnQuIEF0IHRoZSBtYXJrZWQgZW1wbG95bWVudCBsZXZlbCwgZWl0aGVyIHdvcmtlciBhZGRzIMKjMjAgb2YgcmV2ZW51ZSBwZXIgaG91ci4gQSBub24tZmluYW5jaWFsIGNvc3Qgb2YgwqMzIG1ha2VzIHRoZSBlbXBsb3llciB3aWxsaW5nIHRvIHBheSBhdCBtb3N0IMKjMTcgcGVyIGhvdXIgZm9yIGEgZ3JvdXAgQiB3b3JrZXIgdGhlcmUuPC9kZXNjPgogIDxyZWN0IHdpZHRoPSI3MjAiIGhlaWdodD0iMzI3IiBmaWxsPSIjZmZmIi8+CiAgPGcgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmaWxsPSIjMjYzODQyIj4KICAgIDx0ZXh0IHg9IjI0IiB5PSIyOSIgZm9udC1zaXplPSIyMCI+VmFsdWUgb2YgYW4gYWRkaXRpb25hbCB3b3JrZXIgKMKjIHBlciBob3VyKTwvdGV4dD4KICAgIDxnIGZpbGw9Im5vbmUiPgogICAgICA8cGF0aCBkPSJNNzggNTAgVjI2MSBINjgyIiBzdHJva2U9IiM0NzU1NWIiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgICA8cGF0aCBkPSJNNzggMTE2IEgyNTUgTTc4IDE2NCBIMjU1IE0yNTUgMTY0IFYyNjEiIHN0cm9rZT0iIzk4YTNhOCIgc3Ryb2tlLWRhc2hhcnJheT0iMyA1IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgICA8cGF0aCBkPSJNNzggNjAgTDQzMiAxNzIiIHN0cm9rZT0iIzE0NjY2OSIgc3Ryb2tlLXdpZHRoPSI0LjUiLz4KICAgICAgPHBhdGggZD0iTTc4IDEwOCBMNDMyIDIyMCIgc3Ryb2tlPSIjNzYyNzQ4IiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWRhc2hhcnJheT0iMTAgNiIvPgogICAgICA8cGF0aCBkPSJNMjU1IDExNiBWMTY0IE0yNTAgMTE2IEgyNjAgTTI1MCAxNjQgSDI2MCIgc3Ryb2tlPSIjNDM1NDVjIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDwvZz4KICAgIDxjaXJjbGUgY3g9IjI1NSIgY3k9IjExNiIgcj0iNC41IiBmaWxsPSIjMTQ2NjY5Ii8+CiAgICA8Y2lyY2xlIGN4PSIyNTUiIGN5PSIxNjQiIHI9IjQuNSIgZmlsbD0iIzc2Mjc0OCIvPgogICAgPGcgZm9udC1zaXplPSIxOSIgdGV4dC1hbmNob3I9ImVuZCI+CiAgICAgIDx0ZXh0IHg9IjY2IiB5PSIxMjIiPsKjMjA8L3RleHQ+CiAgICAgIDx0ZXh0IHg9IjY2IiB5PSIxNzAiPsKjMTc8L3RleHQ+CiAgICA8L2c+CiAgICA8dGV4dCB4PSIyNjQiIHk9IjE0NyIgZm9udC1zaXplPSIxOCI+wqMzPC90ZXh0PgogICAgPHRleHQgeD0iNDQ3IiB5PSIxNzUiIGZvbnQtc2l6ZT0iMjEiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiMxNDY2NjkiPk1SUCBvZiBBIGFuZCBCPC90ZXh0PgogICAgPHRleHQgeD0iNDQ3IiB5PSIyMjQiIGZvbnQtc2l6ZT0iMjEiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiM3NjI3NDgiPldpbGxpbmduZXNzIHRvIHBheSBCPC90ZXh0PgogICAgPHRleHQgeD0iMzgwIiB5PSIzMDEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiPk51bWJlciBvZiB3b3JrZXJzIGVtcGxveWVkIGJ5IHRoZSBmaXJtPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg==" class="img-fluid figure-img" alt="The horizontal axis shows employment at one firm. The solid marginal revenue product curve is the same for A and B. The dashed curve for willingness to pay B lies £3 below it, passing through £17 where marginal revenue product is £20."></p>
+<figcaption>At the marked employment level, the next worker adds £20 of revenue per hour in either group. Prejudice lowers this employer’s willingness to pay B by £3.</figcaption>
+</figure>
+</div>
+<p>Read the graph at the <strong>same employment level</strong>. The solid line gives the marginal revenue product (MRP) of either worker. The dashed line deducts the £3 an hour this employer would give up to avoid hiring B. An employer without prejudice would value both groups along the solid line.</p>
+<p>With A available at £20 an hour, the prejudiced employer is indifferent when B earns <strong>£17</strong>. Below £17, the wage saving exceeds the £3 cost of prejudice. Above £17, the employer prefers A.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -2259,74 +2416,41 @@ p:has(> math[display="block"]) {max-width:100%;overflow-x:auto;}
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Comparison</th>
-<th style="text-align: right;">Female coefficient</th>
-<th style="text-align: left;">Interpretation in this example</th>
+<th style="text-align: left;">B’s hourly wage</th>
+<th style="text-align: left;">Employer with £3 prejudice cost</th>
+<th style="text-align: left;">Employer without prejudice</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">No controls</td>
-<td style="text-align: right;">−3.074</td>
-<td style="text-align: left;">Captures both missed promotions and lower pay within jobs.</td>
+<td style="text-align: left;">£16</td>
+<td style="text-align: left;">Hires B. A £4 wage saving outweighs the £3 cost.</td>
+<td style="text-align: left;">Hires B and saves £4 an hour.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Same occupation</td>
-<td style="text-align: right;">+0.601</td>
-<td style="text-align: left;">Excludes missed promotions; the skill difference masks the direct pay penalty.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Same occupation and ability</td>
-<td style="text-align: right;">−0.994</td>
-<td style="text-align: left;">Recovers the direct pay penalty, excluding missed promotions.</td>
+<td style="text-align: left;">£18</td>
+<td style="text-align: left;">Hires A. A £2 wage saving is too small to change its preference.</td>
+<td style="text-align: left;">Still hires B and saves £2 an hour.</td>
 </tr>
 </tbody>
 </table>
-<p>Here occupation represents job level and ability represents skill. The final comparison is possible because ability is recorded in the simulation. It need not be observed in an actual dataset, and the interpretation of these coefficients depends on the model’s assumptions.</p>
-<p>The same reasoning applies to the question’s other controls. Hours and occupation can reflect unequal opportunities, while parenthood may affect mothers and fathers differently. Accounting for these characteristics does not establish why they differ. Neither a remaining adjusted gap nor its absence is sufficient to establish the extent of discrimination.</p>
 </section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2: choices and discrimination</h2>
-<p><em>“The gender pay gap reflects choices about work and family rather than discrimination.”</em></p>
-<p>Hours, career interruptions and family decisions explain an important part of the earnings gap. However, these decisions respond to opportunities, household constraints and the way jobs reward availability. Evidence that work histories account for a gap does not establish that those histories were freely chosen or unaffected by discrimination.</p>
-<section id="evidence-from-the-readings" class="level3">
-<h3 class="anchored" data-anchor-id="evidence-from-the-readings">Evidence from the readings</h3>
-<p>The <a href="https://www.nobelprize.org/prizes/economic-sciences/2023/popular-information/">Nobel overview of Goldin’s work</a> explains how expectations about future careers influence education and how access to contraception changes women’s ability to plan. It also emphasises the interaction between care responsibilities and jobs that reward long or inflexible hours. Women taking greater responsibility for care face a larger earnings cost in these jobs. The pharmacy example in the lecture illustrates how changes in work organisation can reduce the cost of flexibility.</p>
-<p><a href="https://www.nber.org/system/files/working_papers/w14681/w14681.pdf#page=30">Bertrand, Goldin and Katz (2010)</a> study Chicago MBA graduates whose earnings diverge as their careers develop. Differences in training, working hours and career interruptions account for much of this widening gap in their analysis. Mothers are particularly likely to reduce paid work. These findings show that work histories matter even among highly qualified graduates. They do not, however, identify why men and women have different work histories or exclude discrimination as an explanation.</p>
-<p><a href="https://jenni.uchicago.edu/Fertility/Kleven_Landais_Sogaaard_2019_AEJAE_v11_n4.pdf#page=10">Kleven, Landais and Søgaard (2019)</a> show that mothers’ earnings fall sharply around the first birth, while fathers’ earnings change little. The estimated earnings penalty associated with children is 19.4% ten years later, including the effects of subsequent children. Employment, hours and hourly wages all contribute to the pattern. The hours and wage estimates concern people in work, so selection into employment also matters. The findings establish the importance of parenthood but do not separately identify preferences, childcare constraints and employers’ treatment of parents.</p>
-<p>Taken together, the readings explain when earnings diverge and some of the mechanisms involved. They do not support a simple opposition between choices and discrimination. The relevant question is how household decisions, employment opportunities and the organisation of work interact.</p>
-</section>
-<section id="example-essay-plans" class="level3">
-<h3 class="anchored" data-anchor-id="example-essay-plans">Two rough essay plans</h3>
-<p><span id="one-way-to-build-an-essay-plan"></span></p>
-<p><strong>A. Choices and constraints</strong></p>
-<ol type="1">
-<li>Establish the change in earnings around parenthood using the Danish evidence.</li>
-<li>Explain the role of hours and interruptions using the MBA study.</li>
-<li>Use Goldin to examine how expectations and constraints shape these decisions. Distinguish explaining the gap through work histories from explaining how those histories arose.</li>
-</ol>
-<p><strong>B. The cost of flexibility</strong></p>
-<ol type="1">
-<li>Explain why jobs that reward constant availability impose a cost on the person taking greater responsibility for care. Contrast this with the lecture’s pharmacy example.</li>
-<li>Relate this mechanism to the MBA evidence on shorter hours and career interruptions.</li>
-<li>Use the Danish evidence to show who adjusts paid work after parenthood. Assess how job organisation and household decisions interact, while recognising that these studies do not separately measure discrimination.</li>
-</ol>
-</section>
-</section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3: competition and discrimination</h2>
-<p><em>“Competition between employers will eliminate discrimination in the labour market.”</em></p>
-<p>Competition can eliminate the wage penalty arising from employer prejudice under Becker’s assumptions. The result concerns the consequences of prejudice for wages; it does not require prejudice itself to disappear.</p>
-<section id="employer-prejudice-and-competition" class="level3">
-<h3 class="anchored" data-anchor-id="employer-prejudice-and-competition">Employer prejudice and competition</h3>
-<p>Suppose workers in groups A and B are equally productive and perfect substitutes. A prejudiced employer experiences an additional non-financial cost from employing B workers. If their wage is lower, a non-discriminating employer can obtain equally productive labour at a lower financial cost.</p>
-<p>Non-discriminating firms earn higher profits and expand, while higher-cost discriminating firms may contract or exit. Expansion increases demand for B workers and raises their wages. With free entry and sufficient capacity among non-discriminating employers, the wage gap disappears. At equal wages, prejudiced firms can still employ only A workers without paying more for labour. Their survival is therefore consistent with the disappearance of the wage penalty.</p>
+<section id="from-one-firm-to-the-market" class="level3">
+<h3 class="anchored" data-anchor-id="from-one-firm-to-the-market">From one firm to the market</h3>
+<p>At £18, the firm hiring B pays £2 less per hour for equally productive labour than its rival hiring A. That cost advantage allows it to expand, while the higher-cost rival may contract. As firms hiring B expand, demand for B workers rises. If entry is free and these firms can employ enough workers, competition can close the wage gap. At equal wages the firm without prejudice is indifferent, and the prejudiced firm can still hire only A. The wage penalty can disappear while prejudice and segregation persist.</p>
 <p><a href="https://www.aeaweb.org/articles?id=10.1257/jep.34.2.68">Lang and Kahn-Lang Spitzer (2020)</a> explain why labour-market frictions qualify this result. When finding and moving between jobs is costly, workers cannot immediately obtain an equally paid alternative. Firms may retain wage-setting power, and discrimination need not make them less profitable. Restrictions on entry or expansion also limit the adjustment in labour demand.</p>
 </section>
 <section id="monitoring-and-statistical-discrimination" class="level3">
 <h3 class="anchored" data-anchor-id="monitoring-and-statistical-discrimination">Monitoring and statistical discrimination</h3>
-<p><a href="https://wrap.warwick.ac.uk/id/eprint/169779/13/WRAP-Boss-is-watching-how-monitoring-decisions-hurt-23.pdf">Cavounidis, Lang and Weinstein (2024)</a> provide a different reason why discrimination can persist. In their model, employers monitor Black workers more closely. Monitoring identifies poor matches and returns more of these workers to unemployment. If performance is correlated across jobs and employment histories are imperfectly observed, group membership can then provide information about the applicant pool. This makes closer monitoring of new Black hires worthwhile, sustaining the initial difference in treatment. The two populations can have the same ability distribution while their applicant pools differ because of this selection process.</p>
-<p>The paper finds that involuntary separation rates are initially higher for Black workers and that the difference declines with tenure. This pattern supports a prediction of the model, but does not uniquely establish monitoring as its cause.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img role="img" aria-label="In the model, White entrants move from job search into unmonitored employment. Black entrants move into monitored employment. Those who pass screening stay in work without further monitoring. Those dismissed return to job search." src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAwIDYwMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIj48dGl0bGUgaWQ9InRpdGxlIj5Ud28gd29ya2VyIHBhdGhzIGZyb20gdGhlIG9yaWdpbmFsIGZpZ3VyZS4gV2hpdGUgd29ya2VycyBlbnRlciBqb2Igc2VhcmNoIGFuZCBlbXBsb3ltZW50IHdpdGhvdXQgbW9uaXRvcmluZy4gQmxhY2sgd29ya2VycyBlbnRlciBtb25pdG9yZWQgZW1wbG95bWVudCwgdGhlbiBlaXRoZXIgcGFzcyBzY3JlZW5pbmcgb3IgcmV0dXJuIHRvIGpvYiBzZWFyY2ggYWZ0ZXIgc2VwYXJhdGlvbi48L3RpdGxlPjxnIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiI+PGRlZnM+PG1hcmtlciBpZD0iYXJyb3ciIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjgiIG1hcmtlckhlaWdodD0iOCIgb3JpZW50PSJhdXRvLXN0YXJ0LXJldmVyc2UiPjxwYXRoIGQ9Ik0wIDAgTDEwIDUgTDAgMTAgeiIgZmlsbD0iIzZiNjU3MCIvPjwvbWFya2VyPjxtYXJrZXIgaWQ9InJldHVybiIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI5IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iOCIgbWFya2VySGVpZ2h0PSI4IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDEwIDUgTDAgMTAgeiIgZmlsbD0iIzc2Mjc0OCIvPjwvbWFya2VyPjwvZGVmcz48dGV4dCB4PSI3MDAiIHk9IjY2LjAiIGZpbGw9IiMxNDY2NjkiIGZvbnQtc2l6ZT0iMzQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI2MDAiPldoaXRlIHdvcmtlcnM8L3RleHQ+PHRleHQgeD0iNzAwIiB5PSIzMzYuMCIgZmlsbD0iIzc2Mjc0OCIgZm9udC1zaXplPSIzNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9IjYwMCI+QmxhY2sgd29ya2VyczwvdGV4dD48cmVjdCB4PSIxNjAiIHk9IjkwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjExMCIgcng9IjYiIGZpbGw9IndoaXRlIiBzdHJva2U9IiM2NjcwNzgiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjMwMC4wIiB5PSIxNTYuMCIgZmlsbD0iIzI2Mzg0MiIgZm9udC1zaXplPSIzMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9Im5vcm1hbCI+Sm9iIHNlZWtpbmc8L3RleHQ+PHJlY3QgeD0iMTA4MCIgeT0iOTAiIHdpZHRoPSIzMDAiIGhlaWdodD0iMTEwIiByeD0iNiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzY2NzA3OCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTIzMC4wIiB5PSIxMzcuMCIgZmlsbD0iIzI2Mzg0MiIgZm9udC1zaXplPSIzMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9Im5vcm1hbCI+RW1wbG95ZWQsPC90ZXh0Pjx0ZXh0IHg9IjEyMzAuMCIgeT0iMTc1LjQiIGZpbGw9IiMyNjM4NDIiIGZvbnQtc2l6ZT0iMzIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiPm5vIG1vbml0b3Jpbmc8L3RleHQ+PHJlY3QgeD0iMTYwIiB5PSIzNjAiIHdpZHRoPSIyODAiIGhlaWdodD0iMTEwIiByeD0iNiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzY2NzA3OCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMzAwLjAiIHk9IjQyNi4wIiBmaWxsPSIjMjYzODQyIiBmb250LXNpemU9IjMyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0ibm9ybWFsIj5Kb2Igc2Vla2luZzwvdGV4dD48cmVjdCB4PSI2MDAiIHk9IjM2MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIxMTAiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjNjY3MDc4IiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3NTAuMCIgeT0iNDA3LjAiIGZpbGw9IiMyNjM4NDIiIGZvbnQtc2l6ZT0iMzIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiPkVtcGxveWVkIHdpdGg8L3RleHQ+PHRleHQgeD0iNzUwLjAiIHk9IjQ0NS40IiBmaWxsPSIjMjYzODQyIiBmb250LXNpemU9IjMyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0ibm9ybWFsIj5tb25pdG9yaW5nPC90ZXh0PjxyZWN0IHg9IjEwODAiIHk9IjM2MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIxMTAiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjNjY3MDc4IiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIxMjMwLjAiIHk9IjQwNy4wIiBmaWxsPSIjMjYzODQyIiBmb250LXNpemU9IjMyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0ibm9ybWFsIj5FbXBsb3llZCw8L3RleHQ+PHRleHQgeD0iMTIzMC4wIiB5PSI0NDUuNCIgZmlsbD0iIzI2Mzg0MiIgZm9udC1zaXplPSIzMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9Im5vcm1hbCI+bm8gbW9uaXRvcmluZzwvdGV4dD48cGF0aCBkPSJNMjQgMTQ1IEwxNTYgMTQ1IiBmaWxsPSJub25lIiBzdHJva2U9IiM2YjY1NzAiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz48dGV4dCB4PSI5MCIgeT0iMTI1LjAiIGZpbGw9IiM2YjY1NzAiIGZvbnQtc2l6ZT0iMjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiPkVudHJ5PC90ZXh0PjxwYXRoIGQ9Ik0yNCA0MTUgTDE1NiA0MTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZiNjU3MCIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjx0ZXh0IHg9IjkwIiB5PSIzOTUuMCIgZmlsbD0iIzZiNjU3MCIgZm9udC1zaXplPSIyOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9Im5vcm1hbCI+RW50cnk8L3RleHQ+PHBhdGggZD0iTTQ0MCAxNDUgTDEwNzYgMTQ1IiBmaWxsPSJub25lIiBzdHJva2U9IiM2YjY1NzAiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz48dGV4dCB4PSI3NTgiIHk9IjEyNS4wIiBmaWxsPSIjNmI2NTcwIiBmb250LXNpemU9IjI4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0ibm9ybWFsIj5IaXJpbmc8L3RleHQ+PHBhdGggZD0iTTQ0MCA0MTUgTDU5NiA0MTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZiNjU3MCIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjx0ZXh0IHg9IjUxOCIgeT0iMzk1LjAiIGZpbGw9IiM2YjY1NzAiIGZvbnQtc2l6ZT0iMjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiPkhpcmluZzwvdGV4dD48cGF0aCBkPSJNOTAwIDQxNSBMMTA3NiA0MTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZiNjU3MCIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjx0ZXh0IHg9Ijk4OCIgeT0iMzk1LjAiIGZpbGw9IiM2YjY1NzAiIGZvbnQtc2l6ZT0iMjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiPlN1Y2Nlc3M8L3RleHQ+PHBhdGggZD0iTTc1MCA0NzAgVjU1MiBIMzAwIFY0NzQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzc2Mjc0OCIgc3Ryb2tlLXdpZHRoPSIzLjUiIG1hcmtlci1lbmQ9InVybCgjcmV0dXJuKSIvPjx0ZXh0IHg9IjUyNSIgeT0iNTM1LjAiIGZpbGw9IiM3NjI3NDgiIGZvbnQtc2l6ZT0iMzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiPlNlcGFyYXRpb248L3RleHQ+PC9nPjwvc3ZnPg==" class="img-fluid figure-img" alt="In the model, White entrants move from job search into unmonitored employment. Black entrants move into monitored employment. Those who pass screening stay in work without further monitoring. Those dismissed return to job search."></p>
+<figcaption>Hiring and monitoring in the model. The separation arrow shows how an employer’s decision today changes the pool of applicants the next employer sees. Adapted from Cavounidis, Lang and Weinstein (2024), Figure 1.</figcaption>
+</figure>
+</div>
+<p><strong>Follow the separation arrow back to job seeking.</strong> The model assumes both groups start with the same distribution of ability. In the case shown, employers initially monitor Black hires more closely. White hires enter unmonitored employment. Black hires who pass screening stay in work, while those dismissed return to job search. The next employer therefore draws Black applicants from a pool that includes both new entrants and workers dismissed after monitoring.</p>
+<p>If performance in one job predicts performance in the next, and employers cannot fully observe applicants’ work histories, closer monitoring of new Black hires can be profitable. Each employer’s decision helps sustain the difference in applicant pools that motivates the next employer’s decision.</p>
+<p><a href="https://wrap.warwick.ac.uk/id/eprint/169779/13/WRAP-Boss-is-watching-how-monitoring-decisions-hurt-23.pdf">Cavounidis, Lang and Weinstein (2024)</a> find that involuntary separations are initially more frequent for Black than for non-Black workers and that the gap narrows with tenure. This is consistent with the model. The data do not directly measure monitoring.</p>
 <p>The distinction from Becker is that unequal treatment can be consistent with profit maximisation when information is incomplete. Competition puts pressure on employers who incur higher costs because of prejudice. It does not necessarily eliminate discrimination that employers find profitable, nor the processes that sustain the information on which their decisions depend.</p>
 </section>
 </section>
