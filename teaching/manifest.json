@@ -133,8 +133,8 @@
       "path": "political-economy/index.html",
       "bytes": 1190448,
       "source_sha256": "f9d2624789a3a5c74b06c3190b4cc8dfa645a2c1926049688356675f1afe8148",
-      "sha256": "8f9c6c65ecd3cd1289f74023ba3bae1ee8ff8edda25c1b6f997491135ecfa71e",
-      "label_revision": "20261120kleven"
+      "sha256": "8aaa2ab6ba762956adf512f6173308c393a180cbbeb9d777445294f4007d4ec1",
+      "label_revision": "20261120wagegap"
     },
     {
       "path": "political-economy/lecture_2.html",
@@ -200,10 +200,10 @@
     },
     {
       "path": "political-economy/seminars/seminar_1.html",
-      "bytes": 1209937,
-      "source_sha256": "76d086a85172fa750284aae41c90eddfaf264a645d05242a2b967957dddf4d5e",
-      "sha256": "b8a00d4d2195ea8a3fa1842db0869cd0f19775e009e822e24b0d23e3e4e4b78d",
-      "label_revision": "20261120kleven"
+      "bytes": 1210111,
+      "source_sha256": "14cd55623b52d5cabc817877a1c048a41378077d62c9525ffe82f3ee46d22a35",
+      "sha256": "b6396ccc5e3f5d9f34051c87103ad96c9e5ca5dfc5a30718244779371a095851",
+      "label_revision": "20261120wagegap"
     },
     {
       "path": "political-economy/seminars/seminar_2.html",
@@ -214,10 +214,10 @@
     },
     {
       "path": "political-economy/seminars/6cf249b800cb4be993e7ee999334427b.html",
-      "bytes": 1234279,
-      "source_sha256": "8736aa19d170addebed45143a346335b135834ea133fa134b46d0254c5cfcd69",
-      "sha256": "3d41da272e72e10a24ceae6e393a6d5e154f850a7bd89a46ac7182f54af588f3",
-      "label_revision": "20261120payrules"
+      "bytes": 1234962,
+      "source_sha256": "d4f16a643c332980cc6527385705c655c8cc43934168358b2ffc8feb3a47f1c6",
+      "sha256": "06e008a6dca970c7e12fb3e22f32c4e00e1f829a46484ef921ed9393e8db04d7",
+      "label_revision": "20261120wagegap"
     },
     {
       "path": "political-economy/seminars/5efa2ccc0e8c4bcdb12e7e0d97159e90.html",
@@ -260,8 +260,8 @@
     {
       "path": "index.html",
       "bytes": 4850,
-      "sha256": "3700727af283d4a9a655e36ee516874c7207a64b9f8df5b2aa3f4328ebf673dd",
-      "label_revision": "20261120kleven"
+      "sha256": "d5514636dba530ab789ccb5fc91a29e04603c3e80e6bdbbd75b22c967359d435",
+      "label_revision": "20261120wagegap"
     }
   ]
 }
