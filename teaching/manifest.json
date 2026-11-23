@@ -131,10 +131,10 @@
     },
     {
       "path": "political-economy/index.html",
-      "bytes": 1190448,
+      "bytes": 1190474,
       "source_sha256": "f9d2624789a3a5c74b06c3190b4cc8dfa645a2c1926049688356675f1afe8148",
-      "sha256": "8aaa2ab6ba762956adf512f6173308c393a180cbbeb9d777445294f4007d4ec1",
-      "label_revision": "20261120wagegap"
+      "sha256": "7083aa4ff23cfa34138681f0d83bde9db69fae6548053f91f646d700bdefd6ff",
+      "label_revision": "20261123-ai-work"
     },
     {
       "path": "political-economy/lecture_2.html",
@@ -145,9 +145,10 @@
     },
     {
       "path": "political-economy/lecture_3.html",
-      "bytes": 4188951,
-      "source_sha256": "60b492bceeaa05c33624cfcda506b1b0cb67dfde1b32fd8d46473208cfea936b",
-      "sha256": "60b492bceeaa05c33624cfcda506b1b0cb67dfde1b32fd8d46473208cfea936b"
+      "bytes": 3899549,
+      "source_sha256": "409dd7885b7cf39a4c479f89a009e2595d2021f238a35106cf40f6ae57fce605",
+      "sha256": "9367115c1814e3d2360c01db143599fe99c591306f7a806c8e29d2b5c0c88b54",
+      "label_revision": "20261123-ai-work"
     },
     {
       "path": "political-economy/lecture_4.html",
@@ -259,9 +260,9 @@
     },
     {
       "path": "index.html",
-      "bytes": 4850,
-      "sha256": "d5514636dba530ab789ccb5fc91a29e04603c3e80e6bdbbd75b22c967359d435",
-      "label_revision": "20261120wagegap"
+      "bytes": 4876,
+      "sha256": "aad4c18d3f2db5e508ccde69381a1def4f8b5899e82053b7d19b79ef8bdf007d",
+      "label_revision": "20261123-ai-work"
     }
   ]
 }
