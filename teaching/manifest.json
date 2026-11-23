@@ -131,10 +131,10 @@
     },
     {
       "path": "political-economy/index.html",
-      "bytes": 1190474,
+      "bytes": 1190473,
       "source_sha256": "f9d2624789a3a5c74b06c3190b4cc8dfa645a2c1926049688356675f1afe8148",
-      "sha256": "7083aa4ff23cfa34138681f0d83bde9db69fae6548053f91f646d700bdefd6ff",
-      "label_revision": "20261123-ai-work"
+      "sha256": "963e68e067c73386f7084a39f3c63e449fb8cf163a009d86af8c8badb4951599",
+      "label_revision": "20261123-rental"
     },
     {
       "path": "political-economy/lecture_2.html",
@@ -145,10 +145,10 @@
     },
     {
       "path": "political-economy/lecture_3.html",
-      "bytes": 3899549,
-      "source_sha256": "409dd7885b7cf39a4c479f89a009e2595d2021f238a35106cf40f6ae57fce605",
-      "sha256": "9367115c1814e3d2360c01db143599fe99c591306f7a806c8e29d2b5c0c88b54",
-      "label_revision": "20261123-ai-work"
+      "bytes": 3899883,
+      "source_sha256": "c2c6323ea3a32dac89b1e21154119753f8308143b4c84c6faffb50d82793c98c",
+      "sha256": "0f161b185b2f952dab7c8885f517282381a3adb1c771aa2d1a5868b5b36c2aeb",
+      "label_revision": "20261123-rental"
     },
     {
       "path": "political-economy/lecture_4.html",
@@ -260,9 +260,9 @@
     },
     {
       "path": "index.html",
-      "bytes": 4876,
-      "sha256": "aad4c18d3f2db5e508ccde69381a1def4f8b5899e82053b7d19b79ef8bdf007d",
-      "label_revision": "20261123-ai-work"
+      "bytes": 4875,
+      "sha256": "01cd01a4bca28ded5be89c4a3cd9386428d42185df8bda2ae87c319558946c49",
+      "label_revision": "20261123-rental"
     }
   ]
 }
