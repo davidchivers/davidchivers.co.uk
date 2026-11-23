@@ -190,8 +190,8 @@ PowerPoint has the new slide artwork and notes at its existing Download link;
 the other 29 slides are preserved. The legacy PDF was not rebuilt or selected.
 
 
-### Political Economy Lecture 1 PowerPoint (9 November 2026)
+### Political Economy lecture PowerPoints
 
-Lecture 1 has a direct **Download** control and a 34-slide static PowerPoint. The approved scope is Lecture 1 only; do not generate or publish downloads for Lectures 2–5 until requested. The existing HTML and Blackboard URLs are unchanged.
+The corner **Download** control saves a PowerPoint of the displayed lecture. The release list is defined by `POLITICAL_ECONOMY_POWERPOINTS` in `publish_download_assets.py`.
 
-The stable attachment is `https://github.com/davidchivers/davidchivers.co.uk/releases/download/political-economy-lecture-downloads/lecture_1.pptx`. The existing `lecture-downloads.yml` workflow publishes it separately from the macro assets. The publication manifest binds the PPTX to the published Lecture 1 HTML hash, so later lecture edits require a fresh matching export. Canonical build instructions are in `E:/AI/teaching/political_economy_quarto/README.md`.
+Each attachment has a stable release URL ending in `political-economy-lecture-downloads/lecture_N.pptx`. The `lecture-downloads.yml` workflow checks each PowerPoint against its published lecture before uploading it. Canonical build instructions are in `E:/AI/teaching/political_economy_quarto/README.md`.

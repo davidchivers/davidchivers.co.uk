@@ -10,6 +10,7 @@ import hashlib
 import json
 import re
 from enhance_migration_welfare import ASSETS, enhance_migration_welfare
+from publish_download_assets import POLITICAL_ECONOMY_POWERPOINTS
 
 DECKS = {
     "macro-applications/seminars/index.html": "macro_seminars_quarto/output/index.html",
@@ -36,7 +37,9 @@ DOWNLOADS = {
     f"macro-applications/downloads/lecture_{i}.{ext}": f"macro_applications_quarto/output/downloads/lecture_{i}.{ext}"
     for i in range(1, 6) for ext in ("pptx", "pdf")
 }
-DOWNLOADS["political-economy/downloads/lecture_1.pptx"] = "political_economy_quarto/output/downloads/lecture_1.pptx"
+for lecture in POLITICAL_ECONOMY_POWERPOINTS:
+    name = f"downloads/lecture_{lecture}.pptx"
+    DOWNLOADS[f"political-economy/{name}"] = f"political_economy_quarto/output/{name}"
 
 
 READINGS = {
@@ -123,8 +126,8 @@ def main():
             raise SystemExit(f"Publication verification failed: {name}")
         records.append({"path": name, "bytes": target.stat().st_size,
                         "source_sha256": digest(source), "sha256": digest(target)})
-        if name == "political-economy/downloads/lecture_1.pptx":
-            records[-1]["lecture_sha256"] = digest(destination / "political-economy/lecture_1.html")
+        if name.startswith("political-economy/downloads/"):
+            records[-1]["lecture_sha256"] = digest(destination / "political-economy" / source.with_suffix(".html").name)
         if name == "macro-applications/lecture_4.html":
             records[-1]["enhancements"] = ASSETS
     index = destination / "index.html"

@@ -12,10 +12,10 @@ import os
 import subprocess
 
 REPOSITORY = "davidchivers/davidchivers.co.uk"
+POLITICAL_ECONOMY_POWERPOINTS = (1, 2, 3)
 COURSES = (
     ("macro-applications", "macro-lecture-downloads", "Macroeconomic Applications", range(1, 6), ("pptx", "pdf")),
-    # Only the reviewed first lecture is approved for a PowerPoint download.
-    ("political-economy", "political-economy-lecture-downloads", "Political Economy", (1,), ("pptx",)),
+    ("political-economy", "political-economy-lecture-downloads", "Political Economy", POLITICAL_ECONOMY_POWERPOINTS, ("pptx",)),
 )
 ROOT = Path(__file__).resolve().parent
 
