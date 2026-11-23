@@ -6,8 +6,8 @@ on:
     paths:
       - 'teaching/macro-applications/downloads/lecture_*.pptx'
       - 'teaching/macro-applications/downloads/lecture_*.pdf'
-      - 'teaching/political-economy/downloads/lecture_1.pptx'
-      - 'teaching/political-economy/lecture_1.html'
+      - 'teaching/political-economy/downloads/lecture_*.pptx'
+      - 'teaching/political-economy/lecture_*.html'
       - 'teaching/manifest.json'
       - 'teaching/publish_download_assets.py'
       - '.github/workflows/lecture-downloads.yml'

@@ -138,17 +138,15 @@
     },
     {
       "path": "political-economy/lecture_2.html",
-      "bytes": 4148275,
-      "source_sha256": "08c60b3caefe320e8b2def50daf9b067ff6589ff8d95ff480ab723f4198c999c",
-      "sha256": "7835f0efc9d01d2459cf89a1b5b1b8b3307eee7e4c96fff8af7763c43a5b4670",
-      "label_revision": "current-political-economy-20261116"
+      "bytes": 4151656,
+      "source_sha256": "a3bd2e90627dacea630f0268cae9c29c8f9e5408a242aa0b72ce6bb64ba06664",
+      "sha256": "ecb487c405f0da5f40148c97999bb96eba7521c8373c4c788771859e76562d08"
     },
     {
       "path": "political-economy/lecture_3.html",
-      "bytes": 3899883,
-      "source_sha256": "c2c6323ea3a32dac89b1e21154119753f8308143b4c84c6faffb50d82793c98c",
-      "sha256": "0f161b185b2f952dab7c8885f517282381a3adb1c771aa2d1a5868b5b36c2aeb",
-      "label_revision": "20261123-rental"
+      "bytes": 3905801,
+      "source_sha256": "7c789a59cef51cf4da1f97b7b3d1d68a4cbd5c8af0325c36bb1a94e347201a4a",
+      "sha256": "4d0578cd47808dad7663085cac7bbbeaa3cb141036c50a1cb24c38fe47c04be3"
     },
     {
       "path": "political-economy/lecture_4.html",
@@ -263,6 +261,20 @@
       "bytes": 4875,
       "sha256": "01cd01a4bca28ded5be89c4a3cd9386428d42185df8bda2ae87c319558946c49",
       "label_revision": "20261123-rental"
+    },
+    {
+      "path": "political-economy/downloads/lecture_2.pptx",
+      "bytes": 2332571,
+      "source_sha256": "b17d1e37a761bc0067cc28c512b36997230ed16d10987e4cdc26ea059bb1b5cd",
+      "sha256": "b17d1e37a761bc0067cc28c512b36997230ed16d10987e4cdc26ea059bb1b5cd",
+      "lecture_sha256": "ecb487c405f0da5f40148c97999bb96eba7521c8373c4c788771859e76562d08"
+    },
+    {
+      "path": "political-economy/downloads/lecture_3.pptx",
+      "bytes": 3693866,
+      "source_sha256": "db64b41c1de0a52ad9f3e0c242c841cd2b3a7b3a0c87940564b0fb5546acc52a",
+      "sha256": "db64b41c1de0a52ad9f3e0c242c841cd2b3a7b3a0c87940564b0fb5546acc52a",
+      "lecture_sha256": "4d0578cd47808dad7663085cac7bbbeaa3cb141036c50a1cb24c38fe47c04be3"
     }
   ]
 }
