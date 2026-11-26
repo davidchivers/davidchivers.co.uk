@@ -144,15 +144,15 @@
     },
     {
       "path": "political-economy/lecture_3.html",
-      "bytes": 3905801,
-      "source_sha256": "7c789a59cef51cf4da1f97b7b3d1d68a4cbd5c8af0325c36bb1a94e347201a4a",
-      "sha256": "4d0578cd47808dad7663085cac7bbbeaa3cb141036c50a1cb24c38fe47c04be3"
+      "bytes": 3904744,
+      "source_sha256": "5c9ce1facc9be8e350092f64f06e294972589c9af10d335c1e98174ee50eaf18",
+      "sha256": "318872bd4d61492d9a7ac067522b95551f5970e405beac1668bba5cc97a67fbf"
     },
     {
       "path": "political-economy/lecture_4.html",
-      "bytes": 3587573,
-      "source_sha256": "b20d893e915bd14b4ea26e4528604bfd0e0605c9433a04567f7551376dac0d4e",
-      "sha256": "7226de095c3638259db499bc5b906f92dcf697e22616502bf01188a1bd62cd58"
+      "bytes": 3586758,
+      "source_sha256": "fae383d84bc1abd6f57ae677ce23d18b9aeb191a8f91bf22e501f61b706bbaa6",
+      "sha256": "786e38d5e3e8a96d42ad5a112a3c5052429ac7e0bee33a2323cbd1ec67a6f831"
     },
     {
       "path": "political-economy/lecture_5.html",
@@ -271,17 +271,17 @@
     },
     {
       "path": "political-economy/downloads/lecture_3.pptx",
-      "bytes": 3693866,
-      "source_sha256": "db64b41c1de0a52ad9f3e0c242c841cd2b3a7b3a0c87940564b0fb5546acc52a",
-      "sha256": "db64b41c1de0a52ad9f3e0c242c841cd2b3a7b3a0c87940564b0fb5546acc52a",
-      "lecture_sha256": "4d0578cd47808dad7663085cac7bbbeaa3cb141036c50a1cb24c38fe47c04be3"
+      "bytes": 3656272,
+      "source_sha256": "bb5a518ea102fb9a9a545e3d41ffa40f54559a2068e40e1cb1c0c903b96ec870",
+      "sha256": "bb5a518ea102fb9a9a545e3d41ffa40f54559a2068e40e1cb1c0c903b96ec870",
+      "lecture_sha256": "318872bd4d61492d9a7ac067522b95551f5970e405beac1668bba5cc97a67fbf"
     },
     {
       "path": "political-economy/downloads/lecture_4.pptx",
-      "bytes": 3103209,
-      "source_sha256": "324ad6188cd1cf725095dd63bd3d73d3ee1f83af7ebe10ff6bba9167acda9f62",
-      "sha256": "324ad6188cd1cf725095dd63bd3d73d3ee1f83af7ebe10ff6bba9167acda9f62",
-      "lecture_sha256": "7226de095c3638259db499bc5b906f92dcf697e22616502bf01188a1bd62cd58"
+      "bytes": 3002415,
+      "source_sha256": "910b472d251bef611f289ae085259f4fbff789f3c153c968c1cfe40d6075aeb5",
+      "sha256": "910b472d251bef611f289ae085259f4fbff789f3c153c968c1cfe40d6075aeb5",
+      "lecture_sha256": "786e38d5e3e8a96d42ad5a112a3c5052429ac7e0bee33a2323cbd1ec67a6f831"
     }
   ]
 }
