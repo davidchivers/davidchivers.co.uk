@@ -12,7 +12,7 @@ import os
 import subprocess
 
 REPOSITORY = "davidchivers/davidchivers.co.uk"
-POLITICAL_ECONOMY_POWERPOINTS = (1, 2, 3)
+POLITICAL_ECONOMY_POWERPOINTS = (1, 2, 3, 4)
 COURSES = (
     ("macro-applications", "macro-lecture-downloads", "Macroeconomic Applications", range(1, 6), ("pptx", "pdf")),
     ("political-economy", "political-economy-lecture-downloads", "Political Economy", POLITICAL_ECONOMY_POWERPOINTS, ("pptx",)),
